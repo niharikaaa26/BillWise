@@ -1,0 +1,132 @@
+{
+  "id": "bill_011",
+  "layout": "group_statement",
+  "messy": [
+    "modifier",
+    "multiline_item",
+    "no_cents",
+    "ocr_amount",
+    "page_break"
+  ],
+  "pii": [
+    {
+      "start": 146,
+      "end": 159,
+      "type": "NAME",
+      "text": "Kim, Marcus D"
+    },
+    {
+      "start": 173,
+      "end": 180,
+      "type": "ACCOUNT_ID",
+      "text": "7739921"
+    },
+    {
+      "start": 199,
+      "end": 211,
+      "type": "MEMBER_ID",
+      "text": "ZQ3387234-01"
+    },
+    {
+      "start": 223,
+      "end": 230,
+      "type": "DOB",
+      "text": "8/18/89"
+    },
+    {
+      "start": 237,
+      "end": 278,
+      "type": "ADDRESS",
+      "text": "6766 Oak Court Apt 5B, Riverton, OH 45012"
+    },
+    {
+      "start": 285,
+      "end": 300,
+      "type": "PHONE",
+      "text": "+1 212 555 0133"
+    },
+    {
+      "start": 309,
+      "end": 338,
+      "type": "EMAIL",
+      "text": "marcus.kim60@mail.example.com"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 62,
+      "end": 73,
+      "type": "ADDRESS",
+      "text": "PO Box 2231"
+    },
+    {
+      "start": 75,
+      "end": 91,
+      "type": "ADDRESS",
+      "text": "Tacoma, WA 98401"
+    },
+    {
+      "start": 98,
+      "end": 110,
+      "type": "PHONE",
+      "text": "253.555.0166"
+    },
+    {
+      "start": 117,
+      "end": 129,
+      "type": "PHONE",
+      "text": "253.555.0144"
+    },
+    {
+      "start": 360,
+      "end": 377,
+      "type": "NAME",
+      "text": "Dr. Chris Eriksen"
+    },
+    {
+      "start": 389,
+      "end": 403,
+      "type": "NAME",
+      "text": "Jordan Brennan"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-06-30",
+      "code": "74177",
+      "description": "CT ABDOMEN AND PELVIS WITH CONTRAST",
+      "billed_amount": "1848.25",
+      "allowed_amount": null,
+      "insurer_paid": "1083.97",
+      "patient_responsibility": "270.99"
+    },
+    {
+      "service_date": "2025-07-02",
+      "code": "81001",
+      "description": "URINALYSIS, AUTOMATED, WITH MICROSCOPY",
+      "billed_amount": "56.05",
+      "allowed_amount": null,
+      "insurer_paid": "37.16",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-07-02",
+      "code": "70450",
+      "description": "CT HEAD OR BRAIN WITHOUT CONTRAST",
+      "billed_amount": "2292.63",
+      "allowed_amount": null,
+      "insurer_paid": "666.52",
+      "patient_responsibility": "166.63"
+    },
+    {
+      "service_date": "2025-07-02",
+      "code": "G0439",
+      "description": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
+      "billed_amount": "232.09",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "121.98"
+    }
+  ],
+  "duplicate_pairs": []
+}

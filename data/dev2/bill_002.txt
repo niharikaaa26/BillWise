@@ -1,0 +1,22 @@
+CASCADE ORTHOPEDIC PARTNERS, PLLC
+Tax ID 48-0291192
+Remit to: PO Box 2231, Tacoma, WA 98401
+Phone 253.555.0184 | Fax 253.555.0172
+
+STATEMENT FOR: Oyelaran, Yuki G
+Guarantor #: 7434708
+Insured's ID No.: CPH-3739-6304
+Birthdate: 2013-12-15
+Home: 2716 Pine Rd, Springdale, AR 72793
+Cell: +1 360 555 0160
+E-mail: yuki.oyelaran54@mail.example.com
+Referring physician: Dr. Dana Brennan
+Rendering: Jordan Alvarez, PA-C
+
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+01/07/25 80053     RT   COMPREHENSIVE METABOLIC PANEL        2    220.50     85.02   (99.04)     36,44
+01/07/25 71046     LT   CHEST X-RAY, 2 VIEWS                 1    248,26    125.70  (122.56)      0.00
+01/07/25 J1885     LT   KETOROLAC TROMETHAMINE               1     74.49     33.18   (33.01)      8.3O
+                         INJECTION, PER 15 MG
+
+                                         AMOUNT DUE FROM PATIENT     44.74

@@ -1,0 +1,165 @@
+{
+  "id": "bill_010",
+  "layout": "group_statement",
+  "messy": [
+    "duplicate_charge",
+    "modifier",
+    "multiline_item",
+    "no_cents",
+    "ocr_amount",
+    "page_break"
+  ],
+  "pii": [
+    {
+      "start": 146,
+      "end": 162,
+      "type": "NAME",
+      "text": "Hernandez, Andre"
+    },
+    {
+      "start": 176,
+      "end": 183,
+      "type": "ACCOUNT_ID",
+      "text": "4222682"
+    },
+    {
+      "start": 202,
+      "end": 214,
+      "type": "MEMBER_ID",
+      "text": "ZQ5385198-01"
+    },
+    {
+      "start": 226,
+      "end": 233,
+      "type": "DOB",
+      "text": "3/23/14"
+    },
+    {
+      "start": 240,
+      "end": 275,
+      "type": "ADDRESS",
+      "text": "5315 Cedar Lane, Fairview, TN 37010"
+    },
+    {
+      "start": 282,
+      "end": 297,
+      "type": "PHONE",
+      "text": "+1 212 555 0187"
+    },
+    {
+      "start": 306,
+      "end": 335,
+      "type": "EMAIL",
+      "text": "andre.hernandez78@example.org"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 62,
+      "end": 73,
+      "type": "ADDRESS",
+      "text": "PO Box 2231"
+    },
+    {
+      "start": 75,
+      "end": 91,
+      "type": "ADDRESS",
+      "text": "Tacoma, WA 98401"
+    },
+    {
+      "start": 98,
+      "end": 110,
+      "type": "PHONE",
+      "text": "253.555.0128"
+    },
+    {
+      "start": 117,
+      "end": 129,
+      "type": "PHONE",
+      "text": "253.555.0115"
+    },
+    {
+      "start": 357,
+      "end": 373,
+      "type": "NAME",
+      "text": "Dr. Evan Alvarez"
+    },
+    {
+      "start": 385,
+      "end": 398,
+      "type": "NAME",
+      "text": "Casey Eriksen"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-02-04",
+      "code": "81001",
+      "description": "URINALYSIS, AUTOMATED, WITH MICROSCOPY",
+      "billed_amount": "76.83",
+      "allowed_amount": null,
+      "insurer_paid": "21.68",
+      "patient_responsibility": "5.42"
+    },
+    {
+      "service_date": "2025-02-05",
+      "code": "J2405",
+      "description": "ONDANSETRON HYDROCHLORIDE INJECTION, PER 1 MG",
+      "billed_amount": "55.40",
+      "allowed_amount": null,
+      "insurer_paid": "34.76",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-05",
+      "code": "99213",
+      "description": "OFFICE VISIT, ESTABLISHED PATIENT, LOW COMPLEXITY",
+      "billed_amount": "223.20",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "122.72"
+    },
+    {
+      "service_date": "2025-02-05",
+      "code": "93000",
+      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+      "billed_amount": "180.87",
+      "allowed_amount": null,
+      "insurer_paid": "88.89",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-05",
+      "code": "93000",
+      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+      "billed_amount": "180.87",
+      "allowed_amount": null,
+      "insurer_paid": "88.89",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-05",
+      "code": "81001",
+      "description": "URINALYSIS, AUTOMATED, WITH MICROSCOPY",
+      "billed_amount": "66.45",
+      "allowed_amount": null,
+      "insurer_paid": "47.37",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-05",
+      "code": "99213",
+      "description": "OFFICE VISIT, ESTABLISHED PATIENT, LOW COMPLEXITY",
+      "billed_amount": "150.96",
+      "allowed_amount": null,
+      "insurer_paid": "59.79",
+      "patient_responsibility": "25.63"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      3,
+      4
+    ]
+  ]
+}

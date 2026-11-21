@@ -349,7 +349,9 @@ def print_report(r: dict, max_fail: int = 60) -> None:
 DEFAULT_SETS = {
     # the 4 layouts the parser/redactor were developed against
     "main": ROOT / "data" / "synthetic",
-    # a 5th layout written afterwards and never used for tuning (heavier OCR noise)
+    # round-1 held-out layout; used to tune the round-2 fixes, so now development data
+    "dev2": ROOT / "data" / "dev2",
+    # round-2 held-out layout, written before the round-2 fixes and never used for tuning
     "heldout": ROOT / "data" / "heldout",
 }
 
@@ -357,7 +359,7 @@ DEFAULT_SETS = {
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", type=Path, action="append",
-                    help="dataset directory (repeatable). Default: data/synthetic and data/heldout")
+                    help="dataset directory (repeatable). Default: data/synthetic, data/dev2 and data/heldout")
     ap.add_argument("--out", type=Path, default=ROOT / "eval" / "results.json")
     ap.add_argument("--max-failures", type=int, default=60, help="failures to print per category")
     args = ap.parse_args()

@@ -1,131 +1,160 @@
 {
   "id": "bill_011",
-  "layout": "group_statement_heldout",
+  "layout": "multi_claim_heldout",
   "messy": [
-    "modifier",
-    "multiline_item",
-    "no_cents",
+    "missing_field",
+    "multi_table",
     "ocr_amount",
-    "page_break"
+    "tab_separated"
   ],
   "pii": [
     {
-      "start": 146,
-      "end": 159,
+      "start": 239,
+      "end": 256,
       "type": "NAME",
-      "text": "Kim, Marcus D"
+      "text": "Petrov Priyanka D"
     },
     {
-      "start": 173,
-      "end": 180,
-      "type": "ACCOUNT_ID",
-      "text": "7739921"
-    },
-    {
-      "start": 199,
-      "end": 211,
+      "start": 275,
+      "end": 289,
       "type": "MEMBER_ID",
-      "text": "ZQ3387234-01"
+      "text": "7743-2613-0399"
     },
     {
-      "start": 223,
-      "end": 230,
+      "start": 308,
+      "end": 318,
       "type": "DOB",
-      "text": "8/18/89"
+      "text": "04-08-1988"
     },
     {
-      "start": 237,
-      "end": 278,
+      "start": 337,
+      "end": 378,
       "type": "ADDRESS",
-      "text": "6766 Oak Court Apt 5B, Riverton, OH 45012"
+      "text": "7370 Maple Ct Apt 28B, Millbrook NY 12598"
     },
     {
-      "start": 285,
-      "end": 300,
+      "start": 397,
+      "end": 410,
       "type": "PHONE",
-      "text": "+1 212 555 0133"
+      "text": "(917)555-0152"
     },
     {
-      "start": 309,
-      "end": 338,
+      "start": 429,
+      "end": 457,
       "type": "EMAIL",
-      "text": "marcus.kim60@mail.example.com"
+      "text": "PRIYANKA.PETROV3@EXAMPLE.NET"
+    },
+    {
+      "start": 484,
+      "end": 499,
+      "type": "ACCOUNT_ID",
+      "text": "90-6191-6868-00"
+    },
+    {
+      "start": 509,
+      "end": 524,
+      "type": "NAME",
+      "text": "Priyanka Petrov"
+    },
+    {
+      "start": 929,
+      "end": 944,
+      "type": "ACCOUNT_ID",
+      "text": "20-5874-9244-00"
+    },
+    {
+      "start": 954,
+      "end": 969,
+      "type": "NAME",
+      "text": "Priyanka Petrov"
+    },
+    {
+      "start": 1339,
+      "end": 1354,
+      "type": "ACCOUNT_ID",
+      "text": "68-3579-0250-00"
+    },
+    {
+      "start": 1364,
+      "end": 1379,
+      "type": "NAME",
+      "text": "Priyanka Petrov"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 62,
-      "end": 73,
+      "start": 153,
+      "end": 162,
       "type": "ADDRESS",
-      "text": "PO Box 2231"
+      "text": "PO Box 33"
     },
     {
-      "start": 75,
-      "end": 91,
+      "start": 164,
+      "end": 179,
       "type": "ADDRESS",
-      "text": "Tacoma, WA 98401"
+      "text": "Omaha, NE 68101"
     },
     {
-      "start": 98,
-      "end": 110,
+      "start": 194,
+      "end": 208,
       "type": "PHONE",
-      "text": "253.555.0166"
-    },
-    {
-      "start": 117,
-      "end": 129,
-      "type": "PHONE",
-      "text": "253.555.0144"
-    },
-    {
-      "start": 360,
-      "end": 377,
-      "type": "NAME",
-      "text": "Dr. Chris Eriksen"
-    },
-    {
-      "start": 389,
-      "end": 403,
-      "type": "NAME",
-      "text": "Jordan Brennan"
+      "text": "1-800-555-0116"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-06-30",
-      "code": "74177",
-      "description": "CT ABDOMEN AND PELVIS WITH CONTRAST",
-      "billed_amount": "1848.25",
-      "allowed_amount": null,
-      "insurer_paid": "1083.97",
-      "patient_responsibility": "270.99"
-    },
-    {
-      "service_date": "2025-07-02",
-      "code": "81001",
-      "description": "URINALYSIS, AUTOMATED, WITH MICROSCOPY",
-      "billed_amount": "56.05",
-      "allowed_amount": null,
-      "insurer_paid": "37.16",
+      "service_date": "2025-02-09",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1049.62",
+      "allowed_amount": "332.34",
+      "insurer_paid": "332.34",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-07-02",
-      "code": "70450",
-      "description": "CT HEAD OR BRAIN WITHOUT CONTRAST",
-      "billed_amount": "2292.63",
-      "allowed_amount": null,
-      "insurer_paid": "666.52",
-      "patient_responsibility": "166.63"
+      "service_date": "2025-02-12",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "2248.63",
+      "allowed_amount": "1150.06",
+      "insurer_paid": "920.05",
+      "patient_responsibility": "230.01"
     },
     {
-      "service_date": "2025-07-02",
-      "code": "G0439",
-      "description": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
-      "billed_amount": "232.09",
+      "service_date": "2025-04-04",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "422.15",
       "allowed_amount": null,
-      "insurer_paid": "0.00",
-      "patient_responsibility": "121.98"
+      "insurer_paid": "254.64",
+      "patient_responsibility": "63.66"
+    },
+    {
+      "service_date": "2025-04-04",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "288.51",
+      "allowed_amount": "209.35",
+      "insurer_paid": "146.55",
+      "patient_responsibility": "62.80"
+    },
+    {
+      "service_date": "2025-04-06",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "22.60",
+      "allowed_amount": null,
+      "insurer_paid": "8.41",
+      "patient_responsibility": "2.10"
+    },
+    {
+      "service_date": "2025-04-06",
+      "code": "85025",
+      "description": "Complete blood count with automated differential",
+      "billed_amount": "152.07",
+      "allowed_amount": "106.43",
+      "insurer_paid": "106.43",
+      "patient_responsibility": "0.00"
     }
   ],
   "duplicate_pairs": []

@@ -1,149 +1,147 @@
 {
   "id": "bill_006",
-  "layout": "group_statement_heldout",
+  "layout": "multi_claim_heldout",
   "messy": [
-    "modifier",
-    "multiline_item",
-    "no_cents",
+    "multi_table",
     "ocr_amount",
-    "ocr_description"
+    "tab_separated"
   ],
   "pii": [
     {
-      "start": 146,
-      "end": 162,
+      "start": 239,
+      "end": 251,
       "type": "NAME",
-      "text": "Petrov, Elijah F"
+      "text": "Patel Olivia"
     },
     {
-      "start": 176,
-      "end": 183,
-      "type": "ACCOUNT_ID",
-      "text": "8187281"
-    },
-    {
-      "start": 202,
-      "end": 215,
+      "start": 270,
+      "end": 284,
       "type": "MEMBER_ID",
-      "text": "CPH-3616-7076"
+      "text": "6210-6633-6696"
     },
     {
-      "start": 227,
-      "end": 237,
+      "start": 303,
+      "end": 313,
       "type": "DOB",
-      "text": "08/22/1976"
+      "text": "11-09-1941"
     },
     {
-      "start": 244,
-      "end": 281,
+      "start": 332,
+      "end": 373,
       "type": "ADDRESS",
-      "text": "8802 Sunset Dr, Cedar Falls, IA 50679"
+      "text": "6486 Hillcrest Court, Oak Harbor WA 98258"
     },
     {
-      "start": 288,
-      "end": 303,
+      "start": 392,
+      "end": 405,
       "type": "PHONE",
-      "text": "+1 917 555 0132"
+      "text": "(864)555-0179"
     },
     {
-      "start": 312,
-      "end": 339,
+      "start": 424,
+      "end": 450,
       "type": "EMAIL",
-      "text": "elijah.petrov25@example.org"
+      "text": "OLIVIA.PATEL34@EXAMPLE.COM"
+    },
+    {
+      "start": 477,
+      "end": 492,
+      "type": "ACCOUNT_ID",
+      "text": "12-3607-2477-00"
+    },
+    {
+      "start": 502,
+      "end": 514,
+      "type": "NAME",
+      "text": "Olivia Patel"
+    },
+    {
+      "start": 1003,
+      "end": 1018,
+      "type": "ACCOUNT_ID",
+      "text": "41-3929-0734-00"
+    },
+    {
+      "start": 1028,
+      "end": 1040,
+      "type": "NAME",
+      "text": "Olivia Patel"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 62,
-      "end": 73,
+      "start": 153,
+      "end": 162,
       "type": "ADDRESS",
-      "text": "PO Box 2231"
+      "text": "PO Box 33"
     },
     {
-      "start": 75,
-      "end": 91,
+      "start": 164,
+      "end": 179,
       "type": "ADDRESS",
-      "text": "Tacoma, WA 98401"
+      "text": "Omaha, NE 68101"
     },
     {
-      "start": 98,
-      "end": 110,
+      "start": 194,
+      "end": 208,
       "type": "PHONE",
-      "text": "253.555.0110"
-    },
-    {
-      "start": 117,
-      "end": 129,
-      "type": "PHONE",
-      "text": "253.555.0182"
-    },
-    {
-      "start": 361,
-      "end": 373,
-      "type": "NAME",
-      "text": "Dr. Alan Cho"
-    },
-    {
-      "start": 385,
-      "end": 399,
-      "type": "NAME",
-      "text": "Morgan Alvarez"
+      "text": "1-800-555-0179"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-07-15",
+      "service_date": "2025-06-05",
       "code": "87880",
-      "description": "RAPID STREP TEST",
-      "billed_amount": "66.99",
-      "allowed_amount": null,
-      "insurer_paid": "18.07",
-      "patient_responsibility": "4.52"
+      "description": "Rapid strep test",
+      "billed_amount": "33.89",
+      "allowed_amount": "19.25",
+      "insurer_paid": "13.48",
+      "patient_responsibility": "5.77"
     },
     {
-      "service_date": "2025-07-15",
+      "service_date": "2025-06-05",
       "code": "99285",
-      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
-      "billed_amount": "2231.32",
-      "allowed_amount": null,
-      "insurer_paid": "1346.63",
-      "patient_responsibility": "336.66"
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "3154.38",
+      "allowed_amount": "2276.09",
+      "insurer_paid": "1593.26",
+      "patient_responsibility": "682.83"
     },
     {
-      "service_date": "2025-07-15",
-      "code": "81001",
-      "description": "URINALYSIS, AUTOMATED, WITH MICROSCOPY",
-      "billed_amount": "62.15",
-      "allowed_amount": null,
-      "insurer_paid": "43.86",
-      "patient_responsibility": "4.87"
+      "service_date": "2025-06-08",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "296.06",
+      "allowed_amount": "152.05",
+      "insurer_paid": "121.64",
+      "patient_responsibility": "30.41"
     },
     {
-      "service_date": "2025-07-15",
-      "code": "80053",
-      "description": "C0MPREHENSIVE METABOLIC PANEL",
-      "billed_amount": "181.19",
-      "allowed_amount": null,
-      "insurer_paid": "49.47",
-      "patient_responsibility": "12.37"
+      "service_date": "2025-07-07",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "27.66",
+      "allowed_amount": "20.03",
+      "insurer_paid": "16.02",
+      "patient_responsibility": "4.01"
     },
     {
-      "service_date": "2025-07-18",
-      "code": "99213",
-      "description": "OFFICE VISIT, ESTABLISHED PATIENT, LOW C0MPLEXITY",
-      "billed_amount": "150.43",
-      "allowed_amount": null,
-      "insurer_paid": "44.27",
-      "patient_responsibility": "11.07"
+      "service_date": "2025-07-07",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "374.11",
+      "allowed_amount": "252.28",
+      "insurer_paid": "176.60",
+      "patient_responsibility": "75.68"
     },
     {
-      "service_date": "2025-07-18",
-      "code": "A4649",
-      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
-      "billed_amount": "117.27",
-      "allowed_amount": null,
+      "service_date": "2025-07-07",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "330.41",
+      "allowed_amount": "150.88",
       "insurer_paid": "0.00",
-      "patient_responsibility": "47.17"
+      "patient_responsibility": "150.88"
     }
   ],
   "duplicate_pairs": []

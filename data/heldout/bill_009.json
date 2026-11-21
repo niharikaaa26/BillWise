@@ -1,132 +1,141 @@
 {
   "id": "bill_009",
-  "layout": "group_statement_heldout",
+  "layout": "multi_claim_heldout",
   "messy": [
     "duplicate_charge",
-    "modifier",
-    "multiline_item",
-    "no_cents",
+    "missing_field",
+    "multi_table",
     "ocr_amount",
-    "ocr_description"
+    "tab_separated"
   ],
   "pii": [
     {
-      "start": 139,
-      "end": 156,
+      "start": 239,
+      "end": 257,
       "type": "NAME",
-      "text": "Haddad, Siobhan P"
+      "text": "Achterberg Patrice"
     },
     {
-      "start": 170,
-      "end": 177,
-      "type": "ACCOUNT_ID",
-      "text": "1167202"
-    },
-    {
-      "start": 196,
-      "end": 206,
+      "start": 276,
+      "end": 290,
       "type": "MEMBER_ID",
-      "text": "W446897303"
+      "text": "0729-6755-2332"
     },
     {
-      "start": 218,
-      "end": 224,
+      "start": 309,
+      "end": 319,
       "type": "DOB",
-      "text": "2/8/68"
+      "text": "07-29-1958"
     },
     {
-      "start": 231,
-      "end": 272,
+      "start": 338,
+      "end": 374,
       "type": "ADDRESS",
-      "text": "8880 Hillcrest Lane, Greenville, SC 29694"
+      "text": "8265 Sunset Drive, Lakewood CO 80236"
     },
     {
-      "start": 279,
-      "end": 294,
+      "start": 393,
+      "end": 406,
       "type": "PHONE",
-      "text": "+1 917 555 0148"
+      "text": "(479)555-0104"
+    },
+    {
+      "start": 425,
+      "end": 457,
+      "type": "EMAIL",
+      "text": "PATRICE.ACHTERBERG96@EXAMPLE.ORG"
+    },
+    {
+      "start": 484,
+      "end": 499,
+      "type": "ACCOUNT_ID",
+      "text": "71-2052-5862-00"
+    },
+    {
+      "start": 509,
+      "end": 526,
+      "type": "NAME",
+      "text": "Olivia Achterberg"
+    },
+    {
+      "start": 895,
+      "end": 910,
+      "type": "ACCOUNT_ID",
+      "text": "05-0484-1022-00"
+    },
+    {
+      "start": 920,
+      "end": 938,
+      "type": "NAME",
+      "text": "Patrice Achterberg"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 54,
-      "end": 64,
+      "start": 153,
+      "end": 162,
       "type": "ADDRESS",
-      "text": "PO Box 870"
+      "text": "PO Box 33"
     },
     {
-      "start": 66,
-      "end": 84,
+      "start": 164,
+      "end": 179,
       "type": "ADDRESS",
-      "text": "Santa Fe, NM 87501"
+      "text": "Omaha, NE 68101"
     },
     {
-      "start": 91,
-      "end": 103,
+      "start": 194,
+      "end": 208,
       "type": "PHONE",
-      "text": "505.555.0113"
-    },
-    {
-      "start": 110,
-      "end": 122,
-      "type": "PHONE",
-      "text": "505.555.0130"
-    },
-    {
-      "start": 316,
-      "end": 332,
-      "type": "NAME",
-      "text": "Dr. Chris Dubois"
-    },
-    {
-      "start": 344,
-      "end": 358,
-      "type": "NAME",
-      "text": "Jordan Alvarez"
+      "text": "1-800-555-0116"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-01-08",
+      "service_date": "2025-05-13",
       "code": "70450",
-      "description": "CT HEAD OR BRAIN WITHOUT CONTRAST",
-      "billed_amount": "2302.59",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1147.72",
       "allowed_amount": null,
-      "insurer_paid": "1062.73",
-      "patient_responsibility": "0.00"
+      "insurer_paid": "750.27",
+      "patient_responsibility": "83.36"
     },
     {
-      "service_date": "2025-01-08",
+      "service_date": "2025-05-16",
       "code": "36415",
-      "description": "ROUTINE VENIPUNCLURE",
-      "billed_amount": "43.21",
-      "allowed_amount": null,
-      "insurer_paid": "22.20",
-      "patient_responsibility": "9.52"
+      "description": "Routine venipuncture",
+      "billed_amount": "19.26",
+      "allowed_amount": "14.41",
+      "insurer_paid": "12.97",
+      "patient_responsibility": "1.44"
     },
     {
-      "service_date": "2025-01-08",
-      "code": "36415",
-      "description": "ROUTINE VENIPUNCTURE",
-      "billed_amount": "43.21",
-      "allowed_amount": null,
-      "insurer_paid": "22.20",
-      "patient_responsibility": "9.52"
+      "service_date": "2025-05-06",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "176.74",
+      "allowed_amount": "111.80",
+      "insurer_paid": "78.26",
+      "patient_responsibility": "33.54"
     },
     {
-      "service_date": "2025-01-08",
-      "code": "A4649",
-      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
-      "billed_amount": "62.97",
-      "allowed_amount": null,
-      "insurer_paid": "26.78",
-      "patient_responsibility": "11.48"
+      "service_date": "2025-05-06",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "158.43",
+      "allowed_amount": "89.54",
+      "insurer_paid": "80.59",
+      "patient_responsibility": "8.95"
+    },
+    {
+      "service_date": "2025-05-09",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "317.30",
+      "allowed_amount": "227.32",
+      "insurer_paid": "181.86",
+      "patient_responsibility": "45.46"
     }
   ],
-  "duplicate_pairs": [
-    [
-      1,
-      2
-    ]
-  ]
+  "duplicate_pairs": []
 }

@@ -1,114 +1,162 @@
 {
   "id": "bill_003",
-  "layout": "group_statement_heldout",
+  "layout": "multi_claim_heldout",
   "messy": [
-    "modifier",
-    "multiline_item",
-    "ocr_amount"
+    "multi_table",
+    "ocr_amount",
+    "tab_separated"
   ],
   "pii": [
     {
-      "start": 139,
-      "end": 153,
+      "start": 245,
+      "end": 260,
       "type": "NAME",
-      "text": "Ivanova, Sarah"
+      "text": "Abernathy Thanh"
     },
     {
-      "start": 167,
-      "end": 174,
-      "type": "ACCOUNT_ID",
-      "text": "9007766"
-    },
-    {
-      "start": 193,
-      "end": 203,
+      "start": 279,
+      "end": 293,
       "type": "MEMBER_ID",
-      "text": "W472124762"
+      "text": "7684-9059-1257"
     },
     {
-      "start": 215,
-      "end": 230,
+      "start": 312,
+      "end": 322,
       "type": "DOB",
-      "text": "August 16, 2001"
+      "text": "05-06-1983"
     },
     {
-      "start": 237,
-      "end": 277,
+      "start": 341,
+      "end": 376,
       "type": "ADDRESS",
-      "text": "5876 Hillcrest Way, Greenville, SC 29673"
+      "text": "7438 Briar Drive, Lakewood CO 80272"
     },
     {
-      "start": 284,
-      "end": 299,
+      "start": 395,
+      "end": 408,
       "type": "PHONE",
-      "text": "+1 513 555 0151"
+      "text": "(319)555-0198"
+    },
+    {
+      "start": 435,
+      "end": 450,
+      "type": "ACCOUNT_ID",
+      "text": "71-9140-4866-00"
+    },
+    {
+      "start": 460,
+      "end": 475,
+      "type": "NAME",
+      "text": "Thanh Abernathy"
+    },
+    {
+      "start": 894,
+      "end": 909,
+      "type": "ACCOUNT_ID",
+      "text": "10-5285-6250-00"
+    },
+    {
+      "start": 919,
+      "end": 934,
+      "type": "NAME",
+      "text": "Thanh Abernathy"
+    },
+    {
+      "start": 1473,
+      "end": 1488,
+      "type": "ACCOUNT_ID",
+      "text": "09-1100-0414-00"
+    },
+    {
+      "start": 1498,
+      "end": 1513,
+      "type": "NAME",
+      "text": "Thanh Abernathy"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 54,
-      "end": 64,
+      "start": 157,
+      "end": 168,
       "type": "ADDRESS",
-      "text": "PO Box 870"
+      "text": "PO Box 6100"
     },
     {
-      "start": 66,
-      "end": 84,
+      "start": 170,
+      "end": 185,
       "type": "ADDRESS",
-      "text": "Santa Fe, NM 87501"
+      "text": "Fargo, ND 58108"
     },
     {
-      "start": 91,
-      "end": 103,
+      "start": 200,
+      "end": 214,
       "type": "PHONE",
-      "text": "505.555.0111"
-    },
-    {
-      "start": 110,
-      "end": 122,
-      "type": "PHONE",
-      "text": "505.555.0148"
-    },
-    {
-      "start": 321,
-      "end": 337,
-      "type": "NAME",
-      "text": "Dr. Farah Dubois"
-    },
-    {
-      "start": 349,
-      "end": 362,
-      "type": "NAME",
-      "text": "Jordan Farouk"
+      "text": "1-800-555-0121"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-03-30",
-      "code": "99213",
-      "description": "OFFICE VISIT, ESTABLISHED PATIENT, LOW COMPLEXITY",
-      "billed_amount": "199.09",
-      "allowed_amount": null,
-      "insurer_paid": "101.99",
+      "service_date": "2025-07-23",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "69.25",
+      "allowed_amount": "46.73",
+      "insurer_paid": "46.73",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-03-30",
-      "code": "99203",
-      "description": "NEW PATIENT OFFICE VISIT",
-      "billed_amount": "242.51",
-      "allowed_amount": null,
-      "insurer_paid": "153.51",
+      "service_date": "2025-07-23",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2906.31",
+      "allowed_amount": "946.82",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "946.82"
+    },
+    {
+      "service_date": "2025-08-05",
+      "code": "85025",
+      "description": "Complete blood count with automated differential",
+      "billed_amount": "135.77",
+      "allowed_amount": "71.80",
+      "insurer_paid": "50.26",
+      "patient_responsibility": "21.54"
+    },
+    {
+      "service_date": "2025-08-05",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "1263.99",
+      "allowed_amount": "963.98",
+      "insurer_paid": "963.98",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-03-30",
-      "code": "74177",
-      "description": "CT ABDOMEN AND PELVIS WITH CONTRAST",
-      "billed_amount": "4287.02",
-      "allowed_amount": null,
-      "insurer_paid": "2470.34",
-      "patient_responsibility": "274.48"
+      "service_date": "2025-08-05",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "312.05",
+      "allowed_amount": "157.91",
+      "insurer_paid": "157.91",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-28",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "56.89",
+      "allowed_amount": "37.47",
+      "insurer_paid": "37.47",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-28",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "43.81",
+      "allowed_amount": "13.24",
+      "insurer_paid": "10.59",
+      "patient_responsibility": "2.65"
     }
   ],
   "duplicate_pairs": []

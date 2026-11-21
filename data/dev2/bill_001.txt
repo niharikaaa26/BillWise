@@ -1,0 +1,30 @@
+CASCADE ORTHOPEDIC PARTNERS, PLLC
+Tax ID 09-5494134
+Remit to: PO Box 2231, Tacoma, WA 98401
+Phone 253.555.0164 | Fax 253.555.0116
+
+STATEMENT FOR: Achterberg, Fatima
+Guarantor #: 6905929
+Insured's ID No.: ZQ1884718-01
+Birthdate: 1993-12-17
+Home: 5517 Sunset Lane, Springdale, AR 72746
+Cell: +1 845 555 0101
+E-mail: fatima.achterberg16@example.com
+Referring physician: Dr. Beth Farouk
+Rendering: Casey Dubois, PA-C
+
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+02/17/25 99203     LT   NEW PATIENT OFFICE VISIT             2    235.07    157.23   (60.37)     17.47
+
+--- continued on next page ---
+
+CASCADE ORTHOPEDIC PARTNERS, PLLC   Page 2
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+02/17/25 80053     LT   COMPREHENSIVE METABOLIC PANEL        1    123.45      0.00   (34.94)     88.51
+02/17/25 71046          CHEST X-RAY, 2 VIEWS                 1    400.06    228.23  (114.77)     57.06
+02/17/25 G0439     59   ANNUAL WELLNESS VISIT,               2    2l4.67     77.80  (136.87)      0.00
+                         SUBSEQUENT
+02/17/25 J1885     RT   KETOROLAC TROMETHAMINE               1     47.3l     27.21   (17.08)      3.02
+                         INJECTION, PER 15 MG
+
+                                         AMOUNT DUE FROM PATIENT    166.06

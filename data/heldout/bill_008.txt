@@ -1,33 +1,29 @@
-RED MESA CARDIOLOGY GROUP
-Tax ID 18-0816526
-Remit to: PO Box 870, Santa Fe, NM 87501
-Phone 505.555.0116 | Fax 505.555.0161
+NORTHWIND BENEFIT ADMINISTRATORS
+Member Statement of Benefits                        Page 1
+Statement period: 05/12/2025 - 08/10/2025
+Send correspondence to PO Box 6100, Fargo, ND 58108
+Customer care 1-800-555-0147  (TTY 711)
 
-STATEMENT FOR: Johnson, Kevin
-Guarantor #: 3019355
-Insured's ID No.: W957283906
-Birthdate: 5/23/87
-Home: 6010 Briar Boulevard, Springdale, AR 72793
-Cell: +1 360 555 0168
-E-mail: kevin.johnson55@mail.example.com
-Referring physician: Dr. Farah Alvarez
-Rendering: Jordan Dubois, PA-C
+Member .......... Abernathy Keisha
+Member # ........ 5846-3641-2723
+Date of birth ... 07-28-2014
+Residence ....... 5208 Highland Road, Greenville SC 29694
+Daytime tel ..... (864)555-0195
+E-mail .......... KEISHA.ABERNATHY53@EXAMPLE.NET
 
-DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
-09/04/25 J2405          ONDANSETRON HYDROCHLORIDE            1     39.15     22.37   (14.30)      2,48
-                         INJECTION, PER 1 MG
-09/04/25 80053          COMPREHENSIVE METABOLIC PANEL        2    226.0l      0.00   (54.34)    171.67
-09/06/25 99213          OFFICE VLSIT, ESTABLISHED            1    224,38      0.O0   (92.75)    131.63
-                         PATIENT, LOW COMPLEXITY
+CLAIM 1 OF 2   Claim ID: 31-5546-7093-00
+Patient: Keisha Abernathy
+Provider: Northgate Pediatrics
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+06/27/25	81001	Urinalysis, automated, with microscopy	S56.38	$17.22	$39.16	$0.00	$0.00	$39.16	$0.00
+06/27/25	36415	Routine venipuncture	$49.93	$26.60	—	$0.00	$4.67	$18,66	$4.67
+Claim totals									$4.67
 
---- continued on next page ---
-
-RED MESA CARDIOLOGY GROUP   Page 2
-DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
-09/06/25 85025     RT   COMPLETE BLOOD COUNT WITH            1     67.80     28,34   (27.31)     12,15
-                         AUTOMATED DIFFERENTIAL
-09/06/25 36415     RT   ROUTINE VENIPUNCTURE                 1     17.04      6,23   (10.12)      0.69
-09/09/25 90471          IMMUNIZATION ADMINISTRALION,         2     42.92     23.94   (13.00)      5.98
-                         SINGLE VACCINE
+CLAIM 2 OF 2   Claim ID: 97-8066-8741-00
+Patient: Keisha Abernathy
+Provider: Mercy Valley Regional Hospital
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+05/23/25	80053	Comprehensive metabolic panel	$341.48	$163.62	$177.86	$0.00	$53.36	$124.50	$53.36
+Claim totals									$53.36
 
-                                         AMOUNT DUE FROM PATIENT    324.60
+This is not a bill. Keep this statement for your records.

@@ -1,142 +1,139 @@
 {
   "id": "bill_012",
-  "layout": "group_statement_heldout",
+  "layout": "multi_claim_heldout",
   "messy": [
-    "modifier",
-    "multiline_item",
-    "ocr_amount"
+    "duplicate_charge",
+    "multi_table",
+    "ocr_amount",
+    "tab_separated"
   ],
   "pii": [
     {
-      "start": 139,
-      "end": 154,
+      "start": 245,
+      "end": 265,
       "type": "NAME",
-      "text": "Bianchi, Luis P"
+      "text": "Achterberg Brianna F"
     },
     {
-      "start": 168,
-      "end": 175,
-      "type": "ACCOUNT_ID",
-      "text": "7516240"
-    },
-    {
-      "start": 194,
-      "end": 206,
+      "start": 284,
+      "end": 298,
       "type": "MEMBER_ID",
-      "text": "ZQ0065048-01"
+      "text": "9001-3220-7746"
     },
     {
-      "start": 218,
-      "end": 232,
+      "start": 317,
+      "end": 327,
       "type": "DOB",
-      "text": "March 28, 1954"
+      "text": "09-26-1956"
     },
     {
-      "start": 239,
-      "end": 278,
+      "start": 346,
+      "end": 386,
       "type": "ADDRESS",
-      "text": "1822 Oak Way #3C, Port Jervis, NY 12758"
+      "text": "4071 Magnolia Drive, Springdale AR 72756"
     },
     {
-      "start": 285,
-      "end": 300,
+      "start": 405,
+      "end": 418,
       "type": "PHONE",
-      "text": "+1 212 555 0164"
+      "text": "(513)555-0129"
+    },
+    {
+      "start": 445,
+      "end": 460,
+      "type": "ACCOUNT_ID",
+      "text": "37-0559-9383-00"
+    },
+    {
+      "start": 470,
+      "end": 488,
+      "type": "NAME",
+      "text": "Brianna Achterberg"
+    },
+    {
+      "start": 1029,
+      "end": 1044,
+      "type": "ACCOUNT_ID",
+      "text": "91-0136-9901-00"
+    },
+    {
+      "start": 1054,
+      "end": 1072,
+      "type": "NAME",
+      "text": "Brianna Achterberg"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 54,
-      "end": 64,
+      "start": 157,
+      "end": 168,
       "type": "ADDRESS",
-      "text": "PO Box 870"
+      "text": "PO Box 6100"
     },
     {
-      "start": 66,
-      "end": 84,
+      "start": 170,
+      "end": 185,
       "type": "ADDRESS",
-      "text": "Santa Fe, NM 87501"
+      "text": "Fargo, ND 58108"
     },
     {
-      "start": 91,
-      "end": 103,
+      "start": 200,
+      "end": 214,
       "type": "PHONE",
-      "text": "505.555.0165"
-    },
-    {
-      "start": 110,
-      "end": 122,
-      "type": "PHONE",
-      "text": "505.555.0193"
-    },
-    {
-      "start": 322,
-      "end": 339,
-      "type": "NAME",
-      "text": "Dr. Chris Brennan"
-    },
-    {
-      "start": 351,
-      "end": 360,
-      "type": "NAME",
-      "text": "Casey Cho"
+      "text": "1-800-555-0170"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-08-16",
-      "code": "99285",
-      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
-      "billed_amount": "1817.39",
-      "allowed_amount": null,
-      "insurer_paid": "718.02",
+      "service_date": "2025-06-11",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "320.73",
+      "allowed_amount": "170.61",
+      "insurer_paid": "153.55",
+      "patient_responsibility": "17.06"
+    },
+    {
+      "service_date": "2025-06-11",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "320.73",
+      "allowed_amount": "170.61",
+      "insurer_paid": "153.55",
+      "patient_responsibility": "17.06"
+    },
+    {
+      "service_date": "2025-06-11",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1910.08",
+      "allowed_amount": "1353.97",
+      "insurer_paid": "1353.97",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-08-19",
-      "code": "93000",
-      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
-      "billed_amount": "287.21",
-      "allowed_amount": null,
-      "insurer_paid": "139.46",
-      "patient_responsibility": "34.86"
+      "service_date": "2025-06-07",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "75.54",
+      "allowed_amount": "53.16",
+      "insurer_paid": "42.53",
+      "patient_responsibility": "10.63"
     },
     {
-      "service_date": "2025-08-19",
-      "code": "71046",
-      "description": "CHEST X-RAY, 2 VIEWS",
-      "billed_amount": "230.43",
-      "allowed_amount": null,
+      "service_date": "2025-06-07",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "274.42",
+      "allowed_amount": "165.44",
       "insurer_paid": "0.00",
-      "patient_responsibility": "165.71"
-    },
-    {
-      "service_date": "2025-08-19",
-      "code": "99285",
-      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
-      "billed_amount": "2737.86",
-      "allowed_amount": null,
-      "insurer_paid": "1010.90",
-      "patient_responsibility": "252.73"
-    },
-    {
-      "service_date": "2025-08-19",
-      "code": "A4649",
-      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
-      "billed_amount": "91.52",
-      "allowed_amount": null,
-      "insurer_paid": "45.95",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-08-19",
-      "code": "93000",
-      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
-      "billed_amount": "235.82",
-      "allowed_amount": null,
-      "insurer_paid": "75.97",
-      "patient_responsibility": "32.56"
+      "patient_responsibility": "165.44"
     }
   ],
-  "duplicate_pairs": []
+  "duplicate_pairs": [
+    [
+      0,
+      1
+    ]
+  ]
 }

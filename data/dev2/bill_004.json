@@ -1,0 +1,112 @@
+{
+  "id": "bill_004",
+  "layout": "group_statement",
+  "messy": [
+    "modifier",
+    "multiline_item",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 146,
+      "end": 162,
+      "type": "NAME",
+      "text": "Johnson, Brianna"
+    },
+    {
+      "start": 176,
+      "end": 183,
+      "type": "ACCOUNT_ID",
+      "text": "3958790"
+    },
+    {
+      "start": 202,
+      "end": 213,
+      "type": "MEMBER_ID",
+      "text": "XGH20365710"
+    },
+    {
+      "start": 225,
+      "end": 238,
+      "type": "DOB",
+      "text": "July 21, 1979"
+    },
+    {
+      "start": 245,
+      "end": 287,
+      "type": "ADDRESS",
+      "text": "8711 Sunset Blvd #5C, Springdale, AR 72776"
+    },
+    {
+      "start": 294,
+      "end": 309,
+      "type": "PHONE",
+      "text": "+1 513 555 0124"
+    },
+    {
+      "start": 318,
+      "end": 347,
+      "type": "EMAIL",
+      "text": "brianna.johnson75@example.org"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 62,
+      "end": 73,
+      "type": "ADDRESS",
+      "text": "PO Box 2231"
+    },
+    {
+      "start": 75,
+      "end": 91,
+      "type": "ADDRESS",
+      "text": "Tacoma, WA 98401"
+    },
+    {
+      "start": 98,
+      "end": 110,
+      "type": "PHONE",
+      "text": "253.555.0198"
+    },
+    {
+      "start": 117,
+      "end": 129,
+      "type": "PHONE",
+      "text": "253.555.0172"
+    },
+    {
+      "start": 369,
+      "end": 384,
+      "type": "NAME",
+      "text": "Dr. Beth Dubois"
+    },
+    {
+      "start": 396,
+      "end": 410,
+      "type": "NAME",
+      "text": "Morgan Brennan"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-03-13",
+      "code": "99213",
+      "description": "OFFICE VISIT, ESTABLISHED PATIENT, LOW COMPLEXITY",
+      "billed_amount": "203.21",
+      "allowed_amount": null,
+      "insurer_paid": "86.56",
+      "patient_responsibility": "37.10"
+    },
+    {
+      "service_date": "2025-03-15",
+      "code": "99285",
+      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+      "billed_amount": "1828.36",
+      "allowed_amount": null,
+      "insurer_paid": "1311.11",
+      "patient_responsibility": "145.68"
+    }
+  ],
+  "duplicate_pairs": []
+}

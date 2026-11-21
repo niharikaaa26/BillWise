@@ -1,0 +1,22 @@
+RED MESA CARDIOLOGY GROUP
+Tax ID 31-0451867
+Remit to: PO Box 870, Santa Fe, NM 87501
+Phone 505.555.0113 | Fax 505.555.0130
+
+STATEMENT FOR: Haddad, Siobhan P
+Guarantor #: 1167202
+Insured's ID No.: W446897303
+Birthdate: 2/8/68
+Home: 8880 Hillcrest Lane, Greenville, SC 29694
+Cell: +1 917 555 0148
+Referring physician: Dr. Chris Dubois
+Rendering: Jordan Alvarez, PA-C
+
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+01/08/25 70450     LT   CT HEAD OR BRAIN WITHOUT             1  2,302.59  1,062.73(1,239.86)      0.00
+                         CONTRAST
+01/08/25 36415     25   ROUTINE VENIPUNCLURE                 1     43.21     22.20   (11.49)      9.52
+01/08/25 36415     LT   ROUTINE VENIPUNCTURE                 1     43.21     22.20   (11.49)      9,52
+01/08/25 A4649          SURGICAL SUPPLY, MISCELLANEOUS       1     62.97     26.78   (24.71)     11.48
+
+                                         AMOUNT DUE FROM PATIENT     30.52

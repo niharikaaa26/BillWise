@@ -1,0 +1,37 @@
+CASCADE ORTHOPEDIC PARTNERS, PLLC
+Tax ID 27-7003640
+Remit to: PO Box 2231, Tacoma, WA 98401
+Phone 253.555.0128 | Fax 253.555.0115
+
+STATEMENT FOR: Hernandez, Andre
+Guarantor #: 4222682
+Insured's ID No.: ZQ5385198-01
+Birthdate: 3/23/14
+Home: 5315 Cedar Lane, Fairview, TN 37010
+Cell: +1 212 555 0187
+E-mail: andre.hernandez78@example.org
+Referring physician: Dr. Evan Alvarez
+Rendering: Casey Eriksen, PA-C
+
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+02/04/25 81001     RT   URINALYSIS, AUTOMATED, WITH          1     76,83     21.68   (49.73)      5.42
+                         MICROSCOPY
+02/05/25 J2405          ONDANSETRON HYDROCHLORIDE            1     55,40     34,76   (20.64)      O.00
+                         INJECTION, PER 1 MG
+02/05/25 99213     RT   OFFICE VISIT, ESTABLISHED            2    223.20      0.00  (100.48)    122.72
+                         PATIENT, LOW COMPLEXITY
+02/05/25 93000     LT   ELECTROCARDIOGRAM, ROUTINE, WITH     1    18O.87     88.89   (91.98)      O.00
+                         INTERPRETATION AND REPORT
+
+--- continued on next page ---
+
+CASCADE ORTHOPEDIC PARTNERS, PLLC   Page 2
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+02/05/25 93000          ELECTROCARDIOGRAM, ROUTINE, WITH     1    180.87     88.89   (91.98)      0.00
+                         INTERPRETATION AND REPORT
+02/05/25 81001     RT   URINALYSIS, AUTOMATED, WITH          1     66,45     47.37   (19.08)      0.00
+                         MICROSCOPY
+02/05/25 99213     25   OFFICE VISIT, ESTABLISHED            1    150.96     59.79   (65.54)     25.63
+                         PATIENT, LOW COMPLEXITY
+
+                                         AMOUNT DUE FROM PATIENT    153.77

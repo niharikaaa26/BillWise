@@ -1,139 +1,169 @@
 {
   "id": "bill_001",
-  "layout": "group_statement_heldout",
+  "layout": "multi_claim_heldout",
   "messy": [
-    "modifier",
-    "multiline_item",
+    "duplicate_charge",
+    "multi_table",
     "ocr_amount",
-    "page_break"
+    "tab_separated"
   ],
   "pii": [
     {
-      "start": 146,
-      "end": 164,
+      "start": 239,
+      "end": 257,
       "type": "NAME",
-      "text": "Achterberg, Fatima"
+      "text": "Hernandez Dmitri N"
     },
     {
-      "start": 178,
-      "end": 185,
-      "type": "ACCOUNT_ID",
-      "text": "6905929"
-    },
-    {
-      "start": 204,
-      "end": 216,
+      "start": 276,
+      "end": 290,
       "type": "MEMBER_ID",
-      "text": "ZQ1884718-01"
+      "text": "3937-0450-5285"
     },
     {
-      "start": 228,
-      "end": 238,
+      "start": 309,
+      "end": 319,
       "type": "DOB",
-      "text": "1993-12-17"
+      "text": "09-28-1982"
     },
     {
-      "start": 245,
-      "end": 283,
+      "start": 338,
+      "end": 378,
       "type": "ADDRESS",
-      "text": "5517 Sunset Lane, Springdale, AR 72746"
+      "text": "4517 Cedar Ct Unit 11, Lakewood CO 80225"
     },
     {
-      "start": 290,
-      "end": 305,
+      "start": 397,
+      "end": 410,
       "type": "PHONE",
-      "text": "+1 845 555 0101"
+      "text": "(479)555-0177"
     },
     {
-      "start": 314,
-      "end": 345,
+      "start": 429,
+      "end": 458,
       "type": "EMAIL",
-      "text": "fatima.achterberg16@example.com"
+      "text": "DMITRI.HERNANDEZ4@EXAMPLE.NET"
+    },
+    {
+      "start": 485,
+      "end": 500,
+      "type": "ACCOUNT_ID",
+      "text": "25-9874-7174-00"
+    },
+    {
+      "start": 510,
+      "end": 526,
+      "type": "NAME",
+      "text": "Dmitri Hernandez"
+    },
+    {
+      "start": 821,
+      "end": 836,
+      "type": "ACCOUNT_ID",
+      "text": "86-9934-6736-00"
+    },
+    {
+      "start": 846,
+      "end": 862,
+      "type": "NAME",
+      "text": "Dmitri Hernandez"
+    },
+    {
+      "start": 1378,
+      "end": 1393,
+      "type": "ACCOUNT_ID",
+      "text": "21-2195-1072-00"
+    },
+    {
+      "start": 1403,
+      "end": 1419,
+      "type": "NAME",
+      "text": "Dmitri Hernandez"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 62,
-      "end": 73,
+      "start": 153,
+      "end": 162,
       "type": "ADDRESS",
-      "text": "PO Box 2231"
+      "text": "PO Box 33"
     },
     {
-      "start": 75,
-      "end": 91,
+      "start": 164,
+      "end": 179,
       "type": "ADDRESS",
-      "text": "Tacoma, WA 98401"
+      "text": "Omaha, NE 68101"
     },
     {
-      "start": 98,
-      "end": 110,
+      "start": 194,
+      "end": 208,
       "type": "PHONE",
-      "text": "253.555.0164"
-    },
-    {
-      "start": 117,
-      "end": 129,
-      "type": "PHONE",
-      "text": "253.555.0116"
-    },
-    {
-      "start": 367,
-      "end": 382,
-      "type": "NAME",
-      "text": "Dr. Beth Farouk"
-    },
-    {
-      "start": 394,
-      "end": 406,
-      "type": "NAME",
-      "text": "Casey Dubois"
+      "text": "1-800-555-0121"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-02-17",
-      "code": "99203",
-      "description": "NEW PATIENT OFFICE VISIT",
-      "billed_amount": "235.07",
-      "allowed_amount": null,
-      "insurer_paid": "157.23",
-      "patient_responsibility": "17.47"
+      "service_date": "2025-04-20",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "36.66",
+      "allowed_amount": "12.55",
+      "insurer_paid": "8.79",
+      "patient_responsibility": "3.76"
     },
     {
-      "service_date": "2025-02-17",
-      "code": "80053",
-      "description": "COMPREHENSIVE METABOLIC PANEL",
-      "billed_amount": "123.45",
-      "allowed_amount": null,
-      "insurer_paid": "0.00",
-      "patient_responsibility": "88.51"
-    },
-    {
-      "service_date": "2025-02-17",
-      "code": "71046",
-      "description": "CHEST X-RAY, 2 VIEWS",
-      "billed_amount": "400.06",
-      "allowed_amount": null,
-      "insurer_paid": "228.23",
-      "patient_responsibility": "57.06"
-    },
-    {
-      "service_date": "2025-02-17",
-      "code": "G0439",
-      "description": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
-      "billed_amount": "214.67",
-      "allowed_amount": null,
-      "insurer_paid": "77.80",
+      "service_date": "2025-03-04",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "366.79",
+      "allowed_amount": "290.74",
+      "insurer_paid": "290.74",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-02-17",
-      "code": "J1885",
-      "description": "KETOROLAC TROMETHAMINE INJECTION, PER 15 MG",
-      "billed_amount": "47.31",
-      "allowed_amount": null,
-      "insurer_paid": "27.21",
-      "patient_responsibility": "3.02"
+      "service_date": "2025-03-04",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "86.71",
+      "allowed_amount": "42.23",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "42.23"
+    },
+    {
+      "service_date": "2025-03-04",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "1289.76",
+      "allowed_amount": "403.31",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "403.31"
+    },
+    {
+      "service_date": "2025-03-25",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "141.62",
+      "allowed_amount": "104.51",
+      "insurer_paid": "104.51",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-03-25",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2986.27",
+      "allowed_amount": "2110.64",
+      "insurer_paid": "1899.58",
+      "patient_responsibility": "211.06"
+    },
+    {
+      "service_date": "2025-03-25",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "304.45",
+      "allowed_amount": "228.05",
+      "insurer_paid": "228.05",
+      "patient_responsibility": "0.00"
     }
   ],
   "duplicate_pairs": []

@@ -1,22 +1,29 @@
-CASCADE ORTHOPEDIC PARTNERS, PLLC
-Tax ID 48-0291192
-Remit to: PO Box 2231, Tacoma, WA 98401
-Phone 253.555.0184 | Fax 253.555.0172
+NORTHWIND BENEFIT ADMINISTRATORS
+Member Statement of Benefits                        Page 1
+Statement period: 03/25/2025 - 06/23/2025
+Send correspondence to PO Box 6100, Fargo, ND 58108
+Customer care 1-800-555-0172  (TTY 711)
 
-STATEMENT FOR: Oyelaran, Yuki G
-Guarantor #: 7434708
-Insured's ID No.: CPH-3739-6304
-Birthdate: 2013-12-15
-Home: 2716 Pine Rd, Springdale, AR 72793
-Cell: +1 360 555 0160
-E-mail: yuki.oyelaran54@mail.example.com
-Referring physician: Dr. Dana Brennan
-Rendering: Jordan Alvarez, PA-C
+Member .......... Haddad Kevin
+Member # ........ 9706-6284-8097
+Date of birth ... 08-24-1946
+Residence ....... 2907 Elm Street, Oak Harbor WA 98221
+Daytime tel ..... (212)555-0159
 
-DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
-01/07/25 80053     RT   COMPREHENSIVE METABOLIC PANEL        2    220.50     85.02   (99.04)     36,44
-01/07/25 71046     LT   CHEST X-RAY, 2 VIEWS                 1    248,26    125.70  (122.56)      0.00
-01/07/25 J1885     LT   KETOROLAC TROMETHAMINE               1     74.49     33.18   (33.01)      8.3O
-                         INJECTION, PER 15 MG
+CLAIM 1 OF 2   Claim ID: 73-4443-6648-00
+Patient: Kevin Haddad
+Provider: Harbor Imaging Associates
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+04/24/25	99285	Emergency department visit, high severity	$2,484.41	$902.12	$1,582.29	$0.00	$1,582.29	$0.00	S1,582.29
+Claim totals									$1,582.29
 
-                                         AMOUNT DUE FROM PATIENT     44.74
+CLAIM 2 OF 2   Claim ID: 24-8401-8771-00
+Patient: Kevin Haddad
+Provider: Riverside Urgent Care
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+03/30/25	90471	Immunization administration, single vaccine	$45.53	$12.68	$32.85	$0.00	$0.00	$32,85	$O.00
+03/31/25	90471	Immunization administration, single vaccine	$62.32	$15.22	$47.10	$0.00	$9.42	$37.68	$9,42
+03/31/25	99283	Emergency department visit, moderate severity	$1,171.75	$694.28	$477.47	$47.75	$0.00	S429.72	$47.75
+Claim totals									$57.17
+
+This is not a bill. Keep this statement for your records.

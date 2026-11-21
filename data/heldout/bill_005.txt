@@ -1,34 +1,29 @@
-RED MESA CARDIOLOGY GROUP
-Tax ID 99-4670561
-Remit to: PO Box 870, Santa Fe, NM 87501
-Phone 505.555.0115 | Fax 505.555.0194
+NORTHWIND BENEFIT ADMINISTRATORS
+Member Statement of Benefits                        Page 1
+Statement period: 06/04/2025 - 09/02/2025
+Send correspondence to PO Box 6100, Fargo, ND 58108
+Customer care 1-800-555-0158  (TTY 711)
 
-STATEMENT FOR: Williams, Hannah
-Guarantor #: 6835172
-Insured's ID No.: CPH-6651-7610
-Birthdate: 2/21/92
-Home: 3829 Chestnut Boulevard Apt 35, Port Jervis, NY 12732
-Cell: +1 917 555 0178
-Referring physician: Dr. Evan Cho
-Rendering: Jordan Dubois, PA-C
+Member .......... Fitzgerald Aisha
+Member # ........ 8868-9772-3092
+Date of birth ... 09-05-1999
+Residence ....... 7197 Willow Rd, Oak Harbor WA 98261
+Daytime tel ..... (917)555-0172
+E-mail .......... AISHA.FITZGERALD49@EXAMPLE.COM
 
-DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
-08/15/25 A4649     25   SURGICAL SUPPLY, MISCELLANEOUS       2     46.53     28,65   (10.72)      7.16
-08/15/25 99203     25   NEW PALIENT OFFICE VISIT             2    173.13     69.5l  (103.62)      0.00
-08/15/25 70450     25   CT HEAD OR BRAIN WITHOUT             1  1,676.44    720.05  (776.38)    180.01
-                         CONTRAST
-08/15/25 99285     25   EMERGENCY DEPARTMENT VISIT, HIGH     1  1,848.38    704.81(1,065.26)     78,31
-                         SEVERITY
-08/18/25 93000     LT   ELECTROCARDIOGRAM, ROUTINE, WITH     1    2O5.75    115.04   (41.41)     49.30
-                         INTERPRETATION AND REPORT
-08/18/25 G0439     59   ANNUAL WELLNESS VISIT,               2    246.50    140.81   (90.04)     15.65
-                         SUBSEQUENT
+CLAIM 1 OF 2   Claim ID: 31-2385-2533-00
+Patient: Aisha Fitzgerald
+Provider: Northgate Pediatrics
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+08/18/25	70450	CT head or brain without contrast	$2,002.99	$573.16	$1,429.83	$0.00	$142.98	$1,286.85	$142.98
+08/18/25	99213	Office visit, established patient, low complexity	$124.56	$30.59	$93.97	$0.00	$9.40	$84.57	$9.40
+Claim totals									$152.38
 
---- continued on next page ---
-
-RED MESA CARDIOLOGY GROUP   Page 2
-DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
-08/18/25 93000          ELECTROCARDIOGRAM, ROUTINE, WITH     1     92.63     62.97   (22.66)      7,00
-                         INTERPRCTATION AND REPORT
+CLAIM 2 OF 2   Claim ID: 87-7906-8018-00
+Patient: Aisha Fitzgerald
+Provider: Riverside Urgent Care
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+07/20/25	71046	Chest x-ray, 2 views	$384.96	$169.98	$214.98	$0.00	$21.50	$193.48	$21,50
+Claim totals									$21.50
 
-                                         AMOUNT DUE FROM PATIENT    337.43
+This is not a bill. Keep this statement for your records.

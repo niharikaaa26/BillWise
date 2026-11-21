@@ -1,152 +1,121 @@
 {
   "id": "bill_005",
-  "layout": "group_statement_heldout",
+  "layout": "multi_claim_heldout",
   "messy": [
-    "modifier",
-    "multiline_item",
+    "duplicate_charge",
+    "multi_table",
     "ocr_amount",
-    "ocr_description",
-    "page_break"
+    "tab_separated"
   ],
   "pii": [
     {
-      "start": 139,
-      "end": 155,
+      "start": 245,
+      "end": 261,
       "type": "NAME",
-      "text": "Williams, Hannah"
+      "text": "Fitzgerald Aisha"
     },
     {
-      "start": 169,
-      "end": 176,
-      "type": "ACCOUNT_ID",
-      "text": "6835172"
-    },
-    {
-      "start": 195,
-      "end": 208,
+      "start": 280,
+      "end": 294,
       "type": "MEMBER_ID",
-      "text": "CPH-6651-7610"
+      "text": "8868-9772-3092"
     },
     {
-      "start": 220,
-      "end": 227,
+      "start": 313,
+      "end": 323,
       "type": "DOB",
-      "text": "2/21/92"
+      "text": "09-05-1999"
     },
     {
-      "start": 234,
-      "end": 287,
+      "start": 342,
+      "end": 377,
       "type": "ADDRESS",
-      "text": "3829 Chestnut Boulevard Apt 35, Port Jervis, NY 12732"
+      "text": "7197 Willow Rd, Oak Harbor WA 98261"
     },
     {
-      "start": 294,
-      "end": 309,
+      "start": 396,
+      "end": 409,
       "type": "PHONE",
-      "text": "+1 917 555 0178"
+      "text": "(917)555-0172"
+    },
+    {
+      "start": 428,
+      "end": 458,
+      "type": "EMAIL",
+      "text": "AISHA.FITZGERALD49@EXAMPLE.COM"
+    },
+    {
+      "start": 485,
+      "end": 500,
+      "type": "ACCOUNT_ID",
+      "text": "31-2385-2533-00"
+    },
+    {
+      "start": 510,
+      "end": 526,
+      "type": "NAME",
+      "text": "Aisha Fitzgerald"
+    },
+    {
+      "start": 936,
+      "end": 951,
+      "type": "ACCOUNT_ID",
+      "text": "87-7906-8018-00"
+    },
+    {
+      "start": 961,
+      "end": 977,
+      "type": "NAME",
+      "text": "Aisha Fitzgerald"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 54,
-      "end": 64,
+      "start": 157,
+      "end": 168,
       "type": "ADDRESS",
-      "text": "PO Box 870"
+      "text": "PO Box 6100"
     },
     {
-      "start": 66,
-      "end": 84,
+      "start": 170,
+      "end": 185,
       "type": "ADDRESS",
-      "text": "Santa Fe, NM 87501"
+      "text": "Fargo, ND 58108"
     },
     {
-      "start": 91,
-      "end": 103,
+      "start": 200,
+      "end": 214,
       "type": "PHONE",
-      "text": "505.555.0115"
-    },
-    {
-      "start": 110,
-      "end": 122,
-      "type": "PHONE",
-      "text": "505.555.0194"
-    },
-    {
-      "start": 331,
-      "end": 343,
-      "type": "NAME",
-      "text": "Dr. Evan Cho"
-    },
-    {
-      "start": 355,
-      "end": 368,
-      "type": "NAME",
-      "text": "Jordan Dubois"
+      "text": "1-800-555-0158"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-08-15",
-      "code": "A4649",
-      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
-      "billed_amount": "46.53",
-      "allowed_amount": null,
-      "insurer_paid": "28.65",
-      "patient_responsibility": "7.16"
-    },
-    {
-      "service_date": "2025-08-15",
-      "code": "99203",
-      "description": "NEW PALIENT OFFICE VISIT",
-      "billed_amount": "173.13",
-      "allowed_amount": null,
-      "insurer_paid": "69.51",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-08-15",
+      "service_date": "2025-08-18",
       "code": "70450",
-      "description": "CT HEAD OR BRAIN WITHOUT CONTRAST",
-      "billed_amount": "1676.44",
-      "allowed_amount": null,
-      "insurer_paid": "720.05",
-      "patient_responsibility": "180.01"
-    },
-    {
-      "service_date": "2025-08-15",
-      "code": "99285",
-      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
-      "billed_amount": "1848.38",
-      "allowed_amount": null,
-      "insurer_paid": "704.81",
-      "patient_responsibility": "78.31"
+      "description": "CT head or brain without contrast",
+      "billed_amount": "2002.99",
+      "allowed_amount": "1429.83",
+      "insurer_paid": "1286.85",
+      "patient_responsibility": "142.98"
     },
     {
       "service_date": "2025-08-18",
-      "code": "93000",
-      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
-      "billed_amount": "205.75",
-      "allowed_amount": null,
-      "insurer_paid": "115.04",
-      "patient_responsibility": "49.30"
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "124.56",
+      "allowed_amount": "93.97",
+      "insurer_paid": "84.57",
+      "patient_responsibility": "9.40"
     },
     {
-      "service_date": "2025-08-18",
-      "code": "G0439",
-      "description": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
-      "billed_amount": "246.50",
-      "allowed_amount": null,
-      "insurer_paid": "140.81",
-      "patient_responsibility": "15.65"
-    },
-    {
-      "service_date": "2025-08-18",
-      "code": "93000",
-      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRCTATION AND REPORT",
-      "billed_amount": "92.63",
-      "allowed_amount": null,
-      "insurer_paid": "62.97",
-      "patient_responsibility": "7.00"
+      "service_date": "2025-07-20",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "384.96",
+      "allowed_amount": "214.98",
+      "insurer_paid": "193.48",
+      "patient_responsibility": "21.50"
     }
   ],
   "duplicate_pairs": []

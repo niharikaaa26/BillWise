@@ -1,31 +1,38 @@
-CASCADE ORTHOPEDIC PARTNERS, PLLC
-Tax ID 45-9529618
-Remit to: PO Box 2231, Tacoma, WA 98401
-Phone 253.555.0166 | Fax 253.555.0144
+KESTREL HEALTH PLAN SERVICES
+Member Statement of Benefits                        Page 1
+Statement period: 02/09/2025 - 05/10/2025
+Send correspondence to PO Box 33, Omaha, NE 68101
+Customer care 1-800-555-0116  (TTY 711)
 
-STATEMENT FOR: Kim, Marcus D
-Guarantor #: 7739921
-Insured's ID No.: ZQ3387234-01
-Birthdate: 8/18/89
-Home: 6766 Oak Court Apt 5B, Riverton, OH 45012
-Cell: +1 212 555 0133
-E-mail: marcus.kim60@mail.example.com
-Referring physician: Dr. Chris Eriksen
-Rendering: Jordan Brennan, PA-C
+Member .......... Petrov Priyanka D
+Member # ........ 7743-2613-0399
+Date of birth ... 04-08-1988
+Residence ....... 7370 Maple Ct Apt 28B, Millbrook NY 12598
+Daytime tel ..... (917)555-0152
+E-mail .......... PRIYANKA.PETROV3@EXAMPLE.NET
 
-DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
-06/30/25 74177     25   CT ABDOMEN AND PELVIS WITH           1  1,848.25  1,083.97  (493.29)    270.99
-                         CONTRAST
+CLAIM 1 OF 3   Claim ID: 90-6191-6868-00
+Patient: Priyanka Petrov
+Provider: Lakeside Family Clinic
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+02/09/25	70450	CT head or brain without contrast	$1,049.62	$717.28	$332.34	$0.00	$0.00	$332.34	$0.00
+02/12/25	74177	CT abdomen and pelvis with contrast	$2,248,63	$1,098.57	$1,150.06	$115.01	$115.00	$920.05	$230.01
+Claim totals									$230.01
 
---- continued on next page ---
-
-CASCADE ORTHOPEDIC PARTNERS, PLLC   Page 2
-DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
-07/02/25 81001          URINALYSIS, AUTOMATED, WITH          1     56.05     37.16   (18.89)      0.00
-                         MICROSCOPY
-07/02/25 70450          CT HEAD OR BRAIN WITHOUT             1  2,292.63    666.52(1,459.48)    166.63
-                         CONTRAST
-07/02/25 G0439     59   ANNUAL WELLNESS VISIT,               1    232.09      0.00  (110.11)    12l.98
-                         SUBSEQUENT
+CLAIM 2 OF 3   Claim ID: 20-5874-9244-00
+Patient: Priyanka Petrov
+Provider: Riverside Urgent Care
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+04/04/25	71046	Chest x-ray, 2 views	$422,15	$103.85	—	$31.83	$31.83	$254.64	$63.66
+04/04/25	80053	Comprehensive metabolic panel	$288.51	$79.16	$209.35	$31.40	$31.40	$146.55	$62.80
+Claim totals									$126.46
 
-                                         AMOUNT DUE FROM PATIENT    559.60
+CLAIM 3 OF 3   Claim ID: 68-3579-0250-00
+Patient: Priyanka Petrov
+Provider: Northgate Pediatrics
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+04/06/25	36415	Routine venipuncture	$22.60	$12.09	—	$0.00	$2.10	$8.41	$2.10
+04/06/25	85025	Complete blood count with automated differential	$152.07	$45.64	$106.43	$0.00	$0.00	$106,43	S0.00
+Claim totals									$2.10
+
+This is not a bill. Keep this statement for your records.

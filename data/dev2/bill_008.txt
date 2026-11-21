@@ -1,0 +1,33 @@
+RED MESA CARDIOLOGY GROUP
+Tax ID 18-0816526
+Remit to: PO Box 870, Santa Fe, NM 87501
+Phone 505.555.0116 | Fax 505.555.0161
+
+STATEMENT FOR: Johnson, Kevin
+Guarantor #: 3019355
+Insured's ID No.: W957283906
+Birthdate: 5/23/87
+Home: 6010 Briar Boulevard, Springdale, AR 72793
+Cell: +1 360 555 0168
+E-mail: kevin.johnson55@mail.example.com
+Referring physician: Dr. Farah Alvarez
+Rendering: Jordan Dubois, PA-C
+
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+09/04/25 J2405          ONDANSETRON HYDROCHLORIDE            1     39.15     22.37   (14.30)      2,48
+                         INJECTION, PER 1 MG
+09/04/25 80053          COMPREHENSIVE METABOLIC PANEL        2    226.0l      0.00   (54.34)    171.67
+09/06/25 99213          OFFICE VLSIT, ESTABLISHED            1    224,38      0.O0   (92.75)    131.63
+                         PATIENT, LOW COMPLEXITY
+
+--- continued on next page ---
+
+RED MESA CARDIOLOGY GROUP   Page 2
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+09/06/25 85025     RT   COMPLETE BLOOD COUNT WITH            1     67.80     28,34   (27.31)     12,15
+                         AUTOMATED DIFFERENTIAL
+09/06/25 36415     RT   ROUTINE VENIPUNCTURE                 1     17.04      6,23   (10.12)      0.69
+09/09/25 90471          IMMUNIZATION ADMINISTRALION,         2     42.92     23.94   (13.00)      5.98
+                         SINGLE VACCINE
+
+                                         AMOUNT DUE FROM PATIENT    324.60

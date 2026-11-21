@@ -1,37 +1,29 @@
-CASCADE ORTHOPEDIC PARTNERS, PLLC
-Tax ID 27-7003640
-Remit to: PO Box 2231, Tacoma, WA 98401
-Phone 253.555.0128 | Fax 253.555.0115
+NORTHWIND BENEFIT ADMINISTRATORS
+Member Statement of Benefits                        Page 1
+Statement period: 03/09/2025 - 06/07/2025
+Send correspondence to PO Box 6100, Fargo, ND 58108
+Customer care 1-800-555-0123  (TTY 711)
 
-STATEMENT FOR: Hernandez, Andre
-Guarantor #: 4222682
-Insured's ID No.: ZQ5385198-01
-Birthdate: 3/23/14
-Home: 5315 Cedar Lane, Fairview, TN 37010
-Cell: +1 212 555 0187
-E-mail: andre.hernandez78@example.org
-Referring physician: Dr. Evan Alvarez
-Rendering: Casey Eriksen, PA-C
+Member .......... Petrov Daniel
+Member # ........ 8868-7454-1282
+Date of birth ... 07-05-1979
+Residence ....... 52 Chestnut Way, Oak Harbor WA 98270
+Daytime tel ..... (615)555-0128
+E-mail .......... DANIEL.PETROV70@MAIL.EXAMPLE.COM
 
-DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
-02/04/25 81001     RT   URINALYSIS, AUTOMATED, WITH          1     76,83     21.68   (49.73)      5.42
-                         MICROSCOPY
-02/05/25 J2405          ONDANSETRON HYDROCHLORIDE            1     55,40     34,76   (20.64)      O.00
-                         INJECTION, PER 1 MG
-02/05/25 99213     RT   OFFICE VISIT, ESTABLISHED            2    223.20      0.00  (100.48)    122.72
-                         PATIENT, LOW COMPLEXITY
-02/05/25 93000     LT   ELECTROCARDIOGRAM, ROUTINE, WITH     1    18O.87     88.89   (91.98)      O.00
-                         INTERPRETATION AND REPORT
+CLAIM 1 OF 2   Claim ID: 11-8479-7483-00
+Patient: Michael Petrov
+Provider: Riverside Urgent Care
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+04/10/25	J2405	Ondansetron hydrochloride injection, per 1 mg	$35.76	$17.27	—	$1.85	$0.00	$16.64	$1,85
+Claim totals									$1.85
 
---- continued on next page ---
-
-CASCADE ORTHOPEDIC PARTNERS, PLLC   Page 2
-DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
-02/05/25 93000          ELECTROCARDIOGRAM, ROUTINE, WITH     1    180.87     88.89   (91.98)      0.00
-                         INTERPRETATION AND REPORT
-02/05/25 81001     RT   URINALYSIS, AUTOMATED, WITH          1     66,45     47.37   (19.08)      0.00
-                         MICROSCOPY
-02/05/25 99213     25   OFFICE VISIT, ESTABLISHED            1    150.96     59.79   (65.54)     25.63
-                         PATIENT, LOW COMPLEXITY
+CLAIM 2 OF 2   Claim ID: 26-9942-2066-00
+Patient: Daniel Petrov
+Provider: Northgate Pediatrics
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+03/14/25	70450	CT head or brain without contrast	$1,453.49	$456.63	—	$996.86	$0.00	$0.00	$996.86
+03/14/25	99285	Emergency department visit, high severity	$2,060.38	$935.83	—	$224.91	$0.00	$899.64	$224.91
+Claim totals									$1,221.77
 
-                                         AMOUNT DUE FROM PATIENT    153.77
+This is not a bill. Keep this statement for your records.

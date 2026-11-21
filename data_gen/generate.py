@@ -14,7 +14,8 @@ For each bill the generator writes:
 
 Usage:
     python -m data_gen.generate --out data/synthetic --n 48 --seed 2025
-    python -m data_gen.generate --out data/heldout --n 12 --seed 777 --ocr-p 0.25 --heldout
+    python -m data_gen.generate --out data/dev2 --n 12 --seed 777 --ocr-p 0.25 --set dev2
+    python -m data_gen.generate --out data/heldout --n 12 --seed 4242 --ocr-p 0.2 --set heldout
 """
 from __future__ import annotations
 
@@ -709,7 +710,92 @@ LAYOUTS = {
     "claim_blocks": layout_blocks,
     "clinic_csv": layout_clinic_csv,
 }
-HELDOUT_LAYOUTS = {"group_statement_heldout": layout_group_statement}
+# --------------------------------------------------------------------------
+# Layout F (HELD OUT, round 2): multi-claim benefits statement from a third-
+# party administrator. Written BEFORE the round-2 parser/redactor fixes and not
+# used to tune them. Several tab-separated tables (one per claim), dot-leader
+# labels, "Last First M" names with no comma, dash-format DOB, phone with no
+# space after the area code, upper-case email, em-dash for missing values.
+# --------------------------------------------------------------------------
+TPAS = [
+    ("NORTHWIND BENEFIT ADMINISTRATORS", "PO Box 6100", "Fargo, ND 58108"),
+    ("KESTREL HEALTH PLAN SERVICES", "PO Box 33", "Omaha, NE 68101"),
+]
+FACILITIES = ["Harbor Imaging Associates", "Lakeside Family Clinic", "Mercy Valley Regional Hospital",
+              "Northgate Pediatrics", "Riverside Urgent Care"]
+
+
+def layout_multi_claim(rng: random.Random, ocr_p: float) -> tuple[Doc, list[dict], set[str]]:
+    flags: set[str] = {"multi_table", "tab_separated"}
+    doc = Doc()
+    p = make_person(rng)
+    tpa, tbox, tcity = rng.choice(TPAS)
+    start = date(2025, 1, 1) + timedelta(days=rng.randint(0, 200))
+    doc.nl(tpa)
+    doc.nl("Member Statement of Benefits" + " " * 24 + "Page 1")
+    doc.nl(f"Statement period: {start:%m/%d/%Y} - {start + timedelta(days=90):%m/%d/%Y}")
+    doc.add("Send correspondence to ").org(tbox, "ADDRESS").add(", ").org(tcity, "ADDRESS").nl()
+    doc.add("Customer care ").org(biz_phone(rng), "PHONE").nl("  (TTY 711)")
+    doc.nl()
+    mid = f" {p['middle']}" if p["middle"] else ""
+    doc.add("Member .......... ").pii_(f"{p['last']} {p['first']}{mid}", "NAME").nl()
+    mid_id = f"{digits(rng, 4)}-{digits(rng, 4)}-{digits(rng, 4)}"
+    doc.add("Member # ........ ").pii_(mid_id, "MEMBER_ID").nl()
+    d = p["dob"]
+    doc.add("Date of birth ... ").pii_(f"{d:%m-%d-%Y}", "DOB").nl()
+    doc.add("Residence ....... ").pii_(f"{p['street']}, {p['city']} {p['state']} {p['zip']}", "ADDRESS").nl()
+    area = rng.choice(AREA_CODES)
+    doc.add("Daytime tel ..... ").pii_(f"({area})555-01{rng.randint(0, 99):02d}", "PHONE").nl()
+    if rng.random() < 0.6:
+        doc.add("E-mail .......... ").pii_(p["email"].upper(), "EMAIL").nl()
+    doc.nl()
+
+    n_claims = rng.randint(2, 3)
+    all_items: list[dict] = []
+    dep = make_person(rng, last=p["last"]) if rng.random() < 0.5 else None
+    hdr = ["Svc Dt", "Proc Cd", "Service", "Amt Charged", "Plan Discount", "Covered",
+           "Deductible", "Coinsurance", "Plan Pymt", "Member Resp"]
+    for c in range(n_claims):
+        doc.add(f"CLAIM {c + 1} OF {n_claims}   Claim ID: ").pii_(f"{digits(rng, 2)}-{digits(rng, 4)}-{digits(rng, 4)}-00", "ACCOUNT_ID").nl()
+        who = dep if (dep and rng.random() < 0.5) else p
+        doc.add("Patient: ").pii_(f"{who['first']} {who['last']}", "NAME").nl()
+        doc.nl(f"Provider: {rng.choice(FACILITIES)}")
+        doc.nl("\t".join(hdr))
+        items = make_items(rng, start + timedelta(days=rng.randint(0, 80)), flags)
+        items = items[: rng.randint(1, 3)] if len(items) > 3 else items
+        for it in items:
+            covered = it["allowed_amount"]
+            discount = it["billed_amount"] - covered
+            resp = it["patient_responsibility"]
+            ded = money(resp * Decimal(str(rng.choice([0, 0, 0.5, 1]))))
+            coins = resp - ded
+            missing_cov = rng.random() < 0.1
+            if missing_cov:
+                flags.add("missing_field")
+                it["allowed_amount"] = None
+            cells = [f"{it['service_date']:%m/%d/%y}", it["code"], it["description"],
+                     maybe_ocr_amt(fmt_amt(it["billed_amount"], True), rng, flags, ocr_p),
+                     fmt_amt(discount, True),
+                     "—" if missing_cov else fmt_amt(covered, True),
+                     fmt_amt(ded, True), fmt_amt(coins, True),
+                     maybe_ocr_amt(fmt_amt(it["insurer_paid"], True), rng, flags, ocr_p),
+                     maybe_ocr_amt(fmt_amt(resp, True), rng, flags, ocr_p)]
+            doc.nl("\t".join(cells))
+        tot = sum(i["patient_responsibility"] for i in items)
+        doc.nl(f"Claim totals\t\t\t\t\t\t\t\t\t{fmt_amt(tot, True)}")
+        doc.nl()
+        all_items.extend(items)
+    doc.nl("This is not a bill. Keep this statement for your records.")
+    return doc, all_items, flags
+
+
+LAYOUT_SETS = {
+    "dev": LAYOUTS,
+    # round-1 held-out layout; it was used to tune round-2 fixes, so it is now development data
+    "dev2": {"group_statement": layout_group_statement},
+    # round-2 held-out layout: never used for tuning
+    "heldout": {"multi_claim_heldout": layout_multi_claim},
+}
 
 
 def duplicate_pairs(items: list[dict]) -> list[list[int]]:
@@ -722,10 +808,10 @@ def duplicate_pairs(items: list[dict]) -> list[list[int]]:
     return pairs
 
 
-def generate(out: Path, n: int, seed: int, ocr_p: float = 0.12, heldout: bool = False) -> list[Path]:
+def generate(out: Path, n: int, seed: int, ocr_p: float = 0.12, layout_set: str = "dev") -> list[Path]:
     rng = random.Random(seed)
     out.mkdir(parents=True, exist_ok=True)
-    table = HELDOUT_LAYOUTS if heldout else LAYOUTS
+    table = LAYOUT_SETS[layout_set]
     names = list(table)
     written = []
     for k in range(n):
@@ -756,10 +842,11 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=48)
     ap.add_argument("--seed", type=int, default=2025)
     ap.add_argument("--ocr-p", type=float, default=0.12, help="probability of each OCR corruption site")
-    ap.add_argument("--heldout", action="store_true",
-                    help="generate the held-out layout (never used to tune the parser/redactor)")
+    ap.add_argument("--set", dest="layout_set", choices=sorted(LAYOUT_SETS), default="dev",
+                    help="dev: 4 development layouts; dev2: round-1 held-out layout (now dev data); "
+                         "heldout: layout never used for tuning")
     args = ap.parse_args()
-    files = generate(args.out, args.n, args.seed, args.ocr_p, args.heldout)
+    files = generate(args.out, args.n, args.seed, args.ocr_p, args.layout_set)
     print(f"wrote {len(files)} synthetic bills + ground truth to {args.out}")
 
 
