@@ -3,8 +3,8 @@
 The parser does not know which synthetic layout produced a document. It tries
 four generic strategies and keeps the one that yields the most line items:
 
-  * pipe_table  - rows separated by "|" under a header row
-  * csv         - comma-separated rows under a header row (quoted multi-line ok)
+  * pipe_table  - rows separated by "|" under a header row (several tables allowed)
+  * csv / tsv   - comma- or tab-separated rows under header rows (quoted multi-line ok)
   * fixed_width - whitespace-aligned columns; amounts assigned by column position
   * key_value   - "Date of service: ..." / "Plan paid: ..." blocks
 
@@ -32,12 +32,12 @@ _HEADER_RULES: list[tuple[str | None, tuple[str, ...]]] = [
     ("_units", ("units", "unit", "qty", "quantity")),
     ("patient_responsibility", ("your responsibility", "you owe", "your share", "pt resp", "patient resp",
                                 "your balance", "patient balance", "amount you owe", "patient owes", "you pay",
-                                "balance")),
+                                "member resp", "member responsibility", "balance")),
     ("insurer_paid", ("paid by plan", "plan paid", "ins paid", "insurance paid", "plan pays", "insurer paid",
-                      "ins pmt", "insurance pmt", "plan pmt", "pmt", "paid")),
-    ("allowed_amount", ("allowed",)),
+                      "ins pmt", "insurance pmt", "plan pmt", "pmt", "pymt", "payment", "paid")),
+    ("allowed_amount", ("allowed", "covered")),
     ("billed_amount", ("amount billed", "billed", "charges", "charge", "provider charged", "amount charged")),
-    ("service_date", ("date of service", "service date", "svc date", "dos", "date")),
+    ("service_date", ("date of service", "service date", "svc date", "svc dt", "dos", "date", "dt")),
     ("code", ("procedure", "cpt", "hcpcs", "code")),
     ("description", ("description", "service")),
 ]
@@ -64,6 +64,7 @@ def classify_header(cell: str) -> str | None:
 # ---------------------------------------------------------------------------
 # Value normalizers
 # ---------------------------------------------------------------------------
+MISSING_VALUES = {"--", "-", "—", "–", "N/A", "n/a"}  # includes em dash and en dash
 _OCR_DIGIT = str.maketrans({"O": "0", "o": "0", "l": "1", "I": "1"})
 AMOUNT_RE = re.compile(r"(?<![\w.,])-?[$S]?\s?[0-9OolI][0-9OolI,]*[.,][0-9OolI]{2}(?![\w])")
 
@@ -72,7 +73,7 @@ def parse_amount(tok: str | None) -> Decimal | None:
     if tok is None:
         return None
     t = tok.strip().replace(" ", "")
-    if not t or t in {"--", "-", "N/A", "n/a"}:
+    if not t or t in MISSING_VALUES:
         return None
     neg = t.startswith("-") or (t.startswith("(") and t.endswith(")"))
     t = t.strip("-()")
@@ -147,7 +148,7 @@ def _finish(items: list[dict]) -> list[LineItem]:
 
 
 # ---------------------------------------------------------------------------
-# Strategy: pipe table
+# Strategy: delimited tables (pipe, comma, tab); any number of tables per document
 # ---------------------------------------------------------------------------
 def _parse_delimited_rows(rows: list[list[str]], cols: list[str | None], warnings: list[str]) -> list[dict]:
     items: list[dict] = []
@@ -174,41 +175,84 @@ def _parse_delimited_rows(rows: list[list[str]], cols: list[str | None], warning
         for f in AMOUNT_FIELDS:
             if f in rec:
                 item[f] = parse_amount(rec[f])
-                if rec[f] and item[f] is None and rec[f] not in {"--", "-"}:
+                if rec[f] and item[f] is None and rec[f] not in MISSING_VALUES:
                     warnings.append(f"could not read {f} '{rec[f]}'")
         items.append(item)
     return items
 
 
-def parse_pipe_table(text: str, warnings: list[str]) -> list[dict]:
-    lines = text.splitlines()
-    for i, line in enumerate(lines):
-        if line.count("|") >= 3:
-            cols = [classify_header(c) for c in line.split("|")]
-            if "service_date" in cols and any(c in AMOUNT_FIELDS for c in cols):
-                rows = [ln.split("|") for ln in lines[i + 1:] if "|" in ln]
-                return _parse_delimited_rows(rows, cols, warnings)
-    return []
+def _split_rows(lines: list[str], delim: str) -> list[list[str]]:
+    if delim == "|":
+        return [ln.split("|") for ln in lines]
+    return list(csv.reader(io.StringIO("\n".join(lines)), delimiter=delim))
 
 
-# ---------------------------------------------------------------------------
-# Strategy: CSV
-# ---------------------------------------------------------------------------
-def parse_csv(text: str, warnings: list[str]) -> list[dict]:
+def _infer_columns(cols: list[str | None], rows: list[list[str]]) -> list[str | None]:
+    """Type columns whose header is unfamiliar from their contents (dates, codes)."""
+    out = list(cols)
+    for j, c in enumerate(cols):
+        if c is not None:
+            continue
+        vals = [r[j].strip() for r in rows if len(r) == len(cols) and r[j].strip()]
+        if not vals:
+            continue
+        if "service_date" not in out and sum(parse_date(v) is not None for v in vals) >= 0.8 * len(vals):
+            out[j] = "service_date"
+        elif "code" not in out and sum(parse_code(v) is not None for v in vals) >= 0.8 * len(vals):
+            out[j] = "code"
+    return out
+
+
+def _looks_like_header(line: str, delim: str, min_known: int) -> bool:
+    if line.count(delim) < 3 or DATE_RE.search(line) or AMOUNT_RE.search(line):
+        return False
+    cells = _split_rows([line], delim)[0]
+    return sum(classify_header(c) not in (None, "_ignore") for c in cells) >= min_known
+
+
+def parse_delimited(text: str, delim: str, warnings: list[str]) -> list[dict]:
     lines = text.splitlines()
-    for i, line in enumerate(lines):
-        if line.count(",") >= 3:
-            header = next(csv.reader([line]))
-            cols = [classify_header(c) for c in header]
-            if "service_date" in cols and any(c in AMOUNT_FIELDS for c in cols):
-                body = []
-                for ln in lines[i + 1:]:
-                    if not ln.strip():
-                        break
+    items: list[dict] = []
+    i = 0
+    while i < len(lines):
+        if not _looks_like_header(lines[i], delim, 1):
+            i += 1
+            continue
+        header = _split_rows([lines[i]], delim)[0]
+        body: list[str] = []
+        j = i + 1
+        while j < len(lines):
+            ln = lines[j]
+            if _looks_like_header(ln, delim, 3):
+                break  # next table
+            if delim == "|":
+                if "|" in ln:  # pipe tables may contain separator lines; keep only rows
                     body.append(ln)
-                rows = list(csv.reader(io.StringIO("\n".join(body))))
-                return _parse_delimited_rows(rows, cols, warnings)
-    return []
+            elif not ln.strip():
+                break
+            else:
+                body.append(ln)
+            j += 1
+        rows = _split_rows(body, delim)
+        cols = _infer_columns([classify_header(c) for c in header], rows)
+        if "service_date" in cols and any(c in AMOUNT_FIELDS for c in cols):
+            items.extend(_parse_delimited_rows(rows, cols, warnings))
+            i = j
+        else:
+            i += 1
+    return items
+
+
+def parse_pipe_table(text: str, warnings: list[str]) -> list[dict]:
+    return parse_delimited(text, "|", warnings)
+
+
+def parse_csv(text: str, warnings: list[str]) -> list[dict]:
+    return parse_delimited(text, ",", warnings)
+
+
+def parse_tsv(text: str, warnings: list[str]) -> list[dict]:
+    return parse_delimited(text, "\t", warnings)
 
 
 # ---------------------------------------------------------------------------
@@ -339,6 +383,7 @@ def parse_key_value(text: str, warnings: list[str]) -> list[dict]:
 STRATEGIES = (
     ("pipe_table", parse_pipe_table),
     ("csv", parse_csv),
+    ("tsv", parse_tsv),
     ("fixed_width", parse_fixed_width),
     ("key_value", parse_key_value),
 )
