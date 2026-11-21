@@ -585,16 +585,16 @@
         "errors": []
       }
     },
-    "heldout": {
+    "dev7": {
       "documents": 12,
       "privacy": {
         "pii_values": 88,
-        "request_docs_with_leak": 3,
-        "request_values_leaked": 6,
-        "request_leak_free_rate": 0.9318181818181818,
-        "baseline_redacted_text_docs_with_leak": 12,
-        "baseline_redacted_text_values_leaked": 18,
-        "baseline_redacted_text_leak_free_rate": 0.7954545454545454
+        "request_docs_with_leak": 0,
+        "request_values_leaked": 0,
+        "request_leak_free_rate": 1.0,
+        "baseline_redacted_text_docs_with_leak": 0,
+        "baseline_redacted_text_values_leaked": 0,
+        "baseline_redacted_text_leak_free_rate": 1.0
       },
       "code_kb": {
         "gold_codes": 63,
@@ -623,29 +623,7 @@
         "patient_resp_docs_with_full_gold": 12
       },
       "failures": {
-        "privacy": [
-          {
-            "bill": "bill_002",
-            "leaked_in_request": [
-              "Ingrid Kim",
-              "Ingrid"
-            ]
-          },
-          {
-            "bill": "bill_004",
-            "leaked_in_request": [
-              "Xiomara Fitzgerald",
-              "Xiomara"
-            ]
-          },
-          {
-            "bill": "bill_007",
-            "leaked_in_request": [
-              "Ingrid Mbeki",
-              "Ingrid"
-            ]
-          }
-        ],
+        "privacy": [],
         "code_search": [
           {
             "bill": "bill_002",
@@ -719,6 +697,82 @@
           {
             "bill": "bill_011",
             "description": "emergency department visit, high severity",
+            "expected": "code:99285",
+            "got": [
+              "code:99283",
+              "code:99285",
+              "code:G0439"
+            ]
+          }
+        ],
+        "grounding": [],
+        "totals": [],
+        "errors": []
+      }
+    },
+    "heldout": {
+      "documents": 12,
+      "privacy": {
+        "pii_values": 108,
+        "request_docs_with_leak": 0,
+        "request_values_leaked": 0,
+        "request_leak_free_rate": 1.0,
+        "baseline_redacted_text_docs_with_leak": 12,
+        "baseline_redacted_text_values_leaked": 24,
+        "baseline_redacted_text_leak_free_rate": 0.7777777777777778
+      },
+      "code_kb": {
+        "gold_codes": 47,
+        "gold_codes_in_kb": 47,
+        "snippet_in_request": 1.0
+      },
+      "code_search": {
+        "lines": 47,
+        "hit_at_1": 0.9361702127659575,
+        "hit_at_3": 1.0
+      },
+      "grounding": {
+        "model": "mock",
+        "generated": 12,
+        "errors": 0,
+        "lines_explained_rate": 1.0,
+        "dollar_figures": 234,
+        "unsupported_figures": 0,
+        "bad_citations": 0,
+        "docs_fully_grounded": 12,
+        "docs_fully_grounded_rate": 1.0
+      },
+      "totals": {
+        "billed_total_correct": 1.0,
+        "patient_resp_total_correct": 1.0,
+        "patient_resp_docs_with_full_gold": 12
+      },
+      "failures": {
+        "privacy": [],
+        "code_search": [
+          {
+            "bill": "bill_005",
+            "description": "Emergency department visit, high severity",
+            "expected": "code:99285",
+            "got": [
+              "code:99283",
+              "code:99285",
+              "code:G0439"
+            ]
+          },
+          {
+            "bill": "bill_009",
+            "description": "Emergency department visit, high severity",
+            "expected": "code:99285",
+            "got": [
+              "code:99283",
+              "code:99285",
+              "code:G0439"
+            ]
+          },
+          {
+            "bill": "bill_012",
+            "description": "Emergency departrnent visit, high severity",
             "expected": "code:99285",
             "got": [
               "code:99283",

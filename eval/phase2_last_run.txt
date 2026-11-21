@@ -86,17 +86,13 @@ question retrieval: 36 questions; hit@1  86.11%, hit@3  94.44%
   FAILURES code_search: 1
     - {"bill": "bill_010", "description": "Emergency department visit, high severity", "expected": "code:99285", "got": ["code:99283", "code:99285", "code:G
 
-##### heldout: 12 SYNTHETIC documents #####
-  privacy: PII values 88; leaked into model request: 6 (3 docs) -> leak-free  93.18%
-           baseline if the Phase 1 redacted TEXT were sent: leaked 18 (12 docs) -> leak-free  79.55%
+##### dev7: 12 SYNTHETIC documents #####
+  privacy: PII values 88; leaked into model request: 0 (0 docs) -> leak-free 100.00%
+           baseline if the Phase 1 redacted TEXT were sent: leaked 0 (0 docs) -> leak-free 100.00%
   code snippets in request: 100.00% of 63 gold codes
   description-only code search: hit@1  87.30%, hit@3 100.00% (63 lines)
   grounding (mock): generated 12/12 (errors 0); 297 dollar figures, 0 unsupported, 0 bad citations; docs fully grounded 12/12; lines explained 100.00%
   totals: billed correct 100.00%; patient responsibility correct 100.00% (of 12 docs where every gold line has it)
-  FAILURES privacy: 3
-    - {"bill": "bill_002", "leaked_in_request": ["Ingrid Kim", "Ingrid"]}
-    - {"bill": "bill_004", "leaked_in_request": ["Xiomara Fitzgerald", "Xiomara"]}
-    - {"bill": "bill_007", "leaked_in_request": ["Ingrid Mbeki", "Ingrid"]}
   FAILURES code_search: 8
     - {"bill": "bill_002", "description": "emergency department visit, high severity", "expected": "code:99285", "got": ["code:99283", "code:99285", "code:G
     - {"bill": "bill_003", "description": "influenza vaccine, quadrivalent, preservatlve free", "expected": "code:90686", "got": ["code:90471", "code:90686"
@@ -106,5 +102,17 @@ question retrieval: 36 questions; hit@1  86.11%, hit@3  94.44%
     - {"bill": "bill_007", "description": "emergency department visit, high severity", "expected": "code:99285", "got": ["code:99283", "code:99285", "code:G
     - {"bill": "bill_009", "description": "emergency department visit, high severity", "expected": "code:99285", "got": ["code:99283", "code:99285", "code:G
     - {"bill": "bill_011", "description": "emergency department visit, high severity", "expected": "code:99285", "got": ["code:99283", "code:99285", "code:G
+
+##### heldout: 12 SYNTHETIC documents #####
+  privacy: PII values 108; leaked into model request: 0 (0 docs) -> leak-free 100.00%
+           baseline if the Phase 1 redacted TEXT were sent: leaked 24 (12 docs) -> leak-free  77.78%
+  code snippets in request: 100.00% of 47 gold codes
+  description-only code search: hit@1  93.62%, hit@3 100.00% (47 lines)
+  grounding (mock): generated 12/12 (errors 0); 234 dollar figures, 0 unsupported, 0 bad citations; docs fully grounded 12/12; lines explained 100.00%
+  totals: billed correct 100.00%; patient responsibility correct 100.00% (of 12 docs where every gold line has it)
+  FAILURES code_search: 3
+    - {"bill": "bill_005", "description": "Emergency department visit, high severity", "expected": "code:99285", "got": ["code:99283", "code:99285", "code:G
+    - {"bill": "bill_009", "description": "Emergency department visit, high severity", "expected": "code:99285", "got": ["code:99283", "code:99285", "code:G
+    - {"bill": "bill_012", "description": "Emergency departrnent visit, high severity", "expected": "code:99285", "got": ["code:99283", "code:99285", "code:
 
 results written to C:\Users\nihar\Downloads\BillWise\eval\phase2_results.json

@@ -33,7 +33,8 @@ for each one:
 | `data/dev4/` | 12 | patient-portal visit summary: two-line items with inline `Billed $… · Plan paid $…` amounts, honorific names in a sentence, dotted DOBs, slash phones | round-3 held-out set. Its failures drove the round-4 rework, so it now counts as **development data** |
 | `data/dev5/` | 12 | scanned urgent-care statement whose OCR collapsed the columns to single spaces; labels without colons (`Pt Name`, `Mbr No`), comma-less addresses, compact DOBs | round-4 held-out set. Its failures drove the round-5 fixes, so it now counts as **development data** |
 | `data/dev6/` | 12 | billing-system export: `KEY=value` fields separated by `;`, HL7-style caret names and addresses (`DOE^JANE^Q`), `YYYYMMDD` dates, medical record number | round-5 held-out set. Its failures drove the round-6 change, so it now counts as **development data** |
-| `data/heldout/` | 12 | collections-agency letter written in prose: personal details inside sentences, narrative line items (`…(CPT 99213), billed at $250.00. The insurer paid…`) | **held out**: written before the round-6 change and never used to tune it |
+| `data/dev7/` | 12 | collections-agency letter written in prose: personal details inside sentences, narrative line items (`…(CPT 99213), billed at $250.00. The insurer paid…`) | round-6 held-out set. Its failures drove the round-7 changes, so it now counts as **development data** |
+| `data/heldout/` | 12 | email thread: headers (`From: Jane Doe <…>`), a dependent's name and birth date in casual prose, a signature block, a markdown table in the quoted reply | **held out**: written before the round-7 changes and never used to tune them |
 
 How the fake identifiers are made:
 - Phone numbers use the reserved fictional `555-01XX` range.
@@ -85,7 +86,11 @@ python -m data_gen.generate --out data/dev6 --n 12 --seed 5150 --ocr-p 0.2 --set
 ```
 
 ```powershell
-python -m data_gen.generate --out data/heldout --n 12 --seed 6006 --ocr-p 0.2 --set heldout
+python -m data_gen.generate --out data/dev7 --n 12 --seed 6006 --ocr-p 0.2 --set dev7
+```
+
+```powershell
+python -m data_gen.generate --out data/heldout --n 12 --seed 7117 --ocr-p 0.2 --set heldout
 ```
 
 ## Privacy approach
@@ -108,8 +113,10 @@ python -m data_gen.generate --out data/heldout --n 12 --seed 6006 --ocr-p 0.2 --
     `Memher ID`, `Acc0unt`). Name labels must be followed by `:`, `#` or dot leaders,
     except `Dear`.
   - Pattern regexes for SSNs, phones, emails, street addresses, and city/state/ZIP.
-  - Names with no label: a name-shaped line directly above a street address, or a
-    first name from a built-in list of common names.
+  - Names with no label: a name-shaped line directly above a street address, a first
+    name from a built-in list of common names, or (round 7) any pair of capitalised words
+    that aren't on a stop list of sentence-starter, organisation, billing, place and
+    calendar words.
   - Propagation: once a name or ID is found, every other occurrence of it is
     redacted too.
   - When matches overlap, a priority order decides which one wins.
@@ -138,7 +145,7 @@ python -m venv .venv
 .venv\Scripts\python -m eval.run_eval
 ```
 
-`run_eval` evaluates all seven datasets, prints a report with every failure, and writes
+`run_eval` evaluates all eight datasets, prints a report with every failure, and writes
 [eval/results.json](eval/results.json). The most recent full console output is saved
 in [eval/last_run.txt](eval/last_run.txt).
 
@@ -259,51 +266,41 @@ bills per dataset. That costs money and is never run by default or in CI.
 These are copied from the latest run of `python -m eval.run_eval`. Rerun it to
 reproduce them.
 
-**Held-out set (round 6: collections letter in prose, 12 bills, never used for tuning)**
+**Held-out set (round 7: email thread, 12 bills, never used for tuning)**
 
 | Metric | Result |
 |---|---|
-| PII recall (same-type overlap) | 79.55% (70/88) |
-| PII leak-free (every character covered) | 79.55% |
-| PII precision | 95.89% |
-| Lines found | 63/63 |
-| Line-item field accuracy | 67.12% |
-| Bills parsed fully correctly | 0/12 |
-| Duplicate pairs flagged | 4/4 |
+| PII recall (same-type overlap) | 66.67% (72/108) |
+| PII leak-free (every character covered) | 77.78% |
+| PII precision | 100.00% |
+| Lines found | 47/47 |
+| Line-item field accuracy | 100.00% |
+| Bills parsed fully correctly | 12/12 |
+| Duplicate pairs flagged | 2/2 |
 
-What fails:
-- **MEMBER_ID 0/12.** The ID follows the word "policy" in a sentence (`…under policy
-  XGH81872620.`). There's no colon, so the field fallback doesn't apply, and "policy"
-  isn't one of the generic ID-rule's keywords.
-- **NAME 18/24.** Names in sentences (`…services provided to Ingrid Kim (born…`) are caught
-  only when the first name is on the built-in list. "Ingrid" and "Xiomara" aren't.
-- **3 false positives:** `2025 the patient received ct` was read as a street address
-  (`CT` = Court).
-- **Parsing:** every line, date, code, billed amount and patient share is right.
-  - **Allowed and insurer-paid are swapped** where both appear (34.92% each). Three of
-    the four amounts have labels ("billed at", "insurer paid", "allowed amount of"),
-    but "leaving $X unpaid" doesn't. Because not every amount is labeled, the fallback
-    ignores all the labels and uses the usual column order.
-  - **Description 0/63.** It's read as `), billed at`, because the code sits in
-    parentheses after the description, not before it.
-
-The round-6 change was field-based, and this layout has almost no fields; that's why the
-gain here is limited. Phase 2's data minimization still matters: the model request is
-93.18% leak-free on this set, against 79.55% for the redacted text.
+What fails (24 values leak, 12 more are redacted under the wrong type):
+- **DOB 0/12 leak.** The dependent's birth date is in a sentence: `He was born on June 24,
+  2017`. The DOB rule allows `Born:` or `Born ` followed by the date, but not a word
+  ("on") in between.
+- **MEMBER_ID 0/12 leak.** `Our insurance member number is MBR4955581.` The generic ID
+  rule allows punctuation between `number` and the value, but not the word "is".
+- **12 names typed as EMAIL, nothing leaked.** In `From: James Doe <james.doe68@…>`, the
+  field fallback widened the email match over the whole value, name included, so the name
+  counts as a type miss.
+- **Parsing is 100%:** the markdown table is read by the pipe-table strategy.
 
 **Development sets** (all tuned against; the fallback-only row is a diagnostic that runs
 the new line-oriented fallback on its own)
 
-| | `synthetic` (48) | `dev2` (12) | `dev3` (12) | `dev4` (12) | `dev5` (12) | `dev6` (12) |
-|---|---|---|---|---|---|---|
-| PII recall / leak-free | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% |
-| PII precision | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
-| Line-item field accuracy | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | **71.43%** |
-| Strategy used | fixed_width, pipe_table, key_value, csv | fixed_width | tsv | anchored | anchored | anchored |
-| Fallback alone: field accuracy | 47.24% | 85.71% | 79.29% | 100.00% | 100.00% | 71.43% |
+| | `synthetic` (48) | `dev2` | `dev3` | `dev4` | `dev5` | `dev6` | `dev7` |
+|---|---|---|---|---|---|---|---|
+| PII recall / leak-free | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% |
+| PII precision | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
+| Line-item field accuracy | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
+| Strategy used | fixed_width, pipe_table, key_value, csv | fixed_width | tsv | anchored | anchored | anchored | anchored |
+| Fallback alone: field accuracy | 47.24% | 85.71% | 79.29% | 100.00% | 100.00% | 100.00% | 100.00% |
 
-dev6 parsing hasn't been worked on: round 6 changed only the redactor. Its service dates
-(`YYYYMMDD`) and descriptions (`;DESC=…;CHG=` text left in) still fail.
+The `dev2`–`dev7` sets have 12 bills each.
 
 The fallback alone scores 0% on the key/value and CSV layouts (dates sit on a separate
 line from the code, or codes are comma-joined). It runs only when no other strategy
@@ -318,7 +315,8 @@ matches, so those layouts are still handled by their own strategies.
 | 3 | portal visit summary (now `dev4`) | 44.44% | 44.44% | 0.00% |
 | 4 | collapsed-column scan (now `dev5`) | 84.42% | 89.61% | 98.18% |
 | 5 | `KEY=value` billing export (now `dev6`) | 33.33% | 16.67% | 71.43% |
-| 6 | collections letter in prose (`heldout`) | 79.55% | 79.55% | 67.12% |
+| 6 | collections letter in prose (now `dev7`) | 79.55% | 79.55% | 67.12% |
+| 7 | email thread (`heldout`) | 66.67% | 77.78% | 100.00% |
 
 - **Round 2**, from `synthetic` and `dev2`: OCR-tolerant and case-insensitive labels,
   more ID labels, spaced phones, names above a street address, modifier/units columns,
@@ -341,6 +339,18 @@ matches, so those layouts are still handled by their own strategies.
   unless its key is known to be safe, and specific detections inside a value are widened
   to the whole value. dev6 PII recall went from 33.33% to 100.00%, with no false positives
   and no parsing change on any development set.
+- **Round 7**, from `dev7` (and dev6 parsing):
+  - **Redactor:** names as pairs of capitalised words outside a stop list (skipped after
+    `Dr.`); `policy` as an ID keyword, and IDs may end a sentence; street-name words must
+    be capitalised. dev7 PII recall went from 79.55% to 100.00%, and its 3 false
+    positives went to 0.
+  - **Parser:**
+    - Amounts with a label keep it, and only unlabeled amounts are filled by position.
+    - A description written before the code is used when only an amount label follows it.
+    - `YYYYMMDD` dates and `DESC=` values are read.
+    - dev6 went from 71.43% to 100.00% field accuracy, and dev7 from 67.12% to 100.00%.
+  - The narrative-description rule strips lead-ins such as "the patient received". That
+    list was written from dev7's wording, so treat it as fitted to that layout.
 
 Rounds 1–3 patched specific formats, and each new held-out layout broke something
 basic. Round 4 was the first where an unseen layout was mostly handled:
@@ -358,10 +368,13 @@ generalised (every amount right on an unseen export format). But the redactor's
 machine-export format leaked most identifiers. Rule-based redaction keeps failing on
 whatever convention it hasn't seen.
 
-Round 6 added that fail-safe for fields. It covers everything with a key and a value
-whatever the punctuation, but personal details written into sentences remain the open gap.
-Closing it likely needs a statistical name/entity recogniser, or a stricter policy:
-redact every capitalised word sequence outside known-safe vocabulary.
+Round 6 added that fail-safe for fields. Round 7 added the stricter policy for names in
+sentences, and it held on the new held-out email: every name was redacted. But
+dates and IDs in sentences still depend on exact phrasing: `born on <date>` and
+`member number is <ID>` both leaked. The pattern from every round holds. Each fix covers
+the phrasings seen so far, and the next layout finds a new one. The specific next step
+is to treat any date near a birth word, and any ID-shaped token near an ID word, as
+sensitive within a few words, rather than only when it comes straight after.
 
 ## Phase 2 results (from `eval/phase2_last_run.txt`; synthetic data, mock explainer)
 
@@ -378,15 +391,16 @@ leak if the Phase 1 redacted text were sent instead.
 | `dev4` (12) | 72 | 0 | 100.00% | 100.00% |
 | `dev5` (12) | 77 | 0 | 100.00% | 100.00% |
 | `dev6` (12) | 72 | 0 | 100.00% | 100.00% |
-| `heldout` (12) | 88 | **6** | **93.18%** | 79.55% |
+| `dev7` (12) | 88 | 0 | 100.00% | 100.00% |
+| `heldout` (12) | 108 | **0** | **100.00%** | 77.78% |
 
-- **What leaks on the held-out set:** the 6 leaks are 3 patients' names, written in a
-  sentence and repeated in the test question ("Ingrid Kim", "Ingrid"). The redactor
-  misses them in the letter as well.
-- **What minimization saves:** sending the redacted letter would have leaked 18 values
-  (also the policy IDs). Sending only parsed facts cut that to 6.
-- **Round 6 fixed the previous held-out set (now `dev6`):** it went from 12 leaked caret
-  names to 0.
+- **The held-out set leaks nothing into the model request,** even though the redactor
+  alone misses 24 values there. The missed birth dates and member IDs sit in the email's
+  prose, and the request never includes prose: it carries only parsed line items, totals
+  and the redacted question. This is the first held-out set where the request is fully
+  clean.
+- **Earlier held-out sets, now development data,** went from 12 leaks (dev6, caret names)
+  and 6 leaks (dev7, names in sentences) to 0 each, after rounds 6 and 7.
 - **An earlier bug:** the first Phase 2 run found 12–36 leaked values per dataset,
   because the question was redacted on its own, without the document's context. The fix
   (one redaction pass over document + question) is committed separately, and the numbers
@@ -394,14 +408,14 @@ leak if the Phase 1 redacted text were sent instead.
 
 **Retrieval and grounding**
 
-| Metric | `synthetic` | `dev2` | `dev3` | `dev4` | `dev5` | `dev6` | `heldout` |
-|---|---|---|---|---|---|---|---|
-| Gold codes whose snippet is in the request | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
-| Description-only code search, hit@1 | 95.48% | 90.00% | 91.67% | 96.88% | 96.36% | 98.21% | 87.30% |
-| Description-only code search, hit@3 | 100.00% | 98.33% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
-| Dollar figures in answers / unsupported | 997 / 0 | 228 / 0 | 285 / 0 | 296 / 0 | 268 / 0 | 275 / 0 | 297 / 0 |
-| Locally computed billed total correct | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
-| Locally computed patient-share total correct | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
+| Metric | `synthetic` | `dev2` | `dev3` | `dev4` | `dev5` | `dev6` | `dev7` | `heldout` |
+|---|---|---|---|---|---|---|---|---|
+| Gold codes whose snippet is in the request | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
+| Description-only code search, hit@1 | 95.48% | 90.00% | 91.67% | 96.88% | 96.36% | 98.21% | 87.30% | 93.62% |
+| Description-only code search, hit@3 | 100.00% | 98.33% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
+| Dollar figures in answers / unsupported | 997 / 0 | 228 / 0 | 285 / 0 | 296 / 0 | 268 / 0 | 275 / 0 | 297 / 0 | 234 / 0 |
+| Locally computed billed total correct | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
+| Locally computed patient-share total correct | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
 
 - **Question retrieval** (36 hand-written questions): hit@1 **86.11%**, hit@3 **94.44%**.
   Five questions miss the top spot:
@@ -416,14 +430,13 @@ leak if the Phase 1 redacted text were sent instead.
 - **Grounding is 0 unsupported for the mock by construction:** it only writes numbers
   from the request. These figures check the pipeline, not a language model's
   faithfulness. That needs a live run (`--live N`), which hasn't been done.
-- **Totals are 100% on every set,** because billed and patient-share amounts are read
-  correctly even where other fields fail (dev6 dates, held-out allowed/paid). Totals stop
-  being right as soon as parsing misses one of those amounts.
+- **Totals are 100% on every set,** including the held-out email. Totals stop being
+  right as soon as parsing misses a billed or patient-share amount.
 
 ## Limitations
 
 - **All results are on synthetic data.** They say nothing reliable about real bills.
-  Real documents vary far more than ten templates can.
+  Real documents vary far more than eleven templates can.
 - **The development scores mean little on their own.** The same author wrote the
   generators, parser and redactor, and tuned against the development sets. Even the
   held-out layouts were written by the same person who wrote the code, which is a
@@ -433,10 +446,12 @@ leak if the Phase 1 redacted text were sent instead.
   are unfamiliar, it relies on arithmetic and on the usual left-to-right column order,
   which a bill can violate. It also runs only when no other strategy finds anything, so
   a table strategy that half-works is never second-guessed.
-- **Rule-based redaction is still brittle for prose.** Field values are now over-redacted
-  by default, but personal details written into sentences are caught only by specific
-  patterns (title, label, address, the first-name list). On the round-6 held-out letter,
-  that left 18 of 88 values unredacted.
+- **Rule-based redaction is still brittle for prose.** Field values are over-redacted by
+  default, and capitalised name pairs are redacted. But dates and IDs in sentences are
+  caught only when they directly follow a known word: on the round-7 held-out email,
+  `born on <date>` and `member number is <ID>` left 24 of 108 values unredacted. The
+  capitalised-pair rule also redacts unfamiliar organisation names, so it over-redacts
+  by design.
 - **The parser reads text only.** There is no PDF or image input and no OCR.
 - Ground truth was made by the same program that renders the text, so it carries none
   of the label noise that human annotation would.

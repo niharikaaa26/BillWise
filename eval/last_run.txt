@@ -63,7 +63,7 @@ BillWise phase-1 evaluation  (12 SYNTHETIC documents: {'group_statement': 12})
 ========================================================================================
 PII REDACTION (overlap match, same type)
   type         gold  pred  neutral    recall  precision  leak-free  any-type rec
-  NAME           12    20        8   100.00%    100.00%    100.00%       100.00%
+  NAME           12    25       13   100.00%    100.00%    100.00%       100.00%
   ADDRESS        12    24       12   100.00%    100.00%    100.00%       100.00%
   PHONE          12    36       24   100.00%    100.00%    100.00%       100.00%
   EMAIL           7     7        0   100.00%    100.00%    100.00%       100.00%
@@ -72,7 +72,7 @@ PII REDACTION (overlap match, same type)
   MEMBER_ID      12    12        0   100.00%    100.00%    100.00%       100.00%
   ACCOUNT_ID     12    12        0   100.00%    100.00%    100.00%       100.00%
   OTHER           0     0        0      n/a        n/a        n/a           n/a 
-  ALL            79   123       44   100.00%    100.00%    100.00%       100.00%
+  ALL            79   128       49   100.00%    100.00%    100.00%       100.00%
   exact-span match: recall 100.00%  precision 100.00%
 
 LINE-ITEM PARSING
@@ -274,150 +274,165 @@ PII REDACTION (overlap match, same type)
 
 LINE-ITEM PARSING
   lines: gold 56, predicted 56, matched 56  -> recall 100.00%, precision 100.00%
-  documents fully correct: 0/12
+  documents fully correct: 12/12
   field accuracy (correct / gold lines):
-    service_date              0.00%
+    service_date            100.00%
     code                    100.00%
-    description               0.00%
+    description             100.00%
     billed_amount           100.00%
     allowed_amount          100.00%
     insurer_paid            100.00%
     patient_responsibility  100.00%
-    ALL FIELDS               71.43%
+    ALL FIELDS              100.00%
   by layout:
-    kv_export        docs fully correct  0/12  field acc  71.43%
+    kv_export        docs fully correct 12/12  field acc 100.00%
   by messy condition (docs fully correct / docs with condition):
-    caret_fields            0/12
-    duplicate_charge        0/4
-    key_value_export        0/12
-    missing_field           0/3
-    ocr_amount              0/11
-    ocr_description         0/4
+    caret_fields           12/12
+    duplicate_charge        4/4
+    key_value_export       12/12
+    missing_field           3/3
+    ocr_amount             11/11
+    ocr_description         4/4
   duplicate-charge flags: gold pairs 4, flagged 4, correct 4  (recall 100.00%, precision 100.00%)
-  parsing AFTER redaction: line recall 100.00%, field acc  71.43%, docs fully correct 0/12
-  diagnostic, fallback strategy ALONE: line recall 100.00%, field acc  71.43%, docs fully correct 0/12
+  parsing AFTER redaction: line recall 100.00%, field acc 100.00%, docs fully correct 12/12
+  diagnostic, fallback strategy ALONE: line recall 100.00%, field acc 100.00%, docs fully correct 12/12
 
 FAILURES
   PII missed (no same-type overlap): 0
   PII leaked characters (any type): 0
   PII false positives: 0
-  parse field errors: 112
-    - bill_001 (kv_export) line 1 service_date: expected '2025-03-21' got None
-    - bill_001 (kv_export) line 1 description: expected 'Immunization administration, single vaccine' got ';DESC=Immunization administration, single vaccine;CHG='
-    - bill_001 (kv_export) line 2 service_date: expected '2025-03-24' got None
-    - bill_001 (kv_export) line 2 description: expected 'Chest x-ray, 2 views' got ';DESC=Chest x-ray, 2 views;CHG='
-    - bill_001 (kv_export) line 3 service_date: expected '2025-03-24' got None
-    - bill_001 (kv_export) line 3 description: expected 'Urinalysis, automated, with microscopy' got ';DESC=Urinalysis, automated, with microscopy;CHG='
-    - bill_001 (kv_export) line 4 service_date: expected '2025-03-24' got None
-    - bill_001 (kv_export) line 4 description: expected 'Immunizalion administration, single vaccine' got ';DESC=Immunizalion administration, single vaccine;CHG='
-    - bill_001 (kv_export) line 5 service_date: expected '2025-03-26' got None
-    - bill_001 (kv_export) line 5 description: expected 'Surgical supply, miscellaneous' got ';DESC=Surgical supply, miscellaneous;CHG='
-    - bill_002 (kv_export) line 1 service_date: expected '2025-05-24' got None
-    - bill_002 (kv_export) line 1 description: expected 'CT head or brain wlthout contrast' got ';DESC=CT head or brain wlthout contrast;CHG='
-    - bill_002 (kv_export) line 2 service_date: expected '2025-05-24' got None
-    - bill_002 (kv_export) line 2 description: expected 'Chest x-ray, 2 views' got ';DESC=Chest x-ray, 2 views;CHG='
-    - bill_003 (kv_export) line 1 service_date: expected '2025-03-03' got None
-    ... 97 more in results.json
+  parse field errors: 0
   parse line errors: 0
 
-##### DATASET: heldout (C:\Users\nihar\Downloads\BillWise\data\heldout) #####
-BillWise phase-1 evaluation  (12 SYNTHETIC documents: {'collections_letter_heldout': 12})
+##### DATASET: dev7 (C:\Users\nihar\Downloads\BillWise\data\dev7) #####
+BillWise phase-1 evaluation  (12 SYNTHETIC documents: {'collections_letter': 12})
 ========================================================================================
 PII REDACTION (overlap match, same type)
   type         gold  pred  neutral    recall  precision  leak-free  any-type rec
-  NAME           24    18        0    75.00%    100.00%     75.00%        75.00%
-  ADDRESS        12    27       12   100.00%     80.00%    100.00%       100.00%
+  NAME           24    24        0   100.00%    100.00%    100.00%       100.00%
+  ADDRESS        12    24       12   100.00%    100.00%    100.00%       100.00%
   PHONE           8    20       12   100.00%    100.00%    100.00%       100.00%
   EMAIL           8     8        0   100.00%    100.00%    100.00%       100.00%
   DOB            12    12        0   100.00%    100.00%    100.00%       100.00%
   SSN             0     0        0      n/a        n/a        n/a           n/a 
-  MEMBER_ID      12     0        0     0.00%       n/a       0.00%         0.00%
+  MEMBER_ID      12    12        0   100.00%    100.00%    100.00%       100.00%
   ACCOUNT_ID     12    12        0   100.00%    100.00%    100.00%       100.00%
   OTHER           0     0        0      n/a        n/a        n/a           n/a 
-  ALL            88    97       24    79.55%     95.89%     79.55%        79.55%
-  exact-span match: recall  65.91%  precision  79.45%
+  ALL            88   112       24   100.00%    100.00%    100.00%       100.00%
+  exact-span match: recall  86.36%  precision  86.36%
 
 LINE-ITEM PARSING
   lines: gold 63, predicted 63, matched 63  -> recall 100.00%, precision 100.00%
-  documents fully correct: 0/12
+  documents fully correct: 12/12
   field accuracy (correct / gold lines):
     service_date            100.00%
     code                    100.00%
-    description               0.00%
+    description             100.00%
     billed_amount           100.00%
-    allowed_amount           34.92%
-    insurer_paid             34.92%
+    allowed_amount          100.00%
+    insurer_paid            100.00%
     patient_responsibility  100.00%
-    ALL FIELDS               67.12%
+    ALL FIELDS              100.00%
   by layout:
-    collections_letter_heldout docs fully correct  0/12  field acc  67.12%
+    collections_letter docs fully correct 12/12  field acc 100.00%
   by messy condition (docs fully correct / docs with condition):
-    duplicate_charge        0/4
-    missing_field           0/6
-    narrative_items         0/12
-    ocr_amount              0/8
-    ocr_description         0/5
-    prose_pii               0/12
+    duplicate_charge        4/4
+    missing_field           6/6
+    narrative_items        12/12
+    ocr_amount              8/8
+    ocr_description         5/5
+    prose_pii              12/12
   duplicate-charge flags: gold pairs 4, flagged 4, correct 4  (recall 100.00%, precision 100.00%)
-  parsing AFTER redaction: line recall 100.00%, field acc  66.89%, docs fully correct 0/12
-  diagnostic, fallback strategy ALONE: line recall 100.00%, field acc  67.12%, docs fully correct 0/12
+  parsing AFTER redaction: line recall 100.00%, field acc 100.00%, docs fully correct 12/12
+  diagnostic, fallback strategy ALONE: line recall 100.00%, field acc 100.00%, docs fully correct 12/12
 
 FAILURES
-  PII missed (no same-type overlap): 18
-    - bill_001 MEMBER_ID  'XGH81872620'                      redacted_as=None  | Our records list the patient's insurance as Clearpath Health
-    - bill_002 NAME       'Ingrid Kim'                       redacted_as=None  | This letter concerns charges for services provided to Ingrid
-    - bill_002 MEMBER_ID  'MBR5117541'                       redacted_as=None  | Our records list the patient's insurance as Summit Mutual He
-    - bill_002 NAME       'Ingrid'                           redacted_as=None  | To discuss this account, Ingrid may call us at 1-800-555-011
-    - bill_003 MEMBER_ID  'ZQ6531681-01'                     redacted_as=None  | Our records list the patient's insurance as Summit Mutual He
-    - bill_004 NAME       'Xiomara Fitzgerald'               redacted_as=None  | This letter concerns charges for services provided to Xiomar
-    - bill_004 MEMBER_ID  'W656532614'                       redacted_as=None  | Our records list the patient's insurance as Summit Mutual He
-    - bill_004 NAME       'Xiomara'                          redacted_as=None  | To discuss this account, Xiomara may call us at 1-800-555-01
-    - bill_005 MEMBER_ID  'W671848570'                       redacted_as=None  | Our records list the patient's insurance as Blueriver Health
-    - bill_006 MEMBER_ID  'W058965828'                       redacted_as=None  | Our records list the patient's insurance as Blueriver Health
-    - bill_007 NAME       'Ingrid Mbeki'                     redacted_as=None  | This letter concerns charges for services provided to Ingrid
-    - bill_007 MEMBER_ID  'MBR6252082'                       redacted_as=None  | Our records list the patient's insurance as Blueriver Health
-    - bill_007 NAME       'Ingrid'                           redacted_as=None  | To discuss this account, Ingrid may call us at 1-800-555-012
-    - bill_008 MEMBER_ID  'XGH36136396'                      redacted_as=None  | Our records list the patient's insurance as Clearpath Health
-    - bill_009 MEMBER_ID  'W381676284'                       redacted_as=None  | Our records list the patient's insurance as Summit Mutual He
-    ... 3 more in results.json
-  PII leaked characters (any type): 18
-    - bill_001 MEMBER_ID  'XGH81872620'                      leaked='XGH81872620'
-    - bill_002 NAME       'Ingrid Kim'                       leaked='Ingrid Kim'
-    - bill_002 MEMBER_ID  'MBR5117541'                       leaked='MBR5117541'
-    - bill_002 NAME       'Ingrid'                           leaked='Ingrid'
-    - bill_003 MEMBER_ID  'ZQ6531681-01'                     leaked='ZQ6531681-01'
-    - bill_004 NAME       'Xiomara Fitzgerald'               leaked='Xiomara Fitzgerald'
-    - bill_004 MEMBER_ID  'W656532614'                       leaked='W656532614'
-    - bill_004 NAME       'Xiomara'                          leaked='Xiomara'
-    - bill_005 MEMBER_ID  'W671848570'                       leaked='W671848570'
-    - bill_006 MEMBER_ID  'W058965828'                       leaked='W058965828'
-    - bill_007 NAME       'Ingrid Mbeki'                     leaked='Ingrid Mbeki'
-    - bill_007 MEMBER_ID  'MBR6252082'                       leaked='MBR6252082'
-    - bill_007 NAME       'Ingrid'                           leaked='Ingrid'
-    - bill_008 MEMBER_ID  'XGH36136396'                      leaked='XGH36136396'
-    - bill_009 MEMBER_ID  'W381676284'                       leaked='W381676284'
-    ... 3 more in results.json
-  PII false positives: 3
-    - bill_001 ADDRESS    '2025 the patient received ct'     rule=street  | On 05/05/2025 the patient received ct abdomen and pelvis wit
-    - bill_003 ADDRESS    '2025 the patient received ct'     rule=street  | On 01/30/2025 the patient received ct head or brain without 
-    - bill_009 ADDRESS    '2025 the patient received ct'     rule=street  | On 02/11/2025 the patient received ct abdomen and pelvis wit
-  parse field errors: 145
-    - bill_001 (collections_letter_heldout) line 1 description: expected 'office visit, established patient, low complexity' got '), billed at'
-    - bill_001 (collections_letter_heldout) line 1 allowed_amount: expected '79.91' got '63.93'
-    - bill_001 (collections_letter_heldout) line 1 insurer_paid: expected '63.93' got '79.91'
-    - bill_001 (collections_letter_heldout) line 2 description: expected 'ct abdomen and pelvis with contrast' got '), billed at'
-    - bill_001 (collections_letter_heldout) line 2 allowed_amount: expected '1470.91' got '1176.73'
-    - bill_001 (collections_letter_heldout) line 2 insurer_paid: expected '1176.73' got '1470.91'
-    - bill_001 (collections_letter_heldout) line 3 description: expected 'electrocardiogram, routine, with interpretation and report' got '), billed at'
-    - bill_001 (collections_letter_heldout) line 4 description: expected 'chest x-ray, 2 views' got '), billed at'
-    - bill_001 (collections_letter_heldout) line 4 allowed_amount: expected '369.45' got '332.51'
-    - bill_001 (collections_letter_heldout) line 4 insurer_paid: expected '332.51' got '369.45'
-    - bill_001 (collections_letter_heldout) line 5 description: expected 'new patient office visit' got '), billed at'
-    - bill_001 (collections_letter_heldout) line 6 description: expected 'urinalysis, automated, with microscopy' got '), billed at'
-    - bill_002 (collections_letter_heldout) line 1 description: expected 'complete blood count with automated differential' got '), billed at'
-    - bill_002 (collections_letter_heldout) line 1 allowed_amount: expected '59.35' got '53.42'
-    - bill_002 (collections_letter_heldout) line 1 insurer_paid: expected '53.42' got '59.35'
-    ... 130 more in results.json
+  PII missed (no same-type overlap): 0
+  PII leaked characters (any type): 0
+  PII false positives: 0
+  parse field errors: 0
+  parse line errors: 0
+
+##### DATASET: heldout (C:\Users\nihar\Downloads\BillWise\data\heldout) #####
+BillWise phase-1 evaluation  (12 SYNTHETIC documents: {'email_thread_heldout': 12})
+========================================================================================
+PII REDACTION (overlap match, same type)
+  type         gold  pred  neutral    recall  precision  leak-free  any-type rec
+  NAME           48    36        0    75.00%    100.00%    100.00%       100.00%
+  ADDRESS         0     0        0      n/a        n/a        n/a           n/a 
+  PHONE          12    12        0   100.00%    100.00%    100.00%       100.00%
+  EMAIL          12    36       24   100.00%    100.00%    100.00%       100.00%
+  DOB            12     0        0     0.00%       n/a       0.00%         0.00%
+  SSN             0     0        0      n/a        n/a        n/a           n/a 
+  MEMBER_ID      12     0        0     0.00%       n/a       0.00%         0.00%
+  ACCOUNT_ID     12    12        0   100.00%    100.00%    100.00%       100.00%
+  OTHER           0     0        0      n/a        n/a        n/a           n/a 
+  ALL           108    96       24    66.67%    100.00%     77.78%        77.78%
+  exact-span match: recall  44.44%  precision  66.67%
+
+LINE-ITEM PARSING
+  lines: gold 47, predicted 47, matched 47  -> recall 100.00%, precision 100.00%
+  documents fully correct: 12/12
+  field accuracy (correct / gold lines):
+    service_date            100.00%
+    code                    100.00%
+    description             100.00%
+    billed_amount           100.00%
+    allowed_amount          100.00%
+    insurer_paid            100.00%
+    patient_responsibility  100.00%
+    ALL FIELDS              100.00%
+  by layout:
+    email_thread_heldout docs fully correct 12/12  field acc 100.00%
+  by messy condition (docs fully correct / docs with condition):
+    duplicate_charge        2/2
+    email_headers          12/12
+    markdown_table         12/12
+    missing_field           5/5
+    ocr_amount              5/5
+    ocr_description         2/2
+    prose_pii              12/12
+  duplicate-charge flags: gold pairs 2, flagged 2, correct 2  (recall 100.00%, precision 100.00%)
+  parsing AFTER redaction: line recall 100.00%, field acc 100.00%, docs fully correct 12/12
+  diagnostic, fallback strategy ALONE: line recall 100.00%, field acc  90.88%, docs fully correct 0/12
+
+FAILURES
+  PII missed (no same-type overlap): 36
+    - bill_001 NAME       'James Doe'                        redacted_as=['EMAIL']  | From: James Doe <james.doe68@example.net>
+    - bill_001 DOB        'June 24, 2017'                    redacted_as=None  | My son Linda Doe was seen at your clinic and I got a bill I 
+    - bill_001 MEMBER_ID  'MBR4955581'                       redacted_as=None  | Our insurance member number is MBR4955581. Why is the amount
+    - bill_002 NAME       'Robert Williams'                  redacted_as=['EMAIL']  | From: Robert Williams <robert.williams85@example.com>
+    - bill_002 DOB        'September 19, 2011'               redacted_as=None  | My daughter David Williams was seen at your clinic and I got
+    - bill_002 MEMBER_ID  'XGH55270484'                      redacted_as=None  | Our insurance member number is XGH55270484. Why is the amoun
+    - bill_003 NAME       'Maria Delacroix'                  redacted_as=['EMAIL']  | From: Maria Delacroix <maria.delacroix82@example.com>
+    - bill_003 DOB        'October 5, 2018'                  redacted_as=None  | My daughter Xiomara Delacroix was seen at your clinic and I 
+    - bill_003 MEMBER_ID  'MBR2547653'                       redacted_as=None  | Our insurance member number is MBR2547653. Why is the amount
+    - bill_004 NAME       'Dmitri Williams'                  redacted_as=['EMAIL']  | From: Dmitri Williams <dmitri.williams81@example.org>
+    - bill_004 DOB        'October 24, 2015'                 redacted_as=None  | My daughter Yuki Williams was seen at your clinic and I got 
+    - bill_004 MEMBER_ID  'XGH26562572'                      redacted_as=None  | Our insurance member number is XGH26562572. Why is the amoun
+    - bill_005 NAME       'Patrice Sullivan'                 redacted_as=['EMAIL']  | From: Patrice Sullivan <patrice.sullivan13@mail.example.com>
+    - bill_005 DOB        'November 2, 2010'                 redacted_as=None  | My daughter Fatima Sullivan was seen at your clinic and I go
+    - bill_005 MEMBER_ID  'XGH64504303'                      redacted_as=None  | Our insurance member number is XGH64504303. Why is the amoun
+    ... 21 more in results.json
+  PII leaked characters (any type): 24
+    - bill_001 DOB        'June 24, 2017'                    leaked='June 24, 2017'
+    - bill_001 MEMBER_ID  'MBR4955581'                       leaked='MBR4955581'
+    - bill_002 DOB        'September 19, 2011'               leaked='September 19, 2011'
+    - bill_002 MEMBER_ID  'XGH55270484'                      leaked='XGH55270484'
+    - bill_003 DOB        'October 5, 2018'                  leaked='October 5, 2018'
+    - bill_003 MEMBER_ID  'MBR2547653'                       leaked='MBR2547653'
+    - bill_004 DOB        'October 24, 2015'                 leaked='October 24, 2015'
+    - bill_004 MEMBER_ID  'XGH26562572'                      leaked='XGH26562572'
+    - bill_005 DOB        'November 2, 2010'                 leaked='November 2, 2010'
+    - bill_005 MEMBER_ID  'XGH64504303'                      leaked='XGH64504303'
+    - bill_006 DOB        'January 11, 2013'                 leaked='January 11, 2013'
+    - bill_006 MEMBER_ID  'ZQ5367842-01'                     leaked='ZQ5367842-01'
+    - bill_007 DOB        'January 27, 2011'                 leaked='January 27, 2011'
+    - bill_007 MEMBER_ID  'ZQ1516069-01'                     leaked='ZQ1516069-01'
+    - bill_008 DOB        'January 29, 2010'                 leaked='January 29, 2010'
+    ... 9 more in results.json
+  PII false positives: 0
+  parse field errors: 0
   parse line errors: 0
 
 results written to C:\Users\nihar\Downloads\BillWise\eval\results.json
