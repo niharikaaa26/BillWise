@@ -1,112 +1,99 @@
 {
   "id": "bill_008",
-  "layout": "kv_export_heldout",
+  "layout": "collections_letter_heldout",
   "messy": [
-    "caret_fields",
-    "duplicate_charge",
-    "key_value_export",
-    "missing_field",
-    "ocr_amount"
+    "narrative_items",
+    "prose_pii"
   ],
   "pii": [
     {
-      "start": 41,
-      "end": 58,
-      "type": "NAME",
-      "text": "BIANCHI^MICHAEL^A"
-    },
-    {
-      "start": 63,
-      "end": 71,
-      "type": "DOB",
-      "text": "19640920"
-    },
-    {
-      "start": 76,
-      "end": 86,
+      "start": 88,
+      "end": 95,
       "type": "ACCOUNT_ID",
-      "text": "MR67314724"
+      "text": "4905-71"
     },
     {
-      "start": 96,
-      "end": 127,
+      "start": 198,
+      "end": 211,
+      "type": "NAME",
+      "text": "Robert Petrov"
+    },
+    {
+      "start": 218,
+      "end": 228,
+      "type": "DOB",
+      "text": "09/22/2015"
+    },
+    {
+      "start": 233,
+      "end": 271,
       "type": "ADDRESS",
-      "text": "447 OAK ROAD^^RIVERTON^OH^45053"
+      "text": "4249 Lakeview Way, Millbrook, NY 12547"
     },
     {
-      "start": 132,
-      "end": 145,
-      "type": "PHONE",
-      "text": "(479)555-0149"
-    },
-    {
-      "start": 193,
-      "end": 203,
+      "start": 357,
+      "end": 368,
       "type": "MEMBER_ID",
-      "text": "W791530822"
+      "text": "XGH36136396"
+    },
+    {
+      "start": 802,
+      "end": 808,
+      "type": "NAME",
+      "text": "Robert"
+    },
+    {
+      "start": 901,
+      "end": 928,
+      "type": "EMAIL",
+      "text": "robert.petrov55@example.org"
+    },
+    {
+      "start": 958,
+      "end": 970,
+      "type": "PHONE",
+      "text": "303-555-0134"
     }
   ],
-  "allowed_redactions": [],
+  "allowed_redactions": [
+    {
+      "start": 27,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 7720"
+    },
+    {
+      "start": 40,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Columbus, OH 43215"
+    },
+    {
+      "start": 824,
+      "end": 838,
+      "type": "PHONE",
+      "text": "1-800-555-0191"
+    }
+  ],
   "line_items": [
     {
-      "service_date": "2025-07-10",
-      "code": "81001",
-      "description": "Urinalysis, automated, with microscopy",
-      "billed_amount": "70.73",
-      "allowed_amount": null,
-      "insurer_paid": "38.63",
-      "patient_responsibility": "4.29"
-    },
-    {
-      "service_date": "2025-07-10",
-      "code": "A4649",
-      "description": "Surgical supply, miscellaneous",
-      "billed_amount": "223.66",
-      "allowed_amount": "71.44",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "71.44"
-    },
-    {
-      "service_date": "2025-07-10",
-      "code": "G0439",
-      "description": "Annual wellness visit, subsequent",
-      "billed_amount": "188.61",
-      "allowed_amount": "107.25",
-      "insurer_paid": "85.80",
-      "patient_responsibility": "21.45"
-    },
-    {
-      "service_date": "2025-07-10",
-      "code": "85025",
-      "description": "Complete blood count with automated differential",
-      "billed_amount": "115.87",
-      "allowed_amount": "57.68",
-      "insurer_paid": "57.68",
+      "service_date": "2025-04-13",
+      "code": "99214",
+      "description": "office visit, established patient, moderate complexity",
+      "billed_amount": "280.06",
+      "allowed_amount": "153.57",
+      "insurer_paid": "153.57",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-07-10",
-      "code": "J1885",
-      "description": "Ketorolac tromethamine injection, per 15 mg",
-      "billed_amount": "60.61",
-      "allowed_amount": "45.97",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "45.97"
-    },
-    {
-      "service_date": "2025-07-10",
-      "code": "J1885",
-      "description": "Ketorolac tromethamine injection, per 15 mg",
-      "billed_amount": "60.61",
-      "allowed_amount": "45.97",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "45.97"
+      "service_date": "2025-04-13",
+      "code": "87880",
+      "description": "rapid strep test",
+      "billed_amount": "62.71",
+      "allowed_amount": "27.42",
+      "insurer_paid": "24.68",
+      "patient_responsibility": "2.74"
     }
   ],
-  "duplicate_pairs": [
-    [
-      4,
-      5
-    ]
-  ]
+  "duplicate_pairs": []
 }

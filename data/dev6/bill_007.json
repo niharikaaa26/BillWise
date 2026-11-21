@@ -1,0 +1,78 @@
+{
+  "id": "bill_007",
+  "layout": "kv_export",
+  "messy": [
+    "caret_fields",
+    "key_value_export",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 41,
+      "end": 57,
+      "type": "NAME",
+      "text": "KOWALSKI^THANH^E"
+    },
+    {
+      "start": 62,
+      "end": 70,
+      "type": "DOB",
+      "text": "19730422"
+    },
+    {
+      "start": 75,
+      "end": 85,
+      "type": "ACCOUNT_ID",
+      "text": "MR18074745"
+    },
+    {
+      "start": 95,
+      "end": 134,
+      "type": "ADDRESS",
+      "text": "3028 JUNIPER AVENUE^^MILLBROOK^NY^12551"
+    },
+    {
+      "start": 139,
+      "end": 152,
+      "type": "PHONE",
+      "text": "(360)555-0159"
+    },
+    {
+      "start": 200,
+      "end": 211,
+      "type": "MEMBER_ID",
+      "text": "XGH65486980"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-03-29",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "41.25",
+      "allowed_amount": "13.20",
+      "insurer_paid": "10.56",
+      "patient_responsibility": "2.64"
+    },
+    {
+      "service_date": "2025-03-29",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "238.13",
+      "allowed_amount": "184.88",
+      "insurer_paid": "129.42",
+      "patient_responsibility": "55.46"
+    },
+    {
+      "service_date": "2025-03-31",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "333.19",
+      "allowed_amount": "234.38",
+      "insurer_paid": "164.07",
+      "patient_responsibility": "70.31"
+    }
+  ],
+  "duplicate_pairs": []
+}

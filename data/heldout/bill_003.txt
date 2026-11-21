@@ -1,10 +1,19 @@
-#EXPORT v2.3 generated 20250902
-PAT|NAME=OKAFOR^YUKI;DOB=20170922;MRN=MR90689065
-PAT|ADDR=7487 MAPLE BLVD^^OAK HARBOR^WA^98213;TEL=(845)555-0128
-INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=XGH91369379
+Ashgrove Financial Partners
+PO Box 415, Nashville, TN 37202
+June 9, 2025
 
-SVC|DOS=20250303;PROC=99213;DESC=Office visit, established patient, low complexity;CHG=231.07;ALLOWED=139.60;PAID=0.00;PTRESP=139.60
-SVC|DOS=20250306;PROC=71046;DESC=Chest x-ray, 2 views;CHG=420.55;ALLOWED=292.11;PAID=233.69;PTRESP=58.42
-SVC|DOS=20250308;PROC=36415;DESC=Routine venipuncture;CHG=26.31;ALLOWED=19.45;PAID=0.00;PTRESP=19.45
-SVC|DOS=20250309;PROC=71046;DESC=Chest x-ray, 2 views;CHG=266.61;ALLOWED=180.22;PAID=180.22;PTRESP=0.00
-TRL|COUNT=4;PTRESP_TOTAL=217.47
+RE: Account 6815-68 (original creditor: Riverside Urgent Care)
+
+This letter concerns charges for services provided to Brianna Mbeki (born 09/02/1970) at 744 Maple St Unit 18C, Millbrook, NY 12551.
+Our records list the patient's insurance as Summit Mutual Health under policy ZQ6531681-01.
+
+On 01/30/2025 the patient received influenza vaccine, quadrivalent, preservatlve free (CPT 90686), billed at $31.32. The insurer paid $15.84 toward an allowed amount of $19.80, leaving $3.96 unpaid.
+On 01/30/2025 the patient received emergency department visit, high severity (CPT 99285), billed at $2,350.29. The insurer paid $915.80 toward an allowed amount of $915.80, leaving $0.00 unpaid.
+On 01/30/2025 the patient received emergency department visit, high severity (CPT 99285), billed at $2,350.29. The insurer paid $915.80 toward an allowed amount of $915.80, leaving $0.00 unpaid.
+On 01/30/2025 the patient received ondansetron hydrochloride injection, per 1 mg (CPT J2405), billed at $58.67. The insurer paid $18.27 toward an allowed amount of $22.84, leaving $4.57 unpaid.
+On 01/30/2025 the patient received chest x-ray, 2 views (CPT 71046), billed at $201.49. The insurer paid $139.66 toward an allowed amount of $155.18, leaving $15.52 unpaid.
+On 01/30/2025 the patient received ct head or brain without contrast (CPT 70450), billed at $1,429.40. The insurer paid $378.25 toward an allowed amount of $540.36, leaving $162.11 unpaid.
+
+The balance now due is $186.16.
+To discuss this account, Brianna may call us at 1-800-555-0124 or reply to the address above. 
+This communication is from a debt collector.

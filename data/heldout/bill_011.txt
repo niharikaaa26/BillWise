@@ -1,13 +1,19 @@
-#EXPORT v2.3 generated 20251020
-PAT|NAME=NGUYEN^NAVEEN;DOB=19860618;MRN=MR86403105
-PAT|ADDR=6898 PINE ST^^PORT JERVIS^NY^12798;TEL=(864)555-0141
-INS|PAYER=SUMMIT_MUTUAL_HEALTH;SUBSCRIBER_ID=W717870646
+Ashgrove Financial Partners
+PO Box 415, Nashville, TN 37202
+September 24, 2025
 
-SVC|DOS=20250625;PROC=90471;DESC=Immunization administration, single vaccine;CHG=49.79;ALLOWED=31.29;PAID=0.00;PTRESP=31.29
-SVC|DOS=20250628;PROC=93000;DESC=Electrocardiogram, routine, with interpretation and report;CHG=159.59;ALLOWED=;PAID=89.62;PTRESP=0.00
-SVC|DOS=20250628;PROC=70450;DESC=CT head or brain without contrast;CHG=l687.46;ALLOWED=822.65;PAID=658.12;PTRESP=164.53
-SVC|DOS=20250628;PROC=87880;DESC=Rapid strep test;CHG=38.77;ALLOWED=;PAID=0.00;PTRESP=24.25
-SVC|DOS=20250701;PROC=97110;DESC=Therapeutic exercises, each 15 minutes;CHG=174.59;ALLOWED=82.46;PAID=57.72;PTRESP=24.74
-SVC|DOS=20250701;PROC=97110;DESC=Therapeutic exercises, each 15 minutes;CHG=l74.59;ALLOWED=82.46;PAID=57.72;PTRESP=24.74
-SVC|DOS=20250701;PROC=85025;DESC=Complete blood count with automated differential;CHG=128.25;ALLOWED=61.52;PAID=55.37;PTRESP=6.15
-TRL|COUNT=7;PTRESP_TOTAL=275.70
+RE: Account 1137-21 (original creditor: Riverside Urgent Care)
+
+This letter concerns charges for services provided to Andre Chen (born 09/19/2001) at 2670 Elm Ave, Port Jervis, NY 12756.
+Our records list the patient's insurance as Summit Mutual Health under policy XGH30260453.
+
+On 04/22/2025 the patient received new patient office visit (CPT 99203), billed at $198.27. The insurer paid $0.00, leaving $158.58 unpaid.
+On April 22, 2025 the patient received routine venipuncture (CPT 36415), billed at $23.15. The insurer paid $11.48 toward an allowed amount of $14.35, leaving $2.87 unpaid.
+On 04/23/2025 the patient received emergency department visit, high severity (CPT 99285), billed at $3,179.75. The insurer paid $2,204.09 toward an allowed amount of $2,448.99, leaving $244.90 unpaid.
+On April 23, 2025 the patient received electrocardiogram, routine, with interpretation and report (CPT 93000), billed at $114.90. The insurer paid $0.00 toward an allowed amount of $62.50, leaving $62.50 unpaid.
+On 04/23/2025 the patient received therapeutic exercises, each 15 minutes (CPT 97110), billed at $164.87. The insurer paid $83.50 toward an allowed amount of $119.29, leaving $35.79 unpaid.
+On 04/23/2025 the patient received immunization administration, single vaccine (CPT 90471), billed at $58,52. The insurer paid $0.00, leaving $46.81 unpaid.
+
+The balance now due is $551.45.
+To discuss this account, Andre may call us at 1-800-555-0135 or reply to the address above. We also have the email address andre.chen7@mail.example.com on file and the phone number 360.555.0169.
+This communication is from a debt collector.

@@ -1,0 +1,112 @@
+{
+  "id": "bill_009",
+  "layout": "kv_export",
+  "messy": [
+    "caret_fields",
+    "duplicate_charge",
+    "key_value_export",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 41,
+      "end": 56,
+      "type": "NAME",
+      "text": "KOWALSKI^RAFAEL"
+    },
+    {
+      "start": 61,
+      "end": 69,
+      "type": "DOB",
+      "text": "19560905"
+    },
+    {
+      "start": 74,
+      "end": 84,
+      "type": "ACCOUNT_ID",
+      "text": "MR51681121"
+    },
+    {
+      "start": 94,
+      "end": 136,
+      "type": "ADDRESS",
+      "text": "4371 LAKEVIEW DR #28B^^OAK HARBOR^WA^98215"
+    },
+    {
+      "start": 141,
+      "end": 154,
+      "type": "PHONE",
+      "text": "(360)555-0117"
+    },
+    {
+      "start": 202,
+      "end": 213,
+      "type": "MEMBER_ID",
+      "text": "XGH58574064"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-04-06",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "85.24",
+      "allowed_amount": "42.41",
+      "insurer_paid": "38.17",
+      "patient_responsibility": "4.24"
+    },
+    {
+      "service_date": "2025-04-06",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "245.42",
+      "allowed_amount": "141.63",
+      "insurer_paid": "141.63",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-06",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "245.42",
+      "allowed_amount": "141.63",
+      "insurer_paid": "141.63",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-06",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 rng",
+      "billed_amount": "62.41",
+      "allowed_amount": "33.60",
+      "insurer_paid": "33.60",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-08",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "297.08",
+      "allowed_amount": "115.99",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "115.99"
+    },
+    {
+      "service_date": "2025-04-08",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1012.88",
+      "allowed_amount": "552.14",
+      "insurer_paid": "441.71",
+      "patient_responsibility": "110.43"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      1,
+      2
+    ]
+  ]
+}

@@ -1,12 +1,15 @@
-#EXPORT v2.3 generated 20251005
-PAT|NAME=BIANCHI^MICHAEL^A;DOB=19640920;MRN=MR67314724
-PAT|ADDR=447 OAK ROAD^^RIVERTON^OH^45053;TEL=(479)555-0149
-INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=W791530822
+Meridian Recovery Services
+PO Box 7720, Columbus, OH 43215
+August 29, 2025
 
-SVC|DOS=20250710;PROC=81001;DESC=Urinalysis, automated, with microscopy;CHG=70.73;ALLOWED=;PAID=38.63;PTRESP=4.29
-SVC|DOS=20250710;PROC=A4649;DESC=Surgical supply, miscellaneous;CHG=223.66;ALLOWED=71.44;PAID=0.00;PTRESP=71.44
-SVC|DOS=20250710;PROC=G0439;DESC=Annual wellness visit, subsequent;CHG=188.6l;ALLOWED=107.25;PAID=85.80;PTRESP=2l.45
-SVC|DOS=20250710;PROC=85025;DESC=Complete blood count with automated differential;CHG=115.87;ALLOWED=57.68;PAID=57.68;PTRESP=0.00
-SVC|DOS=20250710;PROC=J1885;DESC=Ketorolac tromethamine injection, per 15 mg;CHG=60.61;ALLOWED=45.97;PAID=0.00;PTRESP=45.97
-SVC|DOS=20250710;PROC=J1885;DESC=Ketorolac tromethamine injection, per 15 mg;CHG=60.61;ALLOWED=45.97;PAID=0.00;PTRESP=45.97
-TRL|COUNT=6;PTRESP_TOTAL=189.12
+RE: Account 4905-71 (original creditor: Harbor Imaging Associates)
+
+This letter concerns charges for services provided to Robert Petrov (born 09/22/2015) at 4249 Lakeview Way, Millbrook, NY 12547.
+Our records list the patient's insurance as Clearpath Health Insurance under policy XGH36136396.
+
+On April 13, 2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at $280.06. The insurer paid $153.57 toward an allowed amount of $153.57, leaving $0.00 unpaid.
+On 04/13/2025 the patient received rapid strep test (CPT 87880), billed at $62.71. The insurer paid $24.68 toward an allowed amount of $27.42, leaving $2.74 unpaid.
+
+The balance now due is $2.74.
+To discuss this account, Robert may call us at 1-800-555-0191 or reply to the address above. We also have the email address robert.petrov55@example.org on file and the phone number 303-555-0134.
+This communication is from a debt collector.

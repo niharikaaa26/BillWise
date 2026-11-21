@@ -1,78 +1,127 @@
 {
   "id": "bill_012",
-  "layout": "kv_export_heldout",
+  "layout": "collections_letter_heldout",
   "messy": [
-    "caret_fields",
-    "key_value_export",
+    "narrative_items",
     "ocr_amount",
-    "ocr_description"
+    "ocr_description",
+    "prose_pii"
   ],
   "pii": [
     {
-      "start": 41,
-      "end": 54,
-      "type": "NAME",
-      "text": "NGUYEN^LORENA"
-    },
-    {
-      "start": 59,
-      "end": 67,
-      "type": "DOB",
-      "text": "19981203"
-    },
-    {
-      "start": 72,
-      "end": 82,
+      "start": 87,
+      "end": 94,
       "type": "ACCOUNT_ID",
-      "text": "MR21974745"
+      "text": "7938-87"
     },
     {
-      "start": 92,
-      "end": 129,
+      "start": 193,
+      "end": 207,
+      "type": "NAME",
+      "text": "Brianna Okafor"
+    },
+    {
+      "start": 214,
+      "end": 224,
+      "type": "DOB",
+      "text": "03/14/1983"
+    },
+    {
+      "start": 229,
+      "end": 261,
       "type": "ADDRESS",
-      "text": "2006 BRIAR CT #17C^^FAIRVIEW^TN^37028"
+      "text": "3358 Pine Dr, Fairview, TN 37086"
     },
     {
-      "start": 134,
-      "end": 147,
-      "type": "PHONE",
-      "text": "(479)555-0120"
-    },
-    {
-      "start": 199,
-      "end": 210,
+      "start": 343,
+      "end": 353,
       "type": "MEMBER_ID",
-      "text": "XGH42515543"
+      "text": "MBR9078404"
+    },
+    {
+      "start": 1369,
+      "end": 1376,
+      "type": "NAME",
+      "text": "Brianna"
+    },
+    {
+      "start": 1469,
+      "end": 1497,
+      "type": "EMAIL",
+      "text": "brianna.okafor30@example.org"
+    },
+    {
+      "start": 1527,
+      "end": 1539,
+      "type": "PHONE",
+      "text": "864.555.0194"
     }
   ],
-  "allowed_redactions": [],
+  "allowed_redactions": [
+    {
+      "start": 27,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 7720"
+    },
+    {
+      "start": 40,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Columbus, OH 43215"
+    },
+    {
+      "start": 1392,
+      "end": 1406,
+      "type": "PHONE",
+      "text": "1-800-555-0149"
+    }
+  ],
   "line_items": [
     {
-      "service_date": "2025-04-27",
-      "code": "90686",
-      "description": "Influenza vaccine, quadrivalent, preservative free",
-      "billed_amount": "62.84",
-      "allowed_amount": "48.36",
-      "insurer_paid": "33.85",
-      "patient_responsibility": "14.51"
-    },
-    {
-      "service_date": "2025-04-28",
-      "code": "90471",
-      "description": "Immunization administratlon, single vaccine",
-      "billed_amount": "25.57",
-      "allowed_amount": "17.17",
-      "insurer_paid": "12.02",
-      "patient_responsibility": "5.15"
-    },
-    {
-      "service_date": "2025-04-28",
-      "code": "87880",
-      "description": "Rapid strep test",
-      "billed_amount": "60.40",
-      "allowed_amount": "44.12",
-      "insurer_paid": "44.12",
+      "service_date": "2025-05-06",
+      "code": "71046",
+      "description": "chest x-ray, 2 views",
+      "billed_amount": "207.89",
+      "allowed_amount": "153.36",
+      "insurer_paid": "153.36",
       "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-05-06",
+      "code": "J1885",
+      "description": "ketorolac tromethamine injcction, per 15 mg",
+      "billed_amount": "41.13",
+      "allowed_amount": "15.00",
+      "insurer_paid": "15.00",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-05-06",
+      "code": "99214",
+      "description": "office visit, established patient, moderate complexity",
+      "billed_amount": "333.73",
+      "allowed_amount": "246.26",
+      "insurer_paid": "221.63",
+      "patient_responsibility": "24.63"
+    },
+    {
+      "service_date": "2025-05-08",
+      "code": "99214",
+      "description": "office visit, established patient, moderate complexity",
+      "billed_amount": "298.96",
+      "allowed_amount": "184.76",
+      "insurer_paid": "184.76",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-05-08",
+      "code": "71046",
+      "description": "chest x-ray, 2 views",
+      "billed_amount": "463.82",
+      "allowed_amount": "349.03",
+      "insurer_paid": "244.32",
+      "patient_responsibility": "104.71"
     }
   ],
   "duplicate_pairs": []

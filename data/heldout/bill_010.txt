@@ -1,13 +1,18 @@
-#EXPORT v2.3 generated 20250916
-PAT|NAME=WOJCIK^PATRICE^M;DOB=19550204;MRN=MR16984130
-PAT|ADDR=9596 LAKEVIEW ST UNIT 34C^^OAK HARBOR^WA^98244;TEL=(303)555-0117
-INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=ZQ9154525-01
+Ashgrove Financial Partners
+PO Box 415, Nashville, TN 37202
+July 26, 2025
 
-SVC|DOS=20250507;PROC=70450;DESC=CT head or brain without contrast;CHG=1777.40;ALLOWED=683.59;PAID=478.51;PTRESP=205.08
-SVC|DOS=20250507;PROC=99213;DESC=Office visit, established patient, low complexity;CHG=2l4.95;ALLOWED=126.43;PAID=101.14;PTRESP=25.29
-SVC|DOS=20250507;PROC=71046;DESC=Chest x-ray, 2 views;CHG=378.81;ALLOWED=224.01;PAID=179.21;PTRESP=44.80
-SVC|DOS=20250507;PROC=71046;DESC=Chest x-ray, 2 views;CHG=378.81;ALLOWED=224.01;PAID=179.21;PTRESP=44.80
-SVC|DOS=20250507;PROC=99285;DESC=Emergency department visit, high severity;CHG=2963.97;ALLOWED=1328.11;PAID=929.68;PTRESP=398.43
-SVC|DOS=20250507;PROC=J2405;DESC=Ondansetron hydrochloride injection, per 1 mg;CHG=79.45;ALLOWED=39.23;PAID=31.38;PTRESP=7.85
-SVC|DOS=20250510;PROC=81001;DESC=Urinalysis, automated, with microscopy;CHG=44.77;ALLOWED=21.37;PAID=19.23;PTRESP=2.14
-TRL|COUNT=7;PTRESP_TOTAL=728.39
+RE: Account 2289-47 (original creditor: Mercy Valley Regional Hospital)
+
+This letter concerns charges for services provided to Jane Nguyen (born 04/21/2019) at 1773 Maple Way Apt 25B, Millbrook, NY 12587.
+Our records list the patient's insurance as Blueriver Health Plans under policy MBR9777211.
+
+On April 12, 2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at $297.42. The insurer paid $0.00 toward an allowed amount of $211.60, leaving $211.60 unpaid.
+On 04/12/2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at $297.42. The insurer paid $0.00 toward an allowed amount of $211.60, leaving $211.60 unpaid.
+On April 12, 2025 the patient received new patient office visit (CPT 99203), billed at $258.98. The insurer paid $146.28 toward an allowed amount of $162.53, leaving $16.25 unpaid.
+On April 12, 2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at S257.87. The insurer paid $138.52 toward an allowed amount of $197.88, leaving $59.36 unpaid.
+On 04/14/2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at $336.14. The insurer paid $76.48 toward an allowed amount of $109.26, leaving $32.78 unpaid.
+
+The balance now due is $531.59.
+To discuss this account, Jane may call us at 1-800-555-0181 or reply to the address above. We also have the email address jane.nguyen65@mail.example.com on file and the phone number 917.555.0188.
+This communication is from a debt collector.

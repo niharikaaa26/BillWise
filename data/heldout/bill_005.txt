@@ -1,13 +1,17 @@
-#EXPORT v2.3 generated 20251016
-PAT|NAME=MBEKI^LORENA;DOB=19520531;MRN=MR70374992
-PAT|ADDR=6386 LAKEVIEW LN^^PORT JERVIS^NY^12739;TEL=(319)555-0197
-INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=XGH74313460
+Ashgrove Financial Partners
+PO Box 415, Nashville, TN 37202
+June 17, 2025
 
-SVC|DOS=20250721;PROC=85025;DESC=Complete blood count with automated differential;CHG=l64.84;ALLOWED=113.14;PAID=79.20;PTRESP=33.94
-SVC|DOS=20250721;PROC=90686;DESC=Influenza vaccine, quadrivalent, preservative free;CHG=37.46;ALLOWED=;PAID=23.23;PTRESP=0.00
-SVC|DOS=20250721;PROC=99214;DESC=Office visit, established patient, moderate complexity;CHG=315.26;ALLOWED=136.60;PAID=95.62;PTRESP=40.98
-SVC|DOS=20250721;PROC=80053;DESC=Comprehensive metabolic panel;CHG=181.57;ALLOWED=125.64;PAID=100.51;PTRESP=25.13
-SVC|DOS=20250721;PROC=J2405;DESC=Ondansetron hydrochloride injection, per 1 mg;CHG=75.85;ALLOWED=;PAID=28.46;PTRESP=0.00
-SVC|DOS=20250721;PROC=87880;DESC=Rapid strep test;CHG=47.78;ALLOWED=;PAID=0.00;PTRESP=15.74
-SVC|DOS=20250721;PROC=99214;DESC=Office visit, established patient, moderate complexity;CHG=266.86;ALLOWED=126.87;PAID=114.18;PTRESP=12.69
-TRL|COUNT=7;PTRESP_TOTAL=128.48
+RE: Account 1386-30 (original creditor: Riverside Urgent Care)
+
+This letter concerns charges for services provided to Sarah Yamamoto (born 07/31/1969) at 893 Briar Drive Unit 16C, Cedar Falls, IA 50634.
+Our records list the patient's insurance as Blueriver Health Plans under policy W671848570.
+
+On 01/02/2025 the patient received therapeutic exercises, each 15 minutes (CPT 97110), billed at $92,29. The insurer paid $0.00 toward an allowed amount of $46.45, leaving $46.45 unpaid.
+On January 2, 2025 the patient received electrocardiogram, routine, with interpretation and report (CPT 93000), billed at $123.50. The insurer paid $75.03 toward an allowed amount of $93.79, leaving $18.76 unpaid.
+On 01/05/2025 the patient received routine venipuncture (CPT 36415), billed at $33.06. The insurer paid $19.22 toward an allowed amount of $21.36, leaving $2.14 unpaid.
+On 01/05/2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at $237.98. The insurer paid $103.18 toward an allowed amount of $147.40, leaving $44.22 unpaid.
+
+The balance now due is $111.57.
+To discuss this account, Sarah may call us at 1-800-555-0179 or reply to the address above. 
+This communication is from a debt collector.

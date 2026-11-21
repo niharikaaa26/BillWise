@@ -1,112 +1,121 @@
 {
   "id": "bill_009",
-  "layout": "kv_export_heldout",
+  "layout": "collections_letter_heldout",
   "messy": [
-    "caret_fields",
     "duplicate_charge",
-    "key_value_export",
-    "ocr_amount",
-    "ocr_description"
+    "missing_field",
+    "narrative_items",
+    "prose_pii"
   ],
   "pii": [
     {
-      "start": 41,
-      "end": 56,
-      "type": "NAME",
-      "text": "KOWALSKI^RAFAEL"
-    },
-    {
-      "start": 61,
-      "end": 69,
-      "type": "DOB",
-      "text": "19560905"
-    },
-    {
-      "start": 74,
-      "end": 84,
+      "start": 86,
+      "end": 93,
       "type": "ACCOUNT_ID",
-      "text": "MR51681121"
+      "text": "4740-35"
     },
     {
-      "start": 94,
-      "end": 136,
+      "start": 191,
+      "end": 201,
+      "type": "NAME",
+      "text": "Jane Rossi"
+    },
+    {
+      "start": 208,
+      "end": 218,
+      "type": "DOB",
+      "text": "03/18/2006"
+    },
+    {
+      "start": 223,
+      "end": 261,
       "type": "ADDRESS",
-      "text": "4371 LAKEVIEW DR #28B^^OAK HARBOR^WA^98215"
+      "text": "4411 Lakeview Blvd, Riverton, OH 45064"
     },
     {
-      "start": 141,
-      "end": 154,
-      "type": "PHONE",
-      "text": "(360)555-0117"
-    },
-    {
-      "start": 202,
-      "end": 213,
+      "start": 341,
+      "end": 351,
       "type": "MEMBER_ID",
-      "text": "XGH58574064"
+      "text": "W381676284"
+    },
+    {
+      "start": 1333,
+      "end": 1337,
+      "type": "NAME",
+      "text": "Jane"
     }
   ],
-  "allowed_redactions": [],
+  "allowed_redactions": [
+    {
+      "start": 27,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 7720"
+    },
+    {
+      "start": 40,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Columbus, OH 43215"
+    },
+    {
+      "start": 1353,
+      "end": 1367,
+      "type": "PHONE",
+      "text": "1-800-555-0117"
+    }
+  ],
   "line_items": [
     {
-      "service_date": "2025-04-06",
-      "code": "81001",
-      "description": "Urinalysis, automated, with microscopy",
-      "billed_amount": "85.24",
-      "allowed_amount": "42.41",
-      "insurer_paid": "38.17",
-      "patient_responsibility": "4.24"
-    },
-    {
-      "service_date": "2025-04-06",
+      "service_date": "2025-02-09",
       "code": "99203",
-      "description": "New patient office visit",
-      "billed_amount": "245.42",
-      "allowed_amount": "141.63",
-      "insurer_paid": "141.63",
-      "patient_responsibility": "0.00"
+      "description": "new patient office visit",
+      "billed_amount": "198.82",
+      "allowed_amount": "142.66",
+      "insurer_paid": "114.13",
+      "patient_responsibility": "28.53"
     },
     {
-      "service_date": "2025-04-06",
-      "code": "99203",
-      "description": "New patient office visit",
-      "billed_amount": "245.42",
-      "allowed_amount": "141.63",
-      "insurer_paid": "141.63",
-      "patient_responsibility": "0.00"
+      "service_date": "2025-02-11",
+      "code": "99285",
+      "description": "emergency department visit, high severity",
+      "billed_amount": "2487.85",
+      "allowed_amount": "1681.92",
+      "insurer_paid": "1513.73",
+      "patient_responsibility": "168.19"
     },
     {
-      "service_date": "2025-04-06",
-      "code": "J2405",
-      "description": "Ondansetron hydrochloride injection, per 1 rng",
-      "billed_amount": "62.41",
-      "allowed_amount": "33.60",
-      "insurer_paid": "33.60",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-04-08",
-      "code": "99214",
-      "description": "Office visit, established patient, moderate complexity",
-      "billed_amount": "297.08",
-      "allowed_amount": "115.99",
+      "service_date": "2025-02-11",
+      "code": "80053",
+      "description": "comprehensive metabolic panel",
+      "billed_amount": "309.85",
+      "allowed_amount": "233.25",
       "insurer_paid": "0.00",
-      "patient_responsibility": "115.99"
+      "patient_responsibility": "233.25"
     },
     {
-      "service_date": "2025-04-08",
-      "code": "70450",
-      "description": "CT head or brain without contrast",
-      "billed_amount": "1012.88",
-      "allowed_amount": "552.14",
-      "insurer_paid": "441.71",
-      "patient_responsibility": "110.43"
+      "service_date": "2025-02-11",
+      "code": "80053",
+      "description": "comprehensive metabolic panel",
+      "billed_amount": "309.85",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "233.25"
+    },
+    {
+      "service_date": "2025-02-11",
+      "code": "74177",
+      "description": "ct abdomen and pelvis with contrast",
+      "billed_amount": "4733.53",
+      "allowed_amount": "1455.45",
+      "insurer_paid": "1018.82",
+      "patient_responsibility": "436.63"
     }
   ],
   "duplicate_pairs": [
     [
-      1,
-      2
+      2,
+      3
     ]
   ]
 }

@@ -1,0 +1,70 @@
+{
+  "id": "bill_002",
+  "layout": "kv_export",
+  "messy": [
+    "caret_fields",
+    "key_value_export",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 41,
+      "end": 58,
+      "type": "NAME",
+      "text": "DELACROIX^SIOBHAN"
+    },
+    {
+      "start": 63,
+      "end": 71,
+      "type": "DOB",
+      "text": "19840406"
+    },
+    {
+      "start": 76,
+      "end": 86,
+      "type": "ACCOUNT_ID",
+      "text": "MR72407048"
+    },
+    {
+      "start": 96,
+      "end": 131,
+      "type": "ADDRESS",
+      "text": "51 CHESTNUT CT^^OAK HARBOR^WA^98261"
+    },
+    {
+      "start": 136,
+      "end": 149,
+      "type": "PHONE",
+      "text": "(917)555-0174"
+    },
+    {
+      "start": 201,
+      "end": 212,
+      "type": "MEMBER_ID",
+      "text": "XGH21450485"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-05-24",
+      "code": "70450",
+      "description": "CT head or brain wlthout contrast",
+      "billed_amount": "1896.33",
+      "allowed_amount": "1163.92",
+      "insurer_paid": "1047.53",
+      "patient_responsibility": "116.39"
+    },
+    {
+      "service_date": "2025-05-24",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "317.46",
+      "allowed_amount": "212.71",
+      "insurer_paid": "148.90",
+      "patient_responsibility": "63.81"
+    }
+  ],
+  "duplicate_pairs": []
+}

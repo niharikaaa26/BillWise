@@ -1,121 +1,137 @@
 {
   "id": "bill_011",
-  "layout": "kv_export_heldout",
+  "layout": "collections_letter_heldout",
   "messy": [
-    "caret_fields",
-    "duplicate_charge",
-    "key_value_export",
     "missing_field",
-    "ocr_amount"
+    "narrative_items",
+    "ocr_amount",
+    "prose_pii"
   ],
   "pii": [
     {
-      "start": 41,
-      "end": 54,
-      "type": "NAME",
-      "text": "NGUYEN^NAVEEN"
-    },
-    {
-      "start": 59,
-      "end": 67,
-      "type": "DOB",
-      "text": "19860618"
-    },
-    {
-      "start": 72,
-      "end": 82,
-      "type": "ACCOUNT_ID",
-      "text": "MR86403105"
-    },
-    {
       "start": 92,
-      "end": 126,
+      "end": 99,
+      "type": "ACCOUNT_ID",
+      "text": "1137-21"
+    },
+    {
+      "start": 198,
+      "end": 208,
+      "type": "NAME",
+      "text": "Andre Chen"
+    },
+    {
+      "start": 215,
+      "end": 225,
+      "type": "DOB",
+      "text": "09/19/2001"
+    },
+    {
+      "start": 230,
+      "end": 265,
       "type": "ADDRESS",
-      "text": "6898 PINE ST^^PORT JERVIS^NY^12798"
+      "text": "2670 Elm Ave, Port Jervis, NY 12756"
     },
     {
-      "start": 131,
-      "end": 144,
-      "type": "PHONE",
-      "text": "(864)555-0141"
-    },
-    {
-      "start": 190,
-      "end": 200,
+      "start": 345,
+      "end": 356,
       "type": "MEMBER_ID",
-      "text": "W717870646"
+      "text": "XGH30260453"
+    },
+    {
+      "start": 1490,
+      "end": 1495,
+      "type": "NAME",
+      "text": "Andre"
+    },
+    {
+      "start": 1588,
+      "end": 1616,
+      "type": "EMAIL",
+      "text": "andre.chen7@mail.example.com"
+    },
+    {
+      "start": 1646,
+      "end": 1658,
+      "type": "PHONE",
+      "text": "360.555.0169"
     }
   ],
-  "allowed_redactions": [],
+  "allowed_redactions": [
+    {
+      "start": 28,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 415"
+    },
+    {
+      "start": 40,
+      "end": 59,
+      "type": "ADDRESS",
+      "text": "Nashville, TN 37202"
+    },
+    {
+      "start": 1511,
+      "end": 1525,
+      "type": "PHONE",
+      "text": "1-800-555-0135"
+    }
+  ],
   "line_items": [
     {
-      "service_date": "2025-06-25",
-      "code": "90471",
-      "description": "Immunization administration, single vaccine",
-      "billed_amount": "49.79",
-      "allowed_amount": "31.29",
+      "service_date": "2025-04-22",
+      "code": "99203",
+      "description": "new patient office visit",
+      "billed_amount": "198.27",
+      "allowed_amount": null,
       "insurer_paid": "0.00",
-      "patient_responsibility": "31.29"
+      "patient_responsibility": "158.58"
     },
     {
-      "service_date": "2025-06-28",
+      "service_date": "2025-04-22",
+      "code": "36415",
+      "description": "routine venipuncture",
+      "billed_amount": "23.15",
+      "allowed_amount": "14.35",
+      "insurer_paid": "11.48",
+      "patient_responsibility": "2.87"
+    },
+    {
+      "service_date": "2025-04-23",
+      "code": "99285",
+      "description": "emergency department visit, high severity",
+      "billed_amount": "3179.75",
+      "allowed_amount": "2448.99",
+      "insurer_paid": "2204.09",
+      "patient_responsibility": "244.90"
+    },
+    {
+      "service_date": "2025-04-23",
       "code": "93000",
-      "description": "Electrocardiogram, routine, with interpretation and report",
-      "billed_amount": "159.59",
-      "allowed_amount": null,
-      "insurer_paid": "89.62",
-      "patient_responsibility": "0.00"
+      "description": "electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "114.90",
+      "allowed_amount": "62.50",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "62.50"
     },
     {
-      "service_date": "2025-06-28",
-      "code": "70450",
-      "description": "CT head or brain without contrast",
-      "billed_amount": "1687.46",
-      "allowed_amount": "822.65",
-      "insurer_paid": "658.12",
-      "patient_responsibility": "164.53"
+      "service_date": "2025-04-23",
+      "code": "97110",
+      "description": "therapeutic exercises, each 15 minutes",
+      "billed_amount": "164.87",
+      "allowed_amount": "119.29",
+      "insurer_paid": "83.50",
+      "patient_responsibility": "35.79"
     },
     {
-      "service_date": "2025-06-28",
-      "code": "87880",
-      "description": "Rapid strep test",
-      "billed_amount": "38.77",
+      "service_date": "2025-04-23",
+      "code": "90471",
+      "description": "immunization administration, single vaccine",
+      "billed_amount": "58.52",
       "allowed_amount": null,
       "insurer_paid": "0.00",
-      "patient_responsibility": "24.25"
-    },
-    {
-      "service_date": "2025-07-01",
-      "code": "97110",
-      "description": "Therapeutic exercises, each 15 minutes",
-      "billed_amount": "174.59",
-      "allowed_amount": "82.46",
-      "insurer_paid": "57.72",
-      "patient_responsibility": "24.74"
-    },
-    {
-      "service_date": "2025-07-01",
-      "code": "97110",
-      "description": "Therapeutic exercises, each 15 minutes",
-      "billed_amount": "174.59",
-      "allowed_amount": "82.46",
-      "insurer_paid": "57.72",
-      "patient_responsibility": "24.74"
-    },
-    {
-      "service_date": "2025-07-01",
-      "code": "85025",
-      "description": "Complete blood count with automated differential",
-      "billed_amount": "128.25",
-      "allowed_amount": "61.52",
-      "insurer_paid": "55.37",
-      "patient_responsibility": "6.15"
+      "patient_responsibility": "46.81"
     }
   ],
-  "duplicate_pairs": [
-    [
-      4,
-      5
-    ]
-  ]
+  "duplicate_pairs": []
 }

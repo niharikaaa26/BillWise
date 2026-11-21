@@ -1,68 +1,118 @@
 {
   "id": "bill_004",
-  "layout": "kv_export_heldout",
+  "layout": "collections_letter_heldout",
   "messy": [
-    "caret_fields",
-    "key_value_export",
-    "ocr_amount"
+    "missing_field",
+    "narrative_items",
+    "ocr_amount",
+    "prose_pii"
   ],
   "pii": [
     {
-      "start": 41,
-      "end": 52,
-      "type": "NAME",
-      "text": "KIM^XIOMARA"
-    },
-    {
-      "start": 57,
-      "end": 65,
-      "type": "DOB",
-      "text": "19541201"
-    },
-    {
-      "start": 70,
-      "end": 80,
+      "start": 86,
+      "end": 93,
       "type": "ACCOUNT_ID",
-      "text": "MR63656309"
+      "text": "3997-51"
     },
     {
-      "start": 90,
-      "end": 130,
+      "start": 193,
+      "end": 211,
+      "type": "NAME",
+      "text": "Xiomara Fitzgerald"
+    },
+    {
+      "start": 218,
+      "end": 228,
+      "type": "DOB",
+      "text": "10/26/1958"
+    },
+    {
+      "start": 233,
+      "end": 278,
       "type": "ADDRESS",
-      "text": "8408 CEDAR CT APT 34B^^FAIRVIEW^TN^37080"
+      "text": "1846 Highland Blvd #25, Port Jervis, NY 12791"
     },
     {
-      "start": 135,
-      "end": 148,
-      "type": "PHONE",
-      "text": "(319)555-0146"
-    },
-    {
-      "start": 196,
-      "end": 207,
+      "start": 358,
+      "end": 368,
       "type": "MEMBER_ID",
-      "text": "XGH61060763"
+      "text": "W656532614"
+    },
+    {
+      "start": 1171,
+      "end": 1178,
+      "type": "NAME",
+      "text": "Xiomara"
+    },
+    {
+      "start": 1271,
+      "end": 1303,
+      "type": "EMAIL",
+      "text": "xiomara.fitzgerald72@example.net"
+    },
+    {
+      "start": 1333,
+      "end": 1345,
+      "type": "PHONE",
+      "text": "319.555.0171"
     }
   ],
-  "allowed_redactions": [],
-  "line_items": [
+  "allowed_redactions": [
     {
-      "service_date": "2025-06-07",
-      "code": "96374",
-      "description": "IV push, single or initial substance",
-      "billed_amount": "294.69",
-      "allowed_amount": "177.56",
-      "insurer_paid": "177.56",
-      "patient_responsibility": "0.00"
+      "start": 27,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 7720"
     },
     {
-      "service_date": "2025-06-07",
-      "code": "74177",
-      "description": "CT abdomen and pelvis with contrast",
-      "billed_amount": "2171.10",
-      "allowed_amount": "1370.51",
+      "start": 40,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Columbus, OH 43215"
+    },
+    {
+      "start": 1194,
+      "end": 1208,
+      "type": "PHONE",
+      "text": "1-800-555-0142"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-03-22",
+      "code": "90686",
+      "description": "influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "74.46",
+      "allowed_amount": "44.25",
       "insurer_paid": "0.00",
-      "patient_responsibility": "1370.51"
+      "patient_responsibility": "44.25"
+    },
+    {
+      "service_date": "2025-03-22",
+      "code": "99285",
+      "description": "emergency department visit, high severity",
+      "billed_amount": "1708.63",
+      "allowed_amount": "1035.03",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "1035.03"
+    },
+    {
+      "service_date": "2025-03-24",
+      "code": "99283",
+      "description": "emergency department visit, moderate severity",
+      "billed_amount": "826.12",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "336.54"
+    },
+    {
+      "service_date": "2025-03-26",
+      "code": "99203",
+      "description": "new patient office visit",
+      "billed_amount": "289.12",
+      "allowed_amount": "132.32",
+      "insurer_paid": "105.86",
+      "patient_responsibility": "26.46"
     }
   ],
   "duplicate_pairs": []

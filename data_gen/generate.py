@@ -18,7 +18,8 @@ Usage:
     python -m data_gen.generate --out data/dev3 --n 12 --seed 4242 --ocr-p 0.2 --set dev3
     python -m data_gen.generate --out data/dev4 --n 12 --seed 9001 --ocr-p 0.2 --set dev4
     python -m data_gen.generate --out data/dev5 --n 12 --seed 31337 --ocr-p 0.2 --set dev5
-    python -m data_gen.generate --out data/heldout --n 12 --seed 5150 --ocr-p 0.2 --set heldout
+    python -m data_gen.generate --out data/dev6 --n 12 --seed 5150 --ocr-p 0.2 --set dev6
+    python -m data_gen.generate --out data/heldout --n 12 --seed 6006 --ocr-p 0.2 --set heldout
 """
 from __future__ import annotations
 
@@ -946,6 +947,73 @@ def layout_kv_export(rng: random.Random, ocr_p: float) -> tuple[Doc, list[dict],
     return doc, items, flags
 
 
+# --------------------------------------------------------------------------
+# Layout J (HELD OUT, round 6): collections-agency letter written in prose.
+# Written BEFORE the round-6 redactor change and not used to tune it. Personal
+# details appear inside sentences rather than behind field labels, and each
+# line item is a sentence with amounts in a non-columnar order.
+# --------------------------------------------------------------------------
+AGENCIES = [("Meridian Recovery Services", "PO Box 7720", "Columbus, OH 43215"),
+            ("Ashgrove Financial Partners", "PO Box 415", "Nashville, TN 37202")]
+
+
+def layout_collections_letter(rng: random.Random, ocr_p: float) -> tuple[Doc, list[dict], set[str]]:
+    flags: set[str] = {"prose_pii", "narrative_items"}
+    doc = Doc()
+    p = make_person(rng)
+    agency, abox, acity = rng.choice(AGENCIES)
+    facility = rng.choice(FACILITIES)
+    sent = date(2025, 6, 1) + timedelta(days=rng.randint(0, 150))
+    doc.nl(agency)
+    doc.org(abox, "ADDRESS").add(", ").org(acity, "ADDRESS").nl()
+    doc.nl(f"{sent:%B} {sent.day}, {sent.year}")
+    doc.nl()
+    doc.add("RE: Account ").pii_(f"{digits(rng, 4)}-{digits(rng, 2)}", "ACCOUNT_ID")
+    doc.nl(f" (original creditor: {facility})")
+    doc.nl()
+    doc.add("This letter concerns charges for services provided to ").pii_(f"{p['first']} {p['last']}", "NAME")
+    doc.add(" (born ").pii_(f"{p['dob']:%m/%d/%Y}", "DOB").add(") at ").pii_(
+        f"{p['street']}, {p['city']}, {p['state']} {p['zip']}", "ADDRESS").nl(".")
+    doc.add("Our records list the patient's insurance as ").add(rng.choice(INSURERS)[0].title())
+    doc.add(" under policy ").pii_(member_id(rng), "MEMBER_ID").nl(".")
+    doc.nl()
+    items = make_items(rng, sent - timedelta(days=rng.randint(60, 200)), flags)
+    for it in items:
+        d = it["service_date"]
+        when = f"{d:%B} {d.day}, {d.year}" if rng.random() < 0.5 else f"{d:%m/%d/%Y}"
+        desc = it["description"]
+        if rng.random() < ocr_p * 0.5:
+            flags.add("ocr_description")
+            desc = ocr_text(desc, rng)
+        it["description"] = desc
+        billed = maybe_ocr_amt(fmt_amt(it["billed_amount"], True), rng, flags, ocr_p)
+        paid = fmt_amt(it["insurer_paid"], True)
+        resp = fmt_amt(it["patient_responsibility"], True)
+        if rng.random() < 0.2:
+            flags.add("missing_field")
+            it["allowed_amount"] = None
+            sentence = (f"On {when} the patient received {desc.lower()} (CPT {it['code']}), billed at {billed}. "
+                        f"The insurer paid {paid}, leaving {resp} unpaid.")
+        else:
+            allowed = fmt_amt(it["allowed_amount"], True)
+            sentence = (f"On {when} the patient received {desc.lower()} (CPT {it['code']}), billed at {billed}. "
+                        f"The insurer paid {paid} toward an allowed amount of {allowed}, leaving {resp} unpaid.")
+        it["description"] = desc.lower()
+        doc.nl(sentence)
+    total = sum(i["patient_responsibility"] for i in items)
+    doc.nl()
+    doc.nl(f"The balance now due is {fmt_amt(total, True)}.")
+    doc.add("To discuss this account, ").pii_(p["first"], "NAME").add(" may call us at ")
+    doc.org(biz_phone(rng), "PHONE").add(" or reply to the address above. ")
+    if rng.random() < 0.6:
+        doc.add("We also have the email address ").pii_(p["email"], "EMAIL").add(" on file")
+        doc.add(" and the phone number ").pii_(p["phone"], "PHONE").nl(".")
+    else:
+        doc.nl()
+    doc.nl("This communication is from a debt collector.")
+    return doc, items, flags
+
+
 LAYOUT_SETS = {
     "dev": LAYOUTS,
     # round-1 held-out layout; used to tune round-2 fixes, now development data
@@ -956,8 +1024,10 @@ LAYOUT_SETS = {
     "dev4": {"portal_summary": layout_portal_summary},
     # round-4 held-out layout; used to tune round-5 fixes, now development data
     "dev5": {"collapsed_scan": layout_collapsed_scan},
-    # round-5 held-out layout: never used for tuning
-    "heldout": {"kv_export_heldout": layout_kv_export},
+    # round-5 held-out layout; used to tune round-6 changes, now development data
+    "dev6": {"kv_export": layout_kv_export},
+    # round-6 held-out layout: never used for tuning
+    "heldout": {"collections_letter_heldout": layout_collections_letter},
 }
 
 
@@ -1010,7 +1080,7 @@ def main() -> None:
     ap.add_argument("--ocr-p", type=float, default=0.12, help="probability of each OCR corruption site")
     ap.add_argument("--set", dest="layout_set", choices=sorted(LAYOUT_SETS), default="dev",
                     help="dev: 4 development layouts; dev2: round-1 held-out layout (now dev data); "
-                         "dev2-dev5: earlier held-out layouts (now dev data); heldout: layout never used for tuning")
+                         "dev2-dev6: earlier held-out layouts (now dev data); heldout: layout never used for tuning")
     args = ap.parse_args()
     files = generate(args.out, args.n, args.seed, args.ocr_p, args.layout_set)
     print(f"wrote {len(files)} synthetic bills + ground truth to {args.out}")
