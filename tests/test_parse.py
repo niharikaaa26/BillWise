@@ -244,3 +244,38 @@ def test_spaced_dash_is_missing_not_negative():
 
 def test_attached_minus_still_negative():
     assert parse_amount("-113.15") == Decimal("-113.15")
+
+
+NARRATIVE = (
+    "On May 3, 2025 the patient received office visit, established patient (CPT 99213), billed at $174.37. "
+    "The insurer paid $63.93 toward an allowed amount of $79.91, leaving $15.98 unpaid.\n"
+    "On 05/05/2025 the patient received chest x-ray, 2 views (CPT 71046), billed at $465.16. "
+    "The insurer paid $332.51, leaving $36.94 unpaid.\n"
+)
+
+
+def test_narrative_items_partial_labels_and_description_before_code():
+    a, b = parse(NARRATIVE).line_items
+    assert a.description == "office visit, established patient"
+    assert (a.billed_amount, a.allowed_amount, a.insurer_paid, a.patient_responsibility) == \
+        (Decimal("174.37"), Decimal("79.91"), Decimal("63.93"), Decimal("15.98"))
+    assert b.description == "chest x-ray, 2 views"
+    assert (b.allowed_amount, b.insurer_paid, b.patient_responsibility) == \
+        (None, Decimal("332.51"), Decimal("36.94"))
+
+
+def test_kv_export_dates_and_descriptions():
+    text = ("SVC|DOS=20250321;PROC=90471;DESC=Immunization administration;CHG=29.04;ALLOWED=;PAID=17.84;PTRESP=11.20\n"
+            "SVC|DOS=20250324;PROC=71046;DESC=Chest x-ray, 2 views;CHG=478.49;ALLOWED=354.42;PAID=283.54;PTRESP=70.88\n")
+    a, b = parse(text).line_items
+    assert (a.service_date, a.description) == (date(2025, 3, 21), "Immunization administration")
+    assert (a.billed_amount, a.allowed_amount, a.insurer_paid, a.patient_responsibility) == \
+        (Decimal("29.04"), None, Decimal("17.84"), Decimal("11.20"))
+    assert (b.billed_amount, b.allowed_amount) == (Decimal("478.49"), Decimal("354.42"))
+
+
+def test_compact_dates_are_only_searched_for_20xx_years():
+    from billwise.parse import DATE_RE
+    assert parse_date("20250321") == date(2025, 3, 21)
+    assert DATE_RE.search("DOS=20250321").group(0) == "20250321"
+    assert DATE_RE.search("MRN 19531120") is None  # a birth date or ID is not taken for a service date

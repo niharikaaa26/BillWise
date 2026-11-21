@@ -230,3 +230,29 @@ def test_field_value_widens_partial_match():
     t = "Address: 6117 Juniper Road Apt 4 (rear door), Riverton, OH 45027\n"
     r = redact(t)
     assert r.redacted_text == "Address: [ADDRESS_1]\n"
+
+
+# --- round 7: prose -------------------------------------------------------------
+def test_name_in_running_text_and_later_first_name():
+    t = "This letter concerns services provided to Ingrid Kim (born 04/21/2005).\nIngrid may call us.\n"
+    r = redact(t)
+    assert "Ingrid" not in r.redacted_text and "Kim" not in r.redacted_text
+
+
+@pytest.mark.parametrize("text", [
+    "Our records list the patient's insurance as Clearpath Health Insurance.\n",
+    "Meridian Recovery Services\nThe balance now due is $376.21.\n",
+    "On May 3, 2025 the patient received an office visit.\n",
+    "Referring physician: Dr. Gil Cho\n",
+])
+def test_title_pairs_skip_organisations_dates_and_doctors(text):
+    assert not any(s.type == "NAME" for s in redact(text).spans)
+
+
+def test_policy_id_at_end_of_sentence():
+    found, _ = types_and_values("Insured under policy XGH81872620.\n")
+    assert ("MEMBER_ID", "XGH81872620") in found
+
+
+def test_lowercase_prose_is_not_a_street():
+    assert redact("On 05/05/2025 the patient received ct abdomen and pelvis.\n").spans == []

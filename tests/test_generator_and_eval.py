@@ -78,7 +78,8 @@ def test_other_sets_regenerate_identically(tmp_path):
             assert (tmp_path / d.name / f.name).read_text(encoding="utf-8") == f.read_text(encoding="utf-8"), f
 
 
-@pytest.mark.parametrize("path", [DEV2, DEV3, DEV4, DEV5], ids=["dev2", "dev3", "dev4", "dev5"])
+@pytest.mark.parametrize("path", [DEV2, DEV3, DEV4, DEV5, DEV6, DEV7],
+                         ids=["dev2", "dev3", "dev4", "dev5", "dev6", "dev7"])
 def test_later_dev_set_regression_floors(path):
     r = run_eval.run(path)
     assert r["pii"]["overall"]["leak_free_rate"] >= 0.95
@@ -107,8 +108,3 @@ def test_eval_detects_a_broken_parser(monkeypatch):
     assert r["parsing"]["line_recall"] == 0.0 and r["parsing"]["field_accuracy_overall"] == 0.0
 
 
-def test_dev6_redaction_floor():
-    """dev6 (the round-5 KEY=value export) drove the round-6 over-redaction fallback. Its parsing
-    is not yet fixed (YYYYMMDD dates, KEY= text in descriptions), so only redaction has a floor."""
-    r = run_eval.run(DEV6)
-    assert r["pii"]["overall"]["leak_free_rate"] >= 0.95
