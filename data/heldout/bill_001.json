@@ -1,169 +1,138 @@
 {
   "id": "bill_001",
-  "layout": "multi_claim_heldout",
+  "layout": "portal_summary_heldout",
   "messy": [
-    "multi_table",
+    "duplicate_charge",
+    "inline_amounts",
+    "missing_field",
     "ocr_amount",
-    "tab_separated"
+    "ocr_description",
+    "po_box_address"
   ],
   "pii": [
     {
-      "start": 239,
-      "end": 257,
+      "start": 94,
+      "end": 108,
       "type": "NAME",
-      "text": "Hernandez Dmitri N"
+      "text": "Maria Yamamoto"
     },
     {
-      "start": 276,
-      "end": 290,
-      "type": "MEMBER_ID",
-      "text": "3937-0450-5285"
+      "start": 130,
+      "end": 139,
+      "type": "ACCOUNT_ID",
+      "text": "B-37243-3"
     },
     {
-      "start": 309,
-      "end": 319,
+      "start": 151,
+      "end": 161,
       "type": "DOB",
-      "text": "09-28-1982"
+      "text": "1986.02.28"
     },
     {
-      "start": 338,
-      "end": 378,
+      "start": 171,
+      "end": 207,
       "type": "ADDRESS",
-      "text": "4517 Cedar Ct Unit 11, Lakewood CO 80225"
+      "text": "P.O. Box 6251, Port Jervis, NY 12719"
     },
     {
-      "start": 397,
-      "end": 410,
+      "start": 215,
+      "end": 227,
       "type": "PHONE",
-      "text": "(479)555-0177"
+      "text": "212/555-0166"
     },
     {
-      "start": 429,
-      "end": 458,
-      "type": "EMAIL",
-      "text": "DMITRI.HERNANDEZ4@EXAMPLE.NET"
-    },
-    {
-      "start": 485,
-      "end": 500,
-      "type": "ACCOUNT_ID",
-      "text": "25-9874-7174-00"
-    },
-    {
-      "start": 510,
-      "end": 526,
-      "type": "NAME",
-      "text": "Dmitri Hernandez"
-    },
-    {
-      "start": 821,
-      "end": 836,
-      "type": "ACCOUNT_ID",
-      "text": "86-9934-6736-00"
-    },
-    {
-      "start": 846,
-      "end": 862,
-      "type": "NAME",
-      "text": "Dmitri Hernandez"
-    },
-    {
-      "start": 1378,
-      "end": 1393,
-      "type": "ACCOUNT_ID",
-      "text": "21-2195-1072-00"
-    },
-    {
-      "start": 1403,
-      "end": 1419,
-      "type": "NAME",
-      "text": "Dmitri Hernandez"
+      "start": 261,
+      "end": 272,
+      "type": "MEMBER_ID",
+      "text": "XGH47168030"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 153,
-      "end": 162,
-      "type": "ADDRESS",
-      "text": "PO Box 33"
-    },
-    {
-      "start": 164,
-      "end": 179,
-      "type": "ADDRESS",
-      "text": "Omaha, NE 68101"
-    },
-    {
-      "start": 194,
-      "end": 208,
+      "start": 300,
+      "end": 314,
       "type": "PHONE",
-      "text": "1-800-555-0121"
+      "text": "1-800-555-0162"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-04-20",
+      "service_date": "2025-07-09",
+      "code": "99214",
+      "description": "Office visit, established patient, m0derate complexity",
+      "billed_amount": "248.23",
+      "allowed_amount": null,
+      "insurer_paid": "94.24",
+      "patient_responsibility": "23.56"
+    },
+    {
+      "service_date": "2025-07-09",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "151.36",
+      "allowed_amount": "46.32",
+      "insurer_paid": "41.69",
+      "patient_responsibility": "4.63"
+    },
+    {
+      "service_date": "2025-07-09",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "151.36",
+      "allowed_amount": "46.32",
+      "insurer_paid": "41.69",
+      "patient_responsibility": "4.63"
+    },
+    {
+      "service_date": "2025-07-09",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "254.81",
+      "allowed_amount": "187.55",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "187.55"
+    },
+    {
+      "service_date": "2025-07-09",
       "code": "J2405",
       "description": "Ondansetron hydrochloride injection, per 1 mg",
-      "billed_amount": "36.66",
-      "allowed_amount": "12.55",
-      "insurer_paid": "8.79",
-      "patient_responsibility": "3.76"
-    },
-    {
-      "service_date": "2025-03-04",
-      "code": "96374",
-      "description": "IV push, single or initial substance",
-      "billed_amount": "366.79",
-      "allowed_amount": "290.74",
-      "insurer_paid": "290.74",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-03-04",
-      "code": "97110",
-      "description": "Therapeutic exercises, each 15 minutes",
-      "billed_amount": "86.71",
-      "allowed_amount": "42.23",
+      "billed_amount": "58.62",
+      "allowed_amount": null,
       "insurer_paid": "0.00",
-      "patient_responsibility": "42.23"
+      "patient_responsibility": "18.38"
     },
     {
-      "service_date": "2025-03-04",
-      "code": "99283",
-      "description": "Emergency department visit, moderate severity",
-      "billed_amount": "1289.76",
-      "allowed_amount": "403.31",
+      "service_date": "2025-07-09",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1450.04",
+      "allowed_amount": "604.06",
+      "insurer_paid": "543.65",
+      "patient_responsibility": "60.41"
+    },
+    {
+      "service_date": "2025-07-09",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "213.59",
+      "allowed_amount": "109.78",
+      "insurer_paid": "109.78",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-07-09",
+      "code": "87880",
+      "description": "Rapid strep test",
+      "billed_amount": "33.48",
+      "allowed_amount": "26.34",
       "insurer_paid": "0.00",
-      "patient_responsibility": "403.31"
-    },
-    {
-      "service_date": "2025-03-25",
-      "code": "80053",
-      "description": "Comprehensive metabolic panel",
-      "billed_amount": "141.62",
-      "allowed_amount": "104.51",
-      "insurer_paid": "104.51",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-03-25",
-      "code": "99285",
-      "description": "Emergency department visit, high severity",
-      "billed_amount": "2986.27",
-      "allowed_amount": "2110.64",
-      "insurer_paid": "1899.58",
-      "patient_responsibility": "211.06"
-    },
-    {
-      "service_date": "2025-03-25",
-      "code": "99214",
-      "description": "Office visit, established patient, moderate complexity",
-      "billed_amount": "304.45",
-      "allowed_amount": "228.05",
-      "insurer_paid": "228.05",
-      "patient_responsibility": "0.00"
+      "patient_responsibility": "26.34"
     }
   ],
-  "duplicate_pairs": []
+  "duplicate_pairs": [
+    [
+      1,
+      2
+    ]
+  ]
 }

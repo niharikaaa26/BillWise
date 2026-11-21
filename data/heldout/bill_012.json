@@ -1,133 +1,130 @@
 {
   "id": "bill_012",
-  "layout": "multi_claim_heldout",
+  "layout": "portal_summary_heldout",
   "messy": [
     "duplicate_charge",
-    "multi_table",
+    "inline_amounts",
     "ocr_amount",
-    "tab_separated"
+    "po_box_address"
   ],
   "pii": [
     {
-      "start": 245,
-      "end": 265,
+      "start": 94,
+      "end": 104,
       "type": "NAME",
-      "text": "Achterberg Brianna F"
+      "text": "Ingrid Doe"
     },
     {
-      "start": 284,
-      "end": 298,
-      "type": "MEMBER_ID",
-      "text": "9001-3220-7746"
+      "start": 126,
+      "end": 135,
+      "type": "ACCOUNT_ID",
+      "text": "B-81289-4"
     },
     {
-      "start": 317,
-      "end": 327,
+      "start": 147,
+      "end": 157,
       "type": "DOB",
-      "text": "09-26-1956"
+      "text": "1967.10.02"
     },
     {
-      "start": 346,
-      "end": 386,
+      "start": 167,
+      "end": 201,
       "type": "ADDRESS",
-      "text": "4071 Magnolia Drive, Springdale AR 72756"
+      "text": "P.O. Box 5995, Millbrook, NY 12572"
     },
     {
-      "start": 405,
-      "end": 418,
+      "start": 209,
+      "end": 221,
       "type": "PHONE",
-      "text": "(513)555-0129"
+      "text": "303/555-0150"
     },
     {
-      "start": 445,
-      "end": 460,
-      "type": "ACCOUNT_ID",
-      "text": "37-0559-9383-00"
-    },
-    {
-      "start": 470,
-      "end": 488,
-      "type": "NAME",
-      "text": "Brianna Achterberg"
-    },
-    {
-      "start": 1029,
-      "end": 1044,
-      "type": "ACCOUNT_ID",
-      "text": "91-0136-9901-00"
-    },
-    {
-      "start": 1054,
-      "end": 1072,
-      "type": "NAME",
-      "text": "Brianna Achterberg"
+      "start": 253,
+      "end": 263,
+      "type": "MEMBER_ID",
+      "text": "W374686393"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 157,
-      "end": 168,
-      "type": "ADDRESS",
-      "text": "PO Box 6100"
-    },
-    {
-      "start": 170,
-      "end": 185,
-      "type": "ADDRESS",
-      "text": "Fargo, ND 58108"
-    },
-    {
-      "start": 200,
-      "end": 214,
+      "start": 291,
+      "end": 305,
       "type": "PHONE",
-      "text": "1-800-555-0170"
+      "text": "1-800-555-0166"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-06-11",
-      "code": "99214",
-      "description": "Office visit, established patient, moderate complexity",
-      "billed_amount": "320.73",
-      "allowed_amount": "170.61",
-      "insurer_paid": "153.55",
-      "patient_responsibility": "17.06"
-    },
-    {
-      "service_date": "2025-06-11",
-      "code": "99214",
-      "description": "Office visit, established patient, moderate complexity",
-      "billed_amount": "320.73",
-      "allowed_amount": "170.61",
-      "insurer_paid": "153.55",
-      "patient_responsibility": "17.06"
-    },
-    {
-      "service_date": "2025-06-11",
-      "code": "70450",
-      "description": "CT head or brain without contrast",
-      "billed_amount": "1910.08",
-      "allowed_amount": "1353.97",
-      "insurer_paid": "1353.97",
+      "service_date": "2025-06-08",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "251.75",
+      "allowed_amount": "149.49",
+      "insurer_paid": "149.49",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-06-07",
-      "code": "J1885",
-      "description": "Ketorolac tromethamine injection, per 15 mg",
-      "billed_amount": "75.54",
-      "allowed_amount": "53.16",
-      "insurer_paid": "42.53",
-      "patient_responsibility": "10.63"
+      "service_date": "2025-06-08",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "251.75",
+      "allowed_amount": "149.49",
+      "insurer_paid": "149.49",
+      "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-06-07",
+      "service_date": "2025-06-08",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "201.65",
+      "allowed_amount": "134.64",
+      "insurer_paid": "121.18",
+      "patient_responsibility": "13.46"
+    },
+    {
+      "service_date": "2025-06-10",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "173.01",
+      "allowed_amount": "109.53",
+      "insurer_paid": "98.58",
+      "patient_responsibility": "10.95"
+    },
+    {
+      "service_date": "2025-06-10",
       "code": "80053",
       "description": "Comprehensive metabolic panel",
-      "billed_amount": "274.42",
-      "allowed_amount": "165.44",
+      "billed_amount": "150.71",
+      "allowed_amount": "63.01",
+      "insurer_paid": "56.71",
+      "patient_responsibility": "6.30"
+    },
+    {
+      "service_date": "2025-06-10",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "69.24",
+      "allowed_amount": "40.32",
+      "insurer_paid": "28.22",
+      "patient_responsibility": "12.10"
+    },
+    {
+      "service_date": "2025-06-11",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2880.02",
+      "allowed_amount": "2240.67",
       "insurer_paid": "0.00",
-      "patient_responsibility": "165.44"
+      "patient_responsibility": "2240.67"
+    },
+    {
+      "service_date": "2025-06-11",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "89.75",
+      "allowed_amount": "68.95",
+      "insurer_paid": "55.16",
+      "patient_responsibility": "13.79"
     }
   ],
   "duplicate_pairs": [

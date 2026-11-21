@@ -1,0 +1,32 @@
+NORTHWIND BENEFIT ADMINISTRATORS
+Member Statement of Benefits                        Page 1
+Statement period: 02/07/2025 - 05/08/2025
+Send correspondence to PO Box 6100, Fargo, ND 58108
+Customer care 1-800-555-0132  (TTY 711)
+
+Member .......... Achterberg Linda D
+Member # ........ 7127-3799-7202
+Date of birth ... 12-17-1989
+Residence ....... 3690 Cedar Dr, Millbrook NY 12571
+Daytime tel ..... (303)555-0140
+E-mail .......... LINDA.ACHTERBERG88@MAIL.EXAMPLE.COM
+
+CLAIM 1 OF 2   Claim ID: 05-9341-5526-00
+Patient: Linda Achterberg
+Provider: Harbor Imaging Associates
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+02/09/25	A4649	Surgical supply, miscellaneous	$242.31	$85.89	$156.42	$0.00	$0.00	$l56.42	$0.0O
+02/09/25	99203	New patient office visit	$275.27	$187.79	$87.48	$0.00	$0.00	S87.48	$0.00
+02/09/25	80053	Comprehensive metabolic panel	$328,71	$95.89	$232.82	$0.00	$69.85	$162.97	$69.85
+Claim totals									$69.85
+
+CLAIM 2 OF 2   Claim ID: 30-6379-7776-00
+Patient: Linda Achterberg
+Provider: Lakeside Family Clinic
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+03/23/25	74177	CT abdomen and pelvis with contrast	$4,081.57	$1,509.56	$2,572.01	$0.00	$771.60	$1,800.41	$771.60
+03/23/25	96374	IV push, single or initial substance	$388.67	$93.69	—	$14.75	$14.75	$265.48	$29.5O
+03/24/25	J2405	Ondansetron hydrochloride injection, per 1 mg	$75.30	$24.01	$51.29	$5.13	$5.13	$41.O3	$10.26
+Claim totals									$811.36
+
+This is not a bill. Keep this statement for your records.

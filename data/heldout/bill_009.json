@@ -1,139 +1,86 @@
 {
   "id": "bill_009",
-  "layout": "multi_claim_heldout",
+  "layout": "portal_summary_heldout",
   "messy": [
+    "inline_amounts",
     "missing_field",
-    "multi_table",
+    "multiline_item",
     "ocr_amount",
-    "tab_separated"
+    "po_box_address"
   ],
   "pii": [
     {
-      "start": 239,
-      "end": 257,
+      "start": 94,
+      "end": 109,
       "type": "NAME",
-      "text": "Achterberg Patrice"
+      "text": "Olivia Sullivan"
     },
     {
-      "start": 276,
-      "end": 290,
-      "type": "MEMBER_ID",
-      "text": "0729-6755-2332"
+      "start": 131,
+      "end": 140,
+      "type": "ACCOUNT_ID",
+      "text": "B-65610-9"
     },
     {
-      "start": 309,
-      "end": 319,
+      "start": 152,
+      "end": 162,
       "type": "DOB",
-      "text": "07-29-1958"
+      "text": "2018.12.31"
     },
     {
-      "start": 338,
-      "end": 374,
+      "start": 172,
+      "end": 206,
       "type": "ADDRESS",
-      "text": "8265 Sunset Drive, Lakewood CO 80236"
+      "text": "P.O. Box 6937, Millbrook, NY 12517"
     },
     {
-      "start": 393,
-      "end": 406,
+      "start": 214,
+      "end": 226,
       "type": "PHONE",
-      "text": "(479)555-0104"
+      "text": "319/555-0164"
     },
     {
-      "start": 425,
-      "end": 457,
-      "type": "EMAIL",
-      "text": "PATRICE.ACHTERBERG96@EXAMPLE.ORG"
-    },
-    {
-      "start": 484,
-      "end": 499,
-      "type": "ACCOUNT_ID",
-      "text": "71-2052-5862-00"
-    },
-    {
-      "start": 509,
-      "end": 526,
-      "type": "NAME",
-      "text": "Olivia Achterberg"
-    },
-    {
-      "start": 895,
-      "end": 910,
-      "type": "ACCOUNT_ID",
-      "text": "05-0484-1022-00"
-    },
-    {
-      "start": 920,
-      "end": 938,
-      "type": "NAME",
-      "text": "Patrice Achterberg"
+      "start": 260,
+      "end": 272,
+      "type": "MEMBER_ID",
+      "text": "ZQ2164648-01"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 153,
-      "end": 162,
-      "type": "ADDRESS",
-      "text": "PO Box 33"
-    },
-    {
-      "start": 164,
-      "end": 179,
-      "type": "ADDRESS",
-      "text": "Omaha, NE 68101"
-    },
-    {
-      "start": 194,
-      "end": 208,
+      "start": 300,
+      "end": 314,
       "type": "PHONE",
-      "text": "1-800-555-0116"
+      "text": "1-800-555-0165"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-05-13",
-      "code": "70450",
-      "description": "CT head or brain without contrast",
-      "billed_amount": "1147.72",
+      "service_date": "2025-03-23",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "45.42",
+      "allowed_amount": "24.68",
+      "insurer_paid": "19.74",
+      "patient_responsibility": "4.94"
+    },
+    {
+      "service_date": "2025-03-24",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "130.85",
       "allowed_amount": null,
-      "insurer_paid": "750.27",
-      "patient_responsibility": "83.36"
+      "insurer_paid": "62.65",
+      "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-05-16",
-      "code": "36415",
-      "description": "Routine venipuncture",
-      "billed_amount": "19.26",
-      "allowed_amount": "14.41",
-      "insurer_paid": "12.97",
-      "patient_responsibility": "1.44"
-    },
-    {
-      "service_date": "2025-05-06",
-      "code": "99213",
-      "description": "Office visit, established patient, low complexity",
-      "billed_amount": "176.74",
-      "allowed_amount": "111.80",
-      "insurer_paid": "78.26",
-      "patient_responsibility": "33.54"
-    },
-    {
-      "service_date": "2025-05-06",
-      "code": "99213",
-      "description": "Office visit, established patient, low complexity",
-      "billed_amount": "158.43",
-      "allowed_amount": "89.54",
-      "insurer_paid": "80.59",
-      "patient_responsibility": "8.95"
-    },
-    {
-      "service_date": "2025-05-09",
-      "code": "96374",
-      "description": "IV push, single or initial substance",
-      "billed_amount": "317.30",
-      "allowed_amount": "227.32",
-      "insurer_paid": "181.86",
-      "patient_responsibility": "45.46"
+      "service_date": "2025-03-24",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "262.64",
+      "allowed_amount": "200.15",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "200.15"
     }
   ],
   "duplicate_pairs": []

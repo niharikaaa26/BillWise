@@ -1,0 +1,31 @@
+KESTREL HEALTH PLAN SERVICES
+Member Statement of Benefits                        Page 1
+Statement period: 03/25/2025 - 06/23/2025
+Send correspondence to PO Box 33, Omaha, NE 68101
+Customer care 1-800-555-0116  (TTY 711)
+
+Member .......... Achterberg Patrice
+Member # ........ 0729-6755-2332
+Date of birth ... 07-29-1958
+Residence ....... 8265 Sunset Drive, Lakewood CO 80236
+Daytime tel ..... (479)555-0104
+E-mail .......... PATRICE.ACHTERBERG96@EXAMPLE.ORG
+
+CLAIM 1 OF 2   Claim ID: 71-2052-5862-00
+Patient: Olivia Achterberg
+Provider: Lakeside Family Clinic
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+05/13/25	70450	CT head or brain without contrast	$1,147.72	$314.09	—	$41.68	$41.68	$750.27	$83.36
+05/16/25	36415	Routine venipuncture	$19.26	$4.85	$14.41	$1.44	$0.00	S12.97	$1.44
+Claim totals									$84.80
+
+CLAIM 2 OF 2   Claim ID: 05-0484-1022-00
+Patient: Patrice Achterberg
+Provider: Lakeside Family Clinic
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+05/06/25	99213	Office visit, established patient, low complexity	$176.74	$64.94	$111.80	$33.54	$0.00	$78.26	$33.54
+05/06/25	99213	Office visit, established patient, low complexity	$158.43	$68.89	$89.54	$0.00	$8.95	$80.59	$8.95
+05/09/25	96374	IV push, single or initial substance	$317.30	$89.98	$227.32	$22.73	$22.73	$l81.86	$45,46
+Claim totals									$87.95
+
+This is not a bill. Keep this statement for your records.

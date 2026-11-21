@@ -1,0 +1,169 @@
+{
+  "id": "bill_001",
+  "layout": "multi_claim",
+  "messy": [
+    "multi_table",
+    "ocr_amount",
+    "tab_separated"
+  ],
+  "pii": [
+    {
+      "start": 239,
+      "end": 257,
+      "type": "NAME",
+      "text": "Hernandez Dmitri N"
+    },
+    {
+      "start": 276,
+      "end": 290,
+      "type": "MEMBER_ID",
+      "text": "3937-0450-5285"
+    },
+    {
+      "start": 309,
+      "end": 319,
+      "type": "DOB",
+      "text": "09-28-1982"
+    },
+    {
+      "start": 338,
+      "end": 378,
+      "type": "ADDRESS",
+      "text": "4517 Cedar Ct Unit 11, Lakewood CO 80225"
+    },
+    {
+      "start": 397,
+      "end": 410,
+      "type": "PHONE",
+      "text": "(479)555-0177"
+    },
+    {
+      "start": 429,
+      "end": 458,
+      "type": "EMAIL",
+      "text": "DMITRI.HERNANDEZ4@EXAMPLE.NET"
+    },
+    {
+      "start": 485,
+      "end": 500,
+      "type": "ACCOUNT_ID",
+      "text": "25-9874-7174-00"
+    },
+    {
+      "start": 510,
+      "end": 526,
+      "type": "NAME",
+      "text": "Dmitri Hernandez"
+    },
+    {
+      "start": 821,
+      "end": 836,
+      "type": "ACCOUNT_ID",
+      "text": "86-9934-6736-00"
+    },
+    {
+      "start": 846,
+      "end": 862,
+      "type": "NAME",
+      "text": "Dmitri Hernandez"
+    },
+    {
+      "start": 1378,
+      "end": 1393,
+      "type": "ACCOUNT_ID",
+      "text": "21-2195-1072-00"
+    },
+    {
+      "start": 1403,
+      "end": 1419,
+      "type": "NAME",
+      "text": "Dmitri Hernandez"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 153,
+      "end": 162,
+      "type": "ADDRESS",
+      "text": "PO Box 33"
+    },
+    {
+      "start": 164,
+      "end": 179,
+      "type": "ADDRESS",
+      "text": "Omaha, NE 68101"
+    },
+    {
+      "start": 194,
+      "end": 208,
+      "type": "PHONE",
+      "text": "1-800-555-0121"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-04-20",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "36.66",
+      "allowed_amount": "12.55",
+      "insurer_paid": "8.79",
+      "patient_responsibility": "3.76"
+    },
+    {
+      "service_date": "2025-03-04",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "366.79",
+      "allowed_amount": "290.74",
+      "insurer_paid": "290.74",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-03-04",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "86.71",
+      "allowed_amount": "42.23",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "42.23"
+    },
+    {
+      "service_date": "2025-03-04",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "1289.76",
+      "allowed_amount": "403.31",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "403.31"
+    },
+    {
+      "service_date": "2025-03-25",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "141.62",
+      "allowed_amount": "104.51",
+      "insurer_paid": "104.51",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-03-25",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2986.27",
+      "allowed_amount": "2110.64",
+      "insurer_paid": "1899.58",
+      "patient_responsibility": "211.06"
+    },
+    {
+      "service_date": "2025-03-25",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "304.45",
+      "allowed_amount": "228.05",
+      "insurer_paid": "228.05",
+      "patient_responsibility": "0.00"
+    }
+  ],
+  "duplicate_pairs": []
+}

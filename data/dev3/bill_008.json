@@ -1,0 +1,122 @@
+{
+  "id": "bill_008",
+  "layout": "multi_claim",
+  "messy": [
+    "missing_field",
+    "multi_table",
+    "ocr_amount",
+    "tab_separated"
+  ],
+  "pii": [
+    {
+      "start": 245,
+      "end": 261,
+      "type": "NAME",
+      "text": "Abernathy Keisha"
+    },
+    {
+      "start": 280,
+      "end": 294,
+      "type": "MEMBER_ID",
+      "text": "5846-3641-2723"
+    },
+    {
+      "start": 313,
+      "end": 323,
+      "type": "DOB",
+      "text": "07-28-2014"
+    },
+    {
+      "start": 342,
+      "end": 381,
+      "type": "ADDRESS",
+      "text": "5208 Highland Road, Greenville SC 29694"
+    },
+    {
+      "start": 400,
+      "end": 413,
+      "type": "PHONE",
+      "text": "(864)555-0195"
+    },
+    {
+      "start": 432,
+      "end": 462,
+      "type": "EMAIL",
+      "text": "KEISHA.ABERNATHY53@EXAMPLE.NET"
+    },
+    {
+      "start": 489,
+      "end": 504,
+      "type": "ACCOUNT_ID",
+      "text": "31-5546-7093-00"
+    },
+    {
+      "start": 514,
+      "end": 530,
+      "type": "NAME",
+      "text": "Keisha Abernathy"
+    },
+    {
+      "start": 894,
+      "end": 909,
+      "type": "ACCOUNT_ID",
+      "text": "97-8066-8741-00"
+    },
+    {
+      "start": 919,
+      "end": 935,
+      "type": "NAME",
+      "text": "Keisha Abernathy"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 157,
+      "end": 168,
+      "type": "ADDRESS",
+      "text": "PO Box 6100"
+    },
+    {
+      "start": 170,
+      "end": 185,
+      "type": "ADDRESS",
+      "text": "Fargo, ND 58108"
+    },
+    {
+      "start": 200,
+      "end": 214,
+      "type": "PHONE",
+      "text": "1-800-555-0147"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-06-27",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "56.38",
+      "allowed_amount": "39.16",
+      "insurer_paid": "39.16",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-27",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "49.93",
+      "allowed_amount": null,
+      "insurer_paid": "18.66",
+      "patient_responsibility": "4.67"
+    },
+    {
+      "service_date": "2025-05-23",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "341.48",
+      "allowed_amount": "177.86",
+      "insurer_paid": "124.50",
+      "patient_responsibility": "53.36"
+    }
+  ],
+  "duplicate_pairs": []
+}

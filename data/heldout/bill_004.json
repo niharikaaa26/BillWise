@@ -1,139 +1,104 @@
 {
   "id": "bill_004",
-  "layout": "multi_claim_heldout",
+  "layout": "portal_summary_heldout",
   "messy": [
+    "inline_amounts",
     "missing_field",
-    "multi_table",
+    "multiline_item",
     "ocr_amount",
-    "tab_separated"
+    "po_box_address"
   ],
   "pii": [
     {
-      "start": 245,
-      "end": 257,
+      "start": 94,
+      "end": 106,
       "type": "NAME",
-      "text": "Mbeki Carlos"
+      "text": "Fatima Brown"
     },
     {
-      "start": 276,
-      "end": 290,
-      "type": "MEMBER_ID",
-      "text": "8159-5010-2127"
+      "start": 128,
+      "end": 137,
+      "type": "ACCOUNT_ID",
+      "text": "B-19907-3"
     },
     {
-      "start": 309,
-      "end": 319,
+      "start": 149,
+      "end": 159,
       "type": "DOB",
-      "text": "11-02-1941"
+      "text": "1958.01.30"
     },
     {
-      "start": 338,
-      "end": 374,
+      "start": 169,
+      "end": 204,
       "type": "ADDRESS",
-      "text": "4451 Juniper St, Greenville SC 29657"
+      "text": "P.O. Box 8149, Springdale, AR 72786"
     },
     {
-      "start": 393,
-      "end": 406,
+      "start": 212,
+      "end": 224,
       "type": "PHONE",
-      "text": "(479)555-0111"
+      "text": "360/555-0138"
     },
     {
-      "start": 425,
-      "end": 456,
-      "type": "EMAIL",
-      "text": "CARLOS.MBEKI14@MAIL.EXAMPLE.COM"
-    },
-    {
-      "start": 483,
-      "end": 498,
-      "type": "ACCOUNT_ID",
-      "text": "33-5948-9781-00"
-    },
-    {
-      "start": 508,
-      "end": 520,
-      "type": "NAME",
-      "text": "Dmitri Mbeki"
-    },
-    {
-      "start": 1020,
-      "end": 1035,
-      "type": "ACCOUNT_ID",
-      "text": "02-2531-8381-00"
-    },
-    {
-      "start": 1045,
-      "end": 1057,
-      "type": "NAME",
-      "text": "Carlos Mbeki"
+      "start": 258,
+      "end": 268,
+      "type": "MEMBER_ID",
+      "text": "MBR0927409"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 157,
-      "end": 168,
-      "type": "ADDRESS",
-      "text": "PO Box 6100"
-    },
-    {
-      "start": 170,
-      "end": 185,
-      "type": "ADDRESS",
-      "text": "Fargo, ND 58108"
-    },
-    {
-      "start": 200,
-      "end": 214,
+      "start": 296,
+      "end": 310,
       "type": "PHONE",
-      "text": "1-800-555-0174"
+      "text": "1-800-555-0147"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-04-10",
-      "code": "96374",
-      "description": "IV push, single or initial substance",
-      "billed_amount": "255.51",
-      "allowed_amount": "161.22",
-      "insurer_paid": "145.10",
-      "patient_responsibility": "16.12"
+      "service_date": "2025-05-19",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "475.53",
+      "allowed_amount": "216.05",
+      "insurer_paid": "172.84",
+      "patient_responsibility": "43.21"
     },
     {
-      "service_date": "2025-04-11",
+      "service_date": "2025-05-21",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "352.52",
+      "allowed_amount": "230.11",
+      "insurer_paid": "207.10",
+      "patient_responsibility": "23.01"
+    },
+    {
+      "service_date": "2025-05-23",
       "code": "99213",
       "description": "Office visit, established patient, low complexity",
-      "billed_amount": "206.55",
+      "billed_amount": "237.04",
+      "allowed_amount": "186.80",
+      "insurer_paid": "130.76",
+      "patient_responsibility": "56.04"
+    },
+    {
+      "service_date": "2025-05-23",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "28.87",
+      "allowed_amount": "17.84",
+      "insurer_paid": "17.84",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-05-23",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "240.29",
       "allowed_amount": null,
-      "insurer_paid": "97.93",
-      "patient_responsibility": "24.48"
-    },
-    {
-      "service_date": "2025-04-11",
-      "code": "99203",
-      "description": "New patient office visit",
-      "billed_amount": "214.75",
-      "allowed_amount": "74.93",
-      "insurer_paid": "52.45",
-      "patient_responsibility": "22.48"
-    },
-    {
-      "service_date": "2025-03-19",
-      "code": "36415",
-      "description": "Routine venipuncture",
-      "billed_amount": "25.01",
-      "allowed_amount": "8.53",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "8.53"
-    },
-    {
-      "service_date": "2025-03-19",
-      "code": "99203",
-      "description": "New patient office visit",
-      "billed_amount": "282.68",
-      "allowed_amount": "136.44",
-      "insurer_paid": "95.51",
-      "patient_responsibility": "40.93"
+      "insurer_paid": "156.37",
+      "patient_responsibility": "17.37"
     }
   ],
   "duplicate_pairs": []

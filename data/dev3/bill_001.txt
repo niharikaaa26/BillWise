@@ -1,0 +1,39 @@
+KESTREL HEALTH PLAN SERVICES
+Member Statement of Benefits                        Page 1
+Statement period: 02/01/2025 - 05/02/2025
+Send correspondence to PO Box 33, Omaha, NE 68101
+Customer care 1-800-555-0121  (TTY 711)
+
+Member .......... Hernandez Dmitri N
+Member # ........ 3937-0450-5285
+Date of birth ... 09-28-1982
+Residence ....... 4517 Cedar Ct Unit 11, Lakewood CO 80225
+Daytime tel ..... (479)555-0177
+E-mail .......... DMITRI.HERNANDEZ4@EXAMPLE.NET
+
+CLAIM 1 OF 3   Claim ID: 25-9874-7174-00
+Patient: Dmitri Hernandez
+Provider: Lakeside Family Clinic
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+04/20/25	J2405	Ondansetron hydrochloride injection, per 1 mg	S36.66	$24.11	$12.55	$1.88	$1.88	S8.79	$3.76
+Claim totals									$3.76
+
+CLAIM 2 OF 3   Claim ID: 86-9934-6736-00
+Patient: Dmitri Hernandez
+Provider: Mercy Valley Regional Hospital
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+03/04/25	96374	IV push, single or initial substance	$366.79	$76.05	$290.74	$0.00	$0.00	S290.74	$0.00
+03/04/25	97110	Therapeutic exercises, each 15 minutes	$86.71	$44.48	$42.23	$42.23	$0.00	$0,00	$42.23
+03/04/25	99283	Emergency department visit, moderate severity	$1,289.76	$886.45	$403.31	$0.00	$403.31	$0.00	$4O3.31
+Claim totals									$445.54
+
+CLAIM 3 OF 3   Claim ID: 21-2195-1072-00
+Patient: Dmitri Hernandez
+Provider: Mercy Valley Regional Hospital
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+03/25/25	80053	Comprehensive metabolic panel	$141,62	$37.11	$104.51	$0.00	$0.00	$104,51	$0.00
+03/25/25	99285	Emergency department visit, high severity	$2,986.27	$875.63	$2,110.64	$0.00	$211.06	$1,899.58	$211.06
+03/25/25	99214	Office visit, established patient, moderate complexity	$304.45	$76.40	$228.05	$0.00	$0.00	$228.O5	$0.00
+Claim totals									$211.06
+
+This is not a bill. Keep this statement for your records.

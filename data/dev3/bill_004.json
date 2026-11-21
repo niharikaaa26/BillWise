@@ -1,0 +1,140 @@
+{
+  "id": "bill_004",
+  "layout": "multi_claim",
+  "messy": [
+    "missing_field",
+    "multi_table",
+    "ocr_amount",
+    "tab_separated"
+  ],
+  "pii": [
+    {
+      "start": 245,
+      "end": 257,
+      "type": "NAME",
+      "text": "Mbeki Carlos"
+    },
+    {
+      "start": 276,
+      "end": 290,
+      "type": "MEMBER_ID",
+      "text": "8159-5010-2127"
+    },
+    {
+      "start": 309,
+      "end": 319,
+      "type": "DOB",
+      "text": "11-02-1941"
+    },
+    {
+      "start": 338,
+      "end": 374,
+      "type": "ADDRESS",
+      "text": "4451 Juniper St, Greenville SC 29657"
+    },
+    {
+      "start": 393,
+      "end": 406,
+      "type": "PHONE",
+      "text": "(479)555-0111"
+    },
+    {
+      "start": 425,
+      "end": 456,
+      "type": "EMAIL",
+      "text": "CARLOS.MBEKI14@MAIL.EXAMPLE.COM"
+    },
+    {
+      "start": 483,
+      "end": 498,
+      "type": "ACCOUNT_ID",
+      "text": "33-5948-9781-00"
+    },
+    {
+      "start": 508,
+      "end": 520,
+      "type": "NAME",
+      "text": "Dmitri Mbeki"
+    },
+    {
+      "start": 1020,
+      "end": 1035,
+      "type": "ACCOUNT_ID",
+      "text": "02-2531-8381-00"
+    },
+    {
+      "start": 1045,
+      "end": 1057,
+      "type": "NAME",
+      "text": "Carlos Mbeki"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 157,
+      "end": 168,
+      "type": "ADDRESS",
+      "text": "PO Box 6100"
+    },
+    {
+      "start": 170,
+      "end": 185,
+      "type": "ADDRESS",
+      "text": "Fargo, ND 58108"
+    },
+    {
+      "start": 200,
+      "end": 214,
+      "type": "PHONE",
+      "text": "1-800-555-0174"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-04-10",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "255.51",
+      "allowed_amount": "161.22",
+      "insurer_paid": "145.10",
+      "patient_responsibility": "16.12"
+    },
+    {
+      "service_date": "2025-04-11",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "206.55",
+      "allowed_amount": null,
+      "insurer_paid": "97.93",
+      "patient_responsibility": "24.48"
+    },
+    {
+      "service_date": "2025-04-11",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "214.75",
+      "allowed_amount": "74.93",
+      "insurer_paid": "52.45",
+      "patient_responsibility": "22.48"
+    },
+    {
+      "service_date": "2025-03-19",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "25.01",
+      "allowed_amount": "8.53",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "8.53"
+    },
+    {
+      "service_date": "2025-03-19",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "282.68",
+      "allowed_amount": "136.44",
+      "insurer_paid": "95.51",
+      "patient_responsibility": "40.93"
+    }
+  ],
+  "duplicate_pairs": []
+}

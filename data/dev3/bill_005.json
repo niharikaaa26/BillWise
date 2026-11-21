@@ -1,0 +1,121 @@
+{
+  "id": "bill_005",
+  "layout": "multi_claim",
+  "messy": [
+    "multi_table",
+    "ocr_amount",
+    "tab_separated"
+  ],
+  "pii": [
+    {
+      "start": 245,
+      "end": 261,
+      "type": "NAME",
+      "text": "Fitzgerald Aisha"
+    },
+    {
+      "start": 280,
+      "end": 294,
+      "type": "MEMBER_ID",
+      "text": "8868-9772-3092"
+    },
+    {
+      "start": 313,
+      "end": 323,
+      "type": "DOB",
+      "text": "09-05-1999"
+    },
+    {
+      "start": 342,
+      "end": 377,
+      "type": "ADDRESS",
+      "text": "7197 Willow Rd, Oak Harbor WA 98261"
+    },
+    {
+      "start": 396,
+      "end": 409,
+      "type": "PHONE",
+      "text": "(917)555-0172"
+    },
+    {
+      "start": 428,
+      "end": 458,
+      "type": "EMAIL",
+      "text": "AISHA.FITZGERALD49@EXAMPLE.COM"
+    },
+    {
+      "start": 485,
+      "end": 500,
+      "type": "ACCOUNT_ID",
+      "text": "31-2385-2533-00"
+    },
+    {
+      "start": 510,
+      "end": 526,
+      "type": "NAME",
+      "text": "Aisha Fitzgerald"
+    },
+    {
+      "start": 936,
+      "end": 951,
+      "type": "ACCOUNT_ID",
+      "text": "87-7906-8018-00"
+    },
+    {
+      "start": 961,
+      "end": 977,
+      "type": "NAME",
+      "text": "Aisha Fitzgerald"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 157,
+      "end": 168,
+      "type": "ADDRESS",
+      "text": "PO Box 6100"
+    },
+    {
+      "start": 170,
+      "end": 185,
+      "type": "ADDRESS",
+      "text": "Fargo, ND 58108"
+    },
+    {
+      "start": 200,
+      "end": 214,
+      "type": "PHONE",
+      "text": "1-800-555-0158"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-08-18",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "2002.99",
+      "allowed_amount": "1429.83",
+      "insurer_paid": "1286.85",
+      "patient_responsibility": "142.98"
+    },
+    {
+      "service_date": "2025-08-18",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "124.56",
+      "allowed_amount": "93.97",
+      "insurer_paid": "84.57",
+      "patient_responsibility": "9.40"
+    },
+    {
+      "service_date": "2025-07-20",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "384.96",
+      "allowed_amount": "214.98",
+      "insurer_paid": "193.48",
+      "patient_responsibility": "21.50"
+    }
+  ],
+  "duplicate_pairs": []
+}

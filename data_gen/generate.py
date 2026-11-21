@@ -15,7 +15,8 @@ For each bill the generator writes:
 Usage:
     python -m data_gen.generate --out data/synthetic --n 48 --seed 2025
     python -m data_gen.generate --out data/dev2 --n 12 --seed 777 --ocr-p 0.25 --set dev2
-    python -m data_gen.generate --out data/heldout --n 12 --seed 4242 --ocr-p 0.2 --set heldout
+    python -m data_gen.generate --out data/dev3 --n 12 --seed 4242 --ocr-p 0.2 --set dev3
+    python -m data_gen.generate --out data/heldout --n 12 --seed 9001 --ocr-p 0.2 --set heldout
 """
 from __future__ import annotations
 
@@ -789,12 +790,76 @@ def layout_multi_claim(rng: random.Random, ocr_p: float) -> tuple[Doc, list[dict
     return doc, all_items, flags
 
 
+# --------------------------------------------------------------------------
+# Layout G (HELD OUT, round 3): patient-portal visit summary. Written BEFORE
+# the round-3 fixes and not used to tune them. Two-line items with inline
+# "Label $amount" pairs separated by middle dots, ISO service dates, codes
+# prefixed "CPT"/"HCPCS", honorific name in a sentence, patient PO box,
+# dotted DOB, slash phone, letter-prefixed account number.
+# --------------------------------------------------------------------------
+def layout_portal_summary(rng: random.Random, ocr_p: float) -> tuple[Doc, list[dict], set[str]]:
+    flags: set[str] = {"inline_amounts"}
+    doc = Doc()
+    p = make_person(rng)
+    printed = date(2025, 3, 1) + timedelta(days=rng.randint(0, 220))
+    doc.nl("Visit Summary & Charges")
+    doc.nl(f"Printed {printed:%m/%d/%Y} from the patient portal")
+    doc.nl()
+    hon = rng.choice(["Ms.", "Mr.", "Mx."])
+    doc.add(f"This statement is for {hon} ").pii_(f"{p['first']} {p['last']}", "NAME").nl(".")
+    doc.add("Patient account no. ").pii_(f"{rng.choice('ABHK')}-{digits(rng, 5)}-{rng.randint(1, 9)}", "ACCOUNT_ID").nl()
+    doc.add("Birth date ").pii_(f"{p['dob']:%Y.%m.%d}", "DOB").nl()
+    if rng.random() < 0.5:
+        flags.add("po_box_address")
+        addr = f"P.O. Box {rng.randint(100, 9999)}, {p['city']}, {p['state']} {p['zip']}"
+    else:
+        addr = f"{p['street']}, {p['city']}, {p['state']} {p['zip']}"
+    doc.add("Mailing: ").pii_(addr, "ADDRESS").nl()
+    area = rng.choice(AREA_CODES)
+    doc.add("Mobile ").pii_(f"{area}/555-01{rng.randint(0, 99):02d}", "PHONE").nl()
+    ins = rng.choice(INSURERS)[0].title()
+    doc.add(f"Plan: {ins}, ID ").pii_(member_id(rng), "MEMBER_ID").nl()
+    doc.add("Questions about this bill? ").org(biz_phone(rng), "PHONE").nl()
+    doc.nl()
+
+    items = make_items(rng, printed - timedelta(days=rng.randint(20, 60)), flags)
+    for n, it in enumerate(items, 1):
+        prefix = "HCPCS" if it["code"][0].isalpha() else "CPT"
+        doc.nl(f"Item {n} of {len(items)} — {it['service_date'].isoformat()} — {prefix} {it['code']}")
+        desc = it["description"]
+        if rng.random() < ocr_p * 0.5:
+            flags.add("ocr_description")
+            desc = ocr_text(desc, rng)
+        it["description"] = desc
+        parts = wrap(desc, 38) if rng.random() < 0.3 else [desc]
+        if len(parts) > 1:
+            flags.add("multiline_item")
+        for part in parts:
+            doc.nl(f"  {part}")
+        if rng.random() < 0.15:
+            flags.add("missing_field")
+            it["allowed_amount"] = None
+        pieces = [
+            f"Billed {maybe_ocr_amt(fmt_amt(it['billed_amount'], True), rng, flags, ocr_p)}",
+            f"Plan allowed {fmt_amt(it['allowed_amount'], True) or chr(0x2014)}",
+            f"Plan paid {maybe_ocr_amt(fmt_amt(it['insurer_paid'], True), rng, flags, ocr_p)}",
+            f"Your cost {maybe_ocr_amt(fmt_amt(it['patient_responsibility'], True), rng, flags, ocr_p)}",
+        ]
+        doc.nl("  " + " · ".join(pieces))
+        doc.nl()
+    tot = sum(i["patient_responsibility"] for i in items)
+    doc.nl(f"Total of your costs: {fmt_amt(tot, True)}")
+    return doc, items, flags
+
+
 LAYOUT_SETS = {
     "dev": LAYOUTS,
-    # round-1 held-out layout; it was used to tune round-2 fixes, so it is now development data
+    # round-1 held-out layout; used to tune round-2 fixes, now development data
     "dev2": {"group_statement": layout_group_statement},
-    # round-2 held-out layout: never used for tuning
-    "heldout": {"multi_claim_heldout": layout_multi_claim},
+    # round-2 held-out layout; used to tune round-3 fixes, now development data
+    "dev3": {"multi_claim": layout_multi_claim},
+    # round-3 held-out layout: never used for tuning
+    "heldout": {"portal_summary_heldout": layout_portal_summary},
 }
 
 
@@ -847,7 +912,7 @@ def main() -> None:
     ap.add_argument("--ocr-p", type=float, default=0.12, help="probability of each OCR corruption site")
     ap.add_argument("--set", dest="layout_set", choices=sorted(LAYOUT_SETS), default="dev",
                     help="dev: 4 development layouts; dev2: round-1 held-out layout (now dev data); "
-                         "heldout: layout never used for tuning")
+                         "dev3: round-2 held-out layout (now dev data); heldout: layout never used for tuning")
     args = ap.parse_args()
     files = generate(args.out, args.n, args.seed, args.ocr_p, args.layout_set)
     print(f"wrote {len(files)} synthetic bills + ground truth to {args.out}")

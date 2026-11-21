@@ -1,0 +1,32 @@
+KESTREL HEALTH PLAN SERVICES
+Member Statement of Benefits                        Page 1
+Statement period: 05/18/2025 - 08/16/2025
+Send correspondence to PO Box 33, Omaha, NE 68101
+Customer care 1-800-555-0179  (TTY 711)
+
+Member .......... Patel Olivia
+Member # ........ 6210-6633-6696
+Date of birth ... 11-09-1941
+Residence ....... 6486 Hillcrest Court, Oak Harbor WA 98258
+Daytime tel ..... (864)555-0179
+E-mail .......... OLIVIA.PATEL34@EXAMPLE.COM
+
+CLAIM 1 OF 2   Claim ID: 12-3607-2477-00
+Patient: Olivia Patel
+Provider: Riverside Urgent Care
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+06/05/25	87880	Rapid strep test	S33.89	$14.64	$19.25	$5.77	$0.00	$13.48	$5.77
+06/05/25	99285	Emergency department visit, high severity	$3,154.38	$878.29	$2,276.09	$0.00	$682.83	$1,593.26	$682,83
+06/08/25	96374	IV push, single or initial substance	$296.06	$144.01	$152.05	$30.41	$0.00	$l21.64	$30.41
+Claim totals									$719.01
+
+CLAIM 2 OF 2   Claim ID: 41-3929-0734-00
+Patient: Olivia Patel
+Provider: Northgate Pediatrics
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+07/07/25	J2405	Ondansetron hydrochloride injection, per 1 mg	$27.66	$7.63	$20.03	$4.01	$0.00	$16.02	$4.01
+07/07/25	96374	IV push, single or initial substance	$374.11	$121.83	$252.28	$75.68	$0.00	$176.60	$75.68
+07/07/25	71046	Chest x-ray, 2 views	$330.41	$179.53	$150.88	$0.00	$150.88	$0.00	$150.88
+Claim totals									$230.57
+
+This is not a bill. Keep this statement for your records.

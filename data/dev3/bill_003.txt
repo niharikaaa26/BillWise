@@ -1,0 +1,38 @@
+NORTHWIND BENEFIT ADMINISTRATORS
+Member Statement of Benefits                        Page 1
+Statement period: 06/14/2025 - 09/12/2025
+Send correspondence to PO Box 6100, Fargo, ND 58108
+Customer care 1-800-555-0121  (TTY 711)
+
+Member .......... Abernathy Thanh
+Member # ........ 7684-9059-1257
+Date of birth ... 05-06-1983
+Residence ....... 7438 Briar Drive, Lakewood CO 80272
+Daytime tel ..... (319)555-0198
+
+CLAIM 1 OF 3   Claim ID: 71-9140-4866-00
+Patient: Thanh Abernathy
+Provider: Mercy Valley Regional Hospital
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+07/23/25	J2405	Ondansetron hydrochloride injection, per 1 mg	$69.25	$22.52	$46.73	$0.00	$0.00	$46.73	$0.00
+07/23/25	99285	Emergency department visit, high severity	$2,906.31	$1,959.49	$946.82	$0.00	$946.82	$0.00	$946.82
+Claim totals									$946.82
+
+CLAIM 2 OF 3   Claim ID: 10-5285-6250-00
+Patient: Thanh Abernathy
+Provider: Harbor Imaging Associates
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+08/05/25	85025	Complete blood count with automated differential	$135.77	$63.97	$71.80	$0.00	$21.54	$50.26	$21.54
+08/05/25	99283	Emergency department visit, moderate severity	$1,263.99	$300.01	$963.98	$0.00	$0.00	$963.98	$0.00
+08/05/25	99214	Office visit, established patient, moderate complexity	$312.05	$154.14	$157.91	$0.00	$0.00	$157.91	$0.00
+Claim totals									$21.54
+
+CLAIM 3 OF 3   Claim ID: 09-1100-0414-00
+Patient: Thanh Abernathy
+Provider: Lakeside Family Clinic
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+06/28/25	36415	Routine venipuncture	$56.89	$19.42	$37.47	$0.00	$0.00	$37.47	$O.00
+06/28/25	81001	Urinalysis, automated, with microscopy	$43.81	$30.57	$13.24	$1.33	$1.32	$10.59	$2.65
+Claim totals									$2.65
+
+This is not a bill. Keep this statement for your records.

@@ -1,147 +1,74 @@
 {
   "id": "bill_006",
-  "layout": "multi_claim_heldout",
+  "layout": "portal_summary_heldout",
   "messy": [
-    "multi_table",
-    "ocr_amount",
-    "tab_separated"
+    "inline_amounts",
+    "multiline_item"
   ],
   "pii": [
     {
-      "start": 239,
-      "end": 251,
+      "start": 94,
+      "end": 111,
       "type": "NAME",
-      "text": "Patel Olivia"
+      "text": "Brianna Lindqvist"
+    },
+    {
+      "start": 133,
+      "end": 142,
+      "type": "ACCOUNT_ID",
+      "text": "H-02008-7"
+    },
+    {
+      "start": 154,
+      "end": 164,
+      "type": "DOB",
+      "text": "1957.01.20"
+    },
+    {
+      "start": 174,
+      "end": 216,
+      "type": "ADDRESS",
+      "text": "7430 Maple Road Apt 19, Fairview, TN 37058"
+    },
+    {
+      "start": 224,
+      "end": 236,
+      "type": "PHONE",
+      "text": "479/555-0163"
     },
     {
       "start": 270,
-      "end": 284,
+      "end": 283,
       "type": "MEMBER_ID",
-      "text": "6210-6633-6696"
-    },
-    {
-      "start": 303,
-      "end": 313,
-      "type": "DOB",
-      "text": "11-09-1941"
-    },
-    {
-      "start": 332,
-      "end": 373,
-      "type": "ADDRESS",
-      "text": "6486 Hillcrest Court, Oak Harbor WA 98258"
-    },
-    {
-      "start": 392,
-      "end": 405,
-      "type": "PHONE",
-      "text": "(864)555-0179"
-    },
-    {
-      "start": 424,
-      "end": 450,
-      "type": "EMAIL",
-      "text": "OLIVIA.PATEL34@EXAMPLE.COM"
-    },
-    {
-      "start": 477,
-      "end": 492,
-      "type": "ACCOUNT_ID",
-      "text": "12-3607-2477-00"
-    },
-    {
-      "start": 502,
-      "end": 514,
-      "type": "NAME",
-      "text": "Olivia Patel"
-    },
-    {
-      "start": 1003,
-      "end": 1018,
-      "type": "ACCOUNT_ID",
-      "text": "41-3929-0734-00"
-    },
-    {
-      "start": 1028,
-      "end": 1040,
-      "type": "NAME",
-      "text": "Olivia Patel"
+      "text": "CPH-2811-8297"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 153,
-      "end": 162,
-      "type": "ADDRESS",
-      "text": "PO Box 33"
-    },
-    {
-      "start": 164,
-      "end": 179,
-      "type": "ADDRESS",
-      "text": "Omaha, NE 68101"
-    },
-    {
-      "start": 194,
-      "end": 208,
+      "start": 311,
+      "end": 325,
       "type": "PHONE",
-      "text": "1-800-555-0179"
+      "text": "1-800-555-0109"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-06-05",
-      "code": "87880",
-      "description": "Rapid strep test",
-      "billed_amount": "33.89",
-      "allowed_amount": "19.25",
-      "insurer_paid": "13.48",
-      "patient_responsibility": "5.77"
-    },
-    {
-      "service_date": "2025-06-05",
-      "code": "99285",
-      "description": "Emergency department visit, high severity",
-      "billed_amount": "3154.38",
-      "allowed_amount": "2276.09",
-      "insurer_paid": "1593.26",
-      "patient_responsibility": "682.83"
-    },
-    {
-      "service_date": "2025-06-08",
-      "code": "96374",
-      "description": "IV push, single or initial substance",
-      "billed_amount": "296.06",
-      "allowed_amount": "152.05",
-      "insurer_paid": "121.64",
-      "patient_responsibility": "30.41"
-    },
-    {
-      "service_date": "2025-07-07",
-      "code": "J2405",
-      "description": "Ondansetron hydrochloride injection, per 1 mg",
-      "billed_amount": "27.66",
-      "allowed_amount": "20.03",
-      "insurer_paid": "16.02",
-      "patient_responsibility": "4.01"
-    },
-    {
-      "service_date": "2025-07-07",
-      "code": "96374",
-      "description": "IV push, single or initial substance",
-      "billed_amount": "374.11",
-      "allowed_amount": "252.28",
-      "insurer_paid": "176.60",
-      "patient_responsibility": "75.68"
-    },
-    {
-      "service_date": "2025-07-07",
-      "code": "71046",
-      "description": "Chest x-ray, 2 views",
-      "billed_amount": "330.41",
-      "allowed_amount": "150.88",
+      "service_date": "2025-06-19",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "807.37",
+      "allowed_amount": "537.50",
       "insurer_paid": "0.00",
-      "patient_responsibility": "150.88"
+      "patient_responsibility": "537.50"
+    },
+    {
+      "service_date": "2025-06-19",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "214.43",
+      "allowed_amount": "150.59",
+      "insurer_paid": "120.47",
+      "patient_responsibility": "30.12"
     }
   ],
   "duplicate_pairs": []

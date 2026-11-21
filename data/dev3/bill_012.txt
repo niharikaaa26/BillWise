@@ -1,0 +1,30 @@
+NORTHWIND BENEFIT ADMINISTRATORS
+Member Statement of Benefits                        Page 1
+Statement period: 04/29/2025 - 07/28/2025
+Send correspondence to PO Box 6100, Fargo, ND 58108
+Customer care 1-800-555-0170  (TTY 711)
+
+Member .......... Achterberg Brianna F
+Member # ........ 9001-3220-7746
+Date of birth ... 09-26-1956
+Residence ....... 4071 Magnolia Drive, Springdale AR 72756
+Daytime tel ..... (513)555-0129
+
+CLAIM 1 OF 2   Claim ID: 37-0559-9383-00
+Patient: Brianna Achterberg
+Provider: Harbor Imaging Associates
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+06/11/25	99214	Office visit, established patient, moderate complexity	$320.73	$150.12	$170.61	$8.53	$8.53	$153.55	$17.06
+06/11/25	99214	Office visit, established patient, moderate complexity	$320.73	$150.12	$170.61	$17.06	$0.00	$153.55	$17.06
+06/11/25	70450	CT head or brain without contrast	$1,910.08	$556.11	$1,353.97	$0.00	$0.00	$1,353.97	$0.00
+Claim totals									$34.12
+
+CLAIM 2 OF 2   Claim ID: 91-0136-9901-00
+Patient: Brianna Achterberg
+Provider: Northgate Pediatrics
+Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
+06/07/25	J1885	Ketorolac tromethamine injection, per 15 mg	$75.54	$22.38	$53.16	$0.00	$10.63	$42.53	$10.63
+06/07/25	80053	Comprehensive metabolic panel	$274.42	$108.98	$165.44	$165.44	$0.00	$0.00	$l65.44
+Claim totals									$176.07
+
+This is not a bill. Keep this statement for your records.

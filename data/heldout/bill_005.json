@@ -1,120 +1,85 @@
 {
   "id": "bill_005",
-  "layout": "multi_claim_heldout",
+  "layout": "portal_summary_heldout",
   "messy": [
-    "multi_table",
-    "ocr_amount",
-    "tab_separated"
+    "inline_amounts",
+    "missing_field",
+    "multiline_item",
+    "ocr_amount"
   ],
   "pii": [
     {
-      "start": 245,
-      "end": 261,
+      "start": 94,
+      "end": 108,
       "type": "NAME",
-      "text": "Fitzgerald Aisha"
+      "text": "Andre Thompson"
     },
     {
-      "start": 280,
-      "end": 294,
-      "type": "MEMBER_ID",
-      "text": "8868-9772-3092"
+      "start": 130,
+      "end": 139,
+      "type": "ACCOUNT_ID",
+      "text": "A-71470-4"
     },
     {
-      "start": 313,
-      "end": 323,
+      "start": 151,
+      "end": 161,
       "type": "DOB",
-      "text": "09-05-1999"
+      "text": "2008.04.15"
     },
     {
-      "start": 342,
-      "end": 377,
+      "start": 171,
+      "end": 217,
       "type": "ADDRESS",
-      "text": "7197 Willow Rd, Oak Harbor WA 98261"
+      "text": "3828 Sunset Court Unit 39, Millbrook, NY 12552"
     },
     {
-      "start": 396,
-      "end": 409,
+      "start": 225,
+      "end": 237,
       "type": "PHONE",
-      "text": "(917)555-0172"
+      "text": "360/555-0188"
     },
     {
-      "start": 428,
-      "end": 458,
-      "type": "EMAIL",
-      "text": "AISHA.FITZGERALD49@EXAMPLE.COM"
-    },
-    {
-      "start": 485,
-      "end": 500,
-      "type": "ACCOUNT_ID",
-      "text": "31-2385-2533-00"
-    },
-    {
-      "start": 510,
-      "end": 526,
-      "type": "NAME",
-      "text": "Aisha Fitzgerald"
-    },
-    {
-      "start": 936,
-      "end": 951,
-      "type": "ACCOUNT_ID",
-      "text": "87-7906-8018-00"
-    },
-    {
-      "start": 961,
-      "end": 977,
-      "type": "NAME",
-      "text": "Aisha Fitzgerald"
+      "start": 269,
+      "end": 279,
+      "type": "MEMBER_ID",
+      "text": "W598878738"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 157,
-      "end": 168,
-      "type": "ADDRESS",
-      "text": "PO Box 6100"
-    },
-    {
-      "start": 170,
-      "end": 185,
-      "type": "ADDRESS",
-      "text": "Fargo, ND 58108"
-    },
-    {
-      "start": 200,
-      "end": 214,
+      "start": 307,
+      "end": 321,
       "type": "PHONE",
-      "text": "1-800-555-0158"
+      "text": "1-800-555-0107"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-08-18",
-      "code": "70450",
-      "description": "CT head or brain without contrast",
-      "billed_amount": "2002.99",
-      "allowed_amount": "1429.83",
-      "insurer_paid": "1286.85",
-      "patient_responsibility": "142.98"
+      "service_date": "2025-05-01",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "219.13",
+      "allowed_amount": "102.59",
+      "insurer_paid": "92.33",
+      "patient_responsibility": "10.26"
     },
     {
-      "service_date": "2025-08-18",
-      "code": "99213",
-      "description": "Office visit, established patient, low complexity",
-      "billed_amount": "124.56",
-      "allowed_amount": "93.97",
-      "insurer_paid": "84.57",
-      "patient_responsibility": "9.40"
+      "service_date": "2025-05-01",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "142.20",
+      "allowed_amount": "54.43",
+      "insurer_paid": "38.10",
+      "patient_responsibility": "16.33"
     },
     {
-      "service_date": "2025-07-20",
-      "code": "71046",
-      "description": "Chest x-ray, 2 views",
-      "billed_amount": "384.96",
-      "allowed_amount": "214.98",
-      "insurer_paid": "193.48",
-      "patient_responsibility": "21.50"
+      "service_date": "2025-05-01",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "34.13",
+      "allowed_amount": null,
+      "insurer_paid": "13.99",
+      "patient_responsibility": "5.99"
     }
   ],
   "duplicate_pairs": []

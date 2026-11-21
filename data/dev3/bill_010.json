@@ -1,0 +1,122 @@
+{
+  "id": "bill_010",
+  "layout": "multi_claim",
+  "messy": [
+    "missing_field",
+    "multi_table",
+    "ocr_amount",
+    "tab_separated"
+  ],
+  "pii": [
+    {
+      "start": 245,
+      "end": 258,
+      "type": "NAME",
+      "text": "Petrov Daniel"
+    },
+    {
+      "start": 277,
+      "end": 291,
+      "type": "MEMBER_ID",
+      "text": "8868-7454-1282"
+    },
+    {
+      "start": 310,
+      "end": 320,
+      "type": "DOB",
+      "text": "07-05-1979"
+    },
+    {
+      "start": 339,
+      "end": 375,
+      "type": "ADDRESS",
+      "text": "52 Chestnut Way, Oak Harbor WA 98270"
+    },
+    {
+      "start": 394,
+      "end": 407,
+      "type": "PHONE",
+      "text": "(615)555-0128"
+    },
+    {
+      "start": 426,
+      "end": 458,
+      "type": "EMAIL",
+      "text": "DANIEL.PETROV70@MAIL.EXAMPLE.COM"
+    },
+    {
+      "start": 485,
+      "end": 500,
+      "type": "ACCOUNT_ID",
+      "text": "11-8479-7483-00"
+    },
+    {
+      "start": 510,
+      "end": 524,
+      "type": "NAME",
+      "text": "Michael Petrov"
+    },
+    {
+      "start": 814,
+      "end": 829,
+      "type": "ACCOUNT_ID",
+      "text": "26-9942-2066-00"
+    },
+    {
+      "start": 839,
+      "end": 852,
+      "type": "NAME",
+      "text": "Daniel Petrov"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 157,
+      "end": 168,
+      "type": "ADDRESS",
+      "text": "PO Box 6100"
+    },
+    {
+      "start": 170,
+      "end": 185,
+      "type": "ADDRESS",
+      "text": "Fargo, ND 58108"
+    },
+    {
+      "start": 200,
+      "end": 214,
+      "type": "PHONE",
+      "text": "1-800-555-0123"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-04-10",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "35.76",
+      "allowed_amount": null,
+      "insurer_paid": "16.64",
+      "patient_responsibility": "1.85"
+    },
+    {
+      "service_date": "2025-03-14",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1453.49",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "996.86"
+    },
+    {
+      "service_date": "2025-03-14",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2060.38",
+      "allowed_amount": null,
+      "insurer_paid": "899.64",
+      "patient_responsibility": "224.91"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,121 +1,112 @@
 {
   "id": "bill_010",
-  "layout": "multi_claim_heldout",
+  "layout": "portal_summary_heldout",
   "messy": [
+    "inline_amounts",
     "missing_field",
-    "multi_table",
-    "ocr_amount",
-    "tab_separated"
+    "multiline_item",
+    "ocr_amount"
   ],
   "pii": [
     {
-      "start": 245,
-      "end": 258,
+      "start": 94,
+      "end": 108,
       "type": "NAME",
-      "text": "Petrov Daniel"
+      "text": "Daniel Ramirez"
     },
     {
-      "start": 277,
-      "end": 291,
-      "type": "MEMBER_ID",
-      "text": "8868-7454-1282"
+      "start": 130,
+      "end": 139,
+      "type": "ACCOUNT_ID",
+      "text": "K-55881-9"
     },
     {
-      "start": 310,
-      "end": 320,
+      "start": 151,
+      "end": 161,
       "type": "DOB",
-      "text": "07-05-1979"
+      "text": "1955.02.13"
     },
     {
-      "start": 339,
-      "end": 375,
+      "start": 171,
+      "end": 208,
       "type": "ADDRESS",
-      "text": "52 Chestnut Way, Oak Harbor WA 98270"
+      "text": "7712 Riverbend Ct, Fairview, TN 37039"
     },
     {
-      "start": 394,
-      "end": 407,
+      "start": 216,
+      "end": 228,
       "type": "PHONE",
-      "text": "(615)555-0128"
+      "text": "303/555-0167"
     },
     {
-      "start": 426,
-      "end": 458,
-      "type": "EMAIL",
-      "text": "DANIEL.PETROV70@MAIL.EXAMPLE.COM"
-    },
-    {
-      "start": 485,
-      "end": 500,
-      "type": "ACCOUNT_ID",
-      "text": "11-8479-7483-00"
-    },
-    {
-      "start": 510,
-      "end": 524,
-      "type": "NAME",
-      "text": "Michael Petrov"
-    },
-    {
-      "start": 814,
-      "end": 829,
-      "type": "ACCOUNT_ID",
-      "text": "26-9942-2066-00"
-    },
-    {
-      "start": 839,
-      "end": 852,
-      "type": "NAME",
-      "text": "Daniel Petrov"
+      "start": 260,
+      "end": 270,
+      "type": "MEMBER_ID",
+      "text": "W723899222"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 157,
-      "end": 168,
-      "type": "ADDRESS",
-      "text": "PO Box 6100"
-    },
-    {
-      "start": 170,
-      "end": 185,
-      "type": "ADDRESS",
-      "text": "Fargo, ND 58108"
-    },
-    {
-      "start": 200,
-      "end": 214,
+      "start": 298,
+      "end": 312,
       "type": "PHONE",
-      "text": "1-800-555-0123"
+      "text": "1-800-555-0158"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-04-10",
-      "code": "J2405",
-      "description": "Ondansetron hydrochloride injection, per 1 mg",
-      "billed_amount": "35.76",
-      "allowed_amount": null,
-      "insurer_paid": "16.64",
-      "patient_responsibility": "1.85"
+      "service_date": "2025-04-18",
+      "code": "87880",
+      "description": "Rapid strep test",
+      "billed_amount": "64.83",
+      "allowed_amount": "47.57",
+      "insurer_paid": "33.30",
+      "patient_responsibility": "14.27"
     },
     {
-      "service_date": "2025-03-14",
+      "service_date": "2025-04-21",
       "code": "70450",
       "description": "CT head or brain without contrast",
-      "billed_amount": "1453.49",
-      "allowed_amount": null,
-      "insurer_paid": "0.00",
-      "patient_responsibility": "996.86"
+      "billed_amount": "1326.50",
+      "allowed_amount": "417.53",
+      "insurer_paid": "334.02",
+      "patient_responsibility": "83.51"
     },
     {
-      "service_date": "2025-03-14",
-      "code": "99285",
-      "description": "Emergency department visit, high severity",
-      "billed_amount": "2060.38",
+      "service_date": "2025-04-21",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "265.56",
       "allowed_amount": null,
-      "insurer_paid": "899.64",
-      "patient_responsibility": "224.91"
+      "insurer_paid": "105.82",
+      "patient_responsibility": "26.46"
+    },
+    {
+      "service_date": "2025-04-24",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "51.78",
+      "allowed_amount": "40.18",
+      "insurer_paid": "40.18",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-24",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "184.21",
+      "allowed_amount": "104.16",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "104.16"
+    },
+    {
+      "service_date": "2025-04-24",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "193.17",
+      "allowed_amount": "141.29",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "141.29"
     }
   ],
   "duplicate_pairs": []

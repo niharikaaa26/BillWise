@@ -1,0 +1,124 @@
+{
+  "id": "bill_002",
+  "layout": "multi_claim",
+  "messy": [
+    "multi_table",
+    "ocr_amount",
+    "tab_separated"
+  ],
+  "pii": [
+    {
+      "start": 245,
+      "end": 257,
+      "type": "NAME",
+      "text": "Haddad Kevin"
+    },
+    {
+      "start": 276,
+      "end": 290,
+      "type": "MEMBER_ID",
+      "text": "9706-6284-8097"
+    },
+    {
+      "start": 309,
+      "end": 319,
+      "type": "DOB",
+      "text": "08-24-1946"
+    },
+    {
+      "start": 338,
+      "end": 374,
+      "type": "ADDRESS",
+      "text": "2907 Elm Street, Oak Harbor WA 98221"
+    },
+    {
+      "start": 393,
+      "end": 406,
+      "type": "PHONE",
+      "text": "(212)555-0159"
+    },
+    {
+      "start": 433,
+      "end": 448,
+      "type": "ACCOUNT_ID",
+      "text": "73-4443-6648-00"
+    },
+    {
+      "start": 458,
+      "end": 470,
+      "type": "NAME",
+      "text": "Kevin Haddad"
+    },
+    {
+      "start": 783,
+      "end": 798,
+      "type": "ACCOUNT_ID",
+      "text": "24-8401-8771-00"
+    },
+    {
+      "start": 808,
+      "end": 820,
+      "type": "NAME",
+      "text": "Kevin Haddad"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 157,
+      "end": 168,
+      "type": "ADDRESS",
+      "text": "PO Box 6100"
+    },
+    {
+      "start": 170,
+      "end": 185,
+      "type": "ADDRESS",
+      "text": "Fargo, ND 58108"
+    },
+    {
+      "start": 200,
+      "end": 214,
+      "type": "PHONE",
+      "text": "1-800-555-0172"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-04-24",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2484.41",
+      "allowed_amount": "1582.29",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "1582.29"
+    },
+    {
+      "service_date": "2025-03-30",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "45.53",
+      "allowed_amount": "32.85",
+      "insurer_paid": "32.85",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-03-31",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "62.32",
+      "allowed_amount": "47.10",
+      "insurer_paid": "37.68",
+      "patient_responsibility": "9.42"
+    },
+    {
+      "service_date": "2025-03-31",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "1171.75",
+      "allowed_amount": "477.47",
+      "insurer_paid": "429.72",
+      "patient_responsibility": "47.75"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,29 +1,24 @@
-NORTHWIND BENEFIT ADMINISTRATORS
-Member Statement of Benefits                        Page 1
-Statement period: 03/25/2025 - 06/23/2025
-Send correspondence to PO Box 6100, Fargo, ND 58108
-Customer care 1-800-555-0172  (TTY 711)
+Visit Summary & Charges
+Printed 03/19/2025 from the patient portal
 
-Member .......... Haddad Kevin
-Member # ........ 9706-6284-8097
-Date of birth ... 08-24-1946
-Residence ....... 2907 Elm Street, Oak Harbor WA 98221
-Daytime tel ..... (212)555-0159
+This statement is for Mx. Thanh Sullivan.
+Patient account no. K-80171-2
+Birth date 1941.02.23
+Mailing: P.O. Box 6634, Lakewood, CO 80269
+Mobile 615/555-0136
+Plan: Summit Mutual Health, ID CPH-0633-0769
+Questions about this bill? 1-800-555-0198
 
-CLAIM 1 OF 2   Claim ID: 73-4443-6648-00
-Patient: Kevin Haddad
-Provider: Harbor Imaging Associates
-Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
-04/24/25	99285	Emergency department visit, high severity	$2,484.41	$902.12	$1,582.29	$0.00	$1,582.29	$0.00	S1,582.29
-Claim totals									$1,582.29
+Item 1 of 3 — 2025-01-26 — CPT 97110
+  Therapeutic exercises, each 15 minutes
+  Billed $60.85 · Plan allowed $46.46 · Plan paid $41.81 · Your cost $4.65
 
-CLAIM 2 OF 2   Claim ID: 24-8401-8771-00
-Patient: Kevin Haddad
-Provider: Riverside Urgent Care
-Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
-03/30/25	90471	Immunization administration, single vaccine	$45.53	$12.68	$32.85	$0.00	$0.00	$32,85	$O.00
-03/31/25	90471	Immunization administration, single vaccine	$62.32	$15.22	$47.10	$0.00	$9.42	$37.68	$9,42
-03/31/25	99283	Emergency department visit, moderate severity	$1,171.75	$694.28	$477.47	$47.75	$0.00	S429.72	$47.75
-Claim totals									$57.17
+Item 2 of 3 — 2025-01-29 — CPT 81001
+  Urinalysis, automated, with microscopy
+  Billed $64.86 · Plan allowed $26.88 · Plan paid S18.82 · Your cost $8.06
 
-This is not a bill. Keep this statement for your records.
+Item 3 of 3 — 2025-01-29 — CPT 96374
+  IV push, single or initial substance
+  Billed $296.20 · Plan allowed $134.94 · Plan paid $107.95 · Your cost $26,99
+
+Total of your costs: $39.70

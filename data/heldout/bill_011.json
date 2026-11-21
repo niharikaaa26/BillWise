@@ -1,160 +1,122 @@
 {
   "id": "bill_011",
-  "layout": "multi_claim_heldout",
+  "layout": "portal_summary_heldout",
   "messy": [
+    "inline_amounts",
     "missing_field",
-    "multi_table",
+    "multiline_item",
     "ocr_amount",
-    "tab_separated"
+    "po_box_address"
   ],
   "pii": [
     {
-      "start": 239,
-      "end": 256,
+      "start": 94,
+      "end": 103,
       "type": "NAME",
-      "text": "Petrov Priyanka D"
+      "text": "David Kim"
     },
     {
-      "start": 275,
-      "end": 289,
-      "type": "MEMBER_ID",
-      "text": "7743-2613-0399"
+      "start": 125,
+      "end": 134,
+      "type": "ACCOUNT_ID",
+      "text": "H-08528-7"
     },
     {
-      "start": 308,
-      "end": 318,
+      "start": 146,
+      "end": 156,
       "type": "DOB",
-      "text": "04-08-1988"
+      "text": "1993.10.15"
     },
     {
-      "start": 337,
-      "end": 378,
+      "start": 166,
+      "end": 201,
       "type": "ADDRESS",
-      "text": "7370 Maple Ct Apt 28B, Millbrook NY 12598"
+      "text": "P.O. Box 9146, Greenville, SC 29683"
     },
     {
-      "start": 397,
-      "end": 410,
+      "start": 209,
+      "end": 221,
       "type": "PHONE",
-      "text": "(917)555-0152"
+      "text": "513/555-0113"
     },
     {
-      "start": 429,
-      "end": 457,
-      "type": "EMAIL",
-      "text": "PRIYANKA.PETROV3@EXAMPLE.NET"
-    },
-    {
-      "start": 484,
-      "end": 499,
-      "type": "ACCOUNT_ID",
-      "text": "90-6191-6868-00"
-    },
-    {
-      "start": 509,
-      "end": 524,
-      "type": "NAME",
-      "text": "Priyanka Petrov"
-    },
-    {
-      "start": 929,
-      "end": 944,
-      "type": "ACCOUNT_ID",
-      "text": "20-5874-9244-00"
-    },
-    {
-      "start": 954,
-      "end": 969,
-      "type": "NAME",
-      "text": "Priyanka Petrov"
-    },
-    {
-      "start": 1339,
-      "end": 1354,
-      "type": "ACCOUNT_ID",
-      "text": "68-3579-0250-00"
-    },
-    {
-      "start": 1364,
-      "end": 1379,
-      "type": "NAME",
-      "text": "Priyanka Petrov"
+      "start": 253,
+      "end": 263,
+      "type": "MEMBER_ID",
+      "text": "W939593242"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 153,
-      "end": 162,
-      "type": "ADDRESS",
-      "text": "PO Box 33"
-    },
-    {
-      "start": 164,
-      "end": 179,
-      "type": "ADDRESS",
-      "text": "Omaha, NE 68101"
-    },
-    {
-      "start": 194,
-      "end": 208,
+      "start": 291,
+      "end": 305,
       "type": "PHONE",
-      "text": "1-800-555-0116"
+      "text": "1-800-555-0186"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-02-09",
-      "code": "70450",
-      "description": "CT head or brain without contrast",
-      "billed_amount": "1049.62",
-      "allowed_amount": "332.34",
-      "insurer_paid": "332.34",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-02-12",
-      "code": "74177",
-      "description": "CT abdomen and pelvis with contrast",
-      "billed_amount": "2248.63",
-      "allowed_amount": "1150.06",
-      "insurer_paid": "920.05",
-      "patient_responsibility": "230.01"
-    },
-    {
-      "service_date": "2025-04-04",
+      "service_date": "2025-06-27",
       "code": "71046",
       "description": "Chest x-ray, 2 views",
-      "billed_amount": "422.15",
+      "billed_amount": "282.18",
       "allowed_amount": null,
-      "insurer_paid": "254.64",
-      "patient_responsibility": "63.66"
+      "insurer_paid": "148.05",
+      "patient_responsibility": "63.45"
     },
     {
-      "service_date": "2025-04-04",
-      "code": "80053",
-      "description": "Comprehensive metabolic panel",
-      "billed_amount": "288.51",
-      "allowed_amount": "209.35",
-      "insurer_paid": "146.55",
-      "patient_responsibility": "62.80"
-    },
-    {
-      "service_date": "2025-04-06",
-      "code": "36415",
-      "description": "Routine venipuncture",
-      "billed_amount": "22.60",
-      "allowed_amount": null,
-      "insurer_paid": "8.41",
-      "patient_responsibility": "2.10"
-    },
-    {
-      "service_date": "2025-04-06",
-      "code": "85025",
-      "description": "Complete blood count with automated differential",
-      "billed_amount": "152.07",
-      "allowed_amount": "106.43",
-      "insurer_paid": "106.43",
+      "service_date": "2025-06-27",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "81.68",
+      "allowed_amount": "58.77",
+      "insurer_paid": "58.77",
       "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-28",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "271.38",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "112.16"
+    },
+    {
+      "service_date": "2025-07-01",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "72.32",
+      "allowed_amount": "51.79",
+      "insurer_paid": "41.43",
+      "patient_responsibility": "10.36"
+    },
+    {
+      "service_date": "2025-07-01",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "55.98",
+      "allowed_amount": "27.36",
+      "insurer_paid": "19.15",
+      "patient_responsibility": "8.21"
+    },
+    {
+      "service_date": "2025-07-03",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "44.57",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "15.77"
+    },
+    {
+      "service_date": "2025-07-06",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "2574.42",
+      "allowed_amount": "1051.32",
+      "insurer_paid": "841.06",
+      "patient_responsibility": "210.26"
     }
   ],
   "duplicate_pairs": []

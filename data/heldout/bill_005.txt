@@ -1,29 +1,25 @@
-NORTHWIND BENEFIT ADMINISTRATORS
-Member Statement of Benefits                        Page 1
-Statement period: 06/04/2025 - 09/02/2025
-Send correspondence to PO Box 6100, Fargo, ND 58108
-Customer care 1-800-555-0158  (TTY 711)
+Visit Summary & Charges
+Printed 05/28/2025 from the patient portal
 
-Member .......... Fitzgerald Aisha
-Member # ........ 8868-9772-3092
-Date of birth ... 09-05-1999
-Residence ....... 7197 Willow Rd, Oak Harbor WA 98261
-Daytime tel ..... (917)555-0172
-E-mail .......... AISHA.FITZGERALD49@EXAMPLE.COM
+This statement is for Ms. Andre Thompson.
+Patient account no. A-71470-4
+Birth date 2008.04.15
+Mailing: 3828 Sunset Court Unit 39, Millbrook, NY 12552
+Mobile 360/555-0188
+Plan: Summit Mutual Health, ID W598878738
+Questions about this bill? 1-800-555-0107
 
-CLAIM 1 OF 2   Claim ID: 31-2385-2533-00
-Patient: Aisha Fitzgerald
-Provider: Northgate Pediatrics
-Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
-08/18/25	70450	CT head or brain without contrast	$2,002.99	$573.16	$1,429.83	$0.00	$142.98	$1,286.85	$142.98
-08/18/25	99213	Office visit, established patient, low complexity	$124.56	$30.59	$93.97	$0.00	$9.40	$84.57	$9.40
-Claim totals									$152.38
+Item 1 of 3 — 2025-05-01 — HCPCS A4649
+  Surgical supply, miscellaneous
+  Billed S219.13 · Plan allowed $102.59 · Plan paid $92.33 · Your cost $10.26
 
-CLAIM 2 OF 2   Claim ID: 87-7906-8018-00
-Patient: Aisha Fitzgerald
-Provider: Riverside Urgent Care
-Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
-07/20/25	71046	Chest x-ray, 2 views	$384.96	$169.98	$214.98	$0.00	$21.50	$193.48	$21,50
-Claim totals									$21.50
+Item 2 of 3 — 2025-05-01 — CPT 97110
+  Therapeutic exercises, each 15 minutes
+  Billed S142.20 · Plan allowed $54.43 · Plan paid $38.10 · Your cost $l6.33
 
-This is not a bill. Keep this statement for your records.
+Item 3 of 3 — 2025-05-01 — CPT 90686
+  Influenza vaccine, quadrivalent,
+  preservative free
+  Billed $34.13 · Plan allowed — · Plan paid $13.99 · Your cost $5.99
+
+Total of your costs: $32.58

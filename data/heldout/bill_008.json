@@ -1,121 +1,121 @@
 {
   "id": "bill_008",
-  "layout": "multi_claim_heldout",
+  "layout": "portal_summary_heldout",
   "messy": [
-    "missing_field",
-    "multi_table",
+    "inline_amounts",
+    "multiline_item",
     "ocr_amount",
-    "tab_separated"
+    "po_box_address"
   ],
   "pii": [
     {
-      "start": 245,
-      "end": 261,
+      "start": 94,
+      "end": 109,
       "type": "NAME",
-      "text": "Abernathy Keisha"
+      "text": "Dmitri Yamamoto"
     },
     {
-      "start": 280,
-      "end": 294,
-      "type": "MEMBER_ID",
-      "text": "5846-3641-2723"
+      "start": 131,
+      "end": 140,
+      "type": "ACCOUNT_ID",
+      "text": "H-09190-9"
     },
     {
-      "start": 313,
-      "end": 323,
+      "start": 152,
+      "end": 162,
       "type": "DOB",
-      "text": "07-28-2014"
+      "text": "1988.12.05"
     },
     {
-      "start": 342,
-      "end": 381,
+      "start": 172,
+      "end": 205,
       "type": "ADDRESS",
-      "text": "5208 Highland Road, Greenville SC 29694"
+      "text": "P.O. Box 6447, Lakewood, CO 80261"
     },
     {
-      "start": 400,
-      "end": 413,
+      "start": 213,
+      "end": 225,
       "type": "PHONE",
-      "text": "(864)555-0195"
+      "text": "360/555-0127"
     },
     {
-      "start": 432,
-      "end": 462,
-      "type": "EMAIL",
-      "text": "KEISHA.ABERNATHY53@EXAMPLE.NET"
-    },
-    {
-      "start": 489,
-      "end": 504,
-      "type": "ACCOUNT_ID",
-      "text": "31-5546-7093-00"
-    },
-    {
-      "start": 514,
-      "end": 530,
-      "type": "NAME",
-      "text": "Keisha Abernathy"
-    },
-    {
-      "start": 894,
-      "end": 909,
-      "type": "ACCOUNT_ID",
-      "text": "97-8066-8741-00"
-    },
-    {
-      "start": 919,
-      "end": 935,
-      "type": "NAME",
-      "text": "Keisha Abernathy"
+      "start": 257,
+      "end": 267,
+      "type": "MEMBER_ID",
+      "text": "MBR8505982"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 157,
-      "end": 168,
-      "type": "ADDRESS",
-      "text": "PO Box 6100"
-    },
-    {
-      "start": 170,
-      "end": 185,
-      "type": "ADDRESS",
-      "text": "Fargo, ND 58108"
-    },
-    {
-      "start": 200,
-      "end": 214,
+      "start": 295,
+      "end": 309,
       "type": "PHONE",
-      "text": "1-800-555-0147"
+      "text": "1-800-555-0188"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-06-27",
-      "code": "81001",
-      "description": "Urinalysis, automated, with microscopy",
-      "billed_amount": "56.38",
-      "allowed_amount": "39.16",
-      "insurer_paid": "39.16",
+      "service_date": "2025-07-25",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "161.17",
+      "allowed_amount": "74.15",
+      "insurer_paid": "66.74",
+      "patient_responsibility": "7.41"
+    },
+    {
+      "service_date": "2025-07-28",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "183.88",
+      "allowed_amount": "110.94",
+      "insurer_paid": "110.94",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-06-27",
-      "code": "36415",
-      "description": "Routine venipuncture",
-      "billed_amount": "49.93",
-      "allowed_amount": null,
-      "insurer_paid": "18.66",
-      "patient_responsibility": "4.67"
+      "service_date": "2025-07-30",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "233.51",
+      "allowed_amount": "156.36",
+      "insurer_paid": "140.72",
+      "patient_responsibility": "15.64"
     },
     {
-      "service_date": "2025-05-23",
-      "code": "80053",
-      "description": "Comprehensive metabolic panel",
-      "billed_amount": "341.48",
-      "allowed_amount": "177.86",
-      "insurer_paid": "124.50",
-      "patient_responsibility": "53.36"
+      "service_date": "2025-07-30",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "286.87",
+      "allowed_amount": "123.57",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "123.57"
+    },
+    {
+      "service_date": "2025-07-30",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "842.63",
+      "allowed_amount": "641.27",
+      "insurer_paid": "577.14",
+      "patient_responsibility": "64.13"
+    },
+    {
+      "service_date": "2025-08-01",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "213.09",
+      "allowed_amount": "108.44",
+      "insurer_paid": "97.60",
+      "patient_responsibility": "10.84"
+    },
+    {
+      "service_date": "2025-08-04",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "257.37",
+      "allowed_amount": "203.90",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "203.90"
     }
   ],
   "duplicate_pairs": []

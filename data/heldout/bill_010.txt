@@ -1,29 +1,37 @@
-NORTHWIND BENEFIT ADMINISTRATORS
-Member Statement of Benefits                        Page 1
-Statement period: 03/09/2025 - 06/07/2025
-Send correspondence to PO Box 6100, Fargo, ND 58108
-Customer care 1-800-555-0123  (TTY 711)
+Visit Summary & Charges
+Printed 05/11/2025 from the patient portal
 
-Member .......... Petrov Daniel
-Member # ........ 8868-7454-1282
-Date of birth ... 07-05-1979
-Residence ....... 52 Chestnut Way, Oak Harbor WA 98270
-Daytime tel ..... (615)555-0128
-E-mail .......... DANIEL.PETROV70@MAIL.EXAMPLE.COM
+This statement is for Mx. Daniel Ramirez.
+Patient account no. K-55881-9
+Birth date 1955.02.13
+Mailing: 7712 Riverbend Ct, Fairview, TN 37039
+Mobile 303/555-0167
+Plan: Summit Mutual Health, ID W723899222
+Questions about this bill? 1-800-555-0158
 
-CLAIM 1 OF 2   Claim ID: 11-8479-7483-00
-Patient: Michael Petrov
-Provider: Riverside Urgent Care
-Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
-04/10/25	J2405	Ondansetron hydrochloride injection, per 1 mg	$35.76	$17.27	—	$1.85	$0.00	$16.64	$1,85
-Claim totals									$1.85
+Item 1 of 6 — 2025-04-18 — CPT 87880
+  Rapid strep test
+  Billed $64.83 · Plan allowed $47.57 · Plan paid $33.30 · Your cost $14.27
 
-CLAIM 2 OF 2   Claim ID: 26-9942-2066-00
-Patient: Daniel Petrov
-Provider: Northgate Pediatrics
-Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
-03/14/25	70450	CT head or brain without contrast	$1,453.49	$456.63	—	$996.86	$0.00	$0.00	$996.86
-03/14/25	99285	Emergency department visit, high severity	$2,060.38	$935.83	—	$224.91	$0.00	$899.64	$224.91
-Claim totals									$1,221.77
+Item 2 of 6 — 2025-04-21 — CPT 70450
+  CT head or brain without contrast
+  Billed $1,326.50 · Plan allowed $417.53 · Plan paid $334.O2 · Your cost $83.51
 
-This is not a bill. Keep this statement for your records.
+Item 3 of 6 — 2025-04-21 — HCPCS G0439
+  Annual wellness visit, subsequent
+  Billed S265.56 · Plan allowed — · Plan paid $105.82 · Your cost $26.46
+
+Item 4 of 6 — 2025-04-24 — CPT 90471
+  Immunization administration, single vaccine
+  Billed S51.78 · Plan allowed $40.18 · Plan paid $40.18 · Your cost $0.00
+
+Item 5 of 6 — 2025-04-24 — CPT 99213
+  Office visit, established patient, low complexity
+  Billed $l84.21 · Plan allowed $104.16 · Plan paid $0.00 · Your cost $104.16
+
+Item 6 of 6 — 2025-04-24 — CPT 99214
+  Office visit, established patient,
+  moderate complexity
+  Billed $193.17 · Plan allowed $141.29 · Plan paid $0.00 · Your cost $141.29
+
+Total of your costs: $369.69

@@ -1,0 +1,149 @@
+{
+  "id": "bill_007",
+  "layout": "multi_claim",
+  "messy": [
+    "missing_field",
+    "multi_table",
+    "ocr_amount",
+    "tab_separated"
+  ],
+  "pii": [
+    {
+      "start": 245,
+      "end": 263,
+      "type": "NAME",
+      "text": "Achterberg Linda D"
+    },
+    {
+      "start": 282,
+      "end": 296,
+      "type": "MEMBER_ID",
+      "text": "7127-3799-7202"
+    },
+    {
+      "start": 315,
+      "end": 325,
+      "type": "DOB",
+      "text": "12-17-1989"
+    },
+    {
+      "start": 344,
+      "end": 377,
+      "type": "ADDRESS",
+      "text": "3690 Cedar Dr, Millbrook NY 12571"
+    },
+    {
+      "start": 396,
+      "end": 409,
+      "type": "PHONE",
+      "text": "(303)555-0140"
+    },
+    {
+      "start": 428,
+      "end": 463,
+      "type": "EMAIL",
+      "text": "LINDA.ACHTERBERG88@MAIL.EXAMPLE.COM"
+    },
+    {
+      "start": 490,
+      "end": 505,
+      "type": "ACCOUNT_ID",
+      "text": "05-9341-5526-00"
+    },
+    {
+      "start": 515,
+      "end": 531,
+      "type": "NAME",
+      "text": "Linda Achterberg"
+    },
+    {
+      "start": 1003,
+      "end": 1018,
+      "type": "ACCOUNT_ID",
+      "text": "30-6379-7776-00"
+    },
+    {
+      "start": 1028,
+      "end": 1044,
+      "type": "NAME",
+      "text": "Linda Achterberg"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 157,
+      "end": 168,
+      "type": "ADDRESS",
+      "text": "PO Box 6100"
+    },
+    {
+      "start": 170,
+      "end": 185,
+      "type": "ADDRESS",
+      "text": "Fargo, ND 58108"
+    },
+    {
+      "start": 200,
+      "end": 214,
+      "type": "PHONE",
+      "text": "1-800-555-0132"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-02-09",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "242.31",
+      "allowed_amount": "156.42",
+      "insurer_paid": "156.42",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-09",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "275.27",
+      "allowed_amount": "87.48",
+      "insurer_paid": "87.48",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-09",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "328.71",
+      "allowed_amount": "232.82",
+      "insurer_paid": "162.97",
+      "patient_responsibility": "69.85"
+    },
+    {
+      "service_date": "2025-03-23",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "4081.57",
+      "allowed_amount": "2572.01",
+      "insurer_paid": "1800.41",
+      "patient_responsibility": "771.60"
+    },
+    {
+      "service_date": "2025-03-23",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "388.67",
+      "allowed_amount": null,
+      "insurer_paid": "265.48",
+      "patient_responsibility": "29.50"
+    },
+    {
+      "service_date": "2025-03-24",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "75.30",
+      "allowed_amount": "51.29",
+      "insurer_paid": "41.03",
+      "patient_responsibility": "10.26"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,123 +1,84 @@
 {
   "id": "bill_002",
-  "layout": "multi_claim_heldout",
+  "layout": "portal_summary_heldout",
   "messy": [
-    "multi_table",
+    "inline_amounts",
     "ocr_amount",
-    "tab_separated"
+    "po_box_address"
   ],
   "pii": [
     {
-      "start": 245,
-      "end": 257,
+      "start": 94,
+      "end": 108,
       "type": "NAME",
-      "text": "Haddad Kevin"
+      "text": "Thanh Sullivan"
     },
     {
-      "start": 276,
-      "end": 290,
-      "type": "MEMBER_ID",
-      "text": "9706-6284-8097"
+      "start": 130,
+      "end": 139,
+      "type": "ACCOUNT_ID",
+      "text": "K-80171-2"
     },
     {
-      "start": 309,
-      "end": 319,
+      "start": 151,
+      "end": 161,
       "type": "DOB",
-      "text": "08-24-1946"
+      "text": "1941.02.23"
     },
     {
-      "start": 338,
-      "end": 374,
+      "start": 171,
+      "end": 204,
       "type": "ADDRESS",
-      "text": "2907 Elm Street, Oak Harbor WA 98221"
+      "text": "P.O. Box 6634, Lakewood, CO 80269"
     },
     {
-      "start": 393,
-      "end": 406,
+      "start": 212,
+      "end": 224,
       "type": "PHONE",
-      "text": "(212)555-0159"
+      "text": "615/555-0136"
     },
     {
-      "start": 433,
-      "end": 448,
-      "type": "ACCOUNT_ID",
-      "text": "73-4443-6648-00"
-    },
-    {
-      "start": 458,
-      "end": 470,
-      "type": "NAME",
-      "text": "Kevin Haddad"
-    },
-    {
-      "start": 783,
-      "end": 798,
-      "type": "ACCOUNT_ID",
-      "text": "24-8401-8771-00"
-    },
-    {
-      "start": 808,
-      "end": 820,
-      "type": "NAME",
-      "text": "Kevin Haddad"
+      "start": 256,
+      "end": 269,
+      "type": "MEMBER_ID",
+      "text": "CPH-0633-0769"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 157,
-      "end": 168,
-      "type": "ADDRESS",
-      "text": "PO Box 6100"
-    },
-    {
-      "start": 170,
-      "end": 185,
-      "type": "ADDRESS",
-      "text": "Fargo, ND 58108"
-    },
-    {
-      "start": 200,
-      "end": 214,
+      "start": 297,
+      "end": 311,
       "type": "PHONE",
-      "text": "1-800-555-0172"
+      "text": "1-800-555-0198"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-04-24",
-      "code": "99285",
-      "description": "Emergency department visit, high severity",
-      "billed_amount": "2484.41",
-      "allowed_amount": "1582.29",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "1582.29"
+      "service_date": "2025-01-26",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "60.85",
+      "allowed_amount": "46.46",
+      "insurer_paid": "41.81",
+      "patient_responsibility": "4.65"
     },
     {
-      "service_date": "2025-03-30",
-      "code": "90471",
-      "description": "Immunization administration, single vaccine",
-      "billed_amount": "45.53",
-      "allowed_amount": "32.85",
-      "insurer_paid": "32.85",
-      "patient_responsibility": "0.00"
+      "service_date": "2025-01-29",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "64.86",
+      "allowed_amount": "26.88",
+      "insurer_paid": "18.82",
+      "patient_responsibility": "8.06"
     },
     {
-      "service_date": "2025-03-31",
-      "code": "90471",
-      "description": "Immunization administration, single vaccine",
-      "billed_amount": "62.32",
-      "allowed_amount": "47.10",
-      "insurer_paid": "37.68",
-      "patient_responsibility": "9.42"
-    },
-    {
-      "service_date": "2025-03-31",
-      "code": "99283",
-      "description": "Emergency department visit, moderate severity",
-      "billed_amount": "1171.75",
-      "allowed_amount": "477.47",
-      "insurer_paid": "429.72",
-      "patient_responsibility": "47.75"
+      "service_date": "2025-01-29",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "296.20",
+      "allowed_amount": "134.94",
+      "insurer_paid": "107.95",
+      "patient_responsibility": "26.99"
     }
   ],
   "duplicate_pairs": []

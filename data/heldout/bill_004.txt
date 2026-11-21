@@ -1,31 +1,33 @@
-NORTHWIND BENEFIT ADMINISTRATORS
-Member Statement of Benefits                        Page 1
-Statement period: 02/11/2025 - 05/12/2025
-Send correspondence to PO Box 6100, Fargo, ND 58108
-Customer care 1-800-555-0174  (TTY 711)
+Visit Summary & Charges
+Printed 06/22/2025 from the patient portal
 
-Member .......... Mbeki Carlos
-Member # ........ 8159-5010-2127
-Date of birth ... 11-02-1941
-Residence ....... 4451 Juniper St, Greenville SC 29657
-Daytime tel ..... (479)555-0111
-E-mail .......... CARLOS.MBEKI14@MAIL.EXAMPLE.COM
+This statement is for Mx. Fatima Brown.
+Patient account no. B-19907-3
+Birth date 1958.01.30
+Mailing: P.O. Box 8149, Springdale, AR 72786
+Mobile 360/555-0138
+Plan: Blueriver Health Plans, ID MBR0927409
+Questions about this bill? 1-800-555-0147
 
-CLAIM 1 OF 2   Claim ID: 33-5948-9781-00
-Patient: Dmitri Mbeki
-Provider: Mercy Valley Regional Hospital
-Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
-04/10/25	96374	IV push, single or initial substance	$255.51	$94.29	$161.22	$16.12	$0.00	$145.10	$16.12
-04/11/25	99213	Office visit, established patient, low complexity	$206.55	$84.14	—	$0.00	$24.48	$97,93	$24.48
-04/11/25	99203	New patient office visit	$214.75	$139.82	$74.93	$0.00	$22.48	$52.45	$22.48
-Claim totals									$63.08
+Item 1 of 5 — 2025-05-19 — CPT 71046
+  Chest x-ray, 2 views
+  Billed $475.53 · Plan allowed $216.05 · Plan paid S172.84 · Your cost $43.21
 
-CLAIM 2 OF 2   Claim ID: 02-2531-8381-00
-Patient: Carlos Mbeki
-Provider: Riverside Urgent Care
-Svc Dt	Proc Cd	Service	Amt Charged	Plan Discount	Covered	Deductible	Coinsurance	Plan Pymt	Member Resp
-03/19/25	36415	Routine venipuncture	$25.01	$16.48	$8.53	$0.00	$8.53	$0.00	$8.53
-03/19/25	99203	New patient office visit	$282.68	$146.24	$136.44	$40.93	$0.00	$95.51	$4O.93
-Claim totals									$49.46
+Item 2 of 5 — 2025-05-21 — CPT 71046
+  Chest x-ray, 2 views
+  Billed $352.52 · Plan allowed $230.11 · Plan paid $207.10 · Your cost $23.01
 
-This is not a bill. Keep this statement for your records.
+Item 3 of 5 — 2025-05-23 — CPT 99213
+  Office visit, established patient, low
+  complexity
+  Billed $237.04 · Plan allowed $186.80 · Plan paid $130.76 · Your cost $56.04
+
+Item 4 of 5 — 2025-05-23 — CPT 90471
+  Immunization administration, single vaccine
+  Billed $28.87 · Plan allowed $17.84 · Plan paid $17.84 · Your cost $0.00
+
+Item 5 of 5 — 2025-05-23 — HCPCS G0439
+  Annual wellness visit, subsequent
+  Billed $240.29 · Plan allowed — · Plan paid $156,37 · Your cost $17.37
+
+Total of your costs: $139.63
