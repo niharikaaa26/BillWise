@@ -2,7 +2,6 @@
   "id": "bill_001",
   "layout": "multi_claim_heldout",
   "messy": [
-    "duplicate_charge",
     "multi_table",
     "ocr_amount",
     "tab_separated"

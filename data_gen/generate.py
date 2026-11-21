@@ -820,6 +820,9 @@ def generate(out: Path, n: int, seed: int, ocr_p: float = 0.12, layout_set: str 
         text = doc.text()
         for s in doc.pii + doc.allowed:  # self-check: offsets must be exact
             assert text[s["start"]:s["end"]] == s["text"], s
+        dup_pairs = duplicate_pairs(items)
+        if not dup_pairs:  # a layout may have trimmed the duplicated line away
+            flags.discard("duplicate_charge")
         stem = f"bill_{k + 1:03d}"
         (out / f"{stem}.txt").write_text(text, encoding="utf-8", newline="\n")
         truth = {
@@ -829,7 +832,7 @@ def generate(out: Path, n: int, seed: int, ocr_p: float = 0.12, layout_set: str 
             "pii": doc.pii,
             "allowed_redactions": doc.allowed,
             "line_items": [gold_item(i) for i in items],
-            "duplicate_pairs": duplicate_pairs(items),
+            "duplicate_pairs": dup_pairs,
         }
         (out / f"{stem}.json").write_text(json.dumps(truth, indent=2) + "\n", encoding="utf-8", newline="\n")
         written.append(out / f"{stem}.txt")

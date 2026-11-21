@@ -22,7 +22,8 @@ for each one:
 | Set | Docs | Layouts | Purpose |
 |---|---|---|---|
 | `data/synthetic/` | 48 | hospital fixed-width statement, pipe-table EOB, key/value claim summary, clinic letter with CSV (12 each) | development set |
-| `data/heldout/` | 12 | physician-group statement with different column names, modifier/units columns, page breaks, and heavier OCR noise | **held out**: written after the parser and redactor were built, and never used to tune them |
+| `data/dev2/` | 12 | physician-group statement with different column names, modifier/units columns, page breaks, and heavier OCR noise | round-1 held-out set. Its failures drove the round-2 fixes, so it now counts as **development data** |
+| `data/heldout/` | 12 | multi-claim benefits statement: several tab-separated tables, dot-leader labels, `Last First` names, dash-format DOBs | **held out**: written before the round-2 fixes and never used to tune them |
 
 How the fake identifiers are made:
 - Phone numbers use the reserved fictional `555-01XX` range.
@@ -54,7 +55,11 @@ python -m data_gen.generate --out data/synthetic --n 48 --seed 2025
 ```
 
 ```powershell
-python -m data_gen.generate --out data/heldout --n 12 --seed 777 --ocr-p 0.25 --heldout
+python -m data_gen.generate --out data/dev2 --n 12 --seed 777 --ocr-p 0.25 --set dev2
+```
+
+```powershell
+python -m data_gen.generate --out data/heldout --n 12 --seed 4242 --ocr-p 0.2 --set heldout
 ```
 
 ## Privacy approach
@@ -72,8 +77,12 @@ python -m data_gen.generate --out data/heldout --n 12 --seed 777 --ocr-p 0.25 --
   uvicorn with `--no-access-log`.
 - **Detection rules** in [billwise/redact.py](billwise/redact.py):
   - Labeled fields: `Patient Name:`, `Member ID:`, `DOB`, `Claim Number:`, and so on.
+    Labels are case-insensitive and tolerate common OCR confusions (`Patlent`,
+    `Memher ID`, `Acc0unt`). Name labels must be followed by `:`, `#` or dot leaders,
+    except `Dear`.
   - Pattern regexes for SSNs, phones, emails, street addresses, and city/state/ZIP.
-  - A common-first-name list, to catch names that have no label.
+  - Names with no label: a name-shaped line directly above a street address, or a
+    first name from a built-in list of common names.
   - Propagation: once a name or ID is found, every other occurrence of it is
     redacted too.
   - When matches overlap, a priority order decides which one wins.
@@ -96,7 +105,7 @@ python -m venv .venv
 .venv\Scripts\python -m eval.run_eval
 ```
 
-`run_eval` evaluates both datasets, prints a report with every failure, and writes
+`run_eval` evaluates all three datasets, prints a report with every failure, and writes
 [eval/results.json](eval/results.json). The most recent full console output is saved
 in [eval/last_run.txt](eval/last_run.txt).
 
@@ -153,58 +162,55 @@ image and smoke-tests it.
 These are copied from the latest run of `python -m eval.run_eval`. Rerun it to
 reproduce them.
 
-**Development set (48 docs)**
-
-| PII type | gold | recall | precision | leak-free |
-|---|---|---|---|---|
-| NAME | 108 | 100.00% | 100.00% | 98.15% |
-| ADDRESS | 84 | 100.00% | 100.00% | 100.00% |
-| PHONE | 28 | 100.00% | 100.00% | 100.00% |
-| EMAIL | 16 | 100.00% | 100.00% | 100.00% |
-| DOB | 48 | 93.75% | 100.00% | 93.75% |
-| SSN | 12 | 100.00% | 100.00% | 100.00% |
-| MEMBER_ID | 36 | 97.22% | 100.00% | 97.22% |
-| ACCOUNT_ID | 48 | 97.92% | 100.00% | 97.92% |
-| **ALL** | 380 | **98.68%** | **100.00%** | **98.16%** |
-
-- Parsing: 225/225 lines matched, field accuracy 100.00% on every field, 48/48
-  documents fully correct.
-- Duplicate flags: 8/8 found, no false flags.
-
-**Held-out layout (12 docs)**
-
-| PII type | gold | recall | leak-free |
+| | `synthetic` (dev, 48) | `dev2` (dev, 12) | `heldout` (12) |
 |---|---|---|---|
-| NAME | 12 | 0.00% | 0.00% |
-| PHONE | 12 | 0.00% | 0.00% |
-| ACCOUNT_ID | 12 | 0.00% | 0.00% |
-| ADDRESS, EMAIL, DOB, MEMBER_ID | 43 | 100.00% | 100.00% |
-| **ALL** | 79 | **54.43%** | **54.43%** |
+| PII recall (same-type overlap) | 100.00% (380/380) | 100.00% (79/79) | **90.24%** (111/123) |
+| PII leak-free | 100.00% | 100.00% | 90.24% |
+| PII precision | 100.00% | 100.00% | 100.00% |
+| Lines found | 225/225 | 60/60 | **0/60** |
+| Line-item field accuracy | 100.00% | 100.00% | **0.00%** |
+| Bills parsed fully correctly | 48/48 | 12/12 | 0/12 |
+| Duplicate pairs flagged | 8/8 | 2/2 | 0/1 |
 
-- Parsing: 60/60 lines found, but overall field accuracy is only **57.14%**.
-  Description, insurer paid and patient responsibility are each at 0.00%.
-- 0/12 documents fully correct.
-- 0/2 duplicate pairs flagged.
+On the held-out set, PII is perfect for every type except DOB, which is 0/12. The
+dates use a dash format (`09-28-1982`) that the DOB pattern doesn't accept. The parser
+finds no lines because:
+- the date column header `Svc Dt` isn't recognised, so no table strategy activates;
+- there is no tab-separated strategy;
+- the parser expects only one table per document.
+
+### History
+
+| Round | Held-out set at the time | PII recall | Field accuracy |
+|---|---|---|---|
+| 1 | group statement (now `dev2`) | 54.43% | 57.14% |
+| 2 | multi-claim statement (`heldout`) | 90.24% | 0.00% |
+
+Round-2 fixes, all driven by failures in `synthetic` and `dev2`:
+- OCR-tolerant and case-insensitive labels
+- more ID labels, phones with spaces, names found above a street address
+- modifier/units columns kept out of descriptions; `pmt` and `balance` header words
+- duplicate detection that tolerates OCR typos in descriptions
+
+Each round's development scores reached 100%, while each new held-out layout exposed
+new gaps. Treat the development numbers as "fits the known formats", not as accuracy.
 
 ## Limitations
 
 - **All results are on synthetic data.** They say nothing reliable about real bills.
-  Real documents vary far more than five templates can.
-- **The development-set scores are optimistic.** The same author wrote the generator,
-  the parser and the redactor, so the 100% parsing score mainly shows the parser fits
-  four known layouts. The held-out layout shows what happens on an unseen format:
-  - Unknown column names (`INS PMT`, `BALANCE`) are not mapped.
-  - Extra columns (`MOD`, `UNITS`) leak into descriptions.
-  - New labels (`STATEMENT FOR:`, `Guarantor #:`) and space-separated phone numbers
-    (`+1 845 555 0101`) are missed entirely.
-- **Rule-based redaction is brittle:**
-  - OCR-damaged labels (`Date of Birlh`, `Memher ID`, `Acc0unt Number`) cause misses.
-  - Names with no label are caught only if the first name is on the built-in list, so
-    less common names leak, as in bill_040 and bill_042.
-- **The parser reads text only.** There is no PDF or image input and no OCR, and it
-  expects one table per document.
+  Real documents vary far more than six templates can.
+- **The development scores mean little on their own.** The same author wrote the
+  generators, parser and redactor, and tuned against the development sets. Even the
+  held-out layouts were written by the same person who wrote the code, which is a
+  weaker separation than having someone else write them.
+- **The parser depends on its known header vocabulary and on finding one table.**
+  The held-out result (0/60 lines) shows it fails completely on an unfamiliar table
+  format instead of degrading gracefully.
+- **Rule-based redaction is brittle:** an unseen date format leaked every held-out
+  DOB. Names with no label are caught only when they sit above an address or start
+  with a first name from the built-in list.
+- **The parser reads text only.** There is no PDF or image input and no OCR.
 - Ground truth was made by the same program that renders the text, so it carries none
   of the label noise that human annotation would.
-- The low precision of business-contact redactions doesn't show in the numbers, because
-  those spans are neutral by design. The redactor removes insurer phones and clinic
-  addresses too.
+- Business-contact redactions (insurer phones, clinic addresses) are neutral by design,
+  so their precision cost doesn't show in the numbers.
