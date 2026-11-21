@@ -186,3 +186,51 @@ def test_unfamiliar_headers_typed_from_content():
     r = parse(text)
     assert [i.code for i in r.line_items] == ["99213", "J1885"]
     assert r.line_items[0].service_date == date(2025, 3, 14)
+
+
+PORTAL = """Item 1 of 2 — 2025-07-09 — CPT 99214
+  Office visit, established patient,
+  moderate complexity
+  Billed $248.23 · Plan allowed — · Plan paid S94.24 · Your cost $23.56
+
+Item 2 of 2 — 2025-07-10 — HCPCS J2405
+  Ondansetron injection
+  Billed $151.36 · Plan allowed $46.32 · Plan paid $41.69 · Your cost $4.63
+Total of your costs: $28.19
+Mailing: 12 Oak Ave, Riverton, OH 45011
+"""
+
+
+def test_anchored_fallback_two_line_items_with_inline_amounts():
+    r = parse(PORTAL)
+    assert r.format == "anchored"
+    a, b = r.line_items
+    assert (a.service_date, a.code, a.description) == \
+        (date(2025, 7, 9), "99214", "Office visit, established patient, moderate complexity")
+    assert (a.billed_amount, a.allowed_amount, a.insurer_paid, a.patient_responsibility) == \
+        (Decimal("248.23"), None, Decimal("94.24"), Decimal("23.56"))
+    assert (b.allowed_amount, b.insurer_paid) == (Decimal("46.32"), Decimal("41.69"))
+
+
+def test_anchored_arithmetic_maps_unlabeled_amounts():
+    text = "Some header we do not know\n06/21/25 81001 Urinalysis, automated 25.41 14.05 9.84 4.21\n"
+    (it,) = parse(text).line_items
+    # 14.05 = 9.84 + 4.21 -> billed, allowed, paid, patient
+    assert (it.billed_amount, it.allowed_amount, it.insurer_paid, it.patient_responsibility) == \
+        (Decimal("25.41"), Decimal("14.05"), Decimal("9.84"), Decimal("4.21"))
+    assert it.description == "Urinalysis, automated"
+
+
+def test_anchored_charges_paid_adjust_resp_arithmetic():
+    text = "06/21/25 80053 Metabolic panel 320.60 230.80 64.16 25.64\n"
+    (it,) = parse(text).line_items
+    assert (it.insurer_paid, it.patient_responsibility, it.allowed_amount) == \
+        (Decimal("230.80"), Decimal("25.64"), None)
+
+
+def test_zip_code_is_not_an_anchor():
+    assert parse("Mailing: 12 Oak Ave, Riverton, OH 45011\nBalance $20.00\n").line_items == []
+
+
+def test_fallback_not_used_when_a_table_matches():
+    assert parse(PIPE).format == "pipe_table"

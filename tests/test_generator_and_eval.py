@@ -72,7 +72,7 @@ def test_other_sets_regenerate_identically(tmp_path):
             assert (tmp_path / d.name / f.name).read_text(encoding="utf-8") == f.read_text(encoding="utf-8"), f
 
 
-@pytest.mark.parametrize("path", [DEV2, DEV3], ids=["dev2", "dev3"])
+@pytest.mark.parametrize("path", [DEV2, DEV3, DEV4], ids=["dev2", "dev3", "dev4"])
 def test_later_dev_set_regression_floors(path):
     r = run_eval.run(path)
     assert r["pii"]["overall"]["leak_free_rate"] >= 0.95

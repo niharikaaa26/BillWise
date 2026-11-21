@@ -134,3 +134,47 @@ def test_org_above_address_is_not_a_name():
 def test_dash_format_dob():
     found, _ = types_and_values("Date of birth ... 09-28-1982\n")
     assert ("DOB", "09-28-1982") in found
+
+
+@pytest.mark.parametrize("dob", ["3/12/81", "03-12-1981", "1981.03.12", "1981-03-12", "March 12, 1981",
+                                 "12 Mar 1981", "03121981"])
+def test_dob_any_shape_after_birth_label(dob):
+    found, _ = types_and_values(f"Birth date {dob}\n")
+    assert ("DOB", dob) in found
+
+
+def test_dob_with_format_hint():
+    found, _ = types_and_values("Date of birth (MM/DD/YYYY): 03/12/1981\n")
+    assert ("DOB", "03/12/1981") in found
+
+
+@pytest.mark.parametrize("phone", ["212/555-0166", "513 555 0123", "(513)555-0144", "513.555.0123"])
+def test_phone_grouping(phone):
+    found, _ = types_and_values(f"Mobile {phone}\n")
+    assert ("PHONE", phone) in found
+
+
+def test_bare_ten_digits_not_a_phone():
+    found, _ = types_and_values("NPI 5089782166\n")
+    assert not any(t == "PHONE" for t, _ in found)
+
+
+def test_generic_id_near_keyword():
+    found, _ = types_and_values("Plan: Summit Mutual Health, ID W123456789\nRef No. 77-44129\n")
+    assert ("MEMBER_ID", "W123456789") in found
+    assert ("ACCOUNT_ID", "77-44129") in found
+
+
+@pytest.mark.parametrize("text", ["PO Box 1180, Boise, ID 83701\n", "Group #: 34943\n", "Tax ID 09-5494134\n"])
+def test_generic_id_exclusions(text):
+    assert not any(s.type in ("MEMBER_ID", "ACCOUNT_ID") for s in redact(text).spans)
+
+
+def test_honorific_and_colonless_name_label():
+    found, _ = types_and_values("This statement is for Mx. Thanh Sullivan.\nPt Name WILLIAMS BRIANNA\n")
+    assert ("NAME", "Thanh Sullivan") in found
+    assert ("NAME", "WILLIAMS BRIANNA") in found
+
+
+def test_doctor_title_is_not_redacted_as_patient():
+    assert redact("Referring: Dr. Gil Cho\n").spans == []
