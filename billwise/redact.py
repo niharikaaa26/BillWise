@@ -116,7 +116,8 @@ NAME_LABEL = re.compile(
 )
 
 _MONTH = r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?"
-DATE_VALUE = rf"(?:\d{{1,2}}/\d{{1,2}}/\d{{2,4}}|\d{{4}}-\d{{2}}-\d{{2}}|{_MONTH} \d{{1,2}},? \d{{4}})"
+DATE_VALUE = (rf"(?:\d{{1,2}}/\d{{1,2}}/\d{{2,4}}|\d{{1,2}}-\d{{1,2}}-\d{{2,4}}|\d{{4}}-\d{{2}}-\d{{2}}"
+              rf"|{_MONTH} \d{{1,2}},? \d{{4}})")
 DOB_LABEL = re.compile(
     r"\b" + _label("DOB", "D.O.B.", "Date of Birth", "Birth Date", "Birthdate", "Born") + _SEP + rf"(?P<v>{DATE_VALUE})"
 )

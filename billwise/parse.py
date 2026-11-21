@@ -1,7 +1,7 @@
 """Heuristic line-item extraction for text-based medical bills and EOBs.
 
 The parser does not know which synthetic layout produced a document. It tries
-four generic strategies and keeps the one that yields the most line items:
+several generic strategies and keeps the one that yields the most line items:
 
   * pipe_table  - rows separated by "|" under a header row (several tables allowed)
   * csv / tsv   - comma- or tab-separated rows under header rows (quoted multi-line ok)
