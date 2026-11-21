@@ -96,10 +96,13 @@ def parse_amount(tok: str | None) -> Decimal | None:
     return -v if neg else v
 
 
-_DATE_FORMATS = ("%m/%d/%Y", "%m/%d/%y", "%Y-%m-%d", "%b %d, %Y", "%B %d, %Y", "%b %d %Y", "%m-%d-%Y")
+_DATE_FORMATS = ("%m/%d/%Y", "%m/%d/%y", "%Y-%m-%d", "%b %d, %Y", "%B %d, %Y", "%b %d %Y", "%m-%d-%Y",
+                 "%Y%m%d")
 DATE_RE = re.compile(
     r"\b(?:\d{1,2}/\d{1,2}/\d{2,4}|\d{4}-\d{2}-\d{2}|\d{1,2}-\d{1,2}-\d{4}|"
-    r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.? \d{1,2},? \d{4})\b"
+    r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.? \d{1,2},? \d{4}|"
+    # compact YYYYMMDD as used by billing-system exports, years 2000-2099 only
+    r"20\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01]))\b"
 )
 
 
@@ -459,6 +462,55 @@ def _arithmetic_fields(vals: list[Decimal | None]) -> list[str]:
     return {1: [B], 2: [B, R], 3: [B, P, R], 4: [B, A, P, R]}.get(n, [B] + [X] * (n - 2) + [R])
 
 
+_KV_DESC = re.compile(r"(?:^|[;|])\s*(?:DESC|DESCRIPTION|SERVICE|SVC_DESC|PROC_DESC)\s*=\s*([^;|]*)",
+                      re.IGNORECASE)
+_KV_KEY = re.compile(r"(?:^|[;|])\s*[A-Za-z_]{2,}\s*=\s*")
+_NARRATIVE_LEAD = re.compile(
+    r"^(?:the patient|patient|you|he|she|they|your (?:son|daughter|child))?\s*"
+    r"(?:received|had|underwent|got|was seen for|were seen for)\s+", re.IGNORECASE)
+
+
+def _clean_before_code(text: str) -> str:
+    """Description written before the code, as in '... received office visit (CPT 99213), ...'."""
+    t = DATE_RE.split(text)[-1]
+    t = re.sub(r"[\s(\[]*(?:CPT|HCPCS|code|proc(?:edure)?)?[\s#:]*$", "", t, flags=re.IGNORECASE)
+    t = _NARRATIVE_LEAD.sub("", t.strip(" ,;:-—"))
+    return t.strip(" ,;:-—(")
+
+
+def _assign_fields(labels: list[str | None], vals: list[Decimal | None], lines: list[str], i: int,
+                   warnings: list[str], n: int) -> list[str]:
+    """Labels where present. Each unlabeled amount gets a remaining field that fits between its
+    labeled neighbours in the usual order (billed, allowed, paid, you owe): the earliest such
+    field unless only labels precede it, then the latest. With no labels: header, then arithmetic."""
+    if labels and all(labels):
+        return labels  # type: ignore[return-value]
+    if any(labels):
+        order = {f: k for k, f in enumerate(AMOUNT_FIELDS)}
+        remaining = [f for f in AMOUNT_FIELDS if f not in set(labels)]
+        out = list(labels)
+        for k, lb in enumerate(labels):
+            if lb:
+                continue
+            before = [order[x] for x in labels[:k] if x in order]
+            after = [order[x] for x in labels[k + 1:] if x in order]
+            lo, hi = (max(before) if before else -1), (min(after) if after else len(AMOUNT_FIELDS))
+            cands = [f for f in remaining if lo < order[f] < hi] or remaining
+            if not cands:
+                out[k] = "_ignore"
+                continue
+            pick = cands[-1] if before and not after else cands[0]
+            out[k] = pick
+            remaining.remove(pick)
+        warnings.append(f"line {n + 1}: unlabeled amount(s) assigned by position between labeled ones")
+        return out  # type: ignore[return-value]
+    hdr = _header_amount_fields(lines, i)
+    if len(hdr) == len(vals):
+        return hdr
+    warnings.append(f"amount columns for line {n + 1} inferred without labels")
+    return _arithmetic_fields(vals)
+
+
 def parse_anchored(text: str, warnings: list[str]) -> list[dict]:
     lines = text.splitlines()
     anchors = [(i, m) for i, ln in enumerate(lines) if (m := _anchor(ln))]
@@ -488,7 +540,13 @@ def parse_anchored(text: str, warnings: list[str]) -> list[dict]:
                 slots.append((v, _label_field(ln[:s])))
             text_end = toks[0][0] if toks else len(ln)
             if j == i:
-                piece = ln[m.end():text_end]
+                kv = _KV_DESC.search(ln)
+                piece = kv.group(1) if kv else _KV_KEY.sub(" ", ln[m.end():text_end])
+                after = piece.strip(" \t-—–:·|),;")
+                if after and classify_header(after) in AMOUNT_FIELDS:
+                    # only an amount label follows the code: the description came before it
+                    before = _clean_before_code(ln[:m.start()])
+                    piece = before if len(before.split()) >= 2 else ""
             elif not toks:
                 piece = ln
             else:
@@ -501,13 +559,7 @@ def parse_anchored(text: str, warnings: list[str]) -> list[dict]:
         item: dict = {"service_date": d, "code": parse_code(m.group(0)), "description": " ".join(desc_parts)}
         vals = [v for v, _ in slots]
         labels = [lbl for _, lbl in slots]
-        if slots and all(labels):
-            fields = labels
-        else:
-            hdr = _header_amount_fields(lines, i)
-            fields = hdr if len(hdr) == len(slots) else _arithmetic_fields(vals)
-            if len(hdr) != len(slots):
-                warnings.append(f"amount columns for line {n + 1} inferred without labels")
+        fields = _assign_fields(labels, vals, lines, i, warnings, n)
         for f, v in zip(fields, vals):
             if f in AMOUNT_FIELDS and f not in item:
                 item[f] = v
