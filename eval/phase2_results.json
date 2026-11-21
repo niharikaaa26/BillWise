@@ -75,6 +75,9 @@
       },
       "grounding": {
         "model": "mock",
+        "generated": 48,
+        "errors": 0,
+        "lines_explained_rate": 1.0,
         "dollar_figures": 997,
         "unsupported_figures": 0,
         "bad_citations": 0,
@@ -191,7 +194,8 @@
           }
         ],
         "grounding": [],
-        "totals": []
+        "totals": [],
+        "errors": []
       }
     },
     "dev2": {
@@ -217,6 +221,9 @@
       },
       "grounding": {
         "model": "mock",
+        "generated": 12,
+        "errors": 0,
+        "lines_explained_rate": 1.0,
         "dollar_figures": 228,
         "unsupported_figures": 0,
         "bad_citations": 0,
@@ -291,7 +298,8 @@
           }
         ],
         "grounding": [],
-        "totals": []
+        "totals": [],
+        "errors": []
       }
     },
     "dev3": {
@@ -317,6 +325,9 @@
       },
       "grounding": {
         "model": "mock",
+        "generated": 12,
+        "errors": 0,
+        "lines_explained_rate": 1.0,
         "dollar_figures": 285,
         "unsupported_figures": 0,
         "bad_citations": 0,
@@ -383,7 +394,8 @@
           }
         ],
         "grounding": [],
-        "totals": []
+        "totals": [],
+        "errors": []
       }
     },
     "dev4": {
@@ -409,6 +421,9 @@
       },
       "grounding": {
         "model": "mock",
+        "generated": 12,
+        "errors": 0,
+        "lines_explained_rate": 1.0,
         "dollar_figures": 296,
         "unsupported_figures": 0,
         "bad_citations": 0,
@@ -445,7 +460,8 @@
           }
         ],
         "grounding": [],
-        "totals": []
+        "totals": [],
+        "errors": []
       }
     },
     "dev5": {
@@ -471,6 +487,9 @@
       },
       "grounding": {
         "model": "mock",
+        "generated": 12,
+        "errors": 0,
+        "lines_explained_rate": 1.0,
         "dollar_figures": 268,
         "unsupported_figures": 0,
         "bad_citations": 0,
@@ -506,19 +525,20 @@
           }
         ],
         "grounding": [],
-        "totals": []
+        "totals": [],
+        "errors": []
       }
     },
-    "heldout": {
+    "dev6": {
       "documents": 12,
       "privacy": {
         "pii_values": 72,
-        "request_docs_with_leak": 12,
-        "request_values_leaked": 12,
-        "request_leak_free_rate": 0.8333333333333334,
-        "baseline_redacted_text_docs_with_leak": 12,
-        "baseline_redacted_text_values_leaked": 48,
-        "baseline_redacted_text_leak_free_rate": 0.3333333333333333
+        "request_docs_with_leak": 0,
+        "request_values_leaked": 0,
+        "request_leak_free_rate": 1.0,
+        "baseline_redacted_text_docs_with_leak": 0,
+        "baseline_redacted_text_values_leaked": 0,
+        "baseline_redacted_text_leak_free_rate": 1.0
       },
       "code_kb": {
         "gold_codes": 56,
@@ -532,6 +552,9 @@
       },
       "grounding": {
         "model": "mock",
+        "generated": 12,
+        "errors": 0,
+        "lines_explained_rate": 1.0,
         "dollar_figures": 275,
         "unsupported_figures": 0,
         "bad_citations": 0,
@@ -544,80 +567,7 @@
         "patient_resp_docs_with_full_gold": 12
       },
       "failures": {
-        "privacy": [
-          {
-            "bill": "bill_001",
-            "leaked_in_request": [
-              "DOE^KEISHA^A"
-            ]
-          },
-          {
-            "bill": "bill_002",
-            "leaked_in_request": [
-              "DELACROIX^SIOBHAN"
-            ]
-          },
-          {
-            "bill": "bill_003",
-            "leaked_in_request": [
-              "OKAFOR^YUKI"
-            ]
-          },
-          {
-            "bill": "bill_004",
-            "leaked_in_request": [
-              "KIM^XIOMARA"
-            ]
-          },
-          {
-            "bill": "bill_005",
-            "leaked_in_request": [
-              "MBEKI^LORENA"
-            ]
-          },
-          {
-            "bill": "bill_006",
-            "leaked_in_request": [
-              "PATEL^CARLOS"
-            ]
-          },
-          {
-            "bill": "bill_007",
-            "leaked_in_request": [
-              "KOWALSKI^THANH^E"
-            ]
-          },
-          {
-            "bill": "bill_008",
-            "leaked_in_request": [
-              "BIANCHI^MICHAEL^A"
-            ]
-          },
-          {
-            "bill": "bill_009",
-            "leaked_in_request": [
-              "KOWALSKI^RAFAEL"
-            ]
-          },
-          {
-            "bill": "bill_010",
-            "leaked_in_request": [
-              "WOJCIK^PATRICE^M"
-            ]
-          },
-          {
-            "bill": "bill_011",
-            "leaked_in_request": [
-              "NGUYEN^NAVEEN"
-            ]
-          },
-          {
-            "bill": "bill_012",
-            "leaked_in_request": [
-              "NGUYEN^LORENA"
-            ]
-          }
-        ],
+        "privacy": [],
         "code_search": [
           {
             "bill": "bill_010",
@@ -631,7 +581,155 @@
           }
         ],
         "grounding": [],
-        "totals": []
+        "totals": [],
+        "errors": []
+      }
+    },
+    "heldout": {
+      "documents": 12,
+      "privacy": {
+        "pii_values": 88,
+        "request_docs_with_leak": 3,
+        "request_values_leaked": 6,
+        "request_leak_free_rate": 0.9318181818181818,
+        "baseline_redacted_text_docs_with_leak": 12,
+        "baseline_redacted_text_values_leaked": 18,
+        "baseline_redacted_text_leak_free_rate": 0.7954545454545454
+      },
+      "code_kb": {
+        "gold_codes": 63,
+        "gold_codes_in_kb": 63,
+        "snippet_in_request": 1.0
+      },
+      "code_search": {
+        "lines": 63,
+        "hit_at_1": 0.873015873015873,
+        "hit_at_3": 1.0
+      },
+      "grounding": {
+        "model": "mock",
+        "generated": 12,
+        "errors": 0,
+        "lines_explained_rate": 1.0,
+        "dollar_figures": 297,
+        "unsupported_figures": 0,
+        "bad_citations": 0,
+        "docs_fully_grounded": 12,
+        "docs_fully_grounded_rate": 1.0
+      },
+      "totals": {
+        "billed_total_correct": 1.0,
+        "patient_resp_total_correct": 1.0,
+        "patient_resp_docs_with_full_gold": 12
+      },
+      "failures": {
+        "privacy": [
+          {
+            "bill": "bill_002",
+            "leaked_in_request": [
+              "Ingrid Kim",
+              "Ingrid"
+            ]
+          },
+          {
+            "bill": "bill_004",
+            "leaked_in_request": [
+              "Xiomara Fitzgerald",
+              "Xiomara"
+            ]
+          },
+          {
+            "bill": "bill_007",
+            "leaked_in_request": [
+              "Ingrid Mbeki",
+              "Ingrid"
+            ]
+          }
+        ],
+        "code_search": [
+          {
+            "bill": "bill_002",
+            "description": "emergency department visit, high severity",
+            "expected": "code:99285",
+            "got": [
+              "code:99283",
+              "code:99285",
+              "code:G0439"
+            ]
+          },
+          {
+            "bill": "bill_003",
+            "description": "influenza vaccine, quadrivalent, preservatlve free",
+            "expected": "code:90686",
+            "got": [
+              "code:90471",
+              "code:90686"
+            ]
+          },
+          {
+            "bill": "bill_003",
+            "description": "emergency department visit, high severity",
+            "expected": "code:99285",
+            "got": [
+              "code:99283",
+              "code:99285",
+              "code:G0439"
+            ]
+          },
+          {
+            "bill": "bill_003",
+            "description": "emergency department visit, high severity",
+            "expected": "code:99285",
+            "got": [
+              "code:99283",
+              "code:99285",
+              "code:G0439"
+            ]
+          },
+          {
+            "bill": "bill_004",
+            "description": "emergency department visit, high severity",
+            "expected": "code:99285",
+            "got": [
+              "code:99283",
+              "code:99285",
+              "code:G0439"
+            ]
+          },
+          {
+            "bill": "bill_007",
+            "description": "emergency department visit, high severity",
+            "expected": "code:99285",
+            "got": [
+              "code:99283",
+              "code:99285",
+              "code:G0439"
+            ]
+          },
+          {
+            "bill": "bill_009",
+            "description": "emergency department visit, high severity",
+            "expected": "code:99285",
+            "got": [
+              "code:99283",
+              "code:99285",
+              "code:G0439"
+            ]
+          },
+          {
+            "bill": "bill_011",
+            "description": "emergency department visit, high severity",
+            "expected": "code:99285",
+            "got": [
+              "code:99283",
+              "code:99285",
+              "code:G0439"
+            ]
+          }
+        ],
+        "grounding": [],
+        "totals": [],
+        "errors": []
       }
     }
   }

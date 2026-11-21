@@ -95,6 +95,15 @@
           "precision": 1.0,
           "leak_free_rate": 1.0,
           "recall_any_type": 1.0
+        },
+        "OTHER": {
+          "gold": 0,
+          "predicted": 0,
+          "neutral": 0,
+          "recall": null,
+          "precision": null,
+          "leak_free_rate": null,
+          "recall_any_type": null
         }
       },
       "failures": {
@@ -321,6 +330,15 @@
           "precision": 1.0,
           "leak_free_rate": 1.0,
           "recall_any_type": 1.0
+        },
+        "OTHER": {
+          "gold": 0,
+          "predicted": 0,
+          "neutral": 0,
+          "recall": null,
+          "precision": null,
+          "leak_free_rate": null,
+          "recall_any_type": null
         }
       },
       "failures": {
@@ -505,6 +523,15 @@
           "precision": 1.0,
           "leak_free_rate": 1.0,
           "recall_any_type": 1.0
+        },
+        "OTHER": {
+          "gold": 0,
+          "predicted": 0,
+          "neutral": 0,
+          "recall": null,
+          "precision": null,
+          "leak_free_rate": null,
+          "recall_any_type": null
         }
       },
       "failures": {
@@ -681,6 +708,15 @@
           "precision": 1.0,
           "leak_free_rate": 1.0,
           "recall_any_type": 1.0
+        },
+        "OTHER": {
+          "gold": 0,
+          "predicted": 0,
+          "neutral": 0,
+          "recall": null,
+          "precision": null,
+          "leak_free_rate": null,
+          "recall_any_type": null
         }
       },
       "failures": {
@@ -865,6 +901,15 @@
           "precision": 1.0,
           "leak_free_rate": 1.0,
           "recall_any_type": 1.0
+        },
+        "OTHER": {
+          "gold": 0,
+          "predicted": 0,
+          "neutral": 0,
+          "recall": null,
+          "precision": null,
+          "leak_free_rate": null,
+          "recall_any_type": null
         }
       },
       "failures": {
@@ -952,36 +997,36 @@
       "field_accuracy_overall": 1.0
     }
   },
-  "heldout": {
+  "dev6": {
     "dataset": {
-      "path": "C:\\Users\\nihar\\Downloads\\BillWise\\data\\heldout",
+      "path": "C:\\Users\\nihar\\Downloads\\BillWise\\data\\dev6",
       "documents": 12,
       "layouts": {
-        "kv_export_heldout": 12
+        "kv_export": 12
       },
       "note": "synthetic data only"
     },
     "pii": {
       "overall": {
         "gold": 72,
-        "predicted": 24,
+        "predicted": 72,
         "neutral": 0,
-        "recall": 0.3333333333333333,
+        "recall": 1.0,
         "precision": 1.0,
-        "leak_free_rate": 0.16666666666666666,
-        "recall_any_type": 0.3333333333333333,
-        "exact_match_recall": 0.16666666666666666,
-        "exact_match_precision": 0.5
+        "leak_free_rate": 1.0,
+        "recall_any_type": 1.0,
+        "exact_match_recall": 1.0,
+        "exact_match_precision": 1.0
       },
       "by_type": {
         "NAME": {
           "gold": 12,
-          "predicted": 0,
+          "predicted": 12,
           "neutral": 0,
-          "recall": 0.0,
-          "precision": null,
-          "leak_free_rate": 0.0,
-          "recall_any_type": 0.0
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
         },
         "ADDRESS": {
           "gold": 12,
@@ -989,7 +1034,7 @@
           "neutral": 0,
           "recall": 1.0,
           "precision": 1.0,
-          "leak_free_rate": 0.0,
+          "leak_free_rate": 1.0,
           "recall_any_type": 1.0
         },
         "PHONE": {
@@ -1012,12 +1057,12 @@
         },
         "DOB": {
           "gold": 12,
-          "predicted": 0,
+          "predicted": 12,
           "neutral": 0,
-          "recall": 0.0,
-          "precision": null,
-          "leak_free_rate": 0.0,
-          "recall_any_type": 0.0
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
         },
         "SSN": {
           "gold": 0,
@@ -1030,725 +1075,36 @@
         },
         "MEMBER_ID": {
           "gold": 12,
-          "predicted": 0,
+          "predicted": 12,
           "neutral": 0,
-          "recall": 0.0,
-          "precision": null,
-          "leak_free_rate": 0.0,
-          "recall_any_type": 0.0
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
         },
         "ACCOUNT_ID": {
           "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "OTHER": {
+          "gold": 0,
           "predicted": 0,
           "neutral": 0,
-          "recall": 0.0,
+          "recall": null,
           "precision": null,
-          "leak_free_rate": 0.0,
-          "recall_any_type": 0.0
+          "leak_free_rate": null,
+          "recall_any_type": null
         }
       },
       "failures": {
-        "missed": [
-          {
-            "bill": "bill_001",
-            "type": "NAME",
-            "text": "DOE^KEISHA^A",
-            "redacted_as": null,
-            "line": "PAT|NAME=DOE^KEISHA^A;DOB=19531120;MRN=MR26136582"
-          },
-          {
-            "bill": "bill_001",
-            "type": "DOB",
-            "text": "19531120",
-            "redacted_as": null,
-            "line": "PAT|NAME=DOE^KEISHA^A;DOB=19531120;MRN=MR26136582"
-          },
-          {
-            "bill": "bill_001",
-            "type": "ACCOUNT_ID",
-            "text": "MR26136582",
-            "redacted_as": null,
-            "line": "PAT|NAME=DOE^KEISHA^A;DOB=19531120;MRN=MR26136582"
-          },
-          {
-            "bill": "bill_001",
-            "type": "MEMBER_ID",
-            "text": "CPH-3556-5584",
-            "redacted_as": null,
-            "line": "INS|PAYER=CLEARPATH_HEALTH_INSURANCE;SUBSCRIBER_ID=CPH-3556-5584"
-          },
-          {
-            "bill": "bill_002",
-            "type": "NAME",
-            "text": "DELACROIX^SIOBHAN",
-            "redacted_as": null,
-            "line": "PAT|NAME=DELACROIX^SIOBHAN;DOB=19840406;MRN=MR72407048"
-          },
-          {
-            "bill": "bill_002",
-            "type": "DOB",
-            "text": "19840406",
-            "redacted_as": null,
-            "line": "PAT|NAME=DELACROIX^SIOBHAN;DOB=19840406;MRN=MR72407048"
-          },
-          {
-            "bill": "bill_002",
-            "type": "ACCOUNT_ID",
-            "text": "MR72407048",
-            "redacted_as": null,
-            "line": "PAT|NAME=DELACROIX^SIOBHAN;DOB=19840406;MRN=MR72407048"
-          },
-          {
-            "bill": "bill_002",
-            "type": "MEMBER_ID",
-            "text": "XGH21450485",
-            "redacted_as": null,
-            "line": "INS|PAYER=CLEARPATH_HEALTH_INSURANCE;SUBSCRIBER_ID=XGH21450485"
-          },
-          {
-            "bill": "bill_003",
-            "type": "NAME",
-            "text": "OKAFOR^YUKI",
-            "redacted_as": null,
-            "line": "PAT|NAME=OKAFOR^YUKI;DOB=20170922;MRN=MR90689065"
-          },
-          {
-            "bill": "bill_003",
-            "type": "DOB",
-            "text": "20170922",
-            "redacted_as": null,
-            "line": "PAT|NAME=OKAFOR^YUKI;DOB=20170922;MRN=MR90689065"
-          },
-          {
-            "bill": "bill_003",
-            "type": "ACCOUNT_ID",
-            "text": "MR90689065",
-            "redacted_as": null,
-            "line": "PAT|NAME=OKAFOR^YUKI;DOB=20170922;MRN=MR90689065"
-          },
-          {
-            "bill": "bill_003",
-            "type": "MEMBER_ID",
-            "text": "XGH91369379",
-            "redacted_as": null,
-            "line": "INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=XGH91369379"
-          },
-          {
-            "bill": "bill_004",
-            "type": "NAME",
-            "text": "KIM^XIOMARA",
-            "redacted_as": null,
-            "line": "PAT|NAME=KIM^XIOMARA;DOB=19541201;MRN=MR63656309"
-          },
-          {
-            "bill": "bill_004",
-            "type": "DOB",
-            "text": "19541201",
-            "redacted_as": null,
-            "line": "PAT|NAME=KIM^XIOMARA;DOB=19541201;MRN=MR63656309"
-          },
-          {
-            "bill": "bill_004",
-            "type": "ACCOUNT_ID",
-            "text": "MR63656309",
-            "redacted_as": null,
-            "line": "PAT|NAME=KIM^XIOMARA;DOB=19541201;MRN=MR63656309"
-          },
-          {
-            "bill": "bill_004",
-            "type": "MEMBER_ID",
-            "text": "XGH61060763",
-            "redacted_as": null,
-            "line": "INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=XGH61060763"
-          },
-          {
-            "bill": "bill_005",
-            "type": "NAME",
-            "text": "MBEKI^LORENA",
-            "redacted_as": null,
-            "line": "PAT|NAME=MBEKI^LORENA;DOB=19520531;MRN=MR70374992"
-          },
-          {
-            "bill": "bill_005",
-            "type": "DOB",
-            "text": "19520531",
-            "redacted_as": null,
-            "line": "PAT|NAME=MBEKI^LORENA;DOB=19520531;MRN=MR70374992"
-          },
-          {
-            "bill": "bill_005",
-            "type": "ACCOUNT_ID",
-            "text": "MR70374992",
-            "redacted_as": null,
-            "line": "PAT|NAME=MBEKI^LORENA;DOB=19520531;MRN=MR70374992"
-          },
-          {
-            "bill": "bill_005",
-            "type": "MEMBER_ID",
-            "text": "XGH74313460",
-            "redacted_as": null,
-            "line": "INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=XGH74313460"
-          },
-          {
-            "bill": "bill_006",
-            "type": "NAME",
-            "text": "PATEL^CARLOS",
-            "redacted_as": null,
-            "line": "PAT|NAME=PATEL^CARLOS;DOB=19571216;MRN=MR55733802"
-          },
-          {
-            "bill": "bill_006",
-            "type": "DOB",
-            "text": "19571216",
-            "redacted_as": null,
-            "line": "PAT|NAME=PATEL^CARLOS;DOB=19571216;MRN=MR55733802"
-          },
-          {
-            "bill": "bill_006",
-            "type": "ACCOUNT_ID",
-            "text": "MR55733802",
-            "redacted_as": null,
-            "line": "PAT|NAME=PATEL^CARLOS;DOB=19571216;MRN=MR55733802"
-          },
-          {
-            "bill": "bill_006",
-            "type": "MEMBER_ID",
-            "text": "XGH97493880",
-            "redacted_as": null,
-            "line": "INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=XGH97493880"
-          },
-          {
-            "bill": "bill_007",
-            "type": "NAME",
-            "text": "KOWALSKI^THANH^E",
-            "redacted_as": null,
-            "line": "PAT|NAME=KOWALSKI^THANH^E;DOB=19730422;MRN=MR18074745"
-          },
-          {
-            "bill": "bill_007",
-            "type": "DOB",
-            "text": "19730422",
-            "redacted_as": null,
-            "line": "PAT|NAME=KOWALSKI^THANH^E;DOB=19730422;MRN=MR18074745"
-          },
-          {
-            "bill": "bill_007",
-            "type": "ACCOUNT_ID",
-            "text": "MR18074745",
-            "redacted_as": null,
-            "line": "PAT|NAME=KOWALSKI^THANH^E;DOB=19730422;MRN=MR18074745"
-          },
-          {
-            "bill": "bill_007",
-            "type": "MEMBER_ID",
-            "text": "XGH65486980",
-            "redacted_as": null,
-            "line": "INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=XGH65486980"
-          },
-          {
-            "bill": "bill_008",
-            "type": "NAME",
-            "text": "BIANCHI^MICHAEL^A",
-            "redacted_as": null,
-            "line": "PAT|NAME=BIANCHI^MICHAEL^A;DOB=19640920;MRN=MR67314724"
-          },
-          {
-            "bill": "bill_008",
-            "type": "DOB",
-            "text": "19640920",
-            "redacted_as": null,
-            "line": "PAT|NAME=BIANCHI^MICHAEL^A;DOB=19640920;MRN=MR67314724"
-          },
-          {
-            "bill": "bill_008",
-            "type": "ACCOUNT_ID",
-            "text": "MR67314724",
-            "redacted_as": null,
-            "line": "PAT|NAME=BIANCHI^MICHAEL^A;DOB=19640920;MRN=MR67314724"
-          },
-          {
-            "bill": "bill_008",
-            "type": "MEMBER_ID",
-            "text": "W791530822",
-            "redacted_as": null,
-            "line": "INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=W791530822"
-          },
-          {
-            "bill": "bill_009",
-            "type": "NAME",
-            "text": "KOWALSKI^RAFAEL",
-            "redacted_as": null,
-            "line": "PAT|NAME=KOWALSKI^RAFAEL;DOB=19560905;MRN=MR51681121"
-          },
-          {
-            "bill": "bill_009",
-            "type": "DOB",
-            "text": "19560905",
-            "redacted_as": null,
-            "line": "PAT|NAME=KOWALSKI^RAFAEL;DOB=19560905;MRN=MR51681121"
-          },
-          {
-            "bill": "bill_009",
-            "type": "ACCOUNT_ID",
-            "text": "MR51681121",
-            "redacted_as": null,
-            "line": "PAT|NAME=KOWALSKI^RAFAEL;DOB=19560905;MRN=MR51681121"
-          },
-          {
-            "bill": "bill_009",
-            "type": "MEMBER_ID",
-            "text": "XGH58574064",
-            "redacted_as": null,
-            "line": "INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=XGH58574064"
-          },
-          {
-            "bill": "bill_010",
-            "type": "NAME",
-            "text": "WOJCIK^PATRICE^M",
-            "redacted_as": null,
-            "line": "PAT|NAME=WOJCIK^PATRICE^M;DOB=19550204;MRN=MR16984130"
-          },
-          {
-            "bill": "bill_010",
-            "type": "DOB",
-            "text": "19550204",
-            "redacted_as": null,
-            "line": "PAT|NAME=WOJCIK^PATRICE^M;DOB=19550204;MRN=MR16984130"
-          },
-          {
-            "bill": "bill_010",
-            "type": "ACCOUNT_ID",
-            "text": "MR16984130",
-            "redacted_as": null,
-            "line": "PAT|NAME=WOJCIK^PATRICE^M;DOB=19550204;MRN=MR16984130"
-          },
-          {
-            "bill": "bill_010",
-            "type": "MEMBER_ID",
-            "text": "ZQ9154525-01",
-            "redacted_as": null,
-            "line": "INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=ZQ9154525-01"
-          },
-          {
-            "bill": "bill_011",
-            "type": "NAME",
-            "text": "NGUYEN^NAVEEN",
-            "redacted_as": null,
-            "line": "PAT|NAME=NGUYEN^NAVEEN;DOB=19860618;MRN=MR86403105"
-          },
-          {
-            "bill": "bill_011",
-            "type": "DOB",
-            "text": "19860618",
-            "redacted_as": null,
-            "line": "PAT|NAME=NGUYEN^NAVEEN;DOB=19860618;MRN=MR86403105"
-          },
-          {
-            "bill": "bill_011",
-            "type": "ACCOUNT_ID",
-            "text": "MR86403105",
-            "redacted_as": null,
-            "line": "PAT|NAME=NGUYEN^NAVEEN;DOB=19860618;MRN=MR86403105"
-          },
-          {
-            "bill": "bill_011",
-            "type": "MEMBER_ID",
-            "text": "W717870646",
-            "redacted_as": null,
-            "line": "INS|PAYER=SUMMIT_MUTUAL_HEALTH;SUBSCRIBER_ID=W717870646"
-          },
-          {
-            "bill": "bill_012",
-            "type": "NAME",
-            "text": "NGUYEN^LORENA",
-            "redacted_as": null,
-            "line": "PAT|NAME=NGUYEN^LORENA;DOB=19981203;MRN=MR21974745"
-          },
-          {
-            "bill": "bill_012",
-            "type": "DOB",
-            "text": "19981203",
-            "redacted_as": null,
-            "line": "PAT|NAME=NGUYEN^LORENA;DOB=19981203;MRN=MR21974745"
-          },
-          {
-            "bill": "bill_012",
-            "type": "ACCOUNT_ID",
-            "text": "MR21974745",
-            "redacted_as": null,
-            "line": "PAT|NAME=NGUYEN^LORENA;DOB=19981203;MRN=MR21974745"
-          },
-          {
-            "bill": "bill_012",
-            "type": "MEMBER_ID",
-            "text": "XGH42515543",
-            "redacted_as": null,
-            "line": "INS|PAYER=CLEARPATH_HEALTH_INSURANCE;SUBSCRIBER_ID=XGH42515543"
-          }
-        ],
+        "missed": [],
         "false_positives": [],
-        "leaks": [
-          {
-            "bill": "bill_001",
-            "type": "NAME",
-            "text": "DOE^KEISHA^A",
-            "unredacted_chars": "DOE^KEISHA^A"
-          },
-          {
-            "bill": "bill_001",
-            "type": "DOB",
-            "text": "19531120",
-            "unredacted_chars": "19531120"
-          },
-          {
-            "bill": "bill_001",
-            "type": "ACCOUNT_ID",
-            "text": "MR26136582",
-            "unredacted_chars": "MR26136582"
-          },
-          {
-            "bill": "bill_001",
-            "type": "ADDRESS",
-            "text": "7598 RIVERBEND AVE^^OAK HARBOR^WA^98277",
-            "unredacted_chars": "^^OAK HARBOR^WA^98277"
-          },
-          {
-            "bill": "bill_001",
-            "type": "MEMBER_ID",
-            "text": "CPH-3556-5584",
-            "unredacted_chars": "CPH-3556-5584"
-          },
-          {
-            "bill": "bill_002",
-            "type": "NAME",
-            "text": "DELACROIX^SIOBHAN",
-            "unredacted_chars": "DELACROIX^SIOBHAN"
-          },
-          {
-            "bill": "bill_002",
-            "type": "DOB",
-            "text": "19840406",
-            "unredacted_chars": "19840406"
-          },
-          {
-            "bill": "bill_002",
-            "type": "ACCOUNT_ID",
-            "text": "MR72407048",
-            "unredacted_chars": "MR72407048"
-          },
-          {
-            "bill": "bill_002",
-            "type": "ADDRESS",
-            "text": "51 CHESTNUT CT^^OAK HARBOR^WA^98261",
-            "unredacted_chars": "^^OAK HARBOR^WA^98261"
-          },
-          {
-            "bill": "bill_002",
-            "type": "MEMBER_ID",
-            "text": "XGH21450485",
-            "unredacted_chars": "XGH21450485"
-          },
-          {
-            "bill": "bill_003",
-            "type": "NAME",
-            "text": "OKAFOR^YUKI",
-            "unredacted_chars": "OKAFOR^YUKI"
-          },
-          {
-            "bill": "bill_003",
-            "type": "DOB",
-            "text": "20170922",
-            "unredacted_chars": "20170922"
-          },
-          {
-            "bill": "bill_003",
-            "type": "ACCOUNT_ID",
-            "text": "MR90689065",
-            "unredacted_chars": "MR90689065"
-          },
-          {
-            "bill": "bill_003",
-            "type": "ADDRESS",
-            "text": "7487 MAPLE BLVD^^OAK HARBOR^WA^98213",
-            "unredacted_chars": "^^OAK HARBOR^WA^98213"
-          },
-          {
-            "bill": "bill_003",
-            "type": "MEMBER_ID",
-            "text": "XGH91369379",
-            "unredacted_chars": "XGH91369379"
-          },
-          {
-            "bill": "bill_004",
-            "type": "NAME",
-            "text": "KIM^XIOMARA",
-            "unredacted_chars": "KIM^XIOMARA"
-          },
-          {
-            "bill": "bill_004",
-            "type": "DOB",
-            "text": "19541201",
-            "unredacted_chars": "19541201"
-          },
-          {
-            "bill": "bill_004",
-            "type": "ACCOUNT_ID",
-            "text": "MR63656309",
-            "unredacted_chars": "MR63656309"
-          },
-          {
-            "bill": "bill_004",
-            "type": "ADDRESS",
-            "text": "8408 CEDAR CT APT 34B^^FAIRVIEW^TN^37080",
-            "unredacted_chars": "^^FAIRVIEW^TN^37080"
-          },
-          {
-            "bill": "bill_004",
-            "type": "MEMBER_ID",
-            "text": "XGH61060763",
-            "unredacted_chars": "XGH61060763"
-          },
-          {
-            "bill": "bill_005",
-            "type": "NAME",
-            "text": "MBEKI^LORENA",
-            "unredacted_chars": "MBEKI^LORENA"
-          },
-          {
-            "bill": "bill_005",
-            "type": "DOB",
-            "text": "19520531",
-            "unredacted_chars": "19520531"
-          },
-          {
-            "bill": "bill_005",
-            "type": "ACCOUNT_ID",
-            "text": "MR70374992",
-            "unredacted_chars": "MR70374992"
-          },
-          {
-            "bill": "bill_005",
-            "type": "ADDRESS",
-            "text": "6386 LAKEVIEW LN^^PORT JERVIS^NY^12739",
-            "unredacted_chars": "^^PORT JERVIS^NY^12739"
-          },
-          {
-            "bill": "bill_005",
-            "type": "MEMBER_ID",
-            "text": "XGH74313460",
-            "unredacted_chars": "XGH74313460"
-          },
-          {
-            "bill": "bill_006",
-            "type": "NAME",
-            "text": "PATEL^CARLOS",
-            "unredacted_chars": "PATEL^CARLOS"
-          },
-          {
-            "bill": "bill_006",
-            "type": "DOB",
-            "text": "19571216",
-            "unredacted_chars": "19571216"
-          },
-          {
-            "bill": "bill_006",
-            "type": "ACCOUNT_ID",
-            "text": "MR55733802",
-            "unredacted_chars": "MR55733802"
-          },
-          {
-            "bill": "bill_006",
-            "type": "ADDRESS",
-            "text": "6191 HIGHLAND ST^^PORT JERVIS^NY^12718",
-            "unredacted_chars": "^^PORT JERVIS^NY^12718"
-          },
-          {
-            "bill": "bill_006",
-            "type": "MEMBER_ID",
-            "text": "XGH97493880",
-            "unredacted_chars": "XGH97493880"
-          },
-          {
-            "bill": "bill_007",
-            "type": "NAME",
-            "text": "KOWALSKI^THANH^E",
-            "unredacted_chars": "KOWALSKI^THANH^E"
-          },
-          {
-            "bill": "bill_007",
-            "type": "DOB",
-            "text": "19730422",
-            "unredacted_chars": "19730422"
-          },
-          {
-            "bill": "bill_007",
-            "type": "ACCOUNT_ID",
-            "text": "MR18074745",
-            "unredacted_chars": "MR18074745"
-          },
-          {
-            "bill": "bill_007",
-            "type": "ADDRESS",
-            "text": "3028 JUNIPER AVENUE^^MILLBROOK^NY^12551",
-            "unredacted_chars": "^^MILLBROOK^NY^12551"
-          },
-          {
-            "bill": "bill_007",
-            "type": "MEMBER_ID",
-            "text": "XGH65486980",
-            "unredacted_chars": "XGH65486980"
-          },
-          {
-            "bill": "bill_008",
-            "type": "NAME",
-            "text": "BIANCHI^MICHAEL^A",
-            "unredacted_chars": "BIANCHI^MICHAEL^A"
-          },
-          {
-            "bill": "bill_008",
-            "type": "DOB",
-            "text": "19640920",
-            "unredacted_chars": "19640920"
-          },
-          {
-            "bill": "bill_008",
-            "type": "ACCOUNT_ID",
-            "text": "MR67314724",
-            "unredacted_chars": "MR67314724"
-          },
-          {
-            "bill": "bill_008",
-            "type": "ADDRESS",
-            "text": "447 OAK ROAD^^RIVERTON^OH^45053",
-            "unredacted_chars": "^^RIVERTON^OH^45053"
-          },
-          {
-            "bill": "bill_008",
-            "type": "MEMBER_ID",
-            "text": "W791530822",
-            "unredacted_chars": "W791530822"
-          },
-          {
-            "bill": "bill_009",
-            "type": "NAME",
-            "text": "KOWALSKI^RAFAEL",
-            "unredacted_chars": "KOWALSKI^RAFAEL"
-          },
-          {
-            "bill": "bill_009",
-            "type": "DOB",
-            "text": "19560905",
-            "unredacted_chars": "19560905"
-          },
-          {
-            "bill": "bill_009",
-            "type": "ACCOUNT_ID",
-            "text": "MR51681121",
-            "unredacted_chars": "MR51681121"
-          },
-          {
-            "bill": "bill_009",
-            "type": "ADDRESS",
-            "text": "4371 LAKEVIEW DR #28B^^OAK HARBOR^WA^98215",
-            "unredacted_chars": "^^OAK HARBOR^WA^98215"
-          },
-          {
-            "bill": "bill_009",
-            "type": "MEMBER_ID",
-            "text": "XGH58574064",
-            "unredacted_chars": "XGH58574064"
-          },
-          {
-            "bill": "bill_010",
-            "type": "NAME",
-            "text": "WOJCIK^PATRICE^M",
-            "unredacted_chars": "WOJCIK^PATRICE^M"
-          },
-          {
-            "bill": "bill_010",
-            "type": "DOB",
-            "text": "19550204",
-            "unredacted_chars": "19550204"
-          },
-          {
-            "bill": "bill_010",
-            "type": "ACCOUNT_ID",
-            "text": "MR16984130",
-            "unredacted_chars": "MR16984130"
-          },
-          {
-            "bill": "bill_010",
-            "type": "ADDRESS",
-            "text": "9596 LAKEVIEW ST UNIT 34C^^OAK HARBOR^WA^98244",
-            "unredacted_chars": "^^OAK HARBOR^WA^98244"
-          },
-          {
-            "bill": "bill_010",
-            "type": "MEMBER_ID",
-            "text": "ZQ9154525-01",
-            "unredacted_chars": "ZQ9154525-01"
-          },
-          {
-            "bill": "bill_011",
-            "type": "NAME",
-            "text": "NGUYEN^NAVEEN",
-            "unredacted_chars": "NGUYEN^NAVEEN"
-          },
-          {
-            "bill": "bill_011",
-            "type": "DOB",
-            "text": "19860618",
-            "unredacted_chars": "19860618"
-          },
-          {
-            "bill": "bill_011",
-            "type": "ACCOUNT_ID",
-            "text": "MR86403105",
-            "unredacted_chars": "MR86403105"
-          },
-          {
-            "bill": "bill_011",
-            "type": "ADDRESS",
-            "text": "6898 PINE ST^^PORT JERVIS^NY^12798",
-            "unredacted_chars": "^^PORT JERVIS^NY^12798"
-          },
-          {
-            "bill": "bill_011",
-            "type": "MEMBER_ID",
-            "text": "W717870646",
-            "unredacted_chars": "W717870646"
-          },
-          {
-            "bill": "bill_012",
-            "type": "NAME",
-            "text": "NGUYEN^LORENA",
-            "unredacted_chars": "NGUYEN^LORENA"
-          },
-          {
-            "bill": "bill_012",
-            "type": "DOB",
-            "text": "19981203",
-            "unredacted_chars": "19981203"
-          },
-          {
-            "bill": "bill_012",
-            "type": "ACCOUNT_ID",
-            "text": "MR21974745",
-            "unredacted_chars": "MR21974745"
-          },
-          {
-            "bill": "bill_012",
-            "type": "ADDRESS",
-            "text": "2006 BRIAR CT #17C^^FAIRVIEW^TN^37028",
-            "unredacted_chars": "^^FAIRVIEW^TN^37028"
-          },
-          {
-            "bill": "bill_012",
-            "type": "MEMBER_ID",
-            "text": "XGH42515543",
-            "unredacted_chars": "XGH42515543"
-          }
-        ]
+        "leaks": []
       }
     },
     "parsing": {
@@ -1770,7 +1126,7 @@
       },
       "field_accuracy_overall": 0.7142857142857143,
       "by_layout": {
-        "kv_export_heldout": {
+        "kv_export": {
           "docs": 12,
           "docs_fully_correct": 0,
           "field_accuracy": 0.7142857142857143
@@ -1810,13 +1166,13 @@
         "precision": 1.0
       },
       "detected_formats": {
-        "kv_export_heldout->anchored": 12
+        "kv_export->anchored": 12
       },
       "failures": {
         "fields": [
           {
             "bill": "bill_001",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-03-21",
@@ -1824,7 +1180,7 @@
           },
           {
             "bill": "bill_001",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "Immunization administration, single vaccine",
@@ -1832,7 +1188,7 @@
           },
           {
             "bill": "bill_001",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-03-24",
@@ -1840,7 +1196,7 @@
           },
           {
             "bill": "bill_001",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "Chest x-ray, 2 views",
@@ -1848,7 +1204,7 @@
           },
           {
             "bill": "bill_001",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "service_date",
             "expected": "2025-03-24",
@@ -1856,7 +1212,7 @@
           },
           {
             "bill": "bill_001",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "description",
             "expected": "Urinalysis, automated, with microscopy",
@@ -1864,7 +1220,7 @@
           },
           {
             "bill": "bill_001",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "service_date",
             "expected": "2025-03-24",
@@ -1872,7 +1228,7 @@
           },
           {
             "bill": "bill_001",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "description",
             "expected": "Immunizalion administration, single vaccine",
@@ -1880,7 +1236,7 @@
           },
           {
             "bill": "bill_001",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "service_date",
             "expected": "2025-03-26",
@@ -1888,7 +1244,7 @@
           },
           {
             "bill": "bill_001",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "description",
             "expected": "Surgical supply, miscellaneous",
@@ -1896,7 +1252,7 @@
           },
           {
             "bill": "bill_002",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-05-24",
@@ -1904,7 +1260,7 @@
           },
           {
             "bill": "bill_002",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "CT head or brain wlthout contrast",
@@ -1912,7 +1268,7 @@
           },
           {
             "bill": "bill_002",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-05-24",
@@ -1920,7 +1276,7 @@
           },
           {
             "bill": "bill_002",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "Chest x-ray, 2 views",
@@ -1928,7 +1284,7 @@
           },
           {
             "bill": "bill_003",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-03-03",
@@ -1936,7 +1292,7 @@
           },
           {
             "bill": "bill_003",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "Office visit, established patient, low complexity",
@@ -1944,7 +1300,7 @@
           },
           {
             "bill": "bill_003",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-03-06",
@@ -1952,7 +1308,7 @@
           },
           {
             "bill": "bill_003",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "Chest x-ray, 2 views",
@@ -1960,7 +1316,7 @@
           },
           {
             "bill": "bill_003",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "service_date",
             "expected": "2025-03-08",
@@ -1968,7 +1324,7 @@
           },
           {
             "bill": "bill_003",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "description",
             "expected": "Routine venipuncture",
@@ -1976,7 +1332,7 @@
           },
           {
             "bill": "bill_003",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "service_date",
             "expected": "2025-03-09",
@@ -1984,7 +1340,7 @@
           },
           {
             "bill": "bill_003",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "description",
             "expected": "Chest x-ray, 2 views",
@@ -1992,7 +1348,7 @@
           },
           {
             "bill": "bill_004",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-06-07",
@@ -2000,7 +1356,7 @@
           },
           {
             "bill": "bill_004",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "IV push, single or initial substance",
@@ -2008,7 +1364,7 @@
           },
           {
             "bill": "bill_004",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-06-07",
@@ -2016,7 +1372,7 @@
           },
           {
             "bill": "bill_004",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "CT abdomen and pelvis with contrast",
@@ -2024,7 +1380,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-07-21",
@@ -2032,7 +1388,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "Complete blood count with automated differential",
@@ -2040,7 +1396,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-07-21",
@@ -2048,7 +1404,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "Influenza vaccine, quadrivalent, preservative free",
@@ -2056,7 +1412,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "service_date",
             "expected": "2025-07-21",
@@ -2064,7 +1420,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "description",
             "expected": "Office visit, established patient, moderate complexity",
@@ -2072,7 +1428,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "service_date",
             "expected": "2025-07-21",
@@ -2080,7 +1436,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "description",
             "expected": "Comprehensive metabolic panel",
@@ -2088,7 +1444,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "service_date",
             "expected": "2025-07-21",
@@ -2096,7 +1452,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "description",
             "expected": "Ondansetron hydrochloride injection, per 1 mg",
@@ -2104,7 +1460,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 6,
             "field": "service_date",
             "expected": "2025-07-21",
@@ -2112,7 +1468,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 6,
             "field": "description",
             "expected": "Rapid strep test",
@@ -2120,7 +1476,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 7,
             "field": "service_date",
             "expected": "2025-07-21",
@@ -2128,7 +1484,7 @@
           },
           {
             "bill": "bill_005",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 7,
             "field": "description",
             "expected": "Office visit, established patient, moderate complexity",
@@ -2136,7 +1492,7 @@
           },
           {
             "bill": "bill_006",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-03-09",
@@ -2144,7 +1500,7 @@
           },
           {
             "bill": "bill_006",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "Annual wellness visit, subsequent",
@@ -2152,7 +1508,7 @@
           },
           {
             "bill": "bill_006",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-03-12",
@@ -2160,7 +1516,7 @@
           },
           {
             "bill": "bill_006",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "Rapid strep test",
@@ -2168,7 +1524,7 @@
           },
           {
             "bill": "bill_006",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "service_date",
             "expected": "2025-03-12",
@@ -2176,7 +1532,7 @@
           },
           {
             "bill": "bill_006",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "description",
             "expected": "Annual wellness visit, subsequent",
@@ -2184,7 +1540,7 @@
           },
           {
             "bill": "bill_006",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "service_date",
             "expected": "2025-03-12",
@@ -2192,7 +1548,7 @@
           },
           {
             "bill": "bill_006",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "description",
             "expected": "Comprehensive metabolic panel",
@@ -2200,7 +1556,7 @@
           },
           {
             "bill": "bill_007",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-03-29",
@@ -2208,7 +1564,7 @@
           },
           {
             "bill": "bill_007",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "Routine venipuncture",
@@ -2216,7 +1572,7 @@
           },
           {
             "bill": "bill_007",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-03-29",
@@ -2224,7 +1580,7 @@
           },
           {
             "bill": "bill_007",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "Surgical supply, miscellaneous",
@@ -2232,7 +1588,7 @@
           },
           {
             "bill": "bill_007",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "service_date",
             "expected": "2025-03-31",
@@ -2240,7 +1596,7 @@
           },
           {
             "bill": "bill_007",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "description",
             "expected": "Comprehensive metabolic panel",
@@ -2248,7 +1604,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-07-10",
@@ -2256,7 +1612,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "Urinalysis, automated, with microscopy",
@@ -2264,7 +1620,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-07-10",
@@ -2272,7 +1628,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "Surgical supply, miscellaneous",
@@ -2280,7 +1636,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "service_date",
             "expected": "2025-07-10",
@@ -2288,7 +1644,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "description",
             "expected": "Annual wellness visit, subsequent",
@@ -2296,7 +1652,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "service_date",
             "expected": "2025-07-10",
@@ -2304,7 +1660,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "description",
             "expected": "Complete blood count with automated differential",
@@ -2312,7 +1668,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "service_date",
             "expected": "2025-07-10",
@@ -2320,7 +1676,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "description",
             "expected": "Ketorolac tromethamine injection, per 15 mg",
@@ -2328,7 +1684,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 6,
             "field": "service_date",
             "expected": "2025-07-10",
@@ -2336,7 +1692,7 @@
           },
           {
             "bill": "bill_008",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 6,
             "field": "description",
             "expected": "Ketorolac tromethamine injection, per 15 mg",
@@ -2344,7 +1700,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-04-06",
@@ -2352,7 +1708,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "Urinalysis, automated, with microscopy",
@@ -2360,7 +1716,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-04-06",
@@ -2368,7 +1724,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "New patient office visit",
@@ -2376,7 +1732,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "service_date",
             "expected": "2025-04-06",
@@ -2384,7 +1740,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "description",
             "expected": "New patient office visit",
@@ -2392,7 +1748,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "service_date",
             "expected": "2025-04-06",
@@ -2400,7 +1756,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "description",
             "expected": "Ondansetron hydrochloride injection, per 1 rng",
@@ -2408,7 +1764,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "service_date",
             "expected": "2025-04-08",
@@ -2416,7 +1772,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "description",
             "expected": "Office visit, established patient, moderate complexity",
@@ -2424,7 +1780,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 6,
             "field": "service_date",
             "expected": "2025-04-08",
@@ -2432,7 +1788,7 @@
           },
           {
             "bill": "bill_009",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 6,
             "field": "description",
             "expected": "CT head or brain without contrast",
@@ -2440,7 +1796,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-05-07",
@@ -2448,7 +1804,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "CT head or brain without contrast",
@@ -2456,7 +1812,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-05-07",
@@ -2464,7 +1820,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "Office visit, established patient, low complexity",
@@ -2472,7 +1828,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "service_date",
             "expected": "2025-05-07",
@@ -2480,7 +1836,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "description",
             "expected": "Chest x-ray, 2 views",
@@ -2488,7 +1844,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "service_date",
             "expected": "2025-05-07",
@@ -2496,7 +1852,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "description",
             "expected": "Chest x-ray, 2 views",
@@ -2504,7 +1860,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "service_date",
             "expected": "2025-05-07",
@@ -2512,7 +1868,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "description",
             "expected": "Emergency department visit, high severity",
@@ -2520,7 +1876,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 6,
             "field": "service_date",
             "expected": "2025-05-07",
@@ -2528,7 +1884,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 6,
             "field": "description",
             "expected": "Ondansetron hydrochloride injection, per 1 mg",
@@ -2536,7 +1892,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 7,
             "field": "service_date",
             "expected": "2025-05-10",
@@ -2544,7 +1900,7 @@
           },
           {
             "bill": "bill_010",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 7,
             "field": "description",
             "expected": "Urinalysis, automated, with microscopy",
@@ -2552,7 +1908,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-06-25",
@@ -2560,7 +1916,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "Immunization administration, single vaccine",
@@ -2568,7 +1924,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-06-28",
@@ -2576,7 +1932,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "Electrocardiogram, routine, with interpretation and report",
@@ -2584,7 +1940,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "service_date",
             "expected": "2025-06-28",
@@ -2592,7 +1948,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "description",
             "expected": "CT head or brain without contrast",
@@ -2600,7 +1956,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "service_date",
             "expected": "2025-06-28",
@@ -2608,7 +1964,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 4,
             "field": "description",
             "expected": "Rapid strep test",
@@ -2616,7 +1972,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "service_date",
             "expected": "2025-07-01",
@@ -2624,7 +1980,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 5,
             "field": "description",
             "expected": "Therapeutic exercises, each 15 minutes",
@@ -2632,7 +1988,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 6,
             "field": "service_date",
             "expected": "2025-07-01",
@@ -2640,7 +1996,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 6,
             "field": "description",
             "expected": "Therapeutic exercises, each 15 minutes",
@@ -2648,7 +2004,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 7,
             "field": "service_date",
             "expected": "2025-07-01",
@@ -2656,7 +2012,7 @@
           },
           {
             "bill": "bill_011",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 7,
             "field": "description",
             "expected": "Complete blood count with automated differential",
@@ -2664,7 +2020,7 @@
           },
           {
             "bill": "bill_012",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "service_date",
             "expected": "2025-04-27",
@@ -2672,7 +2028,7 @@
           },
           {
             "bill": "bill_012",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 1,
             "field": "description",
             "expected": "Influenza vaccine, quadrivalent, preservative free",
@@ -2680,7 +2036,7 @@
           },
           {
             "bill": "bill_012",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "service_date",
             "expected": "2025-04-28",
@@ -2688,7 +2044,7 @@
           },
           {
             "bill": "bill_012",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 2,
             "field": "description",
             "expected": "Immunization administratlon, single vaccine",
@@ -2696,7 +2052,7 @@
           },
           {
             "bill": "bill_012",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "service_date",
             "expected": "2025-04-28",
@@ -2704,7 +2060,7 @@
           },
           {
             "bill": "bill_012",
-            "layout": "kv_export_heldout",
+            "layout": "kv_export",
             "line": 3,
             "field": "description",
             "expected": "Rapid strep test",
@@ -2725,6 +2081,1614 @@
       "line_recall": 1.0,
       "line_precision": 1.0,
       "field_accuracy_overall": 0.7142857142857143
+    }
+  },
+  "heldout": {
+    "dataset": {
+      "path": "C:\\Users\\nihar\\Downloads\\BillWise\\data\\heldout",
+      "documents": 12,
+      "layouts": {
+        "collections_letter_heldout": 12
+      },
+      "note": "synthetic data only"
+    },
+    "pii": {
+      "overall": {
+        "gold": 88,
+        "predicted": 97,
+        "neutral": 24,
+        "recall": 0.7954545454545454,
+        "precision": 0.958904109589041,
+        "leak_free_rate": 0.7954545454545454,
+        "recall_any_type": 0.7954545454545454,
+        "exact_match_recall": 0.6590909090909091,
+        "exact_match_precision": 0.7945205479452054
+      },
+      "by_type": {
+        "NAME": {
+          "gold": 24,
+          "predicted": 18,
+          "neutral": 0,
+          "recall": 0.75,
+          "precision": 1.0,
+          "leak_free_rate": 0.75,
+          "recall_any_type": 0.75
+        },
+        "ADDRESS": {
+          "gold": 12,
+          "predicted": 27,
+          "neutral": 12,
+          "recall": 1.0,
+          "precision": 0.8,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "PHONE": {
+          "gold": 8,
+          "predicted": 20,
+          "neutral": 12,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "EMAIL": {
+          "gold": 8,
+          "predicted": 8,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "DOB": {
+          "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "SSN": {
+          "gold": 0,
+          "predicted": 0,
+          "neutral": 0,
+          "recall": null,
+          "precision": null,
+          "leak_free_rate": null,
+          "recall_any_type": null
+        },
+        "MEMBER_ID": {
+          "gold": 12,
+          "predicted": 0,
+          "neutral": 0,
+          "recall": 0.0,
+          "precision": null,
+          "leak_free_rate": 0.0,
+          "recall_any_type": 0.0
+        },
+        "ACCOUNT_ID": {
+          "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "OTHER": {
+          "gold": 0,
+          "predicted": 0,
+          "neutral": 0,
+          "recall": null,
+          "precision": null,
+          "leak_free_rate": null,
+          "recall_any_type": null
+        }
+      },
+      "failures": {
+        "missed": [
+          {
+            "bill": "bill_001",
+            "type": "MEMBER_ID",
+            "text": "XGH81872620",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Clearpath Health Insurance under policy XGH81872620."
+          },
+          {
+            "bill": "bill_002",
+            "type": "NAME",
+            "text": "Ingrid Kim",
+            "redacted_as": null,
+            "line": "This letter concerns charges for services provided to Ingrid Kim (born 07/06/2012) at 4150 Maple Dr, Springdale, AR 72782."
+          },
+          {
+            "bill": "bill_002",
+            "type": "MEMBER_ID",
+            "text": "MBR5117541",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Summit Mutual Health under policy MBR5117541."
+          },
+          {
+            "bill": "bill_002",
+            "type": "NAME",
+            "text": "Ingrid",
+            "redacted_as": null,
+            "line": "To discuss this account, Ingrid may call us at 1-800-555-0119 or reply to the address above."
+          },
+          {
+            "bill": "bill_003",
+            "type": "MEMBER_ID",
+            "text": "ZQ6531681-01",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Summit Mutual Health under policy ZQ6531681-01."
+          },
+          {
+            "bill": "bill_004",
+            "type": "NAME",
+            "text": "Xiomara Fitzgerald",
+            "redacted_as": null,
+            "line": "This letter concerns charges for services provided to Xiomara Fitzgerald (born 10/26/1958) at 1846 Highland Blvd #25, Port Jervis, NY 12791."
+          },
+          {
+            "bill": "bill_004",
+            "type": "MEMBER_ID",
+            "text": "W656532614",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Summit Mutual Health under policy W656532614."
+          },
+          {
+            "bill": "bill_004",
+            "type": "NAME",
+            "text": "Xiomara",
+            "redacted_as": null,
+            "line": "To discuss this account, Xiomara may call us at 1-800-555-0142 or reply to the address above. We also have the email address xiomara.fitzgerald72@example.net on file and the phone number 319.555.0171."
+          },
+          {
+            "bill": "bill_005",
+            "type": "MEMBER_ID",
+            "text": "W671848570",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Blueriver Health Plans under policy W671848570."
+          },
+          {
+            "bill": "bill_006",
+            "type": "MEMBER_ID",
+            "text": "W058965828",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Blueriver Health Plans under policy W058965828."
+          },
+          {
+            "bill": "bill_007",
+            "type": "NAME",
+            "text": "Ingrid Mbeki",
+            "redacted_as": null,
+            "line": "This letter concerns charges for services provided to Ingrid Mbeki (born 09/25/1948) at 8224 Willow Ave, Springdale, AR 72754."
+          },
+          {
+            "bill": "bill_007",
+            "type": "MEMBER_ID",
+            "text": "MBR6252082",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Blueriver Health Plans under policy MBR6252082."
+          },
+          {
+            "bill": "bill_007",
+            "type": "NAME",
+            "text": "Ingrid",
+            "redacted_as": null,
+            "line": "To discuss this account, Ingrid may call us at 1-800-555-0129 or reply to the address above. We also have the email address ingrid.mbeki54@example.com on file and the phone number 479-555-0188."
+          },
+          {
+            "bill": "bill_008",
+            "type": "MEMBER_ID",
+            "text": "XGH36136396",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Clearpath Health Insurance under policy XGH36136396."
+          },
+          {
+            "bill": "bill_009",
+            "type": "MEMBER_ID",
+            "text": "W381676284",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Summit Mutual Health under policy W381676284."
+          },
+          {
+            "bill": "bill_010",
+            "type": "MEMBER_ID",
+            "text": "MBR9777211",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Blueriver Health Plans under policy MBR9777211."
+          },
+          {
+            "bill": "bill_011",
+            "type": "MEMBER_ID",
+            "text": "XGH30260453",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Summit Mutual Health under policy XGH30260453."
+          },
+          {
+            "bill": "bill_012",
+            "type": "MEMBER_ID",
+            "text": "MBR9078404",
+            "redacted_as": null,
+            "line": "Our records list the patient's insurance as Blueriver Health Plans under policy MBR9078404."
+          }
+        ],
+        "false_positives": [
+          {
+            "bill": "bill_001",
+            "type": "ADDRESS",
+            "text": "2025 the patient received ct",
+            "rule": "street",
+            "line": "On 05/05/2025 the patient received ct abdomen and pelvis with contrast (CPT 74177), billed at $3,868.04. The insurer paid $1,176.73 toward an allowed amount of $1,470.91, leaving $294.18 unpaid."
+          },
+          {
+            "bill": "bill_003",
+            "type": "ADDRESS",
+            "text": "2025 the patient received ct",
+            "rule": "street",
+            "line": "On 01/30/2025 the patient received ct head or brain without contrast (CPT 70450), billed at $1,429.40. The insurer paid $378.25 toward an allowed amount of $540.36, leaving $162.11 unpaid."
+          },
+          {
+            "bill": "bill_009",
+            "type": "ADDRESS",
+            "text": "2025 the patient received ct",
+            "rule": "street",
+            "line": "On 02/11/2025 the patient received ct abdomen and pelvis with contrast (CPT 74177), billed at $4,733.53. The insurer paid $1,018.82 toward an allowed amount of $1,455.45, leaving $436.63 unpaid."
+          }
+        ],
+        "leaks": [
+          {
+            "bill": "bill_001",
+            "type": "MEMBER_ID",
+            "text": "XGH81872620",
+            "unredacted_chars": "XGH81872620"
+          },
+          {
+            "bill": "bill_002",
+            "type": "NAME",
+            "text": "Ingrid Kim",
+            "unredacted_chars": "Ingrid Kim"
+          },
+          {
+            "bill": "bill_002",
+            "type": "MEMBER_ID",
+            "text": "MBR5117541",
+            "unredacted_chars": "MBR5117541"
+          },
+          {
+            "bill": "bill_002",
+            "type": "NAME",
+            "text": "Ingrid",
+            "unredacted_chars": "Ingrid"
+          },
+          {
+            "bill": "bill_003",
+            "type": "MEMBER_ID",
+            "text": "ZQ6531681-01",
+            "unredacted_chars": "ZQ6531681-01"
+          },
+          {
+            "bill": "bill_004",
+            "type": "NAME",
+            "text": "Xiomara Fitzgerald",
+            "unredacted_chars": "Xiomara Fitzgerald"
+          },
+          {
+            "bill": "bill_004",
+            "type": "MEMBER_ID",
+            "text": "W656532614",
+            "unredacted_chars": "W656532614"
+          },
+          {
+            "bill": "bill_004",
+            "type": "NAME",
+            "text": "Xiomara",
+            "unredacted_chars": "Xiomara"
+          },
+          {
+            "bill": "bill_005",
+            "type": "MEMBER_ID",
+            "text": "W671848570",
+            "unredacted_chars": "W671848570"
+          },
+          {
+            "bill": "bill_006",
+            "type": "MEMBER_ID",
+            "text": "W058965828",
+            "unredacted_chars": "W058965828"
+          },
+          {
+            "bill": "bill_007",
+            "type": "NAME",
+            "text": "Ingrid Mbeki",
+            "unredacted_chars": "Ingrid Mbeki"
+          },
+          {
+            "bill": "bill_007",
+            "type": "MEMBER_ID",
+            "text": "MBR6252082",
+            "unredacted_chars": "MBR6252082"
+          },
+          {
+            "bill": "bill_007",
+            "type": "NAME",
+            "text": "Ingrid",
+            "unredacted_chars": "Ingrid"
+          },
+          {
+            "bill": "bill_008",
+            "type": "MEMBER_ID",
+            "text": "XGH36136396",
+            "unredacted_chars": "XGH36136396"
+          },
+          {
+            "bill": "bill_009",
+            "type": "MEMBER_ID",
+            "text": "W381676284",
+            "unredacted_chars": "W381676284"
+          },
+          {
+            "bill": "bill_010",
+            "type": "MEMBER_ID",
+            "text": "MBR9777211",
+            "unredacted_chars": "MBR9777211"
+          },
+          {
+            "bill": "bill_011",
+            "type": "MEMBER_ID",
+            "text": "XGH30260453",
+            "unredacted_chars": "XGH30260453"
+          },
+          {
+            "bill": "bill_012",
+            "type": "MEMBER_ID",
+            "text": "MBR9078404",
+            "unredacted_chars": "MBR9078404"
+          }
+        ]
+      }
+    },
+    "parsing": {
+      "documents": 12,
+      "documents_fully_correct": 0,
+      "gold_lines": 63,
+      "predicted_lines": 63,
+      "matched_lines": 63,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy": {
+        "service_date": 1.0,
+        "code": 1.0,
+        "description": 0.0,
+        "billed_amount": 1.0,
+        "allowed_amount": 0.3492063492063492,
+        "insurer_paid": 0.3492063492063492,
+        "patient_responsibility": 1.0
+      },
+      "field_accuracy_overall": 0.671201814058957,
+      "by_layout": {
+        "collections_letter_heldout": {
+          "docs": 12,
+          "docs_fully_correct": 0,
+          "field_accuracy": 0.671201814058957
+        }
+      },
+      "by_messy_condition": {
+        "duplicate_charge": {
+          "docs": 4,
+          "docs_fully_correct": 0
+        },
+        "missing_field": {
+          "docs": 6,
+          "docs_fully_correct": 0
+        },
+        "narrative_items": {
+          "docs": 12,
+          "docs_fully_correct": 0
+        },
+        "ocr_amount": {
+          "docs": 8,
+          "docs_fully_correct": 0
+        },
+        "ocr_description": {
+          "docs": 5,
+          "docs_fully_correct": 0
+        },
+        "prose_pii": {
+          "docs": 12,
+          "docs_fully_correct": 0
+        }
+      },
+      "duplicate_detection": {
+        "gold_pairs": 4,
+        "flagged_pairs": 4,
+        "correct": 4,
+        "recall": 1.0,
+        "precision": 1.0
+      },
+      "detected_formats": {
+        "collections_letter_heldout->anchored": 12
+      },
+      "failures": {
+        "fields": [
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "office visit, established patient, low complexity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "allowed_amount",
+            "expected": "79.91",
+            "got": "63.93"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "63.93",
+            "got": "79.91"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "ct abdomen and pelvis with contrast",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "allowed_amount",
+            "expected": "1470.91",
+            "got": "1176.73"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "1176.73",
+            "got": "1470.91"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "electrocardiogram, routine, with interpretation and report",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "chest x-ray, 2 views",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "allowed_amount",
+            "expected": "369.45",
+            "got": "332.51"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "332.51",
+            "got": "369.45"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "new patient office visit",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "urinalysis, automated, with microscopy",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "complete blood count with automated differential",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "allowed_amount",
+            "expected": "59.35",
+            "got": "53.42"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "53.42",
+            "got": "59.35"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "ketorolac tromethamine injection, per 15 mg",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "complete blood count with automated dlfferential",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "allowed_amount",
+            "expected": "38.37",
+            "got": "34.53"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "34.53",
+            "got": "38.37"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "ketorolac tromethamine injection, per 15 mg",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "influenza vaccine, quadrivalent, preservative free",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "allowed_amount",
+            "expected": "12.58",
+            "got": "11.32"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "11.32",
+            "got": "12.58"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "complete blood count with automated differential",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 7,
+            "field": "description",
+            "expected": "emergency department visit, high severity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 7,
+            "field": "allowed_amount",
+            "expected": "1864.52",
+            "got": "1678.07"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "collections_letter_heldout",
+            "line": 7,
+            "field": "insurer_paid",
+            "expected": "1678.07",
+            "got": "1864.52"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "influenza vaccine, quadrivalent, preservatlve free",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "allowed_amount",
+            "expected": "19.80",
+            "got": "15.84"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "15.84",
+            "got": "19.80"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "emergency department visit, high severity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "emergency department visit, high severity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "ondansetron hydrochloride injection, per 1 mg",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "allowed_amount",
+            "expected": "22.84",
+            "got": "18.27"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "18.27",
+            "got": "22.84"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "chest x-ray, 2 views",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "allowed_amount",
+            "expected": "155.18",
+            "got": "139.66"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "139.66",
+            "got": "155.18"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "ct head or brain without contrast",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "allowed_amount",
+            "expected": "540.36",
+            "got": "378.25"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "insurer_paid",
+            "expected": "378.25",
+            "got": "540.36"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "influenza vaccine, quadrivalent, preservative free",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "allowed_amount",
+            "expected": "44.25",
+            "got": "0.00"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": "44.25"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "emergency department visit, high severity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "allowed_amount",
+            "expected": "1035.03",
+            "got": "0.00"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": "1035.03"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "emergency department visit, moderate severity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "new patient office visit",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "allowed_amount",
+            "expected": "132.32",
+            "got": "105.86"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "105.86",
+            "got": "132.32"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "therapeutic exercises, each 15 minutes",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "allowed_amount",
+            "expected": "46.45",
+            "got": "0.00"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": "46.45"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "electrocardiogram, routine, with interpretation and report",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "allowed_amount",
+            "expected": "93.79",
+            "got": "75.03"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "75.03",
+            "got": "93.79"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "routine venipuncture",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "allowed_amount",
+            "expected": "21.36",
+            "got": "19.22"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "19.22",
+            "got": "21.36"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "office visit, established patient, moderate complexity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "allowed_amount",
+            "expected": "147.40",
+            "got": "103.18"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "103.18",
+            "got": "147.40"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "therapeutic exercises, each 15 minutes",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "allowed_amount",
+            "expected": "96.09",
+            "got": "86.48"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "86.48",
+            "got": "96.09"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "electrocardiogram, routine, with interpretation and report",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "allowed_amount",
+            "expected": "141.09",
+            "got": "126.98"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "126.98",
+            "got": "141.09"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "electrocardiogram, routine, with lnterpretation and report",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "urinalysis, automated, with microscopy",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "rapid strep test",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "urinalysis, automated, with microscopy",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "allowed_amount",
+            "expected": "55.12",
+            "got": "49.61"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "insurer_paid",
+            "expected": "49.61",
+            "got": "55.12"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 7,
+            "field": "description",
+            "expected": "influenza vaccine, quadrivalent, preservative free",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 7,
+            "field": "allowed_amount",
+            "expected": "39.41",
+            "got": "27.59"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "collections_letter_heldout",
+            "line": 7,
+            "field": "insurer_paid",
+            "expected": "27.59",
+            "got": "39.41"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "electrocardiogram, routine, with intcrpretation and report",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "allowed_amount",
+            "expected": "145.02",
+            "got": "0.00"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": "145.02"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "influenza vaccine, quadrivalent, preservative free",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "influenza vaccine, quadrivalent, preservative free",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "emergency department visit, high severity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "comprehensive melabolic panel",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "allowed_amount",
+            "expected": "126.94",
+            "got": "0.00"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": "126.94"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "new patient office visit",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "allowed_amount",
+            "expected": "86.73",
+            "got": "69.38"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "insurer_paid",
+            "expected": "69.38",
+            "got": "86.73"
+          },
+          {
+            "bill": "bill_008",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "office visit, established patient, moderate complexity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_008",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "rapid strep test",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_008",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "allowed_amount",
+            "expected": "27.42",
+            "got": "24.68"
+          },
+          {
+            "bill": "bill_008",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "24.68",
+            "got": "27.42"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "new patient office visit",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "allowed_amount",
+            "expected": "142.66",
+            "got": "114.13"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "114.13",
+            "got": "142.66"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "emergency department visit, high severity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "allowed_amount",
+            "expected": "1681.92",
+            "got": "1513.73"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "1513.73",
+            "got": "1681.92"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "comprehensive metabolic panel",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "allowed_amount",
+            "expected": "233.25",
+            "got": "0.00"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": "233.25"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "comprehensive metabolic panel",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "ct abdomen and pelvis with contrast",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "allowed_amount",
+            "expected": "1455.45",
+            "got": "1018.82"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "1018.82",
+            "got": "1455.45"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "office visit, established patient, moderate complexity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "allowed_amount",
+            "expected": "211.60",
+            "got": "0.00"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": "211.60"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "office visit, established patient, moderate complexity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "allowed_amount",
+            "expected": "211.60",
+            "got": "0.00"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": "211.60"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "new patient office visit",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "allowed_amount",
+            "expected": "162.53",
+            "got": "146.28"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "146.28",
+            "got": "162.53"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "office visit, established patient, moderate complexity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "allowed_amount",
+            "expected": "197.88",
+            "got": "138.52"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "138.52",
+            "got": "197.88"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "office visit, established patient, moderate complexity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "allowed_amount",
+            "expected": "109.26",
+            "got": "76.48"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "76.48",
+            "got": "109.26"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "new patient office visit",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "routine venipuncture",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "allowed_amount",
+            "expected": "14.35",
+            "got": "11.48"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "11.48",
+            "got": "14.35"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "emergency department visit, high severity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "allowed_amount",
+            "expected": "2448.99",
+            "got": "2204.09"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "2204.09",
+            "got": "2448.99"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "electrocardiogram, routine, with interpretation and report",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "allowed_amount",
+            "expected": "62.50",
+            "got": "0.00"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": "62.50"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "therapeutic exercises, each 15 minutes",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "allowed_amount",
+            "expected": "119.29",
+            "got": "83.50"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "83.50",
+            "got": "119.29"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "collections_letter_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "immunization administration, single vaccine",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "collections_letter_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "chest x-ray, 2 views",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "collections_letter_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "ketorolac tromethamine injcction, per 15 mg",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "office visit, established patient, moderate complexity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "allowed_amount",
+            "expected": "246.26",
+            "got": "221.63"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "collections_letter_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "221.63",
+            "got": "246.26"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "collections_letter_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "office visit, established patient, moderate complexity",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "chest x-ray, 2 views",
+            "got": "), billed at"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "allowed_amount",
+            "expected": "349.03",
+            "got": "244.32"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "collections_letter_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "244.32",
+            "got": "349.03"
+          }
+        ],
+        "lines": []
+      }
+    },
+    "parsing_on_redacted_text": {
+      "documents_fully_correct": 0,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy_overall": 0.6689342403628118
+    },
+    "fallback_only_parsing": {
+      "documents_fully_correct": 0,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy_overall": 0.671201814058957
     }
   }
 }
