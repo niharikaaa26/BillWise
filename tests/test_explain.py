@@ -13,7 +13,7 @@ from billwise.explain import (ClaudeExplainer, Explanation, LineExplanation, Moc
 from billwise.retrieve import KnowledgeBase, default_kb, tokenize
 
 ROOT = Path(__file__).resolve().parents[1]
-DEV_SETS = ["synthetic", "dev2", "dev3", "dev4", "dev5"]
+DEV_SETS = ["synthetic", "dev2", "dev3", "dev4", "dev5", "dev6"]
 
 BILL = """CLEARPATH HEALTH INSURANCE
 EXPLANATION OF BENEFITS -- THIS IS NOT A BILL

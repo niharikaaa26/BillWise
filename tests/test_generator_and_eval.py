@@ -103,3 +103,10 @@ def test_eval_detects_a_broken_parser(monkeypatch):
     monkeypatch.setattr(run_eval, "parse", lambda text: ParseResult(format="unknown", line_items=[]))
     r = run_eval.run(MAIN)
     assert r["parsing"]["line_recall"] == 0.0 and r["parsing"]["field_accuracy_overall"] == 0.0
+
+
+def test_dev6_redaction_floor():
+    """dev6 (the round-5 KEY=value export) drove the round-6 over-redaction fallback. Its parsing
+    is not yet fixed (YYYYMMDD dates, KEY= text in descriptions), so only redaction has a floor."""
+    r = run_eval.run(DEV6)
+    assert r["pii"]["overall"]["leak_free_rate"] >= 0.95

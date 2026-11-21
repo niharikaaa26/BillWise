@@ -13,7 +13,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
-PII_TYPES = ("NAME", "ADDRESS", "PHONE", "EMAIL", "DOB", "SSN", "MEMBER_ID", "ACCOUNT_ID")
+PII_TYPES = ("NAME", "ADDRESS", "PHONE", "EMAIL", "DOB", "SSN", "MEMBER_ID", "ACCOUNT_ID", "OTHER")
+# OTHER: a field value redacted by the over-redaction fallback whose shape matches no specific type.
 
 # A small list of common US given names, used to find names that are not
 # behind a label (e.g. the window-envelope address block). It is intentionally
@@ -184,7 +185,70 @@ NAME_FROM_LIST = re.compile(rf"\b(?P<first>{_TOK})(?: [A-Z]\.)?(?: (?P<last>{_TO
 
 # priority: higher wins when candidate spans overlap
 PRIORITY = {"EMAIL": 90, "SSN": 85, "DOB": 80, "MEMBER_ID": 80, "ACCOUNT_ID": 80,
-            "NAME": 75, "PHONE": 70, "ADDRESS": 60}
+            "NAME": 75, "PHONE": 70, "ADDRESS": 60, "OTHER": 30}
+
+# ---------------------------------------------------------------------------
+# Over-redaction fallback for field values
+# ---------------------------------------------------------------------------
+# Any "Key: value", "KEY=value", "Key #: value" or "Key ...... value" is redacted unless the key is
+# known to be safe (service dates, codes, descriptions, amounts, provider/payer/plan). A key with a
+# personal word in it is never safe, so "Date of birth" is not let through by the word "date".
+# Money amounts are never redacted. This fails closed: an unfamiliar key is redacted.
+FIELD_RE = re.compile(
+    r"(?:(?<=^)|(?<=[\s;|,]))(?P<key>[A-Za-z][A-Za-z0-9_'#/. -]{0,40}?)[ \t]*"
+    r"(?P<sep>=|:(?!//)|\.{2,}[ \t]*:?|#[ \t]*:)[ \t]*"
+    r"(?P<val>[^;|\n]*?)[ \t]*(?=[ \t]{2,}|[;|]|$)",
+    re.MULTILINE,
+)
+PII_KEY_WORDS = {
+    "name", "patient", "pt", "member", "mbr", "subscriber", "insured", "guarantor", "holder", "birth",
+    "birthdate", "dob", "born", "ssn", "social", "address", "addr", "residence", "home", "mailing", "mail",
+    "street", "phone", "tel", "telephone", "cell", "mobile", "email", "mrn", "record", "id", "acct",
+    "account", "claim", "reference", "ref", "policy", "contact", "prepared", "dear", "employer", "re",
+}
+SAFE_KEY_WORDS = {
+    "date", "dt", "dos", "service", "svc", "statement", "stmt", "period", "printed", "processed", "generated",
+    "code", "cpt", "hcpcs", "proc", "procedure", "description", "desc", "charge", "charges", "chg", "billed",
+    "amount", "allowed", "covered", "paid", "payment", "pymt", "pmt", "share", "cost", "costs", "owe",
+    "balance", "total", "totals", "adjustment", "adj", "discount", "deductible", "coinsurance", "copay",
+    "units", "mod", "modifier", "provider", "physician", "rendering", "referring", "facility", "payer",
+    "insurer", "insurance", "plan", "group", "npi", "tax", "page", "item", "line", "count", "status", "remit",
+    "billing", "questions", "customer", "care", "ptresp", "resp", "export",
+}
+_MONEY_ONLY = re.compile(r"-?\(?\$?\s?[\d,]+\.\d{2}\)?")
+_NAME_SHAPE = re.compile(r"[A-Z][A-Za-z'.\-]*(?:[ ,^]+[A-Z][A-Za-z'.\-]*){0,4}\^?")
+
+
+def _key_words(key: str) -> list[str]:
+    return re.findall(r"[a-z0-9]+", key.lower())
+
+
+def _key_is_safe(key: str) -> bool:
+    words = _key_words(key)
+    if not words or set(words) & PII_KEY_WORDS or words[-1] == "for":
+        return False
+    return bool(set(words) & SAFE_KEY_WORDS)
+
+
+def _shape_type(val: str, key: str) -> str:
+    v = val.strip()
+    if (m := EMAIL.search(v)) and len(m.group(0)) >= 0.6 * len(v):
+        return "EMAIL"
+    if (m := PHONE.search(v)) and len(m.group(0)) >= 0.6 * len(v):
+        return "PHONE"
+    if re.fullmatch(DATE_VALUE, v):
+        return "DOB"
+    if STREET.search(v) or PO_BOX.search(v) or CITY_STATE_ZIP.search(v) or ("^" in v and re.search(r"\d", v)):
+        return "ADDRESS"
+    if _NAME_SHAPE.fullmatch(v) and not re.search(r"\d", v):
+        return "NAME"
+    if sum(ch.isdigit() for ch in v) >= 4:
+        words = set(_key_words(key))
+        if words & {"member", "mbr", "subscriber", "insured", "policy"} or (
+                "id" in words and not words & {"acct", "account", "claim", "mrn", "ref", "reference"}):
+            return "MEMBER_ID"
+        return "ACCOUNT_ID"
+    return "OTHER"
 
 
 @dataclass
@@ -385,8 +449,54 @@ class Redactor:
                 merged.append(c)
         return [c for c in cands if c.type != typ] + merged
 
+    @staticmethod
+    def field_candidates(text: str) -> list[_Cand]:
+        """Values of fields whose key is not known to be safe (the over-redaction fallback)."""
+        out = []
+        for m in FIELD_RE.finditer(text):
+            key, val = m.group("key"), m.group("val")
+            if not val.strip() or _MONEY_ONLY.fullmatch(val.strip()) or _key_is_safe(key):
+                continue
+            typ = _shape_type(val, key)
+            out.append(_Cand(m.start("val"), m.end("val"), typ, PRIORITY["OTHER"], "field"))
+        return out
+
+    @staticmethod
+    def _absorb_fields(text: str, specific: list[_Cand], fields: list[_Cand]) -> list[_Cand]:
+        """Combine field-value spans with specific detections. A field value overlapping exactly one
+        specific span widens that span to the whole value (keeping its type); one overlapping several
+        keeps them and adds the uncovered pieces; one overlapping none is kept with its shape type."""
+        specific = list(specific)
+        extra: list[_Cand] = []
+        for f in fields:
+            idx = [i for i, o in enumerate(specific) if o.start < f.end and f.start < o.end]
+            if not idx:
+                extra.append(f)
+            elif len({specific[i].type for i in idx}) == 1:  # one type inside the value: widen to all of it
+                group = [specific[i] for i in idx]
+                o = max(group, key=lambda g: g.prio)
+                merged = _Cand(min([f.start] + [g.start for g in group]), max([f.end] + [g.end for g in group]),
+                               o.type, o.prio, o.source + "+field")
+                for i in sorted(idx, reverse=True):
+                    del specific[i]
+                specific.append(merged)
+            else:
+                cuts = sorted((specific[i].start, specific[i].end) for i in idx)
+                pos = f.start
+                for s, e in cuts + [(f.end, f.end)]:
+                    piece = text[pos:s]
+                    if s > pos and re.search(r"[A-Za-z0-9]", piece):
+                        lead = len(piece) - len(piece.lstrip(" ,/;-"))
+                        trail = len(piece.rstrip(" ,/;-"))
+                        if trail > lead:
+                            extra.append(_Cand(pos + lead, pos + trail, _shape_type(piece, ""),
+                                               PRIORITY["OTHER"], "field-gap"))
+                    pos = max(pos, e)
+        return specific + extra
+
     def redact(self, text: str) -> RedactionResult:
-        chosen = self._resolve(self._union_overlapping(self.detect(text)))
+        cands = self._absorb_fields(text, self.detect(text), self.field_candidates(text))
+        chosen = self._resolve(self._union_overlapping(cands))
         chosen = self._resolve(chosen + self._propagate(text, chosen))
         chosen = self._merge_adjacent(text, chosen)
 

@@ -189,3 +189,44 @@ def test_commaless_address_fully_redacted():
 def test_member_abbreviation_types_generic_id():
     found, _ = types_and_values("Mbr No XGH02727255\n")
     assert ("MEMBER_ID", "XGH02727255") in found
+
+
+# --- round 6: over-redaction fallback for field values -------------------------
+@pytest.mark.parametrize("text,typ,value", [
+    ("PAT|NAME=DOE^KEISHA^A;DOB=19531120;MRN=MR26136582\n", "NAME", "DOE^KEISHA^A"),
+    ("PAT|NAME=DOE^KEISHA^A;DOB=19531120;MRN=MR26136582\n", "DOB", "19531120"),
+    ("PAT|NAME=DOE^KEISHA^A;DOB=19531120;MRN=MR26136582\n", "ACCOUNT_ID", "MR26136582"),
+    ("PAT|ADDR=7598 RIVERBEND AVE^^OAK HARBOR^WA^98277;TEL=(479)555-0111\n", "ADDRESS",
+     "7598 RIVERBEND AVE^^OAK HARBOR^WA^98277"),
+    ("INS|PAYER=ACME;SUBSCRIBER_ID=CPH-3556-5584\n", "MEMBER_ID", "CPH-3556-5584"),
+    ("Emergency contact: Lorena Okafor\n", "NAME", "Lorena Okafor"),
+])
+def test_field_fallback_redacts_unrecognised_values(text, typ, value):
+    found, _ = types_and_values(text)
+    assert (typ, value) in found
+
+
+def test_field_fallback_fails_closed_on_unknown_keys():
+    r = redact("Favorite color: teal\n")
+    assert [(s.type, "teal") for s in r.spans] == [("OTHER", "teal")]
+
+
+@pytest.mark.parametrize("text", [
+    "SVC|DOS=20250321;PROC=90471;DESC=Immunization administration;CHG=29.04;PTRESP=0.00\n",
+    "Statement Date: 07/30/2025\nDate of service: Sep 8, 2025\nProvider: Dr. Gil Cho\n",
+    "Plan paid: $95.10\nYour share: $23.78\nTotal balance due: $777.34\n",
+    "Primary Insurance: Summit Mutual Health\nGroup #: 34943\n",
+])
+def test_field_fallback_keeps_billing_fields(text):
+    assert redact(text).spans == []
+
+
+def test_date_of_birth_key_is_not_safe_despite_the_word_date():
+    found, _ = types_and_values("Date of birth ... 1981.03.12\n")
+    assert ("DOB", "1981.03.12") in found
+
+
+def test_field_value_widens_partial_match():
+    t = "Address: 6117 Juniper Road Apt 4 (rear door), Riverton, OH 45027\n"
+    r = redact(t)
+    assert r.redacted_text == "Address: [ADDRESS_1]\n"
