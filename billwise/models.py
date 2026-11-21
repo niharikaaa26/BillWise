@@ -24,6 +24,6 @@ class ParseResult(BaseModel):
     format: str = Field(..., description="Detected layout: pipe_table, csv, fixed_width, key_value or unknown")
     line_items: list[LineItem]
     possible_duplicates: list[tuple[int, int]] = Field(
-        default_factory=list, description="Index pairs of line items with identical date, code, description and charge"
+        default_factory=list, description="Index pairs of line items with identical date, code and charge (description if no code)"
     )
     warnings: list[str] = Field(default_factory=list)

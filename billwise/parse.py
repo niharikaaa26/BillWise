@@ -26,10 +26,15 @@ from .models import LineItem, ParseResult
 # Header keyword -> field. Checked in order; first match wins.
 # ---------------------------------------------------------------------------
 _HEADER_RULES: list[tuple[str | None, tuple[str, ...]]] = [
-    (None, ("adjust", "discount", "deductible", "copay", "coinsurance", "not covered")),
+    (None, ("adjust", "adj", "discount", "deductible", "copay", "coinsurance", "not covered")),
+    # non-amount columns that must be kept out of descriptions
+    ("_modifier", ("modifier", "mod")),
+    ("_units", ("units", "unit", "qty", "quantity")),
     ("patient_responsibility", ("your responsibility", "you owe", "your share", "pt resp", "patient resp",
-                                "your balance", "patient balance", "amount you owe", "patient owes", "you pay")),
-    ("insurer_paid", ("paid by plan", "plan paid", "ins paid", "insurance paid", "plan pays", "insurer paid", "paid")),
+                                "your balance", "patient balance", "amount you owe", "patient owes", "you pay",
+                                "balance")),
+    ("insurer_paid", ("paid by plan", "plan paid", "ins paid", "insurance paid", "plan pays", "insurer paid",
+                      "ins pmt", "insurance pmt", "plan pmt", "pmt", "paid")),
     ("allowed_amount", ("allowed",)),
     ("billed_amount", ("amount billed", "billed", "charges", "charge", "provider charged", "amount charged")),
     ("service_date", ("date of service", "service date", "svc date", "dos", "date")),
@@ -37,7 +42,13 @@ _HEADER_RULES: list[tuple[str | None, tuple[str, ...]]] = [
     ("description", ("description", "service")),
 ]
 AMOUNT_FIELDS = ("billed_amount", "allowed_amount", "insurer_paid", "patient_responsibility")
+NON_DESC_COLUMNS = ("code", "_modifier", "_units")
 SKIP_ROW = re.compile(r"\b(total|totals|payment|thank you|balance due|adjustment)\b", re.IGNORECASE)
+
+
+def _has_key(text: str, key: str) -> bool:
+    # short keys ("mod", "dos", "pmt", "adj") must be whole words; longer ones may be substrings
+    return bool(re.search(rf"\b{re.escape(key)}\b", text)) if len(key) <= 4 else key in text
 
 
 def classify_header(cell: str) -> str | None:
@@ -45,7 +56,7 @@ def classify_header(cell: str) -> str | None:
     if not c:
         return None
     for fld, keys in _HEADER_RULES:
-        if any(k in c for k in keys):
+        if any(_has_key(c, k) for k in keys):
             return fld if fld else "_ignore"
     return None
 
@@ -108,7 +119,11 @@ def parse_code(tok: str | None) -> str | None:
     """Return a CPT/HCPCS code, repairing O/l/I misreads in digit positions."""
     if not tok:
         return None
-    t = tok.strip().upper() if tok.strip()[:1].isalpha() and tok.strip()[1:].isdigit() else tok.strip()
+    t = tok.strip()
+    m = re.fullmatch(r"(\S{5})-[A-Z0-9]{2}", t)  # code with a modifier attached, e.g. 99214-25
+    if m:
+        t = m.group(1)
+    t = t.upper() if t[:1].isalpha() and t[1:].isdigit() else t
     if CODE_RE.match(t):
         return t
     if len(t) == 5:
@@ -231,7 +246,12 @@ def parse_fixed_width(text: str, warnings: list[str]) -> list[dict]:
                 continue
             last_was_item = False
             desc_from = rest_start + (tok.end() if (tok and code) else 0)
-            desc = line[desc_from:amts[0].start()].strip()
+            # keep only words that do not sit under a code / modifier / units column header
+            desc = " ".join(
+                w.group(0) for w in re.finditer(r"\S+", line[:amts[0].start()])
+                if w.start() >= desc_from and not any(
+                    f in NON_DESC_COLUMNS and w.start() < e and s < w.end() for s, e, f in segs)
+            )
             if code is None and (SKIP_ROW.search(desc) or not dm):
                 continue
             d = parse_date(dm.group(0)) if dm else None
@@ -329,8 +349,10 @@ def find_duplicates(items: list[LineItem]) -> list[tuple[int, int]]:
     for i in range(len(items)):
         for j in range(i + 1, len(items)):
             a, b = items[i], items[j]
-            if (a.service_date, a.code, a.billed_amount, a.description.lower()) == \
-               (b.service_date, b.code, b.billed_amount, b.description.lower()) and a.billed_amount is not None:
+            # description is compared only when there is no code: OCR noise often differs between copies
+            ka = (a.service_date, a.code, a.billed_amount, None if a.code else a.description.lower())
+            kb = (b.service_date, b.code, b.billed_amount, None if b.code else b.description.lower())
+            if ka == kb and a.billed_amount is not None:
                 pairs.append((i, j))
     return pairs
 
