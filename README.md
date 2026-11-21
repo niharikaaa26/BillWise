@@ -1,15 +1,21 @@
-# BillWise — Phase 1
+# BillWise
 
-BillWise will eventually explain US medical bills and insurance Explanations of
-Benefits (EOBs) in plain English. **Phase 1** covers only the groundwork:
+BillWise explains US medical bills and insurance Explanations of Benefits (EOBs) in
+plain English.
 
-1. **Parsing**: turn a text bill or EOB into structured line items (service date,
-   CPT/HCPCS code, description, billed, allowed, insurer paid, patient responsibility).
-2. **Redaction**: remove personal identifiers *before* any later model call.
-3. **Evaluation**: measure both against labeled ground truth and report the numbers
-   the harness actually computes.
+- **Phase 1 (groundwork):**
+  1. **Parsing**: turn a text bill or EOB into structured line items (service date,
+     CPT/HCPCS code, description, billed, allowed, insurer paid, patient responsibility).
+  2. **Redaction**: remove personal identifiers *before* any model call.
+  3. **Evaluation**: measure both against labeled ground truth and report the numbers
+     the harness actually computes.
+- **Phase 2 (explanations):** retrieval over a plain-language knowledge base plus an
+  explainer model. It answers "what is this charge and why do I owe it?" using only the
+  parsed numbers, and checks the answer against them. See
+  [Phase 2](#phase-2-plain-english-explanations).
 
-There is no retrieval, no LLM, no cloud service and no API key in this phase.
+Nothing calls a cloud service by default. The Claude explainer runs only when you
+opt in with your own Anthropic credentials.
 
 ## Data: synthetic only
 
@@ -135,6 +141,8 @@ Invoke-RestMethod -Method Post -Uri http://localhost:8000/redact -ContentType 'a
 ```
 
 - `POST /redact` and `POST /parse` take `{"text": "..."}`.
+- `POST /explain` takes `{"text": "...", "question": "..."}`; the question is optional,
+  up to 1,000 characters. It uses the mock explainer unless `BILLWISE_LLM=claude` is set.
 - Input limits: text must be 1–100,000 characters, not blank, with no NUL bytes
   (otherwise 422). The raw request body is capped at 512 KB (otherwise 413), including
   chunked uploads.
@@ -150,9 +158,71 @@ docker build -t billwise .
 docker run -p 8000:8000 billwise
 ```
 
-CI ([.github/workflows/ci.yml](.github/workflows/ci.yml)) runs the tests and the full
-evaluation on Python 3.11 and 3.12, uploads `results.json`, then builds the Docker
-image and smoke-tests it.
+CI ([.github/workflows/ci.yml](.github/workflows/ci.yml)) runs the tests and both
+evaluations on Python 3.11 and 3.12, uploads the results, then builds the Docker image
+and smoke-tests `/redact` and `/explain`. CI never calls a model API.
+
+## Phase 2: plain-English explanations
+
+```
+bill text ──► parse ──► line items ──► totals, flags (computed in code)
+    │                                   │
+    └──► redact (document + question + descriptions, one pass)
+                                        ▼
+            ExplainRequest = redacted descriptions, numbers, flags,
+                             retrieved snippets, redacted question
+                                        ▼
+                       explainer (mock, or Claude if opted in)
+                                        ▼
+       grounding check (numbers, citations, line numbers) ──► restore placeholders locally
+```
+
+**Privacy by data minimization.** The model never receives the document text, not even
+redacted. It gets only an `ExplainRequest` (see
+[billwise/explain.py](billwise/explain.py)):
+- the parsed line items, with descriptions passed through the redactor;
+- totals computed in code;
+- flags (possible duplicate, insurance paid $0, pending, "not a bill");
+- the knowledge-base snippets it may cite;
+- the question, redacted in the context of the whole document, so a name found behind
+  `Patient Name:` is also caught when the user types it.
+
+Placeholders in the answer are restored locally. `/explain` returns the exact request,
+so you can see what was sent.
+
+**Knowledge base.** [billwise/knowledge_base.json](billwise/knowledge_base.json) holds
+21 billing and EOB terms, plus explanations for the 22 codes the generator uses. It's
+all written in our own words, not AMA CPT descriptor text (which is copyrighted), and
+is general information, not medical or legal advice.
+
+**Retrieval.** [billwise/retrieve.py](billwise/retrieve.py) looks up codes exactly,
+then falls back to pure-Python BM25 over each entry's title, keywords and text. That
+covers free-text questions and lines whose code is missing or unknown.
+
+**Explainers.**
+- `MockExplainer` (default) is deterministic and template-based, so tests, CI and
+  offline use need no network.
+- `ClaudeExplainer` uses `claude-opus-5-5` through the official Anthropic SDK, with
+  structured JSON output (a fixed schema) and server-side refusal fallback enabled
+  (`fallbacks: "default"`), at effort `medium`. It's used only when `BILLWISE_LLM=claude`
+  is set, and needs Anthropic credentials and `pip install -r requirements-llm.txt`. It
+  has been tested only against a fake client; **it has not been run against the live
+  API in this repository.**
+- The default reading level is "plain English at about a 6th–8th grade reading level",
+  and can be changed per call.
+
+**Grounding check.** Every dollar figure in an answer must equal a parsed value or a
+computed total. Every cited snippet must be one that was provided, and every line
+number must exist. Failures are returned as `warnings` and `unsupported_amounts`.
+
+```powershell
+.venv\Scripts\python -m eval.run_phase2
+```
+
+The Phase 2 eval ([eval/run_phase2.py](eval/run_phase2.py)) writes
+[eval/phase2_results.json](eval/phase2_results.json), with console output in
+[eval/phase2_last_run.txt](eval/phase2_last_run.txt). `--live N` also runs Claude on N
+bills per dataset. That costs money and is never run by default or in CI.
 
 ## How metrics are computed
 
@@ -266,6 +336,59 @@ whatever convention it hasn't seen. A redaction step that over-redacts by defaul
 example, masking any token after a key that isn't on a known-safe list) would fail
 safer than one that only redacts what it recognises.
 
+## Phase 2 results (from `eval/phase2_last_run.txt`; synthetic data, mock explainer)
+
+**Privacy of the model request.** Each bill is also asked a question that contains the
+patient's name exactly as printed ("Hi, this is SMITH, PATRICE…"). The table counts
+ground-truth PII values found anywhere in the request JSON. "Baseline" is what would
+leak if the Phase 1 redacted text were sent instead.
+
+| Dataset | PII values | Leaked into request | Request leak-free | Baseline leak-free |
+|---|---|---|---|---|
+| `synthetic` (48) | 380 | 0 | 100.00% | 100.00% |
+| `dev2` (12) | 79 | 0 | 100.00% | 100.00% |
+| `dev3` (12) | 123 | 0 | 100.00% | 100.00% |
+| `dev4` (12) | 72 | 0 | 100.00% | 100.00% |
+| `dev5` (12) | 77 | 0 | 100.00% | 100.00% |
+| `heldout` (12) | 72 | **12** | **83.33%** | 33.33% |
+
+- **What leaks on the held-out set:** all 12 leaks are the patient's name in caret form
+  (`DOE^KEISHA^A`). The test question repeats it, and the Phase 1 redactor doesn't
+  recognise it in the document either.
+- **What minimization saves:** sending the redacted document would have leaked 48 values
+  (DOBs, IDs, partial addresses). Sending only parsed facts cut that to 12.
+- **An earlier bug:** the first Phase 2 run found 12–36 leaked values per dataset,
+  because the question was redacted on its own, without the document's context. The fix
+  (one redaction pass over document + question) is committed separately, and the numbers
+  above are after it.
+
+**Retrieval and grounding**
+
+| Metric | `synthetic` | `dev2` | `dev3` | `dev4` | `dev5` | `heldout` |
+|---|---|---|---|---|---|---|
+| Gold codes whose snippet is in the request | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
+| Description-only code search, hit@1 | 95.48% | 90.00% | 91.67% | 96.88% | 96.36% | 98.21% |
+| Description-only code search, hit@3 | 100.00% | 98.33% | 100.00% | 100.00% | 100.00% | 100.00% |
+| Dollar figures in answers / unsupported | 997 / 0 | 228 / 0 | 285 / 0 | 296 / 0 | 268 / 0 | 275 / 0 |
+| Locally computed billed total correct | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
+| Locally computed patient-share total correct | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
+
+- **Question retrieval** (36 hand-written questions): hit@1 **86.11%**, hit@3 **94.44%**.
+  Five questions miss the top spot:
+  - "charge was $2,450 but I only owe $450" ranks an IV-push code first, not adjustment.
+  - "Is this an actual bill…" ranks denial first, not the EOB entry.
+  - "code starting with J" ranks CPT first, not HCPCS.
+  - "How much do I actually owe?" ranks billed amount first.
+  - "the Toradol shot" ranks the flu vaccine first, not ketorolac.
+- **Description-only code search** mostly confuses `99285` with `99283`. Both are
+  emergency visits, and the description's "high severity" doesn't match the entry's
+  "highest". It's used only when a line's code is missing or unknown.
+- **Grounding is 0 unsupported for the mock by construction:** it only writes numbers
+  from the request. These figures check the pipeline, not a language model's
+  faithfulness. That needs a live run (`--live N`), which hasn't been done.
+- **Totals are 100% on the held-out set too,** because round 4's parser reads every
+  amount on that format. Totals stop being right as soon as parsing misses an amount.
+
 ## Limitations
 
 - **All results are on synthetic data.** They say nothing reliable about real bills.
@@ -289,3 +412,15 @@ safer than one that only redacts what it recognises.
   of the label noise that human annotation would.
 - Business-contact redactions (insurer phones, clinic addresses) are neutral by design,
   so their precision cost doesn't show in the numbers.
+- **Phase 2 has not been evaluated with a real model.** Every explanation number above
+  comes from the deterministic mock. The Claude client is tested only against a fake
+  client, so how well real answers stay grounded, and how readable they are, is
+  unmeasured.
+- **The knowledge base is small and hand-written:** 21 terms and only the 22 codes the
+  generator uses. A real bill with any other code gets no code explanation, only the
+  description-based search, which can't help when nothing matches.
+- **Data minimization limits leaks but doesn't remove them.** Line descriptions and the
+  question still pass through the rule-based redactor, so a format it doesn't recognise
+  can still leak, as the caret names on the held-out set show.
+- **I wrote the question set myself,** right after the knowledge base, so its retrieval
+  numbers are optimistic in the same way the parsing numbers were.

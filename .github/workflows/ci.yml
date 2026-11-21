@@ -14,26 +14,32 @@ jobs:
       matrix:
         python-version: ["3.11", "3.12"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
           cache: pip
-      - run: pip install -r requirements-dev.txt
+      # requirements-llm.txt adds the Anthropic SDK so the Claude client wiring is tested
+      # against a fake client. No API key is used and no request leaves the runner.
+      - run: pip install -r requirements-dev.txt -r requirements-llm.txt
       - name: Unit + end-to-end tests
         run: pytest -q
-      - name: Full evaluation
+      - name: Phase 1 evaluation (parsing + redaction)
         run: python -m eval.run_eval --max-failures 20
-      - uses: actions/upload-artifact@v4
+      - name: Phase 2 evaluation (retrieval + explanations, mock model)
+        run: python -m eval.run_phase2 --max-failures 8
+      - uses: actions/upload-artifact@v5
         if: matrix.python-version == '3.12'
         with:
           name: eval-results
-          path: eval/results.json
+          path: |
+            eval/results.json
+            eval/phase2_results.json
 
   docker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: docker build -t billwise:ci .
       - name: Smoke test container
         run: |
@@ -41,4 +47,7 @@ jobs:
           for i in $(seq 1 20); do curl -sf localhost:8000/health && break; sleep 1; done
           curl -sf -X POST localhost:8000/redact -H 'content-type: application/json' \
             -d '{"text":"Patient Name: DOE, JANE\nMember ID: W123456789"}' | tee /dev/stderr | grep -q '\[NAME_1\]'
+          curl -sf -X POST localhost:8000/explain -H 'content-type: application/json' \
+            -d '{"text":"Service Date | Code | Description | Billed | You Owe\n03/14/2025 | 99213 | Office visit | $250.00 | $28.00","question":"How much do I owe?"}' \
+            | tee /dev/stderr | grep -q '\$28.00'
           docker rm -f bw
