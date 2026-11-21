@@ -368,8 +368,23 @@ class Redactor:
         return out
 
     # ---- public API ------------------------------------------------------
+    @staticmethod
+    def _union_overlapping(cands: list[_Cand], typ: str = "ADDRESS") -> list[_Cand]:
+        """Merge overlapping candidates of one type into their union, so that e.g. a street
+        match and a city/state/ZIP match that share words cannot leave a house number behind."""
+        same = sorted((c for c in cands if c.type == typ), key=lambda c: c.start)
+        merged: list[_Cand] = []
+        for c in same:
+            if merged and c.start < merged[-1].end:
+                last = merged[-1]
+                merged[-1] = _Cand(last.start, max(last.end, c.end), typ, max(last.prio, c.prio),
+                                   last.source + "|" + c.source)
+            else:
+                merged.append(c)
+        return [c for c in cands if c.type != typ] + merged
+
     def redact(self, text: str) -> RedactionResult:
-        chosen = self._resolve(self.detect(text))
+        chosen = self._resolve(self._union_overlapping(self.detect(text)))
         chosen = self._resolve(chosen + self._propagate(text, chosen))
         chosen = self._merge_adjacent(text, chosen)
 
