@@ -36,7 +36,8 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from billwise.models import LINE_FIELDS, MONEY_FIELDS  # noqa: E402
-from billwise.parse import parse  # noqa: E402
+from billwise.models import ParseResult  # noqa: E402
+from billwise.parse import _finish, find_duplicates, parse, parse_anchored  # noqa: E402
 from billwise.redact import PII_TYPES, Redactor  # noqa: E402
 
 MIN_MATCH_FIELDS = 3
@@ -170,7 +171,7 @@ def _align(gold: list[dict], pred: list) -> list[tuple[int, int, int]]:
     return sorted(pairs)
 
 
-def eval_parse(docs: list[dict], text_key: str = "text", collect_failures: bool = True) -> dict:
+def eval_parse(docs: list[dict], text_key: str = "text", collect_failures: bool = True, parse_fn=None) -> dict:
     correct = Counter()
     n_gold = n_pred = n_matched = 0
     docs_perfect = 0
@@ -181,7 +182,7 @@ def eval_parse(docs: list[dict], text_key: str = "text", collect_failures: bool 
     formats = Counter()
     for d in docs:
         gold = d["truth"]["line_items"]
-        res = parse(d[text_key])
+        res = (parse_fn or parse)(d[text_key])
         formats[f'{d["truth"]["layout"]}->{res.format}'] += 1
         pred = res.line_items
         pairs = _align(gold, pred)
@@ -254,6 +255,12 @@ def eval_parse(docs: list[dict], text_key: str = "text", collect_failures: bool 
 
 
 # ---------------------------------------------------------------------------
+def fallback_only_parse(text: str) -> ParseResult:
+    """Run only the line-oriented fallback, to measure how it copes with every layout."""
+    items = _finish(parse_anchored(text, []))
+    return ParseResult(format="anchored", line_items=items, possible_duplicates=find_duplicates(items))
+
+
 def load_docs(data_dir: Path) -> list[dict]:
     docs = []
     for jf in sorted(data_dir.glob("bill_*.json")):
@@ -278,6 +285,11 @@ def run(data_dir: Path) -> dict:
         "parsing": eval_parse(docs),
         "parsing_on_redacted_text": {
             k: v for k, v in eval_parse(docs, "redacted", collect_failures=False).items()
+            if k in ("line_recall", "line_precision", "field_accuracy_overall", "documents_fully_correct")
+        },
+        # diagnostic: the fallback strategy alone (normally it runs only when nothing else matches)
+        "fallback_only_parsing": {
+            k: v for k, v in eval_parse(docs, collect_failures=False, parse_fn=fallback_only_parse).items()
             if k in ("line_recall", "line_precision", "field_accuracy_overall", "documents_fully_correct")
         },
     }
@@ -323,6 +335,9 @@ def print_report(r: dict, max_fail: int = 60) -> None:
     rr = r["parsing_on_redacted_text"]
     print(f"  parsing AFTER redaction: line recall {_pct(rr['line_recall'])}, field acc {_pct(rr['field_accuracy_overall'])},"
           f" docs fully correct {rr['documents_fully_correct']}/{q['documents']}")
+    fb = r["fallback_only_parsing"]
+    print(f"  diagnostic, fallback strategy ALONE: line recall {_pct(fb['line_recall'])},"
+          f" field acc {_pct(fb['field_accuracy_overall'])}, docs fully correct {fb['documents_fully_correct']}/{q['documents']}")
     print()
     print("FAILURES")
     f = p["failures"]

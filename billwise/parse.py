@@ -380,6 +380,141 @@ def parse_key_value(text: str, warnings: list[str]) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# Fallback strategy: line-oriented, anchored on billing codes
+# ---------------------------------------------------------------------------
+# Used only when no table / key-value strategy finds anything. It does not need
+# a header: each item starts at a line holding a billing code (plus a date, an
+# amount or a "CPT"/"HCPCS" prefix), and runs until the next such line, a blank
+# line or a totals line. Amounts are mapped by (1) label words right before
+# them, (2) the nearest header-like line, (3) arithmetic consistency
+# (allowed = paid + patient share), (4) conventional left-to-right column order.
+CODE_TOKEN = re.compile(r"(?<![\w$.,/:-])(?P<code>\d{5}|[A-V]\d{4})(?:-[A-Z0-9]{2})?(?![\w.,/])")
+CODE_PREFIX = re.compile(r"\b(?:CPT|HCPCS|Proc(?:edure)?|Code)\b[^\w\n]{0,3}$", re.IGNORECASE)
+ZIP_CONTEXT = re.compile(r"\b[A-Z]{2},? $")
+MISSING_TOKEN = re.compile(r"(?<!\S)(?:--|-|—|–)(?!\S)")
+SEGMENT_BREAK = re.compile(r"[·|;•]|\s{3,}")
+_AMOUNT_KEYS = [(f, k) for f, keys in _HEADER_RULES if f in AMOUNT_FIELDS or f is None for k in keys]
+
+
+def _anchor(line: str) -> re.Match | None:
+    for m in CODE_TOKEN.finditer(line):
+        before = line[:m.start()]
+        if ZIP_CONTEXT.search(before):
+            continue  # "OH 45011" is a ZIP code
+        if DATE_RE.search(line) or AMOUNT_RE.search(line[m.end():]) or CODE_PREFIX.search(before):
+            return m
+    return None
+
+
+def _label_field(text_before: str) -> str | None:
+    """Classify the words immediately before an amount (same segment), e.g. 'Plan paid'."""
+    seg = SEGMENT_BREAK.split(text_before)[-1]
+    seg = AMOUNT_RE.split(seg)[-1]
+    words = re.findall(r"[A-Za-z][A-Za-z'/]*", seg)[-4:]
+    if not words:
+        return None
+    f = classify_header(" ".join(words))
+    return f if f in AMOUNT_FIELDS or f == "_ignore" else None
+
+
+def _header_amount_fields(lines: list[str], before: int) -> list[str]:
+    """Amount columns named, in order, by the nearest preceding header-like line."""
+    for ln in reversed(lines[:before]):
+        if AMOUNT_RE.search(ln) or _anchor(ln):
+            continue
+        low = " ".join(ln.lower().split())
+        hits: list[tuple[int, int, str]] = []
+        for f, k in sorted(_AMOUNT_KEYS, key=lambda x: -len(x[1])):
+            for m in re.finditer(rf"\b{re.escape(k)}\b", low):
+                if all(m.end() <= s or m.start() >= e for s, e, _ in hits):
+                    hits.append((m.start(), m.end(), f or "_ignore"))
+        if sum(f != "_ignore" for _, _, f in hits) >= 2:
+            return [f for _, _, f in sorted(hits)]
+    return []
+
+
+def _close(a: Decimal, b: Decimal) -> bool:
+    return abs(a - b) <= Decimal("0.01")
+
+
+def _arithmetic_fields(vals: list[Decimal | None]) -> list[str]:
+    n = len(vals)
+    B, A, P, R, X = "billed_amount", "allowed_amount", "insurer_paid", "patient_responsibility", "_ignore"
+    if n == 4 and None not in vals:
+        v = vals
+        if _close(v[1], v[2] + v[3]) and v[0] >= v[1]:
+            return [B, A, P, R]
+        if _close(v[0], v[1] + v[2] + v[3]):
+            return [B, P, X, R]  # charges = paid + adjustment + patient share
+    if n >= 5 and None not in vals:
+        for i in range(1, n):
+            for j in range(i + 1, n):
+                for k in range(j + 1, n):
+                    if _close(vals[i], vals[j] + vals[k]) and vals[0] >= vals[i]:
+                        out = [X] * n
+                        out[0], out[i], out[j], out[k] = B, A, P, R
+                        return out
+    return {1: [B], 2: [B, R], 3: [B, P, R], 4: [B, A, P, R]}.get(n, [B] + [X] * (n - 2) + [R])
+
+
+def parse_anchored(text: str, warnings: list[str]) -> list[dict]:
+    lines = text.splitlines()
+    anchors = [(i, m) for i, ln in enumerate(lines) if (m := _anchor(ln))]
+    items: list[dict] = []
+    prev_date: date | None = None
+    for n, (i, m) in enumerate(anchors):
+        stop = anchors[n + 1][0] if n + 1 < len(anchors) else len(lines)
+        block = [i]
+        for j in range(i + 1, stop):
+            if not lines[j].strip() or SKIP_ROW.search(lines[j]):
+                break
+            block.append(j)
+        # amounts and explicit missing markers, with the label words before each
+        slots: list[tuple[Decimal | None, str | None]] = []
+        desc_parts: list[str] = []
+        for j in block:
+            ln = lines[j]
+            start = m.end() if j == i else 0
+            toks = [(a.start(), a.end(), parse_amount(a.group(0))) for a in AMOUNT_RE.finditer(ln, start)]
+            first_amt = toks[0][0] if toks else None
+            for mm in MISSING_TOKEN.finditer(ln, start):
+                lbl = _label_field(ln[:mm.start()])
+                if lbl or (first_amt is not None and mm.start() > first_amt):
+                    toks.append((mm.start(), mm.end(), None))
+            toks.sort()
+            for s, e, v in toks:
+                slots.append((v, _label_field(ln[:s])))
+            text_end = toks[0][0] if toks else len(ln)
+            if j == i:
+                piece = ln[m.end():text_end]
+            elif not toks:
+                piece = ln
+            else:
+                piece = ""
+            piece = piece.strip(" \t-—–:·|")
+            if piece:
+                desc_parts.append(piece)
+        dm = DATE_RE.search(lines[i]) or next((d for j in block if (d := DATE_RE.search(lines[j]))), None)
+        d = parse_date(dm.group(0)) if dm else prev_date
+        item: dict = {"service_date": d, "code": parse_code(m.group(0)), "description": " ".join(desc_parts)}
+        vals = [v for v, _ in slots]
+        labels = [lbl for _, lbl in slots]
+        if slots and all(labels):
+            fields = labels
+        else:
+            hdr = _header_amount_fields(lines, i)
+            fields = hdr if len(hdr) == len(slots) else _arithmetic_fields(vals)
+            if len(hdr) != len(slots):
+                warnings.append(f"amount columns for line {n + 1} inferred without labels")
+        for f, v in zip(fields, vals):
+            if f in AMOUNT_FIELDS and f not in item:
+                item[f] = v
+        items.append(item)
+        prev_date = d
+    return items
+
+
+# ---------------------------------------------------------------------------
 STRATEGIES = (
     ("pipe_table", parse_pipe_table),
     ("csv", parse_csv),
@@ -412,6 +547,14 @@ def parse(text: str) -> ParseResult:
             items, warn = [], [f"{name} parser error: {exc!r}"]
         if len(items) > len(best_items):
             best_name, best_items, best_warn = name, items, warn
+    if not best_items:  # no table or key/value layout recognised: degrade to the line-oriented fallback
+        warn = []
+        try:
+            items = parse_anchored(text, warn)
+        except Exception as exc:
+            items, warn = [], [f"anchored parser error: {exc!r}"]
+        if items:
+            best_name, best_items, best_warn = "anchored", items, warn
     line_items = _finish(best_items)
     warnings = list(best_warn)
     dups = find_duplicates(line_items)
