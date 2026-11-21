@@ -1,0 +1,95 @@
+{
+  "id": "bill_009",
+  "layout": "collapsed_scan",
+  "messy": [
+    "collapsed_columns",
+    "colonless_labels",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 81,
+      "end": 92,
+      "type": "NAME",
+      "text": "PATEL ANDRE"
+    },
+    {
+      "start": 100,
+      "end": 108,
+      "type": "DOB",
+      "text": "11092003"
+    },
+    {
+      "start": 116,
+      "end": 126,
+      "type": "MEMBER_ID",
+      "text": "MBR9520748"
+    },
+    {
+      "start": 132,
+      "end": 139,
+      "type": "ACCOUNT_ID",
+      "text": "5347928"
+    },
+    {
+      "start": 145,
+      "end": 186,
+      "type": "ADDRESS",
+      "text": "4745 Lakeview Dr #11B Oak Harbor WA 98236"
+    },
+    {
+      "start": 190,
+      "end": 202,
+      "type": "PHONE",
+      "text": "319 555 0155"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 41,
+      "end": 55,
+      "type": "PHONE",
+      "text": "1-888-555-0188"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-08-26",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "297.99",
+      "allowed_amount": "139.62",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "139.62"
+    },
+    {
+      "service_date": "2025-08-28",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "1155.94",
+      "allowed_amount": "740.65",
+      "insurer_paid": "666.59",
+      "patient_responsibility": "74.06"
+    },
+    {
+      "service_date": "2025-08-28",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "43.03",
+      "allowed_amount": "18.60",
+      "insurer_paid": "18.60",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-08-28",
+      "code": "81001",
+      "description": "Urinalysis, automated, wilh microscopy",
+      "billed_amount": "86.09",
+      "allowed_amount": "65.38",
+      "insurer_paid": "58.84",
+      "patient_responsibility": "6.54"
+    }
+  ],
+  "duplicate_pairs": []
+}

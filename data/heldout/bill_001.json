@@ -1,124 +1,97 @@
 {
   "id": "bill_001",
-  "layout": "collapsed_scan_heldout",
+  "layout": "kv_export_heldout",
   "messy": [
-    "collapsed_columns",
-    "colonless_labels",
-    "duplicate_charge",
-    "ocr_amount"
+    "caret_fields",
+    "key_value_export",
+    "ocr_amount",
+    "ocr_description"
   ],
   "pii": [
     {
-      "start": 81,
-      "end": 97,
-      "type": "NAME",
-      "text": "WILLIAMS BRIANNA"
-    },
-    {
-      "start": 105,
-      "end": 113,
-      "type": "DOB",
-      "text": "01141970"
-    },
-    {
-      "start": 121,
-      "end": 132,
-      "type": "MEMBER_ID",
-      "text": "XGH02727255"
-    },
-    {
-      "start": 138,
-      "end": 145,
-      "type": "ACCOUNT_ID",
-      "text": "3582255"
-    },
-    {
-      "start": 151,
-      "end": 186,
-      "type": "ADDRESS",
-      "text": "2955 Hillcrest Dr Riverton OH 45029"
-    },
-    {
-      "start": 190,
-      "end": 202,
-      "type": "PHONE",
-      "text": "513 555 0193"
-    },
-    {
-      "start": 209,
-      "end": 238,
-      "type": "EMAIL",
-      "text": "brianna.williams1@example.com"
-    }
-  ],
-  "allowed_redactions": [
-    {
       "start": 41,
-      "end": 55,
+      "end": 53,
+      "type": "NAME",
+      "text": "DOE^KEISHA^A"
+    },
+    {
+      "start": 58,
+      "end": 66,
+      "type": "DOB",
+      "text": "19531120"
+    },
+    {
+      "start": 71,
+      "end": 81,
+      "type": "ACCOUNT_ID",
+      "text": "MR26136582"
+    },
+    {
+      "start": 91,
+      "end": 130,
+      "type": "ADDRESS",
+      "text": "7598 RIVERBEND AVE^^OAK HARBOR^WA^98277"
+    },
+    {
+      "start": 135,
+      "end": 148,
       "type": "PHONE",
-      "text": "1-888-555-0180"
+      "text": "(479)555-0111"
+    },
+    {
+      "start": 200,
+      "end": 213,
+      "type": "MEMBER_ID",
+      "text": "CPH-3556-5584"
     }
   ],
+  "allowed_redactions": [],
   "line_items": [
     {
-      "service_date": "2025-06-21",
-      "code": "81001",
-      "description": "Urinalysis, automated, with microscopy",
-      "billed_amount": "25.41",
-      "allowed_amount": "14.05",
-      "insurer_paid": "14.05",
+      "service_date": "2025-03-21",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "29.04",
+      "allowed_amount": "17.84",
+      "insurer_paid": "17.84",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-06-21",
-      "code": "36415",
-      "description": "Routine venipuncture",
-      "billed_amount": "36.05",
-      "allowed_amount": "24.69",
-      "insurer_paid": "19.75",
-      "patient_responsibility": "4.94"
+      "service_date": "2025-03-24",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "478.49",
+      "allowed_amount": "354.42",
+      "insurer_paid": "283.54",
+      "patient_responsibility": "70.88"
     },
     {
-      "service_date": "2025-06-22",
+      "service_date": "2025-03-24",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "76.91",
+      "allowed_amount": "48.12",
+      "insurer_paid": "38.50",
+      "patient_responsibility": "9.62"
+    },
+    {
+      "service_date": "2025-03-24",
+      "code": "90471",
+      "description": "Immunizalion administration, single vaccine",
+      "billed_amount": "51.17",
+      "allowed_amount": "22.28",
+      "insurer_paid": "22.28",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-03-26",
       "code": "A4649",
       "description": "Surgical supply, miscellaneous",
-      "billed_amount": "190.86",
-      "allowed_amount": "145.16",
-      "insurer_paid": "116.13",
-      "patient_responsibility": "29.03"
-    },
-    {
-      "service_date": "2025-06-22",
-      "code": "36415",
-      "description": "Routine venipuncture",
-      "billed_amount": "30.02",
-      "allowed_amount": "13.04",
+      "billed_amount": "45.62",
+      "allowed_amount": "19.41",
       "insurer_paid": "0.00",
-      "patient_responsibility": "13.04"
-    },
-    {
-      "service_date": "2025-06-22",
-      "code": "36415",
-      "description": "Routine venipuncture",
-      "billed_amount": "30.02",
-      "allowed_amount": "13.04",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "13.04"
-    },
-    {
-      "service_date": "2025-06-22",
-      "code": "87880",
-      "description": "Rapid strep test",
-      "billed_amount": "50.16",
-      "allowed_amount": "17.56",
-      "insurer_paid": "12.29",
-      "patient_responsibility": "5.27"
+      "patient_responsibility": "19.41"
     }
   ],
-  "duplicate_pairs": [
-    [
-      3,
-      4
-    ]
-  ]
+  "duplicate_pairs": []
 }

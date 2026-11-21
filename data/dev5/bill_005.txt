@@ -1,0 +1,16 @@
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0155
+Stmt Dt 06/09/25
+Pt Name WILLIAMS KEVIN
+Pt DOB 04092012
+Mbr No MBR6249524
+Acct 9857620
+Addr 3884 Sunset Ln Unit 16 Springdale AR 72727
+Ph 845 555 0198
+Email kevin.williams8@example.net
+
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+05/23/25 93000 Electrocardiogram, routine, with interpretation and report 292.14 117.51 117.51 0.00
+05/23/25 90471 Immunization administration, single vaccine 41.75 29.76 23.81 5.95
+05/25/25 85025 Complete blood count with automated differential 99.l2 50.47 45.42 5.O5
+Total Pt Owes 11.00

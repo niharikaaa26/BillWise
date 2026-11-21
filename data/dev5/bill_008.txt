@@ -1,0 +1,19 @@
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0165
+Stmt Dt 09/13/25
+Pt Name RAMIREZ TOMASZ
+Pt DOB 06221959
+Mbr No XGH39317911
+Acct 4390288
+Addr 5137 Sunset Road Unit 22B Springdale AR 72774
+Ph 864 555 0155
+Email tomasz.ramirez71@example.org
+
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+08/18/25 J2405 Ondansetron hydrochloride injection, per 1 mg 31.34 - 10.41 2.60
+08/18/25 97110 Therapeutic exercises, each 15 minutes 73.03 34.76 31.28 3.48
+08/18/25 97110 Therapeutic exercises, each 15 minutes l44.17 - 86.27 0.00
+08/21/25 97110 Therapeutic exercises, each 15 minutes 67.89 50.33 45.30 5.03
+08/21/25 81001 Urinalysis, automated, with microscopy 26.89 - 14.90 1.66
+08/21/25 81001 Urinalysis, automated, with microscopy 55.51 17.73 14.18 3.55
+Total Pt Owes 16.32

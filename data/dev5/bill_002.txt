@@ -1,0 +1,17 @@
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0114
+Stmt Dt 05/21/25
+Pt Name FITZGERALD BRIANNA
+Pt DOB 11101977
+Mbr No ZQ9911513-01
+Acct 7116648
+Addr 4629 Lakeview Boulevard Fairview TN 37014
+Ph 615 555 0149
+Email brianna.fitzgerald74@mail.example.com
+
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+04/16/25 96374 IV push, single or initial substance 225.30 169.85 169.85 0.00
+04/17/25 70450 CT head or brain without contrast l645.92 929.14 650.40 278.74
+04/18/25 81001 Urinalysis, automated, with microscopy 64.00 39.37 39.37 0.00
+04/21/25 99213 Office visit, established patient, low complexity 130.64 102.32 102.32 O.00
+Total Pt Owes 278.74

@@ -1,95 +1,112 @@
 {
   "id": "bill_009",
-  "layout": "collapsed_scan_heldout",
+  "layout": "kv_export_heldout",
   "messy": [
-    "collapsed_columns",
-    "colonless_labels",
+    "caret_fields",
+    "duplicate_charge",
+    "key_value_export",
     "ocr_amount",
     "ocr_description"
   ],
   "pii": [
     {
-      "start": 81,
-      "end": 92,
-      "type": "NAME",
-      "text": "PATEL ANDRE"
-    },
-    {
-      "start": 100,
-      "end": 108,
-      "type": "DOB",
-      "text": "11092003"
-    },
-    {
-      "start": 116,
-      "end": 126,
-      "type": "MEMBER_ID",
-      "text": "MBR9520748"
-    },
-    {
-      "start": 132,
-      "end": 139,
-      "type": "ACCOUNT_ID",
-      "text": "5347928"
-    },
-    {
-      "start": 145,
-      "end": 186,
-      "type": "ADDRESS",
-      "text": "4745 Lakeview Dr #11B Oak Harbor WA 98236"
-    },
-    {
-      "start": 190,
-      "end": 202,
-      "type": "PHONE",
-      "text": "319 555 0155"
-    }
-  ],
-  "allowed_redactions": [
-    {
       "start": 41,
-      "end": 55,
+      "end": 56,
+      "type": "NAME",
+      "text": "KOWALSKI^RAFAEL"
+    },
+    {
+      "start": 61,
+      "end": 69,
+      "type": "DOB",
+      "text": "19560905"
+    },
+    {
+      "start": 74,
+      "end": 84,
+      "type": "ACCOUNT_ID",
+      "text": "MR51681121"
+    },
+    {
+      "start": 94,
+      "end": 136,
+      "type": "ADDRESS",
+      "text": "4371 LAKEVIEW DR #28B^^OAK HARBOR^WA^98215"
+    },
+    {
+      "start": 141,
+      "end": 154,
       "type": "PHONE",
-      "text": "1-888-555-0188"
+      "text": "(360)555-0117"
+    },
+    {
+      "start": 202,
+      "end": 213,
+      "type": "MEMBER_ID",
+      "text": "XGH58574064"
     }
   ],
+  "allowed_redactions": [],
   "line_items": [
     {
-      "service_date": "2025-08-26",
-      "code": "71046",
-      "description": "Chest x-ray, 2 views",
-      "billed_amount": "297.99",
-      "allowed_amount": "139.62",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "139.62"
+      "service_date": "2025-04-06",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "85.24",
+      "allowed_amount": "42.41",
+      "insurer_paid": "38.17",
+      "patient_responsibility": "4.24"
     },
     {
-      "service_date": "2025-08-28",
-      "code": "99283",
-      "description": "Emergency department visit, moderate severity",
-      "billed_amount": "1155.94",
-      "allowed_amount": "740.65",
-      "insurer_paid": "666.59",
-      "patient_responsibility": "74.06"
-    },
-    {
-      "service_date": "2025-08-28",
-      "code": "J1885",
-      "description": "Ketorolac tromethamine injection, per 15 mg",
-      "billed_amount": "43.03",
-      "allowed_amount": "18.60",
-      "insurer_paid": "18.60",
+      "service_date": "2025-04-06",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "245.42",
+      "allowed_amount": "141.63",
+      "insurer_paid": "141.63",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-08-28",
-      "code": "81001",
-      "description": "Urinalysis, automated, wilh microscopy",
-      "billed_amount": "86.09",
-      "allowed_amount": "65.38",
-      "insurer_paid": "58.84",
-      "patient_responsibility": "6.54"
+      "service_date": "2025-04-06",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "245.42",
+      "allowed_amount": "141.63",
+      "insurer_paid": "141.63",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-06",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 rng",
+      "billed_amount": "62.41",
+      "allowed_amount": "33.60",
+      "insurer_paid": "33.60",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-08",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "297.08",
+      "allowed_amount": "115.99",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "115.99"
+    },
+    {
+      "service_date": "2025-04-08",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1012.88",
+      "allowed_amount": "552.14",
+      "insurer_paid": "441.71",
+      "patient_responsibility": "110.43"
     }
   ],
-  "duplicate_pairs": []
+  "duplicate_pairs": [
+    [
+      1,
+      2
+    ]
+  ]
 }

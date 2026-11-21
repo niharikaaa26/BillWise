@@ -1,127 +1,68 @@
 {
   "id": "bill_004",
-  "layout": "collapsed_scan_heldout",
+  "layout": "kv_export_heldout",
   "messy": [
-    "collapsed_columns",
-    "colonless_labels",
-    "ocr_amount",
-    "ocr_description"
+    "caret_fields",
+    "key_value_export",
+    "ocr_amount"
   ],
   "pii": [
     {
-      "start": 81,
-      "end": 93,
-      "type": "NAME",
-      "text": "SMITH TOMASZ"
-    },
-    {
-      "start": 101,
-      "end": 109,
-      "type": "DOB",
-      "text": "08192018"
-    },
-    {
-      "start": 117,
-      "end": 127,
-      "type": "MEMBER_ID",
-      "text": "MBR9191629"
-    },
-    {
-      "start": 133,
-      "end": 140,
-      "type": "ACCOUNT_ID",
-      "text": "6649352"
-    },
-    {
-      "start": 146,
-      "end": 179,
-      "type": "ADDRESS",
-      "text": "5878 Sunset Ave Lakewood CO 80267"
-    },
-    {
-      "start": 183,
-      "end": 195,
-      "type": "PHONE",
-      "text": "303 555 0146"
-    },
-    {
-      "start": 202,
-      "end": 233,
-      "type": "EMAIL",
-      "text": "tomasz.smith51@mail.example.com"
-    }
-  ],
-  "allowed_redactions": [
-    {
       "start": 41,
-      "end": 55,
+      "end": 52,
+      "type": "NAME",
+      "text": "KIM^XIOMARA"
+    },
+    {
+      "start": 57,
+      "end": 65,
+      "type": "DOB",
+      "text": "19541201"
+    },
+    {
+      "start": 70,
+      "end": 80,
+      "type": "ACCOUNT_ID",
+      "text": "MR63656309"
+    },
+    {
+      "start": 90,
+      "end": 130,
+      "type": "ADDRESS",
+      "text": "8408 CEDAR CT APT 34B^^FAIRVIEW^TN^37080"
+    },
+    {
+      "start": 135,
+      "end": 148,
       "type": "PHONE",
-      "text": "1-888-555-0132"
+      "text": "(319)555-0146"
+    },
+    {
+      "start": 196,
+      "end": 207,
+      "type": "MEMBER_ID",
+      "text": "XGH61060763"
     }
   ],
+  "allowed_redactions": [],
   "line_items": [
     {
-      "service_date": "2025-01-26",
-      "code": "99214",
-      "description": "Office visit, established patient, moderate complexity",
-      "billed_amount": "217.06",
-      "allowed_amount": "160.31",
-      "insurer_paid": "160.31",
+      "service_date": "2025-06-07",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "294.69",
+      "allowed_amount": "177.56",
+      "insurer_paid": "177.56",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-01-27",
-      "code": "70450",
-      "description": "CT head or brain without contrast",
-      "billed_amount": "1116.30",
-      "allowed_amount": "807.93",
-      "insurer_paid": "807.93",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-01-27",
-      "code": "99203",
-      "description": "New patient office visit",
-      "billed_amount": "273.11",
-      "allowed_amount": "103.36",
-      "insurer_paid": "103.36",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-01-27",
-      "code": "70450",
-      "description": "CT head or brain with0ut contrast",
-      "billed_amount": "2544.42",
-      "allowed_amount": "1758.19",
-      "insurer_paid": "1758.19",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-01-27",
-      "code": "99214",
-      "description": "Office visit, established patient, moderate complexity",
-      "billed_amount": "205.67",
-      "allowed_amount": "132.54",
-      "insurer_paid": "106.03",
-      "patient_responsibility": "26.51"
-    },
-    {
-      "service_date": "2025-01-27",
-      "code": "J1885",
-      "description": "Ketorolac tromethamine injection, per 15 mg",
-      "billed_amount": "25.40",
-      "allowed_amount": "17.16",
-      "insurer_paid": "12.01",
-      "patient_responsibility": "5.15"
-    },
-    {
-      "service_date": "2025-01-28",
-      "code": "97110",
-      "description": "Therapeutic exercises, each 15 minutes",
-      "billed_amount": "79.62",
-      "allowed_amount": "26.68",
+      "service_date": "2025-06-07",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "2171.10",
+      "allowed_amount": "1370.51",
       "insurer_paid": "0.00",
-      "patient_responsibility": "26.68"
+      "patient_responsibility": "1370.51"
     }
   ],
   "duplicate_pairs": []

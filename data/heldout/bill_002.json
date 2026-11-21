@@ -1,99 +1,69 @@
 {
   "id": "bill_002",
-  "layout": "collapsed_scan_heldout",
+  "layout": "kv_export_heldout",
   "messy": [
-    "collapsed_columns",
-    "colonless_labels",
-    "ocr_amount"
+    "caret_fields",
+    "key_value_export",
+    "ocr_amount",
+    "ocr_description"
   ],
   "pii": [
     {
-      "start": 81,
-      "end": 99,
-      "type": "NAME",
-      "text": "FITZGERALD BRIANNA"
-    },
-    {
-      "start": 107,
-      "end": 115,
-      "type": "DOB",
-      "text": "11101977"
-    },
-    {
-      "start": 123,
-      "end": 135,
-      "type": "MEMBER_ID",
-      "text": "ZQ9911513-01"
-    },
-    {
-      "start": 141,
-      "end": 148,
-      "type": "ACCOUNT_ID",
-      "text": "7116648"
-    },
-    {
-      "start": 154,
-      "end": 195,
-      "type": "ADDRESS",
-      "text": "4629 Lakeview Boulevard Fairview TN 37014"
-    },
-    {
-      "start": 199,
-      "end": 211,
-      "type": "PHONE",
-      "text": "615 555 0149"
-    },
-    {
-      "start": 218,
-      "end": 255,
-      "type": "EMAIL",
-      "text": "brianna.fitzgerald74@mail.example.com"
-    }
-  ],
-  "allowed_redactions": [
-    {
       "start": 41,
-      "end": 55,
+      "end": 58,
+      "type": "NAME",
+      "text": "DELACROIX^SIOBHAN"
+    },
+    {
+      "start": 63,
+      "end": 71,
+      "type": "DOB",
+      "text": "19840406"
+    },
+    {
+      "start": 76,
+      "end": 86,
+      "type": "ACCOUNT_ID",
+      "text": "MR72407048"
+    },
+    {
+      "start": 96,
+      "end": 131,
+      "type": "ADDRESS",
+      "text": "51 CHESTNUT CT^^OAK HARBOR^WA^98261"
+    },
+    {
+      "start": 136,
+      "end": 149,
       "type": "PHONE",
-      "text": "1-888-555-0114"
+      "text": "(917)555-0174"
+    },
+    {
+      "start": 201,
+      "end": 212,
+      "type": "MEMBER_ID",
+      "text": "XGH21450485"
     }
   ],
+  "allowed_redactions": [],
   "line_items": [
     {
-      "service_date": "2025-04-16",
-      "code": "96374",
-      "description": "IV push, single or initial substance",
-      "billed_amount": "225.30",
-      "allowed_amount": "169.85",
-      "insurer_paid": "169.85",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-04-17",
+      "service_date": "2025-05-24",
       "code": "70450",
-      "description": "CT head or brain without contrast",
-      "billed_amount": "1645.92",
-      "allowed_amount": "929.14",
-      "insurer_paid": "650.40",
-      "patient_responsibility": "278.74"
+      "description": "CT head or brain wlthout contrast",
+      "billed_amount": "1896.33",
+      "allowed_amount": "1163.92",
+      "insurer_paid": "1047.53",
+      "patient_responsibility": "116.39"
     },
     {
-      "service_date": "2025-04-18",
-      "code": "81001",
-      "description": "Urinalysis, automated, with microscopy",
-      "billed_amount": "64.00",
-      "allowed_amount": "39.37",
-      "insurer_paid": "39.37",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-04-21",
-      "code": "99213",
-      "description": "Office visit, established patient, low complexity",
-      "billed_amount": "130.64",
-      "allowed_amount": "102.32",
-      "insurer_paid": "102.32",
-      "patient_responsibility": "0.00"
+      "service_date": "2025-05-24",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "317.46",
+      "allowed_amount": "212.71",
+      "insurer_paid": "148.90",
+      "patient_responsibility": "63.81"
     }
   ],
   "duplicate_pairs": []

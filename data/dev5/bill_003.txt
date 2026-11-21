@@ -1,0 +1,18 @@
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0158
+Stmt Dt 10/03/25
+Pt Name JOHNSON KEISHA
+Pt DOB 09272004
+Mbr No ZQ8938977-01
+Acct 1999410
+Addr 8852 Chestnut Rd Fairview TN 37013
+Ph 479 555 0121
+
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+09/01/25 J2405 Ondansetron hydrochloride injection, per 1 mg 39.99 16.44 14.80 1.64
+09/01/25 J2405 Ondansetron hydrochloride injection, per 1 mg 39.99 16.44 14.80 1.64
+09/01/25 J2405 Ondansetron hydrochloride injection, per 1 mg 35.20 11.27 9.O2 2.25
+09/02/25 90471 Immunization administration, single vaccine 58.66 21.82 15.27 6.55
+09/04/25 96374 IV push, single or initial substance l84.32 124.79 124.79 0.00
+09/04/25 A4649 Surgical supply, miscellaneous 52.80 20.51 18.46 2.05
+Total Pt Owes 14.13

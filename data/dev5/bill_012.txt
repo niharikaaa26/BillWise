@@ -1,0 +1,14 @@
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0182
+Stmt Dt 02/27/25
+Pt Name MURPHY WEI
+Pt DOB 10032002
+Mbr No CPH-6146-9160
+Acct 0261062
+Addr 8161 Magnolia Way Millbrook NY 12539
+Ph 303 555 0162
+
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+02/11/25 36415 Routine venipuncture 37.l4 - 22.58 2.51
+02/11/25 99283 Emergency department visit, moderate severity 802.99 561.27 392.89 l68.38
+Total Pt Owes 170.89

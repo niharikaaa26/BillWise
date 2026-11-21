@@ -1,0 +1,118 @@
+{
+  "id": "bill_003",
+  "layout": "collapsed_scan",
+  "messy": [
+    "collapsed_columns",
+    "colonless_labels",
+    "duplicate_charge",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 81,
+      "end": 95,
+      "type": "NAME",
+      "text": "JOHNSON KEISHA"
+    },
+    {
+      "start": 103,
+      "end": 111,
+      "type": "DOB",
+      "text": "09272004"
+    },
+    {
+      "start": 119,
+      "end": 131,
+      "type": "MEMBER_ID",
+      "text": "ZQ8938977-01"
+    },
+    {
+      "start": 137,
+      "end": 144,
+      "type": "ACCOUNT_ID",
+      "text": "1999410"
+    },
+    {
+      "start": 150,
+      "end": 184,
+      "type": "ADDRESS",
+      "text": "8852 Chestnut Rd Fairview TN 37013"
+    },
+    {
+      "start": 188,
+      "end": 200,
+      "type": "PHONE",
+      "text": "479 555 0121"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 41,
+      "end": 55,
+      "type": "PHONE",
+      "text": "1-888-555-0158"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-09-01",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "39.99",
+      "allowed_amount": "16.44",
+      "insurer_paid": "14.80",
+      "patient_responsibility": "1.64"
+    },
+    {
+      "service_date": "2025-09-01",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "39.99",
+      "allowed_amount": "16.44",
+      "insurer_paid": "14.80",
+      "patient_responsibility": "1.64"
+    },
+    {
+      "service_date": "2025-09-01",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "35.20",
+      "allowed_amount": "11.27",
+      "insurer_paid": "9.02",
+      "patient_responsibility": "2.25"
+    },
+    {
+      "service_date": "2025-09-02",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "58.66",
+      "allowed_amount": "21.82",
+      "insurer_paid": "15.27",
+      "patient_responsibility": "6.55"
+    },
+    {
+      "service_date": "2025-09-04",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "184.32",
+      "allowed_amount": "124.79",
+      "insurer_paid": "124.79",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-09-04",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "52.80",
+      "allowed_amount": "20.51",
+      "insurer_paid": "18.46",
+      "patient_responsibility": "2.05"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      0,
+      1
+    ]
+  ]
+}

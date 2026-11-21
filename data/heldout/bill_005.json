@@ -1,90 +1,114 @@
 {
   "id": "bill_005",
-  "layout": "collapsed_scan_heldout",
+  "layout": "kv_export_heldout",
   "messy": [
-    "collapsed_columns",
-    "colonless_labels",
+    "caret_fields",
+    "key_value_export",
+    "missing_field",
     "ocr_amount"
   ],
   "pii": [
     {
-      "start": 81,
-      "end": 95,
-      "type": "NAME",
-      "text": "WILLIAMS KEVIN"
-    },
-    {
-      "start": 103,
-      "end": 111,
-      "type": "DOB",
-      "text": "04092012"
-    },
-    {
-      "start": 119,
-      "end": 129,
-      "type": "MEMBER_ID",
-      "text": "MBR6249524"
-    },
-    {
-      "start": 135,
-      "end": 142,
-      "type": "ACCOUNT_ID",
-      "text": "9857620"
-    },
-    {
-      "start": 148,
-      "end": 190,
-      "type": "ADDRESS",
-      "text": "3884 Sunset Ln Unit 16 Springdale AR 72727"
-    },
-    {
-      "start": 194,
-      "end": 206,
-      "type": "PHONE",
-      "text": "845 555 0198"
-    },
-    {
-      "start": 213,
-      "end": 240,
-      "type": "EMAIL",
-      "text": "kevin.williams8@example.net"
-    }
-  ],
-  "allowed_redactions": [
-    {
       "start": 41,
-      "end": 55,
+      "end": 53,
+      "type": "NAME",
+      "text": "MBEKI^LORENA"
+    },
+    {
+      "start": 58,
+      "end": 66,
+      "type": "DOB",
+      "text": "19520531"
+    },
+    {
+      "start": 71,
+      "end": 81,
+      "type": "ACCOUNT_ID",
+      "text": "MR70374992"
+    },
+    {
+      "start": 91,
+      "end": 129,
+      "type": "ADDRESS",
+      "text": "6386 LAKEVIEW LN^^PORT JERVIS^NY^12739"
+    },
+    {
+      "start": 134,
+      "end": 147,
       "type": "PHONE",
-      "text": "1-888-555-0155"
+      "text": "(319)555-0197"
+    },
+    {
+      "start": 195,
+      "end": 206,
+      "type": "MEMBER_ID",
+      "text": "XGH74313460"
     }
   ],
+  "allowed_redactions": [],
   "line_items": [
     {
-      "service_date": "2025-05-23",
-      "code": "93000",
-      "description": "Electrocardiogram, routine, with interpretation and report",
-      "billed_amount": "292.14",
-      "allowed_amount": "117.51",
-      "insurer_paid": "117.51",
+      "service_date": "2025-07-21",
+      "code": "85025",
+      "description": "Complete blood count with automated differential",
+      "billed_amount": "164.84",
+      "allowed_amount": "113.14",
+      "insurer_paid": "79.20",
+      "patient_responsibility": "33.94"
+    },
+    {
+      "service_date": "2025-07-21",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "37.46",
+      "allowed_amount": null,
+      "insurer_paid": "23.23",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-05-23",
-      "code": "90471",
-      "description": "Immunization administration, single vaccine",
-      "billed_amount": "41.75",
-      "allowed_amount": "29.76",
-      "insurer_paid": "23.81",
-      "patient_responsibility": "5.95"
+      "service_date": "2025-07-21",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "315.26",
+      "allowed_amount": "136.60",
+      "insurer_paid": "95.62",
+      "patient_responsibility": "40.98"
     },
     {
-      "service_date": "2025-05-25",
-      "code": "85025",
-      "description": "Complete blood count with automated differential",
-      "billed_amount": "99.12",
-      "allowed_amount": "50.47",
-      "insurer_paid": "45.42",
-      "patient_responsibility": "5.05"
+      "service_date": "2025-07-21",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "181.57",
+      "allowed_amount": "125.64",
+      "insurer_paid": "100.51",
+      "patient_responsibility": "25.13"
+    },
+    {
+      "service_date": "2025-07-21",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "75.85",
+      "allowed_amount": null,
+      "insurer_paid": "28.46",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-07-21",
+      "code": "87880",
+      "description": "Rapid strep test",
+      "billed_amount": "47.78",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "15.74"
+    },
+    {
+      "service_date": "2025-07-21",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "266.86",
+      "allowed_amount": "126.87",
+      "insurer_paid": "114.18",
+      "patient_responsibility": "12.69"
     }
   ],
   "duplicate_pairs": []

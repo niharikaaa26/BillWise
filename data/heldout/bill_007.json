@@ -1,104 +1,77 @@
 {
   "id": "bill_007",
-  "layout": "collapsed_scan_heldout",
+  "layout": "kv_export_heldout",
   "messy": [
-    "collapsed_columns",
-    "colonless_labels",
-    "missing_field",
-    "ocr_amount",
-    "ocr_description"
+    "caret_fields",
+    "key_value_export",
+    "ocr_amount"
   ],
   "pii": [
     {
-      "start": 81,
-      "end": 97,
-      "type": "NAME",
-      "text": "ACHTERBERG KEVIN"
-    },
-    {
-      "start": 105,
-      "end": 113,
-      "type": "DOB",
-      "text": "03052011"
-    },
-    {
-      "start": 121,
-      "end": 134,
-      "type": "MEMBER_ID",
-      "text": "CPH-0269-0771"
-    },
-    {
-      "start": 140,
-      "end": 147,
-      "type": "ACCOUNT_ID",
-      "text": "4685218"
-    },
-    {
-      "start": 153,
-      "end": 189,
-      "type": "ADDRESS",
-      "text": "123 Cedar Rd #37 Greenville SC 29679"
-    },
-    {
-      "start": 193,
-      "end": 205,
-      "type": "PHONE",
-      "text": "360 555 0165"
-    }
-  ],
-  "allowed_redactions": [
-    {
       "start": 41,
-      "end": 55,
+      "end": 57,
+      "type": "NAME",
+      "text": "KOWALSKI^THANH^E"
+    },
+    {
+      "start": 62,
+      "end": 70,
+      "type": "DOB",
+      "text": "19730422"
+    },
+    {
+      "start": 75,
+      "end": 85,
+      "type": "ACCOUNT_ID",
+      "text": "MR18074745"
+    },
+    {
+      "start": 95,
+      "end": 134,
+      "type": "ADDRESS",
+      "text": "3028 JUNIPER AVENUE^^MILLBROOK^NY^12551"
+    },
+    {
+      "start": 139,
+      "end": 152,
       "type": "PHONE",
-      "text": "1-888-555-0129"
+      "text": "(360)555-0159"
+    },
+    {
+      "start": 200,
+      "end": 211,
+      "type": "MEMBER_ID",
+      "text": "XGH65486980"
     }
   ],
+  "allowed_redactions": [],
   "line_items": [
     {
-      "service_date": "2025-03-03",
-      "code": "99213",
-      "description": "Office visit, established patient, low cornplexity",
-      "billed_amount": "170.36",
-      "allowed_amount": "69.71",
-      "insurer_paid": "55.77",
-      "patient_responsibility": "13.94"
+      "service_date": "2025-03-29",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "41.25",
+      "allowed_amount": "13.20",
+      "insurer_paid": "10.56",
+      "patient_responsibility": "2.64"
     },
     {
-      "service_date": "2025-03-03",
-      "code": "74177",
-      "description": "CT abdomen and pelvis with contrast",
-      "billed_amount": "2021.45",
-      "allowed_amount": "1155.83",
-      "insurer_paid": "809.08",
-      "patient_responsibility": "346.75"
+      "service_date": "2025-03-29",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "238.13",
+      "allowed_amount": "184.88",
+      "insurer_paid": "129.42",
+      "patient_responsibility": "55.46"
     },
     {
-      "service_date": "2025-03-03",
-      "code": "99285",
-      "description": "Emergency department visit, high severity",
-      "billed_amount": "2123.55",
-      "allowed_amount": "1233.12",
-      "insurer_paid": "1233.12",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-03-05",
-      "code": "J2405",
-      "description": "Ondansetron hydrochloride injection, per 1 mg",
-      "billed_amount": "21.06",
-      "allowed_amount": "10.48",
-      "insurer_paid": "10.48",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-03-05",
-      "code": "81001",
-      "description": "Urinalysis, automated, with microscopy",
-      "billed_amount": "71.23",
-      "allowed_amount": null,
-      "insurer_paid": "55.73",
-      "patient_responsibility": "0.00"
+      "service_date": "2025-03-31",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "333.19",
+      "allowed_amount": "234.38",
+      "insurer_paid": "164.07",
+      "patient_responsibility": "70.31"
     }
   ],
   "duplicate_pairs": []

@@ -1,0 +1,95 @@
+{
+  "id": "bill_010",
+  "layout": "collapsed_scan",
+  "messy": [
+    "collapsed_columns",
+    "colonless_labels",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 81,
+      "end": 92,
+      "type": "NAME",
+      "text": "MBEKI GRACE"
+    },
+    {
+      "start": 100,
+      "end": 108,
+      "type": "DOB",
+      "text": "09201985"
+    },
+    {
+      "start": 116,
+      "end": 126,
+      "type": "MEMBER_ID",
+      "text": "MBR8570307"
+    },
+    {
+      "start": 132,
+      "end": 139,
+      "type": "ACCOUNT_ID",
+      "text": "0354374"
+    },
+    {
+      "start": 145,
+      "end": 178,
+      "type": "ADDRESS",
+      "text": "9536 Briar Rd Greenville SC 29664"
+    },
+    {
+      "start": 182,
+      "end": 194,
+      "type": "PHONE",
+      "text": "615 555 0117"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 41,
+      "end": 55,
+      "type": "PHONE",
+      "text": "1-888-555-0123"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-02-04",
+      "code": "96374",
+      "description": "IV push, single or initial substancc",
+      "billed_amount": "155.48",
+      "allowed_amount": "86.12",
+      "insurer_paid": "86.12",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-07",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "1843.65",
+      "allowed_amount": "562.71",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "562.71"
+    },
+    {
+      "service_date": "2025-02-07",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "409.58",
+      "allowed_amount": "249.59",
+      "insurer_paid": "174.71",
+      "patient_responsibility": "74.88"
+    },
+    {
+      "service_date": "2025-02-07",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "70.15",
+      "allowed_amount": "35.37",
+      "insurer_paid": "24.76",
+      "patient_responsibility": "10.61"
+    }
+  ],
+  "duplicate_pairs": []
+}

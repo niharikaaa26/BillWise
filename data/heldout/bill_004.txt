@@ -1,20 +1,8 @@
-RIVERSIDE URGENT CARE LLC
-Billing office 1-888-555-0132
-Stmt Dt 02/26/25
-Pt Name SMITH TOMASZ
-Pt DOB 08192018
-Mbr No MBR9191629
-Acct 6649352
-Addr 5878 Sunset Ave Lakewood CO 80267
-Ph 303 555 0146
-Email tomasz.smith51@mail.example.com
+#EXPORT v2.3 generated 20251013
+PAT|NAME=KIM^XIOMARA;DOB=19541201;MRN=MR63656309
+PAT|ADDR=8408 CEDAR CT APT 34B^^FAIRVIEW^TN^37080;TEL=(319)555-0146
+INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=XGH61060763
 
-Svc Dt Code Description Chg Allow Ins Pd Pt Owes
-01/26/25 99214 Office visit, established patient, moderate complexity 217.06 160.31 160.31 0.0O
-01/27/25 70450 CT head or brain without contrast 1116.30 807.93 807.93 0.00
-01/27/25 99203 New patient office visit 273.11 103.36 103.36 0.00
-01/27/25 70450 CT head or brain with0ut contrast 2544.42 1758.19 1758.19 0.O0
-01/27/25 99214 Office visit, established patient, moderate complexity 205.67 132.54 106.O3 26.51
-01/27/25 J1885 Ketorolac tromethamine injection, per 15 mg 25.40 17.16 12.01 5.15
-01/28/25 97110 Therapeutic exercises, each 15 minutes 79.62 26.68 0.00 26.68
-Total Pt Owes 58.34
+SVC|DOS=20250607;PROC=96374;DESC=IV push, single or initial substance;CHG=294.69;ALLOWED=177.56;PAID=177.56;PTRESP=0.00
+SVC|DOS=20250607;PROC=74177;DESC=CT abdomen and pelvis with contrast;CHG=2171.1O;ALLOWED=1370.51;PAID=0.00;PTRESP=1370.51
+TRL|COUNT=2;PTRESP_TOTAL=1370.51

@@ -1,0 +1,96 @@
+{
+  "id": "bill_006",
+  "layout": "collapsed_scan",
+  "messy": [
+    "collapsed_columns",
+    "colonless_labels",
+    "missing_field",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 81,
+      "end": 98,
+      "type": "NAME",
+      "text": "LINDQVIST PATRICE"
+    },
+    {
+      "start": 106,
+      "end": 114,
+      "type": "DOB",
+      "text": "09081966"
+    },
+    {
+      "start": 122,
+      "end": 132,
+      "type": "MEMBER_ID",
+      "text": "W261472925"
+    },
+    {
+      "start": 138,
+      "end": 145,
+      "type": "ACCOUNT_ID",
+      "text": "6573572"
+    },
+    {
+      "start": 151,
+      "end": 188,
+      "type": "ADDRESS",
+      "text": "3769 Cedar Avenue Oak Harbor WA 98214"
+    },
+    {
+      "start": 192,
+      "end": 204,
+      "type": "PHONE",
+      "text": "360 555 0153"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 41,
+      "end": 55,
+      "type": "PHONE",
+      "text": "1-888-555-0121"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-06-10",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "925.37",
+      "allowed_amount": "434.87",
+      "insurer_paid": "434.87",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-10",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "98.36",
+      "allowed_amount": "75.24",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "75.24"
+    },
+    {
+      "service_date": "2025-06-10",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservalive free",
+      "billed_amount": "61.48",
+      "allowed_amount": "30.08",
+      "insurer_paid": "30.08",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-12",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1483.93",
+      "allowed_amount": null,
+      "insurer_paid": "520.20",
+      "patient_responsibility": "57.80"
+    }
+  ],
+  "duplicate_pairs": []
+}

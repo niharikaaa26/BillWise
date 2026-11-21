@@ -17,7 +17,8 @@ Usage:
     python -m data_gen.generate --out data/dev2 --n 12 --seed 777 --ocr-p 0.25 --set dev2
     python -m data_gen.generate --out data/dev3 --n 12 --seed 4242 --ocr-p 0.2 --set dev3
     python -m data_gen.generate --out data/dev4 --n 12 --seed 9001 --ocr-p 0.2 --set dev4
-    python -m data_gen.generate --out data/heldout --n 12 --seed 31337 --ocr-p 0.2 --set heldout
+    python -m data_gen.generate --out data/dev5 --n 12 --seed 31337 --ocr-p 0.2 --set dev5
+    python -m data_gen.generate --out data/heldout --n 12 --seed 5150 --ocr-p 0.2 --set heldout
 """
 from __future__ import annotations
 
@@ -898,6 +899,53 @@ def layout_collapsed_scan(rng: random.Random, ocr_p: float) -> tuple[Doc, list[d
     return doc, items, flags
 
 
+# --------------------------------------------------------------------------
+# Layout I (HELD OUT, round 5): billing-system export of KEY=value records.
+# Written BEFORE the round-5 fixes and not used to tune them. Header record
+# with HL7-style caret-separated name and address, compact YYYYMMDD DOB,
+# medical record number (MRN), subscriber ID; one "SVC|" record per item
+# with semicolon-separated KEY=value fields and abbreviated keys.
+# --------------------------------------------------------------------------
+def layout_kv_export(rng: random.Random, ocr_p: float) -> tuple[Doc, list[dict], set[str]]:
+    flags: set[str] = {"key_value_export", "caret_fields"}
+    doc = Doc()
+    p = make_person(rng)
+    doc.nl(f"#EXPORT v2.3 generated {date(2025, 9, 1) + timedelta(days=rng.randint(0, 60)):%Y%m%d}")
+    doc.add("PAT|NAME=")
+    mid = f"^{p['middle']}" if p["middle"] else ""
+    doc.pii_(f"{p['last'].upper()}^{p['first'].upper()}{mid}", "NAME")
+    doc.add(";DOB=").pii_(f"{p['dob']:%Y%m%d}", "DOB")
+    doc.add(";MRN=").pii_(f"MR{digits(rng, 8)}", "ACCOUNT_ID").nl()
+    doc.add("PAT|ADDR=").pii_(f"{p['street'].upper()}^^{p['city'].upper()}^{p['state']}^{p['zip']}", "ADDRESS")
+    area = rng.choice(AREA_CODES)
+    doc.add(";TEL=").pii_(f"({area}){'555'}-01{rng.randint(0, 99):02d}", "PHONE").nl()
+    doc.add("INS|PAYER=").add(rng.choice(INSURERS)[0].replace(" ", "_"))
+    doc.add(";SUBSCRIBER_ID=").pii_(member_id(rng), "MEMBER_ID").nl()
+    doc.nl()
+    items = make_items(rng, date(2025, 3, 1) + timedelta(days=rng.randint(0, 150)), flags)
+    for it in items:
+        missing = rng.random() < 0.15
+        if missing:
+            flags.add("missing_field")
+            it["allowed_amount"] = None
+        desc = it["description"]
+        if rng.random() < ocr_p * 0.5:
+            flags.add("ocr_description")
+            desc = ocr_text(desc, rng)
+        it["description"] = desc
+        chg = maybe_ocr_amt("%.2f" % it["billed_amount"], rng, flags, ocr_p, False)
+        allowed = "" if missing else "%.2f" % it["allowed_amount"]
+        paid = maybe_ocr_amt("%.2f" % it["insurer_paid"], rng, flags, ocr_p, False)
+        resp = maybe_ocr_amt("%.2f" % it["patient_responsibility"], rng, flags, ocr_p, False)
+        fields = [
+            "DOS=" + it["service_date"].strftime("%Y%m%d"), "PROC=" + it["code"], "DESC=" + desc,
+            "CHG=" + chg, "ALLOWED=" + allowed, "PAID=" + paid, "PTRESP=" + resp,
+        ]
+        doc.nl("SVC|" + ";".join(fields))
+    doc.nl(f"TRL|COUNT={len(items)};PTRESP_TOTAL={sum(i['patient_responsibility'] for i in items):.2f}")
+    return doc, items, flags
+
+
 LAYOUT_SETS = {
     "dev": LAYOUTS,
     # round-1 held-out layout; used to tune round-2 fixes, now development data
@@ -906,8 +954,10 @@ LAYOUT_SETS = {
     "dev3": {"multi_claim": layout_multi_claim},
     # round-3 held-out layout; used to tune the round-4 rework, now development data
     "dev4": {"portal_summary": layout_portal_summary},
-    # round-4 held-out layout: never used for tuning
-    "heldout": {"collapsed_scan_heldout": layout_collapsed_scan},
+    # round-4 held-out layout; used to tune round-5 fixes, now development data
+    "dev5": {"collapsed_scan": layout_collapsed_scan},
+    # round-5 held-out layout: never used for tuning
+    "heldout": {"kv_export_heldout": layout_kv_export},
 }
 
 
@@ -960,7 +1010,7 @@ def main() -> None:
     ap.add_argument("--ocr-p", type=float, default=0.12, help="probability of each OCR corruption site")
     ap.add_argument("--set", dest="layout_set", choices=sorted(LAYOUT_SETS), default="dev",
                     help="dev: 4 development layouts; dev2: round-1 held-out layout (now dev data); "
-                         "dev3/dev4: earlier held-out layouts (now dev data); heldout: layout never used for tuning")
+                         "dev2-dev5: earlier held-out layouts (now dev data); heldout: layout never used for tuning")
     args = ap.parse_args()
     files = generate(args.out, args.n, args.seed, args.ocr_p, args.layout_set)
     print(f"wrote {len(files)} synthetic bills + ground truth to {args.out}")

@@ -1,0 +1,16 @@
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0123
+Stmt Dt 03/01/25
+Pt Name MBEKI GRACE
+Pt DOB 09201985
+Mbr No MBR8570307
+Acct 0354374
+Addr 9536 Briar Rd Greenville SC 29664
+Ph 615 555 0117
+
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+02/04/25 96374 IV push, single or initial substancc 155.48 86.12 86.l2 0.00
+02/07/25 74177 CT abdomen and pelvis with contrast 1843.65 562.71 0.00 562.71
+02/07/25 96374 IV push, single or initial substance 409.58 249.59 l74.71 74.88
+02/07/25 J1885 Ketorolac tromethamine injection, per 15 mg 70.15 35.37 24.76 10.61
+Total Pt Owes 648.20

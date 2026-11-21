@@ -1,0 +1,19 @@
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0180
+Stmt Dt 07/26/25
+Pt Name WILLIAMS BRIANNA
+Pt DOB 01141970
+Mbr No XGH02727255
+Acct 3582255
+Addr 2955 Hillcrest Dr Riverton OH 45029
+Ph 513 555 0193
+Email brianna.williams1@example.com
+
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+06/21/25 81001 Urinalysis, automated, with microscopy 25.4l 14.05 14.05 0.O0
+06/21/25 36415 Routine venipuncture 36.05 24.69 l9.75 4.94
+06/22/25 A4649 Surgical supply, miscellaneous 190.86 145.16 116.13 29.03
+06/22/25 36415 Routine venipuncture 30.02 13.04 0.O0 l3.04
+06/22/25 36415 Routine venipuncture 30.02 13.04 0.00 l3.04
+06/22/25 87880 Rapid strep test 50.16 17.56 l2.29 5.27
+Total Pt Owes 65.32

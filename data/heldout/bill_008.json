@@ -1,119 +1,112 @@
 {
   "id": "bill_008",
-  "layout": "collapsed_scan_heldout",
+  "layout": "kv_export_heldout",
   "messy": [
-    "collapsed_columns",
-    "colonless_labels",
+    "caret_fields",
+    "duplicate_charge",
+    "key_value_export",
     "missing_field",
     "ocr_amount"
   ],
   "pii": [
     {
-      "start": 81,
-      "end": 95,
-      "type": "NAME",
-      "text": "RAMIREZ TOMASZ"
-    },
-    {
-      "start": 103,
-      "end": 111,
-      "type": "DOB",
-      "text": "06221959"
-    },
-    {
-      "start": 119,
-      "end": 130,
-      "type": "MEMBER_ID",
-      "text": "XGH39317911"
-    },
-    {
-      "start": 136,
-      "end": 143,
-      "type": "ACCOUNT_ID",
-      "text": "4390288"
-    },
-    {
-      "start": 149,
-      "end": 194,
-      "type": "ADDRESS",
-      "text": "5137 Sunset Road Unit 22B Springdale AR 72774"
-    },
-    {
-      "start": 198,
-      "end": 210,
-      "type": "PHONE",
-      "text": "864 555 0155"
-    },
-    {
-      "start": 217,
-      "end": 245,
-      "type": "EMAIL",
-      "text": "tomasz.ramirez71@example.org"
-    }
-  ],
-  "allowed_redactions": [
-    {
       "start": 41,
-      "end": 55,
+      "end": 58,
+      "type": "NAME",
+      "text": "BIANCHI^MICHAEL^A"
+    },
+    {
+      "start": 63,
+      "end": 71,
+      "type": "DOB",
+      "text": "19640920"
+    },
+    {
+      "start": 76,
+      "end": 86,
+      "type": "ACCOUNT_ID",
+      "text": "MR67314724"
+    },
+    {
+      "start": 96,
+      "end": 127,
+      "type": "ADDRESS",
+      "text": "447 OAK ROAD^^RIVERTON^OH^45053"
+    },
+    {
+      "start": 132,
+      "end": 145,
       "type": "PHONE",
-      "text": "1-888-555-0165"
+      "text": "(479)555-0149"
+    },
+    {
+      "start": 193,
+      "end": 203,
+      "type": "MEMBER_ID",
+      "text": "W791530822"
     }
   ],
+  "allowed_redactions": [],
   "line_items": [
     {
-      "service_date": "2025-08-18",
-      "code": "J2405",
-      "description": "Ondansetron hydrochloride injection, per 1 mg",
-      "billed_amount": "31.34",
+      "service_date": "2025-07-10",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "70.73",
       "allowed_amount": null,
-      "insurer_paid": "10.41",
-      "patient_responsibility": "2.60"
+      "insurer_paid": "38.63",
+      "patient_responsibility": "4.29"
     },
     {
-      "service_date": "2025-08-18",
-      "code": "97110",
-      "description": "Therapeutic exercises, each 15 minutes",
-      "billed_amount": "73.03",
-      "allowed_amount": "34.76",
-      "insurer_paid": "31.28",
-      "patient_responsibility": "3.48"
+      "service_date": "2025-07-10",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "223.66",
+      "allowed_amount": "71.44",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "71.44"
     },
     {
-      "service_date": "2025-08-18",
-      "code": "97110",
-      "description": "Therapeutic exercises, each 15 minutes",
-      "billed_amount": "144.17",
-      "allowed_amount": null,
-      "insurer_paid": "86.27",
+      "service_date": "2025-07-10",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "188.61",
+      "allowed_amount": "107.25",
+      "insurer_paid": "85.80",
+      "patient_responsibility": "21.45"
+    },
+    {
+      "service_date": "2025-07-10",
+      "code": "85025",
+      "description": "Complete blood count with automated differential",
+      "billed_amount": "115.87",
+      "allowed_amount": "57.68",
+      "insurer_paid": "57.68",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-08-21",
-      "code": "97110",
-      "description": "Therapeutic exercises, each 15 minutes",
-      "billed_amount": "67.89",
-      "allowed_amount": "50.33",
-      "insurer_paid": "45.30",
-      "patient_responsibility": "5.03"
+      "service_date": "2025-07-10",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "60.61",
+      "allowed_amount": "45.97",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "45.97"
     },
     {
-      "service_date": "2025-08-21",
-      "code": "81001",
-      "description": "Urinalysis, automated, with microscopy",
-      "billed_amount": "26.89",
-      "allowed_amount": null,
-      "insurer_paid": "14.90",
-      "patient_responsibility": "1.66"
-    },
-    {
-      "service_date": "2025-08-21",
-      "code": "81001",
-      "description": "Urinalysis, automated, with microscopy",
-      "billed_amount": "55.51",
-      "allowed_amount": "17.73",
-      "insurer_paid": "14.18",
-      "patient_responsibility": "3.55"
+      "service_date": "2025-07-10",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "60.61",
+      "allowed_amount": "45.97",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "45.97"
     }
   ],
-  "duplicate_pairs": []
+  "duplicate_pairs": [
+    [
+      4,
+      5
+    ]
+  ]
 }

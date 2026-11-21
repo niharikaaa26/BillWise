@@ -1,76 +1,78 @@
 {
   "id": "bill_012",
-  "layout": "collapsed_scan_heldout",
+  "layout": "kv_export_heldout",
   "messy": [
-    "collapsed_columns",
-    "colonless_labels",
-    "missing_field",
-    "ocr_amount"
+    "caret_fields",
+    "key_value_export",
+    "ocr_amount",
+    "ocr_description"
   ],
   "pii": [
     {
-      "start": 81,
-      "end": 91,
+      "start": 41,
+      "end": 54,
       "type": "NAME",
-      "text": "MURPHY WEI"
+      "text": "NGUYEN^LORENA"
     },
     {
-      "start": 99,
-      "end": 107,
+      "start": 59,
+      "end": 67,
       "type": "DOB",
-      "text": "10032002"
+      "text": "19981203"
     },
     {
-      "start": 115,
-      "end": 128,
-      "type": "MEMBER_ID",
-      "text": "CPH-6146-9160"
+      "start": 72,
+      "end": 82,
+      "type": "ACCOUNT_ID",
+      "text": "MR21974745"
+    },
+    {
+      "start": 92,
+      "end": 129,
+      "type": "ADDRESS",
+      "text": "2006 BRIAR CT #17C^^FAIRVIEW^TN^37028"
     },
     {
       "start": 134,
-      "end": 141,
-      "type": "ACCOUNT_ID",
-      "text": "0261062"
+      "end": 147,
+      "type": "PHONE",
+      "text": "(479)555-0120"
     },
     {
-      "start": 147,
-      "end": 183,
-      "type": "ADDRESS",
-      "text": "8161 Magnolia Way Millbrook NY 12539"
-    },
-    {
-      "start": 187,
-      "end": 199,
-      "type": "PHONE",
-      "text": "303 555 0162"
+      "start": 199,
+      "end": 210,
+      "type": "MEMBER_ID",
+      "text": "XGH42515543"
     }
   ],
-  "allowed_redactions": [
-    {
-      "start": 41,
-      "end": 55,
-      "type": "PHONE",
-      "text": "1-888-555-0182"
-    }
-  ],
+  "allowed_redactions": [],
   "line_items": [
     {
-      "service_date": "2025-02-11",
-      "code": "36415",
-      "description": "Routine venipuncture",
-      "billed_amount": "37.14",
-      "allowed_amount": null,
-      "insurer_paid": "22.58",
-      "patient_responsibility": "2.51"
+      "service_date": "2025-04-27",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "62.84",
+      "allowed_amount": "48.36",
+      "insurer_paid": "33.85",
+      "patient_responsibility": "14.51"
     },
     {
-      "service_date": "2025-02-11",
-      "code": "99283",
-      "description": "Emergency department visit, moderate severity",
-      "billed_amount": "802.99",
-      "allowed_amount": "561.27",
-      "insurer_paid": "392.89",
-      "patient_responsibility": "168.38"
+      "service_date": "2025-04-28",
+      "code": "90471",
+      "description": "Immunization administratlon, single vaccine",
+      "billed_amount": "25.57",
+      "allowed_amount": "17.17",
+      "insurer_paid": "12.02",
+      "patient_responsibility": "5.15"
+    },
+    {
+      "service_date": "2025-04-28",
+      "code": "87880",
+      "description": "Rapid strep test",
+      "billed_amount": "60.40",
+      "allowed_amount": "44.12",
+      "insurer_paid": "44.12",
+      "patient_responsibility": "0.00"
     }
   ],
   "duplicate_pairs": []

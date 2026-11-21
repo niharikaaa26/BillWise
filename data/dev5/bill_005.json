@@ -1,0 +1,91 @@
+{
+  "id": "bill_005",
+  "layout": "collapsed_scan",
+  "messy": [
+    "collapsed_columns",
+    "colonless_labels",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 81,
+      "end": 95,
+      "type": "NAME",
+      "text": "WILLIAMS KEVIN"
+    },
+    {
+      "start": 103,
+      "end": 111,
+      "type": "DOB",
+      "text": "04092012"
+    },
+    {
+      "start": 119,
+      "end": 129,
+      "type": "MEMBER_ID",
+      "text": "MBR6249524"
+    },
+    {
+      "start": 135,
+      "end": 142,
+      "type": "ACCOUNT_ID",
+      "text": "9857620"
+    },
+    {
+      "start": 148,
+      "end": 190,
+      "type": "ADDRESS",
+      "text": "3884 Sunset Ln Unit 16 Springdale AR 72727"
+    },
+    {
+      "start": 194,
+      "end": 206,
+      "type": "PHONE",
+      "text": "845 555 0198"
+    },
+    {
+      "start": 213,
+      "end": 240,
+      "type": "EMAIL",
+      "text": "kevin.williams8@example.net"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 41,
+      "end": 55,
+      "type": "PHONE",
+      "text": "1-888-555-0155"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-05-23",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "292.14",
+      "allowed_amount": "117.51",
+      "insurer_paid": "117.51",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-05-23",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "41.75",
+      "allowed_amount": "29.76",
+      "insurer_paid": "23.81",
+      "patient_responsibility": "5.95"
+    },
+    {
+      "service_date": "2025-05-25",
+      "code": "85025",
+      "description": "Complete blood count with automated differential",
+      "billed_amount": "99.12",
+      "allowed_amount": "50.47",
+      "insurer_paid": "45.42",
+      "patient_responsibility": "5.05"
+    }
+  ],
+  "duplicate_pairs": []
+}

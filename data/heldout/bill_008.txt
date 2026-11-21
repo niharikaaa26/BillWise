@@ -1,19 +1,12 @@
-RIVERSIDE URGENT CARE LLC
-Billing office 1-888-555-0165
-Stmt Dt 09/13/25
-Pt Name RAMIREZ TOMASZ
-Pt DOB 06221959
-Mbr No XGH39317911
-Acct 4390288
-Addr 5137 Sunset Road Unit 22B Springdale AR 72774
-Ph 864 555 0155
-Email tomasz.ramirez71@example.org
+#EXPORT v2.3 generated 20251005
+PAT|NAME=BIANCHI^MICHAEL^A;DOB=19640920;MRN=MR67314724
+PAT|ADDR=447 OAK ROAD^^RIVERTON^OH^45053;TEL=(479)555-0149
+INS|PAYER=BLUERIVER_HEALTH_PLANS;SUBSCRIBER_ID=W791530822
 
-Svc Dt Code Description Chg Allow Ins Pd Pt Owes
-08/18/25 J2405 Ondansetron hydrochloride injection, per 1 mg 31.34 - 10.41 2.60
-08/18/25 97110 Therapeutic exercises, each 15 minutes 73.03 34.76 31.28 3.48
-08/18/25 97110 Therapeutic exercises, each 15 minutes l44.17 - 86.27 0.00
-08/21/25 97110 Therapeutic exercises, each 15 minutes 67.89 50.33 45.30 5.03
-08/21/25 81001 Urinalysis, automated, with microscopy 26.89 - 14.90 1.66
-08/21/25 81001 Urinalysis, automated, with microscopy 55.51 17.73 14.18 3.55
-Total Pt Owes 16.32
+SVC|DOS=20250710;PROC=81001;DESC=Urinalysis, automated, with microscopy;CHG=70.73;ALLOWED=;PAID=38.63;PTRESP=4.29
+SVC|DOS=20250710;PROC=A4649;DESC=Surgical supply, miscellaneous;CHG=223.66;ALLOWED=71.44;PAID=0.00;PTRESP=71.44
+SVC|DOS=20250710;PROC=G0439;DESC=Annual wellness visit, subsequent;CHG=188.6l;ALLOWED=107.25;PAID=85.80;PTRESP=2l.45
+SVC|DOS=20250710;PROC=85025;DESC=Complete blood count with automated differential;CHG=115.87;ALLOWED=57.68;PAID=57.68;PTRESP=0.00
+SVC|DOS=20250710;PROC=J1885;DESC=Ketorolac tromethamine injection, per 15 mg;CHG=60.61;ALLOWED=45.97;PAID=0.00;PTRESP=45.97
+SVC|DOS=20250710;PROC=J1885;DESC=Ketorolac tromethamine injection, per 15 mg;CHG=60.61;ALLOWED=45.97;PAID=0.00;PTRESP=45.97
+TRL|COUNT=6;PTRESP_TOTAL=189.12

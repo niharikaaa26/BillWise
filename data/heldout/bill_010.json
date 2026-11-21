@@ -1,95 +1,120 @@
 {
   "id": "bill_010",
-  "layout": "collapsed_scan_heldout",
+  "layout": "kv_export_heldout",
   "messy": [
-    "collapsed_columns",
-    "colonless_labels",
-    "ocr_amount",
-    "ocr_description"
+    "caret_fields",
+    "duplicate_charge",
+    "key_value_export",
+    "ocr_amount"
   ],
   "pii": [
     {
-      "start": 81,
-      "end": 92,
-      "type": "NAME",
-      "text": "MBEKI GRACE"
-    },
-    {
-      "start": 100,
-      "end": 108,
-      "type": "DOB",
-      "text": "09201985"
-    },
-    {
-      "start": 116,
-      "end": 126,
-      "type": "MEMBER_ID",
-      "text": "MBR8570307"
-    },
-    {
-      "start": 132,
-      "end": 139,
-      "type": "ACCOUNT_ID",
-      "text": "0354374"
-    },
-    {
-      "start": 145,
-      "end": 178,
-      "type": "ADDRESS",
-      "text": "9536 Briar Rd Greenville SC 29664"
-    },
-    {
-      "start": 182,
-      "end": 194,
-      "type": "PHONE",
-      "text": "615 555 0117"
-    }
-  ],
-  "allowed_redactions": [
-    {
       "start": 41,
-      "end": 55,
+      "end": 57,
+      "type": "NAME",
+      "text": "WOJCIK^PATRICE^M"
+    },
+    {
+      "start": 62,
+      "end": 70,
+      "type": "DOB",
+      "text": "19550204"
+    },
+    {
+      "start": 75,
+      "end": 85,
+      "type": "ACCOUNT_ID",
+      "text": "MR16984130"
+    },
+    {
+      "start": 95,
+      "end": 141,
+      "type": "ADDRESS",
+      "text": "9596 LAKEVIEW ST UNIT 34C^^OAK HARBOR^WA^98244"
+    },
+    {
+      "start": 146,
+      "end": 159,
       "type": "PHONE",
-      "text": "1-888-555-0123"
+      "text": "(303)555-0117"
+    },
+    {
+      "start": 207,
+      "end": 219,
+      "type": "MEMBER_ID",
+      "text": "ZQ9154525-01"
     }
   ],
+  "allowed_redactions": [],
   "line_items": [
     {
-      "service_date": "2025-02-04",
-      "code": "96374",
-      "description": "IV push, single or initial substancc",
-      "billed_amount": "155.48",
-      "allowed_amount": "86.12",
-      "insurer_paid": "86.12",
-      "patient_responsibility": "0.00"
+      "service_date": "2025-05-07",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1777.40",
+      "allowed_amount": "683.59",
+      "insurer_paid": "478.51",
+      "patient_responsibility": "205.08"
     },
     {
-      "service_date": "2025-02-07",
-      "code": "74177",
-      "description": "CT abdomen and pelvis with contrast",
-      "billed_amount": "1843.65",
-      "allowed_amount": "562.71",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "562.71"
+      "service_date": "2025-05-07",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "214.95",
+      "allowed_amount": "126.43",
+      "insurer_paid": "101.14",
+      "patient_responsibility": "25.29"
     },
     {
-      "service_date": "2025-02-07",
-      "code": "96374",
-      "description": "IV push, single or initial substance",
-      "billed_amount": "409.58",
-      "allowed_amount": "249.59",
-      "insurer_paid": "174.71",
-      "patient_responsibility": "74.88"
+      "service_date": "2025-05-07",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "378.81",
+      "allowed_amount": "224.01",
+      "insurer_paid": "179.21",
+      "patient_responsibility": "44.80"
     },
     {
-      "service_date": "2025-02-07",
-      "code": "J1885",
-      "description": "Ketorolac tromethamine injection, per 15 mg",
-      "billed_amount": "70.15",
-      "allowed_amount": "35.37",
-      "insurer_paid": "24.76",
-      "patient_responsibility": "10.61"
+      "service_date": "2025-05-07",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "378.81",
+      "allowed_amount": "224.01",
+      "insurer_paid": "179.21",
+      "patient_responsibility": "44.80"
+    },
+    {
+      "service_date": "2025-05-07",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2963.97",
+      "allowed_amount": "1328.11",
+      "insurer_paid": "929.68",
+      "patient_responsibility": "398.43"
+    },
+    {
+      "service_date": "2025-05-07",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "79.45",
+      "allowed_amount": "39.23",
+      "insurer_paid": "31.38",
+      "patient_responsibility": "7.85"
+    },
+    {
+      "service_date": "2025-05-10",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "44.77",
+      "allowed_amount": "21.37",
+      "insurer_paid": "19.23",
+      "patient_responsibility": "2.14"
     }
   ],
-  "duplicate_pairs": []
+  "duplicate_pairs": [
+    [
+      2,
+      3
+    ]
+  ]
 }

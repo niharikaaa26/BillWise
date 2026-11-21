@@ -1,0 +1,16 @@
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0172
+Stmt Dt 03/03/25
+Pt Name JOHNSON FATIMA
+Pt DOB 12272017
+Mbr No XGH61919798
+Acct 9922974
+Addr 93 Cedar Way Springdale AR 72733
+Ph 845 555 0139
+
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+01/24/25 71046 Chest x-ray, 2 views 488.48 - 202.01 86.58
+01/24/25 G0439 Annual wellness visit, subsequent 241.O2 189.29 l32.50 56.79
+01/24/25 G0439 Annual wellness visit, subsequent 213.53 108.50 108.50 0.00
+01/24/25 70450 CT head or brain without contrast 1427.80 1092.61 983.35 109.26
+Total Pt Owes 252.63

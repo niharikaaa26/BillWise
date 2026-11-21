@@ -1,0 +1,16 @@
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0188
+Stmt Dt 09/14/25
+Pt Name PATEL ANDRE
+Pt DOB 11092003
+Mbr No MBR9520748
+Acct 5347928
+Addr 4745 Lakeview Dr #11B Oak Harbor WA 98236
+Ph 319 555 0155
+
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+08/26/25 71046 Chest x-ray, 2 views 297.99 139.62 0.00 l39.62
+08/28/25 99283 Emergency department visit, moderate severity 1l55.94 740.65 666.59 74.06
+08/28/25 J1885 Ketorolac tromethamine injection, per 15 mg 43.03 18.60 18.6O 0.00
+08/28/25 81001 Urinalysis, automated, wilh microscopy 86.O9 65.38 58.84 6.54
+Total Pt Owes 220.22

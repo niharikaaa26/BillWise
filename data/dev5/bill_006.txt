@@ -1,0 +1,16 @@
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0121
+Stmt Dt 06/30/25
+Pt Name LINDQVIST PATRICE
+Pt DOB 09081966
+Mbr No W261472925
+Acct 6573572
+Addr 3769 Cedar Avenue Oak Harbor WA 98214
+Ph 360 555 0153
+
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+06/10/25 70450 CT head or brain without contrast 925.37 434.87 434.87 0.00
+06/10/25 93000 Electrocardiogram, routine, with interpretation and report 98.36 75.24 0.0O 75.24
+06/10/25 90686 Influenza vaccine, quadrivalent, preservalive free 6l.48 30.08 30.08 O.00
+06/12/25 70450 CT head or brain without contrast 1483.93 - 520.20 57.80
+Total Pt Owes 133.04

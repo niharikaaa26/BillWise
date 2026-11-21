@@ -1,0 +1,119 @@
+{
+  "id": "bill_008",
+  "layout": "collapsed_scan",
+  "messy": [
+    "collapsed_columns",
+    "colonless_labels",
+    "missing_field",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 81,
+      "end": 95,
+      "type": "NAME",
+      "text": "RAMIREZ TOMASZ"
+    },
+    {
+      "start": 103,
+      "end": 111,
+      "type": "DOB",
+      "text": "06221959"
+    },
+    {
+      "start": 119,
+      "end": 130,
+      "type": "MEMBER_ID",
+      "text": "XGH39317911"
+    },
+    {
+      "start": 136,
+      "end": 143,
+      "type": "ACCOUNT_ID",
+      "text": "4390288"
+    },
+    {
+      "start": 149,
+      "end": 194,
+      "type": "ADDRESS",
+      "text": "5137 Sunset Road Unit 22B Springdale AR 72774"
+    },
+    {
+      "start": 198,
+      "end": 210,
+      "type": "PHONE",
+      "text": "864 555 0155"
+    },
+    {
+      "start": 217,
+      "end": 245,
+      "type": "EMAIL",
+      "text": "tomasz.ramirez71@example.org"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 41,
+      "end": 55,
+      "type": "PHONE",
+      "text": "1-888-555-0165"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-08-18",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "31.34",
+      "allowed_amount": null,
+      "insurer_paid": "10.41",
+      "patient_responsibility": "2.60"
+    },
+    {
+      "service_date": "2025-08-18",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "73.03",
+      "allowed_amount": "34.76",
+      "insurer_paid": "31.28",
+      "patient_responsibility": "3.48"
+    },
+    {
+      "service_date": "2025-08-18",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "144.17",
+      "allowed_amount": null,
+      "insurer_paid": "86.27",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-08-21",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "67.89",
+      "allowed_amount": "50.33",
+      "insurer_paid": "45.30",
+      "patient_responsibility": "5.03"
+    },
+    {
+      "service_date": "2025-08-21",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "26.89",
+      "allowed_amount": null,
+      "insurer_paid": "14.90",
+      "patient_responsibility": "1.66"
+    },
+    {
+      "service_date": "2025-08-21",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "55.51",
+      "allowed_amount": "17.73",
+      "insurer_paid": "14.18",
+      "patient_responsibility": "3.55"
+    }
+  ],
+  "duplicate_pairs": []
+}
