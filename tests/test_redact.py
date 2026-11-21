@@ -129,3 +129,8 @@ def test_description_comma_is_not_a_name_label():
 def test_org_above_address_is_not_a_name():
     r = redact("Northgate Pediatrics\n15 Commerce Blvd\n")
     assert all(s.type != "NAME" for s in r.spans)
+
+
+def test_dash_format_dob():
+    found, _ = types_and_values("Date of birth ... 09-28-1982\n")
+    assert ("DOB", "09-28-1982") in found

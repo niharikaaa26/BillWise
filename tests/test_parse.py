@@ -155,3 +155,34 @@ def test_duplicate_detected_despite_ocr_in_description():
                          "07/19/2025 80053   COMPREHENSIVE METABOLlC PANEL          320.60     230.80      64.16      25.64")
     r = parse(text)
     assert (0, 2) in r.possible_duplicates
+
+
+TSV_MULTI = (
+    "CLAIM 1 OF 2\n"
+    "Svc Dt\tProc Cd\tService\tAmt Charged\tPlan Discount\tCovered\tPlan Pymt\tMember Resp\n"
+    "03/14/25\t71046\tChest x-ray, 2 views\t$310.00\t$120.00\t$190.00\t$152.00\t$38.00\n"
+    "Claim totals\t\t\t\t\t\t\t$38.00\n"
+    "\n"
+    "CLAIM 2 OF 2\n"
+    "Svc Dt\tProc Cd\tService\tAmt Charged\tPlan Discount\tCovered\tPlan Pymt\tMember Resp\n"
+    "03/20/25\t36415\tRoutine venipuncture\t$30.00\t$10.00\t—\t$16.00\t$4.00\n"
+)
+
+
+def test_tsv_with_several_tables():
+    r = parse(TSV_MULTI)
+    assert r.format == "tsv"
+    a, b = r.line_items
+    assert (a.code, a.billed_amount, a.allowed_amount, a.insurer_paid, a.patient_responsibility) == \
+        ("71046", Decimal("310.00"), Decimal("190.00"), Decimal("152.00"), Decimal("38.00"))
+    assert b.service_date == date(2025, 3, 20) and b.allowed_amount is None
+    assert not any("could not read" in w for w in r.warnings)
+
+
+def test_unfamiliar_headers_typed_from_content():
+    text = ("When|What|Item|Billed|You Owe\n"
+            "03/14/2025|99213|Office visit|$250.00|$28.00\n"
+            "03/15/2025|J1885|Ketorolac injection|$45.00|$5.00\n")
+    r = parse(text)
+    assert [i.code for i in r.line_items] == ["99213", "J1885"]
+    assert r.line_items[0].service_date == date(2025, 3, 14)
