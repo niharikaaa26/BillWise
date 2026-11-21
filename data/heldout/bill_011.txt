@@ -1,0 +1,31 @@
+CASCADE ORTHOPEDIC PARTNERS, PLLC
+Tax ID 45-9529618
+Remit to: PO Box 2231, Tacoma, WA 98401
+Phone 253.555.0166 | Fax 253.555.0144
+
+STATEMENT FOR: Kim, Marcus D
+Guarantor #: 7739921
+Insured's ID No.: ZQ3387234-01
+Birthdate: 8/18/89
+Home: 6766 Oak Court Apt 5B, Riverton, OH 45012
+Cell: +1 212 555 0133
+E-mail: marcus.kim60@mail.example.com
+Referring physician: Dr. Chris Eriksen
+Rendering: Jordan Brennan, PA-C
+
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+06/30/25 74177     25   CT ABDOMEN AND PELVIS WITH           1  1,848.25  1,083.97  (493.29)    270.99
+                         CONTRAST
+
+--- continued on next page ---
+
+CASCADE ORTHOPEDIC PARTNERS, PLLC   Page 2
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+07/02/25 81001          URINALYSIS, AUTOMATED, WITH          1     56.05     37.16   (18.89)      0.00
+                         MICROSCOPY
+07/02/25 70450          CT HEAD OR BRAIN WITHOUT             1  2,292.63    666.52(1,459.48)    166.63
+                         CONTRAST
+07/02/25 G0439     59   ANNUAL WELLNESS VISIT,               1    232.09      0.00  (110.11)    12l.98
+                         SUBSEQUENT
+
+                                         AMOUNT DUE FROM PATIENT    559.60

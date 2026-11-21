@@ -1,0 +1,152 @@
+{
+  "id": "bill_007",
+  "layout": "group_statement_heldout",
+  "messy": [
+    "modifier",
+    "multiline_item",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 146,
+      "end": 162,
+      "type": "NAME",
+      "text": "Chen, Priyanka P"
+    },
+    {
+      "start": 176,
+      "end": 183,
+      "type": "ACCOUNT_ID",
+      "text": "2319443"
+    },
+    {
+      "start": 202,
+      "end": 215,
+      "type": "MEMBER_ID",
+      "text": "CPH-8479-8761"
+    },
+    {
+      "start": 227,
+      "end": 237,
+      "type": "DOB",
+      "text": "08/31/1957"
+    },
+    {
+      "start": 244,
+      "end": 282,
+      "type": "ADDRESS",
+      "text": "2518 Riverbend Ct, Millbrook, NY 12572"
+    },
+    {
+      "start": 289,
+      "end": 304,
+      "type": "PHONE",
+      "text": "+1 513 555 0194"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 62,
+      "end": 73,
+      "type": "ADDRESS",
+      "text": "PO Box 2231"
+    },
+    {
+      "start": 75,
+      "end": 91,
+      "type": "ADDRESS",
+      "text": "Tacoma, WA 98401"
+    },
+    {
+      "start": 98,
+      "end": 110,
+      "type": "PHONE",
+      "text": "253.555.0116"
+    },
+    {
+      "start": 117,
+      "end": 129,
+      "type": "PHONE",
+      "text": "253.555.0183"
+    },
+    {
+      "start": 326,
+      "end": 341,
+      "type": "NAME",
+      "text": "Dr. Gil Brennan"
+    },
+    {
+      "start": 353,
+      "end": 365,
+      "type": "NAME",
+      "text": "Jordan Gupta"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-04-20",
+      "code": "90686",
+      "description": "INFLUENZA VACCINE, QUADRIVALENT, PRESERVATIVE FREE",
+      "billed_amount": "48.48",
+      "allowed_amount": null,
+      "insurer_paid": "19.15",
+      "patient_responsibility": "8.20"
+    },
+    {
+      "service_date": "2025-04-20",
+      "code": "G0439",
+      "description": "ANNUAL WELLNESS VLSIT, SUBSEQUENT",
+      "billed_amount": "263.25",
+      "allowed_amount": null,
+      "insurer_paid": "132.87",
+      "patient_responsibility": "56.94"
+    },
+    {
+      "service_date": "2025-04-23",
+      "code": "93000",
+      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+      "billed_amount": "272.69",
+      "allowed_amount": null,
+      "insurer_paid": "152.60",
+      "patient_responsibility": "38.15"
+    },
+    {
+      "service_date": "2025-04-23",
+      "code": "90686",
+      "description": "INFLUENZA VACCINE, QUADRIVALENT, PRESERVATIVE FREE",
+      "billed_amount": "74.83",
+      "allowed_amount": null,
+      "insurer_paid": "55.44",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-24",
+      "code": "99203",
+      "description": "NEW PALIENT OFFICE VISIT",
+      "billed_amount": "162.93",
+      "allowed_amount": null,
+      "insurer_paid": "41.15",
+      "patient_responsibility": "17.63"
+    },
+    {
+      "service_date": "2025-04-25",
+      "code": "96374",
+      "description": "IV PUSH, SINGLE OR INITIAL SUBSTANCE",
+      "billed_amount": "221.71",
+      "allowed_amount": null,
+      "insurer_paid": "73.71",
+      "patient_responsibility": "18.43"
+    },
+    {
+      "service_date": "2025-04-25",
+      "code": "A4649",
+      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
+      "billed_amount": "187.18",
+      "allowed_amount": null,
+      "insurer_paid": "102.32",
+      "patient_responsibility": "11.37"
+    }
+  ],
+  "duplicate_pairs": []
+}

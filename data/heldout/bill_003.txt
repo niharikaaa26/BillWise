@@ -1,0 +1,22 @@
+RED MESA CARDIOLOGY GROUP
+Tax ID 85-9814143
+Remit to: PO Box 870, Santa Fe, NM 87501
+Phone 505.555.0111 | Fax 505.555.0148
+
+STATEMENT FOR: Ivanova, Sarah
+Guarantor #: 9007766
+Insured's ID No.: W472124762
+Birthdate: August 16, 2001
+Home: 5876 Hillcrest Way, Greenville, SC 29673
+Cell: +1 513 555 0151
+Referring physician: Dr. Farah Dubois
+Rendering: Jordan Farouk, PA-C
+
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+03/30/25 99213     RT   OFFICE VISIT, ESTABLISHED            1    199.09    101.99   (97.10)      0.00
+                         PATIENT, LOW COMPLEXITY
+03/30/25 99203          NEW PATIENT OFFICE VISIT             1    242,51    153.51   (89.00)      0.00
+03/30/25 74177     LT   CT ABDOMEN AND PELVIS WITH           1  4,287.02  2,470.34(1,542.20)    274,48
+                         CONTRAST
+
+                                         AMOUNT DUE FROM PATIENT    274.48

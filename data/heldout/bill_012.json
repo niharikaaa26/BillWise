@@ -1,0 +1,142 @@
+{
+  "id": "bill_012",
+  "layout": "group_statement_heldout",
+  "messy": [
+    "modifier",
+    "multiline_item",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 139,
+      "end": 154,
+      "type": "NAME",
+      "text": "Bianchi, Luis P"
+    },
+    {
+      "start": 168,
+      "end": 175,
+      "type": "ACCOUNT_ID",
+      "text": "7516240"
+    },
+    {
+      "start": 194,
+      "end": 206,
+      "type": "MEMBER_ID",
+      "text": "ZQ0065048-01"
+    },
+    {
+      "start": 218,
+      "end": 232,
+      "type": "DOB",
+      "text": "March 28, 1954"
+    },
+    {
+      "start": 239,
+      "end": 278,
+      "type": "ADDRESS",
+      "text": "1822 Oak Way #3C, Port Jervis, NY 12758"
+    },
+    {
+      "start": 285,
+      "end": 300,
+      "type": "PHONE",
+      "text": "+1 212 555 0164"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 54,
+      "end": 64,
+      "type": "ADDRESS",
+      "text": "PO Box 870"
+    },
+    {
+      "start": 66,
+      "end": 84,
+      "type": "ADDRESS",
+      "text": "Santa Fe, NM 87501"
+    },
+    {
+      "start": 91,
+      "end": 103,
+      "type": "PHONE",
+      "text": "505.555.0165"
+    },
+    {
+      "start": 110,
+      "end": 122,
+      "type": "PHONE",
+      "text": "505.555.0193"
+    },
+    {
+      "start": 322,
+      "end": 339,
+      "type": "NAME",
+      "text": "Dr. Chris Brennan"
+    },
+    {
+      "start": 351,
+      "end": 360,
+      "type": "NAME",
+      "text": "Casey Cho"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-08-16",
+      "code": "99285",
+      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+      "billed_amount": "1817.39",
+      "allowed_amount": null,
+      "insurer_paid": "718.02",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-08-19",
+      "code": "93000",
+      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+      "billed_amount": "287.21",
+      "allowed_amount": null,
+      "insurer_paid": "139.46",
+      "patient_responsibility": "34.86"
+    },
+    {
+      "service_date": "2025-08-19",
+      "code": "71046",
+      "description": "CHEST X-RAY, 2 VIEWS",
+      "billed_amount": "230.43",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "165.71"
+    },
+    {
+      "service_date": "2025-08-19",
+      "code": "99285",
+      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+      "billed_amount": "2737.86",
+      "allowed_amount": null,
+      "insurer_paid": "1010.90",
+      "patient_responsibility": "252.73"
+    },
+    {
+      "service_date": "2025-08-19",
+      "code": "A4649",
+      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
+      "billed_amount": "91.52",
+      "allowed_amount": null,
+      "insurer_paid": "45.95",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-08-19",
+      "code": "93000",
+      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+      "billed_amount": "235.82",
+      "allowed_amount": null,
+      "insurer_paid": "75.97",
+      "patient_responsibility": "32.56"
+    }
+  ],
+  "duplicate_pairs": []
+}

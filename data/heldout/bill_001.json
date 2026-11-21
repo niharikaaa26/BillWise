@@ -1,0 +1,140 @@
+{
+  "id": "bill_001",
+  "layout": "group_statement_heldout",
+  "messy": [
+    "modifier",
+    "multiline_item",
+    "ocr_amount",
+    "page_break"
+  ],
+  "pii": [
+    {
+      "start": 146,
+      "end": 164,
+      "type": "NAME",
+      "text": "Achterberg, Fatima"
+    },
+    {
+      "start": 178,
+      "end": 185,
+      "type": "ACCOUNT_ID",
+      "text": "6905929"
+    },
+    {
+      "start": 204,
+      "end": 216,
+      "type": "MEMBER_ID",
+      "text": "ZQ1884718-01"
+    },
+    {
+      "start": 228,
+      "end": 238,
+      "type": "DOB",
+      "text": "1993-12-17"
+    },
+    {
+      "start": 245,
+      "end": 283,
+      "type": "ADDRESS",
+      "text": "5517 Sunset Lane, Springdale, AR 72746"
+    },
+    {
+      "start": 290,
+      "end": 305,
+      "type": "PHONE",
+      "text": "+1 845 555 0101"
+    },
+    {
+      "start": 314,
+      "end": 345,
+      "type": "EMAIL",
+      "text": "fatima.achterberg16@example.com"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 62,
+      "end": 73,
+      "type": "ADDRESS",
+      "text": "PO Box 2231"
+    },
+    {
+      "start": 75,
+      "end": 91,
+      "type": "ADDRESS",
+      "text": "Tacoma, WA 98401"
+    },
+    {
+      "start": 98,
+      "end": 110,
+      "type": "PHONE",
+      "text": "253.555.0164"
+    },
+    {
+      "start": 117,
+      "end": 129,
+      "type": "PHONE",
+      "text": "253.555.0116"
+    },
+    {
+      "start": 367,
+      "end": 382,
+      "type": "NAME",
+      "text": "Dr. Beth Farouk"
+    },
+    {
+      "start": 394,
+      "end": 406,
+      "type": "NAME",
+      "text": "Casey Dubois"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-02-17",
+      "code": "99203",
+      "description": "NEW PATIENT OFFICE VISIT",
+      "billed_amount": "235.07",
+      "allowed_amount": null,
+      "insurer_paid": "157.23",
+      "patient_responsibility": "17.47"
+    },
+    {
+      "service_date": "2025-02-17",
+      "code": "80053",
+      "description": "COMPREHENSIVE METABOLIC PANEL",
+      "billed_amount": "123.45",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "88.51"
+    },
+    {
+      "service_date": "2025-02-17",
+      "code": "71046",
+      "description": "CHEST X-RAY, 2 VIEWS",
+      "billed_amount": "400.06",
+      "allowed_amount": null,
+      "insurer_paid": "228.23",
+      "patient_responsibility": "57.06"
+    },
+    {
+      "service_date": "2025-02-17",
+      "code": "G0439",
+      "description": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
+      "billed_amount": "214.67",
+      "allowed_amount": null,
+      "insurer_paid": "77.80",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-17",
+      "code": "J1885",
+      "description": "KETOROLAC TROMETHAMINE INJECTION, PER 15 MG",
+      "billed_amount": "47.31",
+      "allowed_amount": null,
+      "insurer_paid": "27.21",
+      "patient_responsibility": "3.02"
+    }
+  ],
+  "duplicate_pairs": []
+}

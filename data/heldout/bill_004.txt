@@ -1,0 +1,22 @@
+CASCADE ORTHOPEDIC PARTNERS, PLLC
+Tax ID 49-6527546
+Remit to: PO Box 2231, Tacoma, WA 98401
+Phone 253.555.0198 | Fax 253.555.0172
+
+STATEMENT FOR: Johnson, Brianna
+Guarantor #: 3958790
+Insured's ID No.: XGH20365710
+Birthdate: July 21, 1979
+Home: 8711 Sunset Blvd #5C, Springdale, AR 72776
+Cell: +1 513 555 0124
+E-mail: brianna.johnson75@example.org
+Referring physician: Dr. Beth Dubois
+Rendering: Morgan Brennan, PA-C
+
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+03/13/25 99213     RT   OFFICE VISIT, ESTABLISHED            1    203,21     86.56   (79.55)     37.10
+                         PATIENT, LOW COMPLEXITY
+03/15/25 99285     59   EMERGENCY DEPARTMENT VISIT, HIGH     1  1,828,36  1,31l.11  (371.57)    145.68
+                         SEVERITY
+
+                                         AMOUNT DUE FROM PATIENT    182.78

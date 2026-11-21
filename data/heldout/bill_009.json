@@ -1,0 +1,132 @@
+{
+  "id": "bill_009",
+  "layout": "group_statement_heldout",
+  "messy": [
+    "duplicate_charge",
+    "modifier",
+    "multiline_item",
+    "no_cents",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 139,
+      "end": 156,
+      "type": "NAME",
+      "text": "Haddad, Siobhan P"
+    },
+    {
+      "start": 170,
+      "end": 177,
+      "type": "ACCOUNT_ID",
+      "text": "1167202"
+    },
+    {
+      "start": 196,
+      "end": 206,
+      "type": "MEMBER_ID",
+      "text": "W446897303"
+    },
+    {
+      "start": 218,
+      "end": 224,
+      "type": "DOB",
+      "text": "2/8/68"
+    },
+    {
+      "start": 231,
+      "end": 272,
+      "type": "ADDRESS",
+      "text": "8880 Hillcrest Lane, Greenville, SC 29694"
+    },
+    {
+      "start": 279,
+      "end": 294,
+      "type": "PHONE",
+      "text": "+1 917 555 0148"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 54,
+      "end": 64,
+      "type": "ADDRESS",
+      "text": "PO Box 870"
+    },
+    {
+      "start": 66,
+      "end": 84,
+      "type": "ADDRESS",
+      "text": "Santa Fe, NM 87501"
+    },
+    {
+      "start": 91,
+      "end": 103,
+      "type": "PHONE",
+      "text": "505.555.0113"
+    },
+    {
+      "start": 110,
+      "end": 122,
+      "type": "PHONE",
+      "text": "505.555.0130"
+    },
+    {
+      "start": 316,
+      "end": 332,
+      "type": "NAME",
+      "text": "Dr. Chris Dubois"
+    },
+    {
+      "start": 344,
+      "end": 358,
+      "type": "NAME",
+      "text": "Jordan Alvarez"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-01-08",
+      "code": "70450",
+      "description": "CT HEAD OR BRAIN WITHOUT CONTRAST",
+      "billed_amount": "2302.59",
+      "allowed_amount": null,
+      "insurer_paid": "1062.73",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-01-08",
+      "code": "36415",
+      "description": "ROUTINE VENIPUNCLURE",
+      "billed_amount": "43.21",
+      "allowed_amount": null,
+      "insurer_paid": "22.20",
+      "patient_responsibility": "9.52"
+    },
+    {
+      "service_date": "2025-01-08",
+      "code": "36415",
+      "description": "ROUTINE VENIPUNCTURE",
+      "billed_amount": "43.21",
+      "allowed_amount": null,
+      "insurer_paid": "22.20",
+      "patient_responsibility": "9.52"
+    },
+    {
+      "service_date": "2025-01-08",
+      "code": "A4649",
+      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
+      "billed_amount": "62.97",
+      "allowed_amount": null,
+      "insurer_paid": "26.78",
+      "patient_responsibility": "11.48"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      1,
+      2
+    ]
+  ]
+}

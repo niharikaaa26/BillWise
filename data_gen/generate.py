@@ -14,6 +14,7 @@ For each bill the generator writes:
 
 Usage:
     python -m data_gen.generate --out data/synthetic --n 48 --seed 2025
+    python -m data_gen.generate --out data/heldout --n 12 --seed 777 --ocr-p 0.25 --heldout
 """
 from __future__ import annotations
 
@@ -620,12 +621,95 @@ def layout_clinic_csv(rng: random.Random, ocr_p: float) -> tuple[Doc, list[dict]
     return doc, items, flags
 
 
+# --------------------------------------------------------------------------
+# Layout E (HELD OUT): physician-group statement. Written after the parser and
+# redactor were built and never used to tune them. Different header vocabulary,
+# modifier and units columns, 2-digit-year dates, parenthesized negatives,
+# page break with repeated header, space-separated phone, "Last, First M" name.
+# --------------------------------------------------------------------------
+GROUPS = [
+    ("CASCADE ORTHOPEDIC PARTNERS, PLLC", "PO Box 2231", "Tacoma, WA 98401", "253"),
+    ("RED MESA CARDIOLOGY GROUP", "PO Box 870", "Santa Fe, NM 87501", "505"),
+]
+
+
+def layout_group_statement(rng: random.Random, ocr_p: float) -> tuple[Doc, list[dict], set[str]]:
+    flags: set[str] = set()
+    doc = Doc()
+    p = make_person(rng)
+    grp, gbox, gcity, garea = rng.choice(GROUPS)
+    doc.nl(grp)
+    doc.nl(f"Tax ID {digits(rng, 2)}-{digits(rng, 7)}")
+    doc.add("Remit to: ").org(gbox, "ADDRESS").add(", ").org(gcity, "ADDRESS").nl()
+    doc.add("Phone ").org(f"{garea}.555.01{rng.randint(0, 99):02d}", "PHONE")
+    doc.add(" | Fax ").org(f"{garea}.555.01{rng.randint(0, 99):02d}", "PHONE").nl()
+    doc.nl()
+    mid = f" {p['middle']}" if p["middle"] else ""
+    doc.add("STATEMENT FOR: ").pii_(f"{p['last']}, {p['first']}{mid}", "NAME").nl()
+    doc.add("Guarantor #: ").pii_(digits(rng, 7), "ACCOUNT_ID").nl()
+    doc.add("Insured's ID No.: ").pii_(member_id(rng), "MEMBER_ID").nl()
+    doc.add("Birthdate: ").pii_(dob_fmt(p["dob"], rng), "DOB").nl()
+    doc.add("Home: ").pii_(f"{p['street']}, {p['city']}, {p['state']} {p['zip']}", "ADDRESS").nl()
+    area = rng.choice(AREA_CODES)
+    doc.add("Cell: ").pii_(f"+1 {area} 555 01{rng.randint(0, 99):02d}", "PHONE").nl()
+    if rng.random() < 0.5:
+        doc.add("E-mail: ").pii_(p["email"], "EMAIL").nl()
+    doc.add("Referring physician: ").org(f"Dr. {rng.choice(PROVIDER_FIRST)} {rng.choice(PROVIDER_LAST)}", "NAME").nl()
+    doc.add("Rendering: ").org(f"{rng.choice(['Jordan', 'Morgan', 'Casey'])} {rng.choice(PROVIDER_LAST)}", "NAME").nl(", PA-C")
+    doc.nl()
+
+    items = make_items(rng, date(2025, 1, 1) + timedelta(days=rng.randint(0, 280)), flags)
+    W = (9, 9, 4, 32, 6, 10, 10, 10, 10)
+    hdr = f"{'DOS':<{W[0]}} {'CPT':<{W[1]}} {'MOD':<{W[2]}} {'DESCRIPTION':<{W[3]}}{'UNITS':>{W[4]}}{'CHARGE':>{W[5]}}{'INS PMT':>{W[6]}}{'INS ADJ':>{W[7]}}{'BALANCE':>{W[8]}}"
+    doc.nl(hdr)
+    page_break_at = rng.randint(1, len(items) - 1) if len(items) > 3 and rng.random() < 0.5 else None
+    for idx, it in enumerate(items):
+        if idx == page_break_at:
+            flags.add("page_break")
+            doc.nl()
+            doc.nl("--- continued on next page ---")
+            doc.nl("\f")
+            doc.nl(f"{grp}   Page 2")
+            doc.nl(hdr)
+        it["allowed_amount"] = None
+        adj = it["billed_amount"] - it["insurer_paid"] - it["patient_responsibility"]
+        mod = rng.choice(["", "", "", "25", "59", "RT", "LT"])
+        if mod:
+            flags.add("modifier")
+        desc = it["description"].upper()
+        if rng.random() < ocr_p * 0.5:
+            flags.add("ocr_description")
+            desc = ocr_text(desc.lower(), rng).upper()
+        it["description"] = desc
+        parts = wrap(desc, W[3])
+        if len(parts) > 1:
+            flags.add("multiline_item")
+        units = str(rng.choice([1, 1, 1, 2]))
+        charge = fmt_amt(it["billed_amount"])
+        if it["billed_amount"] == it["billed_amount"].to_integral_value() or rng.random() < 0.15:
+            flags.add("no_cents")
+            charge = f"{it['billed_amount']:,.0f}" if it["billed_amount"] == it["billed_amount"].to_integral_value() else charge
+        adj_s = f"({adj:,.2f})" if adj else "0.00"
+        doc.nl(f"{it['service_date']:%m/%d/%y} {it['code']:<{W[1]}} {mod:<{W[2]}} {parts[0]:<{W[3]}}{units:>{W[4]}}"
+               f"{maybe_ocr_amt(charge, rng, flags, ocr_p):>{W[5]}}"
+               f"{maybe_ocr_amt(fmt_amt(it['insurer_paid']), rng, flags, ocr_p):>{W[6]}}"
+               f"{adj_s:>{W[7]}}"
+               f"{maybe_ocr_amt(fmt_amt(it['patient_responsibility']), rng, flags, ocr_p):>{W[8]}}")
+        for cont in parts[1:]:
+            doc.nl(f"{'':<{W[0]}} {'':<{W[1]}} {'':<{W[2]}} {cont}")
+    bal = sum(i["patient_responsibility"] for i in items)
+    doc.nl()
+    doc.nl(f"{'AMOUNT DUE FROM PATIENT':>{sum(W[:5]) + 4}}{fmt_amt(bal):>{W[5]}}")
+    return doc, items, flags
+
+
 LAYOUTS = {
     "hospital_fixed": layout_hospital,
     "eob_pipe": layout_eob_table,
     "claim_blocks": layout_blocks,
     "clinic_csv": layout_clinic_csv,
 }
+HELDOUT_LAYOUTS = {"group_statement_heldout": layout_group_statement}
 
 
 def duplicate_pairs(items: list[dict]) -> list[list[int]]:
@@ -638,14 +722,15 @@ def duplicate_pairs(items: list[dict]) -> list[list[int]]:
     return pairs
 
 
-def generate(out: Path, n: int, seed: int, ocr_p: float = 0.12) -> list[Path]:
+def generate(out: Path, n: int, seed: int, ocr_p: float = 0.12, heldout: bool = False) -> list[Path]:
     rng = random.Random(seed)
     out.mkdir(parents=True, exist_ok=True)
-    names = list(LAYOUTS)
+    table = HELDOUT_LAYOUTS if heldout else LAYOUTS
+    names = list(table)
     written = []
     for k in range(n):
         layout = names[k % len(names)]
-        doc, items, flags = LAYOUTS[layout](rng, ocr_p)
+        doc, items, flags = table[layout](rng, ocr_p)
         text = doc.text()
         for s in doc.pii + doc.allowed:  # self-check: offsets must be exact
             assert text[s["start"]:s["end"]] == s["text"], s
@@ -671,8 +756,10 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=48)
     ap.add_argument("--seed", type=int, default=2025)
     ap.add_argument("--ocr-p", type=float, default=0.12, help="probability of each OCR corruption site")
+    ap.add_argument("--heldout", action="store_true",
+                    help="generate the held-out layout (never used to tune the parser/redactor)")
     args = ap.parse_args()
-    files = generate(args.out, args.n, args.seed, args.ocr_p)
+    files = generate(args.out, args.n, args.seed, args.ocr_p, args.heldout)
     print(f"wrote {len(files)} synthetic bills + ground truth to {args.out}")
 
 

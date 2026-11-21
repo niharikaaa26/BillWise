@@ -1,0 +1,150 @@
+{
+  "id": "bill_006",
+  "layout": "group_statement_heldout",
+  "messy": [
+    "modifier",
+    "multiline_item",
+    "no_cents",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 146,
+      "end": 162,
+      "type": "NAME",
+      "text": "Petrov, Elijah F"
+    },
+    {
+      "start": 176,
+      "end": 183,
+      "type": "ACCOUNT_ID",
+      "text": "8187281"
+    },
+    {
+      "start": 202,
+      "end": 215,
+      "type": "MEMBER_ID",
+      "text": "CPH-3616-7076"
+    },
+    {
+      "start": 227,
+      "end": 237,
+      "type": "DOB",
+      "text": "08/22/1976"
+    },
+    {
+      "start": 244,
+      "end": 281,
+      "type": "ADDRESS",
+      "text": "8802 Sunset Dr, Cedar Falls, IA 50679"
+    },
+    {
+      "start": 288,
+      "end": 303,
+      "type": "PHONE",
+      "text": "+1 917 555 0132"
+    },
+    {
+      "start": 312,
+      "end": 339,
+      "type": "EMAIL",
+      "text": "elijah.petrov25@example.org"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 62,
+      "end": 73,
+      "type": "ADDRESS",
+      "text": "PO Box 2231"
+    },
+    {
+      "start": 75,
+      "end": 91,
+      "type": "ADDRESS",
+      "text": "Tacoma, WA 98401"
+    },
+    {
+      "start": 98,
+      "end": 110,
+      "type": "PHONE",
+      "text": "253.555.0110"
+    },
+    {
+      "start": 117,
+      "end": 129,
+      "type": "PHONE",
+      "text": "253.555.0182"
+    },
+    {
+      "start": 361,
+      "end": 373,
+      "type": "NAME",
+      "text": "Dr. Alan Cho"
+    },
+    {
+      "start": 385,
+      "end": 399,
+      "type": "NAME",
+      "text": "Morgan Alvarez"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-07-15",
+      "code": "87880",
+      "description": "RAPID STREP TEST",
+      "billed_amount": "66.99",
+      "allowed_amount": null,
+      "insurer_paid": "18.07",
+      "patient_responsibility": "4.52"
+    },
+    {
+      "service_date": "2025-07-15",
+      "code": "99285",
+      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+      "billed_amount": "2231.32",
+      "allowed_amount": null,
+      "insurer_paid": "1346.63",
+      "patient_responsibility": "336.66"
+    },
+    {
+      "service_date": "2025-07-15",
+      "code": "81001",
+      "description": "URINALYSIS, AUTOMATED, WITH MICROSCOPY",
+      "billed_amount": "62.15",
+      "allowed_amount": null,
+      "insurer_paid": "43.86",
+      "patient_responsibility": "4.87"
+    },
+    {
+      "service_date": "2025-07-15",
+      "code": "80053",
+      "description": "C0MPREHENSIVE METABOLIC PANEL",
+      "billed_amount": "181.19",
+      "allowed_amount": null,
+      "insurer_paid": "49.47",
+      "patient_responsibility": "12.37"
+    },
+    {
+      "service_date": "2025-07-18",
+      "code": "99213",
+      "description": "OFFICE VISIT, ESTABLISHED PATIENT, LOW C0MPLEXITY",
+      "billed_amount": "150.43",
+      "allowed_amount": null,
+      "insurer_paid": "44.27",
+      "patient_responsibility": "11.07"
+    },
+    {
+      "service_date": "2025-07-18",
+      "code": "A4649",
+      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
+      "billed_amount": "117.27",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "47.17"
+    }
+  ],
+  "duplicate_pairs": []
+}

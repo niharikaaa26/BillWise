@@ -1,0 +1,27 @@
+RED MESA CARDIOLOGY GROUP
+Tax ID 99-2119553
+Remit to: PO Box 870, Santa Fe, NM 87501
+Phone 505.555.0165 | Fax 505.555.0193
+
+STATEMENT FOR: Bianchi, Luis P
+Guarantor #: 7516240
+Insured's ID No.: ZQ0065048-01
+Birthdate: March 28, 1954
+Home: 1822 Oak Way #3C, Port Jervis, NY 12758
+Cell: +1 212 555 0164
+Referring physician: Dr. Chris Brennan
+Rendering: Casey Cho, PA-C
+
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+08/16/25 99285     25   EMERGENCY DEPARTMENT VISIT, HIGH     1  1,817.39    7l8.02(1,099.37)      0.00
+                         SEVERITY
+08/19/25 93000          ELECTROCARDIOGRAM, ROUTINE, WITH     1    287.2l    139,46  (112.89)     34.86
+                         INTERPRETATION AND REPORT
+08/19/25 71046     LT   CHEST X-RAY, 2 VIEWS                 2    230.43      0.00   (64.72)    165.71
+08/19/25 99285          EMERGENCY DEPARTMENT VISIT, HIGH     1  2,737.86  1,010.90(1,474.23)    252,73
+                         SEVERITY
+08/19/25 A4649          SURGICAL SUPPLY, MISCELLANEOUS       1     91.52     45.95   (45.57)      0.00
+08/19/25 93000          ELECTROCARDIOGRAM, ROUTINE, WITH     2    235.82     75.97  (127.29)     32.56
+                         INTERPRETATION AND REPORT
+
+                                         AMOUNT DUE FROM PATIENT    485.86

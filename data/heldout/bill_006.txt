@@ -1,0 +1,27 @@
+CASCADE ORTHOPEDIC PARTNERS, PLLC
+Tax ID 81-8350164
+Remit to: PO Box 2231, Tacoma, WA 98401
+Phone 253.555.0110 | Fax 253.555.0182
+
+STATEMENT FOR: Petrov, Elijah F
+Guarantor #: 8187281
+Insured's ID No.: CPH-3616-7076
+Birthdate: 08/22/1976
+Home: 8802 Sunset Dr, Cedar Falls, IA 50679
+Cell: +1 917 555 0132
+E-mail: elijah.petrov25@example.org
+Referring physician: Dr. Alan Cho
+Rendering: Morgan Alvarez, PA-C
+
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+07/15/25 87880     25   RAPID STREP TEST                     2     66,99     18.O7   (44.40)      4.52
+07/15/25 99285     59   EMERGENCY DEPARTMENT VISIT, HIGH     1  2,231.32  1,346.63  (548.03)    336,66
+                         SEVERITY
+07/15/25 81001     RT   URINALYSIS, AUTOMATED, WITH          1     62.15     43.86   (13.42)      4,87
+                         MICROSCOPY
+07/15/25 80053     25   C0MPREHENSIVE METABOLIC PANEL        1    181.19     49.47  (119.35)     12.37
+07/18/25 99213     LT   OFFICE VISIT, ESTABLISHED            1    150.43     44,27   (95.09)     11.07
+                         PATIENT, LOW C0MPLEXITY
+07/18/25 A4649     RT   SURGICAL SUPPLY, MISCELLANEOUS       1    117,27      0.00   (70.10)     47.17
+
+                                         AMOUNT DUE FROM PATIENT    416.66

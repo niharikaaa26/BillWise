@@ -1,0 +1,29 @@
+CASCADE ORTHOPEDIC PARTNERS, PLLC
+Tax ID 35-8569833
+Remit to: PO Box 2231, Tacoma, WA 98401
+Phone 253.555.0116 | Fax 253.555.0183
+
+STATEMENT FOR: Chen, Priyanka P
+Guarantor #: 2319443
+Insured's ID No.: CPH-8479-8761
+Birthdate: 08/31/1957
+Home: 2518 Riverbend Ct, Millbrook, NY 12572
+Cell: +1 513 555 0194
+Referring physician: Dr. Gil Brennan
+Rendering: Jordan Gupta, PA-C
+
+DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+04/20/25 90686          INFLUENZA VACCINE, QUADRIVALENT,     1     48,48     19.15   (21.13)      8.20
+                         PRESERVATIVE FREE
+04/20/25 G0439     59   ANNUAL WELLNESS VLSIT,               1    263.25    132,87   (73.44)     56,94
+                         SUBSEQUENT
+04/23/25 93000     LT   ELECTROCARDIOGRAM, ROUTINE, WITH     1    272.69    152.60   (81.94)     38.15
+                         INTERPRETATION AND REPORT
+04/23/25 90686     59   INFLUENZA VACCINE, QUADRIVALENT,     1     74.83     55.44   (19.39)      0.00
+                         PRESERVATIVE FREE
+04/24/25 99203          NEW PALIENT OFFICE VISIT             1    162.93     41.15  (104.15)     17.63
+04/25/25 96374     25   IV PUSH, SINGLE OR INITIAL           1    221.71     73.71  (129.57)     18.43
+                         SUBSTANCE
+04/25/25 A4649     25   SURGICAL SUPPLY, MISCELLANEOUS       1    187.18    102.32   (73.49)     1l.37
+
+                                         AMOUNT DUE FROM PATIENT    150.72

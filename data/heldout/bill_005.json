@@ -1,0 +1,153 @@
+{
+  "id": "bill_005",
+  "layout": "group_statement_heldout",
+  "messy": [
+    "modifier",
+    "multiline_item",
+    "ocr_amount",
+    "ocr_description",
+    "page_break"
+  ],
+  "pii": [
+    {
+      "start": 139,
+      "end": 155,
+      "type": "NAME",
+      "text": "Williams, Hannah"
+    },
+    {
+      "start": 169,
+      "end": 176,
+      "type": "ACCOUNT_ID",
+      "text": "6835172"
+    },
+    {
+      "start": 195,
+      "end": 208,
+      "type": "MEMBER_ID",
+      "text": "CPH-6651-7610"
+    },
+    {
+      "start": 220,
+      "end": 227,
+      "type": "DOB",
+      "text": "2/21/92"
+    },
+    {
+      "start": 234,
+      "end": 287,
+      "type": "ADDRESS",
+      "text": "3829 Chestnut Boulevard Apt 35, Port Jervis, NY 12732"
+    },
+    {
+      "start": 294,
+      "end": 309,
+      "type": "PHONE",
+      "text": "+1 917 555 0178"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 54,
+      "end": 64,
+      "type": "ADDRESS",
+      "text": "PO Box 870"
+    },
+    {
+      "start": 66,
+      "end": 84,
+      "type": "ADDRESS",
+      "text": "Santa Fe, NM 87501"
+    },
+    {
+      "start": 91,
+      "end": 103,
+      "type": "PHONE",
+      "text": "505.555.0115"
+    },
+    {
+      "start": 110,
+      "end": 122,
+      "type": "PHONE",
+      "text": "505.555.0194"
+    },
+    {
+      "start": 331,
+      "end": 343,
+      "type": "NAME",
+      "text": "Dr. Evan Cho"
+    },
+    {
+      "start": 355,
+      "end": 368,
+      "type": "NAME",
+      "text": "Jordan Dubois"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-08-15",
+      "code": "A4649",
+      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
+      "billed_amount": "46.53",
+      "allowed_amount": null,
+      "insurer_paid": "28.65",
+      "patient_responsibility": "7.16"
+    },
+    {
+      "service_date": "2025-08-15",
+      "code": "99203",
+      "description": "NEW PALIENT OFFICE VISIT",
+      "billed_amount": "173.13",
+      "allowed_amount": null,
+      "insurer_paid": "69.51",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-08-15",
+      "code": "70450",
+      "description": "CT HEAD OR BRAIN WITHOUT CONTRAST",
+      "billed_amount": "1676.44",
+      "allowed_amount": null,
+      "insurer_paid": "720.05",
+      "patient_responsibility": "180.01"
+    },
+    {
+      "service_date": "2025-08-15",
+      "code": "99285",
+      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+      "billed_amount": "1848.38",
+      "allowed_amount": null,
+      "insurer_paid": "704.81",
+      "patient_responsibility": "78.31"
+    },
+    {
+      "service_date": "2025-08-18",
+      "code": "93000",
+      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+      "billed_amount": "205.75",
+      "allowed_amount": null,
+      "insurer_paid": "115.04",
+      "patient_responsibility": "49.30"
+    },
+    {
+      "service_date": "2025-08-18",
+      "code": "G0439",
+      "description": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
+      "billed_amount": "246.50",
+      "allowed_amount": null,
+      "insurer_paid": "140.81",
+      "patient_responsibility": "15.65"
+    },
+    {
+      "service_date": "2025-08-18",
+      "code": "93000",
+      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRCTATION AND REPORT",
+      "billed_amount": "92.63",
+      "allowed_amount": null,
+      "insurer_paid": "62.97",
+      "patient_responsibility": "7.00"
+    }
+  ],
+  "duplicate_pairs": []
+}

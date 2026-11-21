@@ -1,0 +1,122 @@
+{
+  "id": "bill_002",
+  "layout": "group_statement_heldout",
+  "messy": [
+    "modifier",
+    "multiline_item",
+    "no_cents",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 146,
+      "end": 162,
+      "type": "NAME",
+      "text": "Oyelaran, Yuki G"
+    },
+    {
+      "start": 176,
+      "end": 183,
+      "type": "ACCOUNT_ID",
+      "text": "7434708"
+    },
+    {
+      "start": 202,
+      "end": 215,
+      "type": "MEMBER_ID",
+      "text": "CPH-3739-6304"
+    },
+    {
+      "start": 227,
+      "end": 237,
+      "type": "DOB",
+      "text": "2013-12-15"
+    },
+    {
+      "start": 244,
+      "end": 278,
+      "type": "ADDRESS",
+      "text": "2716 Pine Rd, Springdale, AR 72793"
+    },
+    {
+      "start": 285,
+      "end": 300,
+      "type": "PHONE",
+      "text": "+1 360 555 0160"
+    },
+    {
+      "start": 309,
+      "end": 341,
+      "type": "EMAIL",
+      "text": "yuki.oyelaran54@mail.example.com"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 62,
+      "end": 73,
+      "type": "ADDRESS",
+      "text": "PO Box 2231"
+    },
+    {
+      "start": 75,
+      "end": 91,
+      "type": "ADDRESS",
+      "text": "Tacoma, WA 98401"
+    },
+    {
+      "start": 98,
+      "end": 110,
+      "type": "PHONE",
+      "text": "253.555.0184"
+    },
+    {
+      "start": 117,
+      "end": 129,
+      "type": "PHONE",
+      "text": "253.555.0172"
+    },
+    {
+      "start": 363,
+      "end": 379,
+      "type": "NAME",
+      "text": "Dr. Dana Brennan"
+    },
+    {
+      "start": 391,
+      "end": 405,
+      "type": "NAME",
+      "text": "Jordan Alvarez"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-01-07",
+      "code": "80053",
+      "description": "COMPREHENSIVE METABOLIC PANEL",
+      "billed_amount": "220.50",
+      "allowed_amount": null,
+      "insurer_paid": "85.02",
+      "patient_responsibility": "36.44"
+    },
+    {
+      "service_date": "2025-01-07",
+      "code": "71046",
+      "description": "CHEST X-RAY, 2 VIEWS",
+      "billed_amount": "248.26",
+      "allowed_amount": null,
+      "insurer_paid": "125.70",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-01-07",
+      "code": "J1885",
+      "description": "KETOROLAC TROMETHAMINE INJECTION, PER 15 MG",
+      "billed_amount": "74.49",
+      "allowed_amount": null,
+      "insurer_paid": "33.18",
+      "patient_responsibility": "8.30"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,0 +1,151 @@
+{
+  "id": "bill_008",
+  "layout": "group_statement_heldout",
+  "messy": [
+    "modifier",
+    "multiline_item",
+    "no_cents",
+    "ocr_amount",
+    "ocr_description",
+    "page_break"
+  ],
+  "pii": [
+    {
+      "start": 139,
+      "end": 153,
+      "type": "NAME",
+      "text": "Johnson, Kevin"
+    },
+    {
+      "start": 167,
+      "end": 174,
+      "type": "ACCOUNT_ID",
+      "text": "3019355"
+    },
+    {
+      "start": 193,
+      "end": 203,
+      "type": "MEMBER_ID",
+      "text": "W957283906"
+    },
+    {
+      "start": 215,
+      "end": 222,
+      "type": "DOB",
+      "text": "5/23/87"
+    },
+    {
+      "start": 229,
+      "end": 271,
+      "type": "ADDRESS",
+      "text": "6010 Briar Boulevard, Springdale, AR 72793"
+    },
+    {
+      "start": 278,
+      "end": 293,
+      "type": "PHONE",
+      "text": "+1 360 555 0168"
+    },
+    {
+      "start": 302,
+      "end": 334,
+      "type": "EMAIL",
+      "text": "kevin.johnson55@mail.example.com"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 54,
+      "end": 64,
+      "type": "ADDRESS",
+      "text": "PO Box 870"
+    },
+    {
+      "start": 66,
+      "end": 84,
+      "type": "ADDRESS",
+      "text": "Santa Fe, NM 87501"
+    },
+    {
+      "start": 91,
+      "end": 103,
+      "type": "PHONE",
+      "text": "505.555.0116"
+    },
+    {
+      "start": 110,
+      "end": 122,
+      "type": "PHONE",
+      "text": "505.555.0161"
+    },
+    {
+      "start": 356,
+      "end": 373,
+      "type": "NAME",
+      "text": "Dr. Farah Alvarez"
+    },
+    {
+      "start": 385,
+      "end": 398,
+      "type": "NAME",
+      "text": "Jordan Dubois"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-09-04",
+      "code": "J2405",
+      "description": "ONDANSETRON HYDROCHLORIDE INJECTION, PER 1 MG",
+      "billed_amount": "39.15",
+      "allowed_amount": null,
+      "insurer_paid": "22.37",
+      "patient_responsibility": "2.48"
+    },
+    {
+      "service_date": "2025-09-04",
+      "code": "80053",
+      "description": "COMPREHENSIVE METABOLIC PANEL",
+      "billed_amount": "226.01",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "171.67"
+    },
+    {
+      "service_date": "2025-09-06",
+      "code": "99213",
+      "description": "OFFICE VLSIT, ESTABLISHED PATIENT, LOW COMPLEXITY",
+      "billed_amount": "224.38",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "131.63"
+    },
+    {
+      "service_date": "2025-09-06",
+      "code": "85025",
+      "description": "COMPLETE BLOOD COUNT WITH AUTOMATED DIFFERENTIAL",
+      "billed_amount": "67.80",
+      "allowed_amount": null,
+      "insurer_paid": "28.34",
+      "patient_responsibility": "12.15"
+    },
+    {
+      "service_date": "2025-09-06",
+      "code": "36415",
+      "description": "ROUTINE VENIPUNCTURE",
+      "billed_amount": "17.04",
+      "allowed_amount": null,
+      "insurer_paid": "6.23",
+      "patient_responsibility": "0.69"
+    },
+    {
+      "service_date": "2025-09-09",
+      "code": "90471",
+      "description": "IMMUNIZATION ADMINISTRALION, SINGLE VACCINE",
+      "billed_amount": "42.92",
+      "allowed_amount": null,
+      "insurer_paid": "23.94",
+      "patient_responsibility": "5.98"
+    }
+  ],
+  "duplicate_pairs": []
+}

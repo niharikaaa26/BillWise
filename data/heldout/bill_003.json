@@ -1,0 +1,115 @@
+{
+  "id": "bill_003",
+  "layout": "group_statement_heldout",
+  "messy": [
+    "modifier",
+    "multiline_item",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 139,
+      "end": 153,
+      "type": "NAME",
+      "text": "Ivanova, Sarah"
+    },
+    {
+      "start": 167,
+      "end": 174,
+      "type": "ACCOUNT_ID",
+      "text": "9007766"
+    },
+    {
+      "start": 193,
+      "end": 203,
+      "type": "MEMBER_ID",
+      "text": "W472124762"
+    },
+    {
+      "start": 215,
+      "end": 230,
+      "type": "DOB",
+      "text": "August 16, 2001"
+    },
+    {
+      "start": 237,
+      "end": 277,
+      "type": "ADDRESS",
+      "text": "5876 Hillcrest Way, Greenville, SC 29673"
+    },
+    {
+      "start": 284,
+      "end": 299,
+      "type": "PHONE",
+      "text": "+1 513 555 0151"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 54,
+      "end": 64,
+      "type": "ADDRESS",
+      "text": "PO Box 870"
+    },
+    {
+      "start": 66,
+      "end": 84,
+      "type": "ADDRESS",
+      "text": "Santa Fe, NM 87501"
+    },
+    {
+      "start": 91,
+      "end": 103,
+      "type": "PHONE",
+      "text": "505.555.0111"
+    },
+    {
+      "start": 110,
+      "end": 122,
+      "type": "PHONE",
+      "text": "505.555.0148"
+    },
+    {
+      "start": 321,
+      "end": 337,
+      "type": "NAME",
+      "text": "Dr. Farah Dubois"
+    },
+    {
+      "start": 349,
+      "end": 362,
+      "type": "NAME",
+      "text": "Jordan Farouk"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-03-30",
+      "code": "99213",
+      "description": "OFFICE VISIT, ESTABLISHED PATIENT, LOW COMPLEXITY",
+      "billed_amount": "199.09",
+      "allowed_amount": null,
+      "insurer_paid": "101.99",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-03-30",
+      "code": "99203",
+      "description": "NEW PATIENT OFFICE VISIT",
+      "billed_amount": "242.51",
+      "allowed_amount": null,
+      "insurer_paid": "153.51",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-03-30",
+      "code": "74177",
+      "description": "CT ABDOMEN AND PELVIS WITH CONTRAST",
+      "billed_amount": "4287.02",
+      "allowed_amount": null,
+      "insurer_paid": "2470.34",
+      "patient_responsibility": "274.48"
+    }
+  ],
+  "duplicate_pairs": []
+}
