@@ -98,3 +98,34 @@ def test_custom_name_list():
 def test_empty_text():
     r = redact("")
     assert r.redacted_text == "" and r.spans == []
+
+
+@pytest.mark.parametrize("text,typ,value", [
+    ("Patlent Name: SMITH, PATRICE\n", "NAME", "SMITH, PATRICE"),
+    ("Subscrlber: Xiomara Hernandez\n", "NAME", "Xiomara Hernandez"),
+    ("Date of Birlh: 9/19/46\n", "DOB", "9/19/46"),
+    ("Memher ID: CPH-5900-9199\n", "MEMBER_ID", "CPH-5900-9199"),
+    ("Acc0unt Number: 33036758\n", "ACCOUNT_ID", "33036758"),
+    ("STATEMENT FOR: Kim, Marcus D\n", "NAME", "Kim, Marcus D"),
+    ("Guarantor #: 6905929\n", "ACCOUNT_ID", "6905929"),
+    ("Insured's ID No.: ZQ4410293-02\n", "MEMBER_ID", "ZQ4410293-02"),
+    ("Cell: +1 845 555 0101\n", "PHONE", "+1 845 555 0101"),
+])
+def test_round2_patterns(text, typ, value):
+    found, _ = types_and_values(text)
+    assert (typ, value) in found
+
+
+def test_name_above_street_address_without_label():
+    found, _ = types_and_values("SIOBHAN KOWALSKI\n2110 BRIAR WAY APT 38B\nSPRINGDALE AR 72711\n")
+    assert ("NAME", "SIOBHAN KOWALSKI") in found
+
+
+def test_description_comma_is_not_a_name_label():
+    r = redact("02/17/25 99213  OFFICE VISIT, ESTABLISHED PATIENT, LOW COMPLEXITY   1   150.00\n")
+    assert r.spans == []
+
+
+def test_org_above_address_is_not_a_name():
+    r = redact("Northgate Pediatrics\n15 Commerce Blvd\n")
+    assert all(s.type != "NAME" for s in r.spans)

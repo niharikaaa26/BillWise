@@ -10,6 +10,7 @@ from billwise.redact import RedactionResult
 
 ROOT = Path(__file__).resolve().parents[1]
 MAIN = ROOT / "data" / "synthetic"
+DEV2 = ROOT / "data" / "dev2"
 HELDOUT = ROOT / "data" / "heldout"
 
 
@@ -20,7 +21,7 @@ def test_generator_is_deterministic_and_matches_committed_data(tmp_path):
 
 
 def test_ground_truth_offsets_are_exact():
-    files = sorted(MAIN.glob("bill_*.json")) + sorted(HELDOUT.glob("bill_*.json"))
+    files = sorted(MAIN.glob("bill_*.json")) + sorted(DEV2.glob("bill_*.json")) + sorted(HELDOUT.glob("bill_*.json"))
     assert len(files) >= 40
     for jf in files:
         truth = json.loads(jf.read_text(encoding="utf-8"))
@@ -59,7 +60,22 @@ def test_eval_regression_floors(main_results):
     assert main_results["parsing"]["field_accuracy_overall"] >= 0.95
 
 
+def test_other_sets_regenerate_identically(tmp_path):
+    generate(tmp_path / "dev2", 12, 777, 0.25, "dev2")
+    generate(tmp_path / "heldout", 12, 4242, 0.2, "heldout")
+    for d in (DEV2, HELDOUT):
+        for f in sorted(d.glob("bill_*")):
+            assert (tmp_path / d.name / f.name).read_text(encoding="utf-8") == f.read_text(encoding="utf-8"), f
+
+
+def test_dev2_regression_floors():
+    r = run_eval.run(DEV2)
+    assert r["pii"]["overall"]["leak_free_rate"] >= 0.95
+    assert r["parsing"]["field_accuracy_overall"] >= 0.95
+
+
 def test_heldout_eval_runs():
+    """No floor on purpose: held-out numbers are reported, not optimised."""
     r = run_eval.run(HELDOUT)
     assert r["dataset"]["documents"] == 12
 

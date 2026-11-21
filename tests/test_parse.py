@@ -132,3 +132,26 @@ def test_duplicates_flagged():
 def test_no_items():
     r = parse("Hello, this is not a bill.")
     assert r.line_items == [] and "no line items found" in r.warnings
+
+
+MODCOLS = """DOS       CPT       MOD  DESCRIPTION                      UNITS    CHARGE   INS PMT   INS ADJ   BALANCE
+02/17/25 99203     LT   NEW PATIENT OFFICE VISIT             2    235.07    157.23   (60.37)     17.47
+02/17/25 99214-25       ANNUAL WELLNESS VISIT,               1    214.67     77.80  (136.87)      0.00
+                         SUBSEQUENT
+"""
+
+
+def test_modifier_and_units_columns_kept_out_of_description():
+    r = parse(MODCOLS)
+    a, b = r.line_items
+    assert a.description == "NEW PATIENT OFFICE VISIT"
+    assert (a.insurer_paid, a.patient_responsibility) == (Decimal("157.23"), Decimal("17.47"))
+    assert b.code == "99214" and b.description == "ANNUAL WELLNESS VISIT, SUBSEQUENT"
+
+
+def test_duplicate_detected_despite_ocr_in_description():
+    text = FIXED.replace("97110   THERAPEUTIC EXERCISES, EACH 15         125.74                            125.74",
+                         "97110   THERAPEUTIC EXERCISES, EACH 15         125.74                            125.74\n"
+                         "07/19/2025 80053   COMPREHENSIVE METABOLlC PANEL          320.60     230.80      64.16      25.64")
+    r = parse(text)
+    assert (0, 2) in r.possible_duplicates
