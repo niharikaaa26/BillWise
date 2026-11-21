@@ -112,14 +112,22 @@ NAME_LABEL = re.compile(
     r"\b(?:" + _label("Patient Name", "Patient", "Member Name", "Member", "Subscriber Name", "Subscriber",
                       "Insured Name", "Insured", "Guarantor Name", "Guarantor", "Responsible Party",
                       "Account Holder", "Prepared for", "Statement for", "Name")
-    + _FIELD_SEP + "|" + _label("Dear") + r"[ \t]+)" + rf"(?P<v>{NAME_VALUE})"
+    + _FIELD_SEP
+    # without punctuation: "Dear X", and labels that end in "Name" ("Pt Name DOE JANE" on scans)
+    + "|" + _label("Dear", "Name") + r"[ \t]+)" + rf"(?P<v>{NAME_VALUE})"
 )
+# a courtesy title in running text: "This statement is for Ms. Jane Doe." (Dr. is left alone: providers)
+HONORIFIC_NAME = re.compile(rf"\b(?:Mr|Mrs|Ms|Mx|Miss)\.? (?P<v>{NAME_VALUE})")
 
 _MONTH = r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?"
-DATE_VALUE = (rf"(?:\d{{1,2}}/\d{{1,2}}/\d{{2,4}}|\d{{1,2}}-\d{{1,2}}-\d{{2,4}}|\d{{4}}-\d{{2}}-\d{{2}}"
-              rf"|{_MONTH} \d{{1,2}},? \d{{4}})")
+# Any common date shape. Used only right after a birth-related label, so it can be permissive:
+# 3/12/81, 03-12-1981, 1981.03.12, 1981-03-12, March 12, 1981, 12 Mar 1981, 03121981, 031281.
+DATE_VALUE = (rf"(?:\d{{1,4}}[./-]\d{{1,2}}[./-]\d{{1,4}}"
+              rf"|{_MONTH} \d{{1,2}},? \d{{4}}|\d{{1,2}} {_MONTH},? \d{{4}}"
+              rf"|\d{{8}}(?!\d)|\d{{6}}(?!\d))")
 DOB_LABEL = re.compile(
-    r"\b" + _label("DOB", "D.O.B.", "Date of Birth", "Birth Date", "Birthdate", "Born") + _SEP + rf"(?P<v>{DATE_VALUE})"
+    r"\b" + _label("DOB", "D.O.B.", "Date of Birth", "Birth Date", "Birthdate", "Born")
+    + r"[ \t]*(?:\([^)\n]{0,20}\))?" + _SEP + rf"(?P<v>{DATE_VALUE})"
 )
 
 SSN_LABELED = re.compile(
@@ -127,7 +135,10 @@ SSN_LABELED = re.compile(
 )
 SSN_BARE = re.compile(r"(?<![\w-])\d{3}-\d{2}-\d{4}(?![\w-])")
 
-PHONE = re.compile(r"(?<![\w-])(?:\+?1[-. ])?(?:\(\d{3}\) ?|\d{3}[-. ])\d{3}[-. ]\d{4}(?![\w-])")
+# 3-3-4 digit grouping with any common separator: (513) 555-0123, 513-555-0123, 513.555.0123,
+# 513 555 0123, 513/555-0123, +1 513 555 0123. At least one separator is required, so bare
+# 10-digit identifiers are not taken for phone numbers.
+PHONE = re.compile(r"(?<![\w-])(?:\+?1[-. ])?(?:\(\d{3}\) ?|\d{3}[-. /])\d{3}[-. ]\d{4}(?![\w-])")
 EMAIL = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
 
 _ID_VALUE = r"(?P<v>[A-Z0-9][A-Z0-9\-]{4,24})"
@@ -143,6 +154,17 @@ ACCOUNT_ID_LABEL = re.compile(
     + "|" + _label("Guarantor") + _ID_SUFFIX + ")"
     + _SEP + _ID_VALUE
 )
+
+# Generic fallback: a digit-heavy token right after an ID-like word ("ID", "No.", "Number",
+# "#", "Acct"), whatever words come before it. Typed as MEMBER_ID after "ID" or a
+# member-type word, otherwise ACCOUNT_ID. Not applied after group/NPI/tax/fax/page words.
+ID_NEAR = re.compile(
+    r"(?:\b(?P<kw>" + _label("ID", "No.", "Number", "Acct") + r")|#)" + _SEP
+    + r"(?P<v>[A-Z0-9][A-Z0-9\-]{4,24})(?![\w.])"
+)
+_ID_MEMBER_CTX = re.compile(r"\b(?:member|subscriber|insured|policy|plan)\b", re.IGNORECASE)
+_ID_EXCLUDE_CTX = re.compile(r"\b(?:group|grp|npi|tax|ein|tin|fax|page|line|item|rx|bin|pcn)\b\W*$",
+                             re.IGNORECASE)
 
 _SUFFIX = (r"(?:St|Street|Ave|Avenue|Rd|Road|Dr|Drive|Ln|Lane|Ct|Court|Blvd|Boulevard|Way|Pl|Place|"
            r"Pkwy|Parkway|Cir|Circle|Ter|Terrace|Hwy|Highway)")
@@ -258,6 +280,21 @@ class Redactor:
         for m in ACCOUNT_ID_LABEL.finditer(text):
             if re.search(r"\d", m.group("v")):
                 add(m, "ACCOUNT_ID", "account_label", "v")
+        for m in ID_NEAR.finditer(text):
+            v = m.group("v")
+            if sum(ch.isdigit() for ch in v) < 4:
+                continue
+            ctx = text[text.rfind("\n", 0, m.start()) + 1:m.start()]
+            if _ID_EXCLUDE_CTX.search(ctx):
+                continue
+            if re.fullmatch(r"\d{5}(?:-\d{4})?", v) and m.group(0)[:2] in US_STATES:
+                continue  # "Boise, ID 83701": Idaho + ZIP code, not an ID label
+            kw = (m.group("kw") or "#").lower()
+            typ = "MEMBER_ID" if kw == "id" or _ID_MEMBER_CTX.search(ctx[-24:]) else "ACCOUNT_ID"
+            add(m, typ, "id_near", "v", -15)
+        for m in HONORIFIC_NAME.finditer(text):
+            if _is_plausible_name(m.group("v")):
+                add(m, "NAME", "honorific", "v")
         for m in PHONE.finditer(text):
             add(m, "PHONE", "phone")
         for m in STREET.finditer(text):
