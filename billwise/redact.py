@@ -160,8 +160,9 @@ ACCOUNT_ID_LABEL = re.compile(
 # "#", "Acct"), whatever words come before it. Typed as MEMBER_ID after "ID" or a
 # member-type word, otherwise ACCOUNT_ID. Not applied after group/NPI/tax/fax/page words.
 ID_NEAR = re.compile(
-    r"(?:\b(?P<kw>" + _label("ID", "No.", "Number", "Acct") + r")|#)" + _SEP
-    + r"(?P<v>[A-Z0-9][A-Z0-9\-]{4,24})(?![\w.])"
+    r"(?:\b(?P<kw>" + _label("ID", "No.", "Number", "Acct", "Policy") + r")|#)" + _SEP
+    # a sentence-ending period may follow the value; a decimal point (".5") may not
+    + r"(?P<v>[A-Z0-9][A-Z0-9\-]{4,24})(?!\w|\.\w)"
 )
 # member-type words, including common abbreviations seen on statements (Mbr, Memb, Subscr)
 _ID_MEMBER_CTX = re.compile(r"\b(?:member|mbr|memb|mem|subscriber|subscr|sub|insured|ins|policy|plan)\b",
@@ -171,10 +172,12 @@ _ID_EXCLUDE_CTX = re.compile(r"\b(?:group|grp|npi|tax|ein|tin|fax|page|line|item
 
 _SUFFIX = (r"(?:St|Street|Ave|Avenue|Rd|Road|Dr|Drive|Ln|Lane|Ct|Court|Blvd|Boulevard|Way|Pl|Place|"
            r"Pkwy|Parkway|Cir|Circle|Ter|Terrace|Hwy|Highway)")
+# Street-name words must be capitalised (Title or UPPER case), so prose such as
+# "2025 the patient received ct" is not taken for "<number> <words> Ct"; the suffix and
+# unit words may be in any case.
 STREET = re.compile(
-    rf"\b\d{{1,6}} (?:[NSEW]\.? )?(?:[A-Za-z]+ ){{1,3}}{_SUFFIX}\.?"
-    r"(?: (?:Apt|Unit|Suite|Ste)\.? ?\w+| ?#\w+)?(?![A-Za-z])",
-    re.IGNORECASE,
+    rf"\b\d{{1,6}} (?:[NSEW]\.? )?(?:[A-Z][A-Za-z]* ){{1,3}}(?i:{_SUFFIX})\.?"
+    r"(?i:(?: (?:Apt|Unit|Suite|Ste)\.? ?\w+| ?#\w+))?(?![A-Za-z])"
 )
 PO_BOX = re.compile(r"\bP\.? ?O\.? Box \d+\b", re.IGNORECASE)
 CITY_STATE_ZIP = re.compile(
@@ -182,6 +185,32 @@ CITY_STATE_ZIP = re.compile(
 )
 
 NAME_FROM_LIST = re.compile(rf"\b(?P<first>{_TOK})(?: [A-Z]\.)?(?: (?P<last>{_TOK}))\b")
+
+# Names in running text: any pair of Title-case words, unless either word is on this stop list of
+# sentence starters, business/billing/place/calendar words. It fails towards redacting (an
+# unfamiliar organisation name will be redacted too) and runs below every specific rule.
+_TITLE_TOK = r"[A-Z][a-z]+(?:['\-][A-Z]?[a-z]+)?"
+TITLE_PAIR = re.compile(rf"\b(?P<v>{_TITLE_TOK}(?: [A-Z]\.)? {_TITLE_TOK})\b")
+PROSE_STOP = NON_NAME_WORDS | {
+    # sentence starters and function words
+    "a", "an", "as", "at", "by", "but", "from", "he", "her", "his", "hi", "hello", "how", "if", "in", "it",
+    "let", "my", "note", "please", "re", "regards", "see", "she", "sincerely", "thank", "thanks", "they",
+    "this", "to", "we", "what", "when", "where", "who", "why", "with", "best", "call", "dear", "hey",
+    # organisations
+    "agency", "administrators", "bank", "benefit", "cardiology", "collection", "collections", "company",
+    "corp", "financial", "inc", "llc", "orthopedic", "orthopedics", "partner", "partners", "pllc",
+    "recovery", "solutions", "urgent", "office", "department", "university", "laboratory", "lab", "labs",
+    # billing vocabulary
+    "allow", "allowed", "amt", "amount", "billed", "cd", "charge", "charged", "charges", "chg", "claim",
+    "code", "coinsurance", "cost", "costs", "covered", "description", "discount", "dos", "dt", "due",
+    "explanation", "ins", "item", "line", "mbr", "mod", "owe", "owes", "page", "paid", "payment", "pd",
+    "proc", "procedure", "pt", "share", "stmt", "svc", "units", "summary", "breakdown", "subject",
+    # calendar
+    "january", "february", "march", "april", "may", "june", "july", "august", "september", "october",
+    "november", "december", "jan", "feb", "mar", "apr", "jun", "jul", "aug", "sep", "sept", "oct",
+    "nov", "dec", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday",
+    "mon", "tue", "wed", "thu", "fri", "sat", "sun",
+}
 
 # priority: higher wins when candidate spans overlap
 PRIORITY = {"EMAIL": 90, "SSN": 85, "DOB": 80, "MEMBER_ID": 80, "ACCOUNT_ID": 80,
@@ -356,7 +385,8 @@ class Redactor:
             if re.fullmatch(r"\d{5}(?:-\d{4})?", v) and m.group(0)[:2] in US_STATES:
                 continue  # "Boise, ID 83701": Idaho + ZIP code, not an ID label
             kw = (m.group("kw") or "#").lower()
-            typ = "MEMBER_ID" if kw == "id" or _ID_MEMBER_CTX.search(ctx[-24:]) else "ACCOUNT_ID"
+            typ = ("MEMBER_ID" if kw in ("id", "policy") or _ID_MEMBER_CTX.search(ctx[-24:])
+                   else "ACCOUNT_ID")
             add(m, typ, "id_near", "v", -15)
         for m in HONORIFIC_NAME.finditer(text):
             if _is_plausible_name(m.group("v")):
@@ -381,6 +411,12 @@ class Redactor:
             pm = re.fullmatch(rf"[ \t]*(?P<v>{NAME_VALUE})[ \t]*", text[ps:pe])
             if pm and len(_name_tokens(pm.group("v"))) >= 2 and _is_plausible_name(pm.group("v")):
                 c.append(_Cand(ps + pm.start("v"), ps + pm.end("v"), "NAME", PRIORITY["NAME"], "address_block"))
+        for m in TITLE_PAIR.finditer(text):
+            words = [w.lower() for w in re.findall(r"[A-Za-z]+", m.group("v")) if len(w) > 1]
+            if re.search(r"\bDr\.?\s*$", text[max(0, m.start() - 4):m.start()]):
+                continue  # provider names ("Dr. Gil Cho") are not patient information
+            if words and not any(w in PROSE_STOP for w in words):
+                add(m, "NAME", "title_pair", "v", -20)
         for m in NAME_FROM_LIST.finditer(text):
             first, last = m.group("first"), m.group("last")
             if first.lower() in self.first_names and _is_plausible_name(m.group(0)):
@@ -470,6 +506,9 @@ class Redactor:
         extra: list[_Cand] = []
         for f in fields:
             idx = [i for i, o in enumerate(specific) if o.start < f.end and f.start < o.end]
+            strong = [i for i in idx if specific[i].source not in ("title_pair", "name_list")]
+            if strong:  # weak name guesses ("Juniper Road") give way to a specific detection
+                idx = strong
             if not idx:
                 extra.append(f)
             elif len({specific[i].type for i in idx}) == 1:  # one type inside the value: widen to all of it
