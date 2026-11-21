@@ -220,6 +220,12 @@
       "line_recall": 1.0,
       "line_precision": 1.0,
       "field_accuracy_overall": 1.0
+    },
+    "fallback_only_parsing": {
+      "documents_fully_correct": 12,
+      "line_recall": 0.48,
+      "line_precision": 0.9,
+      "field_accuracy_overall": 0.4723809523809524
     }
   },
   "dev2": {
@@ -398,6 +404,12 @@
       "line_recall": 1.0,
       "line_precision": 1.0,
       "field_accuracy_overall": 1.0
+    },
+    "fallback_only_parsing": {
+      "documents_fully_correct": 0,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy_overall": 0.8571428571428571
     }
   },
   "dev3": {
@@ -568,38 +580,44 @@
       "line_recall": 1.0,
       "line_precision": 1.0,
       "field_accuracy_overall": 1.0
+    },
+    "fallback_only_parsing": {
+      "documents_fully_correct": 0,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy_overall": 0.7928571428571428
     }
   },
-  "heldout": {
+  "dev4": {
     "dataset": {
-      "path": "C:\\Users\\nihar\\Downloads\\BillWise\\data\\heldout",
+      "path": "C:\\Users\\nihar\\Downloads\\BillWise\\data\\dev4",
       "documents": 12,
       "layouts": {
-        "portal_summary_heldout": 12
+        "portal_summary": 12
       },
       "note": "synthetic data only"
     },
     "pii": {
       "overall": {
         "gold": 72,
-        "predicted": 44,
+        "predicted": 84,
         "neutral": 12,
-        "recall": 0.4444444444444444,
+        "recall": 1.0,
         "precision": 1.0,
-        "leak_free_rate": 0.4444444444444444,
-        "recall_any_type": 0.4444444444444444,
-        "exact_match_recall": 0.4444444444444444,
+        "leak_free_rate": 1.0,
+        "recall_any_type": 1.0,
+        "exact_match_recall": 1.0,
         "exact_match_precision": 1.0
       },
       "by_type": {
         "NAME": {
           "gold": 12,
-          "predicted": 8,
+          "predicted": 12,
           "neutral": 0,
-          "recall": 0.6666666666666666,
+          "recall": 1.0,
           "precision": 1.0,
-          "leak_free_rate": 0.6666666666666666,
-          "recall_any_type": 0.6666666666666666
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
         },
         "ADDRESS": {
           "gold": 12,
@@ -612,12 +630,12 @@
         },
         "PHONE": {
           "gold": 12,
-          "predicted": 12,
+          "predicted": 24,
           "neutral": 12,
-          "recall": 0.0,
-          "precision": null,
-          "leak_free_rate": 0.0,
-          "recall_any_type": 0.0
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
         },
         "EMAIL": {
           "gold": 0,
@@ -630,12 +648,196 @@
         },
         "DOB": {
           "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "SSN": {
+          "gold": 0,
           "predicted": 0,
           "neutral": 0,
-          "recall": 0.0,
+          "recall": null,
           "precision": null,
-          "leak_free_rate": 0.0,
-          "recall_any_type": 0.0
+          "leak_free_rate": null,
+          "recall_any_type": null
+        },
+        "MEMBER_ID": {
+          "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "ACCOUNT_ID": {
+          "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        }
+      },
+      "failures": {
+        "missed": [],
+        "false_positives": [],
+        "leaks": []
+      }
+    },
+    "parsing": {
+      "documents": 12,
+      "documents_fully_correct": 12,
+      "gold_lines": 64,
+      "predicted_lines": 64,
+      "matched_lines": 64,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy": {
+        "service_date": 1.0,
+        "code": 1.0,
+        "description": 1.0,
+        "billed_amount": 1.0,
+        "allowed_amount": 1.0,
+        "insurer_paid": 1.0,
+        "patient_responsibility": 1.0
+      },
+      "field_accuracy_overall": 1.0,
+      "by_layout": {
+        "portal_summary": {
+          "docs": 12,
+          "docs_fully_correct": 12,
+          "field_accuracy": 1.0
+        }
+      },
+      "by_messy_condition": {
+        "duplicate_charge": {
+          "docs": 3,
+          "docs_fully_correct": 3
+        },
+        "inline_amounts": {
+          "docs": 12,
+          "docs_fully_correct": 12
+        },
+        "missing_field": {
+          "docs": 8,
+          "docs_fully_correct": 8
+        },
+        "multiline_item": {
+          "docs": 7,
+          "docs_fully_correct": 7
+        },
+        "ocr_amount": {
+          "docs": 11,
+          "docs_fully_correct": 11
+        },
+        "ocr_description": {
+          "docs": 3,
+          "docs_fully_correct": 3
+        },
+        "po_box_address": {
+          "docs": 8,
+          "docs_fully_correct": 8
+        }
+      },
+      "duplicate_detection": {
+        "gold_pairs": 3,
+        "flagged_pairs": 3,
+        "correct": 3,
+        "recall": 1.0,
+        "precision": 1.0
+      },
+      "detected_formats": {
+        "portal_summary->anchored": 12
+      },
+      "failures": {
+        "fields": [],
+        "lines": []
+      }
+    },
+    "parsing_on_redacted_text": {
+      "documents_fully_correct": 12,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy_overall": 1.0
+    },
+    "fallback_only_parsing": {
+      "documents_fully_correct": 12,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy_overall": 1.0
+    }
+  },
+  "heldout": {
+    "dataset": {
+      "path": "C:\\Users\\nihar\\Downloads\\BillWise\\data\\heldout",
+      "documents": 12,
+      "layouts": {
+        "collapsed_scan_heldout": 12
+      },
+      "note": "synthetic data only"
+    },
+    "pii": {
+      "overall": {
+        "gold": 77,
+        "predicted": 89,
+        "neutral": 12,
+        "recall": 0.8441558441558441,
+        "precision": 0.8441558441558441,
+        "leak_free_rate": 0.8961038961038961,
+        "recall_any_type": 1.0,
+        "exact_match_recall": 0.7402597402597403,
+        "exact_match_precision": 0.7402597402597403
+      },
+      "by_type": {
+        "NAME": {
+          "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "ADDRESS": {
+          "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 0.3333333333333333,
+          "recall_any_type": 1.0
+        },
+        "PHONE": {
+          "gold": 12,
+          "predicted": 24,
+          "neutral": 12,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "EMAIL": {
+          "gold": 5,
+          "predicted": 5,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "DOB": {
+          "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
         },
         "SSN": {
           "gold": 0,
@@ -652,15 +854,15 @@
           "neutral": 0,
           "recall": 0.0,
           "precision": null,
-          "leak_free_rate": 0.0,
-          "recall_any_type": 0.0
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
         },
         "ACCOUNT_ID": {
           "gold": 12,
-          "predicted": 12,
+          "predicted": 24,
           "neutral": 0,
           "recall": 1.0,
-          "precision": 1.0,
+          "precision": 0.5,
           "leak_free_rate": 1.0,
           "recall_any_type": 1.0
         }
@@ -669,1566 +871,385 @@
         "missed": [
           {
             "bill": "bill_001",
-            "type": "DOB",
-            "text": "1986.02.28",
-            "redacted_as": null,
-            "line": "Birth date 1986.02.28"
-          },
-          {
-            "bill": "bill_001",
-            "type": "PHONE",
-            "text": "212/555-0166",
-            "redacted_as": null,
-            "line": "Mobile 212/555-0166"
-          },
-          {
-            "bill": "bill_001",
             "type": "MEMBER_ID",
-            "text": "XGH47168030",
-            "redacted_as": null,
-            "line": "Plan: Blueriver Health Plans, ID XGH47168030"
-          },
-          {
-            "bill": "bill_002",
-            "type": "NAME",
-            "text": "Thanh Sullivan",
-            "redacted_as": null,
-            "line": "This statement is for Mx. Thanh Sullivan."
-          },
-          {
-            "bill": "bill_002",
-            "type": "DOB",
-            "text": "1941.02.23",
-            "redacted_as": null,
-            "line": "Birth date 1941.02.23"
-          },
-          {
-            "bill": "bill_002",
-            "type": "PHONE",
-            "text": "615/555-0136",
-            "redacted_as": null,
-            "line": "Mobile 615/555-0136"
+            "text": "XGH02727255",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No XGH02727255"
           },
           {
             "bill": "bill_002",
             "type": "MEMBER_ID",
-            "text": "CPH-0633-0769",
-            "redacted_as": null,
-            "line": "Plan: Summit Mutual Health, ID CPH-0633-0769"
-          },
-          {
-            "bill": "bill_003",
-            "type": "DOB",
-            "text": "1971.07.02",
-            "redacted_as": null,
-            "line": "Birth date 1971.07.02"
-          },
-          {
-            "bill": "bill_003",
-            "type": "PHONE",
-            "text": "513/555-0105",
-            "redacted_as": null,
-            "line": "Mobile 513/555-0105"
+            "text": "ZQ9911513-01",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No ZQ9911513-01"
           },
           {
             "bill": "bill_003",
             "type": "MEMBER_ID",
-            "text": "ZQ8796700-01",
-            "redacted_as": null,
-            "line": "Plan: Summit Mutual Health, ID ZQ8796700-01"
-          },
-          {
-            "bill": "bill_004",
-            "type": "DOB",
-            "text": "1958.01.30",
-            "redacted_as": null,
-            "line": "Birth date 1958.01.30"
-          },
-          {
-            "bill": "bill_004",
-            "type": "PHONE",
-            "text": "360/555-0138",
-            "redacted_as": null,
-            "line": "Mobile 360/555-0138"
+            "text": "ZQ8938977-01",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No ZQ8938977-01"
           },
           {
             "bill": "bill_004",
             "type": "MEMBER_ID",
-            "text": "MBR0927409",
-            "redacted_as": null,
-            "line": "Plan: Blueriver Health Plans, ID MBR0927409"
-          },
-          {
-            "bill": "bill_005",
-            "type": "DOB",
-            "text": "2008.04.15",
-            "redacted_as": null,
-            "line": "Birth date 2008.04.15"
-          },
-          {
-            "bill": "bill_005",
-            "type": "PHONE",
-            "text": "360/555-0188",
-            "redacted_as": null,
-            "line": "Mobile 360/555-0188"
+            "text": "MBR9191629",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No MBR9191629"
           },
           {
             "bill": "bill_005",
             "type": "MEMBER_ID",
-            "text": "W598878738",
-            "redacted_as": null,
-            "line": "Plan: Summit Mutual Health, ID W598878738"
-          },
-          {
-            "bill": "bill_006",
-            "type": "DOB",
-            "text": "1957.01.20",
-            "redacted_as": null,
-            "line": "Birth date 1957.01.20"
-          },
-          {
-            "bill": "bill_006",
-            "type": "PHONE",
-            "text": "479/555-0163",
-            "redacted_as": null,
-            "line": "Mobile 479/555-0163"
+            "text": "MBR6249524",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No MBR6249524"
           },
           {
             "bill": "bill_006",
             "type": "MEMBER_ID",
-            "text": "CPH-2811-8297",
-            "redacted_as": null,
-            "line": "Plan: Blueriver Health Plans, ID CPH-2811-8297"
-          },
-          {
-            "bill": "bill_007",
-            "type": "NAME",
-            "text": "Tomasz Brown",
-            "redacted_as": null,
-            "line": "This statement is for Mx. Tomasz Brown."
-          },
-          {
-            "bill": "bill_007",
-            "type": "DOB",
-            "text": "1976.03.01",
-            "redacted_as": null,
-            "line": "Birth date 1976.03.01"
-          },
-          {
-            "bill": "bill_007",
-            "type": "PHONE",
-            "text": "864/555-0128",
-            "redacted_as": null,
-            "line": "Mobile 864/555-0128"
+            "text": "W261472925",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No W261472925"
           },
           {
             "bill": "bill_007",
             "type": "MEMBER_ID",
-            "text": "ZQ9135505-01",
-            "redacted_as": null,
-            "line": "Plan: Summit Mutual Health, ID ZQ9135505-01"
-          },
-          {
-            "bill": "bill_008",
-            "type": "NAME",
-            "text": "Dmitri Yamamoto",
-            "redacted_as": null,
-            "line": "This statement is for Mx. Dmitri Yamamoto."
-          },
-          {
-            "bill": "bill_008",
-            "type": "DOB",
-            "text": "1988.12.05",
-            "redacted_as": null,
-            "line": "Birth date 1988.12.05"
-          },
-          {
-            "bill": "bill_008",
-            "type": "PHONE",
-            "text": "360/555-0127",
-            "redacted_as": null,
-            "line": "Mobile 360/555-0127"
+            "text": "CPH-0269-0771",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No CPH-0269-0771"
           },
           {
             "bill": "bill_008",
             "type": "MEMBER_ID",
-            "text": "MBR8505982",
-            "redacted_as": null,
-            "line": "Plan: Summit Mutual Health, ID MBR8505982"
-          },
-          {
-            "bill": "bill_009",
-            "type": "DOB",
-            "text": "2018.12.31",
-            "redacted_as": null,
-            "line": "Birth date 2018.12.31"
-          },
-          {
-            "bill": "bill_009",
-            "type": "PHONE",
-            "text": "319/555-0164",
-            "redacted_as": null,
-            "line": "Mobile 319/555-0164"
+            "text": "XGH39317911",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No XGH39317911"
           },
           {
             "bill": "bill_009",
             "type": "MEMBER_ID",
-            "text": "ZQ2164648-01",
-            "redacted_as": null,
-            "line": "Plan: Blueriver Health Plans, ID ZQ2164648-01"
-          },
-          {
-            "bill": "bill_010",
-            "type": "DOB",
-            "text": "1955.02.13",
-            "redacted_as": null,
-            "line": "Birth date 1955.02.13"
-          },
-          {
-            "bill": "bill_010",
-            "type": "PHONE",
-            "text": "303/555-0167",
-            "redacted_as": null,
-            "line": "Mobile 303/555-0167"
+            "text": "MBR9520748",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No MBR9520748"
           },
           {
             "bill": "bill_010",
             "type": "MEMBER_ID",
-            "text": "W723899222",
-            "redacted_as": null,
-            "line": "Plan: Summit Mutual Health, ID W723899222"
-          },
-          {
-            "bill": "bill_011",
-            "type": "DOB",
-            "text": "1993.10.15",
-            "redacted_as": null,
-            "line": "Birth date 1993.10.15"
-          },
-          {
-            "bill": "bill_011",
-            "type": "PHONE",
-            "text": "513/555-0113",
-            "redacted_as": null,
-            "line": "Mobile 513/555-0113"
+            "text": "MBR8570307",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No MBR8570307"
           },
           {
             "bill": "bill_011",
             "type": "MEMBER_ID",
-            "text": "W939593242",
-            "redacted_as": null,
-            "line": "Plan: Summit Mutual Health, ID W939593242"
-          },
-          {
-            "bill": "bill_012",
-            "type": "NAME",
-            "text": "Ingrid Doe",
-            "redacted_as": null,
-            "line": "This statement is for Mr. Ingrid Doe."
-          },
-          {
-            "bill": "bill_012",
-            "type": "DOB",
-            "text": "1967.10.02",
-            "redacted_as": null,
-            "line": "Birth date 1967.10.02"
-          },
-          {
-            "bill": "bill_012",
-            "type": "PHONE",
-            "text": "303/555-0150",
-            "redacted_as": null,
-            "line": "Mobile 303/555-0150"
+            "text": "XGH61919798",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No XGH61919798"
           },
           {
             "bill": "bill_012",
             "type": "MEMBER_ID",
-            "text": "W374686393",
-            "redacted_as": null,
-            "line": "Plan: Summit Mutual Health, ID W374686393"
+            "text": "CPH-6146-9160",
+            "redacted_as": [
+              "ACCOUNT_ID"
+            ],
+            "line": "Mbr No CPH-6146-9160"
           }
         ],
-        "false_positives": [],
+        "false_positives": [
+          {
+            "bill": "bill_001",
+            "type": "ACCOUNT_ID",
+            "text": "XGH02727255",
+            "rule": "id_near",
+            "line": "Mbr No XGH02727255"
+          },
+          {
+            "bill": "bill_002",
+            "type": "ACCOUNT_ID",
+            "text": "ZQ9911513-01",
+            "rule": "id_near",
+            "line": "Mbr No ZQ9911513-01"
+          },
+          {
+            "bill": "bill_003",
+            "type": "ACCOUNT_ID",
+            "text": "ZQ8938977-01",
+            "rule": "id_near",
+            "line": "Mbr No ZQ8938977-01"
+          },
+          {
+            "bill": "bill_004",
+            "type": "ACCOUNT_ID",
+            "text": "MBR9191629",
+            "rule": "id_near",
+            "line": "Mbr No MBR9191629"
+          },
+          {
+            "bill": "bill_005",
+            "type": "ACCOUNT_ID",
+            "text": "MBR6249524",
+            "rule": "id_near",
+            "line": "Mbr No MBR6249524"
+          },
+          {
+            "bill": "bill_006",
+            "type": "ACCOUNT_ID",
+            "text": "W261472925",
+            "rule": "id_near",
+            "line": "Mbr No W261472925"
+          },
+          {
+            "bill": "bill_007",
+            "type": "ACCOUNT_ID",
+            "text": "CPH-0269-0771",
+            "rule": "id_near",
+            "line": "Mbr No CPH-0269-0771"
+          },
+          {
+            "bill": "bill_008",
+            "type": "ACCOUNT_ID",
+            "text": "XGH39317911",
+            "rule": "id_near",
+            "line": "Mbr No XGH39317911"
+          },
+          {
+            "bill": "bill_009",
+            "type": "ACCOUNT_ID",
+            "text": "MBR9520748",
+            "rule": "id_near",
+            "line": "Mbr No MBR9520748"
+          },
+          {
+            "bill": "bill_010",
+            "type": "ACCOUNT_ID",
+            "text": "MBR8570307",
+            "rule": "id_near",
+            "line": "Mbr No MBR8570307"
+          },
+          {
+            "bill": "bill_011",
+            "type": "ACCOUNT_ID",
+            "text": "XGH61919798",
+            "rule": "id_near",
+            "line": "Mbr No XGH61919798"
+          },
+          {
+            "bill": "bill_012",
+            "type": "ACCOUNT_ID",
+            "text": "CPH-6146-9160",
+            "rule": "id_near",
+            "line": "Mbr No CPH-6146-9160"
+          }
+        ],
         "leaks": [
           {
             "bill": "bill_001",
-            "type": "DOB",
-            "text": "1986.02.28",
-            "unredacted_chars": "1986.02.28"
-          },
-          {
-            "bill": "bill_001",
-            "type": "PHONE",
-            "text": "212/555-0166",
-            "unredacted_chars": "212/555-0166"
-          },
-          {
-            "bill": "bill_001",
-            "type": "MEMBER_ID",
-            "text": "XGH47168030",
-            "unredacted_chars": "XGH47168030"
+            "type": "ADDRESS",
+            "text": "2955 Hillcrest Dr Riverton OH 45029",
+            "unredacted_chars": "2955"
           },
           {
             "bill": "bill_002",
-            "type": "NAME",
-            "text": "Thanh Sullivan",
-            "unredacted_chars": "Thanh Sullivan"
-          },
-          {
-            "bill": "bill_002",
-            "type": "DOB",
-            "text": "1941.02.23",
-            "unredacted_chars": "1941.02.23"
-          },
-          {
-            "bill": "bill_002",
-            "type": "PHONE",
-            "text": "615/555-0136",
-            "unredacted_chars": "615/555-0136"
-          },
-          {
-            "bill": "bill_002",
-            "type": "MEMBER_ID",
-            "text": "CPH-0633-0769",
-            "unredacted_chars": "CPH-0633-0769"
+            "type": "ADDRESS",
+            "text": "4629 Lakeview Boulevard Fairview TN 37014",
+            "unredacted_chars": "4629"
           },
           {
             "bill": "bill_003",
-            "type": "DOB",
-            "text": "1971.07.02",
-            "unredacted_chars": "1971.07.02"
-          },
-          {
-            "bill": "bill_003",
-            "type": "PHONE",
-            "text": "513/555-0105",
-            "unredacted_chars": "513/555-0105"
-          },
-          {
-            "bill": "bill_003",
-            "type": "MEMBER_ID",
-            "text": "ZQ8796700-01",
-            "unredacted_chars": "ZQ8796700-01"
+            "type": "ADDRESS",
+            "text": "8852 Chestnut Rd Fairview TN 37013",
+            "unredacted_chars": "8852"
           },
           {
             "bill": "bill_004",
-            "type": "DOB",
-            "text": "1958.01.30",
-            "unredacted_chars": "1958.01.30"
-          },
-          {
-            "bill": "bill_004",
-            "type": "PHONE",
-            "text": "360/555-0138",
-            "unredacted_chars": "360/555-0138"
-          },
-          {
-            "bill": "bill_004",
-            "type": "MEMBER_ID",
-            "text": "MBR0927409",
-            "unredacted_chars": "MBR0927409"
-          },
-          {
-            "bill": "bill_005",
-            "type": "DOB",
-            "text": "2008.04.15",
-            "unredacted_chars": "2008.04.15"
-          },
-          {
-            "bill": "bill_005",
-            "type": "PHONE",
-            "text": "360/555-0188",
-            "unredacted_chars": "360/555-0188"
-          },
-          {
-            "bill": "bill_005",
-            "type": "MEMBER_ID",
-            "text": "W598878738",
-            "unredacted_chars": "W598878738"
+            "type": "ADDRESS",
+            "text": "5878 Sunset Ave Lakewood CO 80267",
+            "unredacted_chars": "5878"
           },
           {
             "bill": "bill_006",
-            "type": "DOB",
-            "text": "1957.01.20",
-            "unredacted_chars": "1957.01.20"
-          },
-          {
-            "bill": "bill_006",
-            "type": "PHONE",
-            "text": "479/555-0163",
-            "unredacted_chars": "479/555-0163"
-          },
-          {
-            "bill": "bill_006",
-            "type": "MEMBER_ID",
-            "text": "CPH-2811-8297",
-            "unredacted_chars": "CPH-2811-8297"
-          },
-          {
-            "bill": "bill_007",
-            "type": "NAME",
-            "text": "Tomasz Brown",
-            "unredacted_chars": "Tomasz Brown"
-          },
-          {
-            "bill": "bill_007",
-            "type": "DOB",
-            "text": "1976.03.01",
-            "unredacted_chars": "1976.03.01"
-          },
-          {
-            "bill": "bill_007",
-            "type": "PHONE",
-            "text": "864/555-0128",
-            "unredacted_chars": "864/555-0128"
-          },
-          {
-            "bill": "bill_007",
-            "type": "MEMBER_ID",
-            "text": "ZQ9135505-01",
-            "unredacted_chars": "ZQ9135505-01"
-          },
-          {
-            "bill": "bill_008",
-            "type": "NAME",
-            "text": "Dmitri Yamamoto",
-            "unredacted_chars": "Dmitri Yamamoto"
-          },
-          {
-            "bill": "bill_008",
-            "type": "DOB",
-            "text": "1988.12.05",
-            "unredacted_chars": "1988.12.05"
-          },
-          {
-            "bill": "bill_008",
-            "type": "PHONE",
-            "text": "360/555-0127",
-            "unredacted_chars": "360/555-0127"
-          },
-          {
-            "bill": "bill_008",
-            "type": "MEMBER_ID",
-            "text": "MBR8505982",
-            "unredacted_chars": "MBR8505982"
-          },
-          {
-            "bill": "bill_009",
-            "type": "DOB",
-            "text": "2018.12.31",
-            "unredacted_chars": "2018.12.31"
-          },
-          {
-            "bill": "bill_009",
-            "type": "PHONE",
-            "text": "319/555-0164",
-            "unredacted_chars": "319/555-0164"
-          },
-          {
-            "bill": "bill_009",
-            "type": "MEMBER_ID",
-            "text": "ZQ2164648-01",
-            "unredacted_chars": "ZQ2164648-01"
+            "type": "ADDRESS",
+            "text": "3769 Cedar Avenue Oak Harbor WA 98214",
+            "unredacted_chars": "3769 Cedar"
           },
           {
             "bill": "bill_010",
-            "type": "DOB",
-            "text": "1955.02.13",
-            "unredacted_chars": "1955.02.13"
-          },
-          {
-            "bill": "bill_010",
-            "type": "PHONE",
-            "text": "303/555-0167",
-            "unredacted_chars": "303/555-0167"
-          },
-          {
-            "bill": "bill_010",
-            "type": "MEMBER_ID",
-            "text": "W723899222",
-            "unredacted_chars": "W723899222"
+            "type": "ADDRESS",
+            "text": "9536 Briar Rd Greenville SC 29664",
+            "unredacted_chars": "9536"
           },
           {
             "bill": "bill_011",
-            "type": "DOB",
-            "text": "1993.10.15",
-            "unredacted_chars": "1993.10.15"
-          },
-          {
-            "bill": "bill_011",
-            "type": "PHONE",
-            "text": "513/555-0113",
-            "unredacted_chars": "513/555-0113"
-          },
-          {
-            "bill": "bill_011",
-            "type": "MEMBER_ID",
-            "text": "W939593242",
-            "unredacted_chars": "W939593242"
+            "type": "ADDRESS",
+            "text": "93 Cedar Way Springdale AR 72733",
+            "unredacted_chars": "93"
           },
           {
             "bill": "bill_012",
-            "type": "NAME",
-            "text": "Ingrid Doe",
-            "unredacted_chars": "Ingrid Doe"
-          },
-          {
-            "bill": "bill_012",
-            "type": "DOB",
-            "text": "1967.10.02",
-            "unredacted_chars": "1967.10.02"
-          },
-          {
-            "bill": "bill_012",
-            "type": "PHONE",
-            "text": "303/555-0150",
-            "unredacted_chars": "303/555-0150"
-          },
-          {
-            "bill": "bill_012",
-            "type": "MEMBER_ID",
-            "text": "W374686393",
-            "unredacted_chars": "W374686393"
+            "type": "ADDRESS",
+            "text": "8161 Magnolia Way Millbrook NY 12539",
+            "unredacted_chars": "8161"
           }
         ]
       }
     },
     "parsing": {
       "documents": 12,
-      "documents_fully_correct": 0,
-      "gold_lines": 64,
-      "predicted_lines": 0,
-      "matched_lines": 0,
-      "line_recall": 0.0,
-      "line_precision": null,
+      "documents_fully_correct": 7,
+      "gold_lines": 55,
+      "predicted_lines": 55,
+      "matched_lines": 55,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
       "field_accuracy": {
-        "service_date": 0.0,
-        "code": 0.0,
-        "description": 0.0,
-        "billed_amount": 0.0,
-        "allowed_amount": 0.0,
-        "insurer_paid": 0.0,
-        "patient_responsibility": 0.0
+        "service_date": 1.0,
+        "code": 1.0,
+        "description": 1.0,
+        "billed_amount": 1.0,
+        "allowed_amount": 1.0,
+        "insurer_paid": 0.8727272727272727,
+        "patient_responsibility": 1.0
       },
-      "field_accuracy_overall": 0.0,
+      "field_accuracy_overall": 0.9818181818181818,
       "by_layout": {
-        "portal_summary_heldout": {
+        "collapsed_scan_heldout": {
           "docs": 12,
-          "docs_fully_correct": 0,
-          "field_accuracy": 0.0
+          "docs_fully_correct": 7,
+          "field_accuracy": 0.9818181818181818
         }
       },
       "by_messy_condition": {
-        "duplicate_charge": {
-          "docs": 3,
-          "docs_fully_correct": 0
-        },
-        "inline_amounts": {
+        "collapsed_columns": {
           "docs": 12,
-          "docs_fully_correct": 0
+          "docs_fully_correct": 7
+        },
+        "colonless_labels": {
+          "docs": 12,
+          "docs_fully_correct": 7
+        },
+        "duplicate_charge": {
+          "docs": 2,
+          "docs_fully_correct": 2
         },
         "missing_field": {
-          "docs": 8,
-          "docs_fully_correct": 0
-        },
-        "multiline_item": {
-          "docs": 7,
+          "docs": 5,
           "docs_fully_correct": 0
         },
         "ocr_amount": {
-          "docs": 11,
-          "docs_fully_correct": 0
+          "docs": 12,
+          "docs_fully_correct": 7
         },
         "ocr_description": {
-          "docs": 3,
-          "docs_fully_correct": 0
-        },
-        "po_box_address": {
-          "docs": 8,
-          "docs_fully_correct": 0
+          "docs": 5,
+          "docs_fully_correct": 3
         }
       },
       "duplicate_detection": {
-        "gold_pairs": 3,
-        "flagged_pairs": 0,
-        "correct": 0,
-        "recall": 0.0,
-        "precision": null
+        "gold_pairs": 2,
+        "flagged_pairs": 2,
+        "correct": 2,
+        "recall": 1.0,
+        "precision": 1.0
       },
       "detected_formats": {
-        "portal_summary_heldout->unknown": 12
+        "collapsed_scan_heldout->anchored": 12
       },
       "failures": {
-        "fields": [],
-        "lines": [
-          {
-            "bill": "bill_001",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 1,
-            "expected": {
-              "service_date": "2025-07-09",
-              "code": "99214",
-              "description": "Office visit, established patient, m0derate complexity",
-              "billed_amount": "248.23",
-              "allowed_amount": null,
-              "insurer_paid": "94.24",
-              "patient_responsibility": "23.56"
-            }
-          },
-          {
-            "bill": "bill_001",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-07-09",
-              "code": "93000",
-              "description": "Electrocardiogram, routine, with interpretation and report",
-              "billed_amount": "151.36",
-              "allowed_amount": "46.32",
-              "insurer_paid": "41.69",
-              "patient_responsibility": "4.63"
-            }
-          },
-          {
-            "bill": "bill_001",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 3,
-            "expected": {
-              "service_date": "2025-07-09",
-              "code": "93000",
-              "description": "Electrocardiogram, routine, with interpretation and report",
-              "billed_amount": "151.36",
-              "allowed_amount": "46.32",
-              "insurer_paid": "41.69",
-              "patient_responsibility": "4.63"
-            }
-          },
-          {
-            "bill": "bill_001",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 4,
-            "expected": {
-              "service_date": "2025-07-09",
-              "code": "93000",
-              "description": "Electrocardiogram, routine, with interpretation and report",
-              "billed_amount": "254.81",
-              "allowed_amount": "187.55",
-              "insurer_paid": "0.00",
-              "patient_responsibility": "187.55"
-            }
-          },
-          {
-            "bill": "bill_001",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 5,
-            "expected": {
-              "service_date": "2025-07-09",
-              "code": "J2405",
-              "description": "Ondansetron hydrochloride injection, per 1 mg",
-              "billed_amount": "58.62",
-              "allowed_amount": null,
-              "insurer_paid": "0.00",
-              "patient_responsibility": "18.38"
-            }
-          },
-          {
-            "bill": "bill_001",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 6,
-            "expected": {
-              "service_date": "2025-07-09",
-              "code": "70450",
-              "description": "CT head or brain without contrast",
-              "billed_amount": "1450.04",
-              "allowed_amount": "604.06",
-              "insurer_paid": "543.65",
-              "patient_responsibility": "60.41"
-            }
-          },
-          {
-            "bill": "bill_001",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 7,
-            "expected": {
-              "service_date": "2025-07-09",
-              "code": "71046",
-              "description": "Chest x-ray, 2 views",
-              "billed_amount": "213.59",
-              "allowed_amount": "109.78",
-              "insurer_paid": "109.78",
-              "patient_responsibility": "0.00"
-            }
-          },
-          {
-            "bill": "bill_001",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 8,
-            "expected": {
-              "service_date": "2025-07-09",
-              "code": "87880",
-              "description": "Rapid strep test",
-              "billed_amount": "33.48",
-              "allowed_amount": "26.34",
-              "insurer_paid": "0.00",
-              "patient_responsibility": "26.34"
-            }
-          },
-          {
-            "bill": "bill_002",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 1,
-            "expected": {
-              "service_date": "2025-01-26",
-              "code": "97110",
-              "description": "Therapeutic exercises, each 15 minutes",
-              "billed_amount": "60.85",
-              "allowed_amount": "46.46",
-              "insurer_paid": "41.81",
-              "patient_responsibility": "4.65"
-            }
-          },
-          {
-            "bill": "bill_002",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-01-29",
-              "code": "81001",
-              "description": "Urinalysis, automated, with microscopy",
-              "billed_amount": "64.86",
-              "allowed_amount": "26.88",
-              "insurer_paid": "18.82",
-              "patient_responsibility": "8.06"
-            }
-          },
-          {
-            "bill": "bill_002",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 3,
-            "expected": {
-              "service_date": "2025-01-29",
-              "code": "96374",
-              "description": "IV push, single or initial substance",
-              "billed_amount": "296.20",
-              "allowed_amount": "134.94",
-              "insurer_paid": "107.95",
-              "patient_responsibility": "26.99"
-            }
-          },
-          {
-            "bill": "bill_003",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 1,
-            "expected": {
-              "service_date": "2025-03-06",
-              "code": "74177",
-              "description": "CT abdomen and pelvis with contrast",
-              "billed_amount": "4395.57",
-              "allowed_amount": "1763.31",
-              "insurer_paid": "1586.98",
-              "patient_responsibility": "176.33"
-            }
-          },
-          {
-            "bill": "bill_003",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-03-06",
-              "code": "36415",
-              "description": "Routine venipuncture",
-              "billed_amount": "58.62",
-              "allowed_amount": null,
-              "insurer_paid": "38.72",
-              "patient_responsibility": "4.30"
-            }
-          },
-          {
-            "bill": "bill_003",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 3,
-            "expected": {
-              "service_date": "2025-03-06",
-              "code": "G0439",
-              "description": "Annual wellness vlsit, subsequent",
-              "billed_amount": "179.29",
-              "allowed_amount": "140.19",
-              "insurer_paid": "126.17",
-              "patient_responsibility": "14.02"
-            }
-          },
-          {
-            "bill": "bill_003",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 4,
-            "expected": {
-              "service_date": "2025-03-06",
-              "code": "J2405",
-              "description": "Ondansetron hydrochloride injection, per 1 mg",
-              "billed_amount": "47.22",
-              "allowed_amount": "36.53",
-              "insurer_paid": "36.53",
-              "patient_responsibility": "0.00"
-            }
-          },
-          {
-            "bill": "bill_003",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 5,
-            "expected": {
-              "service_date": "2025-03-06",
-              "code": "G0439",
-              "description": "Annual wellness visit, subsequent",
-              "billed_amount": "197.57",
-              "allowed_amount": null,
-              "insurer_paid": "143.08",
-              "patient_responsibility": "0.00"
-            }
-          },
-          {
-            "bill": "bill_003",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 6,
-            "expected": {
-              "service_date": "2025-03-06",
-              "code": "J2405",
-              "description": "Ondansetron hydrochloride injection, per 1 mg",
-              "billed_amount": "65.49",
-              "allowed_amount": "30.19",
-              "insurer_paid": "0.00",
-              "patient_responsibility": "30.19"
-            }
-          },
-          {
-            "bill": "bill_003",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 7,
-            "expected": {
-              "service_date": "2025-03-06",
-              "code": "99214",
-              "description": "Office visit, established patient, moderate complexlty",
-              "billed_amount": "230.66",
-              "allowed_amount": "142.43",
-              "insurer_paid": "113.94",
-              "patient_responsibility": "28.49"
-            }
-          },
-          {
-            "bill": "bill_004",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 1,
-            "expected": {
-              "service_date": "2025-05-19",
-              "code": "71046",
-              "description": "Chest x-ray, 2 views",
-              "billed_amount": "475.53",
-              "allowed_amount": "216.05",
-              "insurer_paid": "172.84",
-              "patient_responsibility": "43.21"
-            }
-          },
-          {
-            "bill": "bill_004",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-05-21",
-              "code": "71046",
-              "description": "Chest x-ray, 2 views",
-              "billed_amount": "352.52",
-              "allowed_amount": "230.11",
-              "insurer_paid": "207.10",
-              "patient_responsibility": "23.01"
-            }
-          },
-          {
-            "bill": "bill_004",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 3,
-            "expected": {
-              "service_date": "2025-05-23",
-              "code": "99213",
-              "description": "Office visit, established patient, low complexity",
-              "billed_amount": "237.04",
-              "allowed_amount": "186.80",
-              "insurer_paid": "130.76",
-              "patient_responsibility": "56.04"
-            }
-          },
-          {
-            "bill": "bill_004",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 4,
-            "expected": {
-              "service_date": "2025-05-23",
-              "code": "90471",
-              "description": "Immunization administration, single vaccine",
-              "billed_amount": "28.87",
-              "allowed_amount": "17.84",
-              "insurer_paid": "17.84",
-              "patient_responsibility": "0.00"
-            }
-          },
-          {
-            "bill": "bill_004",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 5,
-            "expected": {
-              "service_date": "2025-05-23",
-              "code": "G0439",
-              "description": "Annual wellness visit, subsequent",
-              "billed_amount": "240.29",
-              "allowed_amount": null,
-              "insurer_paid": "156.37",
-              "patient_responsibility": "17.37"
-            }
-          },
-          {
-            "bill": "bill_005",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 1,
-            "expected": {
-              "service_date": "2025-05-01",
-              "code": "A4649",
-              "description": "Surgical supply, miscellaneous",
-              "billed_amount": "219.13",
-              "allowed_amount": "102.59",
-              "insurer_paid": "92.33",
-              "patient_responsibility": "10.26"
-            }
-          },
-          {
-            "bill": "bill_005",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-05-01",
-              "code": "97110",
-              "description": "Therapeutic exercises, each 15 minutes",
-              "billed_amount": "142.20",
-              "allowed_amount": "54.43",
-              "insurer_paid": "38.10",
-              "patient_responsibility": "16.33"
-            }
-          },
-          {
-            "bill": "bill_005",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 3,
-            "expected": {
-              "service_date": "2025-05-01",
-              "code": "90686",
-              "description": "Influenza vaccine, quadrivalent, preservative free",
-              "billed_amount": "34.13",
-              "allowed_amount": null,
-              "insurer_paid": "13.99",
-              "patient_responsibility": "5.99"
-            }
-          },
+        "fields": [
           {
             "bill": "bill_006",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 1,
-            "expected": {
-              "service_date": "2025-06-19",
-              "code": "99283",
-              "description": "Emergency department visit, moderate severity",
-              "billed_amount": "807.37",
-              "allowed_amount": "537.50",
-              "insurer_paid": "0.00",
-              "patient_responsibility": "537.50"
-            }
-          },
-          {
-            "bill": "bill_006",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-06-19",
-              "code": "G0439",
-              "description": "Annual wellness visit, subsequent",
-              "billed_amount": "214.43",
-              "allowed_amount": "150.59",
-              "insurer_paid": "120.47",
-              "patient_responsibility": "30.12"
-            }
+            "layout": "collapsed_scan_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "520.20",
+            "got": "-520.20"
           },
           {
             "bill": "bill_007",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 1,
-            "expected": {
-              "service_date": "2025-05-01",
-              "code": "99213",
-              "description": "Office visit, established patient, low complexity",
-              "billed_amount": "180.55",
-              "allowed_amount": "116.89",
-              "insurer_paid": "93.51",
-              "patient_responsibility": "23.38"
-            }
-          },
-          {
-            "bill": "bill_007",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-05-04",
-              "code": "93000",
-              "description": "Electrocardiogram, routine, with interpretation and report",
-              "billed_amount": "259.91",
-              "allowed_amount": "135.70",
-              "insurer_paid": "94.99",
-              "patient_responsibility": "40.71"
-            }
-          },
-          {
-            "bill": "bill_007",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 3,
-            "expected": {
-              "service_date": "2025-05-04",
-              "code": "74177",
-              "description": "CT abdomcn and pelvis with contrast",
-              "billed_amount": "3329.86",
-              "allowed_amount": null,
-              "insurer_paid": "1404.54",
-              "patient_responsibility": "351.13"
-            }
-          },
-          {
-            "bill": "bill_007",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 4,
-            "expected": {
-              "service_date": "2025-05-06",
-              "code": "96374",
-              "description": "IV push, single or initial substance",
-              "billed_amount": "210.53",
-              "allowed_amount": "109.01",
-              "insurer_paid": "76.31",
-              "patient_responsibility": "32.70"
-            }
-          },
-          {
-            "bill": "bill_007",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
+            "layout": "collapsed_scan_heldout",
             "line": 5,
-            "expected": {
-              "service_date": "2025-05-06",
-              "code": "96374",
-              "description": "IV push, single or initial substancc",
-              "billed_amount": "210.53",
-              "allowed_amount": "109.01",
-              "insurer_paid": "76.31",
-              "patient_responsibility": "32.70"
-            }
+            "field": "insurer_paid",
+            "expected": "55.73",
+            "got": "-55.73"
           },
           {
             "bill": "bill_008",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
+            "layout": "collapsed_scan_heldout",
             "line": 1,
-            "expected": {
-              "service_date": "2025-07-25",
-              "code": "93000",
-              "description": "Electrocardiogram, routine, with interpretation and report",
-              "billed_amount": "161.17",
-              "allowed_amount": "74.15",
-              "insurer_paid": "66.74",
-              "patient_responsibility": "7.41"
-            }
+            "field": "insurer_paid",
+            "expected": "10.41",
+            "got": "-10.41"
           },
           {
             "bill": "bill_008",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-07-28",
-              "code": "99213",
-              "description": "Office visit, established patient, low complexity",
-              "billed_amount": "183.88",
-              "allowed_amount": "110.94",
-              "insurer_paid": "110.94",
-              "patient_responsibility": "0.00"
-            }
-          },
-          {
-            "bill": "bill_008",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
+            "layout": "collapsed_scan_heldout",
             "line": 3,
-            "expected": {
-              "service_date": "2025-07-30",
-              "code": "G0439",
-              "description": "Annual wellness visit, subsequent",
-              "billed_amount": "233.51",
-              "allowed_amount": "156.36",
-              "insurer_paid": "140.72",
-              "patient_responsibility": "15.64"
-            }
+            "field": "insurer_paid",
+            "expected": "86.27",
+            "got": "-86.27"
           },
           {
             "bill": "bill_008",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 4,
-            "expected": {
-              "service_date": "2025-07-30",
-              "code": "99203",
-              "description": "New patient office visit",
-              "billed_amount": "286.87",
-              "allowed_amount": "123.57",
-              "insurer_paid": "0.00",
-              "patient_responsibility": "123.57"
-            }
-          },
-          {
-            "bill": "bill_008",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
+            "layout": "collapsed_scan_heldout",
             "line": 5,
-            "expected": {
-              "service_date": "2025-07-30",
-              "code": "99283",
-              "description": "Emergency department visit, moderate severity",
-              "billed_amount": "842.63",
-              "allowed_amount": "641.27",
-              "insurer_paid": "577.14",
-              "patient_responsibility": "64.13"
-            }
+            "field": "insurer_paid",
+            "expected": "14.90",
+            "got": "-14.90"
           },
           {
-            "bill": "bill_008",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 6,
-            "expected": {
-              "service_date": "2025-08-01",
-              "code": "A4649",
-              "description": "Surgical supply, miscellaneous",
-              "billed_amount": "213.09",
-              "allowed_amount": "108.44",
-              "insurer_paid": "97.60",
-              "patient_responsibility": "10.84"
-            }
-          },
-          {
-            "bill": "bill_008",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 7,
-            "expected": {
-              "service_date": "2025-08-04",
-              "code": "93000",
-              "description": "Electrocardiogram, routine, with interpretation and report",
-              "billed_amount": "257.37",
-              "allowed_amount": "203.90",
-              "insurer_paid": "0.00",
-              "patient_responsibility": "203.90"
-            }
-          },
-          {
-            "bill": "bill_009",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
+            "bill": "bill_011",
+            "layout": "collapsed_scan_heldout",
             "line": 1,
-            "expected": {
-              "service_date": "2025-03-23",
-              "code": "J2405",
-              "description": "Ondansetron hydrochloride injection, per 1 mg",
-              "billed_amount": "45.42",
-              "allowed_amount": "24.68",
-              "insurer_paid": "19.74",
-              "patient_responsibility": "4.94"
-            }
+            "field": "insurer_paid",
+            "expected": "202.01",
+            "got": "-202.01"
           },
           {
-            "bill": "bill_009",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-03-24",
-              "code": "97110",
-              "description": "Therapeutic exercises, each 15 minutes",
-              "billed_amount": "130.85",
-              "allowed_amount": null,
-              "insurer_paid": "62.65",
-              "patient_responsibility": "0.00"
-            }
-          },
-          {
-            "bill": "bill_009",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 3,
-            "expected": {
-              "service_date": "2025-03-24",
-              "code": "G0439",
-              "description": "Annual wellness visit, subsequent",
-              "billed_amount": "262.64",
-              "allowed_amount": "200.15",
-              "insurer_paid": "0.00",
-              "patient_responsibility": "200.15"
-            }
-          },
-          {
-            "bill": "bill_010",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
+            "bill": "bill_012",
+            "layout": "collapsed_scan_heldout",
             "line": 1,
-            "expected": {
-              "service_date": "2025-04-18",
-              "code": "87880",
-              "description": "Rapid strep test",
-              "billed_amount": "64.83",
-              "allowed_amount": "47.57",
-              "insurer_paid": "33.30",
-              "patient_responsibility": "14.27"
-            }
-          },
-          {
-            "bill": "bill_010",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-04-21",
-              "code": "70450",
-              "description": "CT head or brain without contrast",
-              "billed_amount": "1326.50",
-              "allowed_amount": "417.53",
-              "insurer_paid": "334.02",
-              "patient_responsibility": "83.51"
-            }
-          },
-          {
-            "bill": "bill_010",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 3,
-            "expected": {
-              "service_date": "2025-04-21",
-              "code": "G0439",
-              "description": "Annual wellness visit, subsequent",
-              "billed_amount": "265.56",
-              "allowed_amount": null,
-              "insurer_paid": "105.82",
-              "patient_responsibility": "26.46"
-            }
-          },
-          {
-            "bill": "bill_010",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 4,
-            "expected": {
-              "service_date": "2025-04-24",
-              "code": "90471",
-              "description": "Immunization administration, single vaccine",
-              "billed_amount": "51.78",
-              "allowed_amount": "40.18",
-              "insurer_paid": "40.18",
-              "patient_responsibility": "0.00"
-            }
-          },
-          {
-            "bill": "bill_010",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 5,
-            "expected": {
-              "service_date": "2025-04-24",
-              "code": "99213",
-              "description": "Office visit, established patient, low complexity",
-              "billed_amount": "184.21",
-              "allowed_amount": "104.16",
-              "insurer_paid": "0.00",
-              "patient_responsibility": "104.16"
-            }
-          },
-          {
-            "bill": "bill_010",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 6,
-            "expected": {
-              "service_date": "2025-04-24",
-              "code": "99214",
-              "description": "Office visit, established patient, moderate complexity",
-              "billed_amount": "193.17",
-              "allowed_amount": "141.29",
-              "insurer_paid": "0.00",
-              "patient_responsibility": "141.29"
-            }
-          },
-          {
-            "bill": "bill_011",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 1,
-            "expected": {
-              "service_date": "2025-06-27",
-              "code": "71046",
-              "description": "Chest x-ray, 2 views",
-              "billed_amount": "282.18",
-              "allowed_amount": null,
-              "insurer_paid": "148.05",
-              "patient_responsibility": "63.45"
-            }
-          },
-          {
-            "bill": "bill_011",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-06-27",
-              "code": "81001",
-              "description": "Urinalysis, automated, with microscopy",
-              "billed_amount": "81.68",
-              "allowed_amount": "58.77",
-              "insurer_paid": "58.77",
-              "patient_responsibility": "0.00"
-            }
-          },
-          {
-            "bill": "bill_011",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 3,
-            "expected": {
-              "service_date": "2025-06-28",
-              "code": "99214",
-              "description": "Office visit, established patient, moderate complexity",
-              "billed_amount": "271.38",
-              "allowed_amount": null,
-              "insurer_paid": "0.00",
-              "patient_responsibility": "112.16"
-            }
-          },
-          {
-            "bill": "bill_011",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 4,
-            "expected": {
-              "service_date": "2025-07-01",
-              "code": "J2405",
-              "description": "Ondansetron hydrochloride injection, per 1 mg",
-              "billed_amount": "72.32",
-              "allowed_amount": "51.79",
-              "insurer_paid": "41.43",
-              "patient_responsibility": "10.36"
-            }
-          },
-          {
-            "bill": "bill_011",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 5,
-            "expected": {
-              "service_date": "2025-07-01",
-              "code": "J1885",
-              "description": "Ketorolac tromethamine injection, per 15 mg",
-              "billed_amount": "55.98",
-              "allowed_amount": "27.36",
-              "insurer_paid": "19.15",
-              "patient_responsibility": "8.21"
-            }
-          },
-          {
-            "bill": "bill_011",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 6,
-            "expected": {
-              "service_date": "2025-07-03",
-              "code": "90686",
-              "description": "Influenza vaccine, quadrivalent, preservative free",
-              "billed_amount": "44.57",
-              "allowed_amount": null,
-              "insurer_paid": "0.00",
-              "patient_responsibility": "15.77"
-            }
-          },
-          {
-            "bill": "bill_011",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 7,
-            "expected": {
-              "service_date": "2025-07-06",
-              "code": "70450",
-              "description": "CT head or brain without contrast",
-              "billed_amount": "2574.42",
-              "allowed_amount": "1051.32",
-              "insurer_paid": "841.06",
-              "patient_responsibility": "210.26"
-            }
-          },
-          {
-            "bill": "bill_012",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 1,
-            "expected": {
-              "service_date": "2025-06-08",
-              "code": "96374",
-              "description": "IV push, single or initial substance",
-              "billed_amount": "251.75",
-              "allowed_amount": "149.49",
-              "insurer_paid": "149.49",
-              "patient_responsibility": "0.00"
-            }
-          },
-          {
-            "bill": "bill_012",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 2,
-            "expected": {
-              "service_date": "2025-06-08",
-              "code": "96374",
-              "description": "IV push, single or initial substance",
-              "billed_amount": "251.75",
-              "allowed_amount": "149.49",
-              "insurer_paid": "149.49",
-              "patient_responsibility": "0.00"
-            }
-          },
-          {
-            "bill": "bill_012",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 3,
-            "expected": {
-              "service_date": "2025-06-08",
-              "code": "93000",
-              "description": "Electrocardiogram, routine, with interpretation and report",
-              "billed_amount": "201.65",
-              "allowed_amount": "134.64",
-              "insurer_paid": "121.18",
-              "patient_responsibility": "13.46"
-            }
-          },
-          {
-            "bill": "bill_012",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 4,
-            "expected": {
-              "service_date": "2025-06-10",
-              "code": "G0439",
-              "description": "Annual wellness visit, subsequent",
-              "billed_amount": "173.01",
-              "allowed_amount": "109.53",
-              "insurer_paid": "98.58",
-              "patient_responsibility": "10.95"
-            }
-          },
-          {
-            "bill": "bill_012",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 5,
-            "expected": {
-              "service_date": "2025-06-10",
-              "code": "80053",
-              "description": "Comprehensive metabolic panel",
-              "billed_amount": "150.71",
-              "allowed_amount": "63.01",
-              "insurer_paid": "56.71",
-              "patient_responsibility": "6.30"
-            }
-          },
-          {
-            "bill": "bill_012",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 6,
-            "expected": {
-              "service_date": "2025-06-10",
-              "code": "J2405",
-              "description": "Ondansetron hydrochloride injection, per 1 mg",
-              "billed_amount": "69.24",
-              "allowed_amount": "40.32",
-              "insurer_paid": "28.22",
-              "patient_responsibility": "12.10"
-            }
-          },
-          {
-            "bill": "bill_012",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 7,
-            "expected": {
-              "service_date": "2025-06-11",
-              "code": "99285",
-              "description": "Emergency department visit, high severity",
-              "billed_amount": "2880.02",
-              "allowed_amount": "2240.67",
-              "insurer_paid": "0.00",
-              "patient_responsibility": "2240.67"
-            }
-          },
-          {
-            "bill": "bill_012",
-            "layout": "portal_summary_heldout",
-            "kind": "missed_line",
-            "line": 8,
-            "expected": {
-              "service_date": "2025-06-11",
-              "code": "J1885",
-              "description": "Ketorolac tromethamine injection, per 15 mg",
-              "billed_amount": "89.75",
-              "allowed_amount": "68.95",
-              "insurer_paid": "55.16",
-              "patient_responsibility": "13.79"
-            }
+            "field": "insurer_paid",
+            "expected": "22.58",
+            "got": "-22.58"
           }
-        ]
+        ],
+        "lines": []
       }
     },
     "parsing_on_redacted_text": {
-      "documents_fully_correct": 0,
-      "line_recall": 0.0,
-      "line_precision": null,
-      "field_accuracy_overall": 0.0
+      "documents_fully_correct": 7,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy_overall": 0.9818181818181818
+    },
+    "fallback_only_parsing": {
+      "documents_fully_correct": 7,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy_overall": 0.9818181818181818
     }
   }
 }

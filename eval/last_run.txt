@@ -48,6 +48,7 @@ LINE-ITEM PARSING
     unlabeled_name         12/12
   duplicate-charge flags: gold pairs 8, flagged 8, correct 8  (recall 100.00%, precision 100.00%)
   parsing AFTER redaction: line recall 100.00%, field acc 100.00%, docs fully correct 48/48
+  diagnostic, fallback strategy ALONE: line recall  48.00%, field acc  47.24%, docs fully correct 12/48
 
 FAILURES
   PII missed (no same-type overlap): 0
@@ -96,6 +97,7 @@ LINE-ITEM PARSING
     page_break              5/5
   duplicate-charge flags: gold pairs 2, flagged 2, correct 2  (recall 100.00%, precision 100.00%)
   parsing AFTER redaction: line recall 100.00%, field acc 100.00%, docs fully correct 12/12
+  diagnostic, fallback strategy ALONE: line recall 100.00%, field acc  85.71%, docs fully correct 0/12
 
 FAILURES
   PII missed (no same-type overlap): 0
@@ -142,6 +144,56 @@ LINE-ITEM PARSING
     tab_separated          12/12
   duplicate-charge flags: gold pairs 1, flagged 1, correct 1  (recall 100.00%, precision 100.00%)
   parsing AFTER redaction: line recall 100.00%, field acc 100.00%, docs fully correct 12/12
+  diagnostic, fallback strategy ALONE: line recall 100.00%, field acc  79.29%, docs fully correct 0/12
+
+FAILURES
+  PII missed (no same-type overlap): 0
+  PII leaked characters (any type): 0
+  PII false positives: 0
+  parse field errors: 0
+  parse line errors: 0
+
+##### DATASET: dev4 (C:\Users\nihar\Downloads\BillWise\data\dev4) #####
+BillWise phase-1 evaluation  (12 SYNTHETIC documents: {'portal_summary': 12})
+========================================================================================
+PII REDACTION (overlap match, same type)
+  type         gold  pred  neutral    recall  precision  leak-free  any-type rec
+  NAME           12    12        0   100.00%    100.00%    100.00%       100.00%
+  ADDRESS        12    12        0   100.00%    100.00%    100.00%       100.00%
+  PHONE          12    24       12   100.00%    100.00%    100.00%       100.00%
+  EMAIL           0     0        0      n/a        n/a        n/a           n/a 
+  DOB            12    12        0   100.00%    100.00%    100.00%       100.00%
+  SSN             0     0        0      n/a        n/a        n/a           n/a 
+  MEMBER_ID      12    12        0   100.00%    100.00%    100.00%       100.00%
+  ACCOUNT_ID     12    12        0   100.00%    100.00%    100.00%       100.00%
+  ALL            72    84       12   100.00%    100.00%    100.00%       100.00%
+  exact-span match: recall 100.00%  precision 100.00%
+
+LINE-ITEM PARSING
+  lines: gold 64, predicted 64, matched 64  -> recall 100.00%, precision 100.00%
+  documents fully correct: 12/12
+  field accuracy (correct / gold lines):
+    service_date            100.00%
+    code                    100.00%
+    description             100.00%
+    billed_amount           100.00%
+    allowed_amount          100.00%
+    insurer_paid            100.00%
+    patient_responsibility  100.00%
+    ALL FIELDS              100.00%
+  by layout:
+    portal_summary   docs fully correct 12/12  field acc 100.00%
+  by messy condition (docs fully correct / docs with condition):
+    duplicate_charge        3/3
+    inline_amounts         12/12
+    missing_field           8/8
+    multiline_item          7/7
+    ocr_amount             11/11
+    ocr_description         3/3
+    po_box_address          8/8
+  duplicate-charge flags: gold pairs 3, flagged 3, correct 3  (recall 100.00%, precision 100.00%)
+  parsing AFTER redaction: line recall 100.00%, field acc 100.00%, docs fully correct 12/12
+  diagnostic, fallback strategy ALONE: line recall 100.00%, field acc 100.00%, docs fully correct 12/12
 
 FAILURES
   PII missed (no same-type overlap): 0
@@ -151,99 +203,90 @@ FAILURES
   parse line errors: 0
 
 ##### DATASET: heldout (C:\Users\nihar\Downloads\BillWise\data\heldout) #####
-BillWise phase-1 evaluation  (12 SYNTHETIC documents: {'portal_summary_heldout': 12})
+BillWise phase-1 evaluation  (12 SYNTHETIC documents: {'collapsed_scan_heldout': 12})
 ========================================================================================
 PII REDACTION (overlap match, same type)
   type         gold  pred  neutral    recall  precision  leak-free  any-type rec
-  NAME           12     8        0    66.67%    100.00%     66.67%        66.67%
-  ADDRESS        12    12        0   100.00%    100.00%    100.00%       100.00%
-  PHONE          12    12       12     0.00%       n/a       0.00%         0.00%
-  EMAIL           0     0        0      n/a        n/a        n/a           n/a 
-  DOB            12     0        0     0.00%       n/a       0.00%         0.00%
+  NAME           12    12        0   100.00%    100.00%    100.00%       100.00%
+  ADDRESS        12    12        0   100.00%    100.00%     33.33%       100.00%
+  PHONE          12    24       12   100.00%    100.00%    100.00%       100.00%
+  EMAIL           5     5        0   100.00%    100.00%    100.00%       100.00%
+  DOB            12    12        0   100.00%    100.00%    100.00%       100.00%
   SSN             0     0        0      n/a        n/a        n/a           n/a 
-  MEMBER_ID      12     0        0     0.00%       n/a       0.00%         0.00%
-  ACCOUNT_ID     12    12        0   100.00%    100.00%    100.00%       100.00%
-  ALL            72    44       12    44.44%    100.00%     44.44%        44.44%
-  exact-span match: recall  44.44%  precision 100.00%
+  MEMBER_ID      12     0        0     0.00%       n/a     100.00%       100.00%
+  ACCOUNT_ID     12    24        0   100.00%     50.00%    100.00%       100.00%
+  ALL            77    89       12    84.42%     84.42%     89.61%       100.00%
+  exact-span match: recall  74.03%  precision  74.03%
 
 LINE-ITEM PARSING
-  lines: gold 64, predicted 0, matched 0  -> recall   0.00%, precision   n/a 
-  documents fully correct: 0/12
+  lines: gold 55, predicted 55, matched 55  -> recall 100.00%, precision 100.00%
+  documents fully correct: 7/12
   field accuracy (correct / gold lines):
-    service_date              0.00%
-    code                      0.00%
-    description               0.00%
-    billed_amount             0.00%
-    allowed_amount            0.00%
-    insurer_paid              0.00%
-    patient_responsibility    0.00%
-    ALL FIELDS                0.00%
+    service_date            100.00%
+    code                    100.00%
+    description             100.00%
+    billed_amount           100.00%
+    allowed_amount          100.00%
+    insurer_paid             87.27%
+    patient_responsibility  100.00%
+    ALL FIELDS               98.18%
   by layout:
-    portal_summary_heldout docs fully correct  0/12  field acc   0.00%
+    collapsed_scan_heldout docs fully correct  7/12  field acc  98.18%
   by messy condition (docs fully correct / docs with condition):
-    duplicate_charge        0/3
-    inline_amounts          0/12
-    missing_field           0/8
-    multiline_item          0/7
-    ocr_amount              0/11
-    ocr_description         0/3
-    po_box_address          0/8
-  duplicate-charge flags: gold pairs 3, flagged 0, correct 0  (recall   0.00%, precision   n/a )
-  parsing AFTER redaction: line recall   0.00%, field acc   0.00%, docs fully correct 0/12
+    collapsed_columns       7/12
+    colonless_labels        7/12
+    duplicate_charge        2/2
+    missing_field           0/5
+    ocr_amount              7/12
+    ocr_description         3/5
+  duplicate-charge flags: gold pairs 2, flagged 2, correct 2  (recall 100.00%, precision 100.00%)
+  parsing AFTER redaction: line recall 100.00%, field acc  98.18%, docs fully correct 7/12
+  diagnostic, fallback strategy ALONE: line recall 100.00%, field acc  98.18%, docs fully correct 7/12
 
 FAILURES
-  PII missed (no same-type overlap): 40
-    - bill_001 DOB        '1986.02.28'                       redacted_as=None  | Birth date 1986.02.28
-    - bill_001 PHONE      '212/555-0166'                     redacted_as=None  | Mobile 212/555-0166
-    - bill_001 MEMBER_ID  'XGH47168030'                      redacted_as=None  | Plan: Blueriver Health Plans, ID XGH47168030
-    - bill_002 NAME       'Thanh Sullivan'                   redacted_as=None  | This statement is for Mx. Thanh Sullivan.
-    - bill_002 DOB        '1941.02.23'                       redacted_as=None  | Birth date 1941.02.23
-    - bill_002 PHONE      '615/555-0136'                     redacted_as=None  | Mobile 615/555-0136
-    - bill_002 MEMBER_ID  'CPH-0633-0769'                    redacted_as=None  | Plan: Summit Mutual Health, ID CPH-0633-0769
-    - bill_003 DOB        '1971.07.02'                       redacted_as=None  | Birth date 1971.07.02
-    - bill_003 PHONE      '513/555-0105'                     redacted_as=None  | Mobile 513/555-0105
-    - bill_003 MEMBER_ID  'ZQ8796700-01'                     redacted_as=None  | Plan: Summit Mutual Health, ID ZQ8796700-01
-    - bill_004 DOB        '1958.01.30'                       redacted_as=None  | Birth date 1958.01.30
-    - bill_004 PHONE      '360/555-0138'                     redacted_as=None  | Mobile 360/555-0138
-    - bill_004 MEMBER_ID  'MBR0927409'                       redacted_as=None  | Plan: Blueriver Health Plans, ID MBR0927409
-    - bill_005 DOB        '2008.04.15'                       redacted_as=None  | Birth date 2008.04.15
-    - bill_005 PHONE      '360/555-0188'                     redacted_as=None  | Mobile 360/555-0188
-    ... 25 more in results.json
-  PII leaked characters (any type): 40
-    - bill_001 DOB        '1986.02.28'                       leaked='1986.02.28'
-    - bill_001 PHONE      '212/555-0166'                     leaked='212/555-0166'
-    - bill_001 MEMBER_ID  'XGH47168030'                      leaked='XGH47168030'
-    - bill_002 NAME       'Thanh Sullivan'                   leaked='Thanh Sullivan'
-    - bill_002 DOB        '1941.02.23'                       leaked='1941.02.23'
-    - bill_002 PHONE      '615/555-0136'                     leaked='615/555-0136'
-    - bill_002 MEMBER_ID  'CPH-0633-0769'                    leaked='CPH-0633-0769'
-    - bill_003 DOB        '1971.07.02'                       leaked='1971.07.02'
-    - bill_003 PHONE      '513/555-0105'                     leaked='513/555-0105'
-    - bill_003 MEMBER_ID  'ZQ8796700-01'                     leaked='ZQ8796700-01'
-    - bill_004 DOB        '1958.01.30'                       leaked='1958.01.30'
-    - bill_004 PHONE      '360/555-0138'                     leaked='360/555-0138'
-    - bill_004 MEMBER_ID  'MBR0927409'                       leaked='MBR0927409'
-    - bill_005 DOB        '2008.04.15'                       leaked='2008.04.15'
-    - bill_005 PHONE      '360/555-0188'                     leaked='360/555-0188'
-    ... 25 more in results.json
-  PII false positives: 0
-  parse field errors: 0
-  parse line errors: 64
-    - bill_001 (portal_summary_heldout) missed_line #1: {"service_date": "2025-07-09", "code": "99214", "description": "Office visit, established patient, m0derate co
-    - bill_001 (portal_summary_heldout) missed_line #2: {"service_date": "2025-07-09", "code": "93000", "description": "Electrocardiogram, routine, with interpretatio
-    - bill_001 (portal_summary_heldout) missed_line #3: {"service_date": "2025-07-09", "code": "93000", "description": "Electrocardiogram, routine, with interpretatio
-    - bill_001 (portal_summary_heldout) missed_line #4: {"service_date": "2025-07-09", "code": "93000", "description": "Electrocardiogram, routine, with interpretatio
-    - bill_001 (portal_summary_heldout) missed_line #5: {"service_date": "2025-07-09", "code": "J2405", "description": "Ondansetron hydrochloride injection, per 1 mg"
-    - bill_001 (portal_summary_heldout) missed_line #6: {"service_date": "2025-07-09", "code": "70450", "description": "CT head or brain without contrast", "billed_am
-    - bill_001 (portal_summary_heldout) missed_line #7: {"service_date": "2025-07-09", "code": "71046", "description": "Chest x-ray, 2 views", "billed_amount": "213.5
-    - bill_001 (portal_summary_heldout) missed_line #8: {"service_date": "2025-07-09", "code": "87880", "description": "Rapid strep test", "billed_amount": "33.48", "
-    - bill_002 (portal_summary_heldout) missed_line #1: {"service_date": "2025-01-26", "code": "97110", "description": "Therapeutic exercises, each 15 minutes", "bill
-    - bill_002 (portal_summary_heldout) missed_line #2: {"service_date": "2025-01-29", "code": "81001", "description": "Urinalysis, automated, with microscopy", "bill
-    - bill_002 (portal_summary_heldout) missed_line #3: {"service_date": "2025-01-29", "code": "96374", "description": "IV push, single or initial substance", "billed
-    - bill_003 (portal_summary_heldout) missed_line #1: {"service_date": "2025-03-06", "code": "74177", "description": "CT abdomen and pelvis with contrast", "billed_
-    - bill_003 (portal_summary_heldout) missed_line #2: {"service_date": "2025-03-06", "code": "36415", "description": "Routine venipuncture", "billed_amount": "58.62
-    - bill_003 (portal_summary_heldout) missed_line #3: {"service_date": "2025-03-06", "code": "G0439", "description": "Annual wellness vlsit, subsequent", "billed_am
-    - bill_003 (portal_summary_heldout) missed_line #4: {"service_date": "2025-03-06", "code": "J2405", "description": "Ondansetron hydrochloride injection, per 1 mg"
-    ... 49 more in results.json
+  PII missed (no same-type overlap): 12
+    - bill_001 MEMBER_ID  'XGH02727255'                      redacted_as=['ACCOUNT_ID']  | Mbr No XGH02727255
+    - bill_002 MEMBER_ID  'ZQ9911513-01'                     redacted_as=['ACCOUNT_ID']  | Mbr No ZQ9911513-01
+    - bill_003 MEMBER_ID  'ZQ8938977-01'                     redacted_as=['ACCOUNT_ID']  | Mbr No ZQ8938977-01
+    - bill_004 MEMBER_ID  'MBR9191629'                       redacted_as=['ACCOUNT_ID']  | Mbr No MBR9191629
+    - bill_005 MEMBER_ID  'MBR6249524'                       redacted_as=['ACCOUNT_ID']  | Mbr No MBR6249524
+    - bill_006 MEMBER_ID  'W261472925'                       redacted_as=['ACCOUNT_ID']  | Mbr No W261472925
+    - bill_007 MEMBER_ID  'CPH-0269-0771'                    redacted_as=['ACCOUNT_ID']  | Mbr No CPH-0269-0771
+    - bill_008 MEMBER_ID  'XGH39317911'                      redacted_as=['ACCOUNT_ID']  | Mbr No XGH39317911
+    - bill_009 MEMBER_ID  'MBR9520748'                       redacted_as=['ACCOUNT_ID']  | Mbr No MBR9520748
+    - bill_010 MEMBER_ID  'MBR8570307'                       redacted_as=['ACCOUNT_ID']  | Mbr No MBR8570307
+    - bill_011 MEMBER_ID  'XGH61919798'                      redacted_as=['ACCOUNT_ID']  | Mbr No XGH61919798
+    - bill_012 MEMBER_ID  'CPH-6146-9160'                    redacted_as=['ACCOUNT_ID']  | Mbr No CPH-6146-9160
+  PII leaked characters (any type): 8
+    - bill_001 ADDRESS    '2955 Hillcrest Dr Riverton OH 45029' leaked='2955'
+    - bill_002 ADDRESS    '4629 Lakeview Boulevard Fairview TN 37014' leaked='4629'
+    - bill_003 ADDRESS    '8852 Chestnut Rd Fairview TN 37013' leaked='8852'
+    - bill_004 ADDRESS    '5878 Sunset Ave Lakewood CO 80267' leaked='5878'
+    - bill_006 ADDRESS    '3769 Cedar Avenue Oak Harbor WA 98214' leaked='3769 Cedar'
+    - bill_010 ADDRESS    '9536 Briar Rd Greenville SC 29664' leaked='9536'
+    - bill_011 ADDRESS    '93 Cedar Way Springdale AR 72733' leaked='93'
+    - bill_012 ADDRESS    '8161 Magnolia Way Millbrook NY 12539' leaked='8161'
+  PII false positives: 12
+    - bill_001 ACCOUNT_ID 'XGH02727255'                      rule=id_near  | Mbr No XGH02727255
+    - bill_002 ACCOUNT_ID 'ZQ9911513-01'                     rule=id_near  | Mbr No ZQ9911513-01
+    - bill_003 ACCOUNT_ID 'ZQ8938977-01'                     rule=id_near  | Mbr No ZQ8938977-01
+    - bill_004 ACCOUNT_ID 'MBR9191629'                       rule=id_near  | Mbr No MBR9191629
+    - bill_005 ACCOUNT_ID 'MBR6249524'                       rule=id_near  | Mbr No MBR6249524
+    - bill_006 ACCOUNT_ID 'W261472925'                       rule=id_near  | Mbr No W261472925
+    - bill_007 ACCOUNT_ID 'CPH-0269-0771'                    rule=id_near  | Mbr No CPH-0269-0771
+    - bill_008 ACCOUNT_ID 'XGH39317911'                      rule=id_near  | Mbr No XGH39317911
+    - bill_009 ACCOUNT_ID 'MBR9520748'                       rule=id_near  | Mbr No MBR9520748
+    - bill_010 ACCOUNT_ID 'MBR8570307'                       rule=id_near  | Mbr No MBR8570307
+    - bill_011 ACCOUNT_ID 'XGH61919798'                      rule=id_near  | Mbr No XGH61919798
+    - bill_012 ACCOUNT_ID 'CPH-6146-9160'                    rule=id_near  | Mbr No CPH-6146-9160
+  parse field errors: 7
+    - bill_006 (collapsed_scan_heldout) line 4 insurer_paid: expected '520.20' got '-520.20'
+    - bill_007 (collapsed_scan_heldout) line 5 insurer_paid: expected '55.73' got '-55.73'
+    - bill_008 (collapsed_scan_heldout) line 1 insurer_paid: expected '10.41' got '-10.41'
+    - bill_008 (collapsed_scan_heldout) line 3 insurer_paid: expected '86.27' got '-86.27'
+    - bill_008 (collapsed_scan_heldout) line 5 insurer_paid: expected '14.90' got '-14.90'
+    - bill_011 (collapsed_scan_heldout) line 1 insurer_paid: expected '202.01' got '-202.01'
+    - bill_012 (collapsed_scan_heldout) line 1 insurer_paid: expected '22.58' got '-22.58'
+  parse line errors: 0
 
 results written to C:\Users\nihar\Downloads\BillWise\eval\results.json
