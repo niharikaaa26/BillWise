@@ -137,12 +137,19 @@ def build_request(text: str, question: str | None = None, kb: KnowledgeBase | No
     pr = parse(text)
     items = pr.line_items
 
-    # one redaction pass over the question and every description, so placeholders stay consistent
-    joined = _SEPARATOR.join([question or ""] + [it.description for it in items])
+    # One redaction pass over the document text, the question and every description. The document
+    # is included only as context: names and IDs found there (e.g. behind "Patient Name:") are then
+    # also redacted where they reappear in the question or a description. The document text itself
+    # is never put into the request.
+    joined = _SEPARATOR.join([text, question or ""] + [it.description for it in items])
     red = redactor.redact(joined)
     parts = red.redacted_text.split(_SEPARATOR)
-    red_question = parts[0].strip() or None
-    red_descs = parts[1:] if len(parts) == len(items) + 1 else ["" for _ in items]
+    if len(parts) == len(items) + 2:
+        red_question = parts[1].strip() or None
+        red_descs = parts[2:]
+    else:  # the separator was altered (should not happen); fail closed
+        red_question = "[QUESTION_WITHHELD]" if question else None
+        red_descs = ["" for _ in items]
 
     lines: list[LineFact] = []
     used: dict[str, Snippet] = {}
