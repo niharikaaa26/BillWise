@@ -1,0 +1,121 @@
+{
+  "id": "bill_009",
+  "layout": "collections_letter",
+  "messy": [
+    "duplicate_charge",
+    "missing_field",
+    "narrative_items",
+    "prose_pii"
+  ],
+  "pii": [
+    {
+      "start": 86,
+      "end": 93,
+      "type": "ACCOUNT_ID",
+      "text": "4740-35"
+    },
+    {
+      "start": 191,
+      "end": 201,
+      "type": "NAME",
+      "text": "Jane Rossi"
+    },
+    {
+      "start": 208,
+      "end": 218,
+      "type": "DOB",
+      "text": "03/18/2006"
+    },
+    {
+      "start": 223,
+      "end": 261,
+      "type": "ADDRESS",
+      "text": "4411 Lakeview Blvd, Riverton, OH 45064"
+    },
+    {
+      "start": 341,
+      "end": 351,
+      "type": "MEMBER_ID",
+      "text": "W381676284"
+    },
+    {
+      "start": 1333,
+      "end": 1337,
+      "type": "NAME",
+      "text": "Jane"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 27,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 7720"
+    },
+    {
+      "start": 40,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Columbus, OH 43215"
+    },
+    {
+      "start": 1353,
+      "end": 1367,
+      "type": "PHONE",
+      "text": "1-800-555-0117"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-02-09",
+      "code": "99203",
+      "description": "new patient office visit",
+      "billed_amount": "198.82",
+      "allowed_amount": "142.66",
+      "insurer_paid": "114.13",
+      "patient_responsibility": "28.53"
+    },
+    {
+      "service_date": "2025-02-11",
+      "code": "99285",
+      "description": "emergency department visit, high severity",
+      "billed_amount": "2487.85",
+      "allowed_amount": "1681.92",
+      "insurer_paid": "1513.73",
+      "patient_responsibility": "168.19"
+    },
+    {
+      "service_date": "2025-02-11",
+      "code": "80053",
+      "description": "comprehensive metabolic panel",
+      "billed_amount": "309.85",
+      "allowed_amount": "233.25",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "233.25"
+    },
+    {
+      "service_date": "2025-02-11",
+      "code": "80053",
+      "description": "comprehensive metabolic panel",
+      "billed_amount": "309.85",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "233.25"
+    },
+    {
+      "service_date": "2025-02-11",
+      "code": "74177",
+      "description": "ct abdomen and pelvis with contrast",
+      "billed_amount": "4733.53",
+      "allowed_amount": "1455.45",
+      "insurer_paid": "1018.82",
+      "patient_responsibility": "436.63"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      2,
+      3
+    ]
+  ]
+}

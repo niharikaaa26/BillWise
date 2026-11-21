@@ -1,0 +1,99 @@
+{
+  "id": "bill_008",
+  "layout": "collections_letter",
+  "messy": [
+    "narrative_items",
+    "prose_pii"
+  ],
+  "pii": [
+    {
+      "start": 88,
+      "end": 95,
+      "type": "ACCOUNT_ID",
+      "text": "4905-71"
+    },
+    {
+      "start": 198,
+      "end": 211,
+      "type": "NAME",
+      "text": "Robert Petrov"
+    },
+    {
+      "start": 218,
+      "end": 228,
+      "type": "DOB",
+      "text": "09/22/2015"
+    },
+    {
+      "start": 233,
+      "end": 271,
+      "type": "ADDRESS",
+      "text": "4249 Lakeview Way, Millbrook, NY 12547"
+    },
+    {
+      "start": 357,
+      "end": 368,
+      "type": "MEMBER_ID",
+      "text": "XGH36136396"
+    },
+    {
+      "start": 802,
+      "end": 808,
+      "type": "NAME",
+      "text": "Robert"
+    },
+    {
+      "start": 901,
+      "end": 928,
+      "type": "EMAIL",
+      "text": "robert.petrov55@example.org"
+    },
+    {
+      "start": 958,
+      "end": 970,
+      "type": "PHONE",
+      "text": "303-555-0134"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 27,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 7720"
+    },
+    {
+      "start": 40,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Columbus, OH 43215"
+    },
+    {
+      "start": 824,
+      "end": 838,
+      "type": "PHONE",
+      "text": "1-800-555-0191"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-04-13",
+      "code": "99214",
+      "description": "office visit, established patient, moderate complexity",
+      "billed_amount": "280.06",
+      "allowed_amount": "153.57",
+      "insurer_paid": "153.57",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-13",
+      "code": "87880",
+      "description": "rapid strep test",
+      "billed_amount": "62.71",
+      "allowed_amount": "27.42",
+      "insurer_paid": "24.68",
+      "patient_responsibility": "2.74"
+    }
+  ],
+  "duplicate_pairs": []
+}

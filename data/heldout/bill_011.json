@@ -1,136 +1,109 @@
 {
   "id": "bill_011",
-  "layout": "collections_letter_heldout",
+  "layout": "email_thread_heldout",
   "messy": [
-    "missing_field",
-    "narrative_items",
+    "email_headers",
+    "markdown_table",
     "ocr_amount",
     "prose_pii"
   ],
   "pii": [
     {
-      "start": 92,
-      "end": 99,
-      "type": "ACCOUNT_ID",
-      "text": "1137-21"
-    },
-    {
-      "start": 198,
-      "end": 208,
+      "start": 6,
+      "end": 19,
       "type": "NAME",
-      "text": "Andre Chen"
+      "text": "Fatima Nguyen"
     },
     {
-      "start": 215,
-      "end": 225,
-      "type": "DOB",
-      "text": "09/19/2001"
-    },
-    {
-      "start": 230,
-      "end": 265,
-      "type": "ADDRESS",
-      "text": "2670 Elm Ave, Port Jervis, NY 12756"
-    },
-    {
-      "start": 345,
-      "end": 356,
-      "type": "MEMBER_ID",
-      "text": "XGH30260453"
-    },
-    {
-      "start": 1490,
-      "end": 1495,
-      "type": "NAME",
-      "text": "Andre"
-    },
-    {
-      "start": 1588,
-      "end": 1616,
+      "start": 21,
+      "end": 47,
       "type": "EMAIL",
-      "text": "andre.chen7@mail.example.com"
+      "text": "fatima.nguyen9@example.net"
     },
     {
-      "start": 1646,
-      "end": 1658,
+      "start": 153,
+      "end": 159,
+      "type": "ACCOUNT_ID",
+      "text": "775405"
+    },
+    {
+      "start": 181,
+      "end": 194,
+      "type": "NAME",
+      "text": "Daniel Nguyen"
+    },
+    {
+      "start": 272,
+      "end": 284,
+      "type": "DOB",
+      "text": "June 1, 2012"
+    },
+    {
+      "start": 359,
+      "end": 371,
+      "type": "MEMBER_ID",
+      "text": "ZQ8753977-01"
+    },
+    {
+      "start": 409,
+      "end": 422,
+      "type": "NAME",
+      "text": "Fatima Nguyen"
+    },
+    {
+      "start": 423,
+      "end": 437,
       "type": "PHONE",
-      "text": "360.555.0169"
+      "text": "(864) 555-0141"
+    },
+    {
+      "start": 501,
+      "end": 507,
+      "type": "NAME",
+      "text": "Fatima"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 28,
-      "end": 38,
-      "type": "ADDRESS",
-      "text": "PO Box 415"
+      "start": 53,
+      "end": 82,
+      "type": "EMAIL",
+      "text": "billing@harborimaging.example"
     },
     {
-      "start": 40,
-      "end": 59,
-      "type": "ADDRESS",
-      "text": "Nashville, TN 37202"
-    },
-    {
-      "start": 1511,
-      "end": 1525,
-      "type": "PHONE",
-      "text": "1-800-555-0135"
+      "start": 459,
+      "end": 488,
+      "type": "EMAIL",
+      "text": "billing@harborimaging.example"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-04-22",
+      "service_date": "2025-03-02",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "247.74",
+      "allowed_amount": "158.66",
+      "insurer_paid": "126.93",
+      "patient_responsibility": "31.73"
+    },
+    {
+      "service_date": "2025-03-03",
       "code": "99203",
-      "description": "new patient office visit",
-      "billed_amount": "198.27",
-      "allowed_amount": null,
-      "insurer_paid": "0.00",
-      "patient_responsibility": "158.58"
+      "description": "New patient office visit",
+      "billed_amount": "234.98",
+      "allowed_amount": "72.91",
+      "insurer_paid": "65.62",
+      "patient_responsibility": "7.29"
     },
     {
-      "service_date": "2025-04-22",
-      "code": "36415",
-      "description": "routine venipuncture",
-      "billed_amount": "23.15",
-      "allowed_amount": "14.35",
-      "insurer_paid": "11.48",
-      "patient_responsibility": "2.87"
-    },
-    {
-      "service_date": "2025-04-23",
-      "code": "99285",
-      "description": "emergency department visit, high severity",
-      "billed_amount": "3179.75",
-      "allowed_amount": "2448.99",
-      "insurer_paid": "2204.09",
-      "patient_responsibility": "244.90"
-    },
-    {
-      "service_date": "2025-04-23",
-      "code": "93000",
-      "description": "electrocardiogram, routine, with interpretation and report",
-      "billed_amount": "114.90",
-      "allowed_amount": "62.50",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "62.50"
-    },
-    {
-      "service_date": "2025-04-23",
-      "code": "97110",
-      "description": "therapeutic exercises, each 15 minutes",
-      "billed_amount": "164.87",
-      "allowed_amount": "119.29",
-      "insurer_paid": "83.50",
-      "patient_responsibility": "35.79"
-    },
-    {
-      "service_date": "2025-04-23",
-      "code": "90471",
-      "description": "immunization administration, single vaccine",
-      "billed_amount": "58.52",
-      "allowed_amount": null,
-      "insurer_paid": "0.00",
-      "patient_responsibility": "46.81"
+      "service_date": "2025-03-03",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "262.46",
+      "allowed_amount": "87.79",
+      "insurer_paid": "87.79",
+      "patient_responsibility": "0.00"
     }
   ],
   "duplicate_pairs": []

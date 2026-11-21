@@ -1,19 +1,25 @@
-Ashgrove Financial Partners
-PO Box 415, Nashville, TN 37202
-September 24, 2025
+From: Fatima Nguyen <fatima.nguyen9@example.net>
+To: billing@harborimaging.example
+Date: Tue, 08 Apr 2025 09:26
+Subject: Question about my bill, account 775405
 
-RE: Account 1137-21 (original creditor: Riverside Urgent Care)
+Hello,
 
-This letter concerns charges for services provided to Andre Chen (born 09/19/2001) at 2670 Elm Ave, Port Jervis, NY 12756.
-Our records list the patient's insurance as Summit Mutual Health under policy XGH30260453.
+My daughter Daniel Nguyen was seen at your clinic and I got a bill I don't understand. She was born on June 1, 2012, in case you need it to look up the visit.
+Our insurance member number is ZQ8753977-01. Why is the amount so high?
 
-On 04/22/2025 the patient received new patient office visit (CPT 99203), billed at $198.27. The insurer paid $0.00, leaving $158.58 unpaid.
-On April 22, 2025 the patient received routine venipuncture (CPT 36415), billed at $23.15. The insurer paid $11.48 toward an allowed amount of $14.35, leaving $2.87 unpaid.
-On 04/23/2025 the patient received emergency department visit, high severity (CPT 99285), billed at $3,179.75. The insurer paid $2,204.09 toward an allowed amount of $2,448.99, leaving $244.90 unpaid.
-On April 23, 2025 the patient received electrocardiogram, routine, with interpretation and report (CPT 93000), billed at $114.90. The insurer paid $0.00 toward an allowed amount of $62.50, leaving $62.50 unpaid.
-On 04/23/2025 the patient received therapeutic exercises, each 15 minutes (CPT 97110), billed at $164.87. The insurer paid $83.50 toward an allowed amount of $119.29, leaving $35.79 unpaid.
-On 04/23/2025 the patient received immunization administration, single vaccine (CPT 90471), billed at $58,52. The insurer paid $0.00, leaving $46.81 unpaid.
+Thanks,
+Fatima Nguyen
+(864) 555-0141
 
-The balance now due is $551.45.
-To discuss this account, Andre may call us at 1-800-555-0135 or reply to the address above. We also have the email address andre.chen7@mail.example.com on file and the phone number 360.555.0169.
-This communication is from a debt collector.
+On Wed, 09 Apr 2025 billing@harborimaging.example wrote:
+> Hi Fatima, here is the breakdown for the visit:
+>
+> | Date | Code | Service | Charged | Insurance Allowed | Insurance Paid | Your Balance |
+> |------|------|---------|--------:|------------------:|---------------:|-------------:|
+> | 03/02/2025 | 99214 | Office visit, established patient, moderate complexity | $247.74 | $158.66 | $126.93 | $31.73 |
+> | 03/03/2025 | 99203 | New patient office visit | $234,98 | $72.91 | $65.62 | $7.29 |
+> | 03/03/2025 | 99203 | New patient office visit | $262.46 | $87.79 | $87.79 | $0.00 |
+>
+> Your total balance is $39.02. Let us know if you'd like a payment plan.
+> Harbor Imaging Associates Billing Office

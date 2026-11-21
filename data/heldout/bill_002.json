@@ -1,134 +1,146 @@
 {
   "id": "bill_002",
-  "layout": "collections_letter_heldout",
+  "layout": "email_thread_heldout",
   "messy": [
+    "email_headers",
+    "markdown_table",
     "missing_field",
-    "narrative_items",
     "ocr_amount",
-    "ocr_description",
     "prose_pii"
   ],
   "pii": [
     {
-      "start": 87,
-      "end": 94,
+      "start": 6,
+      "end": 21,
+      "type": "NAME",
+      "text": "Robert Williams"
+    },
+    {
+      "start": 23,
+      "end": 52,
+      "type": "EMAIL",
+      "text": "robert.williams85@example.com"
+    },
+    {
+      "start": 159,
+      "end": 165,
       "type": "ACCOUNT_ID",
-      "text": "1600-06"
+      "text": "271830"
     },
     {
-      "start": 202,
-      "end": 212,
+      "start": 187,
+      "end": 201,
       "type": "NAME",
-      "text": "Ingrid Kim"
+      "text": "David Williams"
     },
     {
-      "start": 219,
-      "end": 229,
+      "start": 279,
+      "end": 297,
       "type": "DOB",
-      "text": "07/06/2012"
+      "text": "September 19, 2011"
     },
     {
-      "start": 234,
-      "end": 269,
-      "type": "ADDRESS",
-      "text": "4150 Maple Dr, Springdale, AR 72782"
-    },
-    {
-      "start": 349,
-      "end": 359,
+      "start": 372,
+      "end": 383,
       "type": "MEMBER_ID",
-      "text": "MBR5117541"
+      "text": "XGH55270484"
     },
     {
-      "start": 1740,
-      "end": 1746,
+      "start": 421,
+      "end": 436,
       "type": "NAME",
-      "text": "Ingrid"
+      "text": "Robert Williams"
+    },
+    {
+      "start": 437,
+      "end": 449,
+      "type": "PHONE",
+      "text": "917-555-0192"
+    },
+    {
+      "start": 514,
+      "end": 520,
+      "type": "NAME",
+      "text": "Robert"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 28,
-      "end": 38,
-      "type": "ADDRESS",
-      "text": "PO Box 415"
+      "start": 58,
+      "end": 88,
+      "type": "EMAIL",
+      "text": "billing@lakesideclinic.example"
     },
     {
-      "start": 40,
-      "end": 59,
-      "type": "ADDRESS",
-      "text": "Nashville, TN 37202"
-    },
-    {
-      "start": 1762,
-      "end": 1776,
-      "type": "PHONE",
-      "text": "1-800-555-0119"
+      "start": 471,
+      "end": 501,
+      "type": "EMAIL",
+      "text": "billing@lakesideclinic.example"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-03-06",
-      "code": "85025",
-      "description": "complete blood count with automated differential",
-      "billed_amount": "172.21",
-      "allowed_amount": "59.35",
-      "insurer_paid": "53.42",
-      "patient_responsibility": "5.93"
-    },
-    {
-      "service_date": "2025-03-07",
-      "code": "J1885",
-      "description": "ketorolac tromethamine injection, per 15 mg",
-      "billed_amount": "38.58",
-      "allowed_amount": null,
-      "insurer_paid": "18.89",
-      "patient_responsibility": "8.09"
-    },
-    {
-      "service_date": "2025-03-07",
-      "code": "85025",
-      "description": "complete blood count with automated dlfferential",
-      "billed_amount": "123.69",
-      "allowed_amount": "38.37",
-      "insurer_paid": "34.53",
-      "patient_responsibility": "3.84"
-    },
-    {
-      "service_date": "2025-03-07",
-      "code": "J1885",
-      "description": "ketorolac tromethamine injection, per 15 mg",
-      "billed_amount": "65.29",
-      "allowed_amount": null,
-      "insurer_paid": "22.30",
-      "patient_responsibility": "5.57"
-    },
-    {
-      "service_date": "2025-03-07",
-      "code": "90686",
-      "description": "influenza vaccine, quadrivalent, preservative free",
-      "billed_amount": "35.70",
-      "allowed_amount": "12.58",
-      "insurer_paid": "11.32",
-      "patient_responsibility": "1.26"
-    },
-    {
-      "service_date": "2025-03-07",
-      "code": "85025",
-      "description": "complete blood count with automated differential",
-      "billed_amount": "146.44",
-      "allowed_amount": "104.52",
-      "insurer_paid": "104.52",
+      "service_date": "2025-02-10",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "1089.00",
+      "allowed_amount": "572.52",
+      "insurer_paid": "572.52",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-03-10",
-      "code": "99285",
-      "description": "emergency department visit, high severity",
-      "billed_amount": "2478.63",
-      "allowed_amount": "1864.52",
-      "insurer_paid": "1678.07",
-      "patient_responsibility": "186.45"
+      "service_date": "2025-02-10",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "56.43",
+      "allowed_amount": null,
+      "insurer_paid": "27.13",
+      "patient_responsibility": "11.62"
+    },
+    {
+      "service_date": "2025-02-12",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "177.98",
+      "allowed_amount": "56.56",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "56.56"
+    },
+    {
+      "service_date": "2025-02-12",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "652.84",
+      "allowed_amount": null,
+      "insurer_paid": "417.18",
+      "patient_responsibility": "46.35"
+    },
+    {
+      "service_date": "2025-02-15",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "27.95",
+      "allowed_amount": null,
+      "insurer_paid": "10.48",
+      "patient_responsibility": "2.62"
+    },
+    {
+      "service_date": "2025-02-15",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "3425.07",
+      "allowed_amount": "2272.09",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "2272.09"
+    },
+    {
+      "service_date": "2025-02-15",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "127.57",
+      "allowed_amount": "59.61",
+      "insurer_paid": "59.61",
+      "patient_responsibility": "0.00"
     }
   ],
   "duplicate_pairs": []

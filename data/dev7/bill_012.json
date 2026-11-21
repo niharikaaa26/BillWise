@@ -1,0 +1,128 @@
+{
+  "id": "bill_012",
+  "layout": "collections_letter",
+  "messy": [
+    "narrative_items",
+    "ocr_amount",
+    "ocr_description",
+    "prose_pii"
+  ],
+  "pii": [
+    {
+      "start": 87,
+      "end": 94,
+      "type": "ACCOUNT_ID",
+      "text": "7938-87"
+    },
+    {
+      "start": 193,
+      "end": 207,
+      "type": "NAME",
+      "text": "Brianna Okafor"
+    },
+    {
+      "start": 214,
+      "end": 224,
+      "type": "DOB",
+      "text": "03/14/1983"
+    },
+    {
+      "start": 229,
+      "end": 261,
+      "type": "ADDRESS",
+      "text": "3358 Pine Dr, Fairview, TN 37086"
+    },
+    {
+      "start": 343,
+      "end": 353,
+      "type": "MEMBER_ID",
+      "text": "MBR9078404"
+    },
+    {
+      "start": 1369,
+      "end": 1376,
+      "type": "NAME",
+      "text": "Brianna"
+    },
+    {
+      "start": 1469,
+      "end": 1497,
+      "type": "EMAIL",
+      "text": "brianna.okafor30@example.org"
+    },
+    {
+      "start": 1527,
+      "end": 1539,
+      "type": "PHONE",
+      "text": "864.555.0194"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 27,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 7720"
+    },
+    {
+      "start": 40,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Columbus, OH 43215"
+    },
+    {
+      "start": 1392,
+      "end": 1406,
+      "type": "PHONE",
+      "text": "1-800-555-0149"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-05-06",
+      "code": "71046",
+      "description": "chest x-ray, 2 views",
+      "billed_amount": "207.89",
+      "allowed_amount": "153.36",
+      "insurer_paid": "153.36",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-05-06",
+      "code": "J1885",
+      "description": "ketorolac tromethamine injcction, per 15 mg",
+      "billed_amount": "41.13",
+      "allowed_amount": "15.00",
+      "insurer_paid": "15.00",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-05-06",
+      "code": "99214",
+      "description": "office visit, established patient, moderate complexity",
+      "billed_amount": "333.73",
+      "allowed_amount": "246.26",
+      "insurer_paid": "221.63",
+      "patient_responsibility": "24.63"
+    },
+    {
+      "service_date": "2025-05-08",
+      "code": "99214",
+      "description": "office visit, established patient, moderate complexity",
+      "billed_amount": "298.96",
+      "allowed_amount": "184.76",
+      "insurer_paid": "184.76",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-05-08",
+      "code": "71046",
+      "description": "chest x-ray, 2 views",
+      "billed_amount": "463.82",
+      "allowed_amount": "349.03",
+      "insurer_paid": "244.32",
+      "patient_responsibility": "104.71"
+    }
+  ],
+  "duplicate_pairs": []
+}

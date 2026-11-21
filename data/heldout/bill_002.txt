@@ -1,20 +1,29 @@
-Ashgrove Financial Partners
-PO Box 415, Nashville, TN 37202
-July 26, 2025
+From: Robert Williams <robert.williams85@example.com>
+To: billing@lakesideclinic.example
+Date: Mon, 07 Apr 2025 09:30
+Subject: Question about my bill, account 271830
 
-RE: Account 1600-06 (original creditor: Mercy Valley Regional Hospital)
+Hello,
 
-This letter concerns charges for services provided to Ingrid Kim (born 07/06/2012) at 4150 Maple Dr, Springdale, AR 72782.
-Our records list the patient's insurance as Summit Mutual Health under policy MBR5117541.
+My daughter David Williams was seen at your clinic and I got a bill I don't understand. She was born on September 19, 2011, in case you need it to look up the visit.
+Our insurance member number is XGH55270484. Why is the amount so high?
 
-On March 6, 2025 the patient received complete blood count with automated differential (CPT 85025), billed at $172,21. The insurer paid $53.42 toward an allowed amount of $59.35, leaving $5.93 unpaid.
-On 03/07/2025 the patient received ketorolac tromethamine injection, per 15 mg (CPT J1885), billed at $38.58. The insurer paid $18.89, leaving $8.09 unpaid.
-On 03/07/2025 the patient received complete blood count with automated dlfferential (CPT 85025), billed at $123.69. The insurer paid $34.53 toward an allowed amount of $38.37, leaving $3.84 unpaid.
-On 03/07/2025 the patient received ketorolac tromethamine injection, per 15 mg (CPT J1885), billed at S65.29. The insurer paid $22.30, leaving $5.57 unpaid.
-On March 7, 2025 the patient received influenza vaccine, quadrivalent, preservative free (CPT 90686), billed at $35.70. The insurer paid $11.32 toward an allowed amount of $12.58, leaving $1.26 unpaid.
-On 03/07/2025 the patient received complete blood count with automated differential (CPT 85025), billed at $146.44. The insurer paid $104.52 toward an allowed amount of $104.52, leaving $0.00 unpaid.
-On March 10, 2025 the patient received emergency department visit, high severity (CPT 99285), billed at S2,478.63. The insurer paid $1,678.07 toward an allowed amount of $1,864.52, leaving $186.45 unpaid.
+Thanks,
+Robert Williams
+917-555-0192
 
-The balance now due is $211.14.
-To discuss this account, Ingrid may call us at 1-800-555-0119 or reply to the address above. 
-This communication is from a debt collector.
+On Tue, 08 Apr 2025 billing@lakesideclinic.example wrote:
+> Hi Robert, here is the breakdown for the visit:
+>
+> | Date | Code | Service | Charged | Insurance Allowed | Insurance Paid | Your Balance |
+> |------|------|---------|--------:|------------------:|---------------:|-------------:|
+> | 02/10/2025 | 99283 | Emergency department visit, moderate severity | $1,089.00 | $572.52 | $572.52 | $0.00 |
+> | 02/10/2025 | J2405 | Ondansetron hydrochloride injection, per 1 mg | $56.43 | n/a | $27.13 | $11.62 |
+> | 02/12/2025 | 99213 | Office visit, established patient, low complexity | $177.98 | $56.56 | $0.00 | $56.56 |
+> | 02/12/2025 | 99283 | Emergency department visit, moderate severity | $652.84 | n/a | $417.18 | $46.35 |
+> | 02/15/2025 | 90471 | Immunization administration, single vaccine | $27.95 | n/a | $10.48 | $2.62 |
+> | 02/15/2025 | 74177 | CT abdomen and pelvis with contrast | $3,425.07 | $2,272.09 | $0.00 | $2,272.09 |
+> | 02/15/2025 | 99213 | Office visit, established patient, low complexity | $l27.57 | $59.61 | $59.61 | $0.00 |
+>
+> Your total balance is $2,389.24. Let us know if you'd like a payment plan.
+> Lakeside Family Clinic Billing Office

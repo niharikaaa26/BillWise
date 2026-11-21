@@ -1,127 +1,118 @@
 {
   "id": "bill_012",
-  "layout": "collections_letter_heldout",
+  "layout": "email_thread_heldout",
   "messy": [
-    "narrative_items",
-    "ocr_amount",
+    "email_headers",
+    "markdown_table",
     "ocr_description",
     "prose_pii"
   ],
   "pii": [
     {
-      "start": 87,
-      "end": 94,
-      "type": "ACCOUNT_ID",
-      "text": "7938-87"
-    },
-    {
-      "start": 193,
-      "end": 207,
+      "start": 6,
+      "end": 19,
       "type": "NAME",
-      "text": "Brianna Okafor"
+      "text": "Aisha Bianchi"
     },
     {
-      "start": 214,
-      "end": 224,
-      "type": "DOB",
-      "text": "03/14/1983"
-    },
-    {
-      "start": 229,
-      "end": 261,
-      "type": "ADDRESS",
-      "text": "3358 Pine Dr, Fairview, TN 37086"
-    },
-    {
-      "start": 343,
-      "end": 353,
-      "type": "MEMBER_ID",
-      "text": "MBR9078404"
-    },
-    {
-      "start": 1369,
-      "end": 1376,
-      "type": "NAME",
-      "text": "Brianna"
-    },
-    {
-      "start": 1469,
-      "end": 1497,
+      "start": 21,
+      "end": 48,
       "type": "EMAIL",
-      "text": "brianna.okafor30@example.org"
+      "text": "aisha.bianchi82@example.org"
     },
     {
-      "start": 1527,
-      "end": 1539,
+      "start": 155,
+      "end": 161,
+      "type": "ACCOUNT_ID",
+      "text": "173648"
+    },
+    {
+      "start": 183,
+      "end": 196,
+      "type": "NAME",
+      "text": "Aisha Bianchi"
+    },
+    {
+      "start": 274,
+      "end": 290,
+      "type": "DOB",
+      "text": "December 4, 2010"
+    },
+    {
+      "start": 365,
+      "end": 378,
+      "type": "MEMBER_ID",
+      "text": "CPH-6346-4378"
+    },
+    {
+      "start": 416,
+      "end": 429,
+      "type": "NAME",
+      "text": "Aisha Bianchi"
+    },
+    {
+      "start": 430,
+      "end": 442,
       "type": "PHONE",
-      "text": "864.555.0194"
+      "text": "845-555-0171"
+    },
+    {
+      "start": 507,
+      "end": 512,
+      "type": "NAME",
+      "text": "Aisha"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 27,
-      "end": 38,
-      "type": "ADDRESS",
-      "text": "PO Box 7720"
+      "start": 54,
+      "end": 84,
+      "type": "EMAIL",
+      "text": "billing@lakesideclinic.example"
     },
     {
-      "start": 40,
-      "end": 58,
-      "type": "ADDRESS",
-      "text": "Columbus, OH 43215"
-    },
-    {
-      "start": 1392,
-      "end": 1406,
-      "type": "PHONE",
-      "text": "1-800-555-0149"
+      "start": 464,
+      "end": 494,
+      "type": "EMAIL",
+      "text": "billing@lakesideclinic.example"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-05-06",
-      "code": "71046",
-      "description": "chest x-ray, 2 views",
-      "billed_amount": "207.89",
-      "allowed_amount": "153.36",
-      "insurer_paid": "153.36",
-      "patient_responsibility": "0.00"
+      "service_date": "2025-07-31",
+      "code": "99285",
+      "description": "Emergency departrnent visit, high severity",
+      "billed_amount": "2285.11",
+      "allowed_amount": "1506.82",
+      "insurer_paid": "1205.46",
+      "patient_responsibility": "301.36"
     },
     {
-      "service_date": "2025-05-06",
+      "service_date": "2025-08-01",
+      "code": "A4649",
+      "description": "Surgical supply, miscellane0us",
+      "billed_amount": "62.01",
+      "allowed_amount": "38.13",
+      "insurer_paid": "26.69",
+      "patient_responsibility": "11.44"
+    },
+    {
+      "service_date": "2025-08-01",
       "code": "J1885",
-      "description": "ketorolac tromethamine injcction, per 15 mg",
-      "billed_amount": "41.13",
-      "allowed_amount": "15.00",
-      "insurer_paid": "15.00",
+      "description": "Ketorolac lromethamine injection, per 15 mg",
+      "billed_amount": "52.29",
+      "allowed_amount": "18.81",
+      "insurer_paid": "18.81",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-05-06",
-      "code": "99214",
-      "description": "office visit, established patient, moderate complexity",
-      "billed_amount": "333.73",
-      "allowed_amount": "246.26",
-      "insurer_paid": "221.63",
-      "patient_responsibility": "24.63"
-    },
-    {
-      "service_date": "2025-05-08",
-      "code": "99214",
-      "description": "office visit, established patient, moderate complexity",
-      "billed_amount": "298.96",
-      "allowed_amount": "184.76",
-      "insurer_paid": "184.76",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-05-08",
-      "code": "71046",
-      "description": "chest x-ray, 2 views",
-      "billed_amount": "463.82",
-      "allowed_amount": "349.03",
-      "insurer_paid": "244.32",
-      "patient_responsibility": "104.71"
+      "service_date": "2025-08-01",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "170.90",
+      "allowed_amount": "88.76",
+      "insurer_paid": "71.01",
+      "patient_responsibility": "17.75"
     }
   ],
   "duplicate_pairs": []

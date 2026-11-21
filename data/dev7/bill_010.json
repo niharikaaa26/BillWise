@@ -1,0 +1,133 @@
+{
+  "id": "bill_010",
+  "layout": "collections_letter",
+  "messy": [
+    "duplicate_charge",
+    "narrative_items",
+    "ocr_amount",
+    "prose_pii"
+  ],
+  "pii": [
+    {
+      "start": 87,
+      "end": 94,
+      "type": "ACCOUNT_ID",
+      "text": "2289-47"
+    },
+    {
+      "start": 202,
+      "end": 213,
+      "type": "NAME",
+      "text": "Jane Nguyen"
+    },
+    {
+      "start": 220,
+      "end": 230,
+      "type": "DOB",
+      "text": "04/21/2019"
+    },
+    {
+      "start": 235,
+      "end": 278,
+      "type": "ADDRESS",
+      "text": "1773 Maple Way Apt 25B, Millbrook, NY 12587"
+    },
+    {
+      "start": 360,
+      "end": 370,
+      "type": "MEMBER_ID",
+      "text": "MBR9777211"
+    },
+    {
+      "start": 1445,
+      "end": 1449,
+      "type": "NAME",
+      "text": "Jane"
+    },
+    {
+      "start": 1542,
+      "end": 1572,
+      "type": "EMAIL",
+      "text": "jane.nguyen65@mail.example.com"
+    },
+    {
+      "start": 1602,
+      "end": 1614,
+      "type": "PHONE",
+      "text": "917.555.0188"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 28,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 415"
+    },
+    {
+      "start": 40,
+      "end": 59,
+      "type": "ADDRESS",
+      "text": "Nashville, TN 37202"
+    },
+    {
+      "start": 1465,
+      "end": 1479,
+      "type": "PHONE",
+      "text": "1-800-555-0181"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-04-12",
+      "code": "99214",
+      "description": "office visit, established patient, moderate complexity",
+      "billed_amount": "297.42",
+      "allowed_amount": "211.60",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "211.60"
+    },
+    {
+      "service_date": "2025-04-12",
+      "code": "99214",
+      "description": "office visit, established patient, moderate complexity",
+      "billed_amount": "297.42",
+      "allowed_amount": "211.60",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "211.60"
+    },
+    {
+      "service_date": "2025-04-12",
+      "code": "99203",
+      "description": "new patient office visit",
+      "billed_amount": "258.98",
+      "allowed_amount": "162.53",
+      "insurer_paid": "146.28",
+      "patient_responsibility": "16.25"
+    },
+    {
+      "service_date": "2025-04-12",
+      "code": "99214",
+      "description": "office visit, established patient, moderate complexity",
+      "billed_amount": "257.87",
+      "allowed_amount": "197.88",
+      "insurer_paid": "138.52",
+      "patient_responsibility": "59.36"
+    },
+    {
+      "service_date": "2025-04-14",
+      "code": "99214",
+      "description": "office visit, established patient, moderate complexity",
+      "billed_amount": "336.14",
+      "allowed_amount": "109.26",
+      "insurer_paid": "76.48",
+      "patient_responsibility": "32.78"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      0,
+      1
+    ]
+  ]
+}

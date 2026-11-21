@@ -1,0 +1,130 @@
+{
+  "id": "bill_003",
+  "layout": "collections_letter",
+  "messy": [
+    "duplicate_charge",
+    "narrative_items",
+    "ocr_description",
+    "prose_pii"
+  ],
+  "pii": [
+    {
+      "start": 86,
+      "end": 93,
+      "type": "ACCOUNT_ID",
+      "text": "6815-68"
+    },
+    {
+      "start": 192,
+      "end": 205,
+      "type": "NAME",
+      "text": "Brianna Mbeki"
+    },
+    {
+      "start": 212,
+      "end": 222,
+      "type": "DOB",
+      "text": "09/02/1970"
+    },
+    {
+      "start": 227,
+      "end": 269,
+      "type": "ADDRESS",
+      "text": "744 Maple St Unit 18C, Millbrook, NY 12551"
+    },
+    {
+      "start": 349,
+      "end": 361,
+      "type": "MEMBER_ID",
+      "text": "ZQ6531681-01"
+    },
+    {
+      "start": 1567,
+      "end": 1574,
+      "type": "NAME",
+      "text": "Brianna"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 28,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 415"
+    },
+    {
+      "start": 40,
+      "end": 59,
+      "type": "ADDRESS",
+      "text": "Nashville, TN 37202"
+    },
+    {
+      "start": 1590,
+      "end": 1604,
+      "type": "PHONE",
+      "text": "1-800-555-0124"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-01-30",
+      "code": "90686",
+      "description": "influenza vaccine, quadrivalent, preservatlve free",
+      "billed_amount": "31.32",
+      "allowed_amount": "19.80",
+      "insurer_paid": "15.84",
+      "patient_responsibility": "3.96"
+    },
+    {
+      "service_date": "2025-01-30",
+      "code": "99285",
+      "description": "emergency department visit, high severity",
+      "billed_amount": "2350.29",
+      "allowed_amount": "915.80",
+      "insurer_paid": "915.80",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-01-30",
+      "code": "99285",
+      "description": "emergency department visit, high severity",
+      "billed_amount": "2350.29",
+      "allowed_amount": "915.80",
+      "insurer_paid": "915.80",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-01-30",
+      "code": "J2405",
+      "description": "ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "58.67",
+      "allowed_amount": "22.84",
+      "insurer_paid": "18.27",
+      "patient_responsibility": "4.57"
+    },
+    {
+      "service_date": "2025-01-30",
+      "code": "71046",
+      "description": "chest x-ray, 2 views",
+      "billed_amount": "201.49",
+      "allowed_amount": "155.18",
+      "insurer_paid": "139.66",
+      "patient_responsibility": "15.52"
+    },
+    {
+      "service_date": "2025-01-30",
+      "code": "70450",
+      "description": "ct head or brain without contrast",
+      "billed_amount": "1429.40",
+      "allowed_amount": "540.36",
+      "insurer_paid": "378.25",
+      "patient_responsibility": "162.11"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      1,
+      2
+    ]
+  ]
+}

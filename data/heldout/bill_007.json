@@ -1,143 +1,147 @@
 {
   "id": "bill_007",
-  "layout": "collections_letter_heldout",
+  "layout": "email_thread_heldout",
   "messy": [
-    "duplicate_charge",
-    "narrative_items",
+    "email_headers",
+    "markdown_table",
+    "missing_field",
     "ocr_amount",
-    "ocr_description",
     "prose_pii"
   ],
   "pii": [
     {
-      "start": 86,
-      "end": 93,
-      "type": "ACCOUNT_ID",
-      "text": "0638-68"
-    },
-    {
-      "start": 196,
-      "end": 208,
+      "start": 6,
+      "end": 24,
       "type": "NAME",
-      "text": "Ingrid Mbeki"
+      "text": "Tomasz Castellanos"
     },
     {
-      "start": 215,
-      "end": 225,
-      "type": "DOB",
-      "text": "09/25/1948"
-    },
-    {
-      "start": 230,
-      "end": 267,
-      "type": "ADDRESS",
-      "text": "8224 Willow Ave, Springdale, AR 72754"
-    },
-    {
-      "start": 349,
-      "end": 359,
-      "type": "MEMBER_ID",
-      "text": "MBR6252082"
-    },
-    {
-      "start": 1601,
-      "end": 1607,
-      "type": "NAME",
-      "text": "Ingrid"
-    },
-    {
-      "start": 1700,
-      "end": 1726,
+      "start": 26,
+      "end": 58,
       "type": "EMAIL",
-      "text": "ingrid.mbeki54@example.com"
+      "text": "tomasz.castellanos27@example.org"
     },
     {
-      "start": 1756,
-      "end": 1768,
+      "start": 165,
+      "end": 171,
+      "type": "ACCOUNT_ID",
+      "text": "528873"
+    },
+    {
+      "start": 188,
+      "end": 206,
+      "type": "NAME",
+      "text": "Carlos Castellanos"
+    },
+    {
+      "start": 283,
+      "end": 299,
+      "type": "DOB",
+      "text": "January 27, 2011"
+    },
+    {
+      "start": 374,
+      "end": 386,
+      "type": "MEMBER_ID",
+      "text": "ZQ1516069-01"
+    },
+    {
+      "start": 424,
+      "end": 442,
+      "type": "NAME",
+      "text": "Tomasz Castellanos"
+    },
+    {
+      "start": 443,
+      "end": 455,
       "type": "PHONE",
-      "text": "479-555-0188"
+      "text": "360-555-0189"
+    },
+    {
+      "start": 520,
+      "end": 526,
+      "type": "NAME",
+      "text": "Tomasz"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 27,
-      "end": 38,
-      "type": "ADDRESS",
-      "text": "PO Box 7720"
+      "start": 64,
+      "end": 94,
+      "type": "EMAIL",
+      "text": "billing@lakesideclinic.example"
     },
     {
-      "start": 40,
-      "end": 58,
-      "type": "ADDRESS",
-      "text": "Columbus, OH 43215"
-    },
-    {
-      "start": 1623,
-      "end": 1637,
-      "type": "PHONE",
-      "text": "1-800-555-0129"
+      "start": 477,
+      "end": 507,
+      "type": "EMAIL",
+      "text": "billing@lakesideclinic.example"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-02-02",
+      "service_date": "2025-04-03",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "86.56",
+      "allowed_amount": "63.03",
+      "insurer_paid": "63.03",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-03",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "289.73",
+      "allowed_amount": null,
+      "insurer_paid": "124.90",
+      "patient_responsibility": "53.53"
+    },
+    {
+      "service_date": "2025-04-03",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "172.30",
+      "allowed_amount": "54.79",
+      "insurer_paid": "54.79",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-03",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "75.54",
+      "allowed_amount": "50.62",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "50.62"
+    },
+    {
+      "service_date": "2025-04-03",
+      "code": "85025",
+      "description": "Complete blood count with automated differential",
+      "billed_amount": "45.93",
+      "allowed_amount": "19.18",
+      "insurer_paid": "19.18",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-03",
       "code": "93000",
-      "description": "electrocardiogram, routine, with intcrpretation and report",
-      "billed_amount": "215.58",
-      "allowed_amount": "145.02",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "145.02"
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "132.76",
+      "allowed_amount": "89.19",
+      "insurer_paid": "80.27",
+      "patient_responsibility": "8.92"
     },
     {
-      "service_date": "2025-02-02",
+      "service_date": "2025-04-03",
       "code": "90686",
-      "description": "influenza vaccine, quadrivalent, preservative free",
-      "billed_amount": "64.72",
-      "allowed_amount": "47.78",
-      "insurer_paid": "47.78",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-02-02",
-      "code": "90686",
-      "description": "influenza vaccine, quadrivalent, preservative free",
-      "billed_amount": "64.72",
-      "allowed_amount": "47.78",
-      "insurer_paid": "47.78",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-02-04",
-      "code": "99285",
-      "description": "emergency department visit, high severity",
-      "billed_amount": "3015.56",
-      "allowed_amount": "1966.53",
-      "insurer_paid": "1966.53",
-      "patient_responsibility": "0.00"
-    },
-    {
-      "service_date": "2025-02-04",
-      "code": "80053",
-      "description": "comprehensive melabolic panel",
-      "billed_amount": "199.28",
-      "allowed_amount": "126.94",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "49.48",
+      "allowed_amount": null,
       "insurer_paid": "0.00",
-      "patient_responsibility": "126.94"
-    },
-    {
-      "service_date": "2025-02-04",
-      "code": "99203",
-      "description": "new patient office visit",
-      "billed_amount": "269.84",
-      "allowed_amount": "86.73",
-      "insurer_paid": "69.38",
-      "patient_responsibility": "17.35"
+      "patient_responsibility": "18.22"
     }
   ],
-  "duplicate_pairs": [
-    [
-      1,
-      2
-    ]
-  ]
+  "duplicate_pairs": []
 }

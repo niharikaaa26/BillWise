@@ -1,19 +1,26 @@
-Ashgrove Financial Partners
-PO Box 415, Nashville, TN 37202
-June 9, 2025
+From: Maria Delacroix <maria.delacroix82@example.com>
+To: billing@lakesideclinic.example
+Date: Tue, 16 Sep 2025 09:13
+Subject: Question about my bill, account 096505
 
-RE: Account 6815-68 (original creditor: Riverside Urgent Care)
+Hello,
 
-This letter concerns charges for services provided to Brianna Mbeki (born 09/02/1970) at 744 Maple St Unit 18C, Millbrook, NY 12551.
-Our records list the patient's insurance as Summit Mutual Health under policy ZQ6531681-01.
+My daughter Xiomara Delacroix was seen at your clinic and I got a bill I don't understand. She was born on October 5, 2018, in case you need it to look up the visit.
+Our insurance member number is MBR2547653. Why is the amount so high?
 
-On 01/30/2025 the patient received influenza vaccine, quadrivalent, preservatlve free (CPT 90686), billed at $31.32. The insurer paid $15.84 toward an allowed amount of $19.80, leaving $3.96 unpaid.
-On 01/30/2025 the patient received emergency department visit, high severity (CPT 99285), billed at $2,350.29. The insurer paid $915.80 toward an allowed amount of $915.80, leaving $0.00 unpaid.
-On 01/30/2025 the patient received emergency department visit, high severity (CPT 99285), billed at $2,350.29. The insurer paid $915.80 toward an allowed amount of $915.80, leaving $0.00 unpaid.
-On 01/30/2025 the patient received ondansetron hydrochloride injection, per 1 mg (CPT J2405), billed at $58.67. The insurer paid $18.27 toward an allowed amount of $22.84, leaving $4.57 unpaid.
-On 01/30/2025 the patient received chest x-ray, 2 views (CPT 71046), billed at $201.49. The insurer paid $139.66 toward an allowed amount of $155.18, leaving $15.52 unpaid.
-On 01/30/2025 the patient received ct head or brain without contrast (CPT 70450), billed at $1,429.40. The insurer paid $378.25 toward an allowed amount of $540.36, leaving $162.11 unpaid.
+Thanks,
+Maria Delacroix
+917-555-0147
 
-The balance now due is $186.16.
-To discuss this account, Brianna may call us at 1-800-555-0124 or reply to the address above. 
-This communication is from a debt collector.
+On Wed, 17 Sep 2025 billing@lakesideclinic.example wrote:
+> Hi Maria, here is the breakdown for the visit:
+>
+> | Date | Code | Service | Charged | Insurance Allowed | Insurance Paid | Your Balance |
+> |------|------|---------|--------:|------------------:|---------------:|-------------:|
+> | 07/22/2025 | 97110 | Therapeutic exercises, each 15 minutes | $84.02 | $54.70 | $54.70 | $0.00 |
+> | 07/22/2025 | J1885 | Ketorolac tromethamine injection, per 15 mg | $61.40 | $24.27 | $24.27 | $0.00 |
+> | 07/22/2025 | 80053 | Comprehensive metabolic panel | $252.93 | $147.14 | $147.14 | $0.00 |
+> | 07/22/2025 | 71046 | Chest x-ray, 2 views | $402.80 | $212.43 | $148.70 | $63.73 |
+>
+> Your total balance is $63.73. Let us know if you'd like a payment plan.
+> Lakeside Family Clinic Billing Office

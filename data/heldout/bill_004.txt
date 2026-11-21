@@ -1,17 +1,25 @@
-Meridian Recovery Services
-PO Box 7720, Columbus, OH 43215
-July 14, 2025
+From: Dmitri Williams <dmitri.williams81@example.org>
+To: billing@harborimaging.example
+Date: Sat, 14 Jun 2025 09:43
+Subject: Question about my bill, account 727147
 
-RE: Account 3997-51 (original creditor: Lakeside Family Clinic)
+Hello,
 
-This letter concerns charges for services provided to Xiomara Fitzgerald (born 10/26/1958) at 1846 Highland Blvd #25, Port Jervis, NY 12791.
-Our records list the patient's insurance as Summit Mutual Health under policy W656532614.
+My daughter Yuki Williams was seen at your clinic and I got a bill I don't understand. She was born on October 24, 2015, in case you need it to look up the visit.
+Our insurance member number is XGH26562572. Why is the amount so high?
 
-On March 22, 2025 the patient received influenza vaccine, quadrivalent, preservative free (CPT 90686), billed at $74,46. The insurer paid $0.00 toward an allowed amount of $44.25, leaving $44.25 unpaid.
-On 03/22/2025 the patient received emergency department visit, high severity (CPT 99285), billed at $1,708.63. The insurer paid $0.00 toward an allowed amount of $1,035.03, leaving $1,035.03 unpaid.
-On 03/24/2025 the patient received emergency department visit, moderate severity (CPT 99283), billed at S826.12. The insurer paid $0.00, leaving $336.54 unpaid.
-On 03/26/2025 the patient received new patient office visit (CPT 99203), billed at $289,12. The insurer paid $105.86 toward an allowed amount of $132.32, leaving $26.46 unpaid.
+Thanks,
+Dmitri Williams
+(917) 555-0155
 
-The balance now due is $1,442.28.
-To discuss this account, Xiomara may call us at 1-800-555-0142 or reply to the address above. We also have the email address xiomara.fitzgerald72@example.net on file and the phone number 319.555.0171.
-This communication is from a debt collector.
+On Sun, 15 Jun 2025 billing@harborimaging.example wrote:
+> Hi Dmitri, here is the breakdown for the visit:
+>
+> | Date | Code | Service | Charged | Insurance Allowed | Insurance Paid | Your Balance |
+> |------|------|---------|--------:|------------------:|---------------:|-------------:|
+> | 05/03/2025 | 99213 | Office visit, established patient, low complexity | $151.97 | $57.92 | $57.92 | $0.00 |
+> | 05/03/2025 | 90686 | Influenza vaccine, quadrivalent, preservative free | $63.81 | $30.31 | $21.22 | $9.09 |
+> | 05/06/2025 | 99283 | Emergency department visit, moderate severity | $1,192.55 | $623.12 | $560.81 | $62.31 |
+>
+> Your total balance is $71.40. Let us know if you'd like a payment plan.
+> Harbor Imaging Associates Billing Office

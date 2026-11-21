@@ -1,15 +1,24 @@
-Meridian Recovery Services
-PO Box 7720, Columbus, OH 43215
-August 29, 2025
+From: Elijah Sullivan <elijah.sullivan65@example.com>
+To: billing@northgatepeds.example
+Date: Fri, 01 Aug 2025 09:20
+Subject: Question about my bill, account 009458
 
-RE: Account 4905-71 (original creditor: Harbor Imaging Associates)
+Hello,
 
-This letter concerns charges for services provided to Robert Petrov (born 09/22/2015) at 4249 Lakeview Way, Millbrook, NY 12547.
-Our records list the patient's insurance as Clearpath Health Insurance under policy XGH36136396.
+My son Yuki Sullivan was seen at your clinic and I got a bill I don't understand. He was born on January 29, 2010, in case you need it to look up the visit.
+Our insurance member number is CPH-5732-7156. Why is the amount so high?
 
-On April 13, 2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at $280.06. The insurer paid $153.57 toward an allowed amount of $153.57, leaving $0.00 unpaid.
-On 04/13/2025 the patient received rapid strep test (CPT 87880), billed at $62.71. The insurer paid $24.68 toward an allowed amount of $27.42, leaving $2.74 unpaid.
+Thanks,
+Elijah Sullivan
+864-555-0159
 
-The balance now due is $2.74.
-To discuss this account, Robert may call us at 1-800-555-0191 or reply to the address above. We also have the email address robert.petrov55@example.org on file and the phone number 303-555-0134.
-This communication is from a debt collector.
+On Sat, 02 Aug 2025 billing@northgatepeds.example wrote:
+> Hi Elijah, here is the breakdown for the visit:
+>
+> | Date | Code | Service | Charged | Insurance Allowed | Insurance Paid | Your Balance |
+> |------|------|---------|--------:|------------------:|---------------:|-------------:|
+> | 06/19/2025 | 97110 | Therapeutic exercises, each 15 minutes | $130.62 | $82.22 | $57.55 | $24.67 |
+> | 06/20/2025 | 90471 | Immunization administration, single vaccine | $42.25 | $12.77 | $12.77 | $0.00 |
+>
+> Your total balance is $24.67. Let us know if you'd like a payment plan.
+> Northgate Pediatrics Billing Office

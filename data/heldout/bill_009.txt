@@ -1,18 +1,27 @@
-Meridian Recovery Services
-PO Box 7720, Columbus, OH 43215
-June 19, 2025
+From: Elijah Okafor <elijah.okafor31@example.com>
+To: billing@northgatepeds.example
+Date: Sun, 22 Jun 2025 09:13
+Subject: Question about my bill, account 945213
 
-RE: Account 4740-35 (original creditor: Northgate Pediatrics)
+Hello,
 
-This letter concerns charges for services provided to Jane Rossi (born 03/18/2006) at 4411 Lakeview Blvd, Riverton, OH 45064.
-Our records list the patient's insurance as Summit Mutual Health under policy W381676284.
+My son Lorena Okafor was seen at your clinic and I got a bill I don't understand. He was born on June 21, 2012, in case you need it to look up the visit.
+Our insurance member number is CPH-1010-0066. Why is the amount so high?
 
-On February 9, 2025 the patient received new patient office visit (CPT 99203), billed at $198.82. The insurer paid $114.13 toward an allowed amount of $142.66, leaving $28.53 unpaid.
-On 02/11/2025 the patient received emergency department visit, high severity (CPT 99285), billed at $2,487.85. The insurer paid $1,513.73 toward an allowed amount of $1,681.92, leaving $168.19 unpaid.
-On February 11, 2025 the patient received comprehensive metabolic panel (CPT 80053), billed at $309.85. The insurer paid $0.00 toward an allowed amount of $233.25, leaving $233.25 unpaid.
-On February 11, 2025 the patient received comprehensive metabolic panel (CPT 80053), billed at $309.85. The insurer paid $0.00, leaving $233.25 unpaid.
-On 02/11/2025 the patient received ct abdomen and pelvis with contrast (CPT 74177), billed at $4,733.53. The insurer paid $1,018.82 toward an allowed amount of $1,455.45, leaving $436.63 unpaid.
+Thanks,
+Elijah Okafor
+212-555-0190
 
-The balance now due is $1,099.85.
-To discuss this account, Jane may call us at 1-800-555-0117 or reply to the address above. 
-This communication is from a debt collector.
+On Mon, 23 Jun 2025 billing@northgatepeds.example wrote:
+> Hi Elijah, here is the breakdown for the visit:
+>
+> | Date | Code | Service | Charged | Insurance Allowed | Insurance Paid | Your Balance |
+> |------|------|---------|--------:|------------------:|---------------:|-------------:|
+> | 05/28/2025 | 71046 | Chest x-ray, 2 views | $457.89 | $203.34 | $162.67 | $40.67 |
+> | 05/28/2025 | 70450 | CT head or brain without contrast | S1,100.59 | n/a | $280.67 | $70.17 |
+> | 05/28/2025 | 99285 | Emergency department visit, high severity | $2,183.22 | $969.78 | $872.80 | $96.98 |
+> | 05/28/2025 | 36415 | Routine venipuncture | $51.00 | $31.33 | $28.20 | $3.13 |
+> | 05/28/2025 | 80053 | Comprehensive metabolic panel | $130.91 | n/a | $91.95 | $0.00 |
+>
+> Your total balance is $210.95. Let us know if you'd like a payment plan.
+> Northgate Pediatrics Billing Office

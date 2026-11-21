@@ -1,17 +1,24 @@
-Ashgrove Financial Partners
-PO Box 415, Nashville, TN 37202
-June 17, 2025
+From: Patrice Sullivan <patrice.sullivan13@mail.example.com>
+To: billing@northgatepeds.example
+Date: Sun, 27 Apr 2025 09:23
+Subject: Question about my bill, account 725121
 
-RE: Account 1386-30 (original creditor: Riverside Urgent Care)
+Hello,
 
-This letter concerns charges for services provided to Sarah Yamamoto (born 07/31/1969) at 893 Briar Drive Unit 16C, Cedar Falls, IA 50634.
-Our records list the patient's insurance as Blueriver Health Plans under policy W671848570.
+My daughter Fatima Sullivan was seen at your clinic and I got a bill I don't understand. She was born on November 2, 2010, in case you need it to look up the visit.
+Our insurance member number is XGH64504303. Why is the amount so high?
 
-On 01/02/2025 the patient received therapeutic exercises, each 15 minutes (CPT 97110), billed at $92,29. The insurer paid $0.00 toward an allowed amount of $46.45, leaving $46.45 unpaid.
-On January 2, 2025 the patient received electrocardiogram, routine, with interpretation and report (CPT 93000), billed at $123.50. The insurer paid $75.03 toward an allowed amount of $93.79, leaving $18.76 unpaid.
-On 01/05/2025 the patient received routine venipuncture (CPT 36415), billed at $33.06. The insurer paid $19.22 toward an allowed amount of $21.36, leaving $2.14 unpaid.
-On 01/05/2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at $237.98. The insurer paid $103.18 toward an allowed amount of $147.40, leaving $44.22 unpaid.
+Thanks,
+Patrice Sullivan
+479.555.0163
 
-The balance now due is $111.57.
-To discuss this account, Sarah may call us at 1-800-555-0179 or reply to the address above. 
-This communication is from a debt collector.
+On Mon, 28 Apr 2025 billing@northgatepeds.example wrote:
+> Hi Patrice, here is the breakdown for the visit:
+>
+> | Date | Code | Service | Charged | Insurance Allowed | Insurance Paid | Your Balance |
+> |------|------|---------|--------:|------------------:|---------------:|-------------:|
+> | 03/29/2025 | 99285 | Emergency department visit, high severity | $3,083.74 | $2,177.44 | $0.00 | $2,177.44 |
+> | 03/29/2025 | J2405 | Ondansetron hydrochloride injection, per 1 mg | $71.88 | $42.90 | $30.03 | $12.87 |
+>
+> Your total balance is $2,190.31. Let us know if you'd like a payment plan.
+> Northgate Pediatrics Billing Office

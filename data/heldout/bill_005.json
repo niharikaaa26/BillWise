@@ -1,105 +1,99 @@
 {
   "id": "bill_005",
-  "layout": "collections_letter_heldout",
+  "layout": "email_thread_heldout",
   "messy": [
-    "narrative_items",
-    "ocr_amount",
+    "email_headers",
+    "markdown_table",
     "prose_pii"
   ],
   "pii": [
     {
-      "start": 87,
-      "end": 94,
+      "start": 6,
+      "end": 22,
+      "type": "NAME",
+      "text": "Patrice Sullivan"
+    },
+    {
+      "start": 24,
+      "end": 59,
+      "type": "EMAIL",
+      "text": "patrice.sullivan13@mail.example.com"
+    },
+    {
+      "start": 165,
+      "end": 171,
       "type": "ACCOUNT_ID",
-      "text": "1386-30"
+      "text": "725121"
     },
     {
       "start": 193,
-      "end": 207,
+      "end": 208,
       "type": "NAME",
-      "text": "Sarah Yamamoto"
+      "text": "Fatima Sullivan"
     },
     {
-      "start": 214,
-      "end": 224,
+      "start": 286,
+      "end": 302,
       "type": "DOB",
-      "text": "07/31/1969"
+      "text": "November 2, 2010"
     },
     {
-      "start": 229,
-      "end": 276,
-      "type": "ADDRESS",
-      "text": "893 Briar Drive Unit 16C, Cedar Falls, IA 50634"
-    },
-    {
-      "start": 358,
-      "end": 368,
+      "start": 377,
+      "end": 388,
       "type": "MEMBER_ID",
-      "text": "W671848570"
+      "text": "XGH64504303"
     },
     {
-      "start": 1206,
-      "end": 1211,
+      "start": 426,
+      "end": 442,
       "type": "NAME",
-      "text": "Sarah"
+      "text": "Patrice Sullivan"
+    },
+    {
+      "start": 443,
+      "end": 455,
+      "type": "PHONE",
+      "text": "479.555.0163"
+    },
+    {
+      "start": 519,
+      "end": 526,
+      "type": "NAME",
+      "text": "Patrice"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 28,
-      "end": 38,
-      "type": "ADDRESS",
-      "text": "PO Box 415"
+      "start": 65,
+      "end": 94,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
     },
     {
-      "start": 40,
-      "end": 59,
-      "type": "ADDRESS",
-      "text": "Nashville, TN 37202"
-    },
-    {
-      "start": 1227,
-      "end": 1241,
-      "type": "PHONE",
-      "text": "1-800-555-0179"
+      "start": 477,
+      "end": 506,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-01-02",
-      "code": "97110",
-      "description": "therapeutic exercises, each 15 minutes",
-      "billed_amount": "92.29",
-      "allowed_amount": "46.45",
+      "service_date": "2025-03-29",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "3083.74",
+      "allowed_amount": "2177.44",
       "insurer_paid": "0.00",
-      "patient_responsibility": "46.45"
+      "patient_responsibility": "2177.44"
     },
     {
-      "service_date": "2025-01-02",
-      "code": "93000",
-      "description": "electrocardiogram, routine, with interpretation and report",
-      "billed_amount": "123.50",
-      "allowed_amount": "93.79",
-      "insurer_paid": "75.03",
-      "patient_responsibility": "18.76"
-    },
-    {
-      "service_date": "2025-01-05",
-      "code": "36415",
-      "description": "routine venipuncture",
-      "billed_amount": "33.06",
-      "allowed_amount": "21.36",
-      "insurer_paid": "19.22",
-      "patient_responsibility": "2.14"
-    },
-    {
-      "service_date": "2025-01-05",
-      "code": "99214",
-      "description": "office visit, established patient, moderate complexity",
-      "billed_amount": "237.98",
-      "allowed_amount": "147.40",
-      "insurer_paid": "103.18",
-      "patient_responsibility": "44.22"
+      "service_date": "2025-03-29",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "71.88",
+      "allowed_amount": "42.90",
+      "insurer_paid": "30.03",
+      "patient_responsibility": "12.87"
     }
   ],
   "duplicate_pairs": []

@@ -19,7 +19,8 @@ Usage:
     python -m data_gen.generate --out data/dev4 --n 12 --seed 9001 --ocr-p 0.2 --set dev4
     python -m data_gen.generate --out data/dev5 --n 12 --seed 31337 --ocr-p 0.2 --set dev5
     python -m data_gen.generate --out data/dev6 --n 12 --seed 5150 --ocr-p 0.2 --set dev6
-    python -m data_gen.generate --out data/heldout --n 12 --seed 6006 --ocr-p 0.2 --set heldout
+    python -m data_gen.generate --out data/dev7 --n 12 --seed 6006 --ocr-p 0.2 --set dev7
+    python -m data_gen.generate --out data/heldout --n 12 --seed 7117 --ocr-p 0.2 --set heldout
 """
 from __future__ import annotations
 
@@ -1014,6 +1015,68 @@ def layout_collections_letter(rng: random.Random, ocr_p: float) -> tuple[Doc, li
     return doc, items, flags
 
 
+# --------------------------------------------------------------------------
+# Layout K (HELD OUT, round 7): email thread between a parent and a billing
+# office. Written BEFORE the round-7 changes and not used to tune them. Email
+# headers, a dependent's name and birth date in casual prose, a signature
+# block, and the office's reply quoted with a markdown table.
+# --------------------------------------------------------------------------
+def layout_email_thread(rng: random.Random, ocr_p: float) -> tuple[Doc, list[dict], set[str]]:
+    flags: set[str] = {"email_headers", "prose_pii", "markdown_table"}
+    doc = Doc()
+    parent = make_person(rng)
+    child = make_person(rng, last=parent["last"])
+    child["dob"] = date(2008, 1, 1) + timedelta(days=rng.randint(0, 5000))
+    clinic, caddr, ccity, cdomain = rng.choice(CLINICS)
+    acct = digits(rng, 6)
+    sent = date(2025, 4, 1) + timedelta(days=rng.randint(0, 180))
+    doc.add("From: ").pii_(f"{parent['first']} {parent['last']}", "NAME").add(" <").pii_(parent["email"], "EMAIL").nl(">")
+    doc.add("To: ").org(f"billing@{cdomain}", "EMAIL").nl()
+    doc.nl(f"Date: {sent:%a, %d %b %Y} 09:{rng.randint(10, 59)}")
+    doc.add("Subject: Question about my bill, account ").pii_(acct, "ACCOUNT_ID").nl()
+    doc.nl()
+    doc.nl("Hello,")
+    doc.nl()
+    rel = rng.choice(["daughter", "son"])
+    pron = "she" if rel == "daughter" else "he"
+    doc.add(f"My {rel} ").pii_(f"{child['first']} {child['last']}", "NAME")
+    doc.add(f" was seen at your clinic and I got a bill I don't understand. {pron.capitalize()} was born on ")
+    d = child["dob"]
+    doc.pii_(f"{d:%B} {d.day}, {d.year}", "DOB").nl(", in case you need it to look up the visit.")
+    doc.add("Our insurance member number is ").pii_(member_id(rng), "MEMBER_ID")
+    doc.nl(". Why is the amount so high?")
+    doc.nl()
+    doc.nl("Thanks,")
+    doc.pii_(f"{parent['first']} {parent['last']}", "NAME").nl()
+    doc.pii_(parent["phone"], "PHONE").nl()
+    doc.nl()
+    doc.add("On ").add(f"{sent + timedelta(days=1):%a, %d %b %Y}").add(" ").org(f"billing@{cdomain}", "EMAIL").nl(" wrote:")
+    doc.add("> Hi ").pii_(parent["first"], "NAME").nl(", here is the breakdown for the visit:")
+    doc.nl(">")
+    items = make_items(rng, sent - timedelta(days=rng.randint(20, 60)), flags)
+    doc.nl("> | Date | Code | Service | Charged | Insurance Allowed | Insurance Paid | Your Balance |")
+    doc.nl("> |------|------|---------|--------:|------------------:|---------------:|-------------:|")
+    for it in items:
+        desc = it["description"]
+        if rng.random() < ocr_p * 0.5:
+            flags.add("ocr_description")
+            desc = ocr_text(desc, rng)
+        it["description"] = desc
+        allowed = fmt_amt(it["allowed_amount"], True)
+        if rng.random() < 0.15:
+            flags.add("missing_field")
+            it["allowed_amount"] = None
+            allowed = "n/a"
+        doc.nl(f"> | {it['service_date']:%m/%d/%Y} | {it['code']} | {desc} | "
+               f"{maybe_ocr_amt(fmt_amt(it['billed_amount'], True), rng, flags, ocr_p)} | {allowed} | "
+               f"{fmt_amt(it['insurer_paid'], True)} | {fmt_amt(it['patient_responsibility'], True)} |")
+    doc.nl(">")
+    doc.nl(f"> Your total balance is {fmt_amt(sum(i['patient_responsibility'] for i in items), True)}. "
+           "Let us know if you'd like a payment plan.")
+    doc.nl(f"> {clinic} Billing Office")
+    return doc, items, flags
+
+
 LAYOUT_SETS = {
     "dev": LAYOUTS,
     # round-1 held-out layout; used to tune round-2 fixes, now development data
@@ -1026,8 +1089,10 @@ LAYOUT_SETS = {
     "dev5": {"collapsed_scan": layout_collapsed_scan},
     # round-5 held-out layout; used to tune round-6 changes, now development data
     "dev6": {"kv_export": layout_kv_export},
-    # round-6 held-out layout: never used for tuning
-    "heldout": {"collections_letter_heldout": layout_collections_letter},
+    # round-6 held-out layout; used to tune round-7 changes, now development data
+    "dev7": {"collections_letter": layout_collections_letter},
+    # round-7 held-out layout: never used for tuning
+    "heldout": {"email_thread_heldout": layout_email_thread},
 }
 
 
@@ -1080,7 +1145,7 @@ def main() -> None:
     ap.add_argument("--ocr-p", type=float, default=0.12, help="probability of each OCR corruption site")
     ap.add_argument("--set", dest="layout_set", choices=sorted(LAYOUT_SETS), default="dev",
                     help="dev: 4 development layouts; dev2: round-1 held-out layout (now dev data); "
-                         "dev2-dev6: earlier held-out layouts (now dev data); heldout: layout never used for tuning")
+                         "dev2-dev7: earlier held-out layouts (now dev data); heldout: layout never used for tuning")
     args = ap.parse_args()
     files = generate(args.out, args.n, args.seed, args.ocr_p, args.layout_set)
     print(f"wrote {len(files)} synthetic bills + ground truth to {args.out}")

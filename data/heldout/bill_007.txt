@@ -1,19 +1,29 @@
-Meridian Recovery Services
-PO Box 7720, Columbus, OH 43215
-July 22, 2025
+From: Tomasz Castellanos <tomasz.castellanos27@example.org>
+To: billing@lakesideclinic.example
+Date: Fri, 02 May 2025 09:22
+Subject: Question about my bill, account 528873
 
-RE: Account 0638-68 (original creditor: Harbor Imaging Associates)
+Hello,
 
-This letter concerns charges for services provided to Ingrid Mbeki (born 09/25/1948) at 8224 Willow Ave, Springdale, AR 72754.
-Our records list the patient's insurance as Blueriver Health Plans under policy MBR6252082.
+My son Carlos Castellanos was seen at your clinic and I got a bill I don't understand. He was born on January 27, 2011, in case you need it to look up the visit.
+Our insurance member number is ZQ1516069-01. Why is the amount so high?
 
-On February 2, 2025 the patient received electrocardiogram, routine, with intcrpretation and report (CPT 93000), billed at $215.58. The insurer paid $0.00 toward an allowed amount of $145.02, leaving $145.02 unpaid.
-On 02/02/2025 the patient received influenza vaccine, quadrivalent, preservative free (CPT 90686), billed at $64.72. The insurer paid $47.78 toward an allowed amount of $47.78, leaving $0.00 unpaid.
-On February 2, 2025 the patient received influenza vaccine, quadrivalent, preservative free (CPT 90686), billed at $64.72. The insurer paid $47.78 toward an allowed amount of $47.78, leaving $0.00 unpaid.
-On February 4, 2025 the patient received emergency department visit, high severity (CPT 99285), billed at $3,015.56. The insurer paid $1,966.53 toward an allowed amount of $1,966.53, leaving $0.00 unpaid.
-On 02/04/2025 the patient received comprehensive melabolic panel (CPT 80053), billed at S199.28. The insurer paid $0.00 toward an allowed amount of $126.94, leaving $126.94 unpaid.
-On 02/04/2025 the patient received new patient office visit (CPT 99203), billed at $269.84. The insurer paid $69.38 toward an allowed amount of $86.73, leaving $17.35 unpaid.
+Thanks,
+Tomasz Castellanos
+360-555-0189
 
-The balance now due is $289.31.
-To discuss this account, Ingrid may call us at 1-800-555-0129 or reply to the address above. We also have the email address ingrid.mbeki54@example.com on file and the phone number 479-555-0188.
-This communication is from a debt collector.
+On Sat, 03 May 2025 billing@lakesideclinic.example wrote:
+> Hi Tomasz, here is the breakdown for the visit:
+>
+> | Date | Code | Service | Charged | Insurance Allowed | Insurance Paid | Your Balance |
+> |------|------|---------|--------:|------------------:|---------------:|-------------:|
+> | 04/03/2025 | 81001 | Urinalysis, automated, with microscopy | $86.56 | $63.03 | $63.03 | $0.00 |
+> | 04/03/2025 | 99214 | Office visit, established patient, moderate complexity | $289,73 | n/a | $124.90 | $53.53 |
+> | 04/03/2025 | 97110 | Therapeutic exercises, each 15 minutes | $172.30 | $54.79 | $54.79 | $0.00 |
+> | 04/03/2025 | 81001 | Urinalysis, automated, with microscopy | $75.54 | $50.62 | $0.00 | $50.62 |
+> | 04/03/2025 | 85025 | Complete blood count with automated differential | $45,93 | $19.18 | $19.18 | $0.00 |
+> | 04/03/2025 | 93000 | Electrocardiogram, routine, with interpretation and report | $132.76 | $89.19 | $80.27 | $8.92 |
+> | 04/03/2025 | 90686 | Influenza vaccine, quadrivalent, preservative free | $49.48 | n/a | $0.00 | $18.22 |
+>
+> Your total balance is $131.29. Let us know if you'd like a payment plan.
+> Lakeside Family Clinic Billing Office

@@ -1,18 +1,24 @@
-Ashgrove Financial Partners
-PO Box 415, Nashville, TN 37202
-July 26, 2025
+From: Sarah Johnson <sarah.johnson4@example.com>
+To: billing@northgatepeds.example
+Date: Sat, 21 Jun 2025 09:48
+Subject: Question about my bill, account 576778
 
-RE: Account 2289-47 (original creditor: Mercy Valley Regional Hospital)
+Hello,
 
-This letter concerns charges for services provided to Jane Nguyen (born 04/21/2019) at 1773 Maple Way Apt 25B, Millbrook, NY 12587.
-Our records list the patient's insurance as Blueriver Health Plans under policy MBR9777211.
+My daughter Linda Johnson was seen at your clinic and I got a bill I don't understand. She was born on April 16, 2020, in case you need it to look up the visit.
+Our insurance member number is ZQ6249554-01. Why is the amount so high?
 
-On April 12, 2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at $297.42. The insurer paid $0.00 toward an allowed amount of $211.60, leaving $211.60 unpaid.
-On 04/12/2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at $297.42. The insurer paid $0.00 toward an allowed amount of $211.60, leaving $211.60 unpaid.
-On April 12, 2025 the patient received new patient office visit (CPT 99203), billed at $258.98. The insurer paid $146.28 toward an allowed amount of $162.53, leaving $16.25 unpaid.
-On April 12, 2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at S257.87. The insurer paid $138.52 toward an allowed amount of $197.88, leaving $59.36 unpaid.
-On 04/14/2025 the patient received office visit, established patient, moderate complexity (CPT 99214), billed at $336.14. The insurer paid $76.48 toward an allowed amount of $109.26, leaving $32.78 unpaid.
+Thanks,
+Sarah Johnson
+(615) 555-0194
 
-The balance now due is $531.59.
-To discuss this account, Jane may call us at 1-800-555-0181 or reply to the address above. We also have the email address jane.nguyen65@mail.example.com on file and the phone number 917.555.0188.
-This communication is from a debt collector.
+On Sun, 22 Jun 2025 billing@northgatepeds.example wrote:
+> Hi Sarah, here is the breakdown for the visit:
+>
+> | Date | Code | Service | Charged | Insurance Allowed | Insurance Paid | Your Balance |
+> |------|------|---------|--------:|------------------:|---------------:|-------------:|
+> | 05/10/2025 | 97110 | Therapeutic exercises, each 15 minutes | $67.77 | $24.36 | $21.92 | $2.44 |
+> | 05/10/2025 | 87880 | Rapid strep tcst | $46.12 | $24.91 | $19.93 | $4.98 |
+>
+> Your total balance is $7.42. Let us know if you'd like a payment plan.
+> Northgate Pediatrics Billing Office

@@ -1,0 +1,135 @@
+{
+  "id": "bill_002",
+  "layout": "collections_letter",
+  "messy": [
+    "missing_field",
+    "narrative_items",
+    "ocr_amount",
+    "ocr_description",
+    "prose_pii"
+  ],
+  "pii": [
+    {
+      "start": 87,
+      "end": 94,
+      "type": "ACCOUNT_ID",
+      "text": "1600-06"
+    },
+    {
+      "start": 202,
+      "end": 212,
+      "type": "NAME",
+      "text": "Ingrid Kim"
+    },
+    {
+      "start": 219,
+      "end": 229,
+      "type": "DOB",
+      "text": "07/06/2012"
+    },
+    {
+      "start": 234,
+      "end": 269,
+      "type": "ADDRESS",
+      "text": "4150 Maple Dr, Springdale, AR 72782"
+    },
+    {
+      "start": 349,
+      "end": 359,
+      "type": "MEMBER_ID",
+      "text": "MBR5117541"
+    },
+    {
+      "start": 1740,
+      "end": 1746,
+      "type": "NAME",
+      "text": "Ingrid"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 28,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 415"
+    },
+    {
+      "start": 40,
+      "end": 59,
+      "type": "ADDRESS",
+      "text": "Nashville, TN 37202"
+    },
+    {
+      "start": 1762,
+      "end": 1776,
+      "type": "PHONE",
+      "text": "1-800-555-0119"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-03-06",
+      "code": "85025",
+      "description": "complete blood count with automated differential",
+      "billed_amount": "172.21",
+      "allowed_amount": "59.35",
+      "insurer_paid": "53.42",
+      "patient_responsibility": "5.93"
+    },
+    {
+      "service_date": "2025-03-07",
+      "code": "J1885",
+      "description": "ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "38.58",
+      "allowed_amount": null,
+      "insurer_paid": "18.89",
+      "patient_responsibility": "8.09"
+    },
+    {
+      "service_date": "2025-03-07",
+      "code": "85025",
+      "description": "complete blood count with automated dlfferential",
+      "billed_amount": "123.69",
+      "allowed_amount": "38.37",
+      "insurer_paid": "34.53",
+      "patient_responsibility": "3.84"
+    },
+    {
+      "service_date": "2025-03-07",
+      "code": "J1885",
+      "description": "ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "65.29",
+      "allowed_amount": null,
+      "insurer_paid": "22.30",
+      "patient_responsibility": "5.57"
+    },
+    {
+      "service_date": "2025-03-07",
+      "code": "90686",
+      "description": "influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "35.70",
+      "allowed_amount": "12.58",
+      "insurer_paid": "11.32",
+      "patient_responsibility": "1.26"
+    },
+    {
+      "service_date": "2025-03-07",
+      "code": "85025",
+      "description": "complete blood count with automated differential",
+      "billed_amount": "146.44",
+      "allowed_amount": "104.52",
+      "insurer_paid": "104.52",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-03-10",
+      "code": "99285",
+      "description": "emergency department visit, high severity",
+      "billed_amount": "2478.63",
+      "allowed_amount": "1864.52",
+      "insurer_paid": "1678.07",
+      "patient_responsibility": "186.45"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,0 +1,143 @@
+{
+  "id": "bill_007",
+  "layout": "collections_letter",
+  "messy": [
+    "duplicate_charge",
+    "narrative_items",
+    "ocr_amount",
+    "ocr_description",
+    "prose_pii"
+  ],
+  "pii": [
+    {
+      "start": 86,
+      "end": 93,
+      "type": "ACCOUNT_ID",
+      "text": "0638-68"
+    },
+    {
+      "start": 196,
+      "end": 208,
+      "type": "NAME",
+      "text": "Ingrid Mbeki"
+    },
+    {
+      "start": 215,
+      "end": 225,
+      "type": "DOB",
+      "text": "09/25/1948"
+    },
+    {
+      "start": 230,
+      "end": 267,
+      "type": "ADDRESS",
+      "text": "8224 Willow Ave, Springdale, AR 72754"
+    },
+    {
+      "start": 349,
+      "end": 359,
+      "type": "MEMBER_ID",
+      "text": "MBR6252082"
+    },
+    {
+      "start": 1601,
+      "end": 1607,
+      "type": "NAME",
+      "text": "Ingrid"
+    },
+    {
+      "start": 1700,
+      "end": 1726,
+      "type": "EMAIL",
+      "text": "ingrid.mbeki54@example.com"
+    },
+    {
+      "start": 1756,
+      "end": 1768,
+      "type": "PHONE",
+      "text": "479-555-0188"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 27,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 7720"
+    },
+    {
+      "start": 40,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Columbus, OH 43215"
+    },
+    {
+      "start": 1623,
+      "end": 1637,
+      "type": "PHONE",
+      "text": "1-800-555-0129"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-02-02",
+      "code": "93000",
+      "description": "electrocardiogram, routine, with intcrpretation and report",
+      "billed_amount": "215.58",
+      "allowed_amount": "145.02",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "145.02"
+    },
+    {
+      "service_date": "2025-02-02",
+      "code": "90686",
+      "description": "influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "64.72",
+      "allowed_amount": "47.78",
+      "insurer_paid": "47.78",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-02",
+      "code": "90686",
+      "description": "influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "64.72",
+      "allowed_amount": "47.78",
+      "insurer_paid": "47.78",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-04",
+      "code": "99285",
+      "description": "emergency department visit, high severity",
+      "billed_amount": "3015.56",
+      "allowed_amount": "1966.53",
+      "insurer_paid": "1966.53",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-04",
+      "code": "80053",
+      "description": "comprehensive melabolic panel",
+      "billed_amount": "199.28",
+      "allowed_amount": "126.94",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "126.94"
+    },
+    {
+      "service_date": "2025-02-04",
+      "code": "99203",
+      "description": "new patient office visit",
+      "billed_amount": "269.84",
+      "allowed_amount": "86.73",
+      "insurer_paid": "69.38",
+      "patient_responsibility": "17.35"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      1,
+      2
+    ]
+  ]
+}

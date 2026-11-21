@@ -15,6 +15,7 @@ DEV3 = ROOT / "data" / "dev3"
 DEV4 = ROOT / "data" / "dev4"
 DEV5 = ROOT / "data" / "dev5"
 DEV6 = ROOT / "data" / "dev6"
+DEV7 = ROOT / "data" / "dev7"
 HELDOUT = ROOT / "data" / "heldout"
 
 
@@ -25,7 +26,7 @@ def test_generator_is_deterministic_and_matches_committed_data(tmp_path):
 
 
 def test_ground_truth_offsets_are_exact():
-    files = sorted(MAIN.glob("bill_*.json")) + sorted(DEV2.glob("bill_*.json")) + sorted(DEV3.glob("bill_*.json")) + sorted(DEV4.glob("bill_*.json")) + sorted(DEV5.glob("bill_*.json")) + sorted(DEV6.glob("bill_*.json")) + sorted(HELDOUT.glob("bill_*.json"))
+    files = sorted(MAIN.glob("bill_*.json")) + sorted(DEV2.glob("bill_*.json")) + sorted(DEV3.glob("bill_*.json")) + sorted(DEV4.glob("bill_*.json")) + sorted(DEV5.glob("bill_*.json")) + sorted(DEV6.glob("bill_*.json")) + sorted(DEV7.glob("bill_*.json")) + sorted(HELDOUT.glob("bill_*.json"))
     assert len(files) >= 40
     for jf in files:
         truth = json.loads(jf.read_text(encoding="utf-8"))
@@ -70,8 +71,9 @@ def test_other_sets_regenerate_identically(tmp_path):
     generate(tmp_path / "dev4", 12, 9001, 0.2, "dev4")
     generate(tmp_path / "dev5", 12, 31337, 0.2, "dev5")
     generate(tmp_path / "dev6", 12, 5150, 0.2, "dev6")
-    generate(tmp_path / "heldout", 12, 6006, 0.2, "heldout")
-    for d in (DEV2, DEV3, DEV4, DEV5, DEV6, HELDOUT):
+    generate(tmp_path / "dev7", 12, 6006, 0.2, "dev7")
+    generate(tmp_path / "heldout", 12, 7117, 0.2, "heldout")
+    for d in (DEV2, DEV3, DEV4, DEV5, DEV6, DEV7, HELDOUT):
         for f in sorted(d.glob("bill_*")):
             assert (tmp_path / d.name / f.name).read_text(encoding="utf-8") == f.read_text(encoding="utf-8"), f
 

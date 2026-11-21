@@ -1,136 +1,126 @@
 {
   "id": "bill_001",
-  "layout": "collections_letter_heldout",
+  "layout": "email_thread_heldout",
   "messy": [
+    "duplicate_charge",
+    "email_headers",
+    "markdown_table",
     "missing_field",
-    "narrative_items",
+    "ocr_amount",
     "prose_pii"
   ],
   "pii": [
     {
-      "start": 89,
-      "end": 96,
-      "type": "ACCOUNT_ID",
-      "text": "4963-46"
-    },
-    {
-      "start": 194,
-      "end": 203,
+      "start": 6,
+      "end": 15,
       "type": "NAME",
-      "text": "Maria Doe"
+      "text": "James Doe"
     },
     {
-      "start": 210,
-      "end": 220,
+      "start": 17,
+      "end": 40,
+      "type": "EMAIL",
+      "text": "james.doe68@example.net"
+    },
+    {
+      "start": 146,
+      "end": 152,
+      "type": "ACCOUNT_ID",
+      "text": "466264"
+    },
+    {
+      "start": 169,
+      "end": 178,
+      "type": "NAME",
+      "text": "Linda Doe"
+    },
+    {
+      "start": 255,
+      "end": 268,
       "type": "DOB",
-      "text": "04/21/2005"
+      "text": "June 24, 2017"
     },
     {
-      "start": 225,
-      "end": 256,
-      "type": "ADDRESS",
-      "text": "4608 Elm St, Riverton, OH 45075"
-    },
-    {
-      "start": 342,
+      "start": 343,
       "end": 353,
       "type": "MEMBER_ID",
-      "text": "XGH81872620"
+      "text": "MBR4955581"
     },
     {
-      "start": 1487,
-      "end": 1492,
+      "start": 391,
+      "end": 400,
       "type": "NAME",
-      "text": "Maria"
+      "text": "James Doe"
     },
     {
-      "start": 1585,
-      "end": 1608,
-      "type": "EMAIL",
-      "text": "maria.doe18@example.org"
-    },
-    {
-      "start": 1638,
-      "end": 1652,
+      "start": 401,
+      "end": 413,
       "type": "PHONE",
-      "text": "(479) 555-0102"
+      "text": "513-555-0163"
+    },
+    {
+      "start": 477,
+      "end": 482,
+      "type": "NAME",
+      "text": "James"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 28,
-      "end": 38,
-      "type": "ADDRESS",
-      "text": "PO Box 415"
+      "start": 46,
+      "end": 75,
+      "type": "EMAIL",
+      "text": "billing@harborimaging.example"
     },
     {
-      "start": 40,
-      "end": 59,
-      "type": "ADDRESS",
-      "text": "Nashville, TN 37202"
-    },
-    {
-      "start": 1508,
-      "end": 1522,
-      "type": "PHONE",
-      "text": "1-800-555-0120"
+      "start": 435,
+      "end": 464,
+      "type": "EMAIL",
+      "text": "billing@harborimaging.example"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-05-03",
-      "code": "99213",
-      "description": "office visit, established patient, low complexity",
-      "billed_amount": "174.37",
-      "allowed_amount": "79.91",
-      "insurer_paid": "63.93",
-      "patient_responsibility": "15.98"
+      "service_date": "2025-06-28",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "49.67",
+      "allowed_amount": "36.74",
+      "insurer_paid": "29.39",
+      "patient_responsibility": "7.35"
     },
     {
-      "service_date": "2025-05-05",
-      "code": "74177",
-      "description": "ct abdomen and pelvis with contrast",
-      "billed_amount": "3868.04",
-      "allowed_amount": "1470.91",
-      "insurer_paid": "1176.73",
-      "patient_responsibility": "294.18"
+      "service_date": "2025-06-28",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "49.67",
+      "allowed_amount": "36.74",
+      "insurer_paid": "29.39",
+      "patient_responsibility": "7.35"
     },
     {
-      "service_date": "2025-05-05",
-      "code": "93000",
-      "description": "electrocardiogram, routine, with interpretation and report",
-      "billed_amount": "231.37",
-      "allowed_amount": "120.67",
-      "insurer_paid": "120.67",
-      "patient_responsibility": "0.00"
+      "service_date": "2025-06-28",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "47.85",
+      "allowed_amount": "20.42",
+      "insurer_paid": "18.38",
+      "patient_responsibility": "2.04"
     },
     {
-      "service_date": "2025-05-05",
+      "service_date": "2025-06-28",
       "code": "71046",
-      "description": "chest x-ray, 2 views",
-      "billed_amount": "465.16",
-      "allowed_amount": "369.45",
-      "insurer_paid": "332.51",
-      "patient_responsibility": "36.94"
-    },
-    {
-      "service_date": "2025-05-05",
-      "code": "99203",
-      "description": "new patient office visit",
-      "billed_amount": "256.61",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "377.07",
       "allowed_amount": null,
-      "insurer_paid": "63.11",
-      "patient_responsibility": "27.05"
-    },
-    {
-      "service_date": "2025-05-05",
-      "code": "81001",
-      "description": "urinalysis, automated, with microscopy",
-      "billed_amount": "21.77",
-      "allowed_amount": null,
-      "insurer_paid": "8.26",
-      "patient_responsibility": "2.06"
+      "insurer_paid": "222.59",
+      "patient_responsibility": "24.73"
     }
   ],
-  "duplicate_pairs": []
+  "duplicate_pairs": [
+    [
+      0,
+      1
+    ]
+  ]
 }

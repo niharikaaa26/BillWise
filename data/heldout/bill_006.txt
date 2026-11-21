@@ -1,20 +1,26 @@
-Ashgrove Financial Partners
-PO Box 415, Nashville, TN 37202
-July 16, 2025
+From: Robert Castellanos <robert.castellanos85@mail.example.com>
+To: billing@harborimaging.example
+Date: Mon, 21 Jul 2025 09:27
+Subject: Question about my bill, account 247681
 
-RE: Account 8174-06 (original creditor: Harbor Imaging Associates)
+Hello,
 
-This letter concerns charges for services provided to Daniel Kowalski (born 07/18/2011) at 8956 Juniper Road Apt 37B, Springdale, AR 72771.
-Our records list the patient's insurance as Blueriver Health Plans under policy W058965828.
+My son Robert Castellanos was seen at your clinic and I got a bill I don't understand. He was born on January 11, 2013, in case you need it to look up the visit.
+Our insurance member number is ZQ5367842-01. Why is the amount so high?
 
-On April 18, 2025 the patient received therapeutic exercises, each 15 minutes (CPT 97110), billed at $148.9O. The insurer paid $86.48 toward an allowed amount of $96.09, leaving $9.61 unpaid.
-On 04/18/2025 the patient received electrocardiogram, routine, with interpretation and report (CPT 93000), billed at $239.30. The insurer paid $126.98 toward an allowed amount of $141.09, leaving $14.11 unpaid.
-On 04/18/2025 the patient received electrocardiogram, routine, with lnterpretation and report (CPT 93000), billed at $128.15. The insurer paid $60.63 toward an allowed amount of $60.63, leaving $0.00 unpaid.
-On 04/18/2025 the patient received urinalysis, automated, with microscopy (CPT 81001), billed at $30.66. The insurer paid $20.77 toward an allowed amount of $20.77, leaving $0.00 unpaid.
-On April 19, 2025 the patient received rapid strep test (CPT 87880), billed at $61.48. The insurer paid $33.50, leaving $14.36 unpaid.
-On April 19, 2025 the patient received urinalysis, automated, with microscopy (CPT 81001), billed at S73.34. The insurer paid $49.61 toward an allowed amount of $55.12, leaving $5.51 unpaid.
-On 04/19/2025 the patient received influenza vaccine, quadrivalent, preservative free (CPT 90686), billed at $61.19. The insurer paid $27.59 toward an allowed amount of $39.41, leaving $11.82 unpaid.
+Thanks,
+Robert Castellanos
+212-555-0134
 
-The balance now due is $55.41.
-To discuss this account, Daniel may call us at 1-800-555-0105 or reply to the address above. We also have the email address daniel.kowalski65@example.net on file and the phone number 845.555.0101.
-This communication is from a debt collector.
+On Tue, 22 Jul 2025 billing@harborimaging.example wrote:
+> Hi Robert, here is the breakdown for the visit:
+>
+> | Date | Code | Service | Charged | Insurance Allowed | Insurance Paid | Your Balance |
+> |------|------|---------|--------:|------------------:|---------------:|-------------:|
+> | 06/01/2025 | 99213 | Office visit, established patient, low complexity | $231.00 | $170.23 | $170.23 | $0.00 |
+> | 06/03/2025 | 99203 | New patient office visit | $220.93 | n/a | $138.03 | $15.34 |
+> | 06/03/2025 | 99203 | New patient office visit | $220.93 | $153.37 | $138.03 | $15.34 |
+> | 06/03/2025 | 99214 | Office visit, established patient, moderate complexity | $267.99 | $169.28 | $135.42 | $33.86 |
+>
+> Your total balance is $64.54. Let us know if you'd like a payment plan.
+> Harbor Imaging Associates Billing Office

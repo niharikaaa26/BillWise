@@ -1,0 +1,147 @@
+{
+  "id": "bill_006",
+  "layout": "collections_letter",
+  "messy": [
+    "missing_field",
+    "narrative_items",
+    "ocr_amount",
+    "ocr_description",
+    "prose_pii"
+  ],
+  "pii": [
+    {
+      "start": 87,
+      "end": 94,
+      "type": "ACCOUNT_ID",
+      "text": "8174-06"
+    },
+    {
+      "start": 197,
+      "end": 212,
+      "type": "NAME",
+      "text": "Daniel Kowalski"
+    },
+    {
+      "start": 219,
+      "end": 229,
+      "type": "DOB",
+      "text": "07/18/2011"
+    },
+    {
+      "start": 234,
+      "end": 281,
+      "type": "ADDRESS",
+      "text": "8956 Juniper Road Apt 37B, Springdale, AR 72771"
+    },
+    {
+      "start": 363,
+      "end": 373,
+      "type": "MEMBER_ID",
+      "text": "W058965828"
+    },
+    {
+      "start": 1757,
+      "end": 1763,
+      "type": "NAME",
+      "text": "Daniel"
+    },
+    {
+      "start": 1856,
+      "end": 1885,
+      "type": "EMAIL",
+      "text": "daniel.kowalski65@example.net"
+    },
+    {
+      "start": 1915,
+      "end": 1927,
+      "type": "PHONE",
+      "text": "845.555.0101"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 28,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 415"
+    },
+    {
+      "start": 40,
+      "end": 59,
+      "type": "ADDRESS",
+      "text": "Nashville, TN 37202"
+    },
+    {
+      "start": 1779,
+      "end": 1793,
+      "type": "PHONE",
+      "text": "1-800-555-0105"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-04-18",
+      "code": "97110",
+      "description": "therapeutic exercises, each 15 minutes",
+      "billed_amount": "148.90",
+      "allowed_amount": "96.09",
+      "insurer_paid": "86.48",
+      "patient_responsibility": "9.61"
+    },
+    {
+      "service_date": "2025-04-18",
+      "code": "93000",
+      "description": "electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "239.30",
+      "allowed_amount": "141.09",
+      "insurer_paid": "126.98",
+      "patient_responsibility": "14.11"
+    },
+    {
+      "service_date": "2025-04-18",
+      "code": "93000",
+      "description": "electrocardiogram, routine, with lnterpretation and report",
+      "billed_amount": "128.15",
+      "allowed_amount": "60.63",
+      "insurer_paid": "60.63",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-18",
+      "code": "81001",
+      "description": "urinalysis, automated, with microscopy",
+      "billed_amount": "30.66",
+      "allowed_amount": "20.77",
+      "insurer_paid": "20.77",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-19",
+      "code": "87880",
+      "description": "rapid strep test",
+      "billed_amount": "61.48",
+      "allowed_amount": null,
+      "insurer_paid": "33.50",
+      "patient_responsibility": "14.36"
+    },
+    {
+      "service_date": "2025-04-19",
+      "code": "81001",
+      "description": "urinalysis, automated, with microscopy",
+      "billed_amount": "73.34",
+      "allowed_amount": "55.12",
+      "insurer_paid": "49.61",
+      "patient_responsibility": "5.51"
+    },
+    {
+      "service_date": "2025-04-19",
+      "code": "90686",
+      "description": "influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "61.19",
+      "allowed_amount": "39.41",
+      "insurer_paid": "27.59",
+      "patient_responsibility": "11.82"
+    }
+  ],
+  "duplicate_pairs": []
+}

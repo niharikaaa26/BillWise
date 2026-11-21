@@ -1,121 +1,129 @@
 {
   "id": "bill_009",
-  "layout": "collections_letter_heldout",
+  "layout": "email_thread_heldout",
   "messy": [
-    "duplicate_charge",
+    "email_headers",
+    "markdown_table",
     "missing_field",
-    "narrative_items",
+    "ocr_amount",
     "prose_pii"
   ],
   "pii": [
     {
-      "start": 86,
-      "end": 93,
+      "start": 6,
+      "end": 19,
+      "type": "NAME",
+      "text": "Elijah Okafor"
+    },
+    {
+      "start": 21,
+      "end": 48,
+      "type": "EMAIL",
+      "text": "elijah.okafor31@example.com"
+    },
+    {
+      "start": 154,
+      "end": 160,
       "type": "ACCOUNT_ID",
-      "text": "4740-35"
+      "text": "945213"
     },
     {
-      "start": 191,
-      "end": 201,
+      "start": 177,
+      "end": 190,
       "type": "NAME",
-      "text": "Jane Rossi"
+      "text": "Lorena Okafor"
     },
     {
-      "start": 208,
-      "end": 218,
+      "start": 267,
+      "end": 280,
       "type": "DOB",
-      "text": "03/18/2006"
+      "text": "June 21, 2012"
     },
     {
-      "start": 223,
-      "end": 261,
-      "type": "ADDRESS",
-      "text": "4411 Lakeview Blvd, Riverton, OH 45064"
-    },
-    {
-      "start": 341,
-      "end": 351,
+      "start": 355,
+      "end": 368,
       "type": "MEMBER_ID",
-      "text": "W381676284"
+      "text": "CPH-1010-0066"
     },
     {
-      "start": 1333,
-      "end": 1337,
+      "start": 406,
+      "end": 419,
       "type": "NAME",
-      "text": "Jane"
+      "text": "Elijah Okafor"
+    },
+    {
+      "start": 420,
+      "end": 432,
+      "type": "PHONE",
+      "text": "212-555-0190"
+    },
+    {
+      "start": 496,
+      "end": 502,
+      "type": "NAME",
+      "text": "Elijah"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 27,
-      "end": 38,
-      "type": "ADDRESS",
-      "text": "PO Box 7720"
+      "start": 54,
+      "end": 83,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
     },
     {
-      "start": 40,
-      "end": 58,
-      "type": "ADDRESS",
-      "text": "Columbus, OH 43215"
-    },
-    {
-      "start": 1353,
-      "end": 1367,
-      "type": "PHONE",
-      "text": "1-800-555-0117"
+      "start": 454,
+      "end": 483,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-02-09",
-      "code": "99203",
-      "description": "new patient office visit",
-      "billed_amount": "198.82",
-      "allowed_amount": "142.66",
-      "insurer_paid": "114.13",
-      "patient_responsibility": "28.53"
+      "service_date": "2025-05-28",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "457.89",
+      "allowed_amount": "203.34",
+      "insurer_paid": "162.67",
+      "patient_responsibility": "40.67"
     },
     {
-      "service_date": "2025-02-11",
-      "code": "99285",
-      "description": "emergency department visit, high severity",
-      "billed_amount": "2487.85",
-      "allowed_amount": "1681.92",
-      "insurer_paid": "1513.73",
-      "patient_responsibility": "168.19"
-    },
-    {
-      "service_date": "2025-02-11",
-      "code": "80053",
-      "description": "comprehensive metabolic panel",
-      "billed_amount": "309.85",
-      "allowed_amount": "233.25",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "233.25"
-    },
-    {
-      "service_date": "2025-02-11",
-      "code": "80053",
-      "description": "comprehensive metabolic panel",
-      "billed_amount": "309.85",
+      "service_date": "2025-05-28",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1100.59",
       "allowed_amount": null,
-      "insurer_paid": "0.00",
-      "patient_responsibility": "233.25"
+      "insurer_paid": "280.67",
+      "patient_responsibility": "70.17"
     },
     {
-      "service_date": "2025-02-11",
-      "code": "74177",
-      "description": "ct abdomen and pelvis with contrast",
-      "billed_amount": "4733.53",
-      "allowed_amount": "1455.45",
-      "insurer_paid": "1018.82",
-      "patient_responsibility": "436.63"
+      "service_date": "2025-05-28",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2183.22",
+      "allowed_amount": "969.78",
+      "insurer_paid": "872.80",
+      "patient_responsibility": "96.98"
+    },
+    {
+      "service_date": "2025-05-28",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "51.00",
+      "allowed_amount": "31.33",
+      "insurer_paid": "28.20",
+      "patient_responsibility": "3.13"
+    },
+    {
+      "service_date": "2025-05-28",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "130.91",
+      "allowed_amount": null,
+      "insurer_paid": "91.95",
+      "patient_responsibility": "0.00"
     }
   ],
-  "duplicate_pairs": [
-    [
-      2,
-      3
-    ]
-  ]
+  "duplicate_pairs": []
 }

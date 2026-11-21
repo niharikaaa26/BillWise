@@ -1,118 +1,108 @@
 {
   "id": "bill_004",
-  "layout": "collections_letter_heldout",
+  "layout": "email_thread_heldout",
   "messy": [
-    "missing_field",
-    "narrative_items",
-    "ocr_amount",
+    "email_headers",
+    "markdown_table",
     "prose_pii"
   ],
   "pii": [
     {
-      "start": 86,
-      "end": 93,
-      "type": "ACCOUNT_ID",
-      "text": "3997-51"
-    },
-    {
-      "start": 193,
-      "end": 211,
+      "start": 6,
+      "end": 21,
       "type": "NAME",
-      "text": "Xiomara Fitzgerald"
+      "text": "Dmitri Williams"
     },
     {
-      "start": 218,
-      "end": 228,
-      "type": "DOB",
-      "text": "10/26/1958"
-    },
-    {
-      "start": 233,
-      "end": 278,
-      "type": "ADDRESS",
-      "text": "1846 Highland Blvd #25, Port Jervis, NY 12791"
-    },
-    {
-      "start": 358,
-      "end": 368,
-      "type": "MEMBER_ID",
-      "text": "W656532614"
-    },
-    {
-      "start": 1171,
-      "end": 1178,
-      "type": "NAME",
-      "text": "Xiomara"
-    },
-    {
-      "start": 1271,
-      "end": 1303,
+      "start": 23,
+      "end": 52,
       "type": "EMAIL",
-      "text": "xiomara.fitzgerald72@example.net"
+      "text": "dmitri.williams81@example.org"
     },
     {
-      "start": 1333,
-      "end": 1345,
+      "start": 158,
+      "end": 164,
+      "type": "ACCOUNT_ID",
+      "text": "727147"
+    },
+    {
+      "start": 186,
+      "end": 199,
+      "type": "NAME",
+      "text": "Yuki Williams"
+    },
+    {
+      "start": 277,
+      "end": 293,
+      "type": "DOB",
+      "text": "October 24, 2015"
+    },
+    {
+      "start": 368,
+      "end": 379,
+      "type": "MEMBER_ID",
+      "text": "XGH26562572"
+    },
+    {
+      "start": 417,
+      "end": 432,
+      "type": "NAME",
+      "text": "Dmitri Williams"
+    },
+    {
+      "start": 433,
+      "end": 447,
       "type": "PHONE",
-      "text": "319.555.0171"
+      "text": "(917) 555-0155"
+    },
+    {
+      "start": 511,
+      "end": 517,
+      "type": "NAME",
+      "text": "Dmitri"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 27,
-      "end": 38,
-      "type": "ADDRESS",
-      "text": "PO Box 7720"
+      "start": 58,
+      "end": 87,
+      "type": "EMAIL",
+      "text": "billing@harborimaging.example"
     },
     {
-      "start": 40,
-      "end": 58,
-      "type": "ADDRESS",
-      "text": "Columbus, OH 43215"
-    },
-    {
-      "start": 1194,
-      "end": 1208,
-      "type": "PHONE",
-      "text": "1-800-555-0142"
+      "start": 469,
+      "end": 498,
+      "type": "EMAIL",
+      "text": "billing@harborimaging.example"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-03-22",
+      "service_date": "2025-05-03",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "151.97",
+      "allowed_amount": "57.92",
+      "insurer_paid": "57.92",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-05-03",
       "code": "90686",
-      "description": "influenza vaccine, quadrivalent, preservative free",
-      "billed_amount": "74.46",
-      "allowed_amount": "44.25",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "44.25"
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "63.81",
+      "allowed_amount": "30.31",
+      "insurer_paid": "21.22",
+      "patient_responsibility": "9.09"
     },
     {
-      "service_date": "2025-03-22",
-      "code": "99285",
-      "description": "emergency department visit, high severity",
-      "billed_amount": "1708.63",
-      "allowed_amount": "1035.03",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "1035.03"
-    },
-    {
-      "service_date": "2025-03-24",
+      "service_date": "2025-05-06",
       "code": "99283",
-      "description": "emergency department visit, moderate severity",
-      "billed_amount": "826.12",
-      "allowed_amount": null,
-      "insurer_paid": "0.00",
-      "patient_responsibility": "336.54"
-    },
-    {
-      "service_date": "2025-03-26",
-      "code": "99203",
-      "description": "new patient office visit",
-      "billed_amount": "289.12",
-      "allowed_amount": "132.32",
-      "insurer_paid": "105.86",
-      "patient_responsibility": "26.46"
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "1192.55",
+      "allowed_amount": "623.12",
+      "insurer_paid": "560.81",
+      "patient_responsibility": "62.31"
     }
   ],
   "duplicate_pairs": []
