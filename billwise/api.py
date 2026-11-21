@@ -1,19 +1,22 @@
-"""FastAPI service exposing /redact and /parse.
+"""FastAPI service exposing /redact, /parse and /explain.
 
 Privacy notes:
   * Request bodies are never logged or stored by this app.
   * /redact returns placeholders, types and offsets only - never the original
     values. The reversible mapping exists only inside the request handler and
     is discarded when the request ends.
+  * /explain sends only parsed, redacted facts to the model, never the document text
+    (see billwise/explain.py). It uses a deterministic mock unless BILLWISE_LLM=claude.
 """
 from __future__ import annotations
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field, field_validator
 from starlette.responses import JSONResponse
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
 from . import __version__
+from .explain import ExplainResult, explain, get_explainer
 from .models import ParseResult
 from .parse import parse as parse_text
 from .redact import PII_TYPES, Redactor
@@ -72,6 +75,19 @@ class TextIn(BaseModel):
         return v
 
 
+class ExplainIn(TextIn):
+    question: str | None = Field(None, max_length=1000, description="Optional question about the bill")
+
+    @field_validator("question")
+    @classmethod
+    def clean_question(cls, v: str | None) -> str | None:
+        if v is None:
+            return None
+        if "\x00" in v:
+            raise ValueError("question must not contain NUL bytes")
+        return v.strip() or None
+
+
 class EntityOut(BaseModel):
     type: str
     start: int
@@ -85,8 +101,9 @@ class RedactOut(BaseModel):
     counts: dict[str, int]
 
 
-app = FastAPI(title="BillWise (phase 1)", version=__version__,
-              description="Parse and redact synthetic medical bills / EOBs. No LLM calls.")
+app = FastAPI(title="BillWise", version=__version__,
+              description="Parse, redact and explain synthetic medical bills / EOBs. "
+                          "/explain uses a deterministic mock model unless BILLWISE_LLM=claude is set.")
 app.add_middleware(BodySizeLimit, max_bytes=MAX_BODY_BYTES)
 _redactor = Redactor()
 
@@ -112,3 +129,11 @@ def redact_endpoint(body: TextIn) -> RedactOut:
 @app.post("/parse", response_model=ParseResult)
 def parse_endpoint(body: TextIn) -> ParseResult:
     return parse_text(body.text)
+
+
+@app.post("/explain", response_model=ExplainResult)
+def explain_endpoint(body: ExplainIn) -> ExplainResult:
+    try:
+        return explain(body.text, body.question, explainer=get_explainer())
+    except RuntimeError as exc:  # model declined or its answer was cut off
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
