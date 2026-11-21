@@ -1,0 +1,27 @@
+CLEARPATH HEALTH INSURANCE
+PO Box 4410, Hartwell, GA 30643
+EXPLANATION OF BENEFITS -- THIS IS NOT A BILL
+Processed: 02/03/2025
+
+Patient: HANNAH OKAFOR     Member ID: XGH89431237
+Patient DOB: 03/14/1989     Group #: 04724
+Claim Number: 1747911261806
+Provider: Dr. Alan Cho, MD   NPI 4966776993
+
+Mail to:
+HANNAH OKAFOR
+3824 CEDAR RD APT 6C
+FAIRVIEW, TN 37016
+
+Email on file: hannah.okafor35@example.org
+Questions? Call Member Services at 1-800-555-0106
+
+Service Date    | Code      | Description                                    | Billed        | Allowed        | Plan Paid    | You Owe
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+01/04/2025      | A4649     | Surgical supply, miscellaneous                 | $191.70       | $58.79         | $52,91       | $5.88
+01/07/2025      | 99214     | Office visit, eslablished patient, moderate complexity | $224.18       | --             | $68.71       | $0.00
+01/07/2025      | 90471     | Immunization administration, single vaccine    | $41.70        | --             | $10.58       | $2.64
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+TOTALS          |           |                                                | $457.58       | $58.79         | $132.20      | $8.52
+
+The amount you owe may be billed to you separately by your provider.

@@ -1,0 +1,20 @@
+Lakeside Family Clinic
+900 Shore Rd
+Oak Harbor, WA 98277
+
+DAVID HADDAD
+5795 SUNSET WAY
+LAKEWOOD CO 80226
+
+Dear David,
+Our records show a balance on the account for David. Please review the charges below.
+Questions? Call (319) 555-0113 or email billing@lakesideclinic.example.
+
+Patient Acct: 2920173   DOB 2/6/90
+
+Svc Date,CPT/HCPCS,Description,Charge,Ins Paid,Your Balance
+04/12/2025,93000,"Electrocardiogram, routine, with interpretation and report",275.34,83.08,0.00
+04/12/2025,93000,"Electrocardiogram, routine, with interpretation and report",269.42,0.00,189.61
+04/12/2025,36415,Routine venipuncture,35.61,19.50,4.87
+
+Total balance due: $194.48

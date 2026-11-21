@@ -1,0 +1,60 @@
+Summit Mutual Health -- Your Claim Summary
+================================================
+Prepared for: NAVEEN ABERNATHY
+Member ID: ZQ3794961-01
+Born: 11/14/1964
+Address: 2675 Sunset Ln, Millbrook, NY 12520
+Contact: naveen.abernathy46@example.net / 303-555-0157
+Reference #: CLM-186320539
+
+Claim line 1
+  Date of service: Jul 11, 2025
+  Service: 71046 Chest x-ray, 2 views
+  Provider charged: $328.51
+  Plan allowed: $240.19
+  Plan paid: $240.19
+  Your share: $0.00
+
+Claim line 2
+  Date of service: Jul 11, 2025
+  Service: 99283 Emergency department visit, moderate
+           severity
+  Provider charged: $962.20
+  Plan allowed: $433.05
+  Plan paid: $346.44
+  Your share: $86.61
+
+Claim line 3
+  Date of service: Jul 13, 2025
+  Service: 90686 Influenza vaccine, quadrivalent,
+           preservative free
+  Provider charged: $31.00
+  Plan allowed: $13.45
+  Plan paid: $0.00
+  Your share: $13.45
+
+Claim line 4
+  Date of service: Jul 16, 2025
+  Service: 99285 Emergency department visit, high
+           severity
+  Provider charged: $2,179.86
+  Plan paid: $976.43
+  Your share: $244.11
+
+Claim line 5
+  Date of service: Jul 16, 2025
+  Service: 74177 CT abdomen and pelvis with contrast
+  Provider charged: $2,386.55
+  Plan allowed: $1,312.33
+  Plan paid: $1,049.86
+  Your share: S262.47
+
+Claim line 6
+  Date of service: Jul 18, 2025
+  Service: 71046 Chest x-ray, 2 views
+  Provider charged: $279.18
+  Plan allowed: $200.21
+  Plan paid: $140,15
+  Your share: $60.06
+
+This summary is for your records.

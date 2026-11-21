@@ -1,0 +1,28 @@
+MERCY VALLEY REGIONAL HOSPITAL
+4100 Hospital Dr, Riverton, OH 45011
+Billing Questions: 1-800-555-0137
+
+ITEMIZED STATEMENT
+Statement Date: 06/15/2025
+Account Number: 70929539
+Patient Name: DOE, TOMASZ
+Date of Birth: 2008-11-01
+SSN: 929-12-5837
+Mailing Address:
+  Tomasz Doe
+  48 Sunset Boulevard Apt 39
+  Springdale, AR 72790
+Phone: 513.555.0198
+Primary Insurance: Blueriver Health Plans   Member ID: MBR8331828
+
+DATE       CODE    DESCRIPTION                           CHARGES   INS PAID     ADJUST    PT RESP
+------------------------------------------------------------------------------------------------
+06/06/2025 99283   EMERGENCY DEPARTMENT VISIT,          1,290.34     627.77     393.53     269.04
+                   MODERATE SEVERITY
+06/09/2025 99285   EMERGENCY DEPARTMENT VISIT, HIGH     3,079.39   1,009.13   1,817.98     252.28
+                   SEVERITY
+------------------------------------------------------------------------------------------------
+                   TOTAL CHARGES                        4,369.73
+06/15/2025         PAYMENT - THANK YOU                    -41.87
+
+Please remit the patient balance within 30 days.

@@ -1,0 +1,29 @@
+BLUERIVER HEALTH PLANS
+PO Box 9902, Dayton, OH 45401
+EXPLANATION OF BENEFITS -- THIS IS NOT A BILL
+Processed: 01/01/2025
+
+Patient: Emily Abernathy     Member ID: MBR0092870
+Patient DOB: 2010-12-02     Group #: 39788
+Claim Number: 4285598464802
+Provider: Dr. Alan Cho, MD   NPI 0746615557
+
+Mail to:
+EMILY ABERNATHY
+7721 OAK ROAD
+CEDAR FALLS, IA 50632
+
+Email on file: emily.abernathy49@example.net
+Questions? Call Member Services at 1-800-555-0170
+
+Service Date    | Code      | Description                                    | Billed        | Allowed        | Plan Paid    | You Owe
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+11/17/2024      | G0439     | Annual wellness visit, subsequent              | $163.47       | $62.40         | $62.40       | $0.00
+11/20/2024      | 99285     | Emergency department visit, high severity      | $1,772.21     | --             | $1,070.57    | $0.00
+11/20/2024      | 81001     | Urinalysis, automated, with microscopy         | $46.42        | $20.83         | $18.75       | $2.08
+11/21/2024      | 81001     | Urinalysis, automated, with microscopy         | $86,87        | $67.02         | $60.32       | $6,70
+11/21/2024      | 93000     | Electrocardiogram, routine, with interpretati0n and report | $96.59        | $45.50         | $45.50       | $0.00
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+TOTALS          |           |                                                | $2,165.56     | $195.75        | $1,257.54    | $8.78
+
+The amount you owe may be billed to you separately by your provider.

@@ -1,0 +1,106 @@
+{
+  "id": "bill_041",
+  "layout": "hospital_fixed",
+  "messy": [
+    "ocr_amount",
+    "ocr_label",
+    "ssn_present"
+  ],
+  "pii": [
+    {
+      "start": 161,
+      "end": 171,
+      "type": "ACCOUNT_ID",
+      "text": "0267284318"
+    },
+    {
+      "start": 186,
+      "end": 201,
+      "type": "NAME",
+      "text": "RAMIREZ, HANNAH"
+    },
+    {
+      "start": 217,
+      "end": 227,
+      "type": "DOB",
+      "text": "09/09/1994"
+    },
+    {
+      "start": 233,
+      "end": 244,
+      "type": "SSN",
+      "text": "935-74-6661"
+    },
+    {
+      "start": 264,
+      "end": 278,
+      "type": "NAME",
+      "text": "Hannah Ramirez"
+    },
+    {
+      "start": 281,
+      "end": 296,
+      "type": "ADDRESS",
+      "text": "8285 Oak Avenue"
+    },
+    {
+      "start": 299,
+      "end": 317,
+      "type": "ADDRESS",
+      "text": "Fairview, TN 37079"
+    },
+    {
+      "start": 325,
+      "end": 337,
+      "type": "PHONE",
+      "text": "479.555.0133"
+    },
+    {
+      "start": 393,
+      "end": 403,
+      "type": "MEMBER_ID",
+      "text": "MBR1833676"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 26,
+      "end": 42,
+      "type": "ADDRESS",
+      "text": "77 Cathedral Ave"
+    },
+    {
+      "start": 44,
+      "end": 63,
+      "type": "ADDRESS",
+      "text": "Millbrook, NY 12545"
+    },
+    {
+      "start": 83,
+      "end": 97,
+      "type": "PHONE",
+      "text": "1-800-555-0196"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-09-02",
+      "code": "G0439",
+      "description": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
+      "billed_amount": "237.05",
+      "allowed_amount": null,
+      "insurer_paid": "187.83",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-09-03",
+      "code": "A4649",
+      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
+      "billed_amount": "70.48",
+      "allowed_amount": null,
+      "insurer_paid": "18.90",
+      "patient_responsibility": "4.73"
+    }
+  ],
+  "duplicate_pairs": []
+}

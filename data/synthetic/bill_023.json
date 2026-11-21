@@ -1,0 +1,89 @@
+{
+  "id": "bill_023",
+  "layout": "claim_blocks",
+  "messy": [
+    "multiline_item",
+    "ssn_present"
+  ],
+  "pii": [
+    {
+      "start": 106,
+      "end": 118,
+      "type": "NAME",
+      "text": "GRACE L. DOE"
+    },
+    {
+      "start": 130,
+      "end": 141,
+      "type": "MEMBER_ID",
+      "text": "XGH31601499"
+    },
+    {
+      "start": 149,
+      "end": 160,
+      "type": "SSN",
+      "text": "969-37-7168"
+    },
+    {
+      "start": 167,
+      "end": 174,
+      "type": "DOB",
+      "text": "4/13/44"
+    },
+    {
+      "start": 184,
+      "end": 221,
+      "type": "ADDRESS",
+      "text": "413 Oak Ln #25, Port Jervis, NY 12739"
+    },
+    {
+      "start": 231,
+      "end": 254,
+      "type": "EMAIL",
+      "text": "grace.doe87@example.com"
+    },
+    {
+      "start": 257,
+      "end": 271,
+      "type": "PHONE",
+      "text": "(615) 555-0168"
+    },
+    {
+      "start": 285,
+      "end": 298,
+      "type": "ACCOUNT_ID",
+      "text": "CLM-412184453"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-02-08",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "87.62",
+      "allowed_amount": "38.37",
+      "insurer_paid": "34.53",
+      "patient_responsibility": "3.84"
+    },
+    {
+      "service_date": "2025-02-10",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "30.08",
+      "allowed_amount": "18.54",
+      "insurer_paid": "18.54",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-13",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "1989.94",
+      "allowed_amount": "894.12",
+      "insurer_paid": "715.30",
+      "patient_responsibility": "178.82"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,0 +1,25 @@
+ST. BRIGID MEDICAL CENTER
+77 Cathedral Ave, Millbrook, NY 12545
+Billing Questions: 1-800-555-0196
+
+ITEMIZED STATEMENT
+Statement Date: 09/20/2025
+Account Number: 0267284318
+Patient Name: RAMIREZ, HANNAH
+Date of Birlh: 09/09/1994
+SSN: 935-74-6661
+Mailing Address:
+  Hannah Ramirez
+  8285 Oak Avenue
+  Fairview, TN 37079
+Phone: 479.555.0133
+Primary Insurance: Blueriver Health Plans   Member ID: MBR1833676
+
+DATE       CODE    DESCRIPTION                           CHARGES   INS PAID     ADJUST    PT RESP
+------------------------------------------------------------------------------------------------
+09/02/2025 G0439   ANNUAL WELLNESS VISIT, SUBSEQUENT      237.05     187.83      49.22       0,00
+09/03/2025 A4649   SURGICAL SUPPLY, MISCELLANEOUS          70.48      18.90      46.85       4.73
+------------------------------------------------------------------------------------------------
+                   TOTAL CHARGES                          307.53
+
+Please remit the patient balance within 30 days.

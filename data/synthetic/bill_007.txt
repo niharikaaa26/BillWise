@@ -1,0 +1,34 @@
+Blueriver Health Plans -- Your Claim Summary
+================================================
+Prepared for: HANNAH F. SMITH
+Member ID: XGH74312003
+Born: May 11, 1954
+Address: 1462 Willow Drive, Port Jervis, NY 12790
+Contact: 479.555.0104
+Reference #: CLM-200197034
+
+Claim line 1
+  Date of service: 09/24/2025
+  Service: 85025 Complete blood count with automated differential
+  Provider charged: $64.03
+  Plan allowed: $34.48
+  Plan paid: $27.58
+  Your share: $6.90
+
+Claim line 2
+  Date of service: 09/24/2025
+  Service: 96374 IV push, single or initial substance
+  Provider charged: $193.46
+  Plan allowed: $104.22
+  Plan paid: $83.38
+  Your share: $20.84
+
+Claim line 3
+  Date of service: 09/24/2025
+  Service: 96374 IV push, single or initial substance
+  Provider charged: $l93.46
+  Plan allowed: $104.22
+  Plan paid: $83.38
+  Your share: $20.84
+
+This summary is for your records.

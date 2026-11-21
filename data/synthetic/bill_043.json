@@ -1,0 +1,118 @@
+{
+  "id": "bill_043",
+  "layout": "claim_blocks",
+  "messy": [
+    "duplicate_charge",
+    "missing_contact",
+    "multiline_item",
+    "ocr_amount",
+    "ssn_present"
+  ],
+  "pii": [
+    {
+      "start": 106,
+      "end": 121,
+      "type": "NAME",
+      "text": "Aisha Delacroix"
+    },
+    {
+      "start": 133,
+      "end": 143,
+      "type": "MEMBER_ID",
+      "text": "MBR3663479"
+    },
+    {
+      "start": 151,
+      "end": 162,
+      "type": "SSN",
+      "text": "934-92-1441"
+    },
+    {
+      "start": 169,
+      "end": 177,
+      "type": "DOB",
+      "text": "12/26/82"
+    },
+    {
+      "start": 187,
+      "end": 233,
+      "type": "ADDRESS",
+      "text": "7785 Highland Ln Unit 6B, Springdale, AR 72742"
+    },
+    {
+      "start": 243,
+      "end": 257,
+      "type": "PHONE",
+      "text": "(303) 555-0169"
+    },
+    {
+      "start": 271,
+      "end": 284,
+      "type": "ACCOUNT_ID",
+      "text": "CLM-372760488"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-06-28",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "234.46",
+      "allowed_amount": "101.41",
+      "insurer_paid": "91.27",
+      "patient_responsibility": "10.14"
+    },
+    {
+      "service_date": "2025-06-28",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "27.07",
+      "allowed_amount": "8.31",
+      "insurer_paid": "6.65",
+      "patient_responsibility": "1.66"
+    },
+    {
+      "service_date": "2025-06-28",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "27.07",
+      "allowed_amount": "8.31",
+      "insurer_paid": "6.65",
+      "patient_responsibility": "1.66"
+    },
+    {
+      "service_date": "2025-06-28",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "79.54",
+      "allowed_amount": "61.87",
+      "insurer_paid": "43.31",
+      "patient_responsibility": "18.56"
+    },
+    {
+      "service_date": "2025-06-28",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "61.21",
+      "allowed_amount": "29.16",
+      "insurer_paid": "23.33",
+      "patient_responsibility": "5.83"
+    },
+    {
+      "service_date": "2025-06-28",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "3186.04",
+      "allowed_amount": "1502.44",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "1502.44"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      1,
+      2
+    ]
+  ]
+}

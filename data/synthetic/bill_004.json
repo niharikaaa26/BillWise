@@ -1,0 +1,136 @@
+{
+  "id": "bill_004",
+  "layout": "clinic_csv",
+  "messy": [
+    "multiline_item",
+    "ocr_amount",
+    "unlabeled_name"
+  ],
+  "pii": [
+    {
+      "start": 58,
+      "end": 71,
+      "type": "NAME",
+      "text": "ROBERT PETROV"
+    },
+    {
+      "start": 72,
+      "end": 94,
+      "type": "ADDRESS",
+      "text": "2110 BRIAR WAY APT 38B"
+    },
+    {
+      "start": 95,
+      "end": 114,
+      "type": "ADDRESS",
+      "text": "SPRINGDALE AR 72711"
+    },
+    {
+      "start": 121,
+      "end": 134,
+      "type": "NAME",
+      "text": "Robert Petrov"
+    },
+    {
+      "start": 182,
+      "end": 188,
+      "type": "NAME",
+      "text": "Robert"
+    },
+    {
+      "start": 309,
+      "end": 316,
+      "type": "ACCOUNT_ID",
+      "text": "1939052"
+    },
+    {
+      "start": 323,
+      "end": 339,
+      "type": "DOB",
+      "text": "October 12, 1997"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 21,
+      "end": 37,
+      "type": "ADDRESS",
+      "text": "15 Commerce Blvd"
+    },
+    {
+      "start": 38,
+      "end": 56,
+      "type": "ADDRESS",
+      "text": "Fairview, TN 37062"
+    },
+    {
+      "start": 239,
+      "end": 253,
+      "type": "PHONE",
+      "text": "(513) 555-0158"
+    },
+    {
+      "start": 263,
+      "end": 292,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-06-23",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "1708.64",
+      "allowed_amount": "907.60",
+      "insurer_paid": "726.08",
+      "patient_responsibility": "181.52"
+    },
+    {
+      "service_date": "2025-06-26",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "272.27",
+      "allowed_amount": "169.12",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "169.12"
+    },
+    {
+      "service_date": "2025-06-26",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "2348.66",
+      "allowed_amount": "1306.99",
+      "insurer_paid": "1045.59",
+      "patient_responsibility": "261.40"
+    },
+    {
+      "service_date": "2025-06-27",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "141.78",
+      "allowed_amount": "105.13",
+      "insurer_paid": "73.59",
+      "patient_responsibility": "31.54"
+    },
+    {
+      "service_date": "2025-06-27",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "1109.44",
+      "allowed_amount": "412.21",
+      "insurer_paid": "288.55",
+      "patient_responsibility": "123.66"
+    },
+    {
+      "service_date": "2025-06-27",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "278.42",
+      "allowed_amount": "101.05",
+      "insurer_paid": "90.95",
+      "patient_responsibility": "10.10"
+    }
+  ],
+  "duplicate_pairs": []
+}

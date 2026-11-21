@@ -1,0 +1,25 @@
+Harbor Imaging Associates
+310 Dock St
+Greenville, SC 29601
+
+TOMASZ OYELARAN
+4240 ELM RD
+CEDAR FALLS IA 50614
+
+Dear Tomasz,
+Our records show a balance on the account for Tomasz. Please review the charges below.
+Questions? Call (303) 555-0195 or email billing@harborimaging.example.
+
+Patient: Tomasz Oyelaran
+Patient Acct: 2211966   DOB 8/8/07
+Guarantor SSN: 947-73-5955
+
+Svc Date,CPT/HCPCS,Description,Charge,Ins Paid,Your Balance
+06/03/2025,70450,CT head or brain without contrast,1933.42,798.72,0.00
+06/03/2025,99283,"Emergency department visit, moderate
+severity",1247.12,343.69,38.19
+06/03/2025,74177,CT abdomen and pelvis with contrast,3276.29,838.37,209.59
+06/03/2025,74177,CT abdomen and pelvis with contrast,2457.55,1516.00,379.00
+06/05/2025,99213,"Office visit, established patient, low complexity",169.29,114.81,12.76
+
+Total balance due: $639.54

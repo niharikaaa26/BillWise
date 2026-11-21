@@ -1,0 +1,29 @@
+BLUERIVER HEALTH PLANS
+PO Box 9902, Dayton, OH 45401
+EXPLANATION OF BENEFITS -- THIS IS NOT A BILL
+Processed: 01/19/2025
+
+Patient: David A. Hernandez     Member ID: ZQ5453939-01
+Subscrlber: Xiomara Hernandez
+Patient DOB: 2014-04-12     Group #: 16446
+Claim Number: 2198760987848
+Provider: Dr. Beth Eriksen, MD   NPI 1670996744
+
+Mail to:
+DAVID A. HERNANDEZ
+3169 RIVERBEND COURT
+RIVERTON, OH 45063
+
+Questions? Call Member Services at 1-800-555-0177
+
+Service Date    | Code      | Description                                    | Billed        | Allowed        | Plan Paid    | You Owe
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+11/27/2024      | G0439     | Annual wellness visit, subsequent              | $258.36       | $205.01        | $164.01      | $41.00
+11/28/2024      | 90686     | Influenza vaccine, quadrlvalent, preservative free | $35.32        | --             | $7.73        | $3.31
+11/28/2024      | 90686     | Influenza vaccine, quadrivalent, preservative free | $42.24        | $27.11         | $21.69       | $5.42
+12/01/2024      | 99213     | Office visit, established                      | $175.08       | $111.74        | $89.39       | $22.35
+                |           | patient, low complexity                        |               |                |              |
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+TOTALS          |           |                                                | $511.00       | $343.86        | $282.82      | $72.08
+
+The amount you owe may be billed to you separately by your provider.

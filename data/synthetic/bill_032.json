@@ -1,0 +1,115 @@
+{
+  "id": "bill_032",
+  "layout": "clinic_csv",
+  "messy": [
+    "multiline_item",
+    "ocr_description",
+    "unlabeled_name"
+  ],
+  "pii": [
+    {
+      "start": 58,
+      "end": 76,
+      "type": "NAME",
+      "text": "MARCUS CASTELLANOS"
+    },
+    {
+      "start": 77,
+      "end": 92,
+      "type": "ADDRESS",
+      "text": "2102 WILLOW WAY"
+    },
+    {
+      "start": 93,
+      "end": 110,
+      "type": "ADDRESS",
+      "text": "LAKEWOOD CO 80268"
+    },
+    {
+      "start": 117,
+      "end": 135,
+      "type": "NAME",
+      "text": "Marcus Castellanos"
+    },
+    {
+      "start": 183,
+      "end": 189,
+      "type": "NAME",
+      "text": "Marcus"
+    },
+    {
+      "start": 310,
+      "end": 317,
+      "type": "ACCOUNT_ID",
+      "text": "2939049"
+    },
+    {
+      "start": 324,
+      "end": 334,
+      "type": "DOB",
+      "text": "1967-12-19"
+    },
+    {
+      "start": 350,
+      "end": 362,
+      "type": "PHONE",
+      "text": "513-555-0102"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 21,
+      "end": 37,
+      "type": "ADDRESS",
+      "text": "15 Commerce Blvd"
+    },
+    {
+      "start": 38,
+      "end": 56,
+      "type": "ADDRESS",
+      "text": "Fairview, TN 37062"
+    },
+    {
+      "start": 240,
+      "end": 254,
+      "type": "PHONE",
+      "text": "(479) 555-0143"
+    },
+    {
+      "start": 264,
+      "end": 293,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-08-25",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "47.93",
+      "allowed_amount": null,
+      "insurer_paid": "17.13",
+      "patient_responsibility": "7.34"
+    },
+    {
+      "service_date": "2025-08-27",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "63.55",
+      "allowed_amount": null,
+      "insurer_paid": "20.66",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-08-27",
+      "code": "93000",
+      "description": "Electrocardiograrn, routine, with interpretation and report",
+      "billed_amount": "157.18",
+      "allowed_amount": null,
+      "insurer_paid": "84.93",
+      "patient_responsibility": "9.44"
+    }
+  ],
+  "duplicate_pairs": []
+}

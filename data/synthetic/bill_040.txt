@@ -1,0 +1,25 @@
+Lakeside Family Clinic
+900 Shore Rd
+Oak Harbor, WA 98277
+
+SIOBHAN KOWALSKI
+2923 RIVERBEND WAY
+MILLBROOK NY 12566
+
+Dear Siobhan,
+Our records show a balance on the account for Siobhan. Please review the charges below.
+Questions? Call (303) 555-0123 or email billing@lakesideclinic.example.
+
+Patient Acct: 3762965   DOB 03/28/1999
+Phone on file: 917-555-0111
+
+Svc Date,CPT/HCPCS,Description,Charge,Ins Paid,Your Balance
+01/18/2025,99283,"Emergency department visit, moderate severity",784.45,328.63,82.16
+01/18/2025,99214,"Office visit, established patient, moderate complexity",201.83,0.00,137.14
+01/18/2025,81001,"Urinalysis, automated, with microscopy",45.41,10.35,4.43
+01/19/2025,90686,"Influenza vaccine, quadrivalent, preservative free",74.25,38.27,4.25
+01/19/2025,99214,"Office visit, established patient, moderate complexity",314.O8,206.33,0.00
+01/19/2025,90686,"Influenza vaccine, quadrivalenl, preservative free",36.12,0.00,l1.65
+01/22/2025,90686,"Influenza vaccine, quadrivalent, preservative free",72.76,40.83,4.54
+
+Total balance due: $244.17

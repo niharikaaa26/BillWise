@@ -1,0 +1,152 @@
+{
+  "id": "bill_009",
+  "layout": "hospital_fixed",
+  "messy": [
+    "blank_repeated_date",
+    "duplicate_charge",
+    "multiline_item",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 161,
+      "end": 169,
+      "type": "ACCOUNT_ID",
+      "text": "07248849"
+    },
+    {
+      "start": 184,
+      "end": 197,
+      "type": "NAME",
+      "text": "MURPHY, THANH"
+    },
+    {
+      "start": 213,
+      "end": 223,
+      "type": "DOB",
+      "text": "1992-05-15"
+    },
+    {
+      "start": 243,
+      "end": 255,
+      "type": "NAME",
+      "text": "Thanh Murphy"
+    },
+    {
+      "start": 258,
+      "end": 274,
+      "type": "ADDRESS",
+      "text": "5123 Chestnut Ct"
+    },
+    {
+      "start": 277,
+      "end": 298,
+      "type": "ADDRESS",
+      "text": "Port Jervis, NY 12722"
+    },
+    {
+      "start": 306,
+      "end": 318,
+      "type": "PHONE",
+      "text": "513.555.0156"
+    },
+    {
+      "start": 378,
+      "end": 388,
+      "type": "MEMBER_ID",
+      "text": "W979375560"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 26,
+      "end": 42,
+      "type": "ADDRESS",
+      "text": "77 Cathedral Ave"
+    },
+    {
+      "start": 44,
+      "end": 63,
+      "type": "ADDRESS",
+      "text": "Millbrook, NY 12545"
+    },
+    {
+      "start": 83,
+      "end": 97,
+      "type": "PHONE",
+      "text": "1-800-555-0157"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-02-12",
+      "code": "G0439",
+      "description": "ANNUAL WELLNESS VISIT, SUBSEQUENL",
+      "billed_amount": "254.39",
+      "allowed_amount": null,
+      "insurer_paid": "69.44",
+      "patient_responsibility": "7.72"
+    },
+    {
+      "service_date": "2025-02-13",
+      "code": "85025",
+      "description": "COMPLETE BLOOD COUNT WITH AUTOMATED DIFFERENTIAL",
+      "billed_amount": "71.15",
+      "allowed_amount": null,
+      "insurer_paid": "32.98",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-15",
+      "code": "87880",
+      "description": "RAPID STREP TEST",
+      "billed_amount": "59.01",
+      "allowed_amount": null,
+      "insurer_paid": "24.58",
+      "patient_responsibility": "2.73"
+    },
+    {
+      "service_date": "2025-02-18",
+      "code": "71046",
+      "description": "CHEST X-RAY, 2 VIEWS",
+      "billed_amount": "261.67",
+      "allowed_amount": null,
+      "insurer_paid": "133.21",
+      "patient_responsibility": "57.09"
+    },
+    {
+      "service_date": "2025-02-18",
+      "code": "99214",
+      "description": "OFFICE VISIT, ESTABLISHED PATIENT, MODERATE COMPLEXITY",
+      "billed_amount": "310.00",
+      "allowed_amount": null,
+      "insurer_paid": "104.22",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-18",
+      "code": "99214",
+      "description": "OFFICE VISIT, ESTABLISHED PATIENT, MODERATE COMPLEXITY",
+      "billed_amount": "310.00",
+      "allowed_amount": null,
+      "insurer_paid": "104.22",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-18",
+      "code": "J1885",
+      "description": "KETOROLAC TROMETHAMINE INJECTION, PER 15 MG",
+      "billed_amount": "47.11",
+      "allowed_amount": null,
+      "insurer_paid": "17.89",
+      "patient_responsibility": "7.66"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      4,
+      5
+    ]
+  ]
+}

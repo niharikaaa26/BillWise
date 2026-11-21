@@ -1,0 +1,60 @@
+Clearpath Health Insurance -- Your Claim Summary
+================================================
+Prepared for: AISHA D. NGUYEN
+Member ID: CPH-8953-1252
+Born: 2003-03-01
+Address: 4180 Briar Lane Unit 12, Port Jervis, NY 12778
+Contact: 212-555-0160
+Reference #: CLM-190952453
+
+Claim line 1
+  Date of service: Feb 15, 2025
+  Service: J2405 Ondansetron hydrochloride injection,
+           per 1 mg
+  Provider charged: 58.97
+  Plan allowed: 38.78
+  Plan paid: 38.78
+  Your share: 0.00
+
+Claim line 2
+  Date of service: Feb 16, 2025
+  Service: 93000 Electrocardiogram, routine, with interpretation and report
+  Provider charged: 218.48
+  Plan allowed: 102.57
+  Plan paid: 92.31
+  Your share: 10.26
+
+Claim line 3
+  Date of service: Feb 16, 2025
+  Service: 93000 Electrocardiogram, routine, with
+           interpretation and report
+  Provider charged: 298.17
+  Plan allowed: 229.29
+  Plan paid: 206.36
+  Your share: 22.93
+
+Claim line 4
+  Date of service: Feb 16, 2025
+  Service: 93000 Electrocardiogram, routine, with interpretation and report
+  Provider charged: 114.95
+  Plan allowed: 68.49
+  Plan paid: 54.79
+  Your share: 13.7O
+
+Claim line 5
+  Date of service: Feb 16, 2025
+  Service: 90686 Influenza vaccine, quadrivalent,
+           preservative free
+  Provider charged: 58,81
+  Plan paid: 29.88
+  Your share: 7.47
+
+Claim line 6
+  Date of service: Feb 16, 2025
+  Service: J2405 Ondansetron hydrochloride injection, per 1 mg
+  Provider charged: 35.54
+  Plan allowed: 10.93
+  Plan paid: 8.74
+  Your share: 2.19
+
+This summary is for your records.

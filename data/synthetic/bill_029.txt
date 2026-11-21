@@ -1,0 +1,33 @@
+HIGH PLAINS COMMUNITY HOSPITAL
+2 Prairie Way, Lakewood, CO 80226
+Billing Questions: 1-800-555-0191
+
+ITEMIZED STATEMENT
+Statement Date: 02/12/2025
+Account Number: 73709774
+Patient Name: WOJCIK, OLUWASEUN
+Date of Birth: 8/4/75
+SSN: 931-77-8811
+Mailing Address:
+  Oluwaseun Wojcik
+  1634 Pine Rd
+  Lakewood, CO 80255
+Phone: 615.555.0162
+Primary Insurance: Blueriver Health Plans   Member ID: MBR8401726
+
+DATE       CODE    DESCRIPTION                           CHARGES   INS PAID     ADJUST    PT RESP
+------------------------------------------------------------------------------------------------
+01/06/2025 87880   RAPID STREP TEST                        67,33      33.35      19.69      14.29
+01/06/2025 74177   CT ABDOMEN AND PELVIS WLTH           2,579.39     919.09   1,558.18     102.12
+                   CONTRAST
+01/06/2025 J2405   ONDANSETRON HYDROCHLORIDE               68,26      42.88      25.38       0.00
+                   INJECTION, PER 1 MG
+01/06/2025 G0439   ANNUAL WELLNESS VISIT, SUBSEQUENT      241.40       0.00     111.20     130.20
+01/06/2025 J2405   ONDANSETRON HYDROCHLORIDE               38.84      16.95      17.65       4.24
+                   INJECTION, PER 1 MG
+01/06/2025 G0439   ANNUAL WELLNESS VISIT, SUBSEQUENT      183.71       0.00      72.89     1l0.82
+------------------------------------------------------------------------------------------------
+                   TOTAL CHARGES                        3,178.93
+02/12/2025         PAYMENT - THANK YOU                   -116.79
+
+Please remit the patient balance within 30 days.

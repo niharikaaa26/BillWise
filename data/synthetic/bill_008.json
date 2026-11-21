@@ -1,0 +1,159 @@
+{
+  "id": "bill_008",
+  "layout": "clinic_csv",
+  "messy": [
+    "missing_code",
+    "multiline_item",
+    "ocr_amount",
+    "ocr_description",
+    "unlabeled_name"
+  ],
+  "pii": [
+    {
+      "start": 58,
+      "end": 70,
+      "type": "NAME",
+      "text": "RAFAEL SMITH"
+    },
+    {
+      "start": 71,
+      "end": 89,
+      "type": "ADDRESS",
+      "text": "2115 HILLCREST WAY"
+    },
+    {
+      "start": 90,
+      "end": 108,
+      "type": "ADDRESS",
+      "text": "MILLBROOK NY 12523"
+    },
+    {
+      "start": 115,
+      "end": 121,
+      "type": "NAME",
+      "text": "Rafael"
+    },
+    {
+      "start": 169,
+      "end": 175,
+      "type": "NAME",
+      "text": "Rafael"
+    },
+    {
+      "start": 291,
+      "end": 303,
+      "type": "NAME",
+      "text": "Rafael Smith"
+    },
+    {
+      "start": 318,
+      "end": 325,
+      "type": "ACCOUNT_ID",
+      "text": "3794252"
+    },
+    {
+      "start": 332,
+      "end": 342,
+      "type": "DOB",
+      "text": "09/08/1956"
+    },
+    {
+      "start": 358,
+      "end": 372,
+      "type": "PHONE",
+      "text": "(319) 555-0135"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 21,
+      "end": 37,
+      "type": "ADDRESS",
+      "text": "15 Commerce Blvd"
+    },
+    {
+      "start": 38,
+      "end": 56,
+      "type": "ADDRESS",
+      "text": "Fairview, TN 37062"
+    },
+    {
+      "start": 226,
+      "end": 240,
+      "type": "PHONE",
+      "text": "(513) 555-0149"
+    },
+    {
+      "start": 250,
+      "end": 279,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-02-08",
+      "code": "87880",
+      "description": "Rapid strep test",
+      "billed_amount": "25.75",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "10.25"
+    },
+    {
+      "service_date": "2025-02-08",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "97.81",
+      "allowed_amount": null,
+      "insurer_paid": "24.67",
+      "patient_responsibility": "6.17"
+    },
+    {
+      "service_date": "2025-02-08",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "315.01",
+      "allowed_amount": null,
+      "insurer_paid": "211.41",
+      "patient_responsibility": "23.49"
+    },
+    {
+      "service_date": "2025-02-11",
+      "code": null,
+      "description": "Office visit, established patient, moderate c0mplexity",
+      "billed_amount": "225.16",
+      "allowed_amount": null,
+      "insurer_paid": "160.94",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-12",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "75.85",
+      "allowed_amount": null,
+      "insurer_paid": "33.17",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-12",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "79.60",
+      "allowed_amount": null,
+      "insurer_paid": "18.07",
+      "patient_responsibility": "7.74"
+    },
+    {
+      "service_date": "2025-02-12",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "107.40",
+      "allowed_amount": null,
+      "insurer_paid": "42.62",
+      "patient_responsibility": "0.00"
+    }
+  ],
+  "duplicate_pairs": []
+}

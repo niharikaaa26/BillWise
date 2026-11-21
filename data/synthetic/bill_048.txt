@@ -1,0 +1,25 @@
+Northgate Pediatrics
+15 Commerce Blvd
+Fairview, TN 37062
+
+FATIMA J. THOMPSON
+524 ELM RD
+FAIRVIEW TN 37096
+
+Dear Fatima Thompson,
+Our records show a balance on the account for Fatima. Please review the charges below.
+Questions? Call (864) 555-0136 or email billing@northgatepeds.example.
+
+Patient Acct: 7558939   DOB 1963-09-25
+Phone on file: (319) 555-0138
+
+Svc Date,CPT/HCPCS,Description,Charge,Allowed,Ins Paid,Your Balance
+03/20/2025,99285,"Emergency department visit, high severity",2065.21,687.25,481.08,206.17
+03/20/2025,71046,"Chest x-ray, 2 views",406.80,137.96,0.00,137.96
+03/20/2025,36415,Routine venipuncture,38.06,17.87,0.00,17.87
+03/20/2025,G0439,"Annual wellness visit, subsequent",203.91,136.25,122.63,13.62
+03/20/2025,85025,"Complete blood counl with automated
+differential",82.90,47.11,37.69,9.42
+03/21/2025,36415,Routine venipuncture,54.89,42.70,29.89,12.8l
+
+Total balance due: $397.85

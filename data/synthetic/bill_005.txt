@@ -1,0 +1,35 @@
+HIGH PLAINS COMMUNITY HOSPITAL
+2 Prairie Way, Lakewood, CO 80226
+Billing Questions: 1-800-555-0186
+
+ITEMIZED STATEMENT
+Statement Date: 08/12/2025
+Account Number: 08438007
+Patient Name: KOWALSKI, ANDRE
+Date of Birth: 06/14/1992
+Guarantor: Fatima J. Kowalski
+SSN: 950-51-7165
+Mailing Address:
+  Andre Kowalski
+  3043 Hillcrest Court Unit 1C
+  Lakewood, CO 80228
+Phone: 303-555-0112
+Primary Insurance: Clearpath Health Insurance   Member ID: ZQ3597649-01
+
+DATE       CODE    DESCRIPTION                           CHARGES   INS PAID     ADJUST    PT RESP
+------------------------------------------------------------------------------------------------
+07/14/2025 90471   IMMUNIZATION ADMINISTRATION,            47.77      23.45      24.32       0.00
+                   SINGLE VACCINE
+07/14/2025 90471   IMMUNIZATION ADMINISTRATION,            54.58       0.00      27.18      27.40
+                   SINGLE VACCINE
+07/14/2025 80053   COMPREHENSIVE METABOLIC PANEL          258.16     105.25     126.60      26.31
+07/14/2025 99285   EMERGENCY DEPARTMENT VISIT, HIGH     1,603.32     585.41     871.56     146.35
+                   SEVERITY
+07/14/2025 A4649   SURGICAL SUPPLY, MISCELLANEOUS         226.55     116.03      97.63      12.89
+07/14/2025 97110   THERAPEUTIC EXERCISES, EACH 15          93,20      51.36      19.83      22.0l
+                   MINUTES
+------------------------------------------------------------------------------------------------
+                   TOTAL CHARGES                        2,283.58
+08/12/2025         PAYMENT - THANK YOU                    -41.77
+
+Please remit the patient balance within 30 days.

@@ -1,0 +1,35 @@
+Summit Mutual Health -- Your Claim Summary
+================================================
+Prepared for: GRACE L. DOE
+Member ID: XGH31601499   SSN: 969-37-7168
+Born: 4/13/44
+Address: 413 Oak Ln #25, Port Jervis, NY 12739
+Contact: grace.doe87@example.com / (615) 555-0168
+Reference #: CLM-412184453
+
+Claim line 1
+  Date of service: Feb 8, 2025
+  Service: 97110 Therapeutic exercises, each 15 minutes
+  Provider charged: 87.62
+  Plan allowed: 38.37
+  Plan paid: 34.53
+  Your share: 3.84
+
+Claim line 2
+  Date of service: Feb 10, 2025
+  Service: 90471 Immunization administration, single
+           vaccine
+  Provider charged: 30.08
+  Plan allowed: 18.54
+  Plan paid: 18.54
+  Your share: 0.00
+
+Claim line 3
+  Date of service: Feb 13, 2025
+  Service: 74177 CT abdomen and pelvis with contrast
+  Provider charged: 1,989.94
+  Plan allowed: 894.12
+  Plan paid: 715.30
+  Your share: 178.82
+
+This summary is for your records.

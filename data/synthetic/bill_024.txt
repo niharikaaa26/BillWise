@@ -1,0 +1,20 @@
+Northgate Pediatrics
+15 Commerce Blvd
+Fairview, TN 37062
+
+FATIMA BIANCHI
+3642 HIGHLAND LN
+SPRINGDALE AR 72739
+
+Dear Fatima,
+Our records show a balance on the account for Fatima. Please review the charges below.
+Questions? Call (303) 555-0120 or email billing@northgatepeds.example.
+
+Patient Acct: 1009932   DOB September 29, 1967
+
+Svc Date,CPT/HCPCS,Description,Charge,Allowed,Ins Paid,Your Balance
+01/29/2025,80053,Comprehensive metabolic panel,193.89,109.72,98.75,10.97
+01/29/2025,J1885,"Ketorolac tromethamine injection, per 15 mg",48.66,26.17,20.94,5.23
+01/29/2025,93000,"Electrocardiogram, routine, with interpretation and report",260.57,163.12,114.18,48.94
+
+Total balance due: $65.14

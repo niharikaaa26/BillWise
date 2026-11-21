@@ -1,0 +1,33 @@
+MERCY VALLEY REGIONAL HOSPITAL
+4100 Hospital Dr, Riverton, OH 45011
+Billing Questions: 1-800-555-0178
+
+ITEMIZED STATEMENT
+Statement Date: 07/30/2025
+Acc0unt Number: 33036758
+Patient Name: SMITH, PATRICE
+Date of Birth: 12/18/75
+Guarantor: Kevin Smith
+Mailing Address:
+  Patrice Smith
+  8681 Maple Rd
+  Greenville, SC 29622
+Phone: 319-555-0108
+Primary Insurance: Summit Mutual Health   Member ID: ZQ0593538-01
+
+DATE       CODE    DESCRIPTION                           CHARGES   INS PAID     ADJUST    PT RESP
+------------------------------------------------------------------------------------------------
+07/19/2025 80053   COMPREHENSIVE METABOLIC PANEL          320.60     230.80      64.16      25.64
+07/19/2025 87880   RAPID STREP TEST                        66.42       0.00      28.37      38.05
+07/19/2025 97110   THERAPEUTIC EXERCISES, EACH 15         125.74      59.81      50.98      14.95
+                   MINUTES
+07/19/2025 74177   CT ABDOMEN AND PELVIS WITH           3,342.23   1,060.94   1,826.60     454.69
+                   CONTRAST
+07/19/2025 87880   RAPID STREP TEST                        26.66       0.00      15.90      10.76
+07/19/2025 90686   INFLUENZA VACCINE, QUADRIVALENT,        82.7l       0.00      51.65      31.06
+                   PRESERVATIVE FREE
+------------------------------------------------------------------------------------------------
+                   TOTAL CHARGES                        3,964.36
+07/30/2025         PAYMENT - THANK YOU                   -113.15
+
+Please remit the patient balance within 30 days.

@@ -1,0 +1,112 @@
+{
+  "id": "bill_044",
+  "layout": "clinic_csv",
+  "messy": [
+    "ocr_amount",
+    "ssn_present",
+    "unlabeled_name"
+  ],
+  "pii": [
+    {
+      "start": 58,
+      "end": 75,
+      "type": "NAME",
+      "text": "RAFAEL ACHTERBERG"
+    },
+    {
+      "start": 76,
+      "end": 94,
+      "type": "ADDRESS",
+      "text": "132 HILLCREST LANE"
+    },
+    {
+      "start": 95,
+      "end": 112,
+      "type": "ADDRESS",
+      "text": "LAKEWOOD CO 80250"
+    },
+    {
+      "start": 119,
+      "end": 125,
+      "type": "NAME",
+      "text": "Rafael"
+    },
+    {
+      "start": 173,
+      "end": 179,
+      "type": "NAME",
+      "text": "Rafael"
+    },
+    {
+      "start": 300,
+      "end": 307,
+      "type": "ACCOUNT_ID",
+      "text": "6536974"
+    },
+    {
+      "start": 314,
+      "end": 324,
+      "type": "DOB",
+      "text": "2006-05-17"
+    },
+    {
+      "start": 340,
+      "end": 352,
+      "type": "PHONE",
+      "text": "615.555.0142"
+    },
+    {
+      "start": 368,
+      "end": 379,
+      "type": "SSN",
+      "text": "984-91-2780"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 21,
+      "end": 37,
+      "type": "ADDRESS",
+      "text": "15 Commerce Blvd"
+    },
+    {
+      "start": 38,
+      "end": 56,
+      "type": "ADDRESS",
+      "text": "Fairview, TN 37062"
+    },
+    {
+      "start": 230,
+      "end": 244,
+      "type": "PHONE",
+      "text": "(513) 555-0177"
+    },
+    {
+      "start": 254,
+      "end": 283,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-03-04",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "168.22",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "53.24"
+    },
+    {
+      "service_date": "2025-03-04",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1619.20",
+      "allowed_amount": null,
+      "insurer_paid": "565.15",
+      "patient_responsibility": "62.79"
+    }
+  ],
+  "duplicate_pairs": []
+}

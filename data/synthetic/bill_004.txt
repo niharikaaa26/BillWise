@@ -1,0 +1,25 @@
+Northgate Pediatrics
+15 Commerce Blvd
+Fairview, TN 37062
+
+ROBERT PETROV
+2110 BRIAR WAY APT 38B
+SPRINGDALE AR 72711
+
+Dear Robert Petrov,
+Our records show a balance on the account for Robert. Please review the charges below.
+Questions? Call (513) 555-0158 or email billing@northgatepeds.example.
+
+Patient Acct: 1939052   DOB October 12, 1997
+
+Svc Date,CPT/HCPCS,Description,Charge,Allowed,Ins Paid,Your Balance
+06/23/2025,99285,"Emergency department visit, high
+severity",1708.64,907.60,726.08,181.52
+06/26/2025,93000,"Electrocardiogram, routine, with
+interpretation and report",272.27,169.12,0.00,169.12
+06/26/2025,74177,CT abdomen and pelvis with contrast,2348.66,1306.99,1045.59,261.40
+06/27/2025,80053,Comprehensive metabolic panel,141.78,105.13,73.59,31.54
+06/27/2025,99283,"Emergency department visit, moderate severity",1109.44,412.21,288.55,123.66
+06/27/2025,96374,"IV push, single or initial substance",278.42,101.05,90.95,10.1O
+
+Total balance due: $777.34

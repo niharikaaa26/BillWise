@@ -1,0 +1,140 @@
+{
+  "id": "bill_020",
+  "layout": "clinic_csv",
+  "messy": [
+    "multiline_item",
+    "ocr_amount",
+    "ssn_present",
+    "unlabeled_name"
+  ],
+  "pii": [
+    {
+      "start": 60,
+      "end": 75,
+      "type": "NAME",
+      "text": "TOMASZ OYELARAN"
+    },
+    {
+      "start": 76,
+      "end": 87,
+      "type": "ADDRESS",
+      "text": "4240 ELM RD"
+    },
+    {
+      "start": 88,
+      "end": 108,
+      "type": "ADDRESS",
+      "text": "CEDAR FALLS IA 50614"
+    },
+    {
+      "start": 115,
+      "end": 121,
+      "type": "NAME",
+      "text": "Tomasz"
+    },
+    {
+      "start": 169,
+      "end": 175,
+      "type": "NAME",
+      "text": "Tomasz"
+    },
+    {
+      "start": 291,
+      "end": 306,
+      "type": "NAME",
+      "text": "Tomasz Oyelaran"
+    },
+    {
+      "start": 321,
+      "end": 328,
+      "type": "ACCOUNT_ID",
+      "text": "2211966"
+    },
+    {
+      "start": 335,
+      "end": 341,
+      "type": "DOB",
+      "text": "8/8/07"
+    },
+    {
+      "start": 357,
+      "end": 368,
+      "type": "SSN",
+      "text": "947-73-5955"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 26,
+      "end": 37,
+      "type": "ADDRESS",
+      "text": "310 Dock St"
+    },
+    {
+      "start": 38,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Greenville, SC 29601"
+    },
+    {
+      "start": 226,
+      "end": 240,
+      "type": "PHONE",
+      "text": "(303) 555-0195"
+    },
+    {
+      "start": 250,
+      "end": 279,
+      "type": "EMAIL",
+      "text": "billing@harborimaging.example"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-06-03",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1933.42",
+      "allowed_amount": null,
+      "insurer_paid": "798.72",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-03",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "1247.12",
+      "allowed_amount": null,
+      "insurer_paid": "343.69",
+      "patient_responsibility": "38.19"
+    },
+    {
+      "service_date": "2025-06-03",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "3276.29",
+      "allowed_amount": null,
+      "insurer_paid": "838.37",
+      "patient_responsibility": "209.59"
+    },
+    {
+      "service_date": "2025-06-03",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "2457.55",
+      "allowed_amount": null,
+      "insurer_paid": "1516.00",
+      "patient_responsibility": "379.00"
+    },
+    {
+      "service_date": "2025-06-05",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "169.29",
+      "allowed_amount": null,
+      "insurer_paid": "114.81",
+      "patient_responsibility": "12.76"
+    }
+  ],
+  "duplicate_pairs": []
+}

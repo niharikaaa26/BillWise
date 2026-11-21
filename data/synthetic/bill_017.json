@@ -1,0 +1,145 @@
+{
+  "id": "bill_017",
+  "layout": "hospital_fixed",
+  "messy": [
+    "missing_phone",
+    "multiline_item",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 161,
+      "end": 171,
+      "type": "ACCOUNT_ID",
+      "text": "9457089522"
+    },
+    {
+      "start": 186,
+      "end": 201,
+      "type": "NAME",
+      "text": "BIANCHI, ELIJAH"
+    },
+    {
+      "start": 217,
+      "end": 229,
+      "type": "DOB",
+      "text": "May 28, 1953"
+    },
+    {
+      "start": 241,
+      "end": 256,
+      "type": "NAME",
+      "text": "Siobhan Bianchi"
+    },
+    {
+      "start": 276,
+      "end": 293,
+      "type": "NAME",
+      "text": "Elijah B. Bianchi"
+    },
+    {
+      "start": 296,
+      "end": 313,
+      "type": "ADDRESS",
+      "text": "1230 Highland Way"
+    },
+    {
+      "start": 316,
+      "end": 334,
+      "type": "ADDRESS",
+      "text": "Lakewood, CO 80226"
+    },
+    {
+      "start": 388,
+      "end": 398,
+      "type": "MEMBER_ID",
+      "text": "W462172094"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 26,
+      "end": 42,
+      "type": "ADDRESS",
+      "text": "77 Cathedral Ave"
+    },
+    {
+      "start": 44,
+      "end": 63,
+      "type": "ADDRESS",
+      "text": "Millbrook, NY 12545"
+    },
+    {
+      "start": 83,
+      "end": 97,
+      "type": "PHONE",
+      "text": "1-800-555-0181"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2024-12-21",
+      "code": "87880",
+      "description": "RAPID STREP TEST",
+      "billed_amount": "32.73",
+      "allowed_amount": null,
+      "insurer_paid": "14.85",
+      "patient_responsibility": "3.71"
+    },
+    {
+      "service_date": "2024-12-21",
+      "code": "A4649",
+      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
+      "billed_amount": "191.99",
+      "allowed_amount": null,
+      "insurer_paid": "99.31",
+      "patient_responsibility": "42.56"
+    },
+    {
+      "service_date": "2024-12-21",
+      "code": "G0439",
+      "description": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
+      "billed_amount": "210.73",
+      "allowed_amount": null,
+      "insurer_paid": "69.13",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2024-12-21",
+      "code": "A4649",
+      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
+      "billed_amount": "158.10",
+      "allowed_amount": null,
+      "insurer_paid": "67.44",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2024-12-21",
+      "code": "97110",
+      "description": "THERAPEUTIC EXERCISES, EACH 15 MINUTES",
+      "billed_amount": "177.88",
+      "allowed_amount": null,
+      "insurer_paid": "74.46",
+      "patient_responsibility": "8.27"
+    },
+    {
+      "service_date": "2024-12-23",
+      "code": "99283",
+      "description": "EMERGENCY DEPARTMENT VISIT, MODERATE SEVERITY",
+      "billed_amount": "1237.41",
+      "allowed_amount": null,
+      "insurer_paid": "399.62",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2024-12-23",
+      "code": "93000",
+      "description": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+      "billed_amount": "233.56",
+      "allowed_amount": null,
+      "insurer_paid": "122.69",
+      "patient_responsibility": "0.00"
+    }
+  ],
+  "duplicate_pairs": []
+}

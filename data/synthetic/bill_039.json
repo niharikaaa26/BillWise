@@ -1,0 +1,135 @@
+{
+  "id": "bill_039",
+  "layout": "claim_blocks",
+  "messy": [
+    "duplicate_charge",
+    "multiline_item",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 112,
+      "end": 131,
+      "type": "NAME",
+      "text": "NAVEEN A. DELACROIX"
+    },
+    {
+      "start": 143,
+      "end": 156,
+      "type": "MEMBER_ID",
+      "text": "CPH-5769-4504"
+    },
+    {
+      "start": 163,
+      "end": 173,
+      "type": "DOB",
+      "text": "1963-07-11"
+    },
+    {
+      "start": 183,
+      "end": 219,
+      "type": "ADDRESS",
+      "text": "6865 Pine Way, Port Jervis, NY 12718"
+    },
+    {
+      "start": 229,
+      "end": 259,
+      "type": "EMAIL",
+      "text": "naveen.delacroix92@example.com"
+    },
+    {
+      "start": 262,
+      "end": 274,
+      "type": "PHONE",
+      "text": "845.555.0108"
+    },
+    {
+      "start": 288,
+      "end": 301,
+      "type": "ACCOUNT_ID",
+      "text": "CLM-171397275"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-06-05",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "42.02",
+      "allowed_amount": "27.49",
+      "insurer_paid": "24.74",
+      "patient_responsibility": "2.75"
+    },
+    {
+      "service_date": "2025-06-08",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "64.81",
+      "allowed_amount": "49.81",
+      "insurer_paid": "49.81",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-08",
+      "code": "97110",
+      "description": "Therapeutic exercises, cach 15 minutes",
+      "billed_amount": "115.77",
+      "allowed_amount": "57.84",
+      "insurer_paid": "57.84",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-08",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "28.32",
+      "allowed_amount": "12.67",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "12.67"
+    },
+    {
+      "service_date": "2025-06-08",
+      "code": "99285",
+      "description": "Emergency deparlment visit, high severity",
+      "billed_amount": "2305.71",
+      "allowed_amount": "748.11",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "748.11"
+    },
+    {
+      "service_date": "2025-06-08",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "745.21",
+      "allowed_amount": "543.97",
+      "insurer_paid": "380.78",
+      "patient_responsibility": "163.19"
+    },
+    {
+      "service_date": "2025-06-08",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "745.21",
+      "allowed_amount": "543.97",
+      "insurer_paid": "380.78",
+      "patient_responsibility": "163.19"
+    },
+    {
+      "service_date": "2025-06-10",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "165.33",
+      "allowed_amount": "72.84",
+      "insurer_paid": "72.84",
+      "patient_responsibility": "0.00"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      5,
+      6
+    ]
+  ]
+}

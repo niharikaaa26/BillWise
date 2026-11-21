@@ -1,0 +1,151 @@
+{
+  "id": "bill_040",
+  "layout": "clinic_csv",
+  "messy": [
+    "ocr_amount",
+    "ocr_description",
+    "unlabeled_name"
+  ],
+  "pii": [
+    {
+      "start": 58,
+      "end": 74,
+      "type": "NAME",
+      "text": "SIOBHAN KOWALSKI"
+    },
+    {
+      "start": 75,
+      "end": 93,
+      "type": "ADDRESS",
+      "text": "2923 RIVERBEND WAY"
+    },
+    {
+      "start": 94,
+      "end": 112,
+      "type": "ADDRESS",
+      "text": "MILLBROOK NY 12566"
+    },
+    {
+      "start": 119,
+      "end": 126,
+      "type": "NAME",
+      "text": "Siobhan"
+    },
+    {
+      "start": 174,
+      "end": 181,
+      "type": "NAME",
+      "text": "Siobhan"
+    },
+    {
+      "start": 303,
+      "end": 310,
+      "type": "ACCOUNT_ID",
+      "text": "3762965"
+    },
+    {
+      "start": 317,
+      "end": 327,
+      "type": "DOB",
+      "text": "03/28/1999"
+    },
+    {
+      "start": 343,
+      "end": 355,
+      "type": "PHONE",
+      "text": "917-555-0111"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 23,
+      "end": 35,
+      "type": "ADDRESS",
+      "text": "900 Shore Rd"
+    },
+    {
+      "start": 36,
+      "end": 56,
+      "type": "ADDRESS",
+      "text": "Oak Harbor, WA 98277"
+    },
+    {
+      "start": 232,
+      "end": 246,
+      "type": "PHONE",
+      "text": "(303) 555-0123"
+    },
+    {
+      "start": 256,
+      "end": 286,
+      "type": "EMAIL",
+      "text": "billing@lakesideclinic.example"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-01-18",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "784.45",
+      "allowed_amount": null,
+      "insurer_paid": "328.63",
+      "patient_responsibility": "82.16"
+    },
+    {
+      "service_date": "2025-01-18",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "201.83",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "137.14"
+    },
+    {
+      "service_date": "2025-01-18",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "45.41",
+      "allowed_amount": null,
+      "insurer_paid": "10.35",
+      "patient_responsibility": "4.43"
+    },
+    {
+      "service_date": "2025-01-19",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "74.25",
+      "allowed_amount": null,
+      "insurer_paid": "38.27",
+      "patient_responsibility": "4.25"
+    },
+    {
+      "service_date": "2025-01-19",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "314.08",
+      "allowed_amount": null,
+      "insurer_paid": "206.33",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-01-19",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalenl, preservative free",
+      "billed_amount": "36.12",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "11.65"
+    },
+    {
+      "service_date": "2025-01-22",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "72.76",
+      "allowed_amount": null,
+      "insurer_paid": "40.83",
+      "patient_responsibility": "4.54"
+    }
+  ],
+  "duplicate_pairs": []
+}

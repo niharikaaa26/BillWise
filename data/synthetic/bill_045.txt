@@ -1,0 +1,31 @@
+ST. BRIGID MEDICAL CENTER
+77 Cathedral Ave, Millbrook, NY 12545
+Billing Questions: 1-800-555-0178
+
+ITEMIZED STATEMENT
+Statement Date: 05/28/2025
+Account Number: 04954312
+Patient Name: WOJCIK, EMILY
+Date of Birth: 1967-12-18
+SSN: 949-58-5861
+Mailing Address:
+  Emily F. Wojcik
+  5343 Hillcrest Ave
+  Cedar Falls, IA 50611
+Phone: 479-555-0114
+Primary Insurance: Clearpath Health Insurance   Member ID: XGH12683937
+
+DATE       CODE    DESCRIPTION                           CHARGES   INS PAID     ADJUST    PT RESP
+------------------------------------------------------------------------------------------------
+05/10/2025 97110   THERAPEUTIC EXERCISES, EACH 15         109.81      36.26      69.52       4.03
+                   MINUTES
+05/11/2025 J1885   KETOROLAC TROMETHAMINE INJECTION,       59.60      27.17      20.78      11.65
+                   PER 15 MG
+05/11/2025 87880   RAPID STREP TEST                        40.23      26.30      13.93       0.00
+05/11/2025 87880   RAPID STREP TEST                        51.74      20.82      25.72       5.20
+05/11/2025 99283   EMERGENCY DEPARTMENT VISIT,            953,00     352.41     512.49      88.10
+                   MODERATE SEVERITY
+------------------------------------------------------------------------------------------------
+                   TOTAL CHARGES                        1,214.38
+
+Please remit the patient balance within 30 days.

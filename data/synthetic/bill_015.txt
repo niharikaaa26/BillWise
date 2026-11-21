@@ -1,0 +1,42 @@
+Clearpath Health Insurance -- Your Claim Summary
+================================================
+Prepared for: XIOMARA K. RAMIREZ
+Member ID: XGH05079459
+Born: 08/26/2005
+Address: 874 Juniper Ln, Oak Harbor, WA 98259
+Contact: xiomara.ramirez82@mail.example.com / (615) 555-0116
+Reference #: CLM-640575846
+
+Claim line 1
+  Date of service: Jun 17, 2025
+  Service: A4649 Surgical supply, rniscellaneous
+  Provider charged: $159.74
+  Plan allowed: $79.45
+  Plan paid: $55.62
+  Your share: $23.83
+
+Claim line 2
+  Date of service: Jun 17, 2025
+  Service: 96374 IV push, single or initial substance
+  Provider charged: $l64.63
+  Plan allowed: $102.21
+  Plan paid: $81.77
+  Your share: $20.44
+
+Claim line 3
+  Date of service: Jun 17, 2025
+  Service: 36415 Routine venipuncture
+  Provider charged: $24.72
+  Plan allowed: $17.44
+  Plan paid: $17.44
+  Your share: $0.00
+
+Claim line 4
+  Date of service: Jun 18, 2025
+  Service: 81001 Urinalysis, automated, with microscopy
+  Provider charged: $23.84
+  Plan allowed: $8.57
+  Plan paid: $6.86
+  Your share: $1.71
+
+This summary is for your records.

@@ -1,0 +1,43 @@
+Blueriver Health Plans -- Your Claim Summary
+================================================
+Prepared for: Luis Yamamoto
+Member ID: XGH39164214
+Born: 11/20/15
+Address: 6117 Juniper Road, Riverton, OH 45027
+Contact: luis.yamamoto20@example.net
+Reference #: CLM-826330815
+
+Claim line 1
+  Date of service: Sep 8, 2025
+  Service: 99214 Office visit, established patient,
+           moderate complexity
+  Provider charged: $323.12
+  Plan allowed: $118.88
+  Plan paid: $95.10
+  Your share: $23.78
+
+Claim line 2
+  Date of service: Sep 10, 2025
+  Service: G0439 Annual wellness visit, subsequent
+  Provider charged: $152.00
+  Plan allowed: $119.48
+  Plan paid: $95.58
+  Your share: $23.90
+
+Claim line 3
+  Date of service: Sep 11, 2025
+  Service: J2405 Ondansetron hydrochloride injection, per 1 mg
+  Provider charged: $65.66
+  Plan allowed: $39.99
+  Plan paid: $0.00
+  Your share: $39.99
+
+Claim line 4
+  Date of service: Sep 14, 2025
+  Service: 90471 Immunization adrninistration, single vaccine
+  Provider charged: $31.93
+  Plan allowed: $11.36
+  Plan paid: $10.22
+  Your share: $1.14
+
+This summary is for your records.

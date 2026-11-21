@@ -1,0 +1,28 @@
+BLUERIVER HEALTH PLANS
+PO Box 9902, Dayton, OH 45401
+EXPLANATION OF BENEFITS -- THIS IS NOT A BILL
+Processed: 10/13/2025
+
+Patient: Aisha Rossi     Member ID: MBR4215661
+Subscriber: Brianna Rossi
+Patient DOB: 1963-04-10     Group #: 76628
+Claim Number: 2314552682118
+Provider: Dr. Beth Cho, MD   NPI 1657952546
+
+Mail to:
+AISHA ROSSI
+4974 CEDAR DR
+OAK HARBOR, WA 98247
+
+Email on file: aisha.rossi17@example.com
+Questions? Call Member Services at 1-800-555-0167
+
+Date of Service | Procedure | Service Description                            | Amount Billed | Allowed Amount | Paid by Plan | Your Responsibility
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+09/24/2025      | J2405     | Ondansetron hydrochloride                      | $48.64        | $23.91         | $23.91       | $0.00
+                |           | injection, per 1 mg                            |               |                |              |
+09/26/2025      | J2405     | Ondansetron hydrochloride injection, per 1 mg  | $29.63        | $13.25         | $9.28        | $3.97
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+TOTALS          |           |                                                | $78.27        | $37.16         | $33.19       | $3.97
+
+The amount you owe may be billed to you separately by your provider.

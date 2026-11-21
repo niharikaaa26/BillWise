@@ -1,0 +1,59 @@
+Summit Mutual Health -- Your Claim Summary
+================================================
+Prepared for: Aisha Delacroix
+Member ID: MBR3663479   SSN: 934-92-1441
+Born: 12/26/82
+Address: 7785 Highland Ln Unit 6B, Springdale, AR 72742
+Contact: (303) 555-0169
+Reference #: CLM-372760488
+
+Claim line 1
+  Date of service: 06/28/2025
+  Service: 71046 Chest x-ray, 2 views
+  Provider charged: $234.46
+  Plan allowed: $101.41
+  Plan paid: $91.27
+  Your share: $10.14
+
+Claim line 2
+  Date of service: 06/28/2025
+  Service: 36415 Routine venipuncture
+  Provider charged: $27.07
+  Plan allowed: $8.31
+  Plan paid: $6.65
+  Your share: $1.66
+
+Claim line 3
+  Date of service: 06/28/2025
+  Service: 36415 Routine venipuncture
+  Provider charged: $27.07
+  Plan allowed: $8.31
+  Plan paid: $6.65
+  Your share: $1.66
+
+Claim line 4
+  Date of service: 06/28/2025
+  Service: J1885 Ketorolac tromethamine injection, per 15 mg
+  Provider charged: S79.54
+  Plan allowed: $61.87
+  Plan paid: $43.31
+  Your share: $l8.56
+
+Claim line 5
+  Date of service: 06/28/2025
+  Service: J2405 Ondansetron hydrochloride injection,
+           per 1 mg
+  Provider charged: $61.21
+  Plan allowed: $29.16
+  Plan paid: $23,33
+  Your share: $5.83
+
+Claim line 6
+  Date of service: 06/28/2025
+  Service: 99285 Emergency department visit, high severity
+  Provider charged: $3,186.04
+  Plan allowed: $1,502.44
+  Plan paid: $0.00
+  Your share: $1,502.44
+
+This summary is for your records.

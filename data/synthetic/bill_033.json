@@ -1,0 +1,105 @@
+{
+  "id": "bill_033",
+  "layout": "hospital_fixed",
+  "messy": [
+    "multiline_item",
+    "ssn_present"
+  ],
+  "pii": [
+    {
+      "start": 165,
+      "end": 173,
+      "type": "ACCOUNT_ID",
+      "text": "70929539"
+    },
+    {
+      "start": 188,
+      "end": 199,
+      "type": "NAME",
+      "text": "DOE, TOMASZ"
+    },
+    {
+      "start": 215,
+      "end": 225,
+      "type": "DOB",
+      "text": "2008-11-01"
+    },
+    {
+      "start": 231,
+      "end": 242,
+      "type": "SSN",
+      "text": "929-12-5837"
+    },
+    {
+      "start": 262,
+      "end": 272,
+      "type": "NAME",
+      "text": "Tomasz Doe"
+    },
+    {
+      "start": 275,
+      "end": 301,
+      "type": "ADDRESS",
+      "text": "48 Sunset Boulevard Apt 39"
+    },
+    {
+      "start": 304,
+      "end": 324,
+      "type": "ADDRESS",
+      "text": "Springdale, AR 72790"
+    },
+    {
+      "start": 332,
+      "end": 344,
+      "type": "PHONE",
+      "text": "513.555.0198"
+    },
+    {
+      "start": 400,
+      "end": 410,
+      "type": "MEMBER_ID",
+      "text": "MBR8331828"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 31,
+      "end": 47,
+      "type": "ADDRESS",
+      "text": "4100 Hospital Dr"
+    },
+    {
+      "start": 49,
+      "end": 67,
+      "type": "ADDRESS",
+      "text": "Riverton, OH 45011"
+    },
+    {
+      "start": 87,
+      "end": 101,
+      "type": "PHONE",
+      "text": "1-800-555-0137"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-06-06",
+      "code": "99283",
+      "description": "EMERGENCY DEPARTMENT VISIT, MODERATE SEVERITY",
+      "billed_amount": "1290.34",
+      "allowed_amount": null,
+      "insurer_paid": "627.77",
+      "patient_responsibility": "269.04"
+    },
+    {
+      "service_date": "2025-06-09",
+      "code": "99285",
+      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+      "billed_amount": "3079.39",
+      "allowed_amount": null,
+      "insurer_paid": "1009.13",
+      "patient_responsibility": "252.28"
+    }
+  ],
+  "duplicate_pairs": []
+}

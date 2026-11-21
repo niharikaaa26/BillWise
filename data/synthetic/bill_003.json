@@ -1,0 +1,87 @@
+{
+  "id": "bill_003",
+  "layout": "claim_blocks",
+  "messy": [
+    "missing_contact",
+    "multiline_item",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 108,
+      "end": 121,
+      "type": "NAME",
+      "text": "Luis Yamamoto"
+    },
+    {
+      "start": 133,
+      "end": 144,
+      "type": "MEMBER_ID",
+      "text": "XGH39164214"
+    },
+    {
+      "start": 151,
+      "end": 159,
+      "type": "DOB",
+      "text": "11/20/15"
+    },
+    {
+      "start": 169,
+      "end": 206,
+      "type": "ADDRESS",
+      "text": "6117 Juniper Road, Riverton, OH 45027"
+    },
+    {
+      "start": 216,
+      "end": 243,
+      "type": "EMAIL",
+      "text": "luis.yamamoto20@example.net"
+    },
+    {
+      "start": 257,
+      "end": 270,
+      "type": "ACCOUNT_ID",
+      "text": "CLM-826330815"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-09-08",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "323.12",
+      "allowed_amount": "118.88",
+      "insurer_paid": "95.10",
+      "patient_responsibility": "23.78"
+    },
+    {
+      "service_date": "2025-09-10",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "152.00",
+      "allowed_amount": "119.48",
+      "insurer_paid": "95.58",
+      "patient_responsibility": "23.90"
+    },
+    {
+      "service_date": "2025-09-11",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "65.66",
+      "allowed_amount": "39.99",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "39.99"
+    },
+    {
+      "service_date": "2025-09-14",
+      "code": "90471",
+      "description": "Immunization adrninistration, single vaccine",
+      "billed_amount": "31.93",
+      "allowed_amount": "11.36",
+      "insurer_paid": "10.22",
+      "patient_responsibility": "1.14"
+    }
+  ],
+  "duplicate_pairs": []
+}

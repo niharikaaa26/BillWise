@@ -1,0 +1,56 @@
+Summit Mutual Health -- Your Claim Summary
+================================================
+Prepared for: SARAH S. NGUYEN
+Member ID: MBR9092458
+Born: 09/01/1982
+Address: 2648 Hillcrest Ave #13B, Fairview, TN 37054
+Contact: sarah.nguyen33@mail.example.com / 864-555-0158
+Reference #: CLM-429103154
+
+Claim line 1
+  Date of service: Aug 31, 2025
+  Service: 80053 Comprehensive metabolic panel
+  Provider charged: 161.82
+  Plan paid: 53.98
+  Your share: 23.14
+
+Claim line 2
+  Date of service: Aug 31, 2025
+  Service: 85025 Complete blood count with automated differential
+  Provider charged: 60.05
+  Plan allowed: 43.51
+  Plan paid: 30.46
+  Your share: 13.05
+
+Claim line 3
+  Date of service: Aug 31, 2025
+  Service: J1885 Ketorolac tromethamine injection, per 15 mg
+  Provider charged: 50.33
+  Plan allowed: 36.35
+  Plan paid: 25.45
+  Your share: 10.90
+
+Claim line 4
+  Date of service: Aug 31, 2025
+  Service: 97110 Therapeutic exercises, each 15 minutes
+  Provider charged: 135.79
+  Plan allowed: 78.98
+  Plan paid: 78.98
+  Your share: 0.00
+
+Claim line 5
+  Date of service: Aug 31, 2025
+  Service: J2405 Ondansetron hydrochloride injection, per 1 mg
+  Provider charged: 48.42
+  Plan paid: 32.06
+  Your share: 0,00
+
+Claim line 6
+  Date of service: Sep 1, 2025
+  Service: A4649 Surgical supply, miscellaneous
+  Provider charged: 205.79
+  Plan allowed: 141.54
+  Plan paid: 141.54
+  Your share: 0.00
+
+This summary is for your records.

@@ -1,0 +1,143 @@
+{
+  "id": "bill_048",
+  "layout": "clinic_csv",
+  "messy": [
+    "multiline_item",
+    "ocr_amount",
+    "ocr_description",
+    "unlabeled_name"
+  ],
+  "pii": [
+    {
+      "start": 58,
+      "end": 76,
+      "type": "NAME",
+      "text": "FATIMA J. THOMPSON"
+    },
+    {
+      "start": 77,
+      "end": 87,
+      "type": "ADDRESS",
+      "text": "524 ELM RD"
+    },
+    {
+      "start": 88,
+      "end": 105,
+      "type": "ADDRESS",
+      "text": "FAIRVIEW TN 37096"
+    },
+    {
+      "start": 112,
+      "end": 127,
+      "type": "NAME",
+      "text": "Fatima Thompson"
+    },
+    {
+      "start": 175,
+      "end": 181,
+      "type": "NAME",
+      "text": "Fatima"
+    },
+    {
+      "start": 302,
+      "end": 309,
+      "type": "ACCOUNT_ID",
+      "text": "7558939"
+    },
+    {
+      "start": 316,
+      "end": 326,
+      "type": "DOB",
+      "text": "1963-09-25"
+    },
+    {
+      "start": 342,
+      "end": 356,
+      "type": "PHONE",
+      "text": "(319) 555-0138"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 21,
+      "end": 37,
+      "type": "ADDRESS",
+      "text": "15 Commerce Blvd"
+    },
+    {
+      "start": 38,
+      "end": 56,
+      "type": "ADDRESS",
+      "text": "Fairview, TN 37062"
+    },
+    {
+      "start": 232,
+      "end": 246,
+      "type": "PHONE",
+      "text": "(864) 555-0136"
+    },
+    {
+      "start": 256,
+      "end": 285,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-03-20",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2065.21",
+      "allowed_amount": "687.25",
+      "insurer_paid": "481.08",
+      "patient_responsibility": "206.17"
+    },
+    {
+      "service_date": "2025-03-20",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "406.80",
+      "allowed_amount": "137.96",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "137.96"
+    },
+    {
+      "service_date": "2025-03-20",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "38.06",
+      "allowed_amount": "17.87",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "17.87"
+    },
+    {
+      "service_date": "2025-03-20",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "203.91",
+      "allowed_amount": "136.25",
+      "insurer_paid": "122.63",
+      "patient_responsibility": "13.62"
+    },
+    {
+      "service_date": "2025-03-20",
+      "code": "85025",
+      "description": "Complete blood counl with automated differential",
+      "billed_amount": "82.90",
+      "allowed_amount": "47.11",
+      "insurer_paid": "37.69",
+      "patient_responsibility": "9.42"
+    },
+    {
+      "service_date": "2025-03-21",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "54.89",
+      "allowed_amount": "42.70",
+      "insurer_paid": "29.89",
+      "patient_responsibility": "12.81"
+    }
+  ],
+  "duplicate_pairs": []
+}

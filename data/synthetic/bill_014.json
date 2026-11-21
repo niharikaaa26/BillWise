@@ -1,0 +1,138 @@
+{
+  "id": "bill_014",
+  "layout": "eob_pipe",
+  "messy": [],
+  "pii": [
+    {
+      "start": 128,
+      "end": 147,
+      "type": "NAME",
+      "text": "Rafael C. Hernandez"
+    },
+    {
+      "start": 163,
+      "end": 176,
+      "type": "MEMBER_ID",
+      "text": "CPH-1546-9290"
+    },
+    {
+      "start": 190,
+      "end": 200,
+      "type": "DOB",
+      "text": "08/17/1993"
+    },
+    {
+      "start": 234,
+      "end": 247,
+      "type": "ACCOUNT_ID",
+      "text": "1517338843192"
+    },
+    {
+      "start": 305,
+      "end": 324,
+      "type": "NAME",
+      "text": "RAFAEL C. HERNANDEZ"
+    },
+    {
+      "start": 325,
+      "end": 342,
+      "type": "ADDRESS",
+      "text": "8630 RIVERBEND RD"
+    },
+    {
+      "start": 343,
+      "end": 363,
+      "type": "ADDRESS",
+      "text": "SPRINGDALE, AR 72748"
+    },
+    {
+      "start": 380,
+      "end": 410,
+      "type": "EMAIL",
+      "text": "rafael.hernandez28@example.org"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 21,
+      "end": 32,
+      "type": "ADDRESS",
+      "text": "PO Box 1180"
+    },
+    {
+      "start": 34,
+      "end": 49,
+      "type": "ADDRESS",
+      "text": "Boise, ID 83701"
+    },
+    {
+      "start": 258,
+      "end": 273,
+      "type": "NAME",
+      "text": "Dr. Dana Dubois"
+    },
+    {
+      "start": 446,
+      "end": 460,
+      "type": "PHONE",
+      "text": "1-800-555-0170"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-04-06",
+      "code": "85025",
+      "description": "Complete blood count with automated differential",
+      "billed_amount": "171.52",
+      "allowed_amount": "63.61",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "63.61"
+    },
+    {
+      "service_date": "2025-04-06",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "388.80",
+      "allowed_amount": "200.96",
+      "insurer_paid": "180.86",
+      "patient_responsibility": "20.10"
+    },
+    {
+      "service_date": "2025-04-06",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "294.67",
+      "allowed_amount": "104.81",
+      "insurer_paid": "94.33",
+      "patient_responsibility": "10.48"
+    },
+    {
+      "service_date": "2025-04-06",
+      "code": "87880",
+      "description": "Rapid strep test",
+      "billed_amount": "59.94",
+      "allowed_amount": "24.34",
+      "insurer_paid": "24.34",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-06",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "794.22",
+      "allowed_amount": "439.05",
+      "insurer_paid": "307.34",
+      "patient_responsibility": "131.71"
+    },
+    {
+      "service_date": "2025-04-06",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "208.03",
+      "allowed_amount": "67.31",
+      "insurer_paid": "67.31",
+      "patient_responsibility": "0.00"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,0 +1,22 @@
+Northgate Pediatrics
+15 Commerce Blvd
+Fairview, TN 37062
+
+KEVIN WILLIAMS
+2650 MAPLE AVE
+RIVERTON OH 45057
+
+Dear Kevin,
+Our records show a balance on the account for Kevin. Please review the charges below.
+Questions? Call (864) 555-0171 or email billing@northgatepeds.example.
+
+Patient: Kevin Williams
+Patient Acct: 0412678   DOB 5/30/43
+
+Svc Date,CPT/HCPCS,Description,Charge,Ins Paid,Your Balance
+09/04/2025,,New patient office visit,187.99,94.78,23.69
+09/04/2025,,"Surgical supply, miscellaneous",164.57,41.61,17.83
+09/05/2025,81001,"Urinalysis, automated, with microscopy",84.22,4l.35,10.34
+09/07/2025,90686,"Influenza vaccine, quadrivalent, preservative free",63.91,16.6l,7.12
+
+Total balance due: $58.98

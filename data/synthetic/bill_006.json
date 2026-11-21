@@ -1,0 +1,145 @@
+{
+  "id": "bill_006",
+  "layout": "eob_pipe",
+  "messy": [
+    "duplicate_charge",
+    "missing_field",
+    "multiline_item",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 137,
+      "end": 156,
+      "type": "NAME",
+      "text": "PATRICE G. WILLIAMS"
+    },
+    {
+      "start": 172,
+      "end": 184,
+      "type": "MEMBER_ID",
+      "text": "ZQ5587945-01"
+    },
+    {
+      "start": 197,
+      "end": 212,
+      "type": "NAME",
+      "text": "Daniel Williams"
+    },
+    {
+      "start": 226,
+      "end": 236,
+      "type": "DOB",
+      "text": "05/06/1970"
+    },
+    {
+      "start": 270,
+      "end": 283,
+      "type": "ACCOUNT_ID",
+      "text": "4641283257176"
+    },
+    {
+      "start": 341,
+      "end": 360,
+      "type": "NAME",
+      "text": "PATRICE G. WILLIAMS"
+    },
+    {
+      "start": 361,
+      "end": 374,
+      "type": "ADDRESS",
+      "text": "2992 PINE WAY"
+    },
+    {
+      "start": 375,
+      "end": 393,
+      "type": "ADDRESS",
+      "text": "LAKEWOOD, CO 80213"
+    },
+    {
+      "start": 410,
+      "end": 440,
+      "type": "EMAIL",
+      "text": "patrice.williams28@example.org"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 27,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 4410"
+    },
+    {
+      "start": 40,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Hartwell, GA 30643"
+    },
+    {
+      "start": 294,
+      "end": 309,
+      "type": "NAME",
+      "text": "Dr. Dana Farouk"
+    },
+    {
+      "start": 476,
+      "end": 490,
+      "type": "PHONE",
+      "text": "1-800-555-0153"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2024-12-25",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "232.50",
+      "allowed_amount": "75.22",
+      "insurer_paid": "52.65",
+      "patient_responsibility": "22.57"
+    },
+    {
+      "service_date": "2024-12-25",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "232.50",
+      "allowed_amount": "75.22",
+      "insurer_paid": "52.65",
+      "patient_responsibility": "22.57"
+    },
+    {
+      "service_date": "2024-12-27",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "239.50",
+      "allowed_amount": "88.15",
+      "insurer_paid": "61.71",
+      "patient_responsibility": "26.44"
+    },
+    {
+      "service_date": "2024-12-27",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "54.06",
+      "allowed_amount": "32.57",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "32.57"
+    },
+    {
+      "service_date": "2024-12-28",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "452.97",
+      "allowed_amount": null,
+      "insurer_paid": "233.99",
+      "patient_responsibility": "0.00"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      0,
+      1
+    ]
+  ]
+}

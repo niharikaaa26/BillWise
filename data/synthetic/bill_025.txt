@@ -1,0 +1,26 @@
+HIGH PLAINS COMMUNITY HOSPITAL
+2 Prairie Way, Lakewood, CO 80226
+Billing Questions: 1-800-555-0121
+
+ITEMIZED STATEMENT
+Statement Date: 10/05/2025
+Account Number: 52645171
+Patient Name: BIANCHI, SARAH
+Date of Birlh: 12/18/1959
+Mailing Address:
+  Sarah Bianchi
+  9458 Pine Way
+  Greenville, SC 29655
+Phone: (615) 555-0101
+Primary Insurance: Blueriver Health Plans   Member ID: CPH-4108-8750
+
+DATE       CODE    DESCRIPTION                           CHARGES   INS PAID     ADJUST    PT RESP
+------------------------------------------------------------------------------------------------
+09/12/2025 J1885   KETOROLAC TROMETHAMINE INJECTION,       70.12      40.60      29.52       O.00
+                   PER 15 MG
+09/12/2025 99283   EMERGENCY DEPARTMENT VISIT,          1,126.61                         1,126.61
+                   MODERATE SEVERITY
+------------------------------------------------------------------------------------------------
+                   TOTAL CHARGES                        1,196.73
+
+Please remit the patient balance within 30 days.

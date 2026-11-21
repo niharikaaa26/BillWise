@@ -1,0 +1,101 @@
+{
+  "id": "bill_025",
+  "layout": "hospital_fixed",
+  "messy": [
+    "missing_field",
+    "multiline_item",
+    "ocr_amount",
+    "ocr_label"
+  ],
+  "pii": [
+    {
+      "start": 162,
+      "end": 170,
+      "type": "ACCOUNT_ID",
+      "text": "52645171"
+    },
+    {
+      "start": 185,
+      "end": 199,
+      "type": "NAME",
+      "text": "BIANCHI, SARAH"
+    },
+    {
+      "start": 215,
+      "end": 225,
+      "type": "DOB",
+      "text": "12/18/1959"
+    },
+    {
+      "start": 245,
+      "end": 258,
+      "type": "NAME",
+      "text": "Sarah Bianchi"
+    },
+    {
+      "start": 261,
+      "end": 274,
+      "type": "ADDRESS",
+      "text": "9458 Pine Way"
+    },
+    {
+      "start": 277,
+      "end": 297,
+      "type": "ADDRESS",
+      "text": "Greenville, SC 29655"
+    },
+    {
+      "start": 305,
+      "end": 319,
+      "type": "PHONE",
+      "text": "(615) 555-0101"
+    },
+    {
+      "start": 375,
+      "end": 388,
+      "type": "MEMBER_ID",
+      "text": "CPH-4108-8750"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 31,
+      "end": 44,
+      "type": "ADDRESS",
+      "text": "2 Prairie Way"
+    },
+    {
+      "start": 46,
+      "end": 64,
+      "type": "ADDRESS",
+      "text": "Lakewood, CO 80226"
+    },
+    {
+      "start": 84,
+      "end": 98,
+      "type": "PHONE",
+      "text": "1-800-555-0121"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-09-12",
+      "code": "J1885",
+      "description": "KETOROLAC TROMETHAMINE INJECTION, PER 15 MG",
+      "billed_amount": "70.12",
+      "allowed_amount": null,
+      "insurer_paid": "40.60",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-09-12",
+      "code": "99283",
+      "description": "EMERGENCY DEPARTMENT VISIT, MODERATE SEVERITY",
+      "billed_amount": "1126.61",
+      "allowed_amount": null,
+      "insurer_paid": null,
+      "patient_responsibility": "1126.61"
+    }
+  ],
+  "duplicate_pairs": []
+}

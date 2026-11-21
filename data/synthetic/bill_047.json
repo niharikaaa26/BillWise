@@ -1,0 +1,121 @@
+{
+  "id": "bill_047",
+  "layout": "claim_blocks",
+  "messy": [
+    "missing_field",
+    "multiline_item",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 112,
+      "end": 126,
+      "type": "NAME",
+      "text": "Thanh Kowalski"
+    },
+    {
+      "start": 138,
+      "end": 149,
+      "type": "MEMBER_ID",
+      "text": "XGH48343949"
+    },
+    {
+      "start": 156,
+      "end": 173,
+      "type": "DOB",
+      "text": "November 14, 2015"
+    },
+    {
+      "start": 183,
+      "end": 219,
+      "type": "ADDRESS",
+      "text": "6977 Cedar Blvd, Millbrook, NY 12542"
+    },
+    {
+      "start": 229,
+      "end": 257,
+      "type": "EMAIL",
+      "text": "thanh.kowalski82@example.org"
+    },
+    {
+      "start": 260,
+      "end": 272,
+      "type": "PHONE",
+      "text": "303-555-0142"
+    },
+    {
+      "start": 286,
+      "end": 299,
+      "type": "ACCOUNT_ID",
+      "text": "CLM-491943671"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-05-24",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "379.21",
+      "allowed_amount": "218.39",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "218.39"
+    },
+    {
+      "service_date": "2025-05-27",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "505.79",
+      "allowed_amount": "374.14",
+      "insurer_paid": "299.31",
+      "patient_responsibility": "74.83"
+    },
+    {
+      "service_date": "2025-05-27",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "263.71",
+      "allowed_amount": "95.34",
+      "insurer_paid": "66.74",
+      "patient_responsibility": "28.60"
+    },
+    {
+      "service_date": "2025-05-27",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequenl",
+      "billed_amount": "228.94",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "78.98"
+    },
+    {
+      "service_date": "2025-05-27",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "64.39",
+      "allowed_amount": null,
+      "insurer_paid": "19.68",
+      "patient_responsibility": "8.44"
+    },
+    {
+      "service_date": "2025-05-27",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "168.47",
+      "allowed_amount": "98.15",
+      "insurer_paid": "88.34",
+      "patient_responsibility": "9.81"
+    },
+    {
+      "service_date": "2025-05-27",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "81.99",
+      "allowed_amount": null,
+      "insurer_paid": "48.61",
+      "patient_responsibility": "5.40"
+    }
+  ],
+  "duplicate_pairs": []
+}

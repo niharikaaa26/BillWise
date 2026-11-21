@@ -1,0 +1,143 @@
+{
+  "id": "bill_029",
+  "layout": "hospital_fixed",
+  "messy": [
+    "multiline_item",
+    "ocr_amount",
+    "ocr_description",
+    "ssn_present"
+  ],
+  "pii": [
+    {
+      "start": 162,
+      "end": 170,
+      "type": "ACCOUNT_ID",
+      "text": "73709774"
+    },
+    {
+      "start": 185,
+      "end": 202,
+      "type": "NAME",
+      "text": "WOJCIK, OLUWASEUN"
+    },
+    {
+      "start": 218,
+      "end": 224,
+      "type": "DOB",
+      "text": "8/4/75"
+    },
+    {
+      "start": 230,
+      "end": 241,
+      "type": "SSN",
+      "text": "931-77-8811"
+    },
+    {
+      "start": 261,
+      "end": 277,
+      "type": "NAME",
+      "text": "Oluwaseun Wojcik"
+    },
+    {
+      "start": 280,
+      "end": 292,
+      "type": "ADDRESS",
+      "text": "1634 Pine Rd"
+    },
+    {
+      "start": 295,
+      "end": 313,
+      "type": "ADDRESS",
+      "text": "Lakewood, CO 80255"
+    },
+    {
+      "start": 321,
+      "end": 333,
+      "type": "PHONE",
+      "text": "615.555.0162"
+    },
+    {
+      "start": 389,
+      "end": 399,
+      "type": "MEMBER_ID",
+      "text": "MBR8401726"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 31,
+      "end": 44,
+      "type": "ADDRESS",
+      "text": "2 Prairie Way"
+    },
+    {
+      "start": 46,
+      "end": 64,
+      "type": "ADDRESS",
+      "text": "Lakewood, CO 80226"
+    },
+    {
+      "start": 84,
+      "end": 98,
+      "type": "PHONE",
+      "text": "1-800-555-0191"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-01-06",
+      "code": "87880",
+      "description": "RAPID STREP TEST",
+      "billed_amount": "67.33",
+      "allowed_amount": null,
+      "insurer_paid": "33.35",
+      "patient_responsibility": "14.29"
+    },
+    {
+      "service_date": "2025-01-06",
+      "code": "74177",
+      "description": "CT ABDOMEN AND PELVIS WLTH CONTRAST",
+      "billed_amount": "2579.39",
+      "allowed_amount": null,
+      "insurer_paid": "919.09",
+      "patient_responsibility": "102.12"
+    },
+    {
+      "service_date": "2025-01-06",
+      "code": "J2405",
+      "description": "ONDANSETRON HYDROCHLORIDE INJECTION, PER 1 MG",
+      "billed_amount": "68.26",
+      "allowed_amount": null,
+      "insurer_paid": "42.88",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-01-06",
+      "code": "G0439",
+      "description": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
+      "billed_amount": "241.40",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "130.20"
+    },
+    {
+      "service_date": "2025-01-06",
+      "code": "J2405",
+      "description": "ONDANSETRON HYDROCHLORIDE INJECTION, PER 1 MG",
+      "billed_amount": "38.84",
+      "allowed_amount": null,
+      "insurer_paid": "16.95",
+      "patient_responsibility": "4.24"
+    },
+    {
+      "service_date": "2025-01-06",
+      "code": "G0439",
+      "description": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
+      "billed_amount": "183.71",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "110.82"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,0 +1,24 @@
+Northgate Pediatrics
+15 Commerce Blvd
+Fairview, TN 37062
+
+DAVID YAMAMOTO
+8169 SUNSET AVE
+GREENVILLE SC 29675
+
+Dear David,
+Our records show a balance on the account for David. Please review the charges below.
+Questions? Call (212) 555-0168 or email billing@northgatepeds.example.
+
+Patient Acct: 6229114   DOB 04/21/1965
+Phone on file: (917) 555-0119
+
+Svc Date,CPT/HCPCS,Description,Charge,Ins Paid,Your Balance
+02/19/2025,70450,CT head or brain without contrast,2224.86,0.00,1506.36
+02/19/2025,87880,Rapid strep test,54.9l,23.98,6.00
+02/20/2025,90686,"Influenza vaccine, quadrivalent, preservative free",48.88,28.74,3.l9
+02/23/2025,J1885,"Ketorolac tromethamine injection, per 15 mg",41.78,32.26,0.00
+02/26/2025,70450,CT head or brain without contrast,l694.55,895.59,0.00
+02/26/2025,G0439,"Annual wellness visit, subsequent",227.86,68.03,29.l6
+
+Total balance due: $1,544.71

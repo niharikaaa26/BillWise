@@ -1,0 +1,32 @@
+MERCY VALLEY REGIONAL HOSPITAL
+4100 Hospital Dr, Riverton, OH 45011
+Billing Questions: 1-800-555-0192
+
+ITEMIZED STATEMENT
+Statement Date: 09/05/2025
+Account Number: 49498635
+Patient Name: LINDQVIST, CARLOS
+Date of Birth: 6/6/18
+SSN: 921-44-9280
+Mailing Address:
+  Carlos Lindqvist
+  7756 Sunset Boulevard Apt 30B
+  Riverton, OH 45072
+Phone: 845-555-0144
+Primary Insurance: Blueriver Health Plans   Member ID: MBR7491157
+
+DATE       CODE    DESCRIPTION                           CHARGES   INS PAID     ADJUST    PT RESP
+------------------------------------------------------------------------------------------------
+08/03/2025 85025   COMPLETE BLOOD COUNT WITH               81.72      58.24      17.01       6.47
+                   AUTOMATED DIFFERENTIAL
+           99285   EMERGENCY DEPARTMENT VISIT, HIGH     1,515.82     5l6.30     778.25     221.27
+                   SEVERITY
+08/04/2025 80053   COMPREHENSIVE METABOLIC PANEL          239.95     110.89     101.34      27.72
+           71046   CHEST X-RAY, 2 VIEWS                   474.06     249.68     117.37     107.01
+08/07/2025 99214   OFFICE VISIT, ESTABLISHED PATIENT,     299.43     181.02      73.15      45.26
+                   MODERATE C0MPLEXITY
+08/08/2025 80053   COMPREHENSIVE METABOLIC PANEL          190.42     106.55      72.03      11.84
+------------------------------------------------------------------------------------------------
+                   TOTAL CHARGES                        2,801.40
+
+Please remit the patient balance within 30 days.

@@ -1,0 +1,26 @@
+BLUERIVER HEALTH PLANS
+PO Box 9902, Dayton, OH 45401
+EXPLANATION OF BENEFITS -- THIS IS NOT A BILL
+Processed: 10/09/2025
+
+Patient: SIOBHAN M. ROSSI     Member ID: ZQ6190488-01
+Patient DOB: 2003-10-08     Group #: 95721
+Claim Number: 3622780904673
+Provider: Dr. Alan Alvarez, MD   NPI 4493086679
+
+Mail to:
+SIOBHAN M. ROSSI
+6203 WILLOW ST UNIT 33C
+LAKEWOOD, CO 80270
+
+Questions? Call Member Services at 1-800-555-0158
+
+Date of Service | Procedure | Service Description                            | Amount Billed | Allowed Amount | Paid by Plan | Your Responsibility
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+08/19/2025      | 96374     | IV push, single or initial                     | $185.77       | $56.22         | $56.22       | $0.00
+                |           | substance                                      |               |                |              |
+08/19/2025      | 99283     | Emergency department visit, moderate severity  | $781.62       | $365.43        | $328.89      | $36.54
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+TOTALS          |           |                                                | $967.39       | $421.65        | $385.11      | $36.54
+
+The amount you owe may be billed to you separately by your provider.

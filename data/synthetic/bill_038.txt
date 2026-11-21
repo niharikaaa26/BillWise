@@ -1,0 +1,32 @@
+SUMMIT MUTUAL HEALTH
+PO Box 1180, Boise, ID 83701
+EXPLANATION OF BENEFITS -- THIS IS NOT A BILL
+Processed: 10/19/2025
+
+Patlent: Marcus Sullivan     Member ID: MBR3084724
+Patient DOB: 03/13/1966     Group #: 94006
+Claim Number: 2412257975456
+Provider: Dr. Dana Eriksen, MD   NPI 8250919856
+
+Mail to:
+MARCUS SULLIVAN
+2029 SUNSET DR APT 10B
+GREENVILLE, SC 29695
+
+Email on file: marcus.sullivan6@example.net
+Questions? Call Member Services at 1-800-555-0140
+
+Service Date    | Code      | Description                                    | Billed        | Allowed        | Plan Paid    | You Owe
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+09/02/2025      | 36415     | Routine venipuncture                           | $53.56        | $28.33         | $28.33       | $0.00
+09/03/2025      | 97110     | Therapeutic exercises, each 15 minutes         | $80.37        | $63.93         | $44.75       | $19.18
+09/03/2025      | 97110     | Therapeutic exercises, each 15 minutes         | $80.37        | $63.93         | $44.75       | $19.18
+09/03/2025      | J2405     | Ondansetron hydrochloride                      | $27,11        | $11.41         | $11.41       | $0.00
+                |           | injection, per 1 mg                            |               |                |              |
+09/06/2025      | 70450     | CT head or brain without contrast              | $1,707.22     | $1,144.10      | $915.28      | $228.82
+09/08/2025      | 71046     | Chest x-ray, 2 views                           | $481.78       | $346.82        | $242.77      | $104.05
+09/08/2025      | 70450     | CT head or brain without contrast              | $908.69       | $415.42        | $415.42      | $0.00
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+TOTALS          |           |                                                | $3,339.10     | $2,073.94      | $1,702.71    | $371.23
+
+The amount you owe may be billed to you separately by your provider.

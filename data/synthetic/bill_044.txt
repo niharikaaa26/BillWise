@@ -1,0 +1,21 @@
+Northgate Pediatrics
+15 Commerce Blvd
+Fairview, TN 37062
+
+RAFAEL ACHTERBERG
+132 HILLCREST LANE
+LAKEWOOD CO 80250
+
+Dear Rafael,
+Our records show a balance on the account for Rafael. Please review the charges below.
+Questions? Call (513) 555-0177 or email billing@northgatepeds.example.
+
+Patient Acct: 6536974   DOB 2006-05-17
+Phone on file: 615.555.0142
+Guarantor SSN: 984-91-2780
+
+Svc Date,CPT/HCPCS,Description,Charge,Ins Paid,Your Balance
+03/04/2025,G0439,"Annual wellness visit, subsequent",168.22,0.00,53.24
+03/04/2025,70450,CT head or brain without contrast,1619.20,565.15,62.79
+
+Total balance due: $116.03

@@ -1,0 +1,75 @@
+Clearpath Health Insurance -- Your Claim Summary
+================================================
+Prepared for: NAVEEN A. DELACROIX
+Member ID: CPH-5769-4504
+Born: 1963-07-11
+Address: 6865 Pine Way, Port Jervis, NY 12718
+Contact: naveen.delacroix92@example.com / 845.555.0108
+Reference #: CLM-171397275
+
+Claim line 1
+  Date of service: 06/05/2025
+  Service: 36415 Routine venipuncture
+  Provider charged: $42.O2
+  Plan allowed: $27.49
+  Plan paid: $24.74
+  Your share: $2.75
+
+Claim line 2
+  Date of service: 06/08/2025
+  Service: 90471 Immunization administration, single vaccine
+  Provider charged: $64,81
+  Plan allowed: $49.81
+  Plan paid: $49.81
+  Your share: $0.00
+
+Claim line 3
+  Date of service: 06/08/2025
+  Service: 97110 Therapeutic exercises, cach 15 minutes
+  Provider charged: $115.77
+  Plan allowed: $57.84
+  Plan paid: $57.84
+  Your share: $0.00
+
+Claim line 4
+  Date of service: 06/08/2025
+  Service: J1885 Ketorolac tromethamine injection, per 15 mg
+  Provider charged: S28.32
+  Plan allowed: $12.67
+  Plan paid: $0.00
+  Your share: $12.67
+
+Claim line 5
+  Date of service: 06/08/2025
+  Service: 99285 Emergency deparlment visit, high severity
+  Provider charged: $2,305.71
+  Plan allowed: $748.11
+  Plan paid: $0.00
+  Your share: $748.11
+
+Claim line 6
+  Date of service: 06/08/2025
+  Service: 99283 Emergency department visit, moderate
+           severity
+  Provider charged: $745.21
+  Plan allowed: $543.97
+  Plan paid: $380.78
+  Your share: $163.19
+
+Claim line 7
+  Date of service: 06/08/2025
+  Service: 99283 Emergency department visit, moderate severity
+  Provider charged: $745.21
+  Plan allowed: $543.97
+  Plan paid: $380.78
+  Your share: $163.19
+
+Claim line 8
+  Date of service: 06/10/2025
+  Service: 99203 New patient office visit
+  Provider charged: $165.33
+  Plan allowed: $72.84
+  Plan paid: $72.84
+  Your share: $0.00
+
+This summary is for your records.

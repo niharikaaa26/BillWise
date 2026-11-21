@@ -1,0 +1,142 @@
+{
+  "id": "bill_001",
+  "layout": "hospital_fixed",
+  "messy": [
+    "multiline_item",
+    "ocr_amount",
+    "ocr_label"
+  ],
+  "pii": [
+    {
+      "start": 165,
+      "end": 173,
+      "type": "ACCOUNT_ID",
+      "text": "33036758"
+    },
+    {
+      "start": 188,
+      "end": 202,
+      "type": "NAME",
+      "text": "SMITH, PATRICE"
+    },
+    {
+      "start": 218,
+      "end": 226,
+      "type": "DOB",
+      "text": "12/18/75"
+    },
+    {
+      "start": 238,
+      "end": 249,
+      "type": "NAME",
+      "text": "Kevin Smith"
+    },
+    {
+      "start": 269,
+      "end": 282,
+      "type": "NAME",
+      "text": "Patrice Smith"
+    },
+    {
+      "start": 285,
+      "end": 298,
+      "type": "ADDRESS",
+      "text": "8681 Maple Rd"
+    },
+    {
+      "start": 301,
+      "end": 321,
+      "type": "ADDRESS",
+      "text": "Greenville, SC 29622"
+    },
+    {
+      "start": 329,
+      "end": 341,
+      "type": "PHONE",
+      "text": "319-555-0108"
+    },
+    {
+      "start": 395,
+      "end": 407,
+      "type": "MEMBER_ID",
+      "text": "ZQ0593538-01"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 31,
+      "end": 47,
+      "type": "ADDRESS",
+      "text": "4100 Hospital Dr"
+    },
+    {
+      "start": 49,
+      "end": 67,
+      "type": "ADDRESS",
+      "text": "Riverton, OH 45011"
+    },
+    {
+      "start": 87,
+      "end": 101,
+      "type": "PHONE",
+      "text": "1-800-555-0178"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-07-19",
+      "code": "80053",
+      "description": "COMPREHENSIVE METABOLIC PANEL",
+      "billed_amount": "320.60",
+      "allowed_amount": null,
+      "insurer_paid": "230.80",
+      "patient_responsibility": "25.64"
+    },
+    {
+      "service_date": "2025-07-19",
+      "code": "87880",
+      "description": "RAPID STREP TEST",
+      "billed_amount": "66.42",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "38.05"
+    },
+    {
+      "service_date": "2025-07-19",
+      "code": "97110",
+      "description": "THERAPEUTIC EXERCISES, EACH 15 MINUTES",
+      "billed_amount": "125.74",
+      "allowed_amount": null,
+      "insurer_paid": "59.81",
+      "patient_responsibility": "14.95"
+    },
+    {
+      "service_date": "2025-07-19",
+      "code": "74177",
+      "description": "CT ABDOMEN AND PELVIS WITH CONTRAST",
+      "billed_amount": "3342.23",
+      "allowed_amount": null,
+      "insurer_paid": "1060.94",
+      "patient_responsibility": "454.69"
+    },
+    {
+      "service_date": "2025-07-19",
+      "code": "87880",
+      "description": "RAPID STREP TEST",
+      "billed_amount": "26.66",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "10.76"
+    },
+    {
+      "service_date": "2025-07-19",
+      "code": "90686",
+      "description": "INFLUENZA VACCINE, QUADRIVALENT, PRESERVATIVE FREE",
+      "billed_amount": "82.71",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "31.06"
+    }
+  ],
+  "duplicate_pairs": []
+}

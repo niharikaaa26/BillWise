@@ -1,0 +1,107 @@
+{
+  "id": "bill_028",
+  "layout": "clinic_csv",
+  "messy": [
+    "unlabeled_name"
+  ],
+  "pii": [
+    {
+      "start": 58,
+      "end": 70,
+      "type": "NAME",
+      "text": "DAVID HADDAD"
+    },
+    {
+      "start": 71,
+      "end": 86,
+      "type": "ADDRESS",
+      "text": "5795 SUNSET WAY"
+    },
+    {
+      "start": 87,
+      "end": 104,
+      "type": "ADDRESS",
+      "text": "LAKEWOOD CO 80226"
+    },
+    {
+      "start": 111,
+      "end": 116,
+      "type": "NAME",
+      "text": "David"
+    },
+    {
+      "start": 164,
+      "end": 169,
+      "type": "NAME",
+      "text": "David"
+    },
+    {
+      "start": 291,
+      "end": 298,
+      "type": "ACCOUNT_ID",
+      "text": "2920173"
+    },
+    {
+      "start": 305,
+      "end": 311,
+      "type": "DOB",
+      "text": "2/6/90"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 23,
+      "end": 35,
+      "type": "ADDRESS",
+      "text": "900 Shore Rd"
+    },
+    {
+      "start": 36,
+      "end": 56,
+      "type": "ADDRESS",
+      "text": "Oak Harbor, WA 98277"
+    },
+    {
+      "start": 220,
+      "end": 234,
+      "type": "PHONE",
+      "text": "(319) 555-0113"
+    },
+    {
+      "start": 244,
+      "end": 274,
+      "type": "EMAIL",
+      "text": "billing@lakesideclinic.example"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-04-12",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "275.34",
+      "allowed_amount": null,
+      "insurer_paid": "83.08",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-12",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "269.42",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "189.61"
+    },
+    {
+      "service_date": "2025-04-12",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "35.61",
+      "allowed_amount": null,
+      "insurer_paid": "19.50",
+      "patient_responsibility": "4.87"
+    }
+  ],
+  "duplicate_pairs": []
+}

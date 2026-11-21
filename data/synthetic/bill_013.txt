@@ -1,0 +1,30 @@
+MERCY VALLEY REGIONAL HOSPITAL
+4100 Hospital Dr, Riverton, OH 45011
+Billing Questions: 1-800-555-0112
+
+ITEMIZED STATEMENT
+Statement Date: 09/10/2025
+Account Number: 33241522
+Patient Name: SMITH, YUKI
+Date of Birth: 02/17/1993
+Mailing Address:
+  Yuki Smith
+  7893 Juniper Ave
+  Fairview, TN 37091
+Phone: 479.555.0176
+Primary Insurance: Clearpath Health Insurance   Member ID: XGH03824608
+
+DATE       CODE    DESCRIPTION                           CHARGES   INS PAID     ADJUST    PT RESP
+------------------------------------------------------------------------------------------------
+08/28/2025 A4649   SURGICAL SUPPLY, MISCELLANEOUS         109.16      34.36      74.80       0,00
+08/28/2025 81001   URINALYSIS, AUTOMATED, WITH             79.62      28.22      39.30      12.10
+                   MICROSCOPY
+08/31/2025 85025   COMPLETE BLOOD COUNT WITH              132.06      95.07      26.43      1O.56
+                   AUTOMATED DIFFERENTIAL
+08/31/2025 85025   COMPLETE BLOOD COUNT WITH              132.06      95.07      26.43      10.56
+                   AUTOMATED DIFFERENTIAL
+------------------------------------------------------------------------------------------------
+                   TOTAL CHARGES                          452.90
+09/10/2025         PAYMENT - THANK YOU                   -181.30
+
+Please remit the patient balance within 30 days.

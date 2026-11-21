@@ -1,0 +1,28 @@
+BLUERIVER HEALTH PLANS
+PO Box 9902, Dayton, OH 45401
+EXPLANATION OF BENEFITS -- THIS IS NOT A BILL
+Processed: 05/26/2025
+
+Patient: Desmond Okafor     Member ID: MBR1445329
+Patient DOB: July 4, 1978     Group #: 51340
+Claim Number: 7138989520580
+Provider: Dr. Farah Farouk, MD   NPI 7875765566
+
+Mail to:
+DESMOND OKAFOR
+4900 RIVERBEND DR
+LAKEWOOD, CO 80289
+
+Email on file: desmond.okafor92@example.com
+Questions? Call Member Services at 1-800-555-0114
+
+Service Date    | Code      | Description                                    | Billed        | Allowed        | Plan Paid    | You Owe
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+04/06/2025      | 80053     | Comprehensive metabolic panel                  | $243.53       | $192.09        | $134.46      | $57.63
+04/06/2025      | 93000     | Electrocardiogram, routine, with interpretation and report | $168.92       | $71.52         | $57.22       | $14.30
+04/06/2025      | 99213     | Office visit, established                      | $192.53       | --             | $115,72      | $0.00
+                |           | patient, low complexity                        |               |                |              |
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+TOTALS          |           |                                                | $604.98       | $263.61        | $307.40      | $71.93
+
+The amount you owe may be billed to you separately by your provider.

@@ -1,0 +1,133 @@
+{
+  "id": "bill_045",
+  "layout": "hospital_fixed",
+  "messy": [
+    "multiline_item",
+    "ocr_amount",
+    "ssn_present"
+  ],
+  "pii": [
+    {
+      "start": 161,
+      "end": 169,
+      "type": "ACCOUNT_ID",
+      "text": "04954312"
+    },
+    {
+      "start": 184,
+      "end": 197,
+      "type": "NAME",
+      "text": "WOJCIK, EMILY"
+    },
+    {
+      "start": 213,
+      "end": 223,
+      "type": "DOB",
+      "text": "1967-12-18"
+    },
+    {
+      "start": 229,
+      "end": 240,
+      "type": "SSN",
+      "text": "949-58-5861"
+    },
+    {
+      "start": 260,
+      "end": 275,
+      "type": "NAME",
+      "text": "Emily F. Wojcik"
+    },
+    {
+      "start": 278,
+      "end": 296,
+      "type": "ADDRESS",
+      "text": "5343 Hillcrest Ave"
+    },
+    {
+      "start": 299,
+      "end": 320,
+      "type": "ADDRESS",
+      "text": "Cedar Falls, IA 50611"
+    },
+    {
+      "start": 328,
+      "end": 340,
+      "type": "PHONE",
+      "text": "479-555-0114"
+    },
+    {
+      "start": 400,
+      "end": 411,
+      "type": "MEMBER_ID",
+      "text": "XGH12683937"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 26,
+      "end": 42,
+      "type": "ADDRESS",
+      "text": "77 Cathedral Ave"
+    },
+    {
+      "start": 44,
+      "end": 63,
+      "type": "ADDRESS",
+      "text": "Millbrook, NY 12545"
+    },
+    {
+      "start": 83,
+      "end": 97,
+      "type": "PHONE",
+      "text": "1-800-555-0178"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-05-10",
+      "code": "97110",
+      "description": "THERAPEUTIC EXERCISES, EACH 15 MINUTES",
+      "billed_amount": "109.81",
+      "allowed_amount": null,
+      "insurer_paid": "36.26",
+      "patient_responsibility": "4.03"
+    },
+    {
+      "service_date": "2025-05-11",
+      "code": "J1885",
+      "description": "KETOROLAC TROMETHAMINE INJECTION, PER 15 MG",
+      "billed_amount": "59.60",
+      "allowed_amount": null,
+      "insurer_paid": "27.17",
+      "patient_responsibility": "11.65"
+    },
+    {
+      "service_date": "2025-05-11",
+      "code": "87880",
+      "description": "RAPID STREP TEST",
+      "billed_amount": "40.23",
+      "allowed_amount": null,
+      "insurer_paid": "26.30",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-05-11",
+      "code": "87880",
+      "description": "RAPID STREP TEST",
+      "billed_amount": "51.74",
+      "allowed_amount": null,
+      "insurer_paid": "20.82",
+      "patient_responsibility": "5.20"
+    },
+    {
+      "service_date": "2025-05-11",
+      "code": "99283",
+      "description": "EMERGENCY DEPARTMENT VISIT, MODERATE SEVERITY",
+      "billed_amount": "953.00",
+      "allowed_amount": null,
+      "insurer_paid": "352.41",
+      "patient_responsibility": "88.10"
+    }
+  ],
+  "duplicate_pairs": []
+}

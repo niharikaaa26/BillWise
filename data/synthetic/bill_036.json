@@ -1,0 +1,124 @@
+{
+  "id": "bill_036",
+  "layout": "clinic_csv",
+  "messy": [
+    "missing_code",
+    "ocr_amount",
+    "unlabeled_name"
+  ],
+  "pii": [
+    {
+      "start": 58,
+      "end": 72,
+      "type": "NAME",
+      "text": "KEVIN WILLIAMS"
+    },
+    {
+      "start": 73,
+      "end": 87,
+      "type": "ADDRESS",
+      "text": "2650 MAPLE AVE"
+    },
+    {
+      "start": 88,
+      "end": 105,
+      "type": "ADDRESS",
+      "text": "RIVERTON OH 45057"
+    },
+    {
+      "start": 112,
+      "end": 117,
+      "type": "NAME",
+      "text": "Kevin"
+    },
+    {
+      "start": 165,
+      "end": 170,
+      "type": "NAME",
+      "text": "Kevin"
+    },
+    {
+      "start": 286,
+      "end": 300,
+      "type": "NAME",
+      "text": "Kevin Williams"
+    },
+    {
+      "start": 315,
+      "end": 322,
+      "type": "ACCOUNT_ID",
+      "text": "0412678"
+    },
+    {
+      "start": 329,
+      "end": 336,
+      "type": "DOB",
+      "text": "5/30/43"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 21,
+      "end": 37,
+      "type": "ADDRESS",
+      "text": "15 Commerce Blvd"
+    },
+    {
+      "start": 38,
+      "end": 56,
+      "type": "ADDRESS",
+      "text": "Fairview, TN 37062"
+    },
+    {
+      "start": 221,
+      "end": 235,
+      "type": "PHONE",
+      "text": "(864) 555-0171"
+    },
+    {
+      "start": 245,
+      "end": 274,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-09-04",
+      "code": null,
+      "description": "New patient office visit",
+      "billed_amount": "187.99",
+      "allowed_amount": null,
+      "insurer_paid": "94.78",
+      "patient_responsibility": "23.69"
+    },
+    {
+      "service_date": "2025-09-04",
+      "code": null,
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "164.57",
+      "allowed_amount": null,
+      "insurer_paid": "41.61",
+      "patient_responsibility": "17.83"
+    },
+    {
+      "service_date": "2025-09-05",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "84.22",
+      "allowed_amount": null,
+      "insurer_paid": "41.35",
+      "patient_responsibility": "10.34"
+    },
+    {
+      "service_date": "2025-09-07",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "63.91",
+      "allowed_amount": null,
+      "insurer_paid": "16.61",
+      "patient_responsibility": "7.12"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,0 +1,32 @@
+ST. BRIGID MEDICAL CENTER
+77 Cathedral Ave, Millbrook, NY 12545
+Billing Questions: 1-800-555-0181
+
+ITEMIZED STATEMENT
+Statement Date: 01/28/2025
+Account Number: 9457089522
+Patient Name: BIANCHI, ELIJAH
+Date of Birth: May 28, 1953
+Guarantor: Siobhan Bianchi
+Mailing Address:
+  Elijah B. Bianchi
+  1230 Highland Way
+  Lakewood, CO 80226
+Primary Insurance: Summit Mutual Health   Member ID: W462172094
+
+DATE       CODE    DESCRIPTION                           CHARGES   INS PAID     ADJUST    PT RESP
+------------------------------------------------------------------------------------------------
+12/21/2024 87880   RAPID STREP TEST                        32.73      14.85      14.17       3.71
+12/21/2024 A4649   SURGICAL SUPPLY, MISCELLANEOUS         191.99      99.31      50.12      42,56
+12/21/2024 G0439   ANNUAL WELLNESS VISIT, SUBSEQUENT      210.73      69.13     141.60       0.00
+12/21/2024 A4649   SURGICAL SUPPLY, MISCELLANEOUS         158.10      67.44      90.66       0.00
+12/21/2024 97110   THERAPEUTIC EXERCISES, EACH 15         177.88      74.46      95.15       8.27
+                   MINUTES
+12/23/2024 99283   EMERGENCY DEPARTMENT VISIT,          1,237.41     399.62     837.79       0.00
+                   MODERATE SEVERITY
+12/23/2024 93000   ELECTROCARDIOGRAM, ROUTINE, WITH       233.56     122.69     110.87       0.00
+                   INTERPRETATION AND REPORT
+------------------------------------------------------------------------------------------------
+                   TOTAL CHARGES                        2,242.40
+
+Please remit the patient balance within 30 days.

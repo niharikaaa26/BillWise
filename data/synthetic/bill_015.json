@@ -1,0 +1,92 @@
+{
+  "id": "bill_015",
+  "layout": "claim_blocks",
+  "messy": [
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 112,
+      "end": 130,
+      "type": "NAME",
+      "text": "XIOMARA K. RAMIREZ"
+    },
+    {
+      "start": 142,
+      "end": 153,
+      "type": "MEMBER_ID",
+      "text": "XGH05079459"
+    },
+    {
+      "start": 160,
+      "end": 170,
+      "type": "DOB",
+      "text": "08/26/2005"
+    },
+    {
+      "start": 180,
+      "end": 216,
+      "type": "ADDRESS",
+      "text": "874 Juniper Ln, Oak Harbor, WA 98259"
+    },
+    {
+      "start": 226,
+      "end": 260,
+      "type": "EMAIL",
+      "text": "xiomara.ramirez82@mail.example.com"
+    },
+    {
+      "start": 263,
+      "end": 277,
+      "type": "PHONE",
+      "text": "(615) 555-0116"
+    },
+    {
+      "start": 291,
+      "end": 304,
+      "type": "ACCOUNT_ID",
+      "text": "CLM-640575846"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-06-17",
+      "code": "A4649",
+      "description": "Surgical supply, rniscellaneous",
+      "billed_amount": "159.74",
+      "allowed_amount": "79.45",
+      "insurer_paid": "55.62",
+      "patient_responsibility": "23.83"
+    },
+    {
+      "service_date": "2025-06-17",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "164.63",
+      "allowed_amount": "102.21",
+      "insurer_paid": "81.77",
+      "patient_responsibility": "20.44"
+    },
+    {
+      "service_date": "2025-06-17",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "24.72",
+      "allowed_amount": "17.44",
+      "insurer_paid": "17.44",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-18",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "23.84",
+      "allowed_amount": "8.57",
+      "insurer_paid": "6.86",
+      "patient_responsibility": "1.71"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,0 +1,115 @@
+{
+  "id": "bill_034",
+  "layout": "eob_pipe",
+  "messy": [
+    "missing_field",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 137,
+      "end": 150,
+      "type": "NAME",
+      "text": "HANNAH OKAFOR"
+    },
+    {
+      "start": 166,
+      "end": 177,
+      "type": "MEMBER_ID",
+      "text": "XGH89431237"
+    },
+    {
+      "start": 191,
+      "end": 201,
+      "type": "DOB",
+      "text": "03/14/1989"
+    },
+    {
+      "start": 235,
+      "end": 248,
+      "type": "ACCOUNT_ID",
+      "text": "1747911261806"
+    },
+    {
+      "start": 303,
+      "end": 316,
+      "type": "NAME",
+      "text": "HANNAH OKAFOR"
+    },
+    {
+      "start": 317,
+      "end": 337,
+      "type": "ADDRESS",
+      "text": "3824 CEDAR RD APT 6C"
+    },
+    {
+      "start": 338,
+      "end": 356,
+      "type": "ADDRESS",
+      "text": "FAIRVIEW, TN 37016"
+    },
+    {
+      "start": 373,
+      "end": 400,
+      "type": "EMAIL",
+      "text": "hannah.okafor35@example.org"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 27,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 4410"
+    },
+    {
+      "start": 40,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Hartwell, GA 30643"
+    },
+    {
+      "start": 259,
+      "end": 271,
+      "type": "NAME",
+      "text": "Dr. Alan Cho"
+    },
+    {
+      "start": 436,
+      "end": 450,
+      "type": "PHONE",
+      "text": "1-800-555-0106"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-01-04",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "191.70",
+      "allowed_amount": "58.79",
+      "insurer_paid": "52.91",
+      "patient_responsibility": "5.88"
+    },
+    {
+      "service_date": "2025-01-07",
+      "code": "99214",
+      "description": "Office visit, eslablished patient, moderate complexity",
+      "billed_amount": "224.18",
+      "allowed_amount": null,
+      "insurer_paid": "68.71",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-01-07",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "41.70",
+      "allowed_amount": null,
+      "insurer_paid": "10.58",
+      "patient_responsibility": "2.64"
+    }
+  ],
+  "duplicate_pairs": []
+}

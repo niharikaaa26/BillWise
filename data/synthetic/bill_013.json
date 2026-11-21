@@ -1,0 +1,123 @@
+{
+  "id": "bill_013",
+  "layout": "hospital_fixed",
+  "messy": [
+    "duplicate_charge",
+    "multiline_item",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 165,
+      "end": 173,
+      "type": "ACCOUNT_ID",
+      "text": "33241522"
+    },
+    {
+      "start": 188,
+      "end": 199,
+      "type": "NAME",
+      "text": "SMITH, YUKI"
+    },
+    {
+      "start": 215,
+      "end": 225,
+      "type": "DOB",
+      "text": "02/17/1993"
+    },
+    {
+      "start": 245,
+      "end": 255,
+      "type": "NAME",
+      "text": "Yuki Smith"
+    },
+    {
+      "start": 258,
+      "end": 274,
+      "type": "ADDRESS",
+      "text": "7893 Juniper Ave"
+    },
+    {
+      "start": 277,
+      "end": 295,
+      "type": "ADDRESS",
+      "text": "Fairview, TN 37091"
+    },
+    {
+      "start": 303,
+      "end": 315,
+      "type": "PHONE",
+      "text": "479.555.0176"
+    },
+    {
+      "start": 375,
+      "end": 386,
+      "type": "MEMBER_ID",
+      "text": "XGH03824608"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 31,
+      "end": 47,
+      "type": "ADDRESS",
+      "text": "4100 Hospital Dr"
+    },
+    {
+      "start": 49,
+      "end": 67,
+      "type": "ADDRESS",
+      "text": "Riverton, OH 45011"
+    },
+    {
+      "start": 87,
+      "end": 101,
+      "type": "PHONE",
+      "text": "1-800-555-0112"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-08-28",
+      "code": "A4649",
+      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
+      "billed_amount": "109.16",
+      "allowed_amount": null,
+      "insurer_paid": "34.36",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-08-28",
+      "code": "81001",
+      "description": "URINALYSIS, AUTOMATED, WITH MICROSCOPY",
+      "billed_amount": "79.62",
+      "allowed_amount": null,
+      "insurer_paid": "28.22",
+      "patient_responsibility": "12.10"
+    },
+    {
+      "service_date": "2025-08-31",
+      "code": "85025",
+      "description": "COMPLETE BLOOD COUNT WITH AUTOMATED DIFFERENTIAL",
+      "billed_amount": "132.06",
+      "allowed_amount": null,
+      "insurer_paid": "95.07",
+      "patient_responsibility": "10.56"
+    },
+    {
+      "service_date": "2025-08-31",
+      "code": "85025",
+      "description": "COMPLETE BLOOD COUNT WITH AUTOMATED DIFFERENTIAL",
+      "billed_amount": "132.06",
+      "allowed_amount": null,
+      "insurer_paid": "95.07",
+      "patient_responsibility": "10.56"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      2,
+      3
+    ]
+  ]
+}

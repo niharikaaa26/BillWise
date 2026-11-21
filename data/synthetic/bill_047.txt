@@ -1,0 +1,64 @@
+Clearpath Health Insurance -- Your Claim Summary
+================================================
+Prepared for: Thanh Kowalski
+Member ID: XGH48343949
+Born: November 14, 2015
+Address: 6977 Cedar Blvd, Millbrook, NY 12542
+Contact: thanh.kowalski82@example.org / 303-555-0142
+Reference #: CLM-491943671
+
+Claim line 1
+  Date of service: May 24, 2025
+  Service: 96374 IV push, single or initial substance
+  Provider charged: $379.21
+  Plan allowed: $218.39
+  Plan paid: $0.00
+  Your share: $218.39
+
+Claim line 2
+  Date of service: May 27, 2025
+  Service: 71046 Chest x-ray, 2 views
+  Provider charged: $505.79
+  Plan allowed: $374.14
+  Plan paid: $299.31
+  Your share: $74.83
+
+Claim line 3
+  Date of service: May 27, 2025
+  Service: 99203 New patient office visit
+  Provider charged: $263.71
+  Plan allowed: $95.34
+  Plan paid: $66.74
+  Your share: S28.60
+
+Claim line 4
+  Date of service: May 27, 2025
+  Service: G0439 Annual wellness visit, subsequenl
+  Provider charged: $228.94
+  Plan paid: $0.00
+  Your share: $78,98
+
+Claim line 5
+  Date of service: May 27, 2025
+  Service: 90471 Immunization administration, single
+           vaccine
+  Provider charged: $64.39
+  Plan paid: $19.68
+  Your share: $8.44
+
+Claim line 6
+  Date of service: May 27, 2025
+  Service: 96374 IV push, single or initial substance
+  Provider charged: $168.47
+  Plan allowed: $98.15
+  Plan paid: $88.34
+  Your share: $9.81
+
+Claim line 7
+  Date of service: May 27, 2025
+  Service: 97110 Therapeutic exercises, each 15 minutes
+  Provider charged: $81,99
+  Plan paid: $48.61
+  Your share: $5.40
+
+This summary is for your records.

@@ -1,0 +1,157 @@
+{
+  "id": "bill_038",
+  "layout": "eob_pipe",
+  "messy": [
+    "duplicate_charge",
+    "multiline_item",
+    "ocr_amount",
+    "ocr_label"
+  ],
+  "pii": [
+    {
+      "start": 128,
+      "end": 143,
+      "type": "NAME",
+      "text": "Marcus Sullivan"
+    },
+    {
+      "start": 159,
+      "end": 169,
+      "type": "MEMBER_ID",
+      "text": "MBR3084724"
+    },
+    {
+      "start": 183,
+      "end": 193,
+      "type": "DOB",
+      "text": "03/13/1966"
+    },
+    {
+      "start": 227,
+      "end": 240,
+      "type": "ACCOUNT_ID",
+      "text": "2412257975456"
+    },
+    {
+      "start": 299,
+      "end": 314,
+      "type": "NAME",
+      "text": "MARCUS SULLIVAN"
+    },
+    {
+      "start": 315,
+      "end": 337,
+      "type": "ADDRESS",
+      "text": "2029 SUNSET DR APT 10B"
+    },
+    {
+      "start": 338,
+      "end": 358,
+      "type": "ADDRESS",
+      "text": "GREENVILLE, SC 29695"
+    },
+    {
+      "start": 375,
+      "end": 403,
+      "type": "EMAIL",
+      "text": "marcus.sullivan6@example.net"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 21,
+      "end": 32,
+      "type": "ADDRESS",
+      "text": "PO Box 1180"
+    },
+    {
+      "start": 34,
+      "end": 49,
+      "type": "ADDRESS",
+      "text": "Boise, ID 83701"
+    },
+    {
+      "start": 251,
+      "end": 267,
+      "type": "NAME",
+      "text": "Dr. Dana Eriksen"
+    },
+    {
+      "start": 439,
+      "end": 453,
+      "type": "PHONE",
+      "text": "1-800-555-0140"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-09-02",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "53.56",
+      "allowed_amount": "28.33",
+      "insurer_paid": "28.33",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-09-03",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "80.37",
+      "allowed_amount": "63.93",
+      "insurer_paid": "44.75",
+      "patient_responsibility": "19.18"
+    },
+    {
+      "service_date": "2025-09-03",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "80.37",
+      "allowed_amount": "63.93",
+      "insurer_paid": "44.75",
+      "patient_responsibility": "19.18"
+    },
+    {
+      "service_date": "2025-09-03",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "27.11",
+      "allowed_amount": "11.41",
+      "insurer_paid": "11.41",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-09-06",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1707.22",
+      "allowed_amount": "1144.10",
+      "insurer_paid": "915.28",
+      "patient_responsibility": "228.82"
+    },
+    {
+      "service_date": "2025-09-08",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "481.78",
+      "allowed_amount": "346.82",
+      "insurer_paid": "242.77",
+      "patient_responsibility": "104.05"
+    },
+    {
+      "service_date": "2025-09-08",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "908.69",
+      "allowed_amount": "415.42",
+      "insurer_paid": "415.42",
+      "patient_responsibility": "0.00"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      1,
+      2
+    ]
+  ]
+}

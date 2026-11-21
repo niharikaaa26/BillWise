@@ -1,0 +1,110 @@
+{
+  "id": "bill_019",
+  "layout": "claim_blocks",
+  "messy": [
+    "missing_field",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 106,
+      "end": 121,
+      "type": "NAME",
+      "text": "SARAH S. NGUYEN"
+    },
+    {
+      "start": 133,
+      "end": 143,
+      "type": "MEMBER_ID",
+      "text": "MBR9092458"
+    },
+    {
+      "start": 150,
+      "end": 160,
+      "type": "DOB",
+      "text": "09/01/1982"
+    },
+    {
+      "start": 170,
+      "end": 213,
+      "type": "ADDRESS",
+      "text": "2648 Hillcrest Ave #13B, Fairview, TN 37054"
+    },
+    {
+      "start": 223,
+      "end": 254,
+      "type": "EMAIL",
+      "text": "sarah.nguyen33@mail.example.com"
+    },
+    {
+      "start": 257,
+      "end": 269,
+      "type": "PHONE",
+      "text": "864-555-0158"
+    },
+    {
+      "start": 283,
+      "end": 296,
+      "type": "ACCOUNT_ID",
+      "text": "CLM-429103154"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-08-31",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "161.82",
+      "allowed_amount": null,
+      "insurer_paid": "53.98",
+      "patient_responsibility": "23.14"
+    },
+    {
+      "service_date": "2025-08-31",
+      "code": "85025",
+      "description": "Complete blood count with automated differential",
+      "billed_amount": "60.05",
+      "allowed_amount": "43.51",
+      "insurer_paid": "30.46",
+      "patient_responsibility": "13.05"
+    },
+    {
+      "service_date": "2025-08-31",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "50.33",
+      "allowed_amount": "36.35",
+      "insurer_paid": "25.45",
+      "patient_responsibility": "10.90"
+    },
+    {
+      "service_date": "2025-08-31",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "135.79",
+      "allowed_amount": "78.98",
+      "insurer_paid": "78.98",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-08-31",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "48.42",
+      "allowed_amount": null,
+      "insurer_paid": "32.06",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-09-01",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "205.79",
+      "allowed_amount": "141.54",
+      "insurer_paid": "141.54",
+      "patient_responsibility": "0.00"
+    }
+  ],
+  "duplicate_pairs": []
+}

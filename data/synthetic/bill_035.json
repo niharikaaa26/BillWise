@@ -1,0 +1,106 @@
+{
+  "id": "bill_035",
+  "layout": "claim_blocks",
+  "messy": [
+    "missing_contact",
+    "missing_field",
+    "multiline_item",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 112,
+      "end": 127,
+      "type": "NAME",
+      "text": "AISHA D. NGUYEN"
+    },
+    {
+      "start": 139,
+      "end": 152,
+      "type": "MEMBER_ID",
+      "text": "CPH-8953-1252"
+    },
+    {
+      "start": 159,
+      "end": 169,
+      "type": "DOB",
+      "text": "2003-03-01"
+    },
+    {
+      "start": 179,
+      "end": 225,
+      "type": "ADDRESS",
+      "text": "4180 Briar Lane Unit 12, Port Jervis, NY 12778"
+    },
+    {
+      "start": 235,
+      "end": 247,
+      "type": "PHONE",
+      "text": "212-555-0160"
+    },
+    {
+      "start": 261,
+      "end": 274,
+      "type": "ACCOUNT_ID",
+      "text": "CLM-190952453"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-02-15",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "58.97",
+      "allowed_amount": "38.78",
+      "insurer_paid": "38.78",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-16",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "218.48",
+      "allowed_amount": "102.57",
+      "insurer_paid": "92.31",
+      "patient_responsibility": "10.26"
+    },
+    {
+      "service_date": "2025-02-16",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "298.17",
+      "allowed_amount": "229.29",
+      "insurer_paid": "206.36",
+      "patient_responsibility": "22.93"
+    },
+    {
+      "service_date": "2025-02-16",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "114.95",
+      "allowed_amount": "68.49",
+      "insurer_paid": "54.79",
+      "patient_responsibility": "13.70"
+    },
+    {
+      "service_date": "2025-02-16",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "58.81",
+      "allowed_amount": null,
+      "insurer_paid": "29.88",
+      "patient_responsibility": "7.47"
+    },
+    {
+      "service_date": "2025-02-16",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "35.54",
+      "allowed_amount": "10.93",
+      "insurer_paid": "8.74",
+      "patient_responsibility": "2.19"
+    }
+  ],
+  "duplicate_pairs": []
+}

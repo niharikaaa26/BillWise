@@ -1,0 +1,34 @@
+Summit Mutual Health -- Your Claim Summary
+================================================
+Prepared for: Yuki Hernandez
+Member ID: MBR7164162   SSN: 902-42-1736
+Born: 04/11/1956
+Address: 7221 Cedar Ln #31C, Millbrook, NY 12547
+Contact: yuki.hernandez45@example.org / 360-555-0109
+Reference #: CLM-266118060
+
+Claim line 1
+  Date of service: 03/04/2025
+  Service: 70450 CT head 0r brain without contrast
+  Provider charged: $2,471.71
+  Plan allowed: $1,374.15
+  Plan paid: $961.91
+  Your share: $412.24
+
+Claim line 2
+  Date of service: 03/04/2025
+  Service: 99285 Emergency department visit, high severity
+  Provider charged: $2,26l.53
+  Plan allowed: $1,736.19
+  Plan paid: $1,388.95
+  Your share: $347,24
+
+Claim line 3
+  Date of service: 03/05/2025
+  Service: J2405 Ondansetron hydrochloride injection, per 1 mg
+  Provider charged: $55,07
+  Plan allowed: $27.10
+  Plan paid: S18.97
+  Your share: $8,13
+
+This summary is for your records.

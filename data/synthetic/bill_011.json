@@ -1,0 +1,111 @@
+{
+  "id": "bill_011",
+  "layout": "claim_blocks",
+  "messy": [
+    "missing_field",
+    "multiline_item",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 106,
+      "end": 122,
+      "type": "NAME",
+      "text": "NAVEEN ABERNATHY"
+    },
+    {
+      "start": 134,
+      "end": 146,
+      "type": "MEMBER_ID",
+      "text": "ZQ3794961-01"
+    },
+    {
+      "start": 153,
+      "end": 163,
+      "type": "DOB",
+      "text": "11/14/1964"
+    },
+    {
+      "start": 173,
+      "end": 208,
+      "type": "ADDRESS",
+      "text": "2675 Sunset Ln, Millbrook, NY 12520"
+    },
+    {
+      "start": 218,
+      "end": 248,
+      "type": "EMAIL",
+      "text": "naveen.abernathy46@example.net"
+    },
+    {
+      "start": 251,
+      "end": 263,
+      "type": "PHONE",
+      "text": "303-555-0157"
+    },
+    {
+      "start": 277,
+      "end": 290,
+      "type": "ACCOUNT_ID",
+      "text": "CLM-186320539"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-07-11",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "328.51",
+      "allowed_amount": "240.19",
+      "insurer_paid": "240.19",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-07-11",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "962.20",
+      "allowed_amount": "433.05",
+      "insurer_paid": "346.44",
+      "patient_responsibility": "86.61"
+    },
+    {
+      "service_date": "2025-07-13",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "31.00",
+      "allowed_amount": "13.45",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "13.45"
+    },
+    {
+      "service_date": "2025-07-16",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2179.86",
+      "allowed_amount": null,
+      "insurer_paid": "976.43",
+      "patient_responsibility": "244.11"
+    },
+    {
+      "service_date": "2025-07-16",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "2386.55",
+      "allowed_amount": "1312.33",
+      "insurer_paid": "1049.86",
+      "patient_responsibility": "262.47"
+    },
+    {
+      "service_date": "2025-07-18",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "279.18",
+      "allowed_amount": "200.21",
+      "insurer_paid": "140.15",
+      "patient_responsibility": "60.06"
+    }
+  ],
+  "duplicate_pairs": []
+}

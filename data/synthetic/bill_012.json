@@ -1,0 +1,140 @@
+{
+  "id": "bill_012",
+  "layout": "clinic_csv",
+  "messy": [
+    "missing_code",
+    "ocr_description",
+    "ssn_present",
+    "unlabeled_name"
+  ],
+  "pii": [
+    {
+      "start": 58,
+      "end": 74,
+      "type": "NAME",
+      "text": "OLUWASEUN WOJCIK"
+    },
+    {
+      "start": 75,
+      "end": 94,
+      "type": "ADDRESS",
+      "text": "4114 HILLCREST LANE"
+    },
+    {
+      "start": 95,
+      "end": 115,
+      "type": "ADDRESS",
+      "text": "PORT JERVIS NY 12771"
+    },
+    {
+      "start": 122,
+      "end": 131,
+      "type": "NAME",
+      "text": "Oluwaseun"
+    },
+    {
+      "start": 179,
+      "end": 188,
+      "type": "NAME",
+      "text": "Oluwaseun"
+    },
+    {
+      "start": 304,
+      "end": 320,
+      "type": "NAME",
+      "text": "Oluwaseun Wojcik"
+    },
+    {
+      "start": 335,
+      "end": 342,
+      "type": "ACCOUNT_ID",
+      "text": "9304764"
+    },
+    {
+      "start": 349,
+      "end": 356,
+      "type": "DOB",
+      "text": "4/12/05"
+    },
+    {
+      "start": 372,
+      "end": 383,
+      "type": "SSN",
+      "text": "923-68-4834"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 21,
+      "end": 37,
+      "type": "ADDRESS",
+      "text": "15 Commerce Blvd"
+    },
+    {
+      "start": 38,
+      "end": 56,
+      "type": "ADDRESS",
+      "text": "Fairview, TN 37062"
+    },
+    {
+      "start": 239,
+      "end": 253,
+      "type": "PHONE",
+      "text": "(360) 555-0190"
+    },
+    {
+      "start": 263,
+      "end": 292,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-09-14",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "65.23",
+      "allowed_amount": "21.27",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "21.27"
+    },
+    {
+      "service_date": "2025-09-14",
+      "code": null,
+      "description": "IV push, single or initial substance",
+      "billed_amount": "199.23",
+      "allowed_amount": "152.27",
+      "insurer_paid": "152.27",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-09-16",
+      "code": "85025",
+      "description": "Complete blood count with automated dlfferential",
+      "billed_amount": "60.38",
+      "allowed_amount": "46.67",
+      "insurer_paid": "32.67",
+      "patient_responsibility": "14.00"
+    },
+    {
+      "service_date": "2025-09-18",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "341.89",
+      "allowed_amount": "154.50",
+      "insurer_paid": "108.15",
+      "patient_responsibility": "46.35"
+    },
+    {
+      "service_date": "2025-09-18",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "276.14",
+      "allowed_amount": "139.32",
+      "insurer_paid": "97.52",
+      "patient_responsibility": "41.80"
+    }
+  ],
+  "duplicate_pairs": []
+}

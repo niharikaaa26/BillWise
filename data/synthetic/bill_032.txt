@@ -1,0 +1,22 @@
+Northgate Pediatrics
+15 Commerce Blvd
+Fairview, TN 37062
+
+MARCUS CASTELLANOS
+2102 WILLOW WAY
+LAKEWOOD CO 80268
+
+Dear Marcus Castellanos,
+Our records show a balance on the account for Marcus. Please review the charges below.
+Questions? Call (479) 555-0143 or email billing@northgatepeds.example.
+
+Patient Acct: 2939049   DOB 1967-12-19
+Phone on file: 513-555-0102
+
+Svc Date,CPT/HCPCS,Description,Charge,Ins Paid,Your Balance
+08/25/2025,36415,Routine venipuncture,47.93,17.13,7.34
+08/27/2025,A4649,"Surgical supply, miscellaneous",63.55,20.66,0.00
+08/27/2025,93000,"Electrocardiograrn, routine, with
+interpretation and report",157.18,84.93,9.44
+
+Total balance due: $16.78

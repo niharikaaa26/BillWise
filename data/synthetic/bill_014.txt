@@ -1,0 +1,30 @@
+SUMMIT MUTUAL HEALTH
+PO Box 1180, Boise, ID 83701
+EXPLANATION OF BENEFITS -- THIS IS NOT A BILL
+Processed: 04/30/2025
+
+Patient: Rafael C. Hernandez     Member ID: CPH-1546-9290
+Patient DOB: 08/17/1993     Group #: 82066
+Claim Number: 1517338843192
+Provider: Dr. Dana Dubois, MD   NPI 8001762991
+
+Mail to:
+RAFAEL C. HERNANDEZ
+8630 RIVERBEND RD
+SPRINGDALE, AR 72748
+
+Email on file: rafael.hernandez28@example.org
+Questions? Call Member Services at 1-800-555-0170
+
+Date of Service | Procedure | Service Description                            | Amount Billed | Allowed Amount | Paid by Plan | Your Responsibility
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+04/06/2025      | 85025     | Complete blood count with automated differential | $171.52       | $63.61         | $0.00        | $63.61
+04/06/2025      | 96374     | IV push, single or initial substance           | $388.80       | $200.96        | $180.86      | $20.10
+04/06/2025      | 80053     | Comprehensive metabolic panel                  | $294.67       | $104.81        | $94.33       | $10.48
+04/06/2025      | 87880     | Rapid strep test                               | $59.94        | $24.34         | $24.34       | $0.00
+04/06/2025      | 99283     | Emergency department visit, moderate severity  | $794.22       | $439.05        | $307.34      | $131.71
+04/06/2025      | 96374     | IV push, single or initial substance           | $208.03       | $67.31         | $67.31       | $0.00
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+TOTALS          |           |                                                | $1,917.18     | $900.08        | $674.18      | $225.90
+
+The amount you owe may be billed to you separately by your provider.

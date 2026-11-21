@@ -1,0 +1,141 @@
+{
+  "id": "bill_016",
+  "layout": "clinic_csv",
+  "messy": [
+    "ocr_amount",
+    "unlabeled_name"
+  ],
+  "pii": [
+    {
+      "start": 58,
+      "end": 72,
+      "type": "NAME",
+      "text": "DAVID YAMAMOTO"
+    },
+    {
+      "start": 73,
+      "end": 88,
+      "type": "ADDRESS",
+      "text": "8169 SUNSET AVE"
+    },
+    {
+      "start": 89,
+      "end": 108,
+      "type": "ADDRESS",
+      "text": "GREENVILLE SC 29675"
+    },
+    {
+      "start": 115,
+      "end": 120,
+      "type": "NAME",
+      "text": "David"
+    },
+    {
+      "start": 168,
+      "end": 173,
+      "type": "NAME",
+      "text": "David"
+    },
+    {
+      "start": 294,
+      "end": 301,
+      "type": "ACCOUNT_ID",
+      "text": "6229114"
+    },
+    {
+      "start": 308,
+      "end": 318,
+      "type": "DOB",
+      "text": "04/21/1965"
+    },
+    {
+      "start": 334,
+      "end": 348,
+      "type": "PHONE",
+      "text": "(917) 555-0119"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 21,
+      "end": 37,
+      "type": "ADDRESS",
+      "text": "15 Commerce Blvd"
+    },
+    {
+      "start": 38,
+      "end": 56,
+      "type": "ADDRESS",
+      "text": "Fairview, TN 37062"
+    },
+    {
+      "start": 224,
+      "end": 238,
+      "type": "PHONE",
+      "text": "(212) 555-0168"
+    },
+    {
+      "start": 248,
+      "end": 277,
+      "type": "EMAIL",
+      "text": "billing@northgatepeds.example"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-02-19",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "2224.86",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "1506.36"
+    },
+    {
+      "service_date": "2025-02-19",
+      "code": "87880",
+      "description": "Rapid strep test",
+      "billed_amount": "54.91",
+      "allowed_amount": null,
+      "insurer_paid": "23.98",
+      "patient_responsibility": "6.00"
+    },
+    {
+      "service_date": "2025-02-20",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "48.88",
+      "allowed_amount": null,
+      "insurer_paid": "28.74",
+      "patient_responsibility": "3.19"
+    },
+    {
+      "service_date": "2025-02-23",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "41.78",
+      "allowed_amount": null,
+      "insurer_paid": "32.26",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-26",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1694.55",
+      "allowed_amount": null,
+      "insurer_paid": "895.59",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-26",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "227.86",
+      "allowed_amount": null,
+      "insurer_paid": "68.03",
+      "patient_responsibility": "29.16"
+    }
+  ],
+  "duplicate_pairs": []
+}

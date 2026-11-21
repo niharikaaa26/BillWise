@@ -1,0 +1,43 @@
+Clearpath Health Insurance -- Your Claim Summary
+================================================
+Prepared for: Andre Ramirez
+Member ID: MBR2140993
+Born: 1998-10-13
+Address: 8855 Juniper Ln Unit 17, Riverton, OH 45029
+Contact: (615) 555-0194
+Reference #: CLM-365226329
+
+Claim line 1
+  Date of service: 09/10/2025
+  Service: 99213 Office visit, established patient, low complexity
+  Provider charged: $127.36
+  Plan allowed: $61.66
+  Plan paid: $49.33
+  Your share: $12,33
+
+Claim line 2
+  Date of service: 09/10/2025
+  Service: 85025 Complete blood count with automated differential
+  Provider charged: $l17.84
+  Plan allowed: $47.40
+  Plan paid: $0.00
+  Your share: $47.40
+
+Claim line 3
+  Date of service: 09/10/2025
+  Service: 74177 CT abdomen and pelvis with contrast
+  Provider charged: S3,048.68
+  Plan allowed: $1,310.00
+  Plan paid: $1,310.00
+  Your share: $0.O0
+
+Claim line 4
+  Date of service: 09/10/2025
+  Service: 85025 Complete blood count with automated
+           differential
+  Provider charged: $84.54
+  Plan allowed: $56.41
+  Plan paid: $56.4l
+  Your share: $O.00
+
+This summary is for your records.

@@ -1,0 +1,144 @@
+{
+  "id": "bill_037",
+  "layout": "hospital_fixed",
+  "messy": [
+    "blank_repeated_date",
+    "multiline_item",
+    "ocr_amount",
+    "ocr_description",
+    "ssn_present"
+  ],
+  "pii": [
+    {
+      "start": 165,
+      "end": 173,
+      "type": "ACCOUNT_ID",
+      "text": "49498635"
+    },
+    {
+      "start": 188,
+      "end": 205,
+      "type": "NAME",
+      "text": "LINDQVIST, CARLOS"
+    },
+    {
+      "start": 221,
+      "end": 227,
+      "type": "DOB",
+      "text": "6/6/18"
+    },
+    {
+      "start": 233,
+      "end": 244,
+      "type": "SSN",
+      "text": "921-44-9280"
+    },
+    {
+      "start": 264,
+      "end": 280,
+      "type": "NAME",
+      "text": "Carlos Lindqvist"
+    },
+    {
+      "start": 283,
+      "end": 312,
+      "type": "ADDRESS",
+      "text": "7756 Sunset Boulevard Apt 30B"
+    },
+    {
+      "start": 315,
+      "end": 333,
+      "type": "ADDRESS",
+      "text": "Riverton, OH 45072"
+    },
+    {
+      "start": 341,
+      "end": 353,
+      "type": "PHONE",
+      "text": "845-555-0144"
+    },
+    {
+      "start": 409,
+      "end": 419,
+      "type": "MEMBER_ID",
+      "text": "MBR7491157"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 31,
+      "end": 47,
+      "type": "ADDRESS",
+      "text": "4100 Hospital Dr"
+    },
+    {
+      "start": 49,
+      "end": 67,
+      "type": "ADDRESS",
+      "text": "Riverton, OH 45011"
+    },
+    {
+      "start": 87,
+      "end": 101,
+      "type": "PHONE",
+      "text": "1-800-555-0192"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-08-03",
+      "code": "85025",
+      "description": "COMPLETE BLOOD COUNT WITH AUTOMATED DIFFERENTIAL",
+      "billed_amount": "81.72",
+      "allowed_amount": null,
+      "insurer_paid": "58.24",
+      "patient_responsibility": "6.47"
+    },
+    {
+      "service_date": "2025-08-03",
+      "code": "99285",
+      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+      "billed_amount": "1515.82",
+      "allowed_amount": null,
+      "insurer_paid": "516.30",
+      "patient_responsibility": "221.27"
+    },
+    {
+      "service_date": "2025-08-04",
+      "code": "80053",
+      "description": "COMPREHENSIVE METABOLIC PANEL",
+      "billed_amount": "239.95",
+      "allowed_amount": null,
+      "insurer_paid": "110.89",
+      "patient_responsibility": "27.72"
+    },
+    {
+      "service_date": "2025-08-04",
+      "code": "71046",
+      "description": "CHEST X-RAY, 2 VIEWS",
+      "billed_amount": "474.06",
+      "allowed_amount": null,
+      "insurer_paid": "249.68",
+      "patient_responsibility": "107.01"
+    },
+    {
+      "service_date": "2025-08-07",
+      "code": "99214",
+      "description": "OFFICE VISIT, ESTABLISHED PATIENT, MODERATE C0MPLEXITY",
+      "billed_amount": "299.43",
+      "allowed_amount": null,
+      "insurer_paid": "181.02",
+      "patient_responsibility": "45.26"
+    },
+    {
+      "service_date": "2025-08-08",
+      "code": "80053",
+      "description": "COMPREHENSIVE METABOLIC PANEL",
+      "billed_amount": "190.42",
+      "allowed_amount": null,
+      "insurer_paid": "106.55",
+      "patient_responsibility": "11.84"
+    }
+  ],
+  "duplicate_pairs": []
+}

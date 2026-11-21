@@ -1,0 +1,148 @@
+{
+  "id": "bill_005",
+  "layout": "hospital_fixed",
+  "messy": [
+    "multiline_item",
+    "ocr_amount",
+    "ssn_present"
+  ],
+  "pii": [
+    {
+      "start": 162,
+      "end": 170,
+      "type": "ACCOUNT_ID",
+      "text": "08438007"
+    },
+    {
+      "start": 185,
+      "end": 200,
+      "type": "NAME",
+      "text": "KOWALSKI, ANDRE"
+    },
+    {
+      "start": 216,
+      "end": 226,
+      "type": "DOB",
+      "text": "06/14/1992"
+    },
+    {
+      "start": 238,
+      "end": 256,
+      "type": "NAME",
+      "text": "Fatima J. Kowalski"
+    },
+    {
+      "start": 262,
+      "end": 273,
+      "type": "SSN",
+      "text": "950-51-7165"
+    },
+    {
+      "start": 293,
+      "end": 307,
+      "type": "NAME",
+      "text": "Andre Kowalski"
+    },
+    {
+      "start": 310,
+      "end": 338,
+      "type": "ADDRESS",
+      "text": "3043 Hillcrest Court Unit 1C"
+    },
+    {
+      "start": 341,
+      "end": 359,
+      "type": "ADDRESS",
+      "text": "Lakewood, CO 80228"
+    },
+    {
+      "start": 367,
+      "end": 379,
+      "type": "PHONE",
+      "text": "303-555-0112"
+    },
+    {
+      "start": 439,
+      "end": 451,
+      "type": "MEMBER_ID",
+      "text": "ZQ3597649-01"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 31,
+      "end": 44,
+      "type": "ADDRESS",
+      "text": "2 Prairie Way"
+    },
+    {
+      "start": 46,
+      "end": 64,
+      "type": "ADDRESS",
+      "text": "Lakewood, CO 80226"
+    },
+    {
+      "start": 84,
+      "end": 98,
+      "type": "PHONE",
+      "text": "1-800-555-0186"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-07-14",
+      "code": "90471",
+      "description": "IMMUNIZATION ADMINISTRATION, SINGLE VACCINE",
+      "billed_amount": "47.77",
+      "allowed_amount": null,
+      "insurer_paid": "23.45",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-07-14",
+      "code": "90471",
+      "description": "IMMUNIZATION ADMINISTRATION, SINGLE VACCINE",
+      "billed_amount": "54.58",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "27.40"
+    },
+    {
+      "service_date": "2025-07-14",
+      "code": "80053",
+      "description": "COMPREHENSIVE METABOLIC PANEL",
+      "billed_amount": "258.16",
+      "allowed_amount": null,
+      "insurer_paid": "105.25",
+      "patient_responsibility": "26.31"
+    },
+    {
+      "service_date": "2025-07-14",
+      "code": "99285",
+      "description": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+      "billed_amount": "1603.32",
+      "allowed_amount": null,
+      "insurer_paid": "585.41",
+      "patient_responsibility": "146.35"
+    },
+    {
+      "service_date": "2025-07-14",
+      "code": "A4649",
+      "description": "SURGICAL SUPPLY, MISCELLANEOUS",
+      "billed_amount": "226.55",
+      "allowed_amount": null,
+      "insurer_paid": "116.03",
+      "patient_responsibility": "12.89"
+    },
+    {
+      "service_date": "2025-07-14",
+      "code": "97110",
+      "description": "THERAPEUTIC EXERCISES, EACH 15 MINUTES",
+      "billed_amount": "93.20",
+      "allowed_amount": null,
+      "insurer_paid": "51.36",
+      "patient_responsibility": "22.01"
+    }
+  ],
+  "duplicate_pairs": []
+}

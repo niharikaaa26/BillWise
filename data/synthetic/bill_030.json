@@ -1,0 +1,157 @@
+{
+  "id": "bill_030",
+  "layout": "eob_pipe",
+  "messy": [
+    "duplicate_charge",
+    "missing_email",
+    "missing_field",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 128,
+      "end": 142,
+      "type": "NAME",
+      "text": "Dmitri Ramirez"
+    },
+    {
+      "start": 158,
+      "end": 171,
+      "type": "MEMBER_ID",
+      "text": "CPH-6567-5299"
+    },
+    {
+      "start": 184,
+      "end": 196,
+      "type": "NAME",
+      "text": "Yuki Ramirez"
+    },
+    {
+      "start": 210,
+      "end": 220,
+      "type": "DOB",
+      "text": "06/11/1957"
+    },
+    {
+      "start": 254,
+      "end": 267,
+      "type": "ACCOUNT_ID",
+      "text": "3480952918248"
+    },
+    {
+      "start": 326,
+      "end": 340,
+      "type": "NAME",
+      "text": "DMITRI RAMIREZ"
+    },
+    {
+      "start": 341,
+      "end": 359,
+      "type": "ADDRESS",
+      "text": "2101 JUNIPER COURT"
+    },
+    {
+      "start": 360,
+      "end": 380,
+      "type": "ADDRESS",
+      "text": "GREENVILLE, SC 29675"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 21,
+      "end": 32,
+      "type": "ADDRESS",
+      "text": "PO Box 1180"
+    },
+    {
+      "start": 34,
+      "end": 49,
+      "type": "ADDRESS",
+      "text": "Boise, ID 83701"
+    },
+    {
+      "start": 278,
+      "end": 294,
+      "type": "NAME",
+      "text": "Dr. Chris Farouk"
+    },
+    {
+      "start": 417,
+      "end": 431,
+      "type": "PHONE",
+      "text": "1-800-555-0100"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-02-24",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "228.60",
+      "allowed_amount": "109.56",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "109.56"
+    },
+    {
+      "service_date": "2025-02-24",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "30.14",
+      "allowed_amount": "17.77",
+      "insurer_paid": "17.77",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-02-24",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "80.31",
+      "allowed_amount": null,
+      "insurer_paid": "39.07",
+      "patient_responsibility": "4.34"
+    },
+    {
+      "service_date": "2025-02-24",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "219.56",
+      "allowed_amount": "120.10",
+      "insurer_paid": "84.07",
+      "patient_responsibility": "36.03"
+    },
+    {
+      "service_date": "2025-02-24",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "184.56",
+      "allowed_amount": null,
+      "insurer_paid": "59.62",
+      "patient_responsibility": "6.62"
+    },
+    {
+      "service_date": "2025-02-24",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "184.56",
+      "allowed_amount": "66.24",
+      "insurer_paid": "59.62",
+      "patient_responsibility": "6.62"
+    },
+    {
+      "service_date": "2025-02-24",
+      "code": "87880",
+      "description": "Rapid strep test",
+      "billed_amount": "37.56",
+      "allowed_amount": null,
+      "insurer_paid": "19.56",
+      "patient_responsibility": "8.38"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      4,
+      5
+    ]
+  ]
+}

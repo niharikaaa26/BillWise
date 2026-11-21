@@ -1,0 +1,129 @@
+{
+  "id": "bill_021",
+  "layout": "hospital_fixed",
+  "messy": [
+    "blank_repeated_date",
+    "multiline_item",
+    "ocr_amount",
+    "ocr_description",
+    "ocr_label"
+  ],
+  "pii": [
+    {
+      "start": 162,
+      "end": 170,
+      "type": "ACCOUNT_ID",
+      "text": "98521943"
+    },
+    {
+      "start": 185,
+      "end": 198,
+      "type": "NAME",
+      "text": "MBEKI, INGRID"
+    },
+    {
+      "start": 214,
+      "end": 221,
+      "type": "DOB",
+      "text": "9/19/46"
+    },
+    {
+      "start": 241,
+      "end": 253,
+      "type": "NAME",
+      "text": "Ingrid Mbeki"
+    },
+    {
+      "start": 256,
+      "end": 272,
+      "type": "ADDRESS",
+      "text": "522 Hillcrest Ln"
+    },
+    {
+      "start": 275,
+      "end": 295,
+      "type": "ADDRESS",
+      "text": "Oak Harbor, WA 98216"
+    },
+    {
+      "start": 303,
+      "end": 315,
+      "type": "PHONE",
+      "text": "615-555-0145"
+    },
+    {
+      "start": 375,
+      "end": 385,
+      "type": "MEMBER_ID",
+      "text": "W952578795"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 31,
+      "end": 44,
+      "type": "ADDRESS",
+      "text": "2 Prairie Way"
+    },
+    {
+      "start": 46,
+      "end": 64,
+      "type": "ADDRESS",
+      "text": "Lakewood, CO 80226"
+    },
+    {
+      "start": 84,
+      "end": 98,
+      "type": "PHONE",
+      "text": "1-800-555-0190"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-05-19",
+      "code": "36415",
+      "description": "R0UTINE VENIPUNCTURE",
+      "billed_amount": "28.91",
+      "allowed_amount": null,
+      "insurer_paid": "9.22",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-05-19",
+      "code": "90471",
+      "description": "IMMUNIZATION ADMINISTRATION, SINGLE VACCINE",
+      "billed_amount": "46.59",
+      "allowed_amount": null,
+      "insurer_paid": "19.63",
+      "patient_responsibility": "4.91"
+    },
+    {
+      "service_date": "2025-05-19",
+      "code": "99283",
+      "description": "EMERGENCY DEPARTMENT VISIT, MODERATE SEVERITY",
+      "billed_amount": "657.41",
+      "allowed_amount": null,
+      "insurer_paid": "219.66",
+      "patient_responsibility": "54.91"
+    },
+    {
+      "service_date": "2025-05-20",
+      "code": "85025",
+      "description": "COMPLETE BLOOD COUNT WITH AUTOMATED DIFFERENTIAL",
+      "billed_amount": "106.11",
+      "allowed_amount": null,
+      "insurer_paid": "38.26",
+      "patient_responsibility": "9.56"
+    },
+    {
+      "service_date": "2025-05-20",
+      "code": "74177",
+      "description": "CT ABDOMEN AND PELVIS WITH CONTRAST",
+      "billed_amount": "3326.13",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "2642.30"
+    }
+  ],
+  "duplicate_pairs": []
+}

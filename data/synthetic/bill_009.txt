@@ -1,0 +1,33 @@
+ST. BRIGID MEDICAL CENTER
+77 Cathedral Ave, Millbrook, NY 12545
+Billing Questions: 1-800-555-0157
+
+ITEMIZED STATEMENT
+Statement Date: 03/18/2025
+Account Number: 07248849
+Patient Name: MURPHY, THANH
+Date of Birth: 1992-05-15
+Mailing Address:
+  Thanh Murphy
+  5123 Chestnut Ct
+  Port Jervis, NY 12722
+Phone: 513.555.0156
+Primary Insurance: Clearpath Health Insurance   Member ID: W979375560
+
+DATE       CODE    DESCRIPTION                           CHARGES   INS PAID     ADJUST    PT RESP
+------------------------------------------------------------------------------------------------
+02/12/2025 G0439   ANNUAL WELLNESS VISIT, SUBSEQUENL      254.39      69.44     177.23       7.72
+02/13/2025 85025   COMPLETE BLOOD COUNT WITH               71.15      32,98      38.17       0.00
+                   AUTOMATED DIFFERENTIAL
+02/15/2025 87880   RAPID STREP TEST                        59.01      24.58      31.70       2.73
+02/18/2025 71046   CHEST X-RAY, 2 VIEWS                   261.67     l33.21      71.37      57,09
+           99214   OFFICE VISIT, ESTABLISHED PATIENT,     310.00     104.22     205.78       0.00
+                   MODERATE COMPLEXITY
+           99214   OFFICE VISIT, ESTABLISHED PATIENT,     310.00     104.22     205.78       0.00
+                   MODERATE COMPLEXITY
+           J1885   KETOROLAC TROMETHAMINE INJECTION,       47.11      17.89      21.56       7,66
+                   PER 15 MG
+------------------------------------------------------------------------------------------------
+                   TOTAL CHARGES                        1,313.33
+
+Please remit the patient balance within 30 days.

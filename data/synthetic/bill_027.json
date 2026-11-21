@@ -1,0 +1,87 @@
+{
+  "id": "bill_027",
+  "layout": "claim_blocks",
+  "messy": [
+    "missing_contact",
+    "multiline_item",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 112,
+      "end": 125,
+      "type": "NAME",
+      "text": "Andre Ramirez"
+    },
+    {
+      "start": 137,
+      "end": 147,
+      "type": "MEMBER_ID",
+      "text": "MBR2140993"
+    },
+    {
+      "start": 154,
+      "end": 164,
+      "type": "DOB",
+      "text": "1998-10-13"
+    },
+    {
+      "start": 174,
+      "end": 217,
+      "type": "ADDRESS",
+      "text": "8855 Juniper Ln Unit 17, Riverton, OH 45029"
+    },
+    {
+      "start": 227,
+      "end": 241,
+      "type": "PHONE",
+      "text": "(615) 555-0194"
+    },
+    {
+      "start": 255,
+      "end": 268,
+      "type": "ACCOUNT_ID",
+      "text": "CLM-365226329"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-09-10",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "127.36",
+      "allowed_amount": "61.66",
+      "insurer_paid": "49.33",
+      "patient_responsibility": "12.33"
+    },
+    {
+      "service_date": "2025-09-10",
+      "code": "85025",
+      "description": "Complete blood count with automated differential",
+      "billed_amount": "117.84",
+      "allowed_amount": "47.40",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "47.40"
+    },
+    {
+      "service_date": "2025-09-10",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "3048.68",
+      "allowed_amount": "1310.00",
+      "insurer_paid": "1310.00",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-09-10",
+      "code": "85025",
+      "description": "Complete blood count with automated differential",
+      "billed_amount": "84.54",
+      "allowed_amount": "56.41",
+      "insurer_paid": "56.41",
+      "patient_responsibility": "0.00"
+    }
+  ],
+  "duplicate_pairs": []
+}

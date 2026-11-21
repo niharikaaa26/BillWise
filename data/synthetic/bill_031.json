@@ -1,0 +1,90 @@
+{
+  "id": "bill_031",
+  "layout": "claim_blocks",
+  "messy": [
+    "ocr_amount",
+    "ocr_description",
+    "ssn_present"
+  ],
+  "pii": [
+    {
+      "start": 106,
+      "end": 120,
+      "type": "NAME",
+      "text": "Yuki Hernandez"
+    },
+    {
+      "start": 132,
+      "end": 142,
+      "type": "MEMBER_ID",
+      "text": "MBR7164162"
+    },
+    {
+      "start": 150,
+      "end": 161,
+      "type": "SSN",
+      "text": "902-42-1736"
+    },
+    {
+      "start": 168,
+      "end": 178,
+      "type": "DOB",
+      "text": "04/11/1956"
+    },
+    {
+      "start": 188,
+      "end": 227,
+      "type": "ADDRESS",
+      "text": "7221 Cedar Ln #31C, Millbrook, NY 12547"
+    },
+    {
+      "start": 237,
+      "end": 265,
+      "type": "EMAIL",
+      "text": "yuki.hernandez45@example.org"
+    },
+    {
+      "start": 268,
+      "end": 280,
+      "type": "PHONE",
+      "text": "360-555-0109"
+    },
+    {
+      "start": 294,
+      "end": 307,
+      "type": "ACCOUNT_ID",
+      "text": "CLM-266118060"
+    }
+  ],
+  "allowed_redactions": [],
+  "line_items": [
+    {
+      "service_date": "2025-03-04",
+      "code": "70450",
+      "description": "CT head 0r brain without contrast",
+      "billed_amount": "2471.71",
+      "allowed_amount": "1374.15",
+      "insurer_paid": "961.91",
+      "patient_responsibility": "412.24"
+    },
+    {
+      "service_date": "2025-03-04",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2261.53",
+      "allowed_amount": "1736.19",
+      "insurer_paid": "1388.95",
+      "patient_responsibility": "347.24"
+    },
+    {
+      "service_date": "2025-03-05",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "55.07",
+      "allowed_amount": "27.10",
+      "insurer_paid": "18.97",
+      "patient_responsibility": "8.13"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,0 +1,101 @@
+{
+  "id": "bill_002",
+  "layout": "eob_pipe",
+  "messy": [
+    "missing_email",
+    "multiline_item",
+    "ocr_amount",
+    "ocr_label"
+  ],
+  "pii": [
+    {
+      "start": 137,
+      "end": 152,
+      "type": "NAME",
+      "text": "Grace Abernathy"
+    },
+    {
+      "start": 168,
+      "end": 181,
+      "type": "MEMBER_ID",
+      "text": "CPH-5900-9199"
+    },
+    {
+      "start": 195,
+      "end": 208,
+      "type": "DOB",
+      "text": "July 25, 1950"
+    },
+    {
+      "start": 242,
+      "end": 255,
+      "type": "ACCOUNT_ID",
+      "text": "0689648453470"
+    },
+    {
+      "start": 315,
+      "end": 330,
+      "type": "NAME",
+      "text": "GRACE ABERNATHY"
+    },
+    {
+      "start": 331,
+      "end": 342,
+      "type": "ADDRESS",
+      "text": "8320 ELM LN"
+    },
+    {
+      "start": 343,
+      "end": 362,
+      "type": "ADDRESS",
+      "text": "MILLBROOK, NY 12590"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 27,
+      "end": 38,
+      "type": "ADDRESS",
+      "text": "PO Box 4410"
+    },
+    {
+      "start": 40,
+      "end": 58,
+      "type": "ADDRESS",
+      "text": "Hartwell, GA 30643"
+    },
+    {
+      "start": 266,
+      "end": 283,
+      "type": "NAME",
+      "text": "Dr. Farah Brennan"
+    },
+    {
+      "start": 399,
+      "end": 413,
+      "type": "PHONE",
+      "text": "1-800-555-0153"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-08-24",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "108.54",
+      "allowed_amount": "37.99",
+      "insurer_paid": "37.99",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-08-24",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "195.48",
+      "allowed_amount": "91.55",
+      "insurer_paid": "82.40",
+      "patient_responsibility": "9.15"
+    }
+  ],
+  "duplicate_pairs": []
+}

@@ -1,0 +1,24 @@
+Northgate Pediatrics
+15 Commerce Blvd
+Fairview, TN 37062
+
+OLUWASEUN WOJCIK
+4114 HILLCREST LANE
+PORT JERVIS NY 12771
+
+Dear Oluwaseun,
+Our records show a balance on the account for Oluwaseun. Please review the charges below.
+Questions? Call (360) 555-0190 or email billing@northgatepeds.example.
+
+Patient: Oluwaseun Wojcik
+Patient Acct: 9304764   DOB 4/12/05
+Guarantor SSN: 923-68-4834
+
+Svc Date,CPT/HCPCS,Description,Charge,Allowed,Ins Paid,Your Balance
+09/14/2025,90686,"Influenza vaccine, quadrivalent, preservative free",65.23,21.27,0.00,21.27
+09/14/2025,,"IV push, single or initial substance",199.23,152.27,152.27,0.00
+09/16/2025,85025,Complete blood count with automated dlfferential,60.38,46.67,32.67,14.00
+09/18/2025,96374,"IV push, single or initial substance",341.89,154.50,108.15,46.35
+09/18/2025,96374,"IV push, single or initial substance",276.14,139.32,97.52,41.80
+
+Total balance due: $123.42

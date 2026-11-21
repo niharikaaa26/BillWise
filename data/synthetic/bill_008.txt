@@ -1,0 +1,27 @@
+Northgate Pediatrics
+15 Commerce Blvd
+Fairview, TN 37062
+
+RAFAEL SMITH
+2115 HILLCREST WAY
+MILLBROOK NY 12523
+
+Dear Rafael,
+Our records show a balance on the account for Rafael. Please review the charges below.
+Questions? Call (513) 555-0149 or email billing@northgatepeds.example.
+
+Patient: Rafael Smith
+Patient Acct: 3794252   DOB 09/08/1956
+Phone on file: (319) 555-0135
+
+Svc Date,CPT/HCPCS,Description,Charge,Ins Paid,Your Balance
+02/08/2025,87880,Rapid strep test,25.75,0.00,10.25
+02/08/2025,80053,Comprehensive metabolic panel,97.81,24.67,6.17
+02/08/2025,99214,"Office visit, established patient,
+moderate complexity",315.01,211.41,23.49
+02/11/2025,,"Office visit, established patient, moderate c0mplexity",225.16,160.94,0.00
+02/12/2025,90686,"Influenza vaccine, quadrivalent, preservative free",75.85,33.17,0.O0
+02/12/2025,97110,"Therapeutic exercises, each 15 minutes",79.6O,18.07,7.74
+02/12/2025,80053,Comprehensive metabolic panel,107.40,42.62,0.00
+
+Total balance due: $47.65

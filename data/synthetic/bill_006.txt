@@ -1,0 +1,32 @@
+CLEARPATH HEALTH INSURANCE
+PO Box 4410, Hartwell, GA 30643
+EXPLANATION OF BENEFITS -- THIS IS NOT A BILL
+Processed: 02/23/2025
+
+Patient: PATRICE G. WILLIAMS     Member ID: ZQ5587945-01
+Subscriber: Daniel Williams
+Patient DOB: 05/06/1970     Group #: 21424
+Claim Number: 4641283257176
+Provider: Dr. Dana Farouk, MD   NPI 7103179130
+
+Mail to:
+PATRICE G. WILLIAMS
+2992 PINE WAY
+LAKEWOOD, CO 80213
+
+Email on file: patrice.williams28@example.org
+Questions? Call Member Services at 1-800-555-0153
+
+Date of Service | Procedure | Service Description                            | Amount Billed | Allowed Amount | Paid by Plan | Your Responsibility
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+12/25/2024      | 99213     | Office visit, established                      | S232.50       | $75.22         | $52.65       | $22.57
+                |           | patient, low complexity                        |               |                |              |
+12/25/2024      | 99213     | Office visit, established patient, low complexity | $232.50       | $75.22         | $52.65       | $22.57
+12/27/2024      | 99203     | New patient office visit                       | $239.50       | $88.15         | $61.71       | $26.44
+12/27/2024      | 81001     | Urinalysis, automated, with                    | $54.06        | $32.57         | $0.00        | $32.57
+                |           | microscopy                                     |               |                |              |
+12/28/2024      | 71046     | Chest x-ray, 2 views                           | $452.97       | --             | $233.99      | $0.00
+----------------+-----------+------------------------------------------------+---------------+----------------+--------------+--------------------
+TOTALS          |           |                                                | $1,211.53     | $271.16        | $401.00      | $104.15
+
+The amount you owe may be billed to you separately by your provider.
