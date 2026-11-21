@@ -1,0 +1,80 @@
+"""Generator integrity + end-to-end evaluation tests."""
+import json
+from pathlib import Path
+
+import pytest
+
+from data_gen.generate import generate
+from eval import run_eval
+from billwise.redact import RedactionResult
+
+ROOT = Path(__file__).resolve().parents[1]
+MAIN = ROOT / "data" / "synthetic"
+HELDOUT = ROOT / "data" / "heldout"
+
+
+def test_generator_is_deterministic_and_matches_committed_data(tmp_path):
+    generate(tmp_path, 48, 2025)
+    for f in sorted(MAIN.glob("bill_*")):
+        assert (tmp_path / f.name).read_text(encoding="utf-8") == f.read_text(encoding="utf-8"), f.name
+
+
+def test_ground_truth_offsets_are_exact():
+    files = sorted(MAIN.glob("bill_*.json")) + sorted(HELDOUT.glob("bill_*.json"))
+    assert len(files) >= 40
+    for jf in files:
+        truth = json.loads(jf.read_text(encoding="utf-8"))
+        text = jf.with_suffix(".txt").read_text(encoding="utf-8")
+        for s in truth["pii"] + truth["allowed_redactions"]:
+            assert text[s["start"]:s["end"]] == s["text"]
+
+
+def test_dataset_covers_required_messy_cases():
+    flags = set()
+    for jf in MAIN.glob("bill_*.json"):
+        flags.update(json.loads(jf.read_text(encoding="utf-8"))["messy"])
+    assert {"multiline_item", "missing_field", "ocr_amount", "duplicate_charge"} <= flags
+
+
+@pytest.fixture(scope="module")
+def main_results():
+    return run_eval.run(MAIN)
+
+
+def test_eval_end_to_end_metrics_are_well_formed(main_results):
+    pii, parsing = main_results["pii"], main_results["parsing"]
+    assert pii["overall"]["gold"] > 300
+    for v in list(pii["by_type"].values()) + [pii["overall"]]:
+        for k in ("recall", "precision", "leak_free_rate"):
+            assert v[k] is None or 0.0 <= v[k] <= 1.0
+    assert parsing["gold_lines"] > 100
+    assert all(0.0 <= a <= 1.0 for a in parsing["field_accuracy"].values())
+
+
+def test_eval_regression_floors(main_results):
+    """Guards against regressions on the development set. These are floors,
+    not reported results; the real numbers come from eval/run_eval.py."""
+    assert main_results["pii"]["overall"]["recall"] >= 0.95
+    assert main_results["pii"]["overall"]["leak_free_rate"] >= 0.95
+    assert main_results["parsing"]["field_accuracy_overall"] >= 0.95
+
+
+def test_heldout_eval_runs():
+    r = run_eval.run(HELDOUT)
+    assert r["dataset"]["documents"] == 12
+
+
+def test_eval_detects_a_broken_redactor(monkeypatch):
+    """Sanity check that the metric is computed, not assumed: a redactor that
+    finds nothing must score 0 recall and leak every gold span."""
+    monkeypatch.setattr(run_eval.Redactor, "redact", lambda self, text: RedactionResult(text, []))
+    r = run_eval.run(MAIN)
+    assert r["pii"]["overall"]["recall"] == 0.0
+    assert len(r["pii"]["failures"]["leaks"]) == r["pii"]["overall"]["gold"]
+
+
+def test_eval_detects_a_broken_parser(monkeypatch):
+    from billwise.models import ParseResult
+    monkeypatch.setattr(run_eval, "parse", lambda text: ParseResult(format="unknown", line_items=[]))
+    r = run_eval.run(MAIN)
+    assert r["parsing"]["line_recall"] == 0.0 and r["parsing"]["field_accuracy_overall"] == 0.0
