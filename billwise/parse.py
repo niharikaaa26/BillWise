@@ -66,7 +66,9 @@ def classify_header(cell: str) -> str | None:
 # ---------------------------------------------------------------------------
 MISSING_VALUES = {"--", "-", "—", "–", "N/A", "n/a"}  # includes em dash and en dash
 _OCR_DIGIT = str.maketrans({"O": "0", "o": "0", "l": "1", "I": "1"})
-AMOUNT_RE = re.compile(r"(?<![\w.,])-?[$S]?\s?[0-9OolI][0-9OolI,]*[.,][0-9OolI]{2}(?![\w])")
+# A minus sign counts only when attached ("-113.15", "-$5.00"); "- 520.20" is a missing-value
+# dash followed by a positive amount. A space is allowed only after the currency sign ("$ 45.00").
+AMOUNT_RE = re.compile(r"(?<![\w.,])-?(?:[$S]\s?)?[0-9OolI][0-9OolI,]*[.,][0-9OolI]{2}(?![\w])")
 
 
 def parse_amount(tok: str | None) -> Decimal | None:
