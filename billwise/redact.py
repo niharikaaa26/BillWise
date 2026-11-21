@@ -162,7 +162,9 @@ ID_NEAR = re.compile(
     r"(?:\b(?P<kw>" + _label("ID", "No.", "Number", "Acct") + r")|#)" + _SEP
     + r"(?P<v>[A-Z0-9][A-Z0-9\-]{4,24})(?![\w.])"
 )
-_ID_MEMBER_CTX = re.compile(r"\b(?:member|subscriber|insured|policy|plan)\b", re.IGNORECASE)
+# member-type words, including common abbreviations seen on statements (Mbr, Memb, Subscr)
+_ID_MEMBER_CTX = re.compile(r"\b(?:member|mbr|memb|mem|subscriber|subscr|sub|insured|ins|policy|plan)\b",
+                            re.IGNORECASE)
 _ID_EXCLUDE_CTX = re.compile(r"\b(?:group|grp|npi|tax|ein|tin|fax|page|line|item|rx|bin|pcn)\b\W*$",
                              re.IGNORECASE)
 
