@@ -25,7 +25,8 @@ for each one:
 | `data/dev2/` | 12 | physician-group statement with different column names, modifier/units columns, page breaks, and heavier OCR noise | round-1 held-out set. Its failures drove the round-2 fixes, so it now counts as **development data** |
 | `data/dev3/` | 12 | multi-claim benefits statement: several tab-separated tables, dot-leader labels, `Last First` names, dash-format DOBs | round-2 held-out set. Its failures drove the round-3 fixes, so it now counts as **development data** |
 | `data/dev4/` | 12 | patient-portal visit summary: two-line items with inline `Billed $… · Plan paid $…` amounts, honorific names in a sentence, dotted DOBs, slash phones | round-3 held-out set. Its failures drove the round-4 rework, so it now counts as **development data** |
-| `data/heldout/` | 12 | scanned urgent-care statement whose OCR collapsed the columns to single spaces; labels without colons (`Pt Name`, `Mbr No`), comma-less addresses, compact DOBs | **held out**: written before the round-4 rework and never used to tune it |
+| `data/dev5/` | 12 | scanned urgent-care statement whose OCR collapsed the columns to single spaces; labels without colons (`Pt Name`, `Mbr No`), comma-less addresses, compact DOBs | round-4 held-out set. Its failures drove the round-5 fixes, so it now counts as **development data** |
+| `data/heldout/` | 12 | billing-system export: `KEY=value` fields separated by `;`, HL7-style caret names and addresses (`DOE^JANE^Q`), `YYYYMMDD` dates, medical record number | **held out**: written before the round-5 fixes and never used to tune them |
 
 How the fake identifiers are made:
 - Phone numbers use the reserved fictional `555-01XX` range.
@@ -69,7 +70,11 @@ python -m data_gen.generate --out data/dev4 --n 12 --seed 9001 --ocr-p 0.2 --set
 ```
 
 ```powershell
-python -m data_gen.generate --out data/heldout --n 12 --seed 31337 --ocr-p 0.2 --set heldout
+python -m data_gen.generate --out data/dev5 --n 12 --seed 31337 --ocr-p 0.2 --set dev5
+```
+
+```powershell
+python -m data_gen.generate --out data/heldout --n 12 --seed 5150 --ocr-p 0.2 --set heldout
 ```
 
 ## Privacy approach
@@ -115,7 +120,7 @@ python -m venv .venv
 .venv\Scripts\python -m eval.run_eval
 ```
 
-`run_eval` evaluates all five datasets, prints a report with every failure, and writes
+`run_eval` evaluates all six datasets, prints a report with every failure, and writes
 [eval/results.json](eval/results.json). The most recent full console output is saved
 in [eval/last_run.txt](eval/last_run.txt).
 
@@ -172,41 +177,44 @@ image and smoke-tests it.
 These are copied from the latest run of `python -m eval.run_eval`. Rerun it to
 reproduce them.
 
-**Held-out set (round 4: collapsed-column scan, 12 bills, never used for tuning)**
+**Held-out set (round 5: `KEY=value` billing export, 12 bills, never used for tuning)**
 
 | Metric | Result |
 |---|---|
-| PII recall (same-type overlap) | 84.42% (65/77) |
-| PII redacted under any type | 100.00% |
-| PII leak-free (every character covered) | 89.61% |
-| PII precision | 84.42% |
-| Lines found | 55/55 |
-| Line-item field accuracy | 98.18% |
-| Bills parsed fully correctly | 7/12 |
-| Duplicate pairs flagged | 2/2 |
+| PII recall (same-type overlap) | 33.33% (24/72) |
+| PII leak-free (every character covered) | 16.67% |
+| PII precision | 100.00% |
+| Lines found | 56/56 |
+| Line-item field accuracy | 71.43% |
+| Bills parsed fully correctly | 0/12 |
+| Duplicate pairs flagged | 4/4 |
 
-What fails on the held-out set:
-- **8 addresses partly leaked.** In `Addr 2955 Hillcrest Dr Riverton OH 45029` (no
-  commas), the city/state/ZIP pattern absorbs `Hillcrest Dr`. It then beats the street
-  match when the two overlap, so the house number (`2955`) is left unredacted. The fix
-  is to merge overlapping address candidates instead of discarding the loser.
-- **12 member IDs typed as account IDs.** The label `Mbr No` isn't recognised as
-  member-type, so the generic ID rule labels the value ACCOUNT_ID. The value is still
-  fully redacted, so nothing leaks, but same-type recall and precision both drop.
-- **7 insurer-paid amounts have the wrong sign.** When the allowed amount is shown as
-  `-` (`1483.93 - 520.20 57.80`), the amount pattern reads `- 520.20` as negative. A
-  minus sign separated from its number by a space should be read as a missing value.
+This is the worst privacy result of any round. Only the phone and the street part of
+the address were caught. The cause is one structural assumption the round-4 rework kept:
+**every label rule expects `:`, `#`, a space or dot leaders between a label and its value.**
+This format uses `=` instead, so:
+- **NAME, DOB, MEMBER_ID, ACCOUNT_ID: 0/12 each.** `NAME=DOE^KEISHA^A`, `DOB=19531120`,
+  `MRN=MR26136582` and `SUBSCRIBER_ID=…` are all missed. On top of the separator,
+  `SUBSCRIBER_ID` has an underscore inside the label, names use `^` instead of spaces,
+  and `MRN` (medical record number) is not a known label.
+- **ADDRESS: 12/12 overlapped but 0/12 leak-free.** The street (`7598 RIVERBEND AVE`) is
+  caught, but `^^OAK HARBOR^WA^98277` is not, because the city/state/ZIP pattern expects
+  spaces or commas.
+- **Parsing:** every line and every amount is right; the arithmetic fallback mapped
+  `CHG/ALLOWED/PAID/PTRESP` correctly. But service date is 0/56, because `YYYYMMDD` is not
+  a recognised date format. Description is 0/56, because the fallback keeps the
+  `;DESC=…;CHG=` keys as part of the text.
 
 **Development sets** (all tuned against; the fallback-only row is a diagnostic that runs
 the new line-oriented fallback on its own)
 
-| | `synthetic` (48) | `dev2` (12) | `dev3` (12) | `dev4` (12) |
-|---|---|---|---|---|
-| PII recall / leak-free | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% |
-| PII precision | 100.00% | 100.00% | 100.00% | 100.00% |
-| Line-item field accuracy | 100.00% | 100.00% | 100.00% | 100.00% |
-| Strategy used | fixed_width, pipe_table, key_value, csv | fixed_width | tsv | anchored |
-| Fallback alone: field accuracy | 47.24% | 85.71% | 79.29% | 100.00% |
+| | `synthetic` (48) | `dev2` (12) | `dev3` (12) | `dev4` (12) | `dev5` (12) |
+|---|---|---|---|---|---|
+| PII recall / leak-free | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% | 100.00% / 100.00% |
+| PII precision | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
+| Line-item field accuracy | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% |
+| Strategy used | fixed_width, pipe_table, key_value, csv | fixed_width | tsv | anchored | anchored |
+| Fallback alone: field accuracy | 47.24% | 85.71% | 79.29% | 100.00% | 100.00% |
 
 The fallback alone scores 0% on the key/value and CSV layouts (dates sit on a separate
 line from the code, or codes are comma-joined). It runs only when no other strategy
@@ -219,7 +227,8 @@ matches, so those layouts are still handled by their own strategies.
 | 1 | group statement (now `dev2`) | 54.43% | 54.43% | 57.14% |
 | 2 | multi-claim statement (now `dev3`) | 90.24% | 90.24% | 0.00% |
 | 3 | portal visit summary (now `dev4`) | 44.44% | 44.44% | 0.00% |
-| 4 | collapsed-column scan (`heldout`) | 84.42% | 89.61% | 98.18% |
+| 4 | collapsed-column scan (now `dev5`) | 84.42% | 89.61% | 98.18% |
+| 5 | `KEY=value` billing export (`heldout`) | 33.33% | 16.67% | 71.43% |
 
 - **Round 2**, from `synthetic` and `dev2`: OCR-tolerant and case-insensitive labels,
   more ID labels, spaced phones, names above a street address, modifier/units columns,
@@ -235,20 +244,32 @@ matches, so those layouts are still handled by their own strategies.
     3-3-4 digit grouping with any separator; a generic digit-heavy-token-after-ID-word
     rule; names after courtesy titles or colon-less `… Name` labels.
 
+- **Round 5**, from `dev5`: overlapping address candidates merge into their union; a
+  minus sign separated by a space is a missing-value dash; `Mbr`/`Memb`/`Subscr`/`Ins`
+  count as member-type context for generic IDs.
+
 Rounds 1–3 patched specific formats, and each new held-out layout broke something
-basic. Round 4 is the first where an unseen layout was mostly handled:
+basic. Round 4 was the first where an unseen layout was mostly handled:
 - The parser found every line using the arithmetic fallback, even though none of the
   layout's header words (`Chg`, `Allow`, `Ins Pd`, `Pt Owes`) are in its vocabulary.
 - Every PII value was at least partly redacted.
 
 One caveat: I proposed the round-4 rules ("any date shape near a birth word", "phones
-by digit grouping") before writing this held-out layout, so the separation is weaker
+by digit grouping") before writing that held-out layout, so the separation is weaker
 than it would be with an outside author.
+
+Round 5 shows the limits of that progress. The parser's arithmetic fallback still
+generalised (every amount right on an unseen export format). But the redactor's
+"format-agnostic" rules still assumed human-style label punctuation, and a
+machine-export format leaked most identifiers. Rule-based redaction keeps failing on
+whatever convention it hasn't seen. A redaction step that over-redacts by default (for
+example, masking any token after a key that isn't on a known-safe list) would fail
+safer than one that only redacts what it recognises.
 
 ## Limitations
 
 - **All results are on synthetic data.** They say nothing reliable about real bills.
-  Real documents vary far more than eight templates can.
+  Real documents vary far more than nine templates can.
 - **The development scores mean little on their own.** The same author wrote the
   generators, parser and redactor, and tuned against the development sets. Even the
   held-out layouts were written by the same person who wrote the code, which is a
