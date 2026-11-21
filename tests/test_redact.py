@@ -178,3 +178,14 @@ def test_honorific_and_colonless_name_label():
 
 def test_doctor_title_is_not_redacted_as_patient():
     assert redact("Referring: Dr. Gil Cho\n").spans == []
+
+
+def test_commaless_address_fully_redacted():
+    t = "Addr 2955 Hillcrest Dr Riverton OH 45029\n"
+    r = redact(t)
+    assert r.redacted_text == "Addr [ADDRESS_1]\n"
+
+
+def test_member_abbreviation_types_generic_id():
+    found, _ = types_and_values("Mbr No XGH02727255\n")
+    assert ("MEMBER_ID", "XGH02727255") in found

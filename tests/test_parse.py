@@ -234,3 +234,13 @@ def test_zip_code_is_not_an_anchor():
 
 def test_fallback_not_used_when_a_table_matches():
     assert parse(PIPE).format == "pipe_table"
+
+
+def test_spaced_dash_is_missing_not_negative():
+    (it,) = parse("06/12/25 70450 CT head 1483.93 - 520.20 57.80\n").line_items
+    assert (it.allowed_amount, it.insurer_paid, it.patient_responsibility) == \
+        (None, Decimal("520.20"), Decimal("57.80"))
+
+
+def test_attached_minus_still_negative():
+    assert parse_amount("-113.15") == Decimal("-113.15")
