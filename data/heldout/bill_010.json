@@ -1,112 +1,94 @@
 {
   "id": "bill_010",
-  "layout": "portal_summary_heldout",
+  "layout": "collapsed_scan_heldout",
   "messy": [
-    "inline_amounts",
-    "missing_field",
-    "multiline_item",
-    "ocr_amount"
+    "collapsed_columns",
+    "colonless_labels",
+    "ocr_amount",
+    "ocr_description"
   ],
   "pii": [
     {
-      "start": 94,
-      "end": 108,
+      "start": 81,
+      "end": 92,
       "type": "NAME",
-      "text": "Daniel Ramirez"
+      "text": "MBEKI GRACE"
     },
     {
-      "start": 130,
+      "start": 100,
+      "end": 108,
+      "type": "DOB",
+      "text": "09201985"
+    },
+    {
+      "start": 116,
+      "end": 126,
+      "type": "MEMBER_ID",
+      "text": "MBR8570307"
+    },
+    {
+      "start": 132,
       "end": 139,
       "type": "ACCOUNT_ID",
-      "text": "K-55881-9"
+      "text": "0354374"
     },
     {
-      "start": 151,
-      "end": 161,
-      "type": "DOB",
-      "text": "1955.02.13"
-    },
-    {
-      "start": 171,
-      "end": 208,
+      "start": 145,
+      "end": 178,
       "type": "ADDRESS",
-      "text": "7712 Riverbend Ct, Fairview, TN 37039"
+      "text": "9536 Briar Rd Greenville SC 29664"
     },
     {
-      "start": 216,
-      "end": 228,
+      "start": 182,
+      "end": 194,
       "type": "PHONE",
-      "text": "303/555-0167"
-    },
-    {
-      "start": 260,
-      "end": 270,
-      "type": "MEMBER_ID",
-      "text": "W723899222"
+      "text": "615 555 0117"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 298,
-      "end": 312,
+      "start": 41,
+      "end": 55,
       "type": "PHONE",
-      "text": "1-800-555-0158"
+      "text": "1-888-555-0123"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-04-18",
-      "code": "87880",
-      "description": "Rapid strep test",
-      "billed_amount": "64.83",
-      "allowed_amount": "47.57",
-      "insurer_paid": "33.30",
-      "patient_responsibility": "14.27"
-    },
-    {
-      "service_date": "2025-04-21",
-      "code": "70450",
-      "description": "CT head or brain without contrast",
-      "billed_amount": "1326.50",
-      "allowed_amount": "417.53",
-      "insurer_paid": "334.02",
-      "patient_responsibility": "83.51"
-    },
-    {
-      "service_date": "2025-04-21",
-      "code": "G0439",
-      "description": "Annual wellness visit, subsequent",
-      "billed_amount": "265.56",
-      "allowed_amount": null,
-      "insurer_paid": "105.82",
-      "patient_responsibility": "26.46"
-    },
-    {
-      "service_date": "2025-04-24",
-      "code": "90471",
-      "description": "Immunization administration, single vaccine",
-      "billed_amount": "51.78",
-      "allowed_amount": "40.18",
-      "insurer_paid": "40.18",
+      "service_date": "2025-02-04",
+      "code": "96374",
+      "description": "IV push, single or initial substancc",
+      "billed_amount": "155.48",
+      "allowed_amount": "86.12",
+      "insurer_paid": "86.12",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-04-24",
-      "code": "99213",
-      "description": "Office visit, established patient, low complexity",
-      "billed_amount": "184.21",
-      "allowed_amount": "104.16",
+      "service_date": "2025-02-07",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "1843.65",
+      "allowed_amount": "562.71",
       "insurer_paid": "0.00",
-      "patient_responsibility": "104.16"
+      "patient_responsibility": "562.71"
     },
     {
-      "service_date": "2025-04-24",
-      "code": "99214",
-      "description": "Office visit, established patient, moderate complexity",
-      "billed_amount": "193.17",
-      "allowed_amount": "141.29",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "141.29"
+      "service_date": "2025-02-07",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "409.58",
+      "allowed_amount": "249.59",
+      "insurer_paid": "174.71",
+      "patient_responsibility": "74.88"
+    },
+    {
+      "service_date": "2025-02-07",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "70.15",
+      "allowed_amount": "35.37",
+      "insurer_paid": "24.76",
+      "patient_responsibility": "10.61"
     }
   ],
   "duplicate_pairs": []

@@ -1,33 +1,20 @@
-Visit Summary & Charges
-Printed 06/22/2025 from the patient portal
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0132
+Stmt Dt 02/26/25
+Pt Name SMITH TOMASZ
+Pt DOB 08192018
+Mbr No MBR9191629
+Acct 6649352
+Addr 5878 Sunset Ave Lakewood CO 80267
+Ph 303 555 0146
+Email tomasz.smith51@mail.example.com
 
-This statement is for Mx. Fatima Brown.
-Patient account no. B-19907-3
-Birth date 1958.01.30
-Mailing: P.O. Box 8149, Springdale, AR 72786
-Mobile 360/555-0138
-Plan: Blueriver Health Plans, ID MBR0927409
-Questions about this bill? 1-800-555-0147
-
-Item 1 of 5 — 2025-05-19 — CPT 71046
-  Chest x-ray, 2 views
-  Billed $475.53 · Plan allowed $216.05 · Plan paid S172.84 · Your cost $43.21
-
-Item 2 of 5 — 2025-05-21 — CPT 71046
-  Chest x-ray, 2 views
-  Billed $352.52 · Plan allowed $230.11 · Plan paid $207.10 · Your cost $23.01
-
-Item 3 of 5 — 2025-05-23 — CPT 99213
-  Office visit, established patient, low
-  complexity
-  Billed $237.04 · Plan allowed $186.80 · Plan paid $130.76 · Your cost $56.04
-
-Item 4 of 5 — 2025-05-23 — CPT 90471
-  Immunization administration, single vaccine
-  Billed $28.87 · Plan allowed $17.84 · Plan paid $17.84 · Your cost $0.00
-
-Item 5 of 5 — 2025-05-23 — HCPCS G0439
-  Annual wellness visit, subsequent
-  Billed $240.29 · Plan allowed — · Plan paid $156,37 · Your cost $17.37
-
-Total of your costs: $139.63
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+01/26/25 99214 Office visit, established patient, moderate complexity 217.06 160.31 160.31 0.0O
+01/27/25 70450 CT head or brain without contrast 1116.30 807.93 807.93 0.00
+01/27/25 99203 New patient office visit 273.11 103.36 103.36 0.00
+01/27/25 70450 CT head or brain with0ut contrast 2544.42 1758.19 1758.19 0.O0
+01/27/25 99214 Office visit, established patient, moderate complexity 205.67 132.54 106.O3 26.51
+01/27/25 J1885 Ketorolac tromethamine injection, per 15 mg 25.40 17.16 12.01 5.15
+01/28/25 97110 Therapeutic exercises, each 15 minutes 79.62 26.68 0.00 26.68
+Total Pt Owes 58.34

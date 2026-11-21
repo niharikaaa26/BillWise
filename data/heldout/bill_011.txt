@@ -1,41 +1,16 @@
-Visit Summary & Charges
-Printed 08/13/2025 from the patient portal
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0172
+Stmt Dt 03/03/25
+Pt Name JOHNSON FATIMA
+Pt DOB 12272017
+Mbr No XGH61919798
+Acct 9922974
+Addr 93 Cedar Way Springdale AR 72733
+Ph 845 555 0139
 
-This statement is for Mr. David Kim.
-Patient account no. H-08528-7
-Birth date 1993.10.15
-Mailing: P.O. Box 9146, Greenville, SC 29683
-Mobile 513/555-0113
-Plan: Summit Mutual Health, ID W939593242
-Questions about this bill? 1-800-555-0186
-
-Item 1 of 7 — 2025-06-27 — CPT 71046
-  Chest x-ray, 2 views
-  Billed $282.18 · Plan allowed — · Plan paid $148.05 · Your cost $63.45
-
-Item 2 of 7 — 2025-06-27 — CPT 81001
-  Urinalysis, automated, with microscopy
-  Billed $81.68 · Plan allowed $58.77 · Plan paid $58.77 · Your cost $0.00
-
-Item 3 of 7 — 2025-06-28 — CPT 99214
-  Office visit, established patient,
-  moderate complexity
-  Billed $271.38 · Plan allowed — · Plan paid $0.00 · Your cost $112.16
-
-Item 4 of 7 — 2025-07-01 — HCPCS J2405
-  Ondansetron hydrochloride injection, per 1 mg
-  Billed $72.32 · Plan allowed $51.79 · Plan paid $41.43 · Your cost $10.36
-
-Item 5 of 7 — 2025-07-01 — HCPCS J1885
-  Ketorolac tromethamine injection, per 15 mg
-  Billed $55.98 · Plan allowed $27.36 · Plan paid $19.15 · Your cost $8.21
-
-Item 6 of 7 — 2025-07-03 — CPT 90686
-  Influenza vaccine, quadrivalent, preservative free
-  Billed $44.57 · Plan allowed — · Plan paid $0.00 · Your cost $15.77
-
-Item 7 of 7 — 2025-07-06 — CPT 70450
-  CT head or brain without contrast
-  Billed $2,574.42 · Plan allowed $1,051.32 · Plan paid $841.O6 · Your cost $210.26
-
-Total of your costs: $420.21
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+01/24/25 71046 Chest x-ray, 2 views 488.48 - 202.01 86.58
+01/24/25 G0439 Annual wellness visit, subsequent 241.O2 189.29 l32.50 56.79
+01/24/25 G0439 Annual wellness visit, subsequent 213.53 108.50 108.50 0.00
+01/24/25 70450 CT head or brain without contrast 1427.80 1092.61 983.35 109.26
+Total Pt Owes 252.63

@@ -1,74 +1,95 @@
 {
   "id": "bill_006",
-  "layout": "portal_summary_heldout",
+  "layout": "collapsed_scan_heldout",
   "messy": [
-    "inline_amounts",
-    "multiline_item"
+    "collapsed_columns",
+    "colonless_labels",
+    "missing_field",
+    "ocr_amount",
+    "ocr_description"
   ],
   "pii": [
     {
-      "start": 94,
-      "end": 111,
+      "start": 81,
+      "end": 98,
       "type": "NAME",
-      "text": "Brianna Lindqvist"
+      "text": "LINDQVIST PATRICE"
     },
     {
-      "start": 133,
-      "end": 142,
-      "type": "ACCOUNT_ID",
-      "text": "H-02008-7"
-    },
-    {
-      "start": 154,
-      "end": 164,
+      "start": 106,
+      "end": 114,
       "type": "DOB",
-      "text": "1957.01.20"
+      "text": "09081966"
     },
     {
-      "start": 174,
-      "end": 216,
-      "type": "ADDRESS",
-      "text": "7430 Maple Road Apt 19, Fairview, TN 37058"
-    },
-    {
-      "start": 224,
-      "end": 236,
-      "type": "PHONE",
-      "text": "479/555-0163"
-    },
-    {
-      "start": 270,
-      "end": 283,
+      "start": 122,
+      "end": 132,
       "type": "MEMBER_ID",
-      "text": "CPH-2811-8297"
+      "text": "W261472925"
+    },
+    {
+      "start": 138,
+      "end": 145,
+      "type": "ACCOUNT_ID",
+      "text": "6573572"
+    },
+    {
+      "start": 151,
+      "end": 188,
+      "type": "ADDRESS",
+      "text": "3769 Cedar Avenue Oak Harbor WA 98214"
+    },
+    {
+      "start": 192,
+      "end": 204,
+      "type": "PHONE",
+      "text": "360 555 0153"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 311,
-      "end": 325,
+      "start": 41,
+      "end": 55,
       "type": "PHONE",
-      "text": "1-800-555-0109"
+      "text": "1-888-555-0121"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-06-19",
-      "code": "99283",
-      "description": "Emergency department visit, moderate severity",
-      "billed_amount": "807.37",
-      "allowed_amount": "537.50",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "537.50"
+      "service_date": "2025-06-10",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "925.37",
+      "allowed_amount": "434.87",
+      "insurer_paid": "434.87",
+      "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-06-19",
-      "code": "G0439",
-      "description": "Annual wellness visit, subsequent",
-      "billed_amount": "214.43",
-      "allowed_amount": "150.59",
-      "insurer_paid": "120.47",
-      "patient_responsibility": "30.12"
+      "service_date": "2025-06-10",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "98.36",
+      "allowed_amount": "75.24",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "75.24"
+    },
+    {
+      "service_date": "2025-06-10",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservalive free",
+      "billed_amount": "61.48",
+      "allowed_amount": "30.08",
+      "insurer_paid": "30.08",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-12",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1483.93",
+      "allowed_amount": null,
+      "insurer_paid": "520.20",
+      "patient_responsibility": "57.80"
     }
   ],
   "duplicate_pairs": []

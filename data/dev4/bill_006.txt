@@ -1,0 +1,21 @@
+Visit Summary & Charges
+Printed 08/16/2025 from the patient portal
+
+This statement is for Ms. Brianna Lindqvist.
+Patient account no. H-02008-7
+Birth date 1957.01.20
+Mailing: 7430 Maple Road Apt 19, Fairview, TN 37058
+Mobile 479/555-0163
+Plan: Blueriver Health Plans, ID CPH-2811-8297
+Questions about this bill? 1-800-555-0109
+
+Item 1 of 2 — 2025-06-19 — CPT 99283
+  Emergency department visit, moderate
+  severity
+  Billed $807.37 · Plan allowed $537.50 · Plan paid $0.00 · Your cost $537.50
+
+Item 2 of 2 — 2025-06-19 — HCPCS G0439
+  Annual wellness visit, subsequent
+  Billed $214.43 · Plan allowed $150.59 · Plan paid $120.47 · Your cost $30.12
+
+Total of your costs: $567.62

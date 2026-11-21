@@ -1,0 +1,113 @@
+{
+  "id": "bill_010",
+  "layout": "portal_summary",
+  "messy": [
+    "inline_amounts",
+    "missing_field",
+    "multiline_item",
+    "ocr_amount"
+  ],
+  "pii": [
+    {
+      "start": 94,
+      "end": 108,
+      "type": "NAME",
+      "text": "Daniel Ramirez"
+    },
+    {
+      "start": 130,
+      "end": 139,
+      "type": "ACCOUNT_ID",
+      "text": "K-55881-9"
+    },
+    {
+      "start": 151,
+      "end": 161,
+      "type": "DOB",
+      "text": "1955.02.13"
+    },
+    {
+      "start": 171,
+      "end": 208,
+      "type": "ADDRESS",
+      "text": "7712 Riverbend Ct, Fairview, TN 37039"
+    },
+    {
+      "start": 216,
+      "end": 228,
+      "type": "PHONE",
+      "text": "303/555-0167"
+    },
+    {
+      "start": 260,
+      "end": 270,
+      "type": "MEMBER_ID",
+      "text": "W723899222"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 298,
+      "end": 312,
+      "type": "PHONE",
+      "text": "1-800-555-0158"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-04-18",
+      "code": "87880",
+      "description": "Rapid strep test",
+      "billed_amount": "64.83",
+      "allowed_amount": "47.57",
+      "insurer_paid": "33.30",
+      "patient_responsibility": "14.27"
+    },
+    {
+      "service_date": "2025-04-21",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1326.50",
+      "allowed_amount": "417.53",
+      "insurer_paid": "334.02",
+      "patient_responsibility": "83.51"
+    },
+    {
+      "service_date": "2025-04-21",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "265.56",
+      "allowed_amount": null,
+      "insurer_paid": "105.82",
+      "patient_responsibility": "26.46"
+    },
+    {
+      "service_date": "2025-04-24",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "51.78",
+      "allowed_amount": "40.18",
+      "insurer_paid": "40.18",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-24",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "184.21",
+      "allowed_amount": "104.16",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "104.16"
+    },
+    {
+      "service_date": "2025-04-24",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "193.17",
+      "allowed_amount": "141.29",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "141.29"
+    }
+  ],
+  "duplicate_pairs": []
+}

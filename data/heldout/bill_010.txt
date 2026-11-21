@@ -1,37 +1,16 @@
-Visit Summary & Charges
-Printed 05/11/2025 from the patient portal
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0123
+Stmt Dt 03/01/25
+Pt Name MBEKI GRACE
+Pt DOB 09201985
+Mbr No MBR8570307
+Acct 0354374
+Addr 9536 Briar Rd Greenville SC 29664
+Ph 615 555 0117
 
-This statement is for Mx. Daniel Ramirez.
-Patient account no. K-55881-9
-Birth date 1955.02.13
-Mailing: 7712 Riverbend Ct, Fairview, TN 37039
-Mobile 303/555-0167
-Plan: Summit Mutual Health, ID W723899222
-Questions about this bill? 1-800-555-0158
-
-Item 1 of 6 — 2025-04-18 — CPT 87880
-  Rapid strep test
-  Billed $64.83 · Plan allowed $47.57 · Plan paid $33.30 · Your cost $14.27
-
-Item 2 of 6 — 2025-04-21 — CPT 70450
-  CT head or brain without contrast
-  Billed $1,326.50 · Plan allowed $417.53 · Plan paid $334.O2 · Your cost $83.51
-
-Item 3 of 6 — 2025-04-21 — HCPCS G0439
-  Annual wellness visit, subsequent
-  Billed S265.56 · Plan allowed — · Plan paid $105.82 · Your cost $26.46
-
-Item 4 of 6 — 2025-04-24 — CPT 90471
-  Immunization administration, single vaccine
-  Billed S51.78 · Plan allowed $40.18 · Plan paid $40.18 · Your cost $0.00
-
-Item 5 of 6 — 2025-04-24 — CPT 99213
-  Office visit, established patient, low complexity
-  Billed $l84.21 · Plan allowed $104.16 · Plan paid $0.00 · Your cost $104.16
-
-Item 6 of 6 — 2025-04-24 — CPT 99214
-  Office visit, established patient,
-  moderate complexity
-  Billed $193.17 · Plan allowed $141.29 · Plan paid $0.00 · Your cost $141.29
-
-Total of your costs: $369.69
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+02/04/25 96374 IV push, single or initial substancc 155.48 86.12 86.l2 0.00
+02/07/25 74177 CT abdomen and pelvis with contrast 1843.65 562.71 0.00 562.71
+02/07/25 96374 IV push, single or initial substance 409.58 249.59 l74.71 74.88
+02/07/25 J1885 Ketorolac tromethamine injection, per 15 mg 70.15 35.37 24.76 10.61
+Total Pt Owes 648.20

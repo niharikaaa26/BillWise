@@ -1,0 +1,25 @@
+Visit Summary & Charges
+Printed 05/28/2025 from the patient portal
+
+This statement is for Ms. Andre Thompson.
+Patient account no. A-71470-4
+Birth date 2008.04.15
+Mailing: 3828 Sunset Court Unit 39, Millbrook, NY 12552
+Mobile 360/555-0188
+Plan: Summit Mutual Health, ID W598878738
+Questions about this bill? 1-800-555-0107
+
+Item 1 of 3 — 2025-05-01 — HCPCS A4649
+  Surgical supply, miscellaneous
+  Billed S219.13 · Plan allowed $102.59 · Plan paid $92.33 · Your cost $10.26
+
+Item 2 of 3 — 2025-05-01 — CPT 97110
+  Therapeutic exercises, each 15 minutes
+  Billed S142.20 · Plan allowed $54.43 · Plan paid $38.10 · Your cost $l6.33
+
+Item 3 of 3 — 2025-05-01 — CPT 90686
+  Influenza vaccine, quadrivalent,
+  preservative free
+  Billed $34.13 · Plan allowed — · Plan paid $13.99 · Your cost $5.99
+
+Total of your costs: $32.58

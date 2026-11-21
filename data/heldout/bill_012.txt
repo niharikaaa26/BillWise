@@ -1,44 +1,14 @@
-Visit Summary & Charges
-Printed 07/08/2025 from the patient portal
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0182
+Stmt Dt 02/27/25
+Pt Name MURPHY WEI
+Pt DOB 10032002
+Mbr No CPH-6146-9160
+Acct 0261062
+Addr 8161 Magnolia Way Millbrook NY 12539
+Ph 303 555 0162
 
-This statement is for Mr. Ingrid Doe.
-Patient account no. B-81289-4
-Birth date 1967.10.02
-Mailing: P.O. Box 5995, Millbrook, NY 12572
-Mobile 303/555-0150
-Plan: Summit Mutual Health, ID W374686393
-Questions about this bill? 1-800-555-0166
-
-Item 1 of 8 — 2025-06-08 — CPT 96374
-  IV push, single or initial substance
-  Billed $251.75 · Plan allowed $149.49 · Plan paid $149.49 · Your cost $0.00
-
-Item 2 of 8 — 2025-06-08 — CPT 96374
-  IV push, single or initial substance
-  Billed $251.75 · Plan allowed $149.49 · Plan paid $149.49 · Your cost $0.00
-
-Item 3 of 8 — 2025-06-08 — CPT 93000
-  Electrocardiogram, routine, with interpretation and report
-  Billed $201.65 · Plan allowed $134.64 · Plan paid $121.18 · Your cost $l3.46
-
-Item 4 of 8 — 2025-06-10 — HCPCS G0439
-  Annual wellness visit, subsequent
-  Billed $173.01 · Plan allowed $109.53 · Plan paid S98.58 · Your cost $10.95
-
-Item 5 of 8 — 2025-06-10 — CPT 80053
-  Comprehensive metabolic panel
-  Billed $150.71 · Plan allowed $63.01 · Plan paid $56.71 · Your cost $6.30
-
-Item 6 of 8 — 2025-06-10 — HCPCS J2405
-  Ondansetron hydrochloride injection, per 1 mg
-  Billed $69.24 · Plan allowed $40.32 · Plan paid $28.22 · Your cost $12.10
-
-Item 7 of 8 — 2025-06-11 — CPT 99285
-  Emergency department visit, high severity
-  Billed $2,880.02 · Plan allowed $2,240.67 · Plan paid $0.00 · Your cost $2,240.67
-
-Item 8 of 8 — 2025-06-11 — HCPCS J1885
-  Ketorolac tromethamine injection, per 15 mg
-  Billed $89.75 · Plan allowed $68.95 · Plan paid $55,16 · Your cost $13.79
-
-Total of your costs: $2,297.27
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+02/11/25 36415 Routine venipuncture 37.l4 - 22.58 2.51
+02/11/25 99283 Emergency department visit, moderate severity 802.99 561.27 392.89 l68.38
+Total Pt Owes 170.89

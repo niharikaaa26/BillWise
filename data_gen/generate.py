@@ -16,7 +16,8 @@ Usage:
     python -m data_gen.generate --out data/synthetic --n 48 --seed 2025
     python -m data_gen.generate --out data/dev2 --n 12 --seed 777 --ocr-p 0.25 --set dev2
     python -m data_gen.generate --out data/dev3 --n 12 --seed 4242 --ocr-p 0.2 --set dev3
-    python -m data_gen.generate --out data/heldout --n 12 --seed 9001 --ocr-p 0.2 --set heldout
+    python -m data_gen.generate --out data/dev4 --n 12 --seed 9001 --ocr-p 0.2 --set dev4
+    python -m data_gen.generate --out data/heldout --n 12 --seed 31337 --ocr-p 0.2 --set heldout
 """
 from __future__ import annotations
 
@@ -852,14 +853,61 @@ def layout_portal_summary(rng: random.Random, ocr_p: float) -> tuple[Doc, list[d
     return doc, items, flags
 
 
+# --------------------------------------------------------------------------
+# Layout H (HELD OUT, round 4): scanned urgent-care statement whose OCR
+# collapsed column alignment to single spaces. Written BEFORE the round-4
+# rework and not used to tune it. Labels without colons, single-line address
+# without commas, space-separated phone, compact DOB, amounts with no "$",
+# "-" for missing values, header words abbreviated.
+# --------------------------------------------------------------------------
+def layout_collapsed_scan(rng: random.Random, ocr_p: float) -> tuple[Doc, list[dict], set[str]]:
+    flags: set[str] = {"collapsed_columns", "colonless_labels"}
+    doc = Doc()
+    p = make_person(rng)
+    stmt = date(2025, 2, 1) + timedelta(days=rng.randint(0, 250))
+    doc.nl("RIVERSIDE URGENT CARE LLC")
+    doc.add("Billing office ").org(f"1-888-555-01{rng.randint(0, 99):02d}", "PHONE").nl()
+    doc.nl(f"Stmt Dt {stmt:%m/%d/%y}")
+    doc.add("Pt Name ").pii_(f"{p['last'].upper()} {p['first'].upper()}", "NAME").nl()
+    doc.add("Pt DOB ").pii_(f"{p['dob']:%m%d%Y}", "DOB").nl()
+    doc.add("Mbr No ").pii_(member_id(rng), "MEMBER_ID").nl()
+    doc.add("Acct ").pii_(digits(rng, 7), "ACCOUNT_ID").nl()
+    doc.add("Addr ").pii_(f"{p['street']} {p['city']} {p['state']} {p['zip']}", "ADDRESS").nl()
+    area = rng.choice(AREA_CODES)
+    doc.add("Ph ").pii_(f"{area} 555 01{rng.randint(0, 99):02d}", "PHONE").nl()
+    if rng.random() < 0.5:
+        doc.add("Email ").pii_(p["email"], "EMAIL").nl()
+    doc.nl()
+    doc.nl("Svc Dt Code Description Chg Allow Ins Pd Pt Owes")
+    items = make_items(rng, stmt - timedelta(days=rng.randint(10, 40)), flags)
+    for it in items:
+        if rng.random() < 0.15:
+            flags.add("missing_field")
+            it["allowed_amount"] = None
+        desc = it["description"]
+        if rng.random() < ocr_p * 0.5:
+            flags.add("ocr_description")
+            desc = ocr_text(desc, rng)
+        it["description"] = desc
+        amts = [maybe_ocr_amt(f"{it['billed_amount']:.2f}", rng, flags, ocr_p, False),
+                f"{it['allowed_amount']:.2f}" if it["allowed_amount"] is not None else "-",
+                maybe_ocr_amt(f"{it['insurer_paid']:.2f}", rng, flags, ocr_p, False),
+                maybe_ocr_amt(f"{it['patient_responsibility']:.2f}", rng, flags, ocr_p, False)]
+        doc.nl(" ".join([f"{it['service_date']:%m/%d/%y}", it["code"], desc] + amts))
+    doc.nl(f"Total Pt Owes {sum(i['patient_responsibility'] for i in items):.2f}")
+    return doc, items, flags
+
+
 LAYOUT_SETS = {
     "dev": LAYOUTS,
     # round-1 held-out layout; used to tune round-2 fixes, now development data
     "dev2": {"group_statement": layout_group_statement},
     # round-2 held-out layout; used to tune round-3 fixes, now development data
     "dev3": {"multi_claim": layout_multi_claim},
-    # round-3 held-out layout: never used for tuning
-    "heldout": {"portal_summary_heldout": layout_portal_summary},
+    # round-3 held-out layout; used to tune the round-4 rework, now development data
+    "dev4": {"portal_summary": layout_portal_summary},
+    # round-4 held-out layout: never used for tuning
+    "heldout": {"collapsed_scan_heldout": layout_collapsed_scan},
 }
 
 
@@ -912,7 +960,7 @@ def main() -> None:
     ap.add_argument("--ocr-p", type=float, default=0.12, help="probability of each OCR corruption site")
     ap.add_argument("--set", dest="layout_set", choices=sorted(LAYOUT_SETS), default="dev",
                     help="dev: 4 development layouts; dev2: round-1 held-out layout (now dev data); "
-                         "dev3: round-2 held-out layout (now dev data); heldout: layout never used for tuning")
+                         "dev3/dev4: earlier held-out layouts (now dev data); heldout: layout never used for tuning")
     args = ap.parse_args()
     files = generate(args.out, args.n, args.seed, args.ocr_p, args.layout_set)
     print(f"wrote {len(files)} synthetic bills + ground truth to {args.out}")

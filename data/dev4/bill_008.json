@@ -1,0 +1,122 @@
+{
+  "id": "bill_008",
+  "layout": "portal_summary",
+  "messy": [
+    "inline_amounts",
+    "multiline_item",
+    "ocr_amount",
+    "po_box_address"
+  ],
+  "pii": [
+    {
+      "start": 94,
+      "end": 109,
+      "type": "NAME",
+      "text": "Dmitri Yamamoto"
+    },
+    {
+      "start": 131,
+      "end": 140,
+      "type": "ACCOUNT_ID",
+      "text": "H-09190-9"
+    },
+    {
+      "start": 152,
+      "end": 162,
+      "type": "DOB",
+      "text": "1988.12.05"
+    },
+    {
+      "start": 172,
+      "end": 205,
+      "type": "ADDRESS",
+      "text": "P.O. Box 6447, Lakewood, CO 80261"
+    },
+    {
+      "start": 213,
+      "end": 225,
+      "type": "PHONE",
+      "text": "360/555-0127"
+    },
+    {
+      "start": 257,
+      "end": 267,
+      "type": "MEMBER_ID",
+      "text": "MBR8505982"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 295,
+      "end": 309,
+      "type": "PHONE",
+      "text": "1-800-555-0188"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-07-25",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "161.17",
+      "allowed_amount": "74.15",
+      "insurer_paid": "66.74",
+      "patient_responsibility": "7.41"
+    },
+    {
+      "service_date": "2025-07-28",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "183.88",
+      "allowed_amount": "110.94",
+      "insurer_paid": "110.94",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-07-30",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "233.51",
+      "allowed_amount": "156.36",
+      "insurer_paid": "140.72",
+      "patient_responsibility": "15.64"
+    },
+    {
+      "service_date": "2025-07-30",
+      "code": "99203",
+      "description": "New patient office visit",
+      "billed_amount": "286.87",
+      "allowed_amount": "123.57",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "123.57"
+    },
+    {
+      "service_date": "2025-07-30",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "842.63",
+      "allowed_amount": "641.27",
+      "insurer_paid": "577.14",
+      "patient_responsibility": "64.13"
+    },
+    {
+      "service_date": "2025-08-01",
+      "code": "A4649",
+      "description": "Surgical supply, miscellaneous",
+      "billed_amount": "213.09",
+      "allowed_amount": "108.44",
+      "insurer_paid": "97.60",
+      "patient_responsibility": "10.84"
+    },
+    {
+      "service_date": "2025-08-04",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "257.37",
+      "allowed_amount": "203.90",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "203.90"
+    }
+  ],
+  "duplicate_pairs": []
+}

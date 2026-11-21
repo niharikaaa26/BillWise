@@ -1,84 +1,99 @@
 {
   "id": "bill_002",
-  "layout": "portal_summary_heldout",
+  "layout": "collapsed_scan_heldout",
   "messy": [
-    "inline_amounts",
-    "ocr_amount",
-    "po_box_address"
+    "collapsed_columns",
+    "colonless_labels",
+    "ocr_amount"
   ],
   "pii": [
     {
-      "start": 94,
-      "end": 108,
+      "start": 81,
+      "end": 99,
       "type": "NAME",
-      "text": "Thanh Sullivan"
+      "text": "FITZGERALD BRIANNA"
     },
     {
-      "start": 130,
-      "end": 139,
-      "type": "ACCOUNT_ID",
-      "text": "K-80171-2"
-    },
-    {
-      "start": 151,
-      "end": 161,
+      "start": 107,
+      "end": 115,
       "type": "DOB",
-      "text": "1941.02.23"
+      "text": "11101977"
     },
     {
-      "start": 171,
-      "end": 204,
-      "type": "ADDRESS",
-      "text": "P.O. Box 6634, Lakewood, CO 80269"
-    },
-    {
-      "start": 212,
-      "end": 224,
-      "type": "PHONE",
-      "text": "615/555-0136"
-    },
-    {
-      "start": 256,
-      "end": 269,
+      "start": 123,
+      "end": 135,
       "type": "MEMBER_ID",
-      "text": "CPH-0633-0769"
+      "text": "ZQ9911513-01"
+    },
+    {
+      "start": 141,
+      "end": 148,
+      "type": "ACCOUNT_ID",
+      "text": "7116648"
+    },
+    {
+      "start": 154,
+      "end": 195,
+      "type": "ADDRESS",
+      "text": "4629 Lakeview Boulevard Fairview TN 37014"
+    },
+    {
+      "start": 199,
+      "end": 211,
+      "type": "PHONE",
+      "text": "615 555 0149"
+    },
+    {
+      "start": 218,
+      "end": 255,
+      "type": "EMAIL",
+      "text": "brianna.fitzgerald74@mail.example.com"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 297,
-      "end": 311,
+      "start": 41,
+      "end": 55,
       "type": "PHONE",
-      "text": "1-800-555-0198"
+      "text": "1-888-555-0114"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-01-26",
-      "code": "97110",
-      "description": "Therapeutic exercises, each 15 minutes",
-      "billed_amount": "60.85",
-      "allowed_amount": "46.46",
-      "insurer_paid": "41.81",
-      "patient_responsibility": "4.65"
-    },
-    {
-      "service_date": "2025-01-29",
-      "code": "81001",
-      "description": "Urinalysis, automated, with microscopy",
-      "billed_amount": "64.86",
-      "allowed_amount": "26.88",
-      "insurer_paid": "18.82",
-      "patient_responsibility": "8.06"
-    },
-    {
-      "service_date": "2025-01-29",
+      "service_date": "2025-04-16",
       "code": "96374",
       "description": "IV push, single or initial substance",
-      "billed_amount": "296.20",
-      "allowed_amount": "134.94",
-      "insurer_paid": "107.95",
-      "patient_responsibility": "26.99"
+      "billed_amount": "225.30",
+      "allowed_amount": "169.85",
+      "insurer_paid": "169.85",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-17",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "1645.92",
+      "allowed_amount": "929.14",
+      "insurer_paid": "650.40",
+      "patient_responsibility": "278.74"
+    },
+    {
+      "service_date": "2025-04-18",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "64.00",
+      "allowed_amount": "39.37",
+      "insurer_paid": "39.37",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-04-21",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "130.64",
+      "allowed_amount": "102.32",
+      "insurer_paid": "102.32",
+      "patient_responsibility": "0.00"
     }
   ],
   "duplicate_pairs": []

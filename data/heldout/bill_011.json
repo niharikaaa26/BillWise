@@ -1,122 +1,94 @@
 {
   "id": "bill_011",
-  "layout": "portal_summary_heldout",
+  "layout": "collapsed_scan_heldout",
   "messy": [
-    "inline_amounts",
+    "collapsed_columns",
+    "colonless_labels",
     "missing_field",
-    "multiline_item",
-    "ocr_amount",
-    "po_box_address"
+    "ocr_amount"
   ],
   "pii": [
     {
-      "start": 94,
-      "end": 103,
+      "start": 81,
+      "end": 95,
       "type": "NAME",
-      "text": "David Kim"
+      "text": "JOHNSON FATIMA"
     },
     {
-      "start": 125,
-      "end": 134,
-      "type": "ACCOUNT_ID",
-      "text": "H-08528-7"
-    },
-    {
-      "start": 146,
-      "end": 156,
+      "start": 103,
+      "end": 111,
       "type": "DOB",
-      "text": "1993.10.15"
+      "text": "12272017"
     },
     {
-      "start": 166,
-      "end": 201,
-      "type": "ADDRESS",
-      "text": "P.O. Box 9146, Greenville, SC 29683"
-    },
-    {
-      "start": 209,
-      "end": 221,
-      "type": "PHONE",
-      "text": "513/555-0113"
-    },
-    {
-      "start": 253,
-      "end": 263,
+      "start": 119,
+      "end": 130,
       "type": "MEMBER_ID",
-      "text": "W939593242"
+      "text": "XGH61919798"
+    },
+    {
+      "start": 136,
+      "end": 143,
+      "type": "ACCOUNT_ID",
+      "text": "9922974"
+    },
+    {
+      "start": 149,
+      "end": 181,
+      "type": "ADDRESS",
+      "text": "93 Cedar Way Springdale AR 72733"
+    },
+    {
+      "start": 185,
+      "end": 197,
+      "type": "PHONE",
+      "text": "845 555 0139"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 291,
-      "end": 305,
+      "start": 41,
+      "end": 55,
       "type": "PHONE",
-      "text": "1-800-555-0186"
+      "text": "1-888-555-0172"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-06-27",
+      "service_date": "2025-01-24",
       "code": "71046",
       "description": "Chest x-ray, 2 views",
-      "billed_amount": "282.18",
+      "billed_amount": "488.48",
       "allowed_amount": null,
-      "insurer_paid": "148.05",
-      "patient_responsibility": "63.45"
+      "insurer_paid": "202.01",
+      "patient_responsibility": "86.58"
     },
     {
-      "service_date": "2025-06-27",
-      "code": "81001",
-      "description": "Urinalysis, automated, with microscopy",
-      "billed_amount": "81.68",
-      "allowed_amount": "58.77",
-      "insurer_paid": "58.77",
+      "service_date": "2025-01-24",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "241.02",
+      "allowed_amount": "189.29",
+      "insurer_paid": "132.50",
+      "patient_responsibility": "56.79"
+    },
+    {
+      "service_date": "2025-01-24",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "213.53",
+      "allowed_amount": "108.50",
+      "insurer_paid": "108.50",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-06-28",
-      "code": "99214",
-      "description": "Office visit, established patient, moderate complexity",
-      "billed_amount": "271.38",
-      "allowed_amount": null,
-      "insurer_paid": "0.00",
-      "patient_responsibility": "112.16"
-    },
-    {
-      "service_date": "2025-07-01",
-      "code": "J2405",
-      "description": "Ondansetron hydrochloride injection, per 1 mg",
-      "billed_amount": "72.32",
-      "allowed_amount": "51.79",
-      "insurer_paid": "41.43",
-      "patient_responsibility": "10.36"
-    },
-    {
-      "service_date": "2025-07-01",
-      "code": "J1885",
-      "description": "Ketorolac tromethamine injection, per 15 mg",
-      "billed_amount": "55.98",
-      "allowed_amount": "27.36",
-      "insurer_paid": "19.15",
-      "patient_responsibility": "8.21"
-    },
-    {
-      "service_date": "2025-07-03",
-      "code": "90686",
-      "description": "Influenza vaccine, quadrivalent, preservative free",
-      "billed_amount": "44.57",
-      "allowed_amount": null,
-      "insurer_paid": "0.00",
-      "patient_responsibility": "15.77"
-    },
-    {
-      "service_date": "2025-07-06",
+      "service_date": "2025-01-24",
       "code": "70450",
       "description": "CT head or brain without contrast",
-      "billed_amount": "2574.42",
-      "allowed_amount": "1051.32",
-      "insurer_paid": "841.06",
-      "patient_responsibility": "210.26"
+      "billed_amount": "1427.80",
+      "allowed_amount": "1092.61",
+      "insurer_paid": "983.35",
+      "patient_responsibility": "109.26"
     }
   ],
   "duplicate_pairs": []

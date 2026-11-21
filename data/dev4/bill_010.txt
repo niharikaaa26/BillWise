@@ -1,0 +1,37 @@
+Visit Summary & Charges
+Printed 05/11/2025 from the patient portal
+
+This statement is for Mx. Daniel Ramirez.
+Patient account no. K-55881-9
+Birth date 1955.02.13
+Mailing: 7712 Riverbend Ct, Fairview, TN 37039
+Mobile 303/555-0167
+Plan: Summit Mutual Health, ID W723899222
+Questions about this bill? 1-800-555-0158
+
+Item 1 of 6 — 2025-04-18 — CPT 87880
+  Rapid strep test
+  Billed $64.83 · Plan allowed $47.57 · Plan paid $33.30 · Your cost $14.27
+
+Item 2 of 6 — 2025-04-21 — CPT 70450
+  CT head or brain without contrast
+  Billed $1,326.50 · Plan allowed $417.53 · Plan paid $334.O2 · Your cost $83.51
+
+Item 3 of 6 — 2025-04-21 — HCPCS G0439
+  Annual wellness visit, subsequent
+  Billed S265.56 · Plan allowed — · Plan paid $105.82 · Your cost $26.46
+
+Item 4 of 6 — 2025-04-24 — CPT 90471
+  Immunization administration, single vaccine
+  Billed S51.78 · Plan allowed $40.18 · Plan paid $40.18 · Your cost $0.00
+
+Item 5 of 6 — 2025-04-24 — CPT 99213
+  Office visit, established patient, low complexity
+  Billed $l84.21 · Plan allowed $104.16 · Plan paid $0.00 · Your cost $104.16
+
+Item 6 of 6 — 2025-04-24 — CPT 99214
+  Office visit, established patient,
+  moderate complexity
+  Billed $193.17 · Plan allowed $141.29 · Plan paid $0.00 · Your cost $141.29
+
+Total of your costs: $369.69

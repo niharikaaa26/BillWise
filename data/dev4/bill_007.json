@@ -1,0 +1,110 @@
+{
+  "id": "bill_007",
+  "layout": "portal_summary",
+  "messy": [
+    "duplicate_charge",
+    "inline_amounts",
+    "missing_field",
+    "ocr_amount",
+    "ocr_description"
+  ],
+  "pii": [
+    {
+      "start": 94,
+      "end": 106,
+      "type": "NAME",
+      "text": "Tomasz Brown"
+    },
+    {
+      "start": 128,
+      "end": 137,
+      "type": "ACCOUNT_ID",
+      "text": "H-65143-8"
+    },
+    {
+      "start": 149,
+      "end": 159,
+      "type": "DOB",
+      "text": "1976.03.01"
+    },
+    {
+      "start": 169,
+      "end": 209,
+      "type": "ADDRESS",
+      "text": "4965 Cedar Blvd #1, Oak Harbor, WA 98274"
+    },
+    {
+      "start": 217,
+      "end": 229,
+      "type": "PHONE",
+      "text": "864/555-0128"
+    },
+    {
+      "start": 261,
+      "end": 273,
+      "type": "MEMBER_ID",
+      "text": "ZQ9135505-01"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 301,
+      "end": 315,
+      "type": "PHONE",
+      "text": "1-800-555-0130"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-05-01",
+      "code": "99213",
+      "description": "Office visit, established patient, low complexity",
+      "billed_amount": "180.55",
+      "allowed_amount": "116.89",
+      "insurer_paid": "93.51",
+      "patient_responsibility": "23.38"
+    },
+    {
+      "service_date": "2025-05-04",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "259.91",
+      "allowed_amount": "135.70",
+      "insurer_paid": "94.99",
+      "patient_responsibility": "40.71"
+    },
+    {
+      "service_date": "2025-05-04",
+      "code": "74177",
+      "description": "CT abdomcn and pelvis with contrast",
+      "billed_amount": "3329.86",
+      "allowed_amount": null,
+      "insurer_paid": "1404.54",
+      "patient_responsibility": "351.13"
+    },
+    {
+      "service_date": "2025-05-06",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "210.53",
+      "allowed_amount": "109.01",
+      "insurer_paid": "76.31",
+      "patient_responsibility": "32.70"
+    },
+    {
+      "service_date": "2025-05-06",
+      "code": "96374",
+      "description": "IV push, single or initial substancc",
+      "billed_amount": "210.53",
+      "allowed_amount": "109.01",
+      "insurer_paid": "76.31",
+      "patient_responsibility": "32.70"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      3,
+      4
+    ]
+  ]
+}

@@ -1,32 +1,17 @@
-Visit Summary & Charges
-Printed 06/30/2025 from the patient portal
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0129
+Stmt Dt 03/29/25
+Pt Name ACHTERBERG KEVIN
+Pt DOB 03052011
+Mbr No CPH-0269-0771
+Acct 4685218
+Addr 123 Cedar Rd #37 Greenville SC 29679
+Ph 360 555 0165
 
-This statement is for Mx. Tomasz Brown.
-Patient account no. H-65143-8
-Birth date 1976.03.01
-Mailing: 4965 Cedar Blvd #1, Oak Harbor, WA 98274
-Mobile 864/555-0128
-Plan: Summit Mutual Health, ID ZQ9135505-01
-Questions about this bill? 1-800-555-0130
-
-Item 1 of 5 — 2025-05-01 — CPT 99213
-  Office visit, established patient, low complexity
-  Billed $180.55 · Plan allowed $116.89 · Plan paid $93.51 · Your cost $23.38
-
-Item 2 of 5 — 2025-05-04 — CPT 93000
-  Electrocardiogram, routine, with interpretation and report
-  Billed $259.91 · Plan allowed $135.70 · Plan paid $94.99 · Your cost $40.71
-
-Item 3 of 5 — 2025-05-04 — CPT 74177
-  CT abdomcn and pelvis with contrast
-  Billed $3,329.86 · Plan allowed — · Plan paid $1,404.54 · Your cost $351.13
-
-Item 4 of 5 — 2025-05-06 — CPT 96374
-  IV push, single or initial substance
-  Billed $210.53 · Plan allowed $109.01 · Plan paid $76.31 · Your cost $32.70
-
-Item 5 of 5 — 2025-05-06 — CPT 96374
-  IV push, single or initial substancc
-  Billed $210.53 · Plan allowed $109.01 · Plan paid S76.31 · Your cost $32.70
-
-Total of your costs: $480.62
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+03/03/25 99213 Office visit, established patient, low cornplexity 17O.36 69.71 55.77 l3.94
+03/03/25 74177 CT abdomen and pelvis with contrast 2021.45 1155.83 809.08 346.75
+03/03/25 99285 Emergency department visit, high severity 2123.55 1233.12 1233.12 O.00
+03/05/25 J2405 Ondansetron hydrochloride injection, per 1 mg 21.06 10.48 1O.48 0.00
+03/05/25 81001 Urinalysis, automated, with microscopy 7l.23 - 55.73 0.00
+Total Pt Owes 360.69

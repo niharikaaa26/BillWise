@@ -1,0 +1,32 @@
+Visit Summary & Charges
+Printed 06/30/2025 from the patient portal
+
+This statement is for Mx. Tomasz Brown.
+Patient account no. H-65143-8
+Birth date 1976.03.01
+Mailing: 4965 Cedar Blvd #1, Oak Harbor, WA 98274
+Mobile 864/555-0128
+Plan: Summit Mutual Health, ID ZQ9135505-01
+Questions about this bill? 1-800-555-0130
+
+Item 1 of 5 — 2025-05-01 — CPT 99213
+  Office visit, established patient, low complexity
+  Billed $180.55 · Plan allowed $116.89 · Plan paid $93.51 · Your cost $23.38
+
+Item 2 of 5 — 2025-05-04 — CPT 93000
+  Electrocardiogram, routine, with interpretation and report
+  Billed $259.91 · Plan allowed $135.70 · Plan paid $94.99 · Your cost $40.71
+
+Item 3 of 5 — 2025-05-04 — CPT 74177
+  CT abdomcn and pelvis with contrast
+  Billed $3,329.86 · Plan allowed — · Plan paid $1,404.54 · Your cost $351.13
+
+Item 4 of 5 — 2025-05-06 — CPT 96374
+  IV push, single or initial substance
+  Billed $210.53 · Plan allowed $109.01 · Plan paid $76.31 · Your cost $32.70
+
+Item 5 of 5 — 2025-05-06 — CPT 96374
+  IV push, single or initial substancc
+  Billed $210.53 · Plan allowed $109.01 · Plan paid S76.31 · Your cost $32.70
+
+Total of your costs: $480.62

@@ -1,0 +1,123 @@
+{
+  "id": "bill_011",
+  "layout": "portal_summary",
+  "messy": [
+    "inline_amounts",
+    "missing_field",
+    "multiline_item",
+    "ocr_amount",
+    "po_box_address"
+  ],
+  "pii": [
+    {
+      "start": 94,
+      "end": 103,
+      "type": "NAME",
+      "text": "David Kim"
+    },
+    {
+      "start": 125,
+      "end": 134,
+      "type": "ACCOUNT_ID",
+      "text": "H-08528-7"
+    },
+    {
+      "start": 146,
+      "end": 156,
+      "type": "DOB",
+      "text": "1993.10.15"
+    },
+    {
+      "start": 166,
+      "end": 201,
+      "type": "ADDRESS",
+      "text": "P.O. Box 9146, Greenville, SC 29683"
+    },
+    {
+      "start": 209,
+      "end": 221,
+      "type": "PHONE",
+      "text": "513/555-0113"
+    },
+    {
+      "start": 253,
+      "end": 263,
+      "type": "MEMBER_ID",
+      "text": "W939593242"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 291,
+      "end": 305,
+      "type": "PHONE",
+      "text": "1-800-555-0186"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-06-27",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "282.18",
+      "allowed_amount": null,
+      "insurer_paid": "148.05",
+      "patient_responsibility": "63.45"
+    },
+    {
+      "service_date": "2025-06-27",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "81.68",
+      "allowed_amount": "58.77",
+      "insurer_paid": "58.77",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-28",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexity",
+      "billed_amount": "271.38",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "112.16"
+    },
+    {
+      "service_date": "2025-07-01",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "72.32",
+      "allowed_amount": "51.79",
+      "insurer_paid": "41.43",
+      "patient_responsibility": "10.36"
+    },
+    {
+      "service_date": "2025-07-01",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "55.98",
+      "allowed_amount": "27.36",
+      "insurer_paid": "19.15",
+      "patient_responsibility": "8.21"
+    },
+    {
+      "service_date": "2025-07-03",
+      "code": "90686",
+      "description": "Influenza vaccine, quadrivalent, preservative free",
+      "billed_amount": "44.57",
+      "allowed_amount": null,
+      "insurer_paid": "0.00",
+      "patient_responsibility": "15.77"
+    },
+    {
+      "service_date": "2025-07-06",
+      "code": "70450",
+      "description": "CT head or brain without contrast",
+      "billed_amount": "2574.42",
+      "allowed_amount": "1051.32",
+      "insurer_paid": "841.06",
+      "patient_responsibility": "210.26"
+    }
+  ],
+  "duplicate_pairs": []
+}

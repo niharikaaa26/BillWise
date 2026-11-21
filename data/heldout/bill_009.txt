@@ -1,25 +1,16 @@
-Visit Summary & Charges
-Printed 05/22/2025 from the patient portal
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0188
+Stmt Dt 09/14/25
+Pt Name PATEL ANDRE
+Pt DOB 11092003
+Mbr No MBR9520748
+Acct 5347928
+Addr 4745 Lakeview Dr #11B Oak Harbor WA 98236
+Ph 319 555 0155
 
-This statement is for Ms. Olivia Sullivan.
-Patient account no. B-65610-9
-Birth date 2018.12.31
-Mailing: P.O. Box 6937, Millbrook, NY 12517
-Mobile 319/555-0164
-Plan: Blueriver Health Plans, ID ZQ2164648-01
-Questions about this bill? 1-800-555-0165
-
-Item 1 of 3 — 2025-03-23 — HCPCS J2405
-  Ondansetron hydrochloride injection,
-  per 1 mg
-  Billed $45.42 · Plan allowed $24.68 · Plan paid $19.74 · Your cost $4.94
-
-Item 2 of 3 — 2025-03-24 — CPT 97110
-  Therapeutic exercises, each 15 minutes
-  Billed $130.85 · Plan allowed — · Plan paid $62.65 · Your cost $0.00
-
-Item 3 of 3 — 2025-03-24 — HCPCS G0439
-  Annual wellness visit, subsequent
-  Billed $262.64 · Plan allowed $200.15 · Plan paid $0.00 · Your cost S200.15
-
-Total of your costs: $205.09
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+08/26/25 71046 Chest x-ray, 2 views 297.99 139.62 0.00 l39.62
+08/28/25 99283 Emergency department visit, moderate severity 1l55.94 740.65 666.59 74.06
+08/28/25 J1885 Ketorolac tromethamine injection, per 15 mg 43.03 18.60 18.6O 0.00
+08/28/25 81001 Urinalysis, automated, wilh microscopy 86.O9 65.38 58.84 6.54
+Total Pt Owes 220.22

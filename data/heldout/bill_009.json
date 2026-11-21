@@ -1,86 +1,94 @@
 {
   "id": "bill_009",
-  "layout": "portal_summary_heldout",
+  "layout": "collapsed_scan_heldout",
   "messy": [
-    "inline_amounts",
-    "missing_field",
-    "multiline_item",
+    "collapsed_columns",
+    "colonless_labels",
     "ocr_amount",
-    "po_box_address"
+    "ocr_description"
   ],
   "pii": [
     {
-      "start": 94,
-      "end": 109,
+      "start": 81,
+      "end": 92,
       "type": "NAME",
-      "text": "Olivia Sullivan"
+      "text": "PATEL ANDRE"
     },
     {
-      "start": 131,
-      "end": 140,
-      "type": "ACCOUNT_ID",
-      "text": "B-65610-9"
-    },
-    {
-      "start": 152,
-      "end": 162,
+      "start": 100,
+      "end": 108,
       "type": "DOB",
-      "text": "2018.12.31"
+      "text": "11092003"
     },
     {
-      "start": 172,
-      "end": 206,
-      "type": "ADDRESS",
-      "text": "P.O. Box 6937, Millbrook, NY 12517"
-    },
-    {
-      "start": 214,
-      "end": 226,
-      "type": "PHONE",
-      "text": "319/555-0164"
-    },
-    {
-      "start": 260,
-      "end": 272,
+      "start": 116,
+      "end": 126,
       "type": "MEMBER_ID",
-      "text": "ZQ2164648-01"
+      "text": "MBR9520748"
+    },
+    {
+      "start": 132,
+      "end": 139,
+      "type": "ACCOUNT_ID",
+      "text": "5347928"
+    },
+    {
+      "start": 145,
+      "end": 186,
+      "type": "ADDRESS",
+      "text": "4745 Lakeview Dr #11B Oak Harbor WA 98236"
+    },
+    {
+      "start": 190,
+      "end": 202,
+      "type": "PHONE",
+      "text": "319 555 0155"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 300,
-      "end": 314,
+      "start": 41,
+      "end": 55,
       "type": "PHONE",
-      "text": "1-800-555-0165"
+      "text": "1-888-555-0188"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-03-23",
-      "code": "J2405",
-      "description": "Ondansetron hydrochloride injection, per 1 mg",
-      "billed_amount": "45.42",
-      "allowed_amount": "24.68",
-      "insurer_paid": "19.74",
-      "patient_responsibility": "4.94"
+      "service_date": "2025-08-26",
+      "code": "71046",
+      "description": "Chest x-ray, 2 views",
+      "billed_amount": "297.99",
+      "allowed_amount": "139.62",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "139.62"
     },
     {
-      "service_date": "2025-03-24",
-      "code": "97110",
-      "description": "Therapeutic exercises, each 15 minutes",
-      "billed_amount": "130.85",
-      "allowed_amount": null,
-      "insurer_paid": "62.65",
+      "service_date": "2025-08-28",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "1155.94",
+      "allowed_amount": "740.65",
+      "insurer_paid": "666.59",
+      "patient_responsibility": "74.06"
+    },
+    {
+      "service_date": "2025-08-28",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "43.03",
+      "allowed_amount": "18.60",
+      "insurer_paid": "18.60",
       "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-03-24",
-      "code": "G0439",
-      "description": "Annual wellness visit, subsequent",
-      "billed_amount": "262.64",
-      "allowed_amount": "200.15",
-      "insurer_paid": "0.00",
-      "patient_responsibility": "200.15"
+      "service_date": "2025-08-28",
+      "code": "81001",
+      "description": "Urinalysis, automated, wilh microscopy",
+      "billed_amount": "86.09",
+      "allowed_amount": "65.38",
+      "insurer_paid": "58.84",
+      "patient_responsibility": "6.54"
     }
   ],
   "duplicate_pairs": []

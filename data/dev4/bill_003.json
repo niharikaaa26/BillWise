@@ -1,0 +1,123 @@
+{
+  "id": "bill_003",
+  "layout": "portal_summary",
+  "messy": [
+    "inline_amounts",
+    "missing_field",
+    "ocr_amount",
+    "ocr_description",
+    "po_box_address"
+  ],
+  "pii": [
+    {
+      "start": 94,
+      "end": 105,
+      "type": "NAME",
+      "text": "James Smith"
+    },
+    {
+      "start": 127,
+      "end": 136,
+      "type": "ACCOUNT_ID",
+      "text": "B-97014-1"
+    },
+    {
+      "start": 148,
+      "end": 158,
+      "type": "DOB",
+      "text": "1971.07.02"
+    },
+    {
+      "start": 168,
+      "end": 203,
+      "type": "ADDRESS",
+      "text": "P.O. Box 4645, Springdale, AR 72738"
+    },
+    {
+      "start": 211,
+      "end": 223,
+      "type": "PHONE",
+      "text": "513/555-0105"
+    },
+    {
+      "start": 255,
+      "end": 267,
+      "type": "MEMBER_ID",
+      "text": "ZQ8796700-01"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 295,
+      "end": 309,
+      "type": "PHONE",
+      "text": "1-800-555-0161"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-03-06",
+      "code": "74177",
+      "description": "CT abdomen and pelvis with contrast",
+      "billed_amount": "4395.57",
+      "allowed_amount": "1763.31",
+      "insurer_paid": "1586.98",
+      "patient_responsibility": "176.33"
+    },
+    {
+      "service_date": "2025-03-06",
+      "code": "36415",
+      "description": "Routine venipuncture",
+      "billed_amount": "58.62",
+      "allowed_amount": null,
+      "insurer_paid": "38.72",
+      "patient_responsibility": "4.30"
+    },
+    {
+      "service_date": "2025-03-06",
+      "code": "G0439",
+      "description": "Annual wellness vlsit, subsequent",
+      "billed_amount": "179.29",
+      "allowed_amount": "140.19",
+      "insurer_paid": "126.17",
+      "patient_responsibility": "14.02"
+    },
+    {
+      "service_date": "2025-03-06",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "47.22",
+      "allowed_amount": "36.53",
+      "insurer_paid": "36.53",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-03-06",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "197.57",
+      "allowed_amount": null,
+      "insurer_paid": "143.08",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-03-06",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "65.49",
+      "allowed_amount": "30.19",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "30.19"
+    },
+    {
+      "service_date": "2025-03-06",
+      "code": "99214",
+      "description": "Office visit, established patient, moderate complexlty",
+      "billed_amount": "230.66",
+      "allowed_amount": "142.43",
+      "insurer_paid": "113.94",
+      "patient_responsibility": "28.49"
+    }
+  ],
+  "duplicate_pairs": []
+}

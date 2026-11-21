@@ -1,0 +1,40 @@
+Visit Summary & Charges
+Printed 05/03/2025 from the patient portal
+
+This statement is for Ms. James Smith.
+Patient account no. B-97014-1
+Birth date 1971.07.02
+Mailing: P.O. Box 4645, Springdale, AR 72738
+Mobile 513/555-0105
+Plan: Summit Mutual Health, ID ZQ8796700-01
+Questions about this bill? 1-800-555-0161
+
+Item 1 of 7 — 2025-03-06 — CPT 74177
+  CT abdomen and pelvis with contrast
+  Billed $4,395.57 · Plan allowed $1,763.31 · Plan paid $1,586.98 · Your cost $176.33
+
+Item 2 of 7 — 2025-03-06 — CPT 36415
+  Routine venipuncture
+  Billed $58.62 · Plan allowed — · Plan paid $38.72 · Your cost $4.30
+
+Item 3 of 7 — 2025-03-06 — HCPCS G0439
+  Annual wellness vlsit, subsequent
+  Billed $179.29 · Plan allowed $140.19 · Plan paid $126.17 · Your cost $14.02
+
+Item 4 of 7 — 2025-03-06 — HCPCS J2405
+  Ondansetron hydrochloride injection, per 1 mg
+  Billed $47.22 · Plan allowed $36.53 · Plan paid S36.53 · Your cost $0.00
+
+Item 5 of 7 — 2025-03-06 — HCPCS G0439
+  Annual wellness visit, subsequent
+  Billed $197.57 · Plan allowed — · Plan paid S143.08 · Your cost $0.00
+
+Item 6 of 7 — 2025-03-06 — HCPCS J2405
+  Ondansetron hydrochloride injection, per 1 mg
+  Billed $65,49 · Plan allowed $30.19 · Plan paid $0.O0 · Your cost $3O.19
+
+Item 7 of 7 — 2025-03-06 — CPT 99214
+  Office visit, established patient, moderate complexlty
+  Billed $230.66 · Plan allowed $142.43 · Plan paid $113.94 · Your cost $28.49
+
+Total of your costs: $253.33

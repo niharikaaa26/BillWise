@@ -1,25 +1,16 @@
-Visit Summary & Charges
-Printed 05/28/2025 from the patient portal
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0155
+Stmt Dt 06/09/25
+Pt Name WILLIAMS KEVIN
+Pt DOB 04092012
+Mbr No MBR6249524
+Acct 9857620
+Addr 3884 Sunset Ln Unit 16 Springdale AR 72727
+Ph 845 555 0198
+Email kevin.williams8@example.net
 
-This statement is for Ms. Andre Thompson.
-Patient account no. A-71470-4
-Birth date 2008.04.15
-Mailing: 3828 Sunset Court Unit 39, Millbrook, NY 12552
-Mobile 360/555-0188
-Plan: Summit Mutual Health, ID W598878738
-Questions about this bill? 1-800-555-0107
-
-Item 1 of 3 — 2025-05-01 — HCPCS A4649
-  Surgical supply, miscellaneous
-  Billed S219.13 · Plan allowed $102.59 · Plan paid $92.33 · Your cost $10.26
-
-Item 2 of 3 — 2025-05-01 — CPT 97110
-  Therapeutic exercises, each 15 minutes
-  Billed S142.20 · Plan allowed $54.43 · Plan paid $38.10 · Your cost $l6.33
-
-Item 3 of 3 — 2025-05-01 — CPT 90686
-  Influenza vaccine, quadrivalent,
-  preservative free
-  Billed $34.13 · Plan allowed — · Plan paid $13.99 · Your cost $5.99
-
-Total of your costs: $32.58
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+05/23/25 93000 Electrocardiogram, routine, with interpretation and report 292.14 117.51 117.51 0.00
+05/23/25 90471 Immunization administration, single vaccine 41.75 29.76 23.81 5.95
+05/25/25 85025 Complete blood count with automated differential 99.l2 50.47 45.42 5.O5
+Total Pt Owes 11.00

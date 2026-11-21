@@ -1,24 +1,17 @@
-Visit Summary & Charges
-Printed 03/19/2025 from the patient portal
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0114
+Stmt Dt 05/21/25
+Pt Name FITZGERALD BRIANNA
+Pt DOB 11101977
+Mbr No ZQ9911513-01
+Acct 7116648
+Addr 4629 Lakeview Boulevard Fairview TN 37014
+Ph 615 555 0149
+Email brianna.fitzgerald74@mail.example.com
 
-This statement is for Mx. Thanh Sullivan.
-Patient account no. K-80171-2
-Birth date 1941.02.23
-Mailing: P.O. Box 6634, Lakewood, CO 80269
-Mobile 615/555-0136
-Plan: Summit Mutual Health, ID CPH-0633-0769
-Questions about this bill? 1-800-555-0198
-
-Item 1 of 3 — 2025-01-26 — CPT 97110
-  Therapeutic exercises, each 15 minutes
-  Billed $60.85 · Plan allowed $46.46 · Plan paid $41.81 · Your cost $4.65
-
-Item 2 of 3 — 2025-01-29 — CPT 81001
-  Urinalysis, automated, with microscopy
-  Billed $64.86 · Plan allowed $26.88 · Plan paid S18.82 · Your cost $8.06
-
-Item 3 of 3 — 2025-01-29 — CPT 96374
-  IV push, single or initial substance
-  Billed $296.20 · Plan allowed $134.94 · Plan paid $107.95 · Your cost $26,99
-
-Total of your costs: $39.70
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+04/16/25 96374 IV push, single or initial substance 225.30 169.85 169.85 0.00
+04/17/25 70450 CT head or brain without contrast l645.92 929.14 650.40 278.74
+04/18/25 81001 Urinalysis, automated, with microscopy 64.00 39.37 39.37 0.00
+04/21/25 99213 Office visit, established patient, low complexity 130.64 102.32 102.32 O.00
+Total Pt Owes 278.74

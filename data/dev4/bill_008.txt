@@ -1,0 +1,41 @@
+Visit Summary & Charges
+Printed 08/25/2025 from the patient portal
+
+This statement is for Mx. Dmitri Yamamoto.
+Patient account no. H-09190-9
+Birth date 1988.12.05
+Mailing: P.O. Box 6447, Lakewood, CO 80261
+Mobile 360/555-0127
+Plan: Summit Mutual Health, ID MBR8505982
+Questions about this bill? 1-800-555-0188
+
+Item 1 of 7 — 2025-07-25 — CPT 93000
+  Electrocardiogram, routine, with interpretation and report
+  Billed $161.17 · Plan allowed $74.15 · Plan paid $66.74 · Your cost S7.41
+
+Item 2 of 7 — 2025-07-28 — CPT 99213
+  Office visit, established patient, low complexity
+  Billed $183.88 · Plan allowed $110.94 · Plan paid $110.94 · Your cost $0.00
+
+Item 3 of 7 — 2025-07-30 — HCPCS G0439
+  Annual wellness visit, subsequent
+  Billed $233.51 · Plan allowed $156.36 · Plan paid $140.72 · Your cost $15.64
+
+Item 4 of 7 — 2025-07-30 — CPT 99203
+  New patient office visit
+  Billed $286.87 · Plan allowed $123.57 · Plan paid $0.00 · Your cost $123.57
+
+Item 5 of 7 — 2025-07-30 — CPT 99283
+  Emergency department visit, moderate
+  severity
+  Billed $842.63 · Plan allowed $641.27 · Plan paid $577.14 · Your cost $64.13
+
+Item 6 of 7 — 2025-08-01 — HCPCS A4649
+  Surgical supply, miscellaneous
+  Billed $213.09 · Plan allowed $108.44 · Plan paid $97.60 · Your cost $10.84
+
+Item 7 of 7 — 2025-08-04 — CPT 93000
+  Electrocardiogram, routine, with interpretation and report
+  Billed $257,37 · Plan allowed $203.90 · Plan paid $0.00 · Your cost $203.90
+
+Total of your costs: $425.49

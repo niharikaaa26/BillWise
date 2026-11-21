@@ -1,0 +1,44 @@
+Visit Summary & Charges
+Printed 09/06/2025 from the patient portal
+
+This statement is for Mr. Maria Yamamoto.
+Patient account no. B-37243-3
+Birth date 1986.02.28
+Mailing: P.O. Box 6251, Port Jervis, NY 12719
+Mobile 212/555-0166
+Plan: Blueriver Health Plans, ID XGH47168030
+Questions about this bill? 1-800-555-0162
+
+Item 1 of 8 — 2025-07-09 — CPT 99214
+  Office visit, established patient, m0derate complexity
+  Billed $248.23 · Plan allowed — · Plan paid S94.24 · Your cost $23.56
+
+Item 2 of 8 — 2025-07-09 — CPT 93000
+  Electrocardiogram, routine, with interpretation and report
+  Billed $151.36 · Plan allowed $46.32 · Plan paid $41.69 · Your cost $4.63
+
+Item 3 of 8 — 2025-07-09 — CPT 93000
+  Electrocardiogram, routine, with interpretation and report
+  Billed $151.36 · Plan allowed $46.32 · Plan paid $41.69 · Your cost $4.63
+
+Item 4 of 8 — 2025-07-09 — CPT 93000
+  Electrocardiogram, routine, with interpretation and report
+  Billed $254.81 · Plan allowed $187.55 · Plan paid $0.0O · Your cost $187.55
+
+Item 5 of 8 — 2025-07-09 — HCPCS J2405
+  Ondansetron hydrochloride injection, per 1 mg
+  Billed $58.62 · Plan allowed — · Plan paid $0.00 · Your cost $18.38
+
+Item 6 of 8 — 2025-07-09 — CPT 70450
+  CT head or brain without contrast
+  Billed $1,450.04 · Plan allowed $604.06 · Plan paid $543.65 · Your cost $60.41
+
+Item 7 of 8 — 2025-07-09 — CPT 71046
+  Chest x-ray, 2 views
+  Billed $213.59 · Plan allowed $109.78 · Plan paid $109.78 · Your cost S0.00
+
+Item 8 of 8 — 2025-07-09 — CPT 87880
+  Rapid strep test
+  Billed $33.48 · Plan allowed $26.34 · Plan paid $0.00 · Your cost $26.34
+
+Total of your costs: $325.50

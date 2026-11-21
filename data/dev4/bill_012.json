@@ -1,0 +1,136 @@
+{
+  "id": "bill_012",
+  "layout": "portal_summary",
+  "messy": [
+    "duplicate_charge",
+    "inline_amounts",
+    "ocr_amount",
+    "po_box_address"
+  ],
+  "pii": [
+    {
+      "start": 94,
+      "end": 104,
+      "type": "NAME",
+      "text": "Ingrid Doe"
+    },
+    {
+      "start": 126,
+      "end": 135,
+      "type": "ACCOUNT_ID",
+      "text": "B-81289-4"
+    },
+    {
+      "start": 147,
+      "end": 157,
+      "type": "DOB",
+      "text": "1967.10.02"
+    },
+    {
+      "start": 167,
+      "end": 201,
+      "type": "ADDRESS",
+      "text": "P.O. Box 5995, Millbrook, NY 12572"
+    },
+    {
+      "start": 209,
+      "end": 221,
+      "type": "PHONE",
+      "text": "303/555-0150"
+    },
+    {
+      "start": 253,
+      "end": 263,
+      "type": "MEMBER_ID",
+      "text": "W374686393"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 291,
+      "end": 305,
+      "type": "PHONE",
+      "text": "1-800-555-0166"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-06-08",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "251.75",
+      "allowed_amount": "149.49",
+      "insurer_paid": "149.49",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-08",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "251.75",
+      "allowed_amount": "149.49",
+      "insurer_paid": "149.49",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-06-08",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "201.65",
+      "allowed_amount": "134.64",
+      "insurer_paid": "121.18",
+      "patient_responsibility": "13.46"
+    },
+    {
+      "service_date": "2025-06-10",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "173.01",
+      "allowed_amount": "109.53",
+      "insurer_paid": "98.58",
+      "patient_responsibility": "10.95"
+    },
+    {
+      "service_date": "2025-06-10",
+      "code": "80053",
+      "description": "Comprehensive metabolic panel",
+      "billed_amount": "150.71",
+      "allowed_amount": "63.01",
+      "insurer_paid": "56.71",
+      "patient_responsibility": "6.30"
+    },
+    {
+      "service_date": "2025-06-10",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "69.24",
+      "allowed_amount": "40.32",
+      "insurer_paid": "28.22",
+      "patient_responsibility": "12.10"
+    },
+    {
+      "service_date": "2025-06-11",
+      "code": "99285",
+      "description": "Emergency department visit, high severity",
+      "billed_amount": "2880.02",
+      "allowed_amount": "2240.67",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "2240.67"
+    },
+    {
+      "service_date": "2025-06-11",
+      "code": "J1885",
+      "description": "Ketorolac tromethamine injection, per 15 mg",
+      "billed_amount": "89.75",
+      "allowed_amount": "68.95",
+      "insurer_paid": "55.16",
+      "patient_responsibility": "13.79"
+    }
+  ],
+  "duplicate_pairs": [
+    [
+      0,
+      1
+    ]
+  ]
+}

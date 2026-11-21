@@ -1,0 +1,87 @@
+{
+  "id": "bill_009",
+  "layout": "portal_summary",
+  "messy": [
+    "inline_amounts",
+    "missing_field",
+    "multiline_item",
+    "ocr_amount",
+    "po_box_address"
+  ],
+  "pii": [
+    {
+      "start": 94,
+      "end": 109,
+      "type": "NAME",
+      "text": "Olivia Sullivan"
+    },
+    {
+      "start": 131,
+      "end": 140,
+      "type": "ACCOUNT_ID",
+      "text": "B-65610-9"
+    },
+    {
+      "start": 152,
+      "end": 162,
+      "type": "DOB",
+      "text": "2018.12.31"
+    },
+    {
+      "start": 172,
+      "end": 206,
+      "type": "ADDRESS",
+      "text": "P.O. Box 6937, Millbrook, NY 12517"
+    },
+    {
+      "start": 214,
+      "end": 226,
+      "type": "PHONE",
+      "text": "319/555-0164"
+    },
+    {
+      "start": 260,
+      "end": 272,
+      "type": "MEMBER_ID",
+      "text": "ZQ2164648-01"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 300,
+      "end": 314,
+      "type": "PHONE",
+      "text": "1-800-555-0165"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-03-23",
+      "code": "J2405",
+      "description": "Ondansetron hydrochloride injection, per 1 mg",
+      "billed_amount": "45.42",
+      "allowed_amount": "24.68",
+      "insurer_paid": "19.74",
+      "patient_responsibility": "4.94"
+    },
+    {
+      "service_date": "2025-03-24",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "130.85",
+      "allowed_amount": null,
+      "insurer_paid": "62.65",
+      "patient_responsibility": "0.00"
+    },
+    {
+      "service_date": "2025-03-24",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "262.64",
+      "allowed_amount": "200.15",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "200.15"
+    }
+  ],
+  "duplicate_pairs": []
+}

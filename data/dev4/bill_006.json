@@ -1,0 +1,75 @@
+{
+  "id": "bill_006",
+  "layout": "portal_summary",
+  "messy": [
+    "inline_amounts",
+    "multiline_item"
+  ],
+  "pii": [
+    {
+      "start": 94,
+      "end": 111,
+      "type": "NAME",
+      "text": "Brianna Lindqvist"
+    },
+    {
+      "start": 133,
+      "end": 142,
+      "type": "ACCOUNT_ID",
+      "text": "H-02008-7"
+    },
+    {
+      "start": 154,
+      "end": 164,
+      "type": "DOB",
+      "text": "1957.01.20"
+    },
+    {
+      "start": 174,
+      "end": 216,
+      "type": "ADDRESS",
+      "text": "7430 Maple Road Apt 19, Fairview, TN 37058"
+    },
+    {
+      "start": 224,
+      "end": 236,
+      "type": "PHONE",
+      "text": "479/555-0163"
+    },
+    {
+      "start": 270,
+      "end": 283,
+      "type": "MEMBER_ID",
+      "text": "CPH-2811-8297"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 311,
+      "end": 325,
+      "type": "PHONE",
+      "text": "1-800-555-0109"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-06-19",
+      "code": "99283",
+      "description": "Emergency department visit, moderate severity",
+      "billed_amount": "807.37",
+      "allowed_amount": "537.50",
+      "insurer_paid": "0.00",
+      "patient_responsibility": "537.50"
+    },
+    {
+      "service_date": "2025-06-19",
+      "code": "G0439",
+      "description": "Annual wellness visit, subsequent",
+      "billed_amount": "214.43",
+      "allowed_amount": "150.59",
+      "insurer_paid": "120.47",
+      "patient_responsibility": "30.12"
+    }
+  ],
+  "duplicate_pairs": []
+}

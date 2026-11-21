@@ -1,0 +1,85 @@
+{
+  "id": "bill_002",
+  "layout": "portal_summary",
+  "messy": [
+    "inline_amounts",
+    "ocr_amount",
+    "po_box_address"
+  ],
+  "pii": [
+    {
+      "start": 94,
+      "end": 108,
+      "type": "NAME",
+      "text": "Thanh Sullivan"
+    },
+    {
+      "start": 130,
+      "end": 139,
+      "type": "ACCOUNT_ID",
+      "text": "K-80171-2"
+    },
+    {
+      "start": 151,
+      "end": 161,
+      "type": "DOB",
+      "text": "1941.02.23"
+    },
+    {
+      "start": 171,
+      "end": 204,
+      "type": "ADDRESS",
+      "text": "P.O. Box 6634, Lakewood, CO 80269"
+    },
+    {
+      "start": 212,
+      "end": 224,
+      "type": "PHONE",
+      "text": "615/555-0136"
+    },
+    {
+      "start": 256,
+      "end": 269,
+      "type": "MEMBER_ID",
+      "text": "CPH-0633-0769"
+    }
+  ],
+  "allowed_redactions": [
+    {
+      "start": 297,
+      "end": 311,
+      "type": "PHONE",
+      "text": "1-800-555-0198"
+    }
+  ],
+  "line_items": [
+    {
+      "service_date": "2025-01-26",
+      "code": "97110",
+      "description": "Therapeutic exercises, each 15 minutes",
+      "billed_amount": "60.85",
+      "allowed_amount": "46.46",
+      "insurer_paid": "41.81",
+      "patient_responsibility": "4.65"
+    },
+    {
+      "service_date": "2025-01-29",
+      "code": "81001",
+      "description": "Urinalysis, automated, with microscopy",
+      "billed_amount": "64.86",
+      "allowed_amount": "26.88",
+      "insurer_paid": "18.82",
+      "patient_responsibility": "8.06"
+    },
+    {
+      "service_date": "2025-01-29",
+      "code": "96374",
+      "description": "IV push, single or initial substance",
+      "billed_amount": "296.20",
+      "allowed_amount": "134.94",
+      "insurer_paid": "107.95",
+      "patient_responsibility": "26.99"
+    }
+  ],
+  "duplicate_pairs": []
+}

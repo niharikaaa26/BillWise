@@ -1,85 +1,90 @@
 {
   "id": "bill_005",
-  "layout": "portal_summary_heldout",
+  "layout": "collapsed_scan_heldout",
   "messy": [
-    "inline_amounts",
-    "missing_field",
-    "multiline_item",
+    "collapsed_columns",
+    "colonless_labels",
     "ocr_amount"
   ],
   "pii": [
     {
-      "start": 94,
-      "end": 108,
+      "start": 81,
+      "end": 95,
       "type": "NAME",
-      "text": "Andre Thompson"
+      "text": "WILLIAMS KEVIN"
     },
     {
-      "start": 130,
-      "end": 139,
-      "type": "ACCOUNT_ID",
-      "text": "A-71470-4"
-    },
-    {
-      "start": 151,
-      "end": 161,
+      "start": 103,
+      "end": 111,
       "type": "DOB",
-      "text": "2008.04.15"
+      "text": "04092012"
     },
     {
-      "start": 171,
-      "end": 217,
-      "type": "ADDRESS",
-      "text": "3828 Sunset Court Unit 39, Millbrook, NY 12552"
-    },
-    {
-      "start": 225,
-      "end": 237,
-      "type": "PHONE",
-      "text": "360/555-0188"
-    },
-    {
-      "start": 269,
-      "end": 279,
+      "start": 119,
+      "end": 129,
       "type": "MEMBER_ID",
-      "text": "W598878738"
+      "text": "MBR6249524"
+    },
+    {
+      "start": 135,
+      "end": 142,
+      "type": "ACCOUNT_ID",
+      "text": "9857620"
+    },
+    {
+      "start": 148,
+      "end": 190,
+      "type": "ADDRESS",
+      "text": "3884 Sunset Ln Unit 16 Springdale AR 72727"
+    },
+    {
+      "start": 194,
+      "end": 206,
+      "type": "PHONE",
+      "text": "845 555 0198"
+    },
+    {
+      "start": 213,
+      "end": 240,
+      "type": "EMAIL",
+      "text": "kevin.williams8@example.net"
     }
   ],
   "allowed_redactions": [
     {
-      "start": 307,
-      "end": 321,
+      "start": 41,
+      "end": 55,
       "type": "PHONE",
-      "text": "1-800-555-0107"
+      "text": "1-888-555-0155"
     }
   ],
   "line_items": [
     {
-      "service_date": "2025-05-01",
-      "code": "A4649",
-      "description": "Surgical supply, miscellaneous",
-      "billed_amount": "219.13",
-      "allowed_amount": "102.59",
-      "insurer_paid": "92.33",
-      "patient_responsibility": "10.26"
+      "service_date": "2025-05-23",
+      "code": "93000",
+      "description": "Electrocardiogram, routine, with interpretation and report",
+      "billed_amount": "292.14",
+      "allowed_amount": "117.51",
+      "insurer_paid": "117.51",
+      "patient_responsibility": "0.00"
     },
     {
-      "service_date": "2025-05-01",
-      "code": "97110",
-      "description": "Therapeutic exercises, each 15 minutes",
-      "billed_amount": "142.20",
-      "allowed_amount": "54.43",
-      "insurer_paid": "38.10",
-      "patient_responsibility": "16.33"
+      "service_date": "2025-05-23",
+      "code": "90471",
+      "description": "Immunization administration, single vaccine",
+      "billed_amount": "41.75",
+      "allowed_amount": "29.76",
+      "insurer_paid": "23.81",
+      "patient_responsibility": "5.95"
     },
     {
-      "service_date": "2025-05-01",
-      "code": "90686",
-      "description": "Influenza vaccine, quadrivalent, preservative free",
-      "billed_amount": "34.13",
-      "allowed_amount": null,
-      "insurer_paid": "13.99",
-      "patient_responsibility": "5.99"
+      "service_date": "2025-05-25",
+      "code": "85025",
+      "description": "Complete blood count with automated differential",
+      "billed_amount": "99.12",
+      "allowed_amount": "50.47",
+      "insurer_paid": "45.42",
+      "patient_responsibility": "5.05"
     }
   ],
   "duplicate_pairs": []

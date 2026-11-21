@@ -353,7 +353,9 @@ DEFAULT_SETS = {
     "dev2": ROOT / "data" / "dev2",
     # round-2 held-out layout; used to tune the round-3 fixes, so now development data
     "dev3": ROOT / "data" / "dev3",
-    # round-3 held-out layout, written before the round-3 fixes and never used for tuning
+    # round-3 held-out layout; used to tune the round-4 rework, so now development data
+    "dev4": ROOT / "data" / "dev4",
+    # round-4 held-out layout, written before the round-4 rework and never used for tuning
     "heldout": ROOT / "data" / "heldout",
 }
 
@@ -361,7 +363,7 @@ DEFAULT_SETS = {
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", type=Path, action="append",
-                    help="dataset directory (repeatable). Default: data/synthetic, dev2, dev3 and heldout")
+                    help="dataset directory (repeatable). Default: data/synthetic, dev2-dev4 and heldout")
     ap.add_argument("--out", type=Path, default=ROOT / "eval" / "results.json")
     ap.add_argument("--max-failures", type=int, default=60, help="failures to print per category")
     args = ap.parse_args()

@@ -1,21 +1,16 @@
-Visit Summary & Charges
-Printed 08/16/2025 from the patient portal
+RIVERSIDE URGENT CARE LLC
+Billing office 1-888-555-0121
+Stmt Dt 06/30/25
+Pt Name LINDQVIST PATRICE
+Pt DOB 09081966
+Mbr No W261472925
+Acct 6573572
+Addr 3769 Cedar Avenue Oak Harbor WA 98214
+Ph 360 555 0153
 
-This statement is for Ms. Brianna Lindqvist.
-Patient account no. H-02008-7
-Birth date 1957.01.20
-Mailing: 7430 Maple Road Apt 19, Fairview, TN 37058
-Mobile 479/555-0163
-Plan: Blueriver Health Plans, ID CPH-2811-8297
-Questions about this bill? 1-800-555-0109
-
-Item 1 of 2 — 2025-06-19 — CPT 99283
-  Emergency department visit, moderate
-  severity
-  Billed $807.37 · Plan allowed $537.50 · Plan paid $0.00 · Your cost $537.50
-
-Item 2 of 2 — 2025-06-19 — HCPCS G0439
-  Annual wellness visit, subsequent
-  Billed $214.43 · Plan allowed $150.59 · Plan paid $120.47 · Your cost $30.12
-
-Total of your costs: $567.62
+Svc Dt Code Description Chg Allow Ins Pd Pt Owes
+06/10/25 70450 CT head or brain without contrast 925.37 434.87 434.87 0.00
+06/10/25 93000 Electrocardiogram, routine, with interpretation and report 98.36 75.24 0.0O 75.24
+06/10/25 90686 Influenza vaccine, quadrivalent, preservalive free 6l.48 30.08 30.08 O.00
+06/12/25 70450 CT head or brain without contrast 1483.93 - 520.20 57.80
+Total Pt Owes 133.04
