@@ -1,0 +1,2393 @@
+{
+  "main": {
+    "dataset": {
+      "path": "C:\\Users\\nihar\\Downloads\\BillWise\\data\\synthetic",
+      "documents": 48,
+      "layouts": {
+        "hospital_fixed": 12,
+        "eob_pipe": 12,
+        "claim_blocks": 12,
+        "clinic_csv": 12
+      },
+      "note": "synthetic data only"
+    },
+    "pii": {
+      "overall": {
+        "gold": 380,
+        "predicted": 474,
+        "neutral": 99,
+        "recall": 0.9868421052631579,
+        "precision": 1.0,
+        "leak_free_rate": 0.9815789473684211,
+        "recall_any_type": 0.9868421052631579,
+        "exact_match_recall": 0.9815789473684211,
+        "exact_match_precision": 0.9946666666666667
+      },
+      "by_type": {
+        "NAME": {
+          "gold": 108,
+          "predicted": 111,
+          "neutral": 3,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 0.9814814814814815,
+          "recall_any_type": 1.0
+        },
+        "ADDRESS": {
+          "gold": 84,
+          "predicted": 132,
+          "neutral": 48,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "PHONE": {
+          "gold": 28,
+          "predicted": 64,
+          "neutral": 36,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "EMAIL": {
+          "gold": 16,
+          "predicted": 28,
+          "neutral": 12,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "DOB": {
+          "gold": 48,
+          "predicted": 45,
+          "neutral": 0,
+          "recall": 0.9375,
+          "precision": 1.0,
+          "leak_free_rate": 0.9375,
+          "recall_any_type": 0.9375
+        },
+        "SSN": {
+          "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "MEMBER_ID": {
+          "gold": 36,
+          "predicted": 35,
+          "neutral": 0,
+          "recall": 0.9722222222222222,
+          "precision": 1.0,
+          "leak_free_rate": 0.9722222222222222,
+          "recall_any_type": 0.9722222222222222
+        },
+        "ACCOUNT_ID": {
+          "gold": 48,
+          "predicted": 47,
+          "neutral": 0,
+          "recall": 0.9791666666666666,
+          "precision": 1.0,
+          "leak_free_rate": 0.9791666666666666,
+          "recall_any_type": 0.9791666666666666
+        }
+      },
+      "failures": {
+        "missed": [
+          {
+            "bill": "bill_001",
+            "type": "ACCOUNT_ID",
+            "text": "33036758",
+            "redacted_as": null,
+            "line": "Acc0unt Number: 33036758"
+          },
+          {
+            "bill": "bill_002",
+            "type": "MEMBER_ID",
+            "text": "CPH-5900-9199",
+            "redacted_as": null,
+            "line": "Patient: Grace Abernathy     Memher ID: CPH-5900-9199"
+          },
+          {
+            "bill": "bill_021",
+            "type": "DOB",
+            "text": "9/19/46",
+            "redacted_as": null,
+            "line": "Date of Birlh: 9/19/46"
+          },
+          {
+            "bill": "bill_025",
+            "type": "DOB",
+            "text": "12/18/1959",
+            "redacted_as": null,
+            "line": "Date of Birlh: 12/18/1959"
+          },
+          {
+            "bill": "bill_041",
+            "type": "DOB",
+            "text": "09/09/1994",
+            "redacted_as": null,
+            "line": "Date of Birlh: 09/09/1994"
+          }
+        ],
+        "false_positives": [],
+        "leaks": [
+          {
+            "bill": "bill_001",
+            "type": "ACCOUNT_ID",
+            "text": "33036758",
+            "unredacted_chars": "33036758"
+          },
+          {
+            "bill": "bill_002",
+            "type": "MEMBER_ID",
+            "text": "CPH-5900-9199",
+            "unredacted_chars": "CPH-5900-9199"
+          },
+          {
+            "bill": "bill_021",
+            "type": "DOB",
+            "text": "9/19/46",
+            "unredacted_chars": "9/19/46"
+          },
+          {
+            "bill": "bill_025",
+            "type": "DOB",
+            "text": "12/18/1959",
+            "unredacted_chars": "12/18/1959"
+          },
+          {
+            "bill": "bill_040",
+            "type": "NAME",
+            "text": "SIOBHAN KOWALSKI",
+            "unredacted_chars": "KOWALSKI"
+          },
+          {
+            "bill": "bill_041",
+            "type": "DOB",
+            "text": "09/09/1994",
+            "unredacted_chars": "09/09/1994"
+          },
+          {
+            "bill": "bill_042",
+            "type": "NAME",
+            "text": "Xiomara Hernandez",
+            "unredacted_chars": "Xiomara"
+          }
+        ]
+      }
+    },
+    "parsing": {
+      "documents": 48,
+      "documents_fully_correct": 48,
+      "gold_lines": 225,
+      "predicted_lines": 225,
+      "matched_lines": 225,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy": {
+        "service_date": 1.0,
+        "code": 1.0,
+        "description": 1.0,
+        "billed_amount": 1.0,
+        "allowed_amount": 1.0,
+        "insurer_paid": 1.0,
+        "patient_responsibility": 1.0
+      },
+      "field_accuracy_overall": 1.0,
+      "by_layout": {
+        "claim_blocks": {
+          "docs": 12,
+          "docs_fully_correct": 12,
+          "field_accuracy": 1.0
+        },
+        "clinic_csv": {
+          "docs": 12,
+          "docs_fully_correct": 12,
+          "field_accuracy": 1.0
+        },
+        "eob_pipe": {
+          "docs": 12,
+          "docs_fully_correct": 12,
+          "field_accuracy": 1.0
+        },
+        "hospital_fixed": {
+          "docs": 12,
+          "docs_fully_correct": 12,
+          "field_accuracy": 1.0
+        }
+      },
+      "by_messy_condition": {
+        "blank_repeated_date": {
+          "docs": 3,
+          "docs_fully_correct": 3
+        },
+        "duplicate_charge": {
+          "docs": 8,
+          "docs_fully_correct": 8
+        },
+        "missing_code": {
+          "docs": 3,
+          "docs_fully_correct": 3
+        },
+        "missing_contact": {
+          "docs": 5,
+          "docs_fully_correct": 5
+        },
+        "missing_email": {
+          "docs": 4,
+          "docs_fully_correct": 4
+        },
+        "missing_field": {
+          "docs": 11,
+          "docs_fully_correct": 11
+        },
+        "missing_phone": {
+          "docs": 1,
+          "docs_fully_correct": 1
+        },
+        "multiline_item": {
+          "docs": 31,
+          "docs_fully_correct": 31
+        },
+        "ocr_amount": {
+          "docs": 37,
+          "docs_fully_correct": 37
+        },
+        "ocr_description": {
+          "docs": 17,
+          "docs_fully_correct": 17
+        },
+        "ocr_label": {
+          "docs": 7,
+          "docs_fully_correct": 7
+        },
+        "ssn_present": {
+          "docs": 12,
+          "docs_fully_correct": 12
+        },
+        "unlabeled_name": {
+          "docs": 12,
+          "docs_fully_correct": 12
+        }
+      },
+      "duplicate_detection": {
+        "gold_pairs": 8,
+        "flagged_pairs": 8,
+        "correct": 8,
+        "recall": 1.0,
+        "precision": 1.0
+      },
+      "detected_formats": {
+        "hospital_fixed->fixed_width": 12,
+        "eob_pipe->pipe_table": 12,
+        "claim_blocks->key_value": 12,
+        "clinic_csv->csv": 12
+      },
+      "failures": {
+        "fields": [],
+        "lines": []
+      }
+    },
+    "parsing_on_redacted_text": {
+      "documents_fully_correct": 48,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy_overall": 1.0
+    }
+  },
+  "heldout": {
+    "dataset": {
+      "path": "C:\\Users\\nihar\\Downloads\\BillWise\\data\\heldout",
+      "documents": 12,
+      "layouts": {
+        "group_statement_heldout": 12
+      },
+      "note": "synthetic data only"
+    },
+    "pii": {
+      "overall": {
+        "gold": 79,
+        "predicted": 87,
+        "neutral": 44,
+        "recall": 0.5443037974683544,
+        "precision": 1.0,
+        "leak_free_rate": 0.5443037974683544,
+        "recall_any_type": 0.5443037974683544,
+        "exact_match_recall": 0.5443037974683544,
+        "exact_match_precision": 1.0
+      },
+      "by_type": {
+        "NAME": {
+          "gold": 12,
+          "predicted": 8,
+          "neutral": 8,
+          "recall": 0.0,
+          "precision": null,
+          "leak_free_rate": 0.0,
+          "recall_any_type": 0.0
+        },
+        "ADDRESS": {
+          "gold": 12,
+          "predicted": 24,
+          "neutral": 12,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "PHONE": {
+          "gold": 12,
+          "predicted": 24,
+          "neutral": 24,
+          "recall": 0.0,
+          "precision": null,
+          "leak_free_rate": 0.0,
+          "recall_any_type": 0.0
+        },
+        "EMAIL": {
+          "gold": 7,
+          "predicted": 7,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "DOB": {
+          "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "SSN": {
+          "gold": 0,
+          "predicted": 0,
+          "neutral": 0,
+          "recall": null,
+          "precision": null,
+          "leak_free_rate": null,
+          "recall_any_type": null
+        },
+        "MEMBER_ID": {
+          "gold": 12,
+          "predicted": 12,
+          "neutral": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "leak_free_rate": 1.0,
+          "recall_any_type": 1.0
+        },
+        "ACCOUNT_ID": {
+          "gold": 12,
+          "predicted": 0,
+          "neutral": 0,
+          "recall": 0.0,
+          "precision": null,
+          "leak_free_rate": 0.0,
+          "recall_any_type": 0.0
+        }
+      },
+      "failures": {
+        "missed": [
+          {
+            "bill": "bill_001",
+            "type": "NAME",
+            "text": "Achterberg, Fatima",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Achterberg, Fatima"
+          },
+          {
+            "bill": "bill_001",
+            "type": "ACCOUNT_ID",
+            "text": "6905929",
+            "redacted_as": null,
+            "line": "Guarantor #: 6905929"
+          },
+          {
+            "bill": "bill_001",
+            "type": "PHONE",
+            "text": "+1 845 555 0101",
+            "redacted_as": null,
+            "line": "Cell: +1 845 555 0101"
+          },
+          {
+            "bill": "bill_002",
+            "type": "NAME",
+            "text": "Oyelaran, Yuki G",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Oyelaran, Yuki G"
+          },
+          {
+            "bill": "bill_002",
+            "type": "ACCOUNT_ID",
+            "text": "7434708",
+            "redacted_as": null,
+            "line": "Guarantor #: 7434708"
+          },
+          {
+            "bill": "bill_002",
+            "type": "PHONE",
+            "text": "+1 360 555 0160",
+            "redacted_as": null,
+            "line": "Cell: +1 360 555 0160"
+          },
+          {
+            "bill": "bill_003",
+            "type": "NAME",
+            "text": "Ivanova, Sarah",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Ivanova, Sarah"
+          },
+          {
+            "bill": "bill_003",
+            "type": "ACCOUNT_ID",
+            "text": "9007766",
+            "redacted_as": null,
+            "line": "Guarantor #: 9007766"
+          },
+          {
+            "bill": "bill_003",
+            "type": "PHONE",
+            "text": "+1 513 555 0151",
+            "redacted_as": null,
+            "line": "Cell: +1 513 555 0151"
+          },
+          {
+            "bill": "bill_004",
+            "type": "NAME",
+            "text": "Johnson, Brianna",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Johnson, Brianna"
+          },
+          {
+            "bill": "bill_004",
+            "type": "ACCOUNT_ID",
+            "text": "3958790",
+            "redacted_as": null,
+            "line": "Guarantor #: 3958790"
+          },
+          {
+            "bill": "bill_004",
+            "type": "PHONE",
+            "text": "+1 513 555 0124",
+            "redacted_as": null,
+            "line": "Cell: +1 513 555 0124"
+          },
+          {
+            "bill": "bill_005",
+            "type": "NAME",
+            "text": "Williams, Hannah",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Williams, Hannah"
+          },
+          {
+            "bill": "bill_005",
+            "type": "ACCOUNT_ID",
+            "text": "6835172",
+            "redacted_as": null,
+            "line": "Guarantor #: 6835172"
+          },
+          {
+            "bill": "bill_005",
+            "type": "PHONE",
+            "text": "+1 917 555 0178",
+            "redacted_as": null,
+            "line": "Cell: +1 917 555 0178"
+          },
+          {
+            "bill": "bill_006",
+            "type": "NAME",
+            "text": "Petrov, Elijah F",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Petrov, Elijah F"
+          },
+          {
+            "bill": "bill_006",
+            "type": "ACCOUNT_ID",
+            "text": "8187281",
+            "redacted_as": null,
+            "line": "Guarantor #: 8187281"
+          },
+          {
+            "bill": "bill_006",
+            "type": "PHONE",
+            "text": "+1 917 555 0132",
+            "redacted_as": null,
+            "line": "Cell: +1 917 555 0132"
+          },
+          {
+            "bill": "bill_007",
+            "type": "NAME",
+            "text": "Chen, Priyanka P",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Chen, Priyanka P"
+          },
+          {
+            "bill": "bill_007",
+            "type": "ACCOUNT_ID",
+            "text": "2319443",
+            "redacted_as": null,
+            "line": "Guarantor #: 2319443"
+          },
+          {
+            "bill": "bill_007",
+            "type": "PHONE",
+            "text": "+1 513 555 0194",
+            "redacted_as": null,
+            "line": "Cell: +1 513 555 0194"
+          },
+          {
+            "bill": "bill_008",
+            "type": "NAME",
+            "text": "Johnson, Kevin",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Johnson, Kevin"
+          },
+          {
+            "bill": "bill_008",
+            "type": "ACCOUNT_ID",
+            "text": "3019355",
+            "redacted_as": null,
+            "line": "Guarantor #: 3019355"
+          },
+          {
+            "bill": "bill_008",
+            "type": "PHONE",
+            "text": "+1 360 555 0168",
+            "redacted_as": null,
+            "line": "Cell: +1 360 555 0168"
+          },
+          {
+            "bill": "bill_009",
+            "type": "NAME",
+            "text": "Haddad, Siobhan P",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Haddad, Siobhan P"
+          },
+          {
+            "bill": "bill_009",
+            "type": "ACCOUNT_ID",
+            "text": "1167202",
+            "redacted_as": null,
+            "line": "Guarantor #: 1167202"
+          },
+          {
+            "bill": "bill_009",
+            "type": "PHONE",
+            "text": "+1 917 555 0148",
+            "redacted_as": null,
+            "line": "Cell: +1 917 555 0148"
+          },
+          {
+            "bill": "bill_010",
+            "type": "NAME",
+            "text": "Hernandez, Andre",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Hernandez, Andre"
+          },
+          {
+            "bill": "bill_010",
+            "type": "ACCOUNT_ID",
+            "text": "4222682",
+            "redacted_as": null,
+            "line": "Guarantor #: 4222682"
+          },
+          {
+            "bill": "bill_010",
+            "type": "PHONE",
+            "text": "+1 212 555 0187",
+            "redacted_as": null,
+            "line": "Cell: +1 212 555 0187"
+          },
+          {
+            "bill": "bill_011",
+            "type": "NAME",
+            "text": "Kim, Marcus D",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Kim, Marcus D"
+          },
+          {
+            "bill": "bill_011",
+            "type": "ACCOUNT_ID",
+            "text": "7739921",
+            "redacted_as": null,
+            "line": "Guarantor #: 7739921"
+          },
+          {
+            "bill": "bill_011",
+            "type": "PHONE",
+            "text": "+1 212 555 0133",
+            "redacted_as": null,
+            "line": "Cell: +1 212 555 0133"
+          },
+          {
+            "bill": "bill_012",
+            "type": "NAME",
+            "text": "Bianchi, Luis P",
+            "redacted_as": null,
+            "line": "STATEMENT FOR: Bianchi, Luis P"
+          },
+          {
+            "bill": "bill_012",
+            "type": "ACCOUNT_ID",
+            "text": "7516240",
+            "redacted_as": null,
+            "line": "Guarantor #: 7516240"
+          },
+          {
+            "bill": "bill_012",
+            "type": "PHONE",
+            "text": "+1 212 555 0164",
+            "redacted_as": null,
+            "line": "Cell: +1 212 555 0164"
+          }
+        ],
+        "false_positives": [],
+        "leaks": [
+          {
+            "bill": "bill_001",
+            "type": "NAME",
+            "text": "Achterberg, Fatima",
+            "unredacted_chars": "Achterberg, Fatima"
+          },
+          {
+            "bill": "bill_001",
+            "type": "ACCOUNT_ID",
+            "text": "6905929",
+            "unredacted_chars": "6905929"
+          },
+          {
+            "bill": "bill_001",
+            "type": "PHONE",
+            "text": "+1 845 555 0101",
+            "unredacted_chars": "+1 845 555 0101"
+          },
+          {
+            "bill": "bill_002",
+            "type": "NAME",
+            "text": "Oyelaran, Yuki G",
+            "unredacted_chars": "Oyelaran, Yuki G"
+          },
+          {
+            "bill": "bill_002",
+            "type": "ACCOUNT_ID",
+            "text": "7434708",
+            "unredacted_chars": "7434708"
+          },
+          {
+            "bill": "bill_002",
+            "type": "PHONE",
+            "text": "+1 360 555 0160",
+            "unredacted_chars": "+1 360 555 0160"
+          },
+          {
+            "bill": "bill_003",
+            "type": "NAME",
+            "text": "Ivanova, Sarah",
+            "unredacted_chars": "Ivanova, Sarah"
+          },
+          {
+            "bill": "bill_003",
+            "type": "ACCOUNT_ID",
+            "text": "9007766",
+            "unredacted_chars": "9007766"
+          },
+          {
+            "bill": "bill_003",
+            "type": "PHONE",
+            "text": "+1 513 555 0151",
+            "unredacted_chars": "+1 513 555 0151"
+          },
+          {
+            "bill": "bill_004",
+            "type": "NAME",
+            "text": "Johnson, Brianna",
+            "unredacted_chars": "Johnson, Brianna"
+          },
+          {
+            "bill": "bill_004",
+            "type": "ACCOUNT_ID",
+            "text": "3958790",
+            "unredacted_chars": "3958790"
+          },
+          {
+            "bill": "bill_004",
+            "type": "PHONE",
+            "text": "+1 513 555 0124",
+            "unredacted_chars": "+1 513 555 0124"
+          },
+          {
+            "bill": "bill_005",
+            "type": "NAME",
+            "text": "Williams, Hannah",
+            "unredacted_chars": "Williams, Hannah"
+          },
+          {
+            "bill": "bill_005",
+            "type": "ACCOUNT_ID",
+            "text": "6835172",
+            "unredacted_chars": "6835172"
+          },
+          {
+            "bill": "bill_005",
+            "type": "PHONE",
+            "text": "+1 917 555 0178",
+            "unredacted_chars": "+1 917 555 0178"
+          },
+          {
+            "bill": "bill_006",
+            "type": "NAME",
+            "text": "Petrov, Elijah F",
+            "unredacted_chars": "Petrov, Elijah F"
+          },
+          {
+            "bill": "bill_006",
+            "type": "ACCOUNT_ID",
+            "text": "8187281",
+            "unredacted_chars": "8187281"
+          },
+          {
+            "bill": "bill_006",
+            "type": "PHONE",
+            "text": "+1 917 555 0132",
+            "unredacted_chars": "+1 917 555 0132"
+          },
+          {
+            "bill": "bill_007",
+            "type": "NAME",
+            "text": "Chen, Priyanka P",
+            "unredacted_chars": "Chen, Priyanka P"
+          },
+          {
+            "bill": "bill_007",
+            "type": "ACCOUNT_ID",
+            "text": "2319443",
+            "unredacted_chars": "2319443"
+          },
+          {
+            "bill": "bill_007",
+            "type": "PHONE",
+            "text": "+1 513 555 0194",
+            "unredacted_chars": "+1 513 555 0194"
+          },
+          {
+            "bill": "bill_008",
+            "type": "NAME",
+            "text": "Johnson, Kevin",
+            "unredacted_chars": "Johnson, Kevin"
+          },
+          {
+            "bill": "bill_008",
+            "type": "ACCOUNT_ID",
+            "text": "3019355",
+            "unredacted_chars": "3019355"
+          },
+          {
+            "bill": "bill_008",
+            "type": "PHONE",
+            "text": "+1 360 555 0168",
+            "unredacted_chars": "+1 360 555 0168"
+          },
+          {
+            "bill": "bill_009",
+            "type": "NAME",
+            "text": "Haddad, Siobhan P",
+            "unredacted_chars": "Haddad, Siobhan P"
+          },
+          {
+            "bill": "bill_009",
+            "type": "ACCOUNT_ID",
+            "text": "1167202",
+            "unredacted_chars": "1167202"
+          },
+          {
+            "bill": "bill_009",
+            "type": "PHONE",
+            "text": "+1 917 555 0148",
+            "unredacted_chars": "+1 917 555 0148"
+          },
+          {
+            "bill": "bill_010",
+            "type": "NAME",
+            "text": "Hernandez, Andre",
+            "unredacted_chars": "Hernandez, Andre"
+          },
+          {
+            "bill": "bill_010",
+            "type": "ACCOUNT_ID",
+            "text": "4222682",
+            "unredacted_chars": "4222682"
+          },
+          {
+            "bill": "bill_010",
+            "type": "PHONE",
+            "text": "+1 212 555 0187",
+            "unredacted_chars": "+1 212 555 0187"
+          },
+          {
+            "bill": "bill_011",
+            "type": "NAME",
+            "text": "Kim, Marcus D",
+            "unredacted_chars": "Kim, Marcus D"
+          },
+          {
+            "bill": "bill_011",
+            "type": "ACCOUNT_ID",
+            "text": "7739921",
+            "unredacted_chars": "7739921"
+          },
+          {
+            "bill": "bill_011",
+            "type": "PHONE",
+            "text": "+1 212 555 0133",
+            "unredacted_chars": "+1 212 555 0133"
+          },
+          {
+            "bill": "bill_012",
+            "type": "NAME",
+            "text": "Bianchi, Luis P",
+            "unredacted_chars": "Bianchi, Luis P"
+          },
+          {
+            "bill": "bill_012",
+            "type": "ACCOUNT_ID",
+            "text": "7516240",
+            "unredacted_chars": "7516240"
+          },
+          {
+            "bill": "bill_012",
+            "type": "PHONE",
+            "text": "+1 212 555 0164",
+            "unredacted_chars": "+1 212 555 0164"
+          }
+        ]
+      }
+    },
+    "parsing": {
+      "documents": 12,
+      "documents_fully_correct": 0,
+      "gold_lines": 60,
+      "predicted_lines": 60,
+      "matched_lines": 60,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy": {
+        "service_date": 1.0,
+        "code": 1.0,
+        "description": 0.0,
+        "billed_amount": 1.0,
+        "allowed_amount": 1.0,
+        "insurer_paid": 0.0,
+        "patient_responsibility": 0.0
+      },
+      "field_accuracy_overall": 0.5714285714285714,
+      "by_layout": {
+        "group_statement_heldout": {
+          "docs": 12,
+          "docs_fully_correct": 0,
+          "field_accuracy": 0.5714285714285714
+        }
+      },
+      "by_messy_condition": {
+        "duplicate_charge": {
+          "docs": 2,
+          "docs_fully_correct": 0
+        },
+        "modifier": {
+          "docs": 12,
+          "docs_fully_correct": 0
+        },
+        "multiline_item": {
+          "docs": 12,
+          "docs_fully_correct": 0
+        },
+        "no_cents": {
+          "docs": 6,
+          "docs_fully_correct": 0
+        },
+        "ocr_amount": {
+          "docs": 12,
+          "docs_fully_correct": 0
+        },
+        "ocr_description": {
+          "docs": 5,
+          "docs_fully_correct": 0
+        },
+        "page_break": {
+          "docs": 5,
+          "docs_fully_correct": 0
+        }
+      },
+      "duplicate_detection": {
+        "gold_pairs": 2,
+        "flagged_pairs": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": null
+      },
+      "detected_formats": {
+        "group_statement_heldout->fixed_width": 12
+      },
+      "failures": {
+        "fields": [
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "NEW PATIENT OFFICE VISIT",
+            "got": "LT NEW PATIENT OFFICE VISIT 2"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "157.23",
+            "got": null
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "17.47",
+            "got": null
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "COMPREHENSIVE METABOLIC PANEL",
+            "got": "LT COMPREHENSIVE METABOLIC PANEL 1"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "88.51",
+            "got": null
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "CHEST X-RAY, 2 VIEWS",
+            "got": "CHEST X-RAY, 2 VIEWS 1"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "228.23",
+            "got": null
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "patient_responsibility",
+            "expected": "57.06",
+            "got": null
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
+            "got": "59 ANNUAL WELLNESS VISIT, 2 SUBSEQUENT"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "77.80",
+            "got": null
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "KETOROLAC TROMETHAMINE INJECTION, PER 15 MG",
+            "got": "RT KETOROLAC TROMETHAMINE 1 INJECTION, PER 15 MG"
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "27.21",
+            "got": null
+          },
+          {
+            "bill": "bill_001",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "patient_responsibility",
+            "expected": "3.02",
+            "got": null
+          },
+          {
+            "bill": "bill_002",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "COMPREHENSIVE METABOLIC PANEL",
+            "got": "RT COMPREHENSIVE METABOLIC PANEL 2"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "85.02",
+            "got": null
+          },
+          {
+            "bill": "bill_002",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "36.44",
+            "got": null
+          },
+          {
+            "bill": "bill_002",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "CHEST X-RAY, 2 VIEWS",
+            "got": "LT CHEST X-RAY, 2 VIEWS 1"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "125.70",
+            "got": null
+          },
+          {
+            "bill": "bill_002",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_002",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "KETOROLAC TROMETHAMINE INJECTION, PER 15 MG",
+            "got": "LT KETOROLAC TROMETHAMINE 1 INJECTION, PER 15 MG"
+          },
+          {
+            "bill": "bill_002",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "33.18",
+            "got": null
+          },
+          {
+            "bill": "bill_002",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "patient_responsibility",
+            "expected": "8.30",
+            "got": null
+          },
+          {
+            "bill": "bill_003",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "OFFICE VISIT, ESTABLISHED PATIENT, LOW COMPLEXITY",
+            "got": "RT OFFICE VISIT, ESTABLISHED 1 PATIENT, LOW COMPLEXITY"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "101.99",
+            "got": null
+          },
+          {
+            "bill": "bill_003",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_003",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "NEW PATIENT OFFICE VISIT",
+            "got": "NEW PATIENT OFFICE VISIT 1"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "153.51",
+            "got": null
+          },
+          {
+            "bill": "bill_003",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_003",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "CT ABDOMEN AND PELVIS WITH CONTRAST",
+            "got": "LT CT ABDOMEN AND PELVIS WITH 1 CONTRAST"
+          },
+          {
+            "bill": "bill_003",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "2470.34",
+            "got": null
+          },
+          {
+            "bill": "bill_003",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "patient_responsibility",
+            "expected": "274.48",
+            "got": null
+          },
+          {
+            "bill": "bill_004",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "OFFICE VISIT, ESTABLISHED PATIENT, LOW COMPLEXITY",
+            "got": "RT OFFICE VISIT, ESTABLISHED 1 PATIENT, LOW COMPLEXITY"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "86.56",
+            "got": null
+          },
+          {
+            "bill": "bill_004",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "37.10",
+            "got": null
+          },
+          {
+            "bill": "bill_004",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+            "got": "59 EMERGENCY DEPARTMENT VISIT, HIGH 1 SEVERITY"
+          },
+          {
+            "bill": "bill_004",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "1311.11",
+            "got": null
+          },
+          {
+            "bill": "bill_004",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "145.68",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "SURGICAL SUPPLY, MISCELLANEOUS",
+            "got": "25 SURGICAL SUPPLY, MISCELLANEOUS 2"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "28.65",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "7.16",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "NEW PALIENT OFFICE VISIT",
+            "got": "25 NEW PALIENT OFFICE VISIT 2"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "69.51",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "CT HEAD OR BRAIN WITHOUT CONTRAST",
+            "got": "25 CT HEAD OR BRAIN WITHOUT 1 CONTRAST"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "720.05",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "patient_responsibility",
+            "expected": "180.01",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+            "got": "25 EMERGENCY DEPARTMENT VISIT, HIGH 1 SEVERITY"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "704.81",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "patient_responsibility",
+            "expected": "78.31",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+            "got": "LT ELECTROCARDIOGRAM, ROUTINE, WITH 1 INTERPRETATION AND REPORT"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "115.04",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "patient_responsibility",
+            "expected": "49.30",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
+            "got": "59 ANNUAL WELLNESS VISIT, 2 SUBSEQUENT"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "insurer_paid",
+            "expected": "140.81",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "patient_responsibility",
+            "expected": "15.65",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 7,
+            "field": "description",
+            "expected": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRCTATION AND REPORT",
+            "got": "ELECTROCARDIOGRAM, ROUTINE, WITH 1 INTERPRCTATION AND REPORT"
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 7,
+            "field": "insurer_paid",
+            "expected": "62.97",
+            "got": null
+          },
+          {
+            "bill": "bill_005",
+            "layout": "group_statement_heldout",
+            "line": 7,
+            "field": "patient_responsibility",
+            "expected": "7.00",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "RAPID STREP TEST",
+            "got": "25 RAPID STREP TEST 2"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "18.07",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "4.52",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+            "got": "59 EMERGENCY DEPARTMENT VISIT, HIGH 1 SEVERITY"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "1346.63",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "336.66",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "URINALYSIS, AUTOMATED, WITH MICROSCOPY",
+            "got": "RT URINALYSIS, AUTOMATED, WITH 1 MICROSCOPY"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "43.86",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "patient_responsibility",
+            "expected": "4.87",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "C0MPREHENSIVE METABOLIC PANEL",
+            "got": "25 C0MPREHENSIVE METABOLIC PANEL 1"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "49.47",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "patient_responsibility",
+            "expected": "12.37",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "OFFICE VISIT, ESTABLISHED PATIENT, LOW C0MPLEXITY",
+            "got": "LT OFFICE VISIT, ESTABLISHED 1 PATIENT, LOW C0MPLEXITY"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "44.27",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "patient_responsibility",
+            "expected": "11.07",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "SURGICAL SUPPLY, MISCELLANEOUS",
+            "got": "RT SURGICAL SUPPLY, MISCELLANEOUS 1"
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_006",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "patient_responsibility",
+            "expected": "47.17",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "INFLUENZA VACCINE, QUADRIVALENT, PRESERVATIVE FREE",
+            "got": "INFLUENZA VACCINE, QUADRIVALENT, 1 PRESERVATIVE FREE"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "19.15",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "8.20",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "ANNUAL WELLNESS VLSIT, SUBSEQUENT",
+            "got": "59 ANNUAL WELLNESS VLSIT, 1 SUBSEQUENT"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "132.87",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "56.94",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+            "got": "LT ELECTROCARDIOGRAM, ROUTINE, WITH 1 INTERPRETATION AND REPORT"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "152.60",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "patient_responsibility",
+            "expected": "38.15",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "INFLUENZA VACCINE, QUADRIVALENT, PRESERVATIVE FREE",
+            "got": "59 INFLUENZA VACCINE, QUADRIVALENT, 1 PRESERVATIVE FREE"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "55.44",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "NEW PALIENT OFFICE VISIT",
+            "got": "NEW PALIENT OFFICE VISIT 1"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "41.15",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "patient_responsibility",
+            "expected": "17.63",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "IV PUSH, SINGLE OR INITIAL SUBSTANCE",
+            "got": "25 IV PUSH, SINGLE OR INITIAL 1 SUBSTANCE"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "insurer_paid",
+            "expected": "73.71",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "patient_responsibility",
+            "expected": "18.43",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 7,
+            "field": "description",
+            "expected": "SURGICAL SUPPLY, MISCELLANEOUS",
+            "got": "25 SURGICAL SUPPLY, MISCELLANEOUS 1"
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 7,
+            "field": "insurer_paid",
+            "expected": "102.32",
+            "got": null
+          },
+          {
+            "bill": "bill_007",
+            "layout": "group_statement_heldout",
+            "line": 7,
+            "field": "patient_responsibility",
+            "expected": "11.37",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "ONDANSETRON HYDROCHLORIDE INJECTION, PER 1 MG",
+            "got": "ONDANSETRON HYDROCHLORIDE 1 INJECTION, PER 1 MG"
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "22.37",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "2.48",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "COMPREHENSIVE METABOLIC PANEL",
+            "got": "COMPREHENSIVE METABOLIC PANEL 2"
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "171.67",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "OFFICE VLSIT, ESTABLISHED PATIENT, LOW COMPLEXITY",
+            "got": "OFFICE VLSIT, ESTABLISHED 1 PATIENT, LOW COMPLEXITY"
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "patient_responsibility",
+            "expected": "131.63",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "COMPLETE BLOOD COUNT WITH AUTOMATED DIFFERENTIAL",
+            "got": "RT COMPLETE BLOOD COUNT WITH 1 AUTOMATED DIFFERENTIAL"
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "28.34",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "patient_responsibility",
+            "expected": "12.15",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "ROUTINE VENIPUNCTURE",
+            "got": "RT ROUTINE VENIPUNCTURE 1"
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "6.23",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "patient_responsibility",
+            "expected": "0.69",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "IMMUNIZATION ADMINISTRALION, SINGLE VACCINE",
+            "got": "IMMUNIZATION ADMINISTRALION, 2 SINGLE VACCINE"
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "insurer_paid",
+            "expected": "23.94",
+            "got": null
+          },
+          {
+            "bill": "bill_008",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "patient_responsibility",
+            "expected": "5.98",
+            "got": null
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "CT HEAD OR BRAIN WITHOUT CONTRAST",
+            "got": "LT CT HEAD OR BRAIN WITHOUT 1 CONTRAST"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "1062.73",
+            "got": null
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "ROUTINE VENIPUNCLURE",
+            "got": "25 ROUTINE VENIPUNCLURE 1"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "22.20",
+            "got": null
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "9.52",
+            "got": null
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "ROUTINE VENIPUNCTURE",
+            "got": "LT ROUTINE VENIPUNCTURE 1"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "22.20",
+            "got": null
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "patient_responsibility",
+            "expected": "9.52",
+            "got": null
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "SURGICAL SUPPLY, MISCELLANEOUS",
+            "got": "SURGICAL SUPPLY, MISCELLANEOUS 1"
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "26.78",
+            "got": null
+          },
+          {
+            "bill": "bill_009",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "patient_responsibility",
+            "expected": "11.48",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "URINALYSIS, AUTOMATED, WITH MICROSCOPY",
+            "got": "RT URINALYSIS, AUTOMATED, WITH 1 MICROSCOPY"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "21.68",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "5.42",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "ONDANSETRON HYDROCHLORIDE INJECTION, PER 1 MG",
+            "got": "ONDANSETRON HYDROCHLORIDE 1 INJECTION, PER 1 MG"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "34.76",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "OFFICE VISIT, ESTABLISHED PATIENT, LOW COMPLEXITY",
+            "got": "RT OFFICE VISIT, ESTABLISHED 2 PATIENT, LOW COMPLEXITY"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "patient_responsibility",
+            "expected": "122.72",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+            "got": "LT ELECTROCARDIOGRAM, ROUTINE, WITH 1 INTERPRETATION AND REPORT"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "88.89",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+            "got": "ELECTROCARDIOGRAM, ROUTINE, WITH 1 INTERPRETATION AND REPORT"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "88.89",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "URINALYSIS, AUTOMATED, WITH MICROSCOPY",
+            "got": "RT URINALYSIS, AUTOMATED, WITH 1 MICROSCOPY"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "insurer_paid",
+            "expected": "47.37",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 7,
+            "field": "description",
+            "expected": "OFFICE VISIT, ESTABLISHED PATIENT, LOW COMPLEXITY",
+            "got": "25 OFFICE VISIT, ESTABLISHED 1 PATIENT, LOW COMPLEXITY"
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 7,
+            "field": "insurer_paid",
+            "expected": "59.79",
+            "got": null
+          },
+          {
+            "bill": "bill_010",
+            "layout": "group_statement_heldout",
+            "line": 7,
+            "field": "patient_responsibility",
+            "expected": "25.63",
+            "got": null
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "CT ABDOMEN AND PELVIS WITH CONTRAST",
+            "got": "25 CT ABDOMEN AND PELVIS WITH 1 CONTRAST"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "1083.97",
+            "got": null
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "270.99",
+            "got": null
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "URINALYSIS, AUTOMATED, WITH MICROSCOPY",
+            "got": "URINALYSIS, AUTOMATED, WITH 1 MICROSCOPY"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "37.16",
+            "got": null
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "CT HEAD OR BRAIN WITHOUT CONTRAST",
+            "got": "CT HEAD OR BRAIN WITHOUT 1 CONTRAST"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "666.52",
+            "got": null
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "patient_responsibility",
+            "expected": "166.63",
+            "got": null
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "ANNUAL WELLNESS VISIT, SUBSEQUENT",
+            "got": "59 ANNUAL WELLNESS VISIT, 1 SUBSEQUENT"
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_011",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "patient_responsibility",
+            "expected": "121.98",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "description",
+            "expected": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+            "got": "25 EMERGENCY DEPARTMENT VISIT, HIGH 1 SEVERITY"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "insurer_paid",
+            "expected": "718.02",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 1,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "description",
+            "expected": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+            "got": "ELECTROCARDIOGRAM, ROUTINE, WITH 1 INTERPRETATION AND REPORT"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "insurer_paid",
+            "expected": "139.46",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 2,
+            "field": "patient_responsibility",
+            "expected": "34.86",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "description",
+            "expected": "CHEST X-RAY, 2 VIEWS",
+            "got": "LT CHEST X-RAY, 2 VIEWS 2"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "insurer_paid",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 3,
+            "field": "patient_responsibility",
+            "expected": "165.71",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "description",
+            "expected": "EMERGENCY DEPARTMENT VISIT, HIGH SEVERITY",
+            "got": "EMERGENCY DEPARTMENT VISIT, HIGH 1 SEVERITY"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "insurer_paid",
+            "expected": "1010.90",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 4,
+            "field": "patient_responsibility",
+            "expected": "252.73",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "description",
+            "expected": "SURGICAL SUPPLY, MISCELLANEOUS",
+            "got": "SURGICAL SUPPLY, MISCELLANEOUS 1"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "insurer_paid",
+            "expected": "45.95",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 5,
+            "field": "patient_responsibility",
+            "expected": "0.00",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "description",
+            "expected": "ELECTROCARDIOGRAM, ROUTINE, WITH INTERPRETATION AND REPORT",
+            "got": "ELECTROCARDIOGRAM, ROUTINE, WITH 2 INTERPRETATION AND REPORT"
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "insurer_paid",
+            "expected": "75.97",
+            "got": null
+          },
+          {
+            "bill": "bill_012",
+            "layout": "group_statement_heldout",
+            "line": 6,
+            "field": "patient_responsibility",
+            "expected": "32.56",
+            "got": null
+          }
+        ],
+        "lines": []
+      }
+    },
+    "parsing_on_redacted_text": {
+      "documents_fully_correct": 0,
+      "line_recall": 1.0,
+      "line_precision": 1.0,
+      "field_accuracy_overall": 0.5714285714285714
+    }
+  }
+}

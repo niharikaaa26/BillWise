@@ -1,0 +1,167 @@
+
+##### DATASET: main (C:\Users\nihar\Downloads\BillWise\data\synthetic) #####
+BillWise phase-1 evaluation  (48 SYNTHETIC documents: {'hospital_fixed': 12, 'eob_pipe': 12, 'claim_blocks': 12, 'clinic_csv': 12})
+========================================================================================
+PII REDACTION (overlap match, same type)
+  type         gold  pred  neutral    recall  precision  leak-free  any-type rec
+  NAME          108   111        3   100.00%    100.00%     98.15%       100.00%
+  ADDRESS        84   132       48   100.00%    100.00%    100.00%       100.00%
+  PHONE          28    64       36   100.00%    100.00%    100.00%       100.00%
+  EMAIL          16    28       12   100.00%    100.00%    100.00%       100.00%
+  DOB            48    45        0    93.75%    100.00%     93.75%        93.75%
+  SSN            12    12        0   100.00%    100.00%    100.00%       100.00%
+  MEMBER_ID      36    35        0    97.22%    100.00%     97.22%        97.22%
+  ACCOUNT_ID     48    47        0    97.92%    100.00%     97.92%        97.92%
+  ALL           380   474       99    98.68%    100.00%     98.16%        98.68%
+  exact-span match: recall  98.16%  precision  99.47%
+
+LINE-ITEM PARSING
+  lines: gold 225, predicted 225, matched 225  -> recall 100.00%, precision 100.00%
+  documents fully correct: 48/48
+  field accuracy (correct / gold lines):
+    service_date            100.00%
+    code                    100.00%
+    description             100.00%
+    billed_amount           100.00%
+    allowed_amount          100.00%
+    insurer_paid            100.00%
+    patient_responsibility  100.00%
+    ALL FIELDS              100.00%
+  by layout:
+    claim_blocks     docs fully correct 12/12  field acc 100.00%
+    clinic_csv       docs fully correct 12/12  field acc 100.00%
+    eob_pipe         docs fully correct 12/12  field acc 100.00%
+    hospital_fixed   docs fully correct 12/12  field acc 100.00%
+  by messy condition (docs fully correct / docs with condition):
+    blank_repeated_date     3/3
+    duplicate_charge        8/8
+    missing_code            3/3
+    missing_contact         5/5
+    missing_email           4/4
+    missing_field          11/11
+    missing_phone           1/1
+    multiline_item         31/31
+    ocr_amount             37/37
+    ocr_description        17/17
+    ocr_label               7/7
+    ssn_present            12/12
+    unlabeled_name         12/12
+  duplicate-charge flags: gold pairs 8, flagged 8, correct 8  (recall 100.00%, precision 100.00%)
+  parsing AFTER redaction: line recall 100.00%, field acc 100.00%, docs fully correct 48/48
+
+FAILURES
+  PII missed (no same-type overlap): 5
+    - bill_001 ACCOUNT_ID '33036758'                         redacted_as=None  | Acc0unt Number: 33036758
+    - bill_002 MEMBER_ID  'CPH-5900-9199'                    redacted_as=None  | Patient: Grace Abernathy     Memher ID: CPH-5900-9199
+    - bill_021 DOB        '9/19/46'                          redacted_as=None  | Date of Birlh: 9/19/46
+    - bill_025 DOB        '12/18/1959'                       redacted_as=None  | Date of Birlh: 12/18/1959
+    - bill_041 DOB        '09/09/1994'                       redacted_as=None  | Date of Birlh: 09/09/1994
+  PII leaked characters (any type): 7
+    - bill_001 ACCOUNT_ID '33036758'                         leaked='33036758'
+    - bill_002 MEMBER_ID  'CPH-5900-9199'                    leaked='CPH-5900-9199'
+    - bill_021 DOB        '9/19/46'                          leaked='9/19/46'
+    - bill_025 DOB        '12/18/1959'                       leaked='12/18/1959'
+    - bill_040 NAME       'SIOBHAN KOWALSKI'                 leaked='KOWALSKI'
+    - bill_041 DOB        '09/09/1994'                       leaked='09/09/1994'
+    - bill_042 NAME       'Xiomara Hernandez'                leaked='Xiomara'
+  PII false positives: 0
+  parse field errors: 0
+  parse line errors: 0
+
+##### DATASET: heldout (C:\Users\nihar\Downloads\BillWise\data\heldout) #####
+BillWise phase-1 evaluation  (12 SYNTHETIC documents: {'group_statement_heldout': 12})
+========================================================================================
+PII REDACTION (overlap match, same type)
+  type         gold  pred  neutral    recall  precision  leak-free  any-type rec
+  NAME           12     8        8     0.00%       n/a       0.00%         0.00%
+  ADDRESS        12    24       12   100.00%    100.00%    100.00%       100.00%
+  PHONE          12    24       24     0.00%       n/a       0.00%         0.00%
+  EMAIL           7     7        0   100.00%    100.00%    100.00%       100.00%
+  DOB            12    12        0   100.00%    100.00%    100.00%       100.00%
+  SSN             0     0        0      n/a        n/a        n/a           n/a 
+  MEMBER_ID      12    12        0   100.00%    100.00%    100.00%       100.00%
+  ACCOUNT_ID     12     0        0     0.00%       n/a       0.00%         0.00%
+  ALL            79    87       44    54.43%    100.00%     54.43%        54.43%
+  exact-span match: recall  54.43%  precision 100.00%
+
+LINE-ITEM PARSING
+  lines: gold 60, predicted 60, matched 60  -> recall 100.00%, precision 100.00%
+  documents fully correct: 0/12
+  field accuracy (correct / gold lines):
+    service_date            100.00%
+    code                    100.00%
+    description               0.00%
+    billed_amount           100.00%
+    allowed_amount          100.00%
+    insurer_paid              0.00%
+    patient_responsibility    0.00%
+    ALL FIELDS               57.14%
+  by layout:
+    group_statement_heldout docs fully correct  0/12  field acc  57.14%
+  by messy condition (docs fully correct / docs with condition):
+    duplicate_charge        0/2
+    modifier                0/12
+    multiline_item          0/12
+    no_cents                0/6
+    ocr_amount              0/12
+    ocr_description         0/5
+    page_break              0/5
+  duplicate-charge flags: gold pairs 2, flagged 0, correct 0  (recall   0.00%, precision   n/a )
+  parsing AFTER redaction: line recall 100.00%, field acc  57.14%, docs fully correct 0/12
+
+FAILURES
+  PII missed (no same-type overlap): 36
+    - bill_001 NAME       'Achterberg, Fatima'               redacted_as=None  | STATEMENT FOR: Achterberg, Fatima
+    - bill_001 ACCOUNT_ID '6905929'                          redacted_as=None  | Guarantor #: 6905929
+    - bill_001 PHONE      '+1 845 555 0101'                  redacted_as=None  | Cell: +1 845 555 0101
+    - bill_002 NAME       'Oyelaran, Yuki G'                 redacted_as=None  | STATEMENT FOR: Oyelaran, Yuki G
+    - bill_002 ACCOUNT_ID '7434708'                          redacted_as=None  | Guarantor #: 7434708
+    - bill_002 PHONE      '+1 360 555 0160'                  redacted_as=None  | Cell: +1 360 555 0160
+    - bill_003 NAME       'Ivanova, Sarah'                   redacted_as=None  | STATEMENT FOR: Ivanova, Sarah
+    - bill_003 ACCOUNT_ID '9007766'                          redacted_as=None  | Guarantor #: 9007766
+    - bill_003 PHONE      '+1 513 555 0151'                  redacted_as=None  | Cell: +1 513 555 0151
+    - bill_004 NAME       'Johnson, Brianna'                 redacted_as=None  | STATEMENT FOR: Johnson, Brianna
+    - bill_004 ACCOUNT_ID '3958790'                          redacted_as=None  | Guarantor #: 3958790
+    - bill_004 PHONE      '+1 513 555 0124'                  redacted_as=None  | Cell: +1 513 555 0124
+    - bill_005 NAME       'Williams, Hannah'                 redacted_as=None  | STATEMENT FOR: Williams, Hannah
+    - bill_005 ACCOUNT_ID '6835172'                          redacted_as=None  | Guarantor #: 6835172
+    - bill_005 PHONE      '+1 917 555 0178'                  redacted_as=None  | Cell: +1 917 555 0178
+    ... 21 more in results.json
+  PII leaked characters (any type): 36
+    - bill_001 NAME       'Achterberg, Fatima'               leaked='Achterberg, Fatima'
+    - bill_001 ACCOUNT_ID '6905929'                          leaked='6905929'
+    - bill_001 PHONE      '+1 845 555 0101'                  leaked='+1 845 555 0101'
+    - bill_002 NAME       'Oyelaran, Yuki G'                 leaked='Oyelaran, Yuki G'
+    - bill_002 ACCOUNT_ID '7434708'                          leaked='7434708'
+    - bill_002 PHONE      '+1 360 555 0160'                  leaked='+1 360 555 0160'
+    - bill_003 NAME       'Ivanova, Sarah'                   leaked='Ivanova, Sarah'
+    - bill_003 ACCOUNT_ID '9007766'                          leaked='9007766'
+    - bill_003 PHONE      '+1 513 555 0151'                  leaked='+1 513 555 0151'
+    - bill_004 NAME       'Johnson, Brianna'                 leaked='Johnson, Brianna'
+    - bill_004 ACCOUNT_ID '3958790'                          leaked='3958790'
+    - bill_004 PHONE      '+1 513 555 0124'                  leaked='+1 513 555 0124'
+    - bill_005 NAME       'Williams, Hannah'                 leaked='Williams, Hannah'
+    - bill_005 ACCOUNT_ID '6835172'                          leaked='6835172'
+    - bill_005 PHONE      '+1 917 555 0178'                  leaked='+1 917 555 0178'
+    ... 21 more in results.json
+  PII false positives: 0
+  parse field errors: 180
+    - bill_001 (group_statement_heldout) line 1 description: expected 'NEW PATIENT OFFICE VISIT' got 'LT NEW PATIENT OFFICE VISIT 2'
+    - bill_001 (group_statement_heldout) line 1 insurer_paid: expected '157.23' got None
+    - bill_001 (group_statement_heldout) line 1 patient_responsibility: expected '17.47' got None
+    - bill_001 (group_statement_heldout) line 2 description: expected 'COMPREHENSIVE METABOLIC PANEL' got 'LT COMPREHENSIVE METABOLIC PANEL 1'
+    - bill_001 (group_statement_heldout) line 2 insurer_paid: expected '0.00' got None
+    - bill_001 (group_statement_heldout) line 2 patient_responsibility: expected '88.51' got None
+    - bill_001 (group_statement_heldout) line 3 description: expected 'CHEST X-RAY, 2 VIEWS' got 'CHEST X-RAY, 2 VIEWS 1'
+    - bill_001 (group_statement_heldout) line 3 insurer_paid: expected '228.23' got None
+    - bill_001 (group_statement_heldout) line 3 patient_responsibility: expected '57.06' got None
+    - bill_001 (group_statement_heldout) line 4 description: expected 'ANNUAL WELLNESS VISIT, SUBSEQUENT' got '59 ANNUAL WELLNESS VISIT, 2 SUBSEQUENT'
+    - bill_001 (group_statement_heldout) line 4 insurer_paid: expected '77.80' got None
+    - bill_001 (group_statement_heldout) line 4 patient_responsibility: expected '0.00' got None
+    - bill_001 (group_statement_heldout) line 5 description: expected 'KETOROLAC TROMETHAMINE INJECTION, PER 15 MG' got 'RT KETOROLAC TROMETHAMINE 1 INJECTION, PER 15 MG'
+    - bill_001 (group_statement_heldout) line 5 insurer_paid: expected '27.21' got None
+    - bill_001 (group_statement_heldout) line 5 patient_responsibility: expected '3.02' got None
+    ... 165 more in results.json
+  parse line errors: 0
+
+results written to C:\Users\nihar\Downloads\BillWise\eval\results.json

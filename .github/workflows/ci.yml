@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - name: Unit + end-to-end tests
+        run: pytest -q
+      - name: Full evaluation
+        run: python -m eval.run_eval --max-failures 20
+      - uses: actions/upload-artifact@v4
+        if: matrix.python-version == '3.12'
+        with:
+          name: eval-results
+          path: eval/results.json
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t billwise:ci .
+      - name: Smoke test container
+        run: |
+          docker run -d --name bw -p 8000:8000 billwise:ci
+          for i in $(seq 1 20); do curl -sf localhost:8000/health && break; sleep 1; done
+          curl -sf -X POST localhost:8000/redact -H 'content-type: application/json' \
+            -d '{"text":"Patient Name: DOE, JANE\nMember ID: W123456789"}' | tee /dev/stderr | grep -q '\[NAME_1\]'
+          docker rm -f bw
