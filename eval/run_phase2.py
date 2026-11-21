@@ -85,7 +85,9 @@ def eval_dataset(docs: list[dict], explainer, collect: bool = True) -> dict:
                         "code_snippet_found", "search_n", "search_h1", "search_h3", "dollar_figures",
                         "unsupported", "bad_citations", "docs_clean_grounding", "billed_total_ok",
                         "resp_total_ok", "resp_total_n")}
-    fails = {"privacy": [], "code_search": [], "grounding": [], "totals": []}
+    c.update(errors=0, generated=0, lines_explained=0, lines_total=0)
+    fails = {"privacy": [], "code_search": [], "grounding": [], "totals": [], "errors": []}
+    answers: list[dict] = []
     for d in docs:
         pii = d["truth"]["pii"]
         gold = d["truth"]["line_items"]
@@ -122,8 +124,20 @@ def eval_dataset(docs: list[dict], explainer, collect: bool = True) -> dict:
                 fails["code_search"].append({"bill": d["id"], "description": g["description"],
                                              "expected": snip.id, "got": hits})
 
-        ex = explainer.generate(req)
+        try:
+            ex = explainer.generate(req)
+        except Exception as exc:  # live runs: a refusal, timeout or API error must not stop the eval
+            c["errors"] += 1
+            if collect:
+                fails["errors"].append({"bill": d["id"], "error": f"{type(exc).__name__}: {exc}"[:300]})
+            continue
         warnings, unsupported = check_grounding(ex, req)
+        c["generated"] += 1
+        c["lines_explained"] += len({l.line for l in ex.line_explanations} & {l.line for l in req.lines})
+        c["lines_total"] += len(req.lines)
+        if explainer.name != "mock":
+            answers.append({"bill": d["id"], "question_sent": req.question,
+                            "explanation": ex.model_dump(), "warnings": warnings})
         c["dollar_figures"] += sum(len(_DOLLAR.findall(t)) for t in explanation_texts(ex))
         c["unsupported"] += len(unsupported)
         bad = [x for x in ex.cited_snippets if x not in provided]
@@ -162,7 +176,9 @@ def eval_dataset(docs: list[dict], explainer, collect: bool = True) -> dict:
                     "snippet_in_request": _ratio(c["code_snippet_found"], c["gold_codes_in_kb"])},
         "code_search": {"lines": c["search_n"], "hit_at_1": _ratio(c["search_h1"], c["search_n"]),
                         "hit_at_3": _ratio(c["search_h3"], c["search_n"])},
-        "grounding": {"model": explainer.name, "dollar_figures": c["dollar_figures"],
+        "grounding": {"model": explainer.name, "generated": c["generated"], "errors": c["errors"],
+                      "lines_explained_rate": _ratio(c["lines_explained"], c["lines_total"]),
+                      "dollar_figures": c["dollar_figures"],
                       "unsupported_figures": c["unsupported"], "bad_citations": c["bad_citations"],
                       "docs_fully_grounded": c["docs_clean_grounding"],
                       "docs_fully_grounded_rate": _ratio(c["docs_clean_grounding"], n)},
@@ -172,6 +188,8 @@ def eval_dataset(docs: list[dict], explainer, collect: bool = True) -> dict:
     }
     if collect:
         out["failures"] = fails
+    if answers:
+        out["answers"] = answers
     return out
 
 
@@ -186,8 +204,10 @@ def print_dataset(name: str, r: dict, max_fail: int) -> None:
           f" of {r['code_kb']['gold_codes_in_kb']} gold codes")
     print(f"  description-only code search: hit@1 {_pct(r['code_search']['hit_at_1'])},"
           f" hit@3 {_pct(r['code_search']['hit_at_3'])} ({r['code_search']['lines']} lines)")
-    print(f"  grounding ({g['model']}): {g['dollar_figures']} dollar figures, {g['unsupported_figures']} unsupported,"
-          f" {g['bad_citations']} bad citations; docs fully grounded {g['docs_fully_grounded']}/{r['documents']}")
+    print(f"  grounding ({g['model']}): generated {g['generated']}/{r['documents']} (errors {g['errors']});"
+          f" {g['dollar_figures']} dollar figures, {g['unsupported_figures']} unsupported,"
+          f" {g['bad_citations']} bad citations; docs fully grounded {g['docs_fully_grounded']}/{r['documents']};"
+          f" lines explained {_pct(g['lines_explained_rate'])}")
     print(f"  totals: billed correct {_pct(t['billed_total_correct'])};"
           f" patient responsibility correct {_pct(t['patient_resp_total_correct'])}"
           f" (of {t['patient_resp_docs_with_full_gold']} docs where every gold line has it)")
@@ -216,19 +236,34 @@ def main() -> None:
     for row in q["failures"]:
         print(f"    - not top-1: {row['question']!r} expected {row['expected']} got {row['got']}")
     mock = MockExplainer()
+    live = None
+    if args.live:
+        from billwise.explain import ClaudeExplainer
+        live = ClaudeExplainer()
     results["datasets"] = {}
+    live_answers: dict = {}
     for name, path in DEFAULT_SETS.items():
         if not path.exists():
             continue
         docs = load_docs(path)
         r = eval_dataset(docs, mock)
-        if args.live:
-            from billwise.explain import ClaudeExplainer
-            r["live"] = eval_dataset(docs[: args.live], ClaudeExplainer(), collect=True)
+        if live:
+            r["live"] = eval_dataset(docs[: args.live], live, collect=True)
+            live_answers[name] = r["live"].pop("answers", [])
         results["datasets"][name] = r
         print_dataset(name, r, args.max_failures)
         if "live" in r:
             print_dataset(f"{name} (LIVE Claude, first {args.live})", r["live"], args.max_failures)
+    if live:
+        u = live.usage
+        # list price for claude-opus-5-5: $4 / 1M input tokens, $20 / 1M output tokens
+        cost = (u["input_tokens"] * 4 + u["output_tokens"] * 20) / 1_000_000
+        results["live_usage"] = {**u, "estimated_cost_usd_at_list_price": round(cost, 4), "model": live.model}
+        print(f"\nLIVE usage: {u['requests']} requests, {u['input_tokens']} input + {u['output_tokens']} output tokens"
+              f" -> about ${cost:.2f} at list price")
+        answers_path = args.out.with_name("phase2_live_answers.json")
+        answers_path.write_text(json.dumps(live_answers, indent=2, default=str) + "\n", encoding="utf-8")
+        print(f"live answers written to {answers_path}")
     args.out.write_text(json.dumps(results, indent=2, default=str) + "\n", encoding="utf-8")
     print(f"\nresults written to {args.out}")
 

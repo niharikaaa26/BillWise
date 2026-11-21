@@ -331,6 +331,7 @@ class ClaudeExplainer:
         self.client = client or anthropic.Anthropic()
         self.model = model
         self.name = model
+        self.usage = {"requests": 0, "input_tokens": 0, "output_tokens": 0}
 
     def generate(self, req: ExplainRequest) -> Explanation:
         response = self.client.beta.messages.create(
@@ -343,6 +344,10 @@ class ClaudeExplainer:
             system=SYSTEM_PROMPT.format(reading_level=req.reading_level),
             messages=[{"role": "user", "content": req.model_dump_json(indent=1)}],
         )
+        usage = getattr(response, "usage", None)
+        self.usage["requests"] += 1
+        self.usage["input_tokens"] += getattr(usage, "input_tokens", 0) or 0
+        self.usage["output_tokens"] += getattr(usage, "output_tokens", 0) or 0
         if response.stop_reason == "refusal":
             raise RuntimeError("the model declined to answer this request")
         if response.stop_reason == "max_tokens":
