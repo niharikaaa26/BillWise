@@ -61,28 +61,64 @@ NON_NAME_WORDS = {
     "the", "and", "for", "your", "our", "total", "balance", "questions", "phone", "email",
     "address", "provider", "mail", "to", "born", "ssn", "contact", "reference", "visit",
     "office", "emergency", "department", "processed", "primary", "billing", "please",
+    "responsibility", "benefits", "care", "copay", "deductible", "of", "on", "file",
 }
 
 # ---------------------------------------------------------------------------
 # Patterns
 # ---------------------------------------------------------------------------
 _TOK = r"[A-Z][A-Za-z'\-]+"
+
+# Characters OCR commonly confuses inside words (b<->h, i/l/1, t->l, o->0, e<->c, m->rn).
+_OCR_CONFUSIONS = {"i": "l1|!", "l": "i1|", "t": "l", "o": "0", "b": "h", "h": "b", "e": "c", "c": "e", "s": "5"}
+
+
+def _label(*phrases: str) -> str:
+    """Case-insensitive, OCR-tolerant regex alternation for field labels."""
+    alts = []
+    for phrase in phrases:
+        out = []
+        for ch in phrase:
+            lo = ch.lower()
+            if lo == "m":
+                out.append("(?:[mM]|rn)")
+            elif ch.isalpha():
+                chars = {lo, lo.upper()} | set(_OCR_CONFUSIONS.get(lo, ""))
+                out.append("[" + "".join(re.escape(c) for c in sorted(chars)) + "]")
+            elif ch == " ":
+                out.append(r"[ \t]+")
+            elif ch == ".":
+                out.append(r"\.?")
+            elif ch == "'":
+                out.append("'?")
+            else:
+                out.append(re.escape(ch))
+        alts.append("".join(out))
+    return "(?:" + "|".join(sorted(alts, key=len, reverse=True)) + ")"
+
+
+# separator between a label and its value: "Label:", "Label #", "Label ....... value"
+_SEP = r"[ \t]*(?:\.{2,}[ \t]*)?[:#,]?[ \t]*"
 # "First [M.] Last [Last2]" | "LAST, FIRST [M]" | single token (used after "Dear")
 NAME_VALUE = (
     rf"(?:{_TOK}, {_TOK}(?: [A-Z]\.?)?"
-    rf"|{_TOK}(?: [A-Z]\.)?(?: {_TOK}){{1,2}}"
+    rf"|{_TOK}(?: [A-Z]\.)?(?: {_TOK}){{1,2}}(?: [A-Z]\.?(?![A-Za-z]))?"
     rf"|{_TOK})"
 )
+# Name labels must be followed by ":" / "#" / dot leaders (so "...PATIENT, LOW COMPLEXITY"
+# in a description is not a label); "Dear" is the one label used without punctuation.
+_FIELD_SEP = r"[ \t]*(?:\.{2,}[ \t]*[:#]?|[:#])[ \t]*"
 NAME_LABEL = re.compile(
-    r"\b(?:Patient(?: Name)?|Member(?: Name)?|Subscriber(?: Name)?|Insured(?: Name)?|"
-    r"Guarantor(?: Name)?|Responsible Party|Prepared for|Dear|Name)"
-    rf"[ \t]*[:,]?[ \t]*(?P<v>{NAME_VALUE})"
+    r"\b(?:" + _label("Patient Name", "Patient", "Member Name", "Member", "Subscriber Name", "Subscriber",
+                      "Insured Name", "Insured", "Guarantor Name", "Guarantor", "Responsible Party",
+                      "Account Holder", "Prepared for", "Statement for", "Name")
+    + _FIELD_SEP + "|" + _label("Dear") + r"[ \t]+)" + rf"(?P<v>{NAME_VALUE})"
 )
 
 _MONTH = r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?"
 DATE_VALUE = rf"(?:\d{{1,2}}/\d{{1,2}}/\d{{2,4}}|\d{{4}}-\d{{2}}-\d{{2}}|{_MONTH} \d{{1,2}},? \d{{4}})"
 DOB_LABEL = re.compile(
-    rf"\b(?:DOB|D\.O\.B\.?|Date of Birth|Birth ?[Dd]ate|Born)\b[ \t]*[:#]?[ \t]*(?P<v>{DATE_VALUE})"
+    r"\b" + _label("DOB", "D.O.B.", "Date of Birth", "Birth Date", "Birthdate", "Born") + _SEP + rf"(?P<v>{DATE_VALUE})"
 )
 
 SSN_LABELED = re.compile(
@@ -90,17 +126,21 @@ SSN_LABELED = re.compile(
 )
 SSN_BARE = re.compile(r"(?<![\w-])\d{3}-\d{2}-\d{4}(?![\w-])")
 
-PHONE = re.compile(r"(?<![\w-])(?:\+?1[-. ])?(?:\(\d{3}\) ?|\d{3}[-.])\d{3}[-.]\d{4}(?![\w-])")
+PHONE = re.compile(r"(?<![\w-])(?:\+?1[-. ])?(?:\(\d{3}\) ?|\d{3}[-. ])\d{3}[-. ]\d{4}(?![\w-])")
 EMAIL = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
 
 _ID_VALUE = r"(?P<v>[A-Z0-9][A-Z0-9\-]{4,24})"
+_ID_SUFFIX = "(?: ?" + _label("ID No.", "ID", "No.", "Number", "#") + ")"
 MEMBER_ID_LABEL = re.compile(
-    r"\b(?:(?:Member|Subscriber|Insured|Policy) ?(?:ID|Id|#|No\.?|Number)|ID ?(?:#|No\.?|Number))"
-    rf"[ \t]*[:#]?[ \t]*{_ID_VALUE}"
+    r"\b(?:" + _label("Member", "Subscriber", "Insured's", "Insured", "Policy", "Policyholder") + _ID_SUFFIX
+    + "|" + _label("ID") + " ?" + _label("#", "No.", "Number") + ")"
+    + _SEP + _ID_VALUE
 )
 ACCOUNT_ID_LABEL = re.compile(
-    r"\b(?:Account|Acct|Claim|Reference|Ref|Invoice|Encounter|Visit)\.?(?: ?(?:Number|No\.?|#|ID))?"
-    rf"[ \t]*[:#]?[ \t]*{_ID_VALUE}"
+    r"\b(?:" + _label("Account", "Acct", "Claim", "Reference", "Ref", "Invoice", "Encounter", "Visit") + r"\.?"
+    + _ID_SUFFIX + "?"
+    + "|" + _label("Guarantor") + _ID_SUFFIX + ")"
+    + _SEP + _ID_VALUE
 )
 
 _SUFFIX = (r"(?:St|Street|Ave|Avenue|Rd|Road|Dr|Drive|Ln|Lane|Ct|Court|Blvd|Boulevard|Way|Pl|Place|"
@@ -228,6 +268,15 @@ class Redactor:
         for m in NAME_LABEL.finditer(text):
             if _is_plausible_name(m.group("v")):
                 add(m, "NAME", "name_label", "v", 2)
+        for m in STREET.finditer(text):  # a name on the line just above a street address
+            ls = text.rfind("\n", 0, m.start()) + 1
+            if ls == 0 or text[ls:m.start()].strip():
+                continue
+            pe = ls - 1
+            ps = text.rfind("\n", 0, pe) + 1
+            pm = re.fullmatch(rf"[ \t]*(?P<v>{NAME_VALUE})[ \t]*", text[ps:pe])
+            if pm and len(_name_tokens(pm.group("v"))) >= 2 and _is_plausible_name(pm.group("v")):
+                c.append(_Cand(ps + pm.start("v"), ps + pm.end("v"), "NAME", PRIORITY["NAME"], "address_block"))
         for m in NAME_FROM_LIST.finditer(text):
             first, last = m.group("first"), m.group("last")
             if first.lower() in self.first_names and _is_plausible_name(m.group(0)):
